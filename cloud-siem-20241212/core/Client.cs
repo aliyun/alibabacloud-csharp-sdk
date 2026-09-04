@@ -39,6 +39,178 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelCopilotTurnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCopilotTurnResponse
+        /// </returns>
+        public CancelCopilotTurnResponse CancelCopilotTurnWithOptions(CancelCopilotTurnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCopilotTurn",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCopilotTurnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelCopilotTurnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCopilotTurnResponse
+        /// </returns>
+        public async Task<CancelCopilotTurnResponse> CancelCopilotTurnWithOptionsAsync(CancelCopilotTurnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelCopilotTurn",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelCopilotTurnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelCopilotTurnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCopilotTurnResponse
+        /// </returns>
+        public CancelCopilotTurnResponse CancelCopilotTurn(CancelCopilotTurnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelCopilotTurnWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels a specified Security Operations Agent conversation turn and returns the turn status after the cancellation request is processed.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified Security Operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelCopilotTurnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelCopilotTurnResponse
+        /// </returns>
+        public async Task<CancelCopilotTurnResponse> CancelCopilotTurnAsync(CancelCopilotTurnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelCopilotTurnWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks for available version upgrades.</para>
         /// </summary>
         /// 
@@ -355,6 +527,482 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAutoDisposeConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCopilotChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotChatResponse
+        /// </returns>
+        public CreateCopilotChatResponse CreateCopilotChatWithOptions(CreateCopilotChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCopilotChatShrinkRequest request = new CreateCopilotChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateConversation))
+            {
+                request.CreateConversationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateConversation, "CreateConversation", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientConversationId))
+            {
+                body["ClientConversationId"] = request.ClientConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientMessageId))
+            {
+                body["ClientMessageId"] = request.ClientMessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateConversationShrink))
+            {
+                body["CreateConversation"] = request.CreateConversationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanMode))
+            {
+                body["PlanMode"] = request.PlanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplaceTurnId))
+            {
+                body["ReplaceTurnId"] = request.ReplaceTurnId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTarget))
+            {
+                body["RouteTarget"] = request.RouteTarget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                body["ThinkingMode"] = request.ThinkingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotChat",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<CreateCopilotChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateCopilotChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotChatResponse
+        /// </returns>
+        public async Task<CreateCopilotChatResponse> CreateCopilotChatWithOptionsAsync(CreateCopilotChatRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateCopilotChatShrinkRequest request = new CreateCopilotChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CreateConversation))
+            {
+                request.CreateConversationShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CreateConversation, "CreateConversation", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientConversationId))
+            {
+                body["ClientConversationId"] = request.ClientConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientMessageId))
+            {
+                body["ClientMessageId"] = request.ClientMessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateConversationShrink))
+            {
+                body["CreateConversation"] = request.CreateConversationShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanMode))
+            {
+                body["PlanMode"] = request.PlanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReplaceTurnId))
+            {
+                body["ReplaceTurnId"] = request.ReplaceTurnId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteTarget))
+            {
+                body["RouteTarget"] = request.RouteTarget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                body["ThinkingMode"] = request.ThinkingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotChat",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<CreateCopilotChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotChatResponse
+        /// </returns>
+        public CreateCopilotChatResponse CreateCopilotChat(CreateCopilotChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCopilotChatWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sends a message to the security operations Agent and returns an event stream through SSE. The first request can implicitly create a conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sends a message to a security operations Agent conversation and returns results as an SSE event stream.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotChatResponse
+        /// </returns>
+        public async Task<CreateCopilotChatResponse> CreateCopilotChatAsync(CreateCopilotChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCopilotChatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotConversationResponse
+        /// </returns>
+        public CreateCopilotConversationResponse CreateCopilotConversationWithOptions(CreateCopilotConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanMode))
+            {
+                body["PlanMode"] = request.PlanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                body["ThinkingMode"] = request.ThinkingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotConversation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCopilotConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotConversationResponse
+        /// </returns>
+        public async Task<CreateCopilotConversationResponse> CreateCopilotConversationWithOptionsAsync(CreateCopilotConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanMode))
+            {
+                body["PlanMode"] = request.PlanMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingMode))
+            {
+                body["ThinkingMode"] = request.ThinkingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["Title"] = request.Title;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCopilotConversation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCopilotConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotConversationResponse
+        /// </returns>
+        public CreateCopilotConversationResponse CreateCopilotConversation(CreateCopilotConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCopilotConversationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a security operations Agent conversation that belongs to the current tenant and owner, and returns the conversation ID, status, and conversation configuration.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateCopilotConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCopilotConversationResponse
+        /// </returns>
+        public async Task<CreateCopilotConversationResponse> CreateCopilotConversationAsync(CreateCopilotConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCopilotConversationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6171,6 +6819,514 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotConversationResponse
+        /// </returns>
+        public GetCopilotConversationResponse GetCopilotConversationWithOptions(GetCopilotConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotConversation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotConversationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotConversationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotConversationResponse
+        /// </returns>
+        public async Task<GetCopilotConversationResponse> GetCopilotConversationWithOptionsAsync(GetCopilotConversationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotConversation",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotConversationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotConversationResponse
+        /// </returns>
+        public GetCopilotConversationResponse GetCopilotConversation(GetCopilotConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCopilotConversationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the metadata, status, configuration, and historical summary of a specified security operations Agent conversation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotConversationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotConversationResponse
+        /// </returns>
+        public async Task<GetCopilotConversationResponse> GetCopilotConversationAsync(GetCopilotConversationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCopilotConversationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnResponse
+        /// </returns>
+        public GetCopilotTurnResponse GetCopilotTurnWithOptions(GetCopilotTurnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotTurn",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotTurnResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnResponse
+        /// </returns>
+        public async Task<GetCopilotTurnResponse> GetCopilotTurnWithOptionsAsync(GetCopilotTurnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotTurn",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotTurnResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnResponse
+        /// </returns>
+        public GetCopilotTurnResponse GetCopilotTurn(GetCopilotTurnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCopilotTurnWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the status of a security operations Agent conversation turn.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified security operations Agent conversation turn.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnResponse
+        /// </returns>
+        public async Task<GetCopilotTurnResponse> GetCopilotTurnAsync(GetCopilotTurnRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCopilotTurnWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnByClientMessageIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnByClientMessageIdResponse
+        /// </returns>
+        public GetCopilotTurnByClientMessageIdResponse GetCopilotTurnByClientMessageIdWithOptions(GetCopilotTurnByClientMessageIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientMessageId))
+            {
+                body["ClientMessageId"] = request.ClientMessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotTurnByClientMessageId",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotTurnByClientMessageIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnByClientMessageIdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnByClientMessageIdResponse
+        /// </returns>
+        public async Task<GetCopilotTurnByClientMessageIdResponse> GetCopilotTurnByClientMessageIdWithOptionsAsync(GetCopilotTurnByClientMessageIdRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientMessageId))
+            {
+                body["ClientMessageId"] = request.ClientMessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCopilotTurnByClientMessageId",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCopilotTurnByClientMessageIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnByClientMessageIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnByClientMessageIdResponse
+        /// </returns>
+        public GetCopilotTurnByClientMessageIdResponse GetCopilotTurnByClientMessageId(GetCopilotTurnByClientMessageIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCopilotTurnByClientMessageIdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a security operations Agent conversation turn by conversation ID and client message ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a security operations Agent conversation turn by client message ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetCopilotTurnByClientMessageIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCopilotTurnByClientMessageIdResponse
+        /// </returns>
+        public async Task<GetCopilotTurnByClientMessageIdResponse> GetCopilotTurnByClientMessageIdAsync(GetCopilotTurnByClientMessageIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCopilotTurnByClientMessageIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a batch data ingestion task.</para>
         /// </summary>
         /// 
@@ -8611,6 +9767,194 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListAutoDisposeEntitiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the message list of a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCopilotMessagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCopilotMessagesResponse
+        /// </returns>
+        public ListCopilotMessagesResponse ListCopilotMessagesWithOptions(ListCopilotMessagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ascending))
+            {
+                body["Ascending"] = request.Ascending;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCopilotMessages",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCopilotMessagesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the message list of a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCopilotMessagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCopilotMessagesResponse
+        /// </returns>
+        public async Task<ListCopilotMessagesResponse> ListCopilotMessagesWithOptionsAsync(ListCopilotMessagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ascending))
+            {
+                body["Ascending"] = request.Ascending;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCopilotMessages",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCopilotMessagesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the message list of a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCopilotMessagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCopilotMessagesResponse
+        /// </returns>
+        public ListCopilotMessagesResponse ListCopilotMessages(ListCopilotMessagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCopilotMessagesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries visible persisted messages in a specified security operations Agent session by paging, with configurable sorting direction.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the message list of a specified security operations Agent conversation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListCopilotMessagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCopilotMessagesResponse
+        /// </returns>
+        public async Task<ListCopilotMessagesResponse> ListCopilotMessagesAsync(ListCopilotMessagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCopilotMessagesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14783,6 +16127,198 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetDataStorageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ResumeCopilotTurnStreamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeCopilotTurnStreamResponse
+        /// </returns>
+        public ResumeCopilotTurnStreamResponse ResumeCopilotTurnStreamWithOptions(ResumeCopilotTurnStreamRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResumeCopilotTurnStreamShrinkRequest request = new ResumeCopilotTurnStreamShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CursorByRun))
+            {
+                request.CursorByRunShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CursorByRun, "CursorByRun", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CursorByRunShrink))
+            {
+                body["CursorByRun"] = request.CursorByRunShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeCopilotTurnStream",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<ResumeCopilotTurnStreamResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ResumeCopilotTurnStreamRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeCopilotTurnStreamResponse
+        /// </returns>
+        public async Task<ResumeCopilotTurnStreamResponse> ResumeCopilotTurnStreamWithOptionsAsync(ResumeCopilotTurnStreamRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ResumeCopilotTurnStreamShrinkRequest request = new ResumeCopilotTurnStreamShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CursorByRun))
+            {
+                request.CursorByRunShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CursorByRun, "CursorByRun", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CursorByRunShrink))
+            {
+                body["CursorByRun"] = request.CursorByRunShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceId))
+            {
+                body["TraceId"] = request.TraceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TurnId))
+            {
+                body["TurnId"] = request.TurnId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeCopilotTurnStream",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<ResumeCopilotTurnStreamResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeCopilotTurnStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeCopilotTurnStreamResponse
+        /// </returns>
+        public ResumeCopilotTurnStreamResponse ResumeCopilotTurnStream(ResumeCopilotTurnStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResumeCopilotTurnStreamWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Incrementally resumes the SSE event stream for a specified security operations Agent turn based on the run cursor.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes the SSE event stream for a security operations Agent conversation turn from a specified cursor.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResumeCopilotTurnStreamRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeCopilotTurnStreamResponse
+        /// </returns>
+        public async Task<ResumeCopilotTurnStreamResponse> ResumeCopilotTurnStreamAsync(ResumeCopilotTurnStreamRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResumeCopilotTurnStreamWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

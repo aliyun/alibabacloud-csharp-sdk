@@ -1,3 +1,14 @@
+2026-09-04 Version: 2.7.0
+- Support API CancelCopilotTurn.
+- Support API CreateCopilotChat.
+- Support API CreateCopilotConversation.
+- Support API GetCopilotConversation.
+- Support API GetCopilotTurn.
+- Support API GetCopilotTurnByClientMessageId.
+- Support API ListCopilotMessages.
+- Support API ResumeCopilotTurnStream.
+
+
 2026-09-02 Version: 2.6.1
 - Update API ListIncidents: add response parameters Body.Incidents.$.AlertSources.
 - Update API ListIncidents: add response parameters Body.Incidents.$.OwnerName.
