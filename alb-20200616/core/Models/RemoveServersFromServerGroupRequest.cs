@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>.</para>
             /// <remarks>
-            /// <para> This parameter is required when you set <b>ServerType</b> to <b>Ecs</b>, <b>Eni</b>, <b>Eci</b>, or <b>Ip</b>.</para>
+            /// <para>This parameter is required when you set <b>ServerType</b> to <b>Ecs</b>, <b>Eni</b>, <b>Eci</b>, or <b>Ip</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,12 +74,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The backend server ID.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
-            /// <item><description>If the server group is of the <b>Fc</b> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</description></item>
+            /// <item><description><para>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group is of the <b>Fc</b> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -101,11 +106,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The type of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
-            /// <item><description><b>Ip</b>: IP address</description></item>
-            /// <item><description><b>Fc</b>: Function Compute instance</description></item>
+            /// <item><description><para><b>Ecs</b>: Elastic Compute Service (ECS) instance</para>
+            /// </description></item>
+            /// <item><description><para><b>Eni</b>: ENI</para>
+            /// </description></item>
+            /// <item><description><para><b>Eci</b>: elastic container instance</para>
+            /// </description></item>
+            /// <item><description><para><b>Ip</b>: IP address</para>
+            /// </description></item>
+            /// <item><description><para><b>Fc</b>: Function Compute instance</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

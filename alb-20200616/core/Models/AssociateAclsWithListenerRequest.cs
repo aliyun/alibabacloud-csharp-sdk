@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
+        /// <para>lsn-bp1bpn0kn9*******</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

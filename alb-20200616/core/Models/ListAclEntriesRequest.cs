@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
+        /// <para>acl-hp34s2h0xx1ht4nwo****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description><para>You do not need to specify this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

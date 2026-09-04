@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetListenerHealthStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the health check results of forwarding rules. Valid values:</para>
+        /// <para>Specifies whether to include the health check results of forwarding rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><b>true</b>: Include the results.</description></item>
+        /// <item><description><b>false</b> (default): Do not include the results.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? IncludeRule { get; set; }
 
         /// <summary>
-        /// <para>The listener ID.</para>
+        /// <para>The listener ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
+        /// <para>lsn-o4u54y73wq7b******</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]
         public string ListenerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>30</b>. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries to return per page in a paginated query. Valid values: <b>1</b> to <b>30</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. Valid values:</para>
+        /// <para>Specifies whether there is a token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no next queries are to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description>For the first query or when no next query exists, leave this parameter empty.</description></item>
+        /// <item><description>If a next query exists, set this parameter to the <b>NextToken</b> value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hangzhou-finance", "alb.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("alb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -244,20 +248,20 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a backend server is in the <b>Adding</b> state, it indicates that the backend server is being added to a server group.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the server is running.</description></item>
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -325,20 +329,20 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a backend server is in the <b>Adding</b> state, it indicates that the backend server is being added to a server group.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the server is running.</description></item>
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -406,20 +410,20 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a backend server is in the <b>Adding</b> state, it indicates that the backend server is being added to a server group.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the server is running.</description></item>
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -443,20 +447,20 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request ID is returned, the backend server may not be added yet because the system is still processing the task in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of the server group:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// <ol start="2">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.</description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of the backend server:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>If a backend server is in the <b>Adding</b> state, it indicates that the backend server is being added to a server group.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the server is running.</description></item>
+        /// <item><description>If the backend server is in the <b>Adding</b> state, the backend server is being added to the server group.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -812,10 +816,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</para>
         /// <list type="bullet">
         /// <item><description>If the HTTPS or QUIC listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the certificates are associated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -875,10 +879,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</para>
         /// <list type="bullet">
         /// <item><description>If the HTTPS or QUIC listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the certificates are associated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -938,10 +942,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</para>
         /// <list type="bullet">
         /// <item><description>If the HTTPS or QUIC listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the certificates are associated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -965,10 +969,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task:</para>
+        /// <para><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="t2324519.xdita#"></a>operation to query the status of the task:</para>
         /// <list type="bullet">
         /// <item><description>If the HTTPS or QUIC listener is in the <b>Associating</b> state, the additional certificates are being associated.</description></item>
-        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the additional certificates are associated.</description></item>
+        /// <item><description>If the HTTPS or QUIC listener is in the <b>Associated</b> state, the certificates are associated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1339,20 +1343,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates AScript rules.</para>
+        /// <para>Create a script.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <h3>Prerequisites</h3>
         /// <list type="bullet">
-        /// <item><description>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para><b>CreateAScripts</b> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</para>
+        /// <h3>Usage</h3>
+        /// <para><b>CreateAScripts</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the script is in the <b>Creating</b> state, the script is being created.</description></item>
-        /// <item><description>If the script is in the <b>Available</b>, the script is created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Creating</b> state, it is being created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1407,20 +1411,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates AScript rules.</para>
+        /// <para>Create a script.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <h3>Prerequisites</h3>
         /// <list type="bullet">
-        /// <item><description>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para><b>CreateAScripts</b> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</para>
+        /// <h3>Usage</h3>
+        /// <para><b>CreateAScripts</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the script is in the <b>Creating</b> state, the script is being created.</description></item>
-        /// <item><description>If the script is in the <b>Available</b>, the script is created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Creating</b> state, it is being created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1475,20 +1479,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates AScript rules.</para>
+        /// <para>Create a script.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <h3>Prerequisites</h3>
         /// <list type="bullet">
-        /// <item><description>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para><b>CreateAScripts</b> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</para>
+        /// <h3>Usage</h3>
+        /// <para><b>CreateAScripts</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the script is in the <b>Creating</b> state, the script is being created.</description></item>
-        /// <item><description>If the script is in the <b>Available</b>, the script is created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Creating</b> state, it is being created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1507,20 +1511,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates AScript rules.</para>
+        /// <para>Create a script.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <h3>Prerequisites</h3>
         /// <list type="bullet">
-        /// <item><description>A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>You have created a standard edition or WAF-enhanced edition ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
         /// </list>
-        /// <h3><a href="#"></a>Usage notes</h3>
-        /// <para><b>CreateAScripts</b> an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of a script.</para>
+        /// <h3>Usage</h3>
+        /// <para><b>CreateAScripts</b> is an asynchronous operation. After you send a request, the system returns a request ID, but the programmable script is not created immediately because the creation task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the creation status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the script is in the <b>Creating</b> state, the script is being created.</description></item>
-        /// <item><description>If the script is in the <b>Available</b>, the script is created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Creating</b> state, it is being created.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1539,16 +1543,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a region.</para>
+        /// <para>Creates an access control list (ACL) in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>The <b>CreateAcl</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</para>
+        /// <para><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</para>
         /// <list type="bullet">
-        /// <item><description>If an ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
-        /// <item><description>If an ACL is in the <b>Available</b> state, the ACL is created.</description></item>
+        /// <item><description>If the ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
+        /// <item><description>If the ACL is in the <b>Available</b> state, the ACL is available for use.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1607,16 +1610,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a region.</para>
+        /// <para>Creates an access control list (ACL) in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>The <b>CreateAcl</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</para>
+        /// <para><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</para>
         /// <list type="bullet">
-        /// <item><description>If an ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
-        /// <item><description>If an ACL is in the <b>Available</b> state, the ACL is created.</description></item>
+        /// <item><description>If the ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
+        /// <item><description>If the ACL is in the <b>Available</b> state, the ACL is available for use.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1675,16 +1677,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a region.</para>
+        /// <para>Creates an access control list (ACL) in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>The <b>CreateAcl</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</para>
+        /// <para><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</para>
         /// <list type="bullet">
-        /// <item><description>If an ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
-        /// <item><description>If an ACL is in the <b>Available</b> state, the ACL is created.</description></item>
+        /// <item><description>If the ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
+        /// <item><description>If the ACL is in the <b>Available</b> state, the ACL is available for use.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1703,16 +1704,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) in a region.</para>
+        /// <para>Creates an access control list (ACL) in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>The <b>CreateAcl</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of an ACL:</para>
+        /// <para><em>CreateAcl</em>* is an asynchronous operation. After you send a request, the system returns an instance ID and starts to create the ACL in the background. You can call the <a href="https://help.aliyun.com/document_detail/213617.html">ListAcls</a> operation to query the status of the ACL.</para>
         /// <list type="bullet">
-        /// <item><description>If an ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
-        /// <item><description>If an ACL is in the <b>Available</b> state, the ACL is created.</description></item>
+        /// <item><description>If the ACL is in the <b>Creating</b> state, the ACL is being created.</description></item>
+        /// <item><description>If the ACL is in the <b>Available</b> state, the ACL is available for use.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1731,7 +1731,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a health check template in a region.</para>
+        /// <para>Create a health check template in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1833,7 +1833,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a health check template in a region.</para>
+        /// <para>Create a health check template in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1935,7 +1935,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a health check template in a region.</para>
+        /// <para>Create a health check template in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1953,7 +1953,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a health check template in a region.</para>
+        /// <para>Create a health check template in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1976,11 +1976,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para><b>CreateListener</b> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</para>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</para>
         /// <list type="bullet">
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, it indicates that the listener is being created.</description></item>
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, it indicates that the listener has been created successfully.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, the listener is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2096,11 +2095,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para><b>CreateListener</b> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</para>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</para>
         /// <list type="bullet">
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, it indicates that the listener is being created.</description></item>
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, it indicates that the listener has been created successfully.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, the listener is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2216,11 +2214,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para><b>CreateListener</b> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</para>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</para>
         /// <list type="bullet">
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, it indicates that the listener is being created.</description></item>
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, it indicates that the listener has been created successfully.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, the listener is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2244,11 +2241,10 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para><b>CreateListener</b> is an asynchronous operation. After you call this operation, the system returns a request ID. However, the operation is still being performed in the background. You can call the <a href="https://help.aliyun.com/document_detail/214353.html">GetListenerAttribute</a> operation to query the status of the HTTP, HTTPS, or QUIC listener.</para>
+        /// <para><em>CreateListener</em>* is an asynchronous operation. After a request ID is returned, the HTTP, HTTPS, or QUIC listener may not be created yet because the system is still processing the creation task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the creation status of the HTTP, HTTPS, or QUIC listener:</para>
         /// <list type="bullet">
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, it indicates that the listener is being created.</description></item>
-        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, it indicates that the listener has been created successfully.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Provisioning</b> state, the listener is being created.</description></item>
+        /// <item><description>If the HTTP, HTTPS, or QUIC listener is in the <b>Running</b> state, the listener is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2267,15 +2263,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Application Load Balancer (ALB) instance in a region.</para>
+        /// <para>Create an application load balancer in a specified region</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</para>
+        /// <para>The <b>CreateLoadBalancer</b> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Provisioning</b> state, it indicates that the ALB instance is being created.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, it indicates that the ALB instance is created.</description></item>
+        /// <item><description>If the instance is in the <b>provisioning</b> state, it is being created.</description></item>
+        /// <item><description>If the instance is in the <b>active</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2374,15 +2370,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Application Load Balancer (ALB) instance in a region.</para>
+        /// <para>Create an application load balancer in a specified region</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</para>
+        /// <para>The <b>CreateLoadBalancer</b> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Provisioning</b> state, it indicates that the ALB instance is being created.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, it indicates that the ALB instance is created.</description></item>
+        /// <item><description>If the instance is in the <b>provisioning</b> state, it is being created.</description></item>
+        /// <item><description>If the instance is in the <b>active</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2481,15 +2477,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Application Load Balancer (ALB) instance in a region.</para>
+        /// <para>Create an application load balancer in a specified region</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</para>
+        /// <para>The <b>CreateLoadBalancer</b> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Provisioning</b> state, it indicates that the ALB instance is being created.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, it indicates that the ALB instance is created.</description></item>
+        /// <item><description>If the instance is in the <b>provisioning</b> state, it is being created.</description></item>
+        /// <item><description>If the instance is in the <b>active</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2508,15 +2504,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Application Load Balancer (ALB) instance in a region.</para>
+        /// <para>Create an application load balancer in a specified region</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.</para>
+        /// <para>The <b>CreateLoadBalancer</b> operation is asynchronous. A successful call returns an instance ID, but the application load balancer instance is created in the background. Call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the creation status of the application load balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Provisioning</b> state, it indicates that the ALB instance is being created.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, it indicates that the ALB instance is created.</description></item>
+        /// <item><description>If the instance is in the <b>provisioning</b> state, it is being created.</description></item>
+        /// <item><description>If the instance is in the <b>active</b> state, it has been created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2535,23 +2531,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule for a listener.</para>
+        /// <para>Creates a forwarding rule for a specified listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following limits:</para>
+        /// <para>When you call this operation to create a forwarding rule, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, you can use the default value only for the <b>HttpCode</b> parameter. Do not use the default values for the other parameters.</description></item>
-        /// <item><description>If you specify the <b>Rewrite</b> action together with other actions in a forwarding rule, make sure that the <b>ForwardGroup</b> action is specified.</description></item>
-        /// <item><description><b>CreateRule</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
+        /// <item><description>When you configure a <b>Redirect</b> action, parameters other than <b>HttpCode</b> cannot all be set to default values.</description></item>
+        /// <item><description>When you configure multiple actions for a forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRule</b> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<list type="bullet">
+        /// <item><description>If the forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
+        /// <item><description>If the forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2628,23 +2624,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule for a listener.</para>
+        /// <para>Creates a forwarding rule for a specified listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following limits:</para>
+        /// <para>When you call this operation to create a forwarding rule, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, you can use the default value only for the <b>HttpCode</b> parameter. Do not use the default values for the other parameters.</description></item>
-        /// <item><description>If you specify the <b>Rewrite</b> action together with other actions in a forwarding rule, make sure that the <b>ForwardGroup</b> action is specified.</description></item>
-        /// <item><description><b>CreateRule</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
+        /// <item><description>When you configure a <b>Redirect</b> action, parameters other than <b>HttpCode</b> cannot all be set to default values.</description></item>
+        /// <item><description>When you configure multiple actions for a forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRule</b> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<list type="bullet">
+        /// <item><description>If the forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
+        /// <item><description>If the forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2721,23 +2717,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule for a listener.</para>
+        /// <para>Creates a forwarding rule for a specified listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following limits:</para>
+        /// <para>When you call this operation to create a forwarding rule, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, you can use the default value only for the <b>HttpCode</b> parameter. Do not use the default values for the other parameters.</description></item>
-        /// <item><description>If you specify the <b>Rewrite</b> action together with other actions in a forwarding rule, make sure that the <b>ForwardGroup</b> action is specified.</description></item>
-        /// <item><description><b>CreateRule</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
+        /// <item><description>When you configure a <b>Redirect</b> action, parameters other than <b>HttpCode</b> cannot all be set to default values.</description></item>
+        /// <item><description>When you configure multiple actions for a forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRule</b> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<list type="bullet">
+        /// <item><description>If the forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
+        /// <item><description>If the forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2758,23 +2754,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule for a listener.</para>
+        /// <para>Creates a forwarding rule for a specified listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following limits:</para>
+        /// <para>When you call this operation to create a forwarding rule, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, you can use the default value only for the <b>HttpCode</b> parameter. Do not use the default values for the other parameters.</description></item>
-        /// <item><description>If you specify the <b>Rewrite</b> action together with other actions in a forwarding rule, make sure that the <b>ForwardGroup</b> action is specified.</description></item>
-        /// <item><description><b>CreateRule</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule.<list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
+        /// <item><description>When you configure a <b>Redirect</b> action, parameters other than <b>HttpCode</b> cannot all be set to default values.</description></item>
+        /// <item><description>When you configure multiple actions for a forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRule</b> operation is asynchronous. After a request is sent, the system returns an instance ID, but the forwarding rule may not be created yet. The system creates the forwarding rule in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rule:<list type="bullet">
+        /// <item><description>If the forwarding rule is in the <b>Provisioning</b> state, the forwarding rule is being created.</description></item>
+        /// <item><description>If the forwarding rule is in the <b>Available</b> state, the forwarding rule is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. The limits on conditions and actions are:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2795,23 +2791,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple forwarding rules at a time.</para>
+        /// <para>Creates multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following limits:</para>
+        /// <para>When you call this operation to create forwarding rules, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, do not use the default values for parameters other than <b>HttpCode</b>.</description></item>
-        /// <item><description>If you specify multiple actions in a forward rule, you must specify the <b>ForwardGroup</b> parameter along with the <b>Rewrite</b> parameter.</description></item>
-        /// <item><description><b>CreateRules</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<list type="bullet">
+        /// <item><description>When you configure a <b>Redirect</b> action, you cannot set all parameters except <b>HttpCode</b> to default values.</description></item>
+        /// <item><description>When you configure multiple actions for the same forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRules</b> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<list type="bullet">
         /// <item><description>If the forwarding rules are in the <b>Provisioning</b> state, the forwarding rules are being created.</description></item>
         /// <item><description>If the forwarding rules are in the <b>Available</b> state, the forwarding rules are created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</description></item>
-        /// <item><description>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2876,23 +2872,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple forwarding rules at a time.</para>
+        /// <para>Creates multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following limits:</para>
+        /// <para>When you call this operation to create forwarding rules, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, do not use the default values for parameters other than <b>HttpCode</b>.</description></item>
-        /// <item><description>If you specify multiple actions in a forward rule, you must specify the <b>ForwardGroup</b> parameter along with the <b>Rewrite</b> parameter.</description></item>
-        /// <item><description><b>CreateRules</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<list type="bullet">
+        /// <item><description>When you configure a <b>Redirect</b> action, you cannot set all parameters except <b>HttpCode</b> to default values.</description></item>
+        /// <item><description>When you configure multiple actions for the same forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRules</b> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<list type="bullet">
         /// <item><description>If the forwarding rules are in the <b>Provisioning</b> state, the forwarding rules are being created.</description></item>
         /// <item><description>If the forwarding rules are in the <b>Available</b> state, the forwarding rules are created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</description></item>
-        /// <item><description>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2957,23 +2953,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple forwarding rules at a time.</para>
+        /// <para>Creates multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following limits:</para>
+        /// <para>When you call this operation to create forwarding rules, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, do not use the default values for parameters other than <b>HttpCode</b>.</description></item>
-        /// <item><description>If you specify multiple actions in a forward rule, you must specify the <b>ForwardGroup</b> parameter along with the <b>Rewrite</b> parameter.</description></item>
-        /// <item><description><b>CreateRules</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<list type="bullet">
+        /// <item><description>When you configure a <b>Redirect</b> action, you cannot set all parameters except <b>HttpCode</b> to default values.</description></item>
+        /// <item><description>When you configure multiple actions for the same forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRules</b> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<list type="bullet">
         /// <item><description>If the forwarding rules are in the <b>Provisioning</b> state, the forwarding rules are being created.</description></item>
         /// <item><description>If the forwarding rules are in the <b>Available</b> state, the forwarding rules are created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</description></item>
-        /// <item><description>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -2994,23 +2990,23 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple forwarding rules at a time.</para>
+        /// <para>Creates multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following limits:</para>
+        /// <para>When you call this operation to create forwarding rules, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>When you configure the <b>Redirect</b> action, do not use the default values for parameters other than <b>HttpCode</b>.</description></item>
-        /// <item><description>If you specify multiple actions in a forward rule, you must specify the <b>ForwardGroup</b> parameter along with the <b>Rewrite</b> parameter.</description></item>
-        /// <item><description><b>CreateRules</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the forwarding rules.<list type="bullet">
+        /// <item><description>When you configure a <b>Redirect</b> action, you cannot set all parameters except <b>HttpCode</b> to default values.</description></item>
+        /// <item><description>When you configure multiple actions for the same forwarding rule, the <b>Rewrite</b> action must be used together with the <b>ForwardGroup</b> action type.</description></item>
+        /// <item><description>The <b>CreateRules</b> operation is asynchronous. After a request is sent, the system returns an instance ID but the forwarding rules are not yet created. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the creation status of the forwarding rules:<list type="bullet">
         /// <item><description>If the forwarding rules are in the <b>Provisioning</b> state, the forwarding rules are being created.</description></item>
         /// <item><description>If the forwarding rules are in the <b>Available</b> state, the forwarding rules are created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Conditions: 5 for each basic ALB instance, 10 for each standard ALB instance, and 10 for each WAF-enabled ALB instance.</description></item>
-        /// <item><description>Actions: 3 for each basic ALB instance, 5 for each standard ALB instance, and 5 for each WAF-enabled ALB instance.</description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF Enhanced Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF Enhanced Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -3031,7 +3027,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy in a region.</para>
+        /// <para>Creates a custom security policy in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3097,7 +3093,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy in a region.</para>
+        /// <para>Creates a custom security policy in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3163,7 +3159,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy in a region.</para>
+        /// <para>Creates a custom security policy in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3181,7 +3177,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom security policy in a region.</para>
+        /// <para>Creates a custom security policy in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3199,15 +3195,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// <item><description>If the server group is in the <b>Creating</b> state, the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3322,15 +3318,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// <item><description>If the server group is in the <b>Creating</b> state, the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3445,15 +3441,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// <item><description>If the server group is in the <b>Creating</b> state, the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3472,15 +3468,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a server group in a region.</para>
+        /// <para>Creates a server group in a specified region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group.</para>
+        /// <para>The <b>CreateServerGroup</b> operation is asynchronous. After a request is sent, the system returns a request ID. However, the server group is not yet created. The creation task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the creation status of the server group:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Creating</b> state, it indicates that the server group is being created.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is created.</description></item>
+        /// <item><description>If the server group is in the <b>Creating</b> state, the server group is being created.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is created.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4151,15 +4147,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Load Balancer (ALB) instance.</para>
+        /// <para>Deletes the specified load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Deleting</b> state, the ALB instance is being deleted.</description></item>
-        /// <item><description>If an ALB instance cannot be found, the ALB instance is deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance cannot be found, the instance has been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4214,15 +4210,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Load Balancer (ALB) instance.</para>
+        /// <para>Deletes the specified load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Deleting</b> state, the ALB instance is being deleted.</description></item>
-        /// <item><description>If an ALB instance cannot be found, the ALB instance is deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance cannot be found, the instance has been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4277,15 +4273,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Load Balancer (ALB) instance.</para>
+        /// <para>Deletes the specified load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Deleting</b> state, the ALB instance is being deleted.</description></item>
-        /// <item><description>If an ALB instance cannot be found, the ALB instance is deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance cannot be found, the instance has been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4304,15 +4300,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an Application Load Balancer (ALB) instance.</para>
+        /// <para>Deletes the specified load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>DeleteLoadBalancer</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the instance is not deleted immediately. The system deletes the instance in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to check the deletion status of the Application Load Balancer instance:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Deleting</b> state, the ALB instance is being deleted.</description></item>
-        /// <item><description>If an ALB instance cannot be found, the ALB instance is deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Deleting</b> state, the instance is being deleted.</description></item>
+        /// <item><description>If the Application Load Balancer instance cannot be found, the instance has been deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4983,7 +4979,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源预留</para>
+        /// <para>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5025,7 +5021,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源预留</para>
+        /// <para>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5067,7 +5063,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源预留</para>
+        /// <para>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5085,7 +5081,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资源预留</para>
+        /// <para>Queries the details of a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6207,12 +6203,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates additional certificates from a listener.</para>
+        /// <para>Dissociates one or more additional certificates from a listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <b>Dissociating</b> state, the additional certificate is being disassociated. - If an additional certificate is in the <b>Dissociated</b> state, the additional certificate is disassociated.</para>
+        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</para>
+        /// <list type="bullet">
+        /// <item><description>If an additional certificate is in the <b>Dissociating</b> state, the dissociation is in progress.</description></item>
+        /// <item><description>If an additional certificate is in the <b>Dissociated</b> state, the dissociation is complete.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -6266,12 +6266,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates additional certificates from a listener.</para>
+        /// <para>Dissociates one or more additional certificates from a listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <b>Dissociating</b> state, the additional certificate is being disassociated. - If an additional certificate is in the <b>Dissociated</b> state, the additional certificate is disassociated.</para>
+        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</para>
+        /// <list type="bullet">
+        /// <item><description>If an additional certificate is in the <b>Dissociating</b> state, the dissociation is in progress.</description></item>
+        /// <item><description>If an additional certificate is in the <b>Dissociated</b> state, the dissociation is complete.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -6325,12 +6329,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates additional certificates from a listener.</para>
+        /// <para>Dissociates one or more additional certificates from a listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <b>Dissociating</b> state, the additional certificate is being disassociated. - If an additional certificate is in the <b>Dissociated</b> state, the additional certificate is disassociated.</para>
+        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</para>
+        /// <list type="bullet">
+        /// <item><description>If an additional certificate is in the <b>Dissociating</b> state, the dissociation is in progress.</description></item>
+        /// <item><description>If an additional certificate is in the <b>Dissociated</b> state, the dissociation is complete.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -6348,12 +6356,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates additional certificates from a listener.</para>
+        /// <para>Dissociates one or more additional certificates from a listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214354.html">ListListenerCertificates</a> operation to query the status of the task. - If an additional certificate is in the <b>Dissociating</b> state, the additional certificate is being disassociated. - If an additional certificate is in the <b>Dissociated</b> state, the additional certificate is disassociated.</para>
+        /// <para><em>DissociateAdditionalCertificatesFromListener</em>* is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call <a href="t2324486.xdita#"></a>to query the status of the dissociation task:</para>
+        /// <list type="bullet">
+        /// <item><description>If an additional certificate is in the <b>Dissociating</b> state, the dissociation is in progress.</description></item>
+        /// <item><description>If an additional certificate is in the <b>Dissociated</b> state, the dissociation is complete.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7003,7 +7015,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a listener.</para>
+        /// <para>Queries the details of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7045,7 +7057,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a listener.</para>
+        /// <para>Queries the details of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7087,7 +7099,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a listener.</para>
+        /// <para>Queries the details of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7105,7 +7117,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a listener.</para>
+        /// <para>Queries the details of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8443,7 +8455,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the listeners in a region.</para>
+        /// <para>Queries listeners in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8505,7 +8517,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the listeners in a region.</para>
+        /// <para>Queries listeners in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8567,7 +8579,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the listeners in a region.</para>
+        /// <para>Queries listeners in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8585,7 +8597,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the listeners in a region.</para>
+        /// <para>Queries listeners in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8603,7 +8615,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of instances.</para>
+        /// <para>Queries the configurations of load balancer instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8701,7 +8713,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of instances.</para>
+        /// <para>Queries the configurations of load balancer instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8799,7 +8811,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of instances.</para>
+        /// <para>Queries the configurations of load balancer instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8817,7 +8829,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of instances.</para>
+        /// <para>Queries the configurations of load balancer instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8835,7 +8847,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forwarding rules in a region.</para>
+        /// <para>This operation queries the forwarding rules in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8901,7 +8913,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forwarding rules in a region.</para>
+        /// <para>This operation queries the forwarding rules in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8967,7 +8979,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forwarding rules in a region.</para>
+        /// <para>This operation queries the forwarding rules in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8985,7 +8997,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the forwarding rules in a region.</para>
+        /// <para>This operation queries the forwarding rules in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9283,7 +9295,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries servers in a server group.</para>
+        /// <para>Queries the servers in a server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9341,7 +9353,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries servers in a server group.</para>
+        /// <para>Queries the servers in a server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9399,7 +9411,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries servers in a server group.</para>
+        /// <para>Queries the servers in a server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9417,7 +9429,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries servers in a server group.</para>
+        /// <para>Queries the servers in a server group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9435,7 +9447,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries server groups.</para>
+        /// <para>Queries a list of server groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9505,7 +9517,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries server groups.</para>
+        /// <para>Queries a list of server groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9575,7 +9587,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries server groups.</para>
+        /// <para>Queries a list of server groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9593,7 +9605,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries server groups.</para>
+        /// <para>Queries a list of server groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10364,9 +10376,13 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-        ///     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-        ///     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</para>
+        /// <list type="bullet">
+        /// <item><description>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the task is in the Succeeded state, the ALB instance is removed from the security group.</description></item>
+        /// <item><description>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10425,9 +10441,13 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-        ///     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-        ///     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</para>
+        /// <list type="bullet">
+        /// <item><description>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the task is in the Succeeded state, the ALB instance is removed from the security group.</description></item>
+        /// <item><description>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10486,9 +10506,13 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-        ///     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-        ///     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</para>
+        /// <list type="bullet">
+        /// <item><description>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the task is in the Succeeded state, the ALB instance is removed from the security group.</description></item>
+        /// <item><description>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10511,9 +10535,13 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.
-        ///     *   If the task is in the Succeeded state, the ALB instance is removed from the security group.
-        ///     *   If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</para>
+        /// <list type="bullet">
+        /// <item><description>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254893.html">ListAsynJobs</a> operation to query the status of the task.<list type="bullet">
+        /// <item><description>If the task is in the Succeeded state, the ALB instance is removed from the security group.</description></item>
+        /// <item><description>If the task is in the Processing state, the ALB instance is being removed from the security group. In this case, you can query the task but cannot perform other operations.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -10531,8 +10559,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源预留</para>
+        /// <para>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</para>
+        /// <list type="bullet">
+        /// <item><description>If an LCU reservation is in the <b>Pending</b> state, it is being created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Provisioned</b> state, it is created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Rebalancing</b> state, it is being rebalanced across zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCapacityReservationRequest
@@ -10589,8 +10627,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源预留</para>
+        /// <para>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</para>
+        /// <list type="bullet">
+        /// <item><description>If an LCU reservation is in the <b>Pending</b> state, it is being created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Provisioned</b> state, it is created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Rebalancing</b> state, it is being rebalanced across zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCapacityReservationRequest
@@ -10647,8 +10695,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源预留</para>
+        /// <para>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</para>
+        /// <list type="bullet">
+        /// <item><description>If an LCU reservation is in the <b>Pending</b> state, it is being created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Provisioned</b> state, it is created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Rebalancing</b> state, it is being rebalanced across zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCapacityReservationRequest
@@ -10665,8 +10723,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源预留</para>
+        /// <para>Creates and updates a Load Balancer Capacity Unit (LCU) reservation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>ModifyCapacityReservation</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The LCU reservation is not immediately updated. You can call the DescribeCapacityReservation operation to query the status of an LCU reservation:</para>
+        /// <list type="bullet">
+        /// <item><description>If an LCU reservation is in the <b>Pending</b> state, it is being created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Provisioned</b> state, it is created.</description></item>
+        /// <item><description>If an LCU reservation is in the <b>Rebalancing</b> state, it is being rebalanced across zones.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCapacityReservationRequest
@@ -11211,21 +11279,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces backend servers in a server group.</para>
+        /// <para>Replaces backend servers in a backend server group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para>The <b>ReplaceServersInServerGroup</b> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Replacing</b> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</description></item>
-        /// <item><description>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Replacing</b> state, the server group is removing the server and adding a new server.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -11294,21 +11362,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces backend servers in a server group.</para>
+        /// <para>Replaces backend servers in a backend server group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para>The <b>ReplaceServersInServerGroup</b> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Replacing</b> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</description></item>
-        /// <item><description>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Replacing</b> state, the server group is removing the server and adding a new server.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -11377,21 +11445,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces backend servers in a server group.</para>
+        /// <para>Replaces backend servers in a backend server group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para>The <b>ReplaceServersInServerGroup</b> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Replacing</b> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</description></item>
-        /// <item><description>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Replacing</b> state, the server group is removing the server and adding a new server.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -11412,21 +11480,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces backend servers in a server group.</para>
+        /// <para>Replaces backend servers in a backend server group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>ReplaceServersInServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para>The <b>ReplaceServersInServerGroup</b> operation is asynchronous. After a request ID is returned, the backend server replacement task is still being processed in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Replacing</b> state, it indicates that the server is being removed from the server group and a new server is added to the server group.</description></item>
-        /// <item><description>If a backend server is in the \<em>\<em>Available\</em>\</em> state, it indicates that the server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Replacing</b> state, the server group is removing the server and adding a new server.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -12243,15 +12311,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates AScript rules.</para>
+        /// <para>Updates programmable scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</para>
+        /// <para><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the rule is in the <b>Configuring</b> state, the rule is being updated.</description></item>
-        /// <item><description>If the rule is in the <b>Available</b> state, the rule is updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Configuring</b> state, the programmable script is being updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, the programmable script is updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12302,15 +12370,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates AScript rules.</para>
+        /// <para>Updates programmable scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</para>
+        /// <para><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the rule is in the <b>Configuring</b> state, the rule is being updated.</description></item>
-        /// <item><description>If the rule is in the <b>Available</b> state, the rule is updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Configuring</b> state, the programmable script is being updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, the programmable script is updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12361,15 +12429,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates AScript rules.</para>
+        /// <para>Updates programmable scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</para>
+        /// <para><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the rule is in the <b>Configuring</b> state, the rule is being updated.</description></item>
-        /// <item><description>If the rule is in the <b>Available</b> state, the rule is updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Configuring</b> state, the programmable script is being updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, the programmable script is updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12388,15 +12456,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates AScript rules.</para>
+        /// <para>Updates programmable scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateAScripts</em>* is an an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> operation to query the status of an AScript rule.</para>
+        /// <para><em>UpdateAScripts</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the programmable script is not yet updated, and the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/472574.html">ListAScripts</a> to query the update status of the programmable script:</para>
         /// <list type="bullet">
-        /// <item><description>If the rule is in the <b>Configuring</b> state, the rule is being updated.</description></item>
-        /// <item><description>If the rule is in the <b>Available</b> state, the rule is updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Configuring</b> state, the programmable script is being updated.</description></item>
+        /// <item><description>If the programmable script is in the <b>Available</b> state, the programmable script is updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12415,7 +12483,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of an access control list (ACL), such as the name.</para>
+        /// <para>Updates the attributes of an ACL, such as its name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12469,7 +12537,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of an access control list (ACL), such as the name.</para>
+        /// <para>Updates the attributes of an ACL, such as its name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12523,7 +12591,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of an access control list (ACL), such as the name.</para>
+        /// <para>Updates the attributes of an ACL, such as its name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12541,7 +12609,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of an access control list (ACL), such as the name.</para>
+        /// <para>Updates the attributes of an ACL, such as its name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12559,7 +12627,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes, such as the name and protocol, of a health check template.</para>
+        /// <para>This operation updates the attributes of a health check template, such as its name and health check protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12657,7 +12725,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes, such as the name and protocol, of a health check template.</para>
+        /// <para>This operation updates the attributes of a health check template, such as its name and health check protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12755,7 +12823,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes, such as the name and protocol, of a health check template.</para>
+        /// <para>This operation updates the attributes of a health check template, such as its name and health check protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12773,7 +12841,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes, such as the name and protocol, of a health check template.</para>
+        /// <para>This operation updates the attributes of a health check template, such as its name and health check protocol.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12791,15 +12859,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the default action.</para>
+        /// <para>Updates the configuration of a listener, such as the name and default action.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the configuration of the listener is modified.</description></item>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener configuration is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener configuration has been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12898,15 +12966,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the default action.</para>
+        /// <para>Updates the configuration of a listener, such as the name and default action.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the configuration of the listener is modified.</description></item>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener configuration is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener configuration has been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13005,15 +13073,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the default action.</para>
+        /// <para>Updates the configuration of a listener, such as the name and default action.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the configuration of the listener is modified.</description></item>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener configuration is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener configuration has been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13032,15 +13100,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a listener, such as the name and the default action.</para>
+        /// <para>Updates the configuration of a listener, such as the name and default action.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request ID is returned, the listener configuration update is still being processed in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the configuration of the listener is modified.</description></item>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the listener configuration is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the listener configuration has been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13059,16 +13127,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log configuration of a listener, such as the access log configuration.</para>
+        /// <para>Updates the log-related properties of a listener, such as access logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</para>
+        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the log configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the log configuration of the listener is modified.<remarks>
-        /// <para>You can update the log configuration of a listener only after you enable the access log feature.</para>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the log configuration of the listener is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the log configuration of the listener is updated.<remarks>
+        /// <para>You can update the log configuration of a listener only after you enable access logging for the instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13129,16 +13197,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log configuration of a listener, such as the access log configuration.</para>
+        /// <para>Updates the log-related properties of a listener, such as access logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</para>
+        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the log configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the log configuration of the listener is modified.<remarks>
-        /// <para>You can update the log configuration of a listener only after you enable the access log feature.</para>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the log configuration of the listener is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the log configuration of the listener is updated.<remarks>
+        /// <para>You can update the log configuration of a listener only after you enable access logging for the instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13199,16 +13267,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log configuration of a listener, such as the access log configuration.</para>
+        /// <para>Updates the log-related properties of a listener, such as access logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</para>
+        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the log configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the log configuration of the listener is modified.<remarks>
-        /// <para>You can update the log configuration of a listener only after you enable the access log feature.</para>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the log configuration of the listener is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the log configuration of the listener is updated.<remarks>
+        /// <para>You can update the log configuration of a listener only after you enable access logging for the instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13229,16 +13297,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log configuration of a listener, such as the access log configuration.</para>
+        /// <para>Updates the log-related properties of a listener, such as access logs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the status of the task:</para>
+        /// <para><em>UpdateListenerLogConfig</em>* is an asynchronous operation. After a request ID is returned, the log configuration of the listener is not yet updated, and the system continues to process the update task in the background. You can call <a href="https://help.aliyun.com/document_detail/2254865.html">GetListenerAttribute</a> to query the update status of the listener log configuration:</para>
         /// <list type="bullet">
-        /// <item><description>If a listener is in the <b>Configuring</b> state, the log configuration of the listener is being modified.</description></item>
-        /// <item><description>If a listener is in the <b>Running</b> state, the log configuration of the listener is modified.<remarks>
-        /// <para>You can update the log configuration of a listener only after you enable the access log feature.</para>
+        /// <item><description>If the listener is in the <b>Configuring</b> state, the log configuration of the listener is being updated.</description></item>
+        /// <item><description>If the listener is in the <b>Running</b> state, the log configuration of the listener is updated.<remarks>
+        /// <para>You can update the log configuration of a listener only after you enable access logging for the instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13259,21 +13327,19 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network type of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Changing the network type of an application load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <para>Prerequisites</para>
         /// <list type="bullet">
-        /// <item><description>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
-        /// <item><description>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</description></item>
-        /// </list>
-        /// <h2>Usage notes</h2>
-        /// <para><b>UpdateLoadBalancerAddressTypeConfig</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</para>
-        /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the network type is being changed.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the network type has been changed.</description></item>
+        /// <item><description>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+        /// Usage notes
+        /// The <b>UpdateLoadBalancerAddressTypeConfig</b> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</description></item>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, its network type is being modified.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, its network type has been modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13336,21 +13402,19 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network type of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Changing the network type of an application load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <para>Prerequisites</para>
         /// <list type="bullet">
-        /// <item><description>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
-        /// <item><description>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</description></item>
-        /// </list>
-        /// <h2>Usage notes</h2>
-        /// <para><b>UpdateLoadBalancerAddressTypeConfig</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</para>
-        /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the network type is being changed.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the network type has been changed.</description></item>
+        /// <item><description>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+        /// Usage notes
+        /// The <b>UpdateLoadBalancerAddressTypeConfig</b> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</description></item>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, its network type is being modified.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, its network type has been modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13413,21 +13477,19 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network type of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Changing the network type of an application load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <para>Prerequisites</para>
         /// <list type="bullet">
-        /// <item><description>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
-        /// <item><description>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</description></item>
-        /// </list>
-        /// <h2>Usage notes</h2>
-        /// <para><b>UpdateLoadBalancerAddressTypeConfig</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</para>
-        /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the network type is being changed.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the network type has been changed.</description></item>
+        /// <item><description>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+        /// Usage notes
+        /// The <b>UpdateLoadBalancerAddressTypeConfig</b> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</description></item>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, its network type is being modified.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, its network type has been modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13446,21 +13508,19 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the network type of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Changing the network type of an application load balancer instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Prerequisites</h2>
+        /// <para>Prerequisites</para>
         /// <list type="bullet">
-        /// <item><description>An ALB instance is created. For more information about how to create an ALB instance, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
-        /// <item><description>If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</description></item>
-        /// </list>
-        /// <h2>Usage notes</h2>
-        /// <para><b>UpdateLoadBalancerAddressTypeConfig</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the task.</para>
-        /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the network type is being changed.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the network type has been changed.</description></item>
+        /// <item><description>You have created an Application Load Balancer (ALB) instance. For more information, see <a href="https://help.aliyun.com/document_detail/214358.html">CreateLoadBalancer</a>.</description></item>
+        /// <item><description>To change the network type of an ALB instance from Intranet to Internet, you must create an elastic IP address. For more information, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.
+        /// Usage notes
+        /// The <b>UpdateLoadBalancerAddressTypeConfig</b> operation is an asynchronous task. After you send a request, the system returns a request ID and runs the task in the background. The network type of the ALB instance is not immediately modified. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of the ALB instance:</description></item>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, its network type is being modified.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, its network type has been modified.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13479,15 +13539,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</para>
+        /// <para>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para>The <b>UpdateLoadBalancerAttribute</b> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</para>
         /// <list type="bullet">
-        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the ALB instance is being modified.</description></item>
-        /// <item><description>If the ALB instance is in the <b>Active</b> state, the ALB instance is modified.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Configuring</b> state, the instance is being updated.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Active</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13546,15 +13606,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</para>
+        /// <para>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para>The <b>UpdateLoadBalancerAttribute</b> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</para>
         /// <list type="bullet">
-        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the ALB instance is being modified.</description></item>
-        /// <item><description>If the ALB instance is in the <b>Active</b> state, the ALB instance is modified.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Configuring</b> state, the instance is being updated.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Active</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13613,15 +13673,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</para>
+        /// <para>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para>The <b>UpdateLoadBalancerAttribute</b> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</para>
         /// <list type="bullet">
-        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the ALB instance is being modified.</description></item>
-        /// <item><description>If the ALB instance is in the <b>Active</b> state, the ALB instance is modified.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Configuring</b> state, the instance is being updated.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Active</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13640,15 +13700,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an Application Load Balancer (ALB) instance, such as the name and the configuration read-only mode.</para>
+        /// <para>Updates the properties of an Application Load Balancer instance, such as its name and modification protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para>The <b>UpdateLoadBalancerAttribute</b> operation is asynchronous. After you send a request, the system returns a request ID and runs the task in the background. The properties of the Application Load Balancer instance are not modified until the task is complete. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the update.</para>
         /// <list type="bullet">
-        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the ALB instance is being modified.</description></item>
-        /// <item><description>If the ALB instance is in the <b>Active</b> state, the ALB instance is modified.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Configuring</b> state, the instance is being updated.</description></item>
+        /// <item><description>If the Application Load Balancer instance is in the <b>Active</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13672,8 +13732,8 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</description></item>
         /// <item><description><b>UpdateLoadBalancerEdition</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<list type="bullet">
         /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the edition of the ALB instance is being modified.</description></item>
         /// <item><description>If the ALB instance is in the <b>Active</b> state, the edition of the ALB instance is modified.</description></item>
@@ -13738,8 +13798,8 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</description></item>
         /// <item><description><b>UpdateLoadBalancerEdition</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<list type="bullet">
         /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the edition of the ALB instance is being modified.</description></item>
         /// <item><description>If the ALB instance is in the <b>Active</b> state, the edition of the ALB instance is modified.</description></item>
@@ -13804,8 +13864,8 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</description></item>
         /// <item><description><b>UpdateLoadBalancerEdition</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<list type="bullet">
         /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the edition of the ALB instance is being modified.</description></item>
         /// <item><description>If the ALB instance is in the <b>Active</b> state, the edition of the ALB instance is modified.</description></item>
@@ -13834,8 +13894,8 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</para>
         /// <list type="bullet">
+        /// <item><description>You can only upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance. You cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see <a href="https://help.aliyun.com/document_detail/214654.html">Upgrade an ALB instance</a>.</description></item>
         /// <item><description><b>UpdateLoadBalancerEdition</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the status of an ALB instance.<list type="bullet">
         /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the edition of the ALB instance is being modified.</description></item>
         /// <item><description>If the ALB instance is in the <b>Active</b> state, the edition of the ALB instance is modified.</description></item>
@@ -13859,16 +13919,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the zones of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Modifies the availability zones of an ALB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the zones are being modified.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the zones are modified.<remarks>
-        /// <para>You may be charged after you call UpdateLoadBalancerZones.</para>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the modification is in progress.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, the modification is complete.<remarks>
+        /// <para>Calling this operation may incur fees.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13929,16 +13989,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the zones of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Modifies the availability zones of an ALB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the zones are being modified.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the zones are modified.<remarks>
-        /// <para>You may be charged after you call UpdateLoadBalancerZones.</para>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the modification is in progress.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, the modification is complete.<remarks>
+        /// <para>Calling this operation may incur fees.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13999,16 +14059,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the zones of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Modifies the availability zones of an ALB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the zones are being modified.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the zones are modified.<remarks>
-        /// <para>You may be charged after you call UpdateLoadBalancerZones.</para>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the modification is in progress.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, the modification is complete.<remarks>
+        /// <para>Calling this operation may incur fees.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -14029,16 +14089,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the zones of an Application Load Balancer (ALB) instance.</para>
+        /// <para>Modifies the availability zones of an ALB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> to query the status of the task.</para>
+        /// <para><em>UpdateLoadBalancerZones</em>* is an asynchronous API. After you send a request, the system returns a request ID but does not immediately modify the availability zones. The modification runs in the background. Call the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation to query the modification status:</para>
         /// <list type="bullet">
-        /// <item><description>If an ALB instance is in the <b>Configuring</b> state, the zones are being modified.</description></item>
-        /// <item><description>If an ALB instance is in the <b>Active</b> state, the zones are modified.<remarks>
-        /// <para>You may be charged after you call UpdateLoadBalancerZones.</para>
+        /// <item><description>If the ALB instance is in the <b>Configuring</b> state, the modification is in progress.</description></item>
+        /// <item><description>If the ALB instance is in the <b>Active</b> state, the modification is complete.<remarks>
+        /// <para>Calling this operation may incur fees.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -14059,18 +14119,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a forwarding rule, such as the match condition, action, and name.</para>
+        /// <para>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-        ///     *   If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.
-        ///     *   If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</para>
         /// <list type="bullet">
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description><b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<list type="bullet">
+        /// <item><description>If the forwarding rule attributes are in the <b>Configuring</b> state, the attributes are being updated.</description></item>
+        /// <item><description>If the forwarding rule attributes are in the <b>Available</b> state, the attributes are updated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14139,18 +14201,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a forwarding rule, such as the match condition, action, and name.</para>
+        /// <para>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-        ///     *   If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.
-        ///     *   If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</para>
         /// <list type="bullet">
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description><b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<list type="bullet">
+        /// <item><description>If the forwarding rule attributes are in the <b>Configuring</b> state, the attributes are being updated.</description></item>
+        /// <item><description>If the forwarding rule attributes are in the <b>Available</b> state, the attributes are updated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14219,18 +14283,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a forwarding rule, such as the match condition, action, and name.</para>
+        /// <para>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-        ///     *   If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.
-        ///     *   If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</para>
         /// <list type="bullet">
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description><b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<list type="bullet">
+        /// <item><description>If the forwarding rule attributes are in the <b>Configuring</b> state, the attributes are being updated.</description></item>
+        /// <item><description>If the forwarding rule attributes are in the <b>Available</b> state, the attributes are updated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14251,18 +14317,20 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a forwarding rule, such as the match condition, action, and name.</para>
+        /// <para>Updates the attributes of a forwarding rule, such as conditions, actions, and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of a forwarding rule:
-        ///     *   If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.
-        ///     *   If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</para>
         /// <list type="bullet">
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description><b>UpdateRuleAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the forwarding rule attributes are not yet updated. The update task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> to query the update status of the forwarding rule attributes:<list type="bullet">
+        /// <item><description>If the forwarding rule attributes are in the <b>Configuring</b> state, the attributes are being updated.</description></item>
+        /// <item><description>If the forwarding rule attributes are in the <b>Available</b> state, the attributes are updated.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>) that can be added to a forwarding rule is as follows:<list type="bullet">
+        /// <item><description>Conditions: 5 for Basic Edition, 10 for Standard Edition, and 10 for WAF-enabled Edition.</description></item>
+        /// <item><description>Actions: 3 for Basic Edition, 5 for Standard Edition, and 5 for WAF-enabled Edition.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14283,18 +14351,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of forwarding rules.</para>
+        /// <para>Updates the properties of multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</para>
         /// <list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Configuring</b> state, their properties are being updated in a batch.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Available</b> state, their properties are updated.</description></item>
+        /// <item><description>A forwarding rule supports the following maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>):<list type="bullet">
+        /// <item><description>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</description></item>
+        /// <item><description>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14355,18 +14423,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of forwarding rules.</para>
+        /// <para>Updates the properties of multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</para>
         /// <list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Configuring</b> state, their properties are being updated in a batch.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Available</b> state, their properties are updated.</description></item>
+        /// <item><description>A forwarding rule supports the following maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>):<list type="bullet">
+        /// <item><description>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</description></item>
+        /// <item><description>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14427,18 +14495,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of forwarding rules.</para>
+        /// <para>Updates the properties of multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</para>
         /// <list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Configuring</b> state, their properties are being updated in a batch.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Available</b> state, their properties are updated.</description></item>
+        /// <item><description>A forwarding rule supports the following maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>):<list type="bullet">
+        /// <item><description>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</description></item>
+        /// <item><description>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14459,18 +14527,18 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of forwarding rules.</para>
+        /// <para>Updates the properties of multiple forwarding rules in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/214379.html">ListRules</a> operation to query the status of the task.</para>
+        /// <para><em>UpdateRulesAttribute</em>* is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The properties of the forwarding rules are not updated immediately. You can call the <a href="t2324530.xdita#"></a>operation to query the update status of the forwarding rules:</para>
         /// <list type="bullet">
-        /// <item><description>If a forwarding rule is in the <b>Configuring</b> state, the forwarding rule is being updated.</description></item>
-        /// <item><description>If a forwarding rule is in the <b>Available</b> state, the forwarding rule is updated.</description></item>
-        /// <item><description>You can set <b>RuleConditions</b> and <b>RuleActions</b> to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:<list type="bullet">
-        /// <item><description>Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.</description></item>
-        /// <item><description>Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Configuring</b> state, their properties are being updated in a batch.</description></item>
+        /// <item><description>If multiple forwarding rules are in the <b>Available</b> state, their properties are updated.</description></item>
+        /// <item><description>A forwarding rule supports the following maximum number of conditions (<b>RuleConditions</b>) and actions (<b>RuleActions</b>):<list type="bullet">
+        /// <item><description>Conditions: 5 for a Basic Edition instance, 10 for a Standard Edition instance, and 10 for a WAF-enabled instance.</description></item>
+        /// <item><description>Actions: 3 for a Basic Edition instance, 5 for a Standard Edition instance, and 5 for a WAF-enabled instance.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14491,16 +14559,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</para>
+        /// <para>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</para>
+        /// <h2>Usage</h2>
+        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</para>
         /// <list type="bullet">
-        /// <item><description>If a security policy is in the <b>Configuring</b> state, the security policy is being updated.</description></item>
-        /// <item><description>If a security policy is in the <b>Available</b> state, the security policy is updated.</description></item>
+        /// <item><description>If a security policy is in the <b>Configuring</b> state, the update is in progress.</description></item>
+        /// <item><description>If a security policy is in the <b>Available</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14563,16 +14631,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</para>
+        /// <para>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</para>
+        /// <h2>Usage</h2>
+        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</para>
         /// <list type="bullet">
-        /// <item><description>If a security policy is in the <b>Configuring</b> state, the security policy is being updated.</description></item>
-        /// <item><description>If a security policy is in the <b>Available</b> state, the security policy is updated.</description></item>
+        /// <item><description>If a security policy is in the <b>Configuring</b> state, the update is in progress.</description></item>
+        /// <item><description>If a security policy is in the <b>Available</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14635,16 +14703,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</para>
+        /// <para>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</para>
+        /// <h2>Usage</h2>
+        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</para>
         /// <list type="bullet">
-        /// <item><description>If a security policy is in the <b>Configuring</b> state, the security policy is being updated.</description></item>
-        /// <item><description>If a security policy is in the <b>Available</b> state, the security policy is updated.</description></item>
+        /// <item><description>If a security policy is in the <b>Configuring</b> state, the update is in progress.</description></item>
+        /// <item><description>If a security policy is in the <b>Available</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14663,16 +14731,16 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the attributes of a security policy, such as the TLS protocol version and the supported cipher suites.</para>
+        /// <para>Updates the attributes of a security policy, such as the security protocol version and cipher suites.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> to query the status of the task.</para>
+        /// <h2>Usage</h2>
+        /// <para><b>UpdateSecurityPolicyAttribute</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. The security policy is not updated immediately. You can call the <a href="https://help.aliyun.com/document_detail/213609.html">ListSecurityPolicies</a> operation to query its status:</para>
         /// <list type="bullet">
-        /// <item><description>If a security policy is in the <b>Configuring</b> state, the security policy is being updated.</description></item>
-        /// <item><description>If a security policy is in the <b>Available</b> state, the security policy is updated.</description></item>
+        /// <item><description>If a security policy is in the <b>Configuring</b> state, the update is in progress.</description></item>
+        /// <item><description>If a security policy is in the <b>Available</b> state, the update is complete.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14691,16 +14759,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
+        /// <para>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para><b>UpdateServerGroupAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</para>
+        /// <para>The <b>UpdateServerGroupAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Configuring</b> state, the configurations are being updated.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Available</b> state, the configurations have been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14795,16 +14862,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
+        /// <para>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para><b>UpdateServerGroupAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</para>
+        /// <para>The <b>UpdateServerGroupAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Configuring</b> state, the configurations are being updated.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Available</b> state, the configurations have been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14899,16 +14965,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
+        /// <para>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para><b>UpdateServerGroupAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</para>
+        /// <para>The <b>UpdateServerGroupAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Configuring</b> state, the configurations are being updated.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Available</b> state, the configurations have been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14927,16 +14992,15 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
+        /// <para>Updates the configurations of a server group, such as health check, session persistence, name, scheduling algorithm, and protocol configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
-        /// <para><b>UpdateServerGroupAttribute</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group:</para>
+        /// <para>The <b>UpdateServerGroupAttribute</b> operation is asynchronous. After a request is sent, the system returns a request ID, but the server group configurations have not been updated yet because the update task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the update status of the server group configurations:</para>
         /// <list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, the configuration of the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, the configuration of the server group is modified.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Configuring</b> state, the configurations are being updated.</description></item>
+        /// <item><description>If the server group configurations are in the <b>Available</b> state, the configurations have been updated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14955,21 +15019,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations, such as the backend server weight and description, of a server group.</para>
+        /// <para>Updates the configurations of backend servers in a server group, such as weights and descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Configuring</b> state, it indicates that the backend server is being modified.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the backend server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Configuring</b> state, the backend server is being modified.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -15034,21 +15098,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations, such as the backend server weight and description, of a server group.</para>
+        /// <para>Updates the configurations of backend servers in a server group, such as weights and descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Configuring</b> state, it indicates that the backend server is being modified.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the backend server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Configuring</b> state, the backend server is being modified.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -15113,21 +15177,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations, such as the backend server weight and description, of a server group.</para>
+        /// <para>Updates the configurations of backend servers in a server group, such as weights and descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Configuring</b> state, it indicates that the backend server is being modified.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the backend server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Configuring</b> state, the backend server is being modified.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -15148,21 +15212,21 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations, such as the backend server weight and description, of a server group.</para>
+        /// <para>Updates the configurations of backend servers in a server group, such as weights and descriptions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</para>
+        /// <para><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID. However, the backend server configurations are not yet updated, and the update task is still running in the background.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<list type="bullet">
-        /// <item><description>If a server group is in the <b>Configuring</b> state, it indicates that the server group is being modified.</description></item>
-        /// <item><description>If a server group is in the <b>Available</b> state, it indicates that the server group is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the status of a server group:<list type="bullet">
+        /// <item><description>If the server group is in the <b>Configuring</b> state, the server group is being modified.</description></item>
+        /// <item><description>If the server group is in the <b>Available</b> state, the server group is running.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<list type="bullet">
-        /// <item><description>If a backend server is in the <b>Configuring</b> state, it indicates that the backend server is being modified.</description></item>
-        /// <item><description>If a backend server is in the <b>Available</b> state, it indicates that the backend server is running.</description></item>
+        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> to query the status of a backend server:<list type="bullet">
+        /// <item><description>If the backend server is in the <b>Configuring</b> state, the backend server is being modified.</description></item>
+        /// <item><description>If the backend server is in the <b>Available</b> state, the backend server is running.</description></item>
         /// </list>
         /// </description></item>
         /// </ol>

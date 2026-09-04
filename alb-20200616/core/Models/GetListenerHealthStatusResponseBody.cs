@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class GetListenerHealthStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The health check status of the server groups associated with the listener.</para>
+        /// <para>The health check status list of server groups associated with the listener.</para>
         /// </summary>
         [NameInMap("ListenerHealthStatus")]
         [Validation(Required=false)]
         public List<GetListenerHealthStatusResponseBodyListenerHealthStatus> ListenerHealthStatus { get; set; }
         public class GetListenerHealthStatusResponseBodyListenerHealthStatus : TeaModel {
             /// <summary>
-            /// <para>The listener ID.</para>
+            /// <para>The listener ID of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>lsr-bp1bpn0kn908w4nbw****</para>
+            /// <para>lsn-o4u54y73wq7b******</para>
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ListenerProtocol { get; set; }
 
             /// <summary>
-            /// <para>The information about the server group.</para>
+            /// <para>The server group information.</para>
             /// </summary>
             [NameInMap("ServerGroupInfos")]
             [Validation(Required=false)]
             public List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos> ServerGroupInfos { get; set; }
             public class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos : TeaModel {
                 /// <summary>
-                /// <para>The action specified for the server group. Valid values:</para>
+                /// <para>The server group usage type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ForwardGroup</b>: distributes requests to server groups.</description></item>
-                /// <item><description><b>TrafficMirror</b>: mirrors requests to server groups.</description></item>
+                /// <item><description><b>ForwardGroup</b>: Forward to the server group.</description></item>
+                /// <item><description><b>TrafficMirror</b>: Mirror traffic to the server group.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether health checks are enabled. If <b>on</b> is returned, it indicates that health checks are enabled.</para>
+                /// <para>The health check status. Valid values: <b>on</b>: Health check is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckEnabled { get; set; }
 
                 /// <summary>
-                /// <para>A list of unhealthy backend servers.</para>
+                /// <para>The list of backend servers in abnormal state.</para>
                 /// </summary>
                 [NameInMap("NonNormalServers")]
                 [Validation(Required=false)]
                 public List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers> NonNormalServers { get; set; }
                 public class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers : TeaModel {
                     /// <summary>
-                    /// <para>The backend port.</para>
+                    /// <para>The backend server port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>90</para>
@@ -95,16 +95,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The cause for the unhealthy state of the backend servers.</para>
+                    /// <para>The reason for the abnormal state.</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason Reason { get; set; }
                     public class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason : TeaModel {
                         /// <summary>
-                        /// <para>The HTTP status code returned from the server, for example, <b>302</b>.</para>
+                        /// <para>The actual response code returned by the backend server, such as <b>302</b>.</para>
                         /// <remarks>
-                        /// <para>A value is returned only if <c>ReasonCode</c> is set to <b>RESPONSE_MISMATCH</b>.</para>
+                        /// <para>This value is returned only when <b>ReasonCode</b> is <b>RESPONSE_MISMATCH</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string ActualResponse { get; set; }
 
                         /// <summary>
-                        /// <para>The HTTP status code returned after backend servers pass health checks.</para>
-                        /// <para>Valid values: <b>HTTP_2xx</b>, <b>HTTP_3xx</b>, <b>HTTP_4xx</b>, and <b>HTTP_5xx</b>. Multiple status codes are separated by commas (,).</para>
+                        /// <para>The expected response code from the backend server.</para>
+                        /// <para>Valid values: <b>HTTP_2xx</b>, <b>HTTP_3xx</b>, <b>HTTP_4xx</b>, and <b>HTTP_5xx</b>. Multiple response codes are separated by commas (,).</para>
                         /// <remarks>
-                        /// <para>This value is returned only if <b>ReasonCode</b> is set to <b>RESPONSE_MISMATCH</b>.</para>
+                        /// <para>This value is returned only when <b>ReasonCode</b> is <b>RESPONSE_MISMATCH</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -129,16 +129,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string ExpectedResponse { get; set; }
 
                         /// <summary>
-                        /// <para>The reason why the value of <b>Status</b> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</para>
+                        /// <para>The detailed reason when <b>Status</b> is abnormal.
+                        /// Currently, only HTTP and HTTPS listeners and forwarding rules support viewing abnormal status reasons:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>CONNECT_TIMEOUT</b>: ALB failed to connect to the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>CONNECT_FAILED</b>: ALB failed to connect to the backend server.</description></item>
-                        /// <item><description><b>RECV_RESPONSE_FAILED</b>: ALB failed to receive a response from the backend server.</description></item>
-                        /// <item><description><b>RECV_RESPONSE_TIMEOUT</b>: ALB failed to receive a response from the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>SEND_REQUEST_FAILED</b>: ALB failed to send a request to the backend server.</description></item>
-                        /// <item><description><b>SEND_REQUEST_TIMEOUT</b>: ALB failed to send a request to the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The format of the response from the backend server is invalid.</description></item>
-                        /// <item><description><b>RESPONSE_MISMATCH</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
+                        /// <item><description><para><b>CONNECT_TIMEOUT</b>: The Server Load Balancer (SLB) health check timed out when establishing a connection to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>CONNECT_FAILED</b>: The SLB health check failed to establish a connection to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RECV_RESPONSE_FAILED</b>: The SLB health check failed to receive a response from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RECV_RESPONSE_TIMEOUT</b>: The SLB health check timed out when receiving a response from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>SEND_REQUEST_FAILED</b>: The SLB health check failed to send a request to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>SEND_REQUEST_TIMEOUT</b>: The SLB health check timed out when sending a request to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RESPONSE_FORMAT_ERROR</b>: The SLB health check received a response in an incorrect format from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RESPONSE_MISMATCH</b>: The response code received from the backend server during the SLB health check did not match the expected response code.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -151,17 +160,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
 
                     /// <summary>
-                    /// <para>The ID of the backend server.</para>
+                    /// <para>The backend server ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>rg-bp1bfa08ex*****</para>
+                    /// <para>i-uf62h8v******</para>
                     /// </summary>
                     [NameInMap("ServerId")]
                     [Validation(Required=false)]
                     public string ServerId { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address of the backend server.</para>
+                    /// <para>The backend server IP address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>192.168.8.10</para>
@@ -171,12 +180,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string ServerIp { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the health check. Valid values: Valid values:</para>
+                    /// <para>The health check status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Initial</b>: indicates that health checks are configured for the NLB instance, but no data was found.</description></item>
-                    /// <item><description><b>Unhealthy</b>: indicates that the backend server consecutively fails health checks.</description></item>
-                    /// <item><description><b>Unused</b>: indicates that the weight of the backend server is 0.</description></item>
-                    /// <item><description><b>Unavailable</b>: indicates that health checks are disabled.</description></item>
+                    /// <item><description><para><b>Initial</b>: Initializing. The SLB instance has health check configured, but no data is available.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unhealthy</b>: Unhealthy. The backend server has continuously reported an unhealthy state.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unused</b>: Not in use. The weight of the backend server is 0, or cross-zone load balancing is disabled and the backend server is not in the same zone as the Application Load Balancer (ALB) instance.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unavailable</b>: Not enabled. Health check is not enabled.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -189,10 +202,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the server group that is associated with the listener.</para>
+                /// <para>The number of servers in the server group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vsp-bp1qjwo61pqz3ahltv****</para>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ServerCount")]
+                [Validation(Required=false)]
+                public int? ServerCount { get; set; }
+
+                /// <summary>
+                /// <para>The associated server group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sgp-8ilqs4axp6******</para>
                 /// </summary>
                 [NameInMap("ServerGroupId")]
                 [Validation(Required=false)]
@@ -203,10 +226,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>Indicates whether a next query token exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,21 +243,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876F******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The health check status of the forwarding rules.</para>
+        /// <para>The health status list of forwarding rules.</para>
         /// </summary>
         [NameInMap("RuleHealthStatus")]
         [Validation(Required=false)]
         public List<GetListenerHealthStatusResponseBodyRuleHealthStatus> RuleHealthStatus { get; set; }
         public class GetListenerHealthStatusResponseBodyRuleHealthStatus : TeaModel {
             /// <summary>
-            /// <para>The ID of the forwarding rule.</para>
+            /// <para>The forwarding rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule-hp34s2h0xx1ht4nwo****</para>
@@ -244,14 +267,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The server groups.</para>
+            /// <para>The list of server groups.</para>
             /// </summary>
             [NameInMap("ServerGroupInfos")]
             [Validation(Required=false)]
             public List<GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfos> ServerGroupInfos { get; set; }
             public class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfos : TeaModel {
                 /// <summary>
-                /// <para>The action specified for the server group.</para>
+                /// <para>The server group usage type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TrafficMirror</para>
@@ -261,7 +284,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string ActionType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether health checks are enabled. If <b>on</b> is returned, it indicates that health checks are enabled.</para>
+                /// <para>The health check status. Valid values: <b>on</b>: Health check is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -271,14 +294,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string HealthCheckEnabled { get; set; }
 
                 /// <summary>
-                /// <para>A list of unhealthy backend servers.</para>
+                /// <para>The list of backend servers in abnormal state.</para>
                 /// </summary>
                 [NameInMap("NonNormalServers")]
                 [Validation(Required=false)]
                 public List<GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServers> NonNormalServers { get; set; }
                 public class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServers : TeaModel {
                     /// <summary>
-                    /// <para>The backend port.</para>
+                    /// <para>The backend server port.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>90</para>
@@ -288,16 +311,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The cause for the unhealthy state of the backend servers.</para>
+                    /// <para>The reason for the abnormal state.</para>
                     /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason Reason { get; set; }
                     public class GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason : TeaModel {
                         /// <summary>
-                        /// <para>The HTTP status code returned from the server, for example, <b>302</b>.</para>
+                        /// <para>The actual response code returned by the backend server, such as <b>302</b>.</para>
                         /// <remarks>
-                        /// <para>A value is returned only if <b>ReasonCode</b> is set to <b>RESPONSE_MISMATCH</b>.</para>
+                        /// <para>This value is returned only when <b>ReasonCode</b> is <b>RESPONSE_MISMATCH</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -308,10 +331,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string ActualResponse { get; set; }
 
                         /// <summary>
-                        /// <para>The HTTP status code returned after backend servers pass health checks.</para>
-                        /// <para>Valid values: <b>HTTP_2xx</b>, <b>HTTP_3xx</b>, <b>HTTP_4xx</b>, and <b>HTTP_5xx</b>. Multiple status codes are separated by commas (,).</para>
+                        /// <para>The expected response code from the backend server.</para>
+                        /// <para>Valid values: <b>HTTP_2xx</b>, <b>HTTP_3xx</b>, <b>HTTP_4xx</b>, and <b>HTTP_5xx</b>. Multiple response codes are separated by commas (,).</para>
                         /// <remarks>
-                        /// <para>A value is returned only if <b>ReasonCode</b> is set to <b>RESPONSE_MISMATCH</b>.</para>
+                        /// <para>This value is returned only when <b>ReasonCode</b> is <b>RESPONSE_MISMATCH</b>.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -322,16 +345,25 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                         public string ExpectedResponse { get; set; }
 
                         /// <summary>
-                        /// <para>The reason why the value of <b>Status</b> is Unhealthy. Only forwarding rules for HTTP and HTTPS listeners support this parameter.</para>
+                        /// <para>The detailed reason when <b>Status</b> is abnormal.
+                        /// Currently, only HTTP and HTTPS listeners and forwarding rules support viewing abnormal status reasons:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>CONNECT_TIMEOUT</b>: ALB failed to connect to the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>CONNECT_FAILED</b>: ALB failed to connect to the backend server.</description></item>
-                        /// <item><description><b>RECV_RESPONSE_FAILED</b>: ALB failed to receive a response from the backend server.</description></item>
-                        /// <item><description><b>RECV_RESPONSE_TIMEOUT</b>: ALB failed to receive a response from the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>SEND_REQUEST_FAILED</b>: ALB failed to send a request to the backend server.</description></item>
-                        /// <item><description><b>SEND_REQUEST_TIMEOUT</b>: ALB failed to send a request to the backend server within the specified period of time.</description></item>
-                        /// <item><description><b>RESPONSE_FORMAT_ERROR</b>: The format of the response from the backend server is invalid.</description></item>
-                        /// <item><description><b>RESPONSE_MISMATCH</b>: The HTTP status code returned from the backend server is not the expected one.</description></item>
+                        /// <item><description><para><b>CONNECT_TIMEOUT</b>: The Server Load Balancer (SLB) health check timed out when establishing a connection to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>CONNECT_FAILED</b>: The SLB health check failed to establish a connection to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RECV_RESPONSE_FAILED</b>: The SLB health check failed to receive a response from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RECV_RESPONSE_TIMEOUT</b>: The SLB health check timed out when receiving a response from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>SEND_REQUEST_FAILED</b>: The SLB health check failed to send a request to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>SEND_REQUEST_TIMEOUT</b>: The SLB health check timed out when sending a request to the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RESPONSE_FORMAT_ERROR</b>: The SLB health check received a response in an incorrect format from the backend server.</para>
+                        /// </description></item>
+                        /// <item><description><para><b>RESPONSE_MISMATCH</b>: The response code received from the backend server during the SLB health check did not match the expected response code.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -344,17 +376,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     }
 
                     /// <summary>
-                    /// <para>The ID of the backend server.</para>
+                    /// <para>The backend server ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>rg-bp1bfa08ex****</para>
+                    /// <para>i-uf62h8v******</para>
                     /// </summary>
                     [NameInMap("ServerId")]
                     [Validation(Required=false)]
                     public string ServerId { get; set; }
 
                     /// <summary>
-                    /// <para>The IP address of the server group.</para>
+                    /// <para>The backend server group IP address.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>192.168.2.11</para>
@@ -364,12 +396,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                     public string ServerIp { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the health check. Valid values: Valid values:</para>
+                    /// <para>The health check status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Initial</b>: indicates that health checks are configured for the NLB instance, but no data was found.</description></item>
-                    /// <item><description><b>Unhealthy</b>: indicates that the backend server consecutively fails health checks.</description></item>
-                    /// <item><description><b>Unused</b>: indicates that the weight of the backend server is 0.</description></item>
-                    /// <item><description><b>Unavailable</b>: indicates that health checks are disabled.</description></item>
+                    /// <item><description><para><b>Initial</b>: Initializing. The SLB instance has health check configured, but no data is available.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unhealthy</b>: Unhealthy. The backend server has continuously reported an unhealthy state.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unused</b>: Not in use. The weight of the backend server is 0, or cross-zone load balancing is disabled and the backend server is not in the same zone as the ALB instance.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Unavailable</b>: Not enabled. Health check is not enabled.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -382,10 +418,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the server group that is associated with the listener.</para>
+                /// <para>The number of servers in the server group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vsp-bp1qjwo61pqz3ahlt****</para>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ServerCount")]
+                [Validation(Required=false)]
+                public long? ServerCount { get; set; }
+
+                /// <summary>
+                /// <para>The associated server group ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>sgp-8ilqs4axp6******</para>
                 /// </summary>
                 [NameInMap("ServerGroupId")]
                 [Validation(Required=false)]

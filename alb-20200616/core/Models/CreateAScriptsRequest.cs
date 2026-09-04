@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateAScriptsRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the AScript rules.</para>
+        /// <para>The AScripts to create.</para>
         /// </summary>
         [NameInMap("AScripts")]
         [Validation(Required=false)]
         public List<CreateAScriptsRequestAScripts> AScripts { get; set; }
         public class CreateAScriptsRequestAScripts : TeaModel {
             /// <summary>
-            /// <para>The name of the AScript rule.</para>
-            /// <para>The length must be between 2 and 128 characters. This name must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the AScript.</para>
+            /// <para>The name must be 2 to 128 characters long, and must start with a letter, a digit, or a Chinese character. It can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,10 +29,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AScriptName { get; set; }
 
             /// <summary>
-            /// <para>Enables the AScript rule. Valid values:</para>
+            /// <para>Specifies whether the AScript is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,10 +45,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Enables the extended attribute of the Ascript rule. Valid values:</para>
+            /// <para>Specifies whether to enable extended attributes for the AScript. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false (default)</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b> (default): Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,15 +61,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? ExtAttributeEnabled { get; set; }
 
             /// <summary>
-            /// <para>The extended attribute of the AScript rule.</para>
+            /// <para>The extended attributes.</para>
             /// </summary>
             [NameInMap("ExtAttributes")]
             [Validation(Required=false)]
             public List<CreateAScriptsRequestAScriptsExtAttributes> ExtAttributes { get; set; }
             public class CreateAScriptsRequestAScriptsExtAttributes : TeaModel {
                 /// <summary>
-                /// <para>The key of the extended attribute.</para>
-                /// <para>You can only set the key to <b>EsDebug</b>. This extended attribute adds a debug response header to record the execution of the AScript rule if the client request includes the _es_dbg parameter and its value matches the specified value of the extended attribute.</para>
+                /// <para>The attribute key.</para>
+                /// <para>The only valid value is <b>EsDebug</b>. If a request contains the _es_dbg parameter and its value matches the secret key specified in AttributeValue, the system adds a debug header to the response, which contains rule execution logs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EsDebug</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string AttributeKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the extended attribute, which can contain a maximum of 128 characters, including letters and digits.</para>
+                /// <para>The attribute value, which is used as the secret key for the EsDebug attribute. The value must be 1 to 128 characters long and can contain uppercase letters, lowercase letters, and digits.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test123</para>
@@ -87,11 +91,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The position where the Ascript rule is evaluated. Valid values are:</para>
+            /// <para>Specifies when the AScript is executed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RequestHead (default): before inbound rules are evaluated</description></item>
-            /// <item><description>RequestFoot: after inbound rules are evaluated</description></item>
-            /// <item><description>ResponseHead: before outbound rules are evaluated</description></item>
+            /// <item><description><para><b>RequestHead</b> (default): Executes before request rules.</para>
+            /// </description></item>
+            /// <item><description><para><b>RequestFoot</b>: Executes after request rules.</para>
+            /// </description></item>
+            /// <item><description><para><b>ResponseHead</b>: Executes before response rules.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +109,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Position { get; set; }
 
             /// <summary>
-            /// <para>The content of the AScript rule.</para>
+            /// <para>The content of the AScript.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,21 +122,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token used to ensure request idempotency.</para>
+        /// <para>You can generate this value on your client. The value must be unique across requests and contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
+        /// <para>5A2CFF0E-5718-45B5-9D4D-70B******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without creating the AScript. The system checks the request for required parameters, format validity, and service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

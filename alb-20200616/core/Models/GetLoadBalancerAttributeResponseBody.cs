@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The reason why the ALB instance is locked. This parameter is valid only if <b>LoadBalancerBussinessStatus</b> is set to <b>Abnormal</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>nolock</para>
+            /// <para>欠费</para>
             /// </summary>
             [NameInMap("LockReason")]
             [Validation(Required=false)]
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>This parameter takes effect only if <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Managed instance</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>This parameter takes effect when <b>AddressIPVersion</b> is set to <b>IPv4</b> or <b>DualStack</b>. The network type is determined by the value of <b>AddressType</b>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>192.168.10.1</para>
+                /// <para>10.1.0.61</para>
                 /// </summary>
                 [NameInMap("Address")]
                 [Validation(Required=false)]
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>The private IPv4 address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>10.0.1.181</para>
+                /// <para>10.1.0.61</para>
                 /// </summary>
                 [NameInMap("IntranetAddress")]
                 [Validation(Required=false)]
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>This parameter takes effect only when <b>AddressIPVersion</b> is set to <b>DualStack</b>. The network type is determined by the value of <b>Ipv6AddressType</b>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2408:XXXX:39d:eb00::/56</para>
+                /// <para>2408:xxxx:249:dd01:6f4:750f:xxxx:bcd9</para>
                 /// </summary>
                 [NameInMap("Ipv6Address")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ReplaceServersInServerGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The backend servers. You can specify at most 200 servers in each call.</para>
+        /// <para>The list of backend servers to add. You can specify up to 200 servers in a single request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddedServers")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ReplaceServersInServerGroupRequestAddedServers> AddedServers { get; set; }
         public class ReplaceServersInServerGroupRequestAddedServers : TeaModel {
             /// <summary>
-            /// <para>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
+            /// <para>The description of the backend server. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The port used by the backend server in the server group. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
+            /// <para>The port used by the backend server group. Valid values: <b>1</b> to <b>65535</b>. You can specify up to 200 servers in a single request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -38,13 +38,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <para>The backend server ID. You can specify up to 200 servers in a single request.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
+            /// <item><description><para>If the server group type is <b>Instance</b>, set this parameter to the ID of an <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> resource.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group type is <b>Ip</b>, set this parameter to an IP address.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</para>
+            /// <para>Server groups of the Function Compute type do not support replacing backend servers. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the server group type.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -55,7 +57,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the elastic network interface (ENI) in exclusive mode.</para>
+            /// <para>The IP address.</para>
+            /// <para>If <b>ServerType</b> is set to <b>Eni</b>, you can specify the primary private IP address or a secondary private IP address of the ENI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
@@ -65,11 +68,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server. You can specify at most 200 servers in each call. Valid values:</para>
+            /// <para>The backend server type. You can specify up to 200 servers in a single call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance.</description></item>
+            /// <item><description><b>Eni</b>: ENI network interface controller (NIC) instance.</description></item>
+            /// <item><description><b>Eci</b>: ECI elastic container.</description></item>
+            /// <item><description><b>Ip</b>: IP address.</description></item>
+            /// <item><description><b>Fc</b>: Function Compute.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,8 +85,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the backend server. You can specify at most 200 servers in each call.</para>
-            /// <para>Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server.</para>
+            /// <para>The weight of the backend server. You can specify up to 200 servers in a single request.</para>
+            /// <para>Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the weight is set to <b>0</b>, no requests are forwarded to the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -94,9 +99,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,10 +112,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx</c> HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without replacing backend servers in the server group. The system checks the required parameters, request syntax, and business limitations. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an <c>HTTP 2xx</c> status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +126,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The backend servers that you want to remove.</para>
+        /// <para>The backend servers to remove.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RemovedServers")]
@@ -129,7 +134,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<ReplaceServersInServerGroupRequestRemovedServers> RemovedServers { get; set; }
         public class ReplaceServersInServerGroupRequestRemovedServers : TeaModel {
             /// <summary>
-            /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
+            /// <para>The port used by the backend server. Valid values: <b>1</b> to <b>65535</b>. You can specify up to 200 servers in a single request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -139,25 +144,28 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <para>The backend server ID. You can specify up to 200 servers in a single request.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set ServerId to IP addresses.</description></item>
+            /// <item><description><para>If the server group type is <b>Instance</b>, set this parameter to the ID of an <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> resource.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group type is <b>Ip</b>, set this parameter to an IP address.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You cannot perform this operation on a server group of the Function Compute type. You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the type of server groups.</para>
+            /// <para>Server groups of the Function Compute type do not support replacing backend servers. You can call <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> to query the server group type.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs-bp1ac9uozods2uc****</para>
+            /// <para>i-bp1f9kdprbgy9uiu****</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the ENI in exclusive mode.</para>
+            /// <para>The IP address.</para>
+            /// <para>If <b>ServerType</b> is set to <b>Eni</b>, you can specify the primary private IP address or a secondary private IP address of the ENI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.12</para>
@@ -167,11 +175,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of backend server. You can specify at most 200 servers in each call. Valid values:</para>
+            /// <para>The backend server type. You can specify up to 200 servers in a single call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: ECS instance</description></item>
-            /// <item><description><b>Eni</b>: ENI</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance.</description></item>
+            /// <item><description><b>Eni</b>: ENI network interface controller (NIC) instance.</description></item>
+            /// <item><description><b>Eci</b>: ECI elastic container.</description></item>
+            /// <item><description><b>Ip</b>: IP address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,9 +193,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the server group.</para>
+        /// <para>The server group ID.</para>
         /// <remarks>
-        /// <para>You cannot perform this operation on a server group of the Function type.</para>
+        /// <para>Server groups of the Function Compute type do not support replacing backend servers.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

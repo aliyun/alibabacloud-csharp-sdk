@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateLoadBalancerRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which IP addresses are allocated to the ALB instance. Valid values:</para>
+        /// <para>The address allocation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Fixed</b> (default): a fixed IP address is assigned to the ALB instance in each zone.</description></item>
-        /// <item><description><b>Dynamic</b>: IP addresses are dynamically allocated to the ALB instance in each zone.</description></item>
+        /// <item><description><para><b>Fixed</b> (default): A static IP address is assigned to each availability zone.</para>
+        /// </description></item>
+        /// <item><description><para><b>Dynamic</b>: An IP address is dynamically assigned to each availability zone.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Starting from 00:00:00 on February 25, 2025 (UTC+8), when you call this operation to create an ALB instance, the instance is automatically the <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded version</a> regardless of the mode you specify. Upgraded ALB instances no longer differentiate between IP modes. Instead, they globally auto-scale IP addresses for providing load balancing services. The ALB instances you created before this date and time are not affected.</para>
+        /// <para>Starting from &lt;props=&quot;china&quot;&gt;00:00:00 on February 25, 2025 (Beijing time)&lt;props=&quot;intl&quot;&gt;00:00:00 on February 25, 2025 (UTC+8), all instances created by calling this API will be <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded ALB instances</a> regardless of the mode you specify. IP modes are no longer distinguished, and the allocated IP addresses scale automatically. Existing ALB instances created before the upgrade are not affected.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Dynamic</para>
+        /// <para>Fixed</para>
         /// </summary>
         [NameInMap("AddressAllocatedMode")]
         [Validation(Required=false)]
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The protocol version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4:</b> IPv4.</description></item>
-        /// <item><description><b>DualStack:</b> dual stack.</description></item>
+        /// <item><description><para><b>IPv4</b>: IPv4.</para>
+        /// </description></item>
+        /// <item><description><para><b>DualStack</b>: The instance supports both IPv4 and IPv6.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,10 +45,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The type of the address of the ALB instance. Valid values:</para>
+        /// <para>The address type of the Application Load Balancer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet:</b> The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. In this case, the ALB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet:</b> The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</description></item>
+        /// <item><description><para><b>Internet</b>: The load balancer is assigned a public IP address. Its domain name is resolved to the public IP address, allowing access from the public network.</para>
+        /// </description></item>
+        /// <item><description><para><b>Intranet</b>: The load balancer is assigned a private IP address. Its domain name is resolved to the private IP address, allowing access only from the private network of the VPC where the load balancer is deployed.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,10 +62,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters.</para>
+        /// <para>A client token to ensure the idempotency of the request.</para>
+        /// <para>You can generate a unique value from your client for each request. The <c>ClientToken</c> parameter supports only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system uses the value of <b>RequestId</b> as the value of <b>ClientToken</b>. The value of the <b>RequestId</b> parameter may be different for each API request.</para>
+        /// <para>If you omit this parameter, the system uses the <b>RequestId</b> of the request as the <b>ClientToken</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,10 +76,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable deletion protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b> enables deletion protection.</description></item>
-        /// <item><description><b>false:</b> disables deletion protection.</description></item>
+        /// <item><description><para><b>true</b>: Enables deletion protection.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disables deletion protection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,10 +92,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DeletionProtectionEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true:</b> performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false:</b> performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without creating the Application Load Balancer instance. The system checks for required parameters, the request format, and service limits. If the request fails the check, an error is returned. If the request passes the check, the system returns the <c>DryRunOperation</c> error code.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, the system returns an HTTP 2xx status code and performs the operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +108,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the ALB instance.</para>
+        /// <para>The billing configuration of the Application Load Balancer instance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LoadBalancerBillingConfig")]
@@ -106,7 +116,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public CreateLoadBalancerRequestLoadBalancerBillingConfig LoadBalancerBillingConfig { get; set; }
         public class CreateLoadBalancerRequestLoadBalancerBillingConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.</para>
+            /// <para>The ID of the shared bandwidth package that is associated with the public-facing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbwp-bp1vevu8h3ieh****</para>
@@ -117,7 +127,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
             /// <summary>
             /// <para>The billing method of the instance.</para>
-            /// <para>Set the value to <b>PostPay</b>, which specifies the pay-as-you-go billing method.</para>
+            /// <para>Set the value to <b>PostPay</b> for pay-as-you-go.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -130,11 +140,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The edition of the ALB instance. The features and billing rules vary based on the edition of the ALB instance. Valid values:</para>
+        /// <para>The edition of the Application Load Balancer. Different editions have different features and billing policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic:</b> basic.</description></item>
-        /// <item><description><b>Standard:</b> standard.</description></item>
-        /// <item><description><b>StandardWithWaf:</b> WAF-enabled.</description></item>
+        /// <item><description><para><b>Basic</b>: Basic edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>Standard</b>: Standard edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>StandardWithWaf</b>: WAF-enabled edition.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -146,8 +159,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerEdition { get; set; }
 
         /// <summary>
-        /// <para>The name of the ALB instance.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the Application Load Balancer instance.</para>
+        /// <para>The name must be 2 to 128 characters long. It must start with a letter, a Chinese character, or a digit, and can contain digits, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb1</para>
@@ -157,34 +170,36 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The configuration read-only mode settings.</para>
+        /// <para>The modification protection settings.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public CreateLoadBalancerRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class CreateLoadBalancerRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The reason for enabling the configuration read-only mode.</para>
-            /// <para>The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</para>
+            /// <para>The reason for enabling modification protection.</para>
+            /// <para>The reason must be 2 to 128 characters long. It must start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
+            /// <para>This parameter is effective only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Managed Instance</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the configuration read-only mode. Valid values:</para>
+            /// <para>The modification protection status of the Application Load Balancer instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NonProtection</b>: Disables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify does not take effect. If you specify <b>Reason</b>, the value of the parameter is cleared.</description></item>
-            /// <item><description><b>ConsoleProtection</b>: Enables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify takes effect.****</description></item>
+            /// <item><description><para><b>NonProtection</b>: Modification protection is disabled. If you specify a value for <b>Reason</b>, the value is cleared.</para>
+            /// </description></item>
+            /// <item><description><para><b>ConsoleProtection</b>: Console-based modification protection is enabled. If you specify a value for <b>Reason</b>, the value takes effect.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the parameter is set to <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
+            /// <para>If you set the value to <b>ConsoleProtection</b>, you cannot modify the instance in the Application Load Balancer console. However, you can still modify it by calling API operations.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -206,11 +221,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the security groups to associate with the instance.</para>
+        /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestSecurityGroupIds> SecurityGroupIds { get; set; }
         public class CreateLoadBalancerRequestSecurityGroupIds : TeaModel {
             /// <summary>
+            /// <para>The ID of the security group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sg-gw82chzr7ru23iwbn9mu</para>
             /// </summary>
@@ -221,14 +241,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags to add to the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateLoadBalancerRequestTag> Tag { get; set; }
         public class CreateLoadBalancerRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</para>
+            /// <para>The tag key. The key can be up to 128 characters long, cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -238,7 +258,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</para>
+            /// <para>The tag value. The value can be up to 128 characters long, cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product</para>
@@ -250,7 +270,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which you want to create the ALB instance.</para>
+        /// <para>The ID of the VPC for the Application Load Balancer instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -261,7 +281,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The mappings between zones an vSwitches. You can specify at most 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</para>
+        /// <para>The mappings between availability zones and subnets. You can specify up to 10 availability zones. If the region has two or more availability zones, you must specify at least two.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
@@ -269,7 +289,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<CreateLoadBalancerRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateLoadBalancerRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the EIP to be associated with the Internet-facing ALB instance.</para>
+            /// <para>The ID of the Elastic IP address (EIP) to associate with the public-facing instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-bp1aedxso6u80u0qf****</para>
@@ -279,13 +299,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The type of EIP. Valid values:</para>
+            /// <para>The type of the Elastic IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Common</b>: an EIP.</description></item>
-            /// <item><description><b>Anycast</b>: an Anycast EIP.</description></item>
+            /// <item><description><para><b>Common</b> (default): an Elastic IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>Anycast</b>: an Anycast EIP.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</para>
+            /// <para>For regions that support binding Anycast EIPs to an Application Load Balancer instance, see <a href="https://help.aliyun.com/document_detail/460727.html">Limitations</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -306,7 +328,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string IntranetAddress { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones.</para>
+            /// <para>The ID of the subnet in the specified availability zone. Each availability zone can be mapped to only one subnet.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -317,7 +339,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the cluster. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</para>
+            /// <para>The ID of the availability zone.
+            /// You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query for available zones.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

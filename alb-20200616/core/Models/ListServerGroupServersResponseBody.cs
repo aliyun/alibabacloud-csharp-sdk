@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListServerGroupServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of records returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If <b>NextToken</b> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of backend servers.</para>
+        /// <para>The list of servers.</para>
         /// </summary>
         [NameInMap("Servers")]
         [Validation(Required=false)]
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the remote IP address feature is enabled. Valid values:</para>
+            /// <para>Indicates whether remote IP is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: enabled.</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? RemoteIpEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group.</para>
+            /// <para>The server group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sgp-qy042e1jabmprh****</para>
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backend server.</para>
+            /// <para>The backend server ID.</para>
             /// <remarks>
-            /// <para>If <b>ServerType</b> is set to <b>Fc</b>, <b>ServerId</b> is the ARN of a function.</para>
+            /// <para>If <b>ServerType</b> is set to <b>Fc</b>, <b>ServerId</b> specifies the ARN of the Function Compute function.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address in inclusive ENI mode.</para>
+            /// <para>The specified IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of the backend server.</para>
+            /// <para>The server type of the backend server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ecs</para>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The status of the backend server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Adding</b></description></item>
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Configuring</b></description></item>
-            /// <item><description><b>Removing</b></description></item>
+            /// <item><description><b>Adding</b>: being added.</description></item>
+            /// <item><description><b>Available</b>: available.</description></item>
+            /// <item><description><b>Configuring</b>: being configured.</description></item>
+            /// <item><description><b>Removing</b>: being removed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The weight of the backend server. An ECS instance with a higher weight receives more requests.</para>
+            /// <para>The weight of the backend server. A server with a higher weight receives more requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records that match the specified filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateLoadBalancerAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a value from your client and make sure that the value is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: performs a dry run and sends the request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: Performs a dry run. The system checks for required parameters, the request format, and business limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned. No properties of the Application Load Balancer instance are modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends a normal request. After the request passes the check, a <c>2xx</c> status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ALB instance.</para>
+        /// <para>The Application Load Balancer instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,42 +51,44 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string LoadBalancerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ALB instance. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+        /// <para>The name of the Application Load Balancer instance must be 2 to 128 characters in length. It must start with a letter, a Chinese character, or a number. The name can contain numbers, periods (.), underscores (_), hyphens (-), and spaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-instance-test</para>
+        /// <para>alb-instance-test</para>
         /// </summary>
         [NameInMap("LoadBalancerName")]
         [Validation(Required=false)]
         public string LoadBalancerName { get; set; }
 
         /// <summary>
-        /// <para>The configuration read-only mode settings.</para>
+        /// <para>The modification protection settings.</para>
         /// </summary>
         [NameInMap("ModificationProtectionConfig")]
         [Validation(Required=false)]
         public UpdateLoadBalancerAttributeRequestModificationProtectionConfig ModificationProtectionConfig { get; set; }
         public class UpdateLoadBalancerAttributeRequestModificationProtectionConfig : TeaModel {
             /// <summary>
-            /// <para>The reason for enabling the configuration read-only mode.</para>
-            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</para>
-            /// <para>This parameter takes effect only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
+            /// <para>The reason for enabling modification protection.</para>
+            /// <para>The reason must be 2 to 128 characters long. It must start with a letter and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+            /// <para>This parameter is valid only when <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Managed Instance</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the configuration read-only mode. Valid values:</para>
+            /// <para>The modification protection status of the Application Load Balancer instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NonProtection</b>: disables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify does not take effect. If you set the value of <b>Reason</b>, the value is cleared.</description></item>
-            /// <item><description><b>ConsoleProtection</b>: enables the configuration read-only mode. In this case, the value of the <b>Reason</b> parameter that you specify takes effect.****</description></item>
+            /// <item><description><para><b>NonProtection</b>: Disables modification protection. If you specify a value for <b>Reason</b>, the value is cleared.</para>
+            /// </description></item>
+            /// <item><description><para><b>ConsoleProtection</b>: Enables modification protection in the console. If you specify a value for <b>Reason</b>, the value takes effect.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the parameter is set to <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
+            /// <para>If you set the value to <b>ConsoleProtection</b>, you cannot modify the instance configuration in the Application Load Balancer console. However, you can still modify the instance configuration by calling API operations.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

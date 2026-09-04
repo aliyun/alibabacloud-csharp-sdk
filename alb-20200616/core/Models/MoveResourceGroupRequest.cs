@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The ID of the resource group to which you want to transfer the cloud resource.</para>
         /// <remarks>
-        /// <para> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></para>
+        /// <para>You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-9gLOoK****</para>
+        /// <para>rg-aekzbi7******</para>
         /// </summary>
         [NameInMap("NewResourceGroupId")]
         [Validation(Required=false)]
@@ -37,15 +37,19 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>loadbalancer</b>: Application Load Balancer (ALB) instance</description></item>
-        /// <item><description><b>acl</b>: access control list (ACL)</description></item>
-        /// <item><description><b>securitypolicy</b>: security policy</description></item>
-        /// <item><description><b>servergroup</b>: server group</description></item>
+        /// <item><description><para><b>loadbalancer</b>: Application Load Balancer (ALB) instance</para>
+        /// </description></item>
+        /// <item><description><para><b>acl</b>: access control list (ACL)</para>
+        /// </description></item>
+        /// <item><description><para><b>securitypolicy</b>: security policy</para>
+        /// </description></item>
+        /// <item><description><para><b>servergroup</b>: server group</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ACL</para>
+        /// <para>acl</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

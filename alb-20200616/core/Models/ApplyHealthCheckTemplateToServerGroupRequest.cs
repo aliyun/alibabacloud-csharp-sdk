@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// <para>123e4567-e89b-12d3-a456-42665******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

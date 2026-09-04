@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The status of the ACL entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Adding</b>: The ACL entry is being added.</description></item>
-            /// <item><description><b>Available</b>: The ACL entry is added and available.</description></item>
-            /// <item><description><b>Removing</b>: The ACL entry is being removed.</description></item>
+            /// <item><description><para><b>Adding</b>: The ACL entry is being added.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The ACL entry is added and available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Removing</b>: The ACL entry is being removed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,8 +69,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +86,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F87******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

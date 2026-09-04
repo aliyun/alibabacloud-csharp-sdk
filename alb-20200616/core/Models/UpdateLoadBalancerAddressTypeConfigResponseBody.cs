@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateLoadBalancerAddressTypeConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the asynchronous job.</para>
+        /// <para>The ID of the asynchronous task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>

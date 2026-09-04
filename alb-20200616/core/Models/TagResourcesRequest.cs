@@ -23,10 +23,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>acl</b>: an access control list (ACL)</description></item>
-        /// <item><description><b>loadbalancer</b>: an Application Load Balancer (ALB) instance</description></item>
-        /// <item><description><b>securitypolicy</b>: a security policy</description></item>
-        /// <item><description><b>servergroup</b>: a server group</description></item>
+        /// <item><description><para><b>acl</b>: an access control list (ACL)</para>
+        /// </description></item>
+        /// <item><description><para><b>loadbalancer</b>: an Application Load Balancer (ALB) instance</para>
+        /// </description></item>
+        /// <item><description><para><b>securitypolicy</b>: a security policy</para>
+        /// </description></item>
+        /// <item><description><para><b>servergroup</b>: a server group</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

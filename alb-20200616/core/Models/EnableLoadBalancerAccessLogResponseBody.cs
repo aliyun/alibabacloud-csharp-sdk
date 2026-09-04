@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The ID of the asynchronous job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ff7713ca-5818-4120-85e3-0bf9fr******</para>
+        /// <para>ff7713ca-5818-4120-85e3-0bf9******</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FD******</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,9 +42,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The edition of the ALB instance. Different editions have different limits and support different billing methods.</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: basic</description></item>
-        /// <item><description><b>Standard</b>: standard</description></item>
-        /// <item><description><b>StandardWithWaf</b>: WAF-enabled</description></item>
+        /// <item><description><para><b>Basic</b>: basic</para>
+        /// </description></item>
+        /// <item><description><para><b>Standard</b>: standard</para>
+        /// </description></item>
+        /// <item><description><para><b>StandardWithWaf</b>: WAF-enabled</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,7 +63,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-bp1b6c719dfa08ex****</para>
+        /// <para>alb-bp1b6c719dfa08ex****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

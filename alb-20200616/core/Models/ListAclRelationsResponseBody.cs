@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>ACL ID</para>
             /// 
             /// <b>Example:</b>
-            /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
+            /// <para>acl-hp34s2h0xx1ht4nwo****</para>
             /// </summary>
             [NameInMap("AclId")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>The listener ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>lsr-bp1bpn0kn908w4nbw****</para>
+                /// <para>lsn-bpn0kn908w4nbw****</para>
                 /// </summary>
                 [NameInMap("ListenerId")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>The ID of the SLB instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>lb-bp1b6c719dfa08ex****</para>
+                /// <para>alb-bp1b6c719dfa08ex****</para>
                 /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>The association status between the ACL and the listener.</para>
                 /// <list type="bullet">
-                /// <item><description><b>Associating</b></description></item>
-                /// <item><description><b>Associated</b></description></item>
-                /// <item><description><b>Dissociating</b></description></item>
+                /// <item><description><para><b>Associating</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Associated</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Dissociating</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

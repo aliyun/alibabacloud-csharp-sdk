@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-bp1b6c719dfa08ex*****</para>
+        /// <para>alb-bp1b6c719dfa08ex*****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

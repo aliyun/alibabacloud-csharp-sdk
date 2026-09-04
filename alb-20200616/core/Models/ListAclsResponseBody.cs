@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The ACL ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
+            /// <para>acl-hp34s2h0xx1ht4nwo****</para>
             /// </summary>
             [NameInMap("AclId")]
             [Validation(Required=false)]
@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The status of the ACL. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The network ACL is being created.</description></item>
-            /// <item><description><b>Available</b>: The network ACL is available.</description></item>
-            /// <item><description><b>Configuring</b></description></item>
+            /// <item><description><para><b>Creating</b>: The network ACL is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The network ACL is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +67,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>Indicates whether configuration management is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +108,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public List<ListAclsResponseBodyAclsTags> Tags { get; set; }
             public class ListAclsResponseBodyAclsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+                /// <para>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -113,7 +118,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+                /// <para>The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product</para>
@@ -139,8 +144,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

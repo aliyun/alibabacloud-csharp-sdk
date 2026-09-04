@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The ID of the health check template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hct-1224334</para>
+        /// <para>hct-pno8sisi******</para>
         /// </summary>
         [NameInMap("HealthCheckTemplateId")]
         [Validation(Required=false)]
         public string HealthCheckTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>365F4154-92F6-4AE4-92F8-7FF34B540710</para>
+        /// <para>365F4154-92F6-4AE4-92F8-7FF34******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-06-03T17:22Z</para>
+        /// <para>2134663231234</para>
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2021-06-04T17:22Z</para>
+        /// <para>2144663233315</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>acl</para>
+        /// <para>loadbalancer</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

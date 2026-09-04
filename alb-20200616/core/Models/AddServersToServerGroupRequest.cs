@@ -11,23 +11,23 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
     public class AddServersToServerGroupRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF0******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: prechecks the request, but does not add a backend server to a server group. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without adding backend servers to the server group. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ServerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The backend servers. You can specify at most 200 servers in each call.</para>
+        /// <para>The list of backend servers. You can add up to 200 servers in a single call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Servers")]
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The port that is used by the backend server. Valid values: <b>1</b> to <b>65535</b>. You can specify at most 200 servers in each call.</para>
+            /// <para>The port used by the backend server. Valid values: <b>1</b> to <b>65535</b>. You can add up to 200 servers in a single call.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set <b>ServerType</b> to <b>Ecs</b>, <b>Eni</b>, <b>Eci</b>, or <b>Ip</b>. You do not need to set this parameter if <b>ServerType</b> is set to <b>Fc</b>.</para>
+            /// <para>This parameter is required when <b>ServerType</b> is set to <b>Ecs</b>, <b>Eni</b>, <b>Eci</b>, or <b>Ip</b>. This parameter is not required when <b>ServerType</b> is set to <b>Fc</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,13 +80,15 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the remote IP feature. You can specify at most 200 servers in each call. Default values:</para>
+            /// <para>Specifies whether to enable the remote IP feature. You can add up to 200 servers in a single call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enables the feature.</description></item>
-            /// <item><description><b>false</b>: disables the feature.</description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect only when <b>ServerType</b> is set to <b>Ip</b>.</para>
+            /// <para>This parameter takes effect only when <b>ServerType</b> is set to <b>Ip</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,24 +99,28 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public bool? RemoteIpEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group. You can specify at most 200 servers in each call.</para>
+            /// <para>The backend server ID. You can add up to 200 servers in a single call.</para>
             /// <list type="bullet">
-            /// <item><description>If the server group is of the <b>Instance</b> type, set ServerId to the ID of a resource of the <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> type.</description></item>
-            /// <item><description>If the server group is of the <b>Ip</b> type, set this parameter to IP addresses.</description></item>
-            /// <item><description>If the server group is of the <b>Fc</b> type, set ServerId to an Alibaba Cloud Resource Name (ARN).</description></item>
+            /// <item><description><para>If the server group is of the <b>Instance</b> type, this parameter specifies the resource ID of an <b>Ecs</b>, <b>Eni</b>, or <b>Eci</b> instance.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group is of the <b>Ip</b> type, this parameter specifies an IP address.</para>
+            /// </description></item>
+            /// <item><description><para>If the server group is of the <b>Fc</b> type, this parameter specifies the Alibaba Cloud Resource Name (ARN) of a Function Compute function.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>ecs-bp67acfmxazb4p****</para>
+            /// <para>i-uf616vu8me******</para>
             /// </summary>
             [NameInMap("ServerId")]
             [Validation(Required=false)]
             public string ServerId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the backend server. You can specify at most 200 servers in each call.</para>
+            /// <para>The IP address. You can add up to 200 servers in a single call.</para>
+            /// <para>When <b>ServerType</b> is set to <b>Eni</b>, you can specify the primary private IP address or a secondary private IP address of the ENI.</para>
             /// <remarks>
-            /// <para> You do not need to set this parameter if you set <b>ServerType</b> to <b>Fc</b>.</para>
+            /// <para>This parameter is not required when <b>ServerType</b> is set to <b>Fc</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -125,13 +131,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerIp { get; set; }
 
             /// <summary>
-            /// <para>The type of the backend server. You can specify at most 200 servers in each call. Default values:</para>
+            /// <para>The server type of the backend server. You can add up to 200 servers in a single invoke. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>Eni</b>: elastic network interface (ENI)</description></item>
-            /// <item><description><b>Eci</b>: elastic container instance</description></item>
-            /// <item><description><b>Ip</b>: IP address</description></item>
-            /// <item><description><b>Fc</b>: Function Compute</description></item>
+            /// <item><description><b>Ecs</b>: ECS instance.</description></item>
+            /// <item><description><b>Eni</b>: ENI network interface controller (NIC) instance.</description></item>
+            /// <item><description><b>Eci</b>: ECI elastic container instance.</description></item>
+            /// <item><description><b>Ip</b>: IP address.</description></item>
+            /// <item><description><b>Fc</b>: Function Compute.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -143,9 +149,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the backend server. Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the value is set to <b>0</b>, no requests are forwarded to the server. You can specify at most 200 servers in each call.</para>
+            /// <para>The weight of the backend server. Valid values: <b>0</b> to <b>100</b>. Default value: <b>100</b>. If the weight is set to <b>0</b>, no requests are forwarded to the backend server. You can add up to 200 servers in a single call.</para>
             /// <remarks>
-            /// <para> You do not need to set this parameter if you set <b>ServerType</b> to <b>Fc</b>.</para>
+            /// <para>This parameter is not required when <b>ServerType</b> is set to <b>Fc</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

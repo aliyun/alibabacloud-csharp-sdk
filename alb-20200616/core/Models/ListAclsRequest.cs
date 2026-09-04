@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <summary>
         /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query or no next query is to be sent, ignore this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next query is to be sent, set the value to the value of NextToken that is returned from the last call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

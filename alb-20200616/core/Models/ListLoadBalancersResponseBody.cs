@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ListLoadBalancersResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of ALB instances.</para>
+        /// <para>The list of Application Load Balancer instances.</para>
         /// </summary>
         [NameInMap("LoadBalancers")]
         [Validation(Required=false)]
         public List<ListLoadBalancersResponseBodyLoadBalancers> LoadBalancers { get; set; }
         public class ListLoadBalancersResponseBodyLoadBalancers : TeaModel {
             /// <summary>
-            /// <para>The configurations of access logs.</para>
+            /// <para>The configuration of the access log.</para>
             /// </summary>
             [NameInMap("AccessLogConfig")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig AccessLogConfig { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersAccessLogConfig : TeaModel {
                 /// <summary>
-                /// <para>The Simple Log Service project.</para>
+                /// <para>The Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-setter</para>
@@ -46,10 +46,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The mode in which IP addresses are allocated. Valid values:</para>
+            /// <para>The mode of the IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Fixed</b>: The ALB instance uses a static IP address.</description></item>
-            /// <item><description><b>Dynamic</b>: dynamically allocates an IP address to each zone of the ALB instance.</description></item>
+            /// <item><description><para><b>Fixed</b>: The ALB instance uses a static IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>Dynamic</b>: A dynamic IP address is allocated to the ALB instance in each zone.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,10 +62,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string AddressAllocatedMode { get; set; }
 
             /// <summary>
-            /// <para>The IP version. Valid values:</para>
+            /// <para>The protocol version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPv4</b></description></item>
-            /// <item><description><b>DualStack</b></description></item>
+            /// <item><description><para><b>IPv4</b>: IPv4</para>
+            /// </description></item>
+            /// <item><description><para><b>DualStack</b>: dual-stack</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,8 +80,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The type of IP address that the ALB instance uses to provide services. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Internet</b>: The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.</description></item>
-            /// <item><description><b>Intranet</b>: The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.</description></item>
+            /// <item><description><para><b>Internet</b>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>Intranet</b>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string DNSName { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the deletion protection feature.</para>
+            /// <para>The deletion protection configuration.</para>
             /// </summary>
             [NameInMap("DeletionProtectionConfig")]
             [Validation(Required=false)]
@@ -127,8 +133,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <summary>
                 /// <para>Indicates whether deletion protection is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The time when deletion protection is enabled.</para>
+                /// <para>The time when deletion protection was enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-02T02:49:05Z</para>
@@ -151,10 +159,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The type of IPv6 address used by the ALB instance. Valid values:</para>
+            /// <para>The type of the IPv6 address that the Application Load Balancer instance uses to provide services. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Internet</b> The ALB instance is assigned a public IP address. The domain name is resolved to the public IP address. The ALB instance is accessible over the Internet.</description></item>
-            /// <item><description><b>Intranet</b> The ALB instance is assigned only a private IP address. The domain name is resolved to the private IP address. The ALB instance is accessible only within the VPC of the ALB instance.</description></item>
+            /// <item><description><para><b>Internet</b>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>Intranet</b>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed in the VPC where the ALB instance is deployed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +175,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string Ipv6AddressType { get; set; }
 
             /// <summary>
-            /// <para>The billing information about the ALB instance.</para>
+            /// <para>The billing configuration of the ALB instance.</para>
             /// </summary>
             [NameInMap("LoadBalancerBillingConfig")]
             [Validation(Required=false)]
@@ -173,7 +183,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig : TeaModel {
                 /// <summary>
                 /// <para>The billing method. Valid value:</para>
-                /// <para><b>PostPay</b>: You are charged for the ALB instance on a pay-as-you-go basis.</para>
+                /// <para><b>PostPay</b>: pay-as-you-go.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PostPay</para>
@@ -185,10 +195,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The status of the ALB instance. Valid values:</para>
+            /// <para>The service status of the ALB instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Abnormal</b></description></item>
-            /// <item><description><b>Normal</b></description></item>
+            /// <item><description><para><b>Abnormal</b>: The instance is not working as expected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Normal</b>: The instance is working as expected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,11 +211,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerBussinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The edition of the ALB instance. The features and billing rules vary based on the edition. Valid values:</para>
+            /// <para>The edition of the ALB instance. Different editions have different limits and billing methods. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Basic</b></description></item>
-            /// <item><description><b>Standard</b></description></item>
-            /// <item><description><b>StandardWithWaf</b></description></item>
+            /// <item><description><para><b>Basic</b>: Basic Edition.</para>
+            /// </description></item>
+            /// <item><description><para><b>Standard</b>: Standard Edition.</para>
+            /// </description></item>
+            /// <item><description><para><b>StandardWithWaf</b>: WAF-enabled Edition.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,7 +229,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerEdition { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ALB instance.</para>
+            /// <para>The ID of the Application Load Balancer instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alb-o9ulmq5hgn68jk****</para>
@@ -234,29 +249,30 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerName { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the operation lock.</para>
+            /// <para>The configuration of the configuration lock.</para>
             /// </summary>
             [NameInMap("LoadBalancerOperationLocks")]
             [Validation(Required=false)]
             public List<ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks> LoadBalancerOperationLocks { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerOperationLocks : TeaModel {
                 /// <summary>
-                /// <para>The reason why the ALB instance is locked. This parameter is valid only if <b>LoadBalancerBussinessStatus</b> is set to <b>Abnormal</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Test LockReason</para>
+                /// <para>The reason for the lock. This parameter is valid only if <b>LoadBalancerBussinessStatus</b> is set to <b>Abnormal</b>.</para>
                 /// </summary>
                 [NameInMap("LockReason")]
                 [Validation(Required=false)]
                 public string LockReason { get; set; }
 
                 /// <summary>
-                /// <para>The lock type. Valid values:</para>
+                /// <para>The type of the lock. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SecurityLocked</b>: The ALB instance is locked due to security risks.</description></item>
-                /// <item><description><b>RelatedResourceLocked</b>: The ALB instance is locked due to other resources associated with the ALB instance.</description></item>
-                /// <item><description><b>FinancialLocked</b>: The ALB instance is locked due to overdue payments.</description></item>
-                /// <item><description><b>ResidualLocked</b>: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</description></item>
+                /// <item><description><para><b>SecurityLocked</b>: The instance is locked for security reasons.</para>
+                /// </description></item>
+                /// <item><description><para><b>RelatedResourceLocked</b>: The instance is locked due to a correlated resource.</para>
+                /// </description></item>
+                /// <item><description><para><b>FinancialLocked</b>: The instance is locked due to overdue payments.</para>
+                /// </description></item>
+                /// <item><description><para><b>ResidualLocked</b>: The instance is locked because it is faulty.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -269,13 +285,18 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The status of the ALB instance. Valid values:</para>
+            /// <para>The state of the Application Load Balancer instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Inactive</b>: The ALB instance is disabled. ALB instances in the Inactive state do not forward traffic.</description></item>
-            /// <item><description><b>Active</b>: The ALB instance is running.</description></item>
-            /// <item><description><b>Provisioning</b>: The ALB instance is being created.</description></item>
-            /// <item><description><b>Configuring</b>: The ALB instance is being modified.</description></item>
-            /// <item><description><b>CreateFailed</b>: The system failed to create the ALB instance.</description></item>
+            /// <item><description><para><b>Inactive</b>: The instance is disabled. Listeners of the instance do not forward traffic.</para>
+            /// </description></item>
+            /// <item><description><para><b>Active</b>: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Provisioning</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Configuring</b>: The instance is being configured.</para>
+            /// </description></item>
+            /// <item><description><para><b>CreateFailed</b>: The instance failed to be created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -286,32 +307,34 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string LoadBalancerStatus { get; set; }
 
             /// <summary>
-            /// <para>The configuration read-only mode settings.</para>
+            /// <para>The configuration of modification protection.</para>
             /// </summary>
             [NameInMap("ModificationProtectionConfig")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig ModificationProtectionConfig { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig : TeaModel {
                 /// <summary>
-                /// <para>The reason why the configuration read-only mode is enabled.</para>
-                /// <para>The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
-                /// <para>This parameter takes effect only if <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
+                /// <para>The reason for enabling modification protection.</para>
+                /// <para>The reason must be 2 to 128 characters in length, start with a letter or a Chinese character, and can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+                /// <para>This parameter is returned only if <b>Status</b> is set to <b>ConsoleProtection</b>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Reason</para>
+                /// <para>Managed Instance</para>
                 /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the configuration read-only mode is enabled. Valid values:</para>
+                /// <para>The status of modification protection. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>NonProtection</b>: The configuration read-only mode is disabled. In this case, <b>Reason</b> is not returned. If <b>Reason</b> is set, the value is cleared.</description></item>
-                /// <item><description><b>ConsoleProtection</b>: The configuration read-only mode is enabled. In this case, <b>Reason</b> is returned.****</description></item>
+                /// <item><description><para><b>NonProtection</b>: Modification protection is disabled. If you specify a value for <b>Reason</b>, the value is cleared.</para>
+                /// </description></item>
+                /// <item><description><para><b>ConsoleProtection</b>: Modification protection is enabled. If you specify a value for <b>Reason</b>, the value takes effect.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> If the value is <b>ConsoleProtection</b>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</para>
+                /// <para>If you set the value to <b>ConsoleProtection</b>, you cannot modify the instance configuration in the Application Load Balancer console. However, you can call API operations to modify the instance configuration.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -333,19 +356,22 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The security groups to which the Application Load Balancer instance is added.</para>
+            /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The information about the tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListLoadBalancersResponseBodyLoadBalancersTags> Tags { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the ALB instance.</para>
+                /// <para>The tag key of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>KeyTest</para>
@@ -355,7 +381,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the ALB instance.</para>
+                /// <para>The tag value of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alueTest</para>
@@ -367,10 +393,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
-            /// <para>The ID of the VPC in which the ALB instance is deployed.</para>
+            /// <para>The ID of the VPC to which the Application Load Balancer instance belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc-bp1b49rqrybk45nio****</para>
+            /// <para>vpc-bp1b49rqryhk45nio****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -379,7 +405,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -389,10 +415,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -413,7 +441,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

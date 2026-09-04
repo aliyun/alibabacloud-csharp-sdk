@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The ID of the ACL.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
+        /// <para>acl-hp34s2h0xx1ht4nwo****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</para>
+        /// <para>CEF72CEB-54B6-4AE8-B225-F876******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

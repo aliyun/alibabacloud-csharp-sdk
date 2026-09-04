@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nacl-hp34s2h0xx1ht4nwo****</para>
+        /// <para>acl-hp34s2h0xx1ht4nwo****</para>
         /// </summary>
         [NameInMap("AclId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF******</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

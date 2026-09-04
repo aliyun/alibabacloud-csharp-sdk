@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class CreateRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the asynchronous task.</para>
+        /// <para>The asynchronous task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72dcd26b-f12d-4c27-b3af-18f6aed5****</para>
@@ -30,10 +30,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The priority of the forwarding rule. Valid values: <b>1 to 10000</b>. A lower value specifies a higher priority.</para>
-        /// <remarks>
-        /// <para>The priorities of the forwarding rules created for the same listener is unique.</para>
-        /// </remarks>
+        /// <para>The list of forwarding rules.</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
@@ -42,7 +39,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The priority of the forwarding rule. Valid values: <b>1 to 10000</b>. A smaller value indicates a higher priority.</para>
             /// <remarks>
-            /// <para>The priorities of the forwarding rules created for the same listener must be unique.</para>
+            /// <para>The priority of each rule within the same listener must be unique.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

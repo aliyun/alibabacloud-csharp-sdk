@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class DescribeCapacityReservationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Application Load Balancer (ALB) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

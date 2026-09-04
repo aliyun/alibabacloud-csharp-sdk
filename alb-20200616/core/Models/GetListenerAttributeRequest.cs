@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lsr-bp1bpn0kn908w4nbw****</para>
+        /// <para>lsn-o4u54y73wq7b******</para>
         /// </summary>
         [NameInMap("ListenerId")]
         [Validation(Required=false)]

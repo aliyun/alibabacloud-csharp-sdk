@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</para>
+        /// <para>593B0448-D13E-4C56-AC0D-FDF******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
                 /// <para>The Server Load Balancer (SLB) instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>lb-bp1o94dp5i6ea****</para>
+                /// <para>alb-umwzbz6******</para>
                 /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The security policy ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>scp-bp1bpn0kn9****</para>
+            /// <para>sp-bp1bpn0kn9****</para>
             /// </summary>
             [NameInMap("SecurityPolicyId")]
             [Validation(Required=false)]

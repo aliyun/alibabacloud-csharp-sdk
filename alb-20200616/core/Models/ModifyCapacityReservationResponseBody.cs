@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class ModifyCapacityReservationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>593B0448-D13E-4C56-AC0D-FDF0F******</para>
         /// </summary>

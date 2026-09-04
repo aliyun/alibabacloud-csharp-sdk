@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>re-atstuj3rtop****</para>
+        /// <para>alb-o9ulmq5hgn68jk****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

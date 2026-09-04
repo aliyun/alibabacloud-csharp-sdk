@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alb-iv9gj3lpak6fbj****</para>
+        /// <para>alb-iv9gj3spak6fbj****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]

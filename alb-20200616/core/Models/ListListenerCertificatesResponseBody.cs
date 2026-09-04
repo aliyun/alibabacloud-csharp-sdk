@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <para>The certificate ID. Only server certificates are supported.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12315790343_166f8204689_1714763408_70998****</para>
+            /// <para>123157******</para>
             /// </summary>
             [NameInMap("CertificateId")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>365F4154-92F6-4AE4-92F8-7FF34B540710</para>
+        /// <para>365F4154-92F6-4AE4-92F8-7FF3******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

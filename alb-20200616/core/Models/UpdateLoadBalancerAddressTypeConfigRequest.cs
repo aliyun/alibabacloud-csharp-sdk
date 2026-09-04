@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 {
     public class UpdateLoadBalancerAddressTypeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The new network type. Valid values:</para>
+        /// <para>The target network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Internet</b>: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</description></item>
-        /// <item><description><b>Intranet</b>: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.</description></item>
+        /// <item><description><para><b>Internet</b>: The load balancer is assigned a public IP address and can be accessed over the Internet. Its DNS domain name is resolved to the public IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>Intranet</b>: The load balancer is assigned a private IP address and can be accessed only from the VPC where it is deployed. Its DNS domain name is resolved to the private IP address.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,9 +28,9 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can generate a value from your client to make sure that the value is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request is unique.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,10 +41,12 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends the request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,11 +57,11 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ALB instance ID.</para>
+        /// <para>The ID of the Application Load Balancer (ALB) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>lb-bp1o94dp5i6ea****</para>
+        /// <para>alb-bp1o94dp5i6ea****</para>
         /// </summary>
         [NameInMap("LoadBalancerId")]
         [Validation(Required=false)]
@@ -68,16 +72,16 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         public List<string> RetainResourceType { get; set; }
 
         /// <summary>
-        /// <para>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</para>
+        /// <para>The mappings between availability zones and vSwitches. You can specify up to 10 mappings. If the region supports two or more availability zones, you must specify mappings for at least two.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
         [Validation(Required=false)]
         public List<UpdateLoadBalancerAddressTypeConfigRequestZoneMappings> ZoneMappings { get; set; }
         public class UpdateLoadBalancerAddressTypeConfigRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the elastic IP address (EIP). You can specify a maximum of 10 zones.</para>
+            /// <para>The ID of the elastic IP address (EIP).</para>
             /// <remarks>
-            /// <para> This parameter is required if you want to change the network type from internal-facing to Internet-facing.</para>
+            /// <para>This parameter is required when you change the network type from Intranet to Internet.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,11 +94,13 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             /// <summary>
             /// <para>The type of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Common (default): indicates an EIP</description></item>
-            /// <item><description>Anycast: indicates an Anycast EIP</description></item>
+            /// <item><description><para><b>Common</b> (default): a regular EIP.</para>
+            /// </description></item>
+            /// <item><description><para>Anycast: Anycast EIP.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</para>
+            /// <para>For the regions where Application Load Balancer (ALB) supports binding Anycast Elastic IP addresses (EIPs), see <a href="https://help.aliyun.com/document_detail/460727.html">Usage limits</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string EipType { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</para>
+            /// <para>The ID of the vSwitch in the specified availability zone. You can specify only one vSwitch for each availability zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp10ttov87felojcn****</para>
@@ -115,8 +121,8 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the ALB instance. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query the information about the zone.</para>
+            /// <para>The ID of the availability zone of the ALB instance.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/189196.html">DescribeZones</a> operation to query information about availability zones.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>
