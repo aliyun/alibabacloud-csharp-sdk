@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the job created by this call.</para>
+        /// <para>The ID of the job created by this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc7*******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used for diagnostics and troubleshooting.</para>
+        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>

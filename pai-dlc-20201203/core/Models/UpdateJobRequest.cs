@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job\&quot;s visibility. You can only increase, not decrease, the visibility. Valid value:</para>
+        /// <para>The visibility of the job. The visibility can only be expanded, not reduced. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PUBLIC</c>: The job is visible to all users in the workspace.</description></item>
+        /// <item><description>PUBLIC: visible to all users in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,19 +27,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The job specifications.</para>
+        /// <para>The job specification definition.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job. Valid values range from 1 to 9:</para>
+        /// <para>The priority of the job. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description><para>1 indicates the lowest priority.</para>
-        /// </description></item>
-        /// <item><description><para>9 indicates the highest priority.</para>
-        /// </description></item>
+        /// <item><description>1: the lowest priority.</description></item>
+        /// <item><description>9: the highest priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,6 +46,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
+
+        /// <summary>
+        /// <para>The user command.</para>
+        /// </summary>
+        [NameInMap("UserCommand")]
+        [Validation(Required=false)]
+        public string UserCommand { get; set; }
 
     }
 

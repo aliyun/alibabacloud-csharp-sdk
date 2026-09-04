@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<EnvVar> Env { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the container image.</para>
+        /// <para>The container image address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.com/pai-dlc/curl:v1.0.0</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The name of the container.</para>
+        /// <para>The container name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>data-init</para>

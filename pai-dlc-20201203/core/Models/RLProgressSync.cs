@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
-    public class UpdateJobResponseBody : TeaModel {
+    public class RLProgressSync : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The parameter synchronization duration in seconds. This property has a value only when State is end.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dlc*************</para>
+        /// <para>1.5</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("Cost")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public double? Cost { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
+        /// <para>begin / end</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>end</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("State")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string State { get; set; }
 
     }
 

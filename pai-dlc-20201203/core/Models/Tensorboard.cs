@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class Tensorboard : TeaModel {
         /// <summary>
-        /// <para>Visibility.</para>
+        /// <para>The visibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>Data source ID.</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>datasource-test</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>Display name.</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -48,17 +48,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Runtime duration (seconds).</para>
+        /// <para>The duration in seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234567</para>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Duration")]
         [Validation(Required=false)]
         public string Duration { get; set; }
 
         /// <summary>
-        /// <para>Creation time (UTC).</para>
+        /// <para>The creation time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:35:00Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>End time (UTC).</para>
+        /// <para>The end time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtFinishTime { get; set; }
 
         /// <summary>
-        /// <para>Modification time (UTC).</para>
+        /// <para>The modification time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:36:00Z</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>Job ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-20210114104214-vf9lowjt3pso</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>Tensorboard Job priority.</para>
+        /// <para>The priority of the TensorBoard job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID used by Tensorboard.</para>
+        /// <para>The ID of the resource group used by TensorBoard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12***</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>Name of the resource quota used by Tensorboard.</para>
+        /// <para>The name of the resource quota used by TensorBoard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-quota</para>
@@ -140,27 +140,27 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaName { get; set; }
 
         /// <summary>
-        /// <para>Status details code.</para>
+        /// <para>The status detail code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Delete by user</para>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("ReasonCode")]
         [Validation(Required=false)]
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>Status details.</para>
+        /// <para>The status details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Tensorboard is deleted</para>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("ReasonMessage")]
         [Validation(Required=false)]
         public string ReasonMessage { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>File path.</para>
+        /// <para>The file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/data</para>
@@ -194,14 +194,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SummaryRelativePath { get; set; }
 
         /// <summary>
-        /// <para>Datasets mounted by the Tensorboard Job.</para>
+        /// <para>The datasets mounted to the TensorBoard job.</para>
         /// </summary>
         [NameInMap("TensorboardDataSources")]
         [Validation(Required=false)]
         public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
 
         /// <summary>
-        /// <para>Tensorboard ID.</para>
+        /// <para>Tensorboard ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard-xxx</para>
@@ -211,14 +211,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TensorboardId { get; set; }
 
         /// <summary>
-        /// <para>Pay-as-you-go configuration for the Tensorboard Job.</para>
+        /// <para>The pay-as-you-go configuration of the TensorBoard job.</para>
         /// </summary>
         [NameInMap("TensorboardSpec")]
         [Validation(Required=false)]
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>Tensorboard URL.</para>
+        /// <para>Tensorboard URL。</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxxxxx">http://xxxxxx</a></para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>Creator ID.</para>
+        /// <para>The ID of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lycxxxxx</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Creator username.</para>
+        /// <para>The username of the creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard.pai</para>

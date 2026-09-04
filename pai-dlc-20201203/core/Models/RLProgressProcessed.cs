@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
-    public class UpdateJobResponseBody : TeaModel {
+    public class RLProgressProcessed : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>已处理条数</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dlc*************</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("Done")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public int? Done { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
+        /// <para>总条数</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>3</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("Total")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? Total { get; set; }
 
     }
 

@@ -64,24 +64,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 {"eu-west-1-oxs", "pai-dlc.aliyuncs.com"},
                 {"me-east-1", "pai-dlc.aliyuncs.com"},
                 {"rus-west-1-pop", "pai-dlc.aliyuncs.com"},
-                {"cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"},
-                {"cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"},
-                {"ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com"},
-                {"cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"},
-                {"ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"},
-                {"cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"},
-                {"us-east-1", "pai-dlc.us-east-1.aliyuncs.com"},
-                {"us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"},
-                {"us-west-1", "pai-dlc.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -103,12 +85,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -254,12 +239,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -405,12 +393,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -429,12 +420,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job to run in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify information such as the data source configuration, code source configuration, startup command, and compute resource configuration for each node of the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob operation parameters (including system-generated parameters) cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1939,7 +1933,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1985,7 +1979,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2031,7 +2025,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2050,7 +2044,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3061,7 +3055,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
+        /// <para>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3123,7 +3117,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
+        /// <para>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3185,7 +3179,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
+        /// <para>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3204,7 +3198,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains or downloads the logs of a node for a task. The logs are from the stdout and stderr of the system and user scripts.</para>
+        /// <para>Retrieves or downloads the log of a specific node in a job. The log is collected from stdout and stderr of the system and user scripts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7047,7 +7041,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
+        /// <para>Updates the configuration of a job, such as modifying the priority of a queued job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7083,6 +7077,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["Priority"] = request.Priority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCommand))
+            {
+                body["UserCommand"] = request.UserCommand;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7105,7 +7103,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
+        /// <para>Updates the configuration of a job, such as modifying the priority of a queued job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7141,6 +7139,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["Priority"] = request.Priority;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCommand))
+            {
+                body["UserCommand"] = request.UserCommand;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7163,7 +7165,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
+        /// <para>Updates the configuration of a job, such as modifying the priority of a queued job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7182,7 +7184,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
+        /// <para>Updates the configuration of a job, such as modifying the priority of a queued job.</para>
         /// </summary>
         /// 
         /// <param name="request">
