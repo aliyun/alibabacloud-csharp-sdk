@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The directory ID.</para>
+        /// <para>The folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The tenant folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective tenant.</para>
+        /// <para>The ID of the tenant for which the operation takes effect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

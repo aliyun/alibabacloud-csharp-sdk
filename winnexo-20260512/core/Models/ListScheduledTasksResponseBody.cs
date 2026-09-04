@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListScheduledTasksResponseBodyItems> Items { get; set; }
         public class ListScheduledTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The reason for the abnormality. This field has a value only when status is abnormal.</para>
+            /// <para>The reason for the exception. This field has a value only when status is abnormal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample description</para>
+            /// <para>SampleDescription</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> DigitalEmployeeName { get; set; }
 
             /// <summary>
-            /// <para>The cumulative number of executions.</para>
+            /// <para>The total number of executions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -241,13 +241,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The visibility of the group task. Valid values:</para>
+            /// <para>The visibility scope of the group task. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PRIVATE: visible only to the creator and group owner.</description></item>
             /// <item><description>COLLABORATIVE: visible to specified collaborators.</description></item>
             /// <item><description>PUBLIC: visible to all group members.</description></item>
             /// </list>
-            /// <para>If not specified for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</para>
+            /// <para>For group tasks, the default value is PRIVATE if not specified. This field is ignored for personal tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Visibility { get; set; }
 
             /// <summary>
-            /// <para>The list of collaborator user IDs (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</para>
+            /// <para>The list of collaborators (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? CreatorOnly { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the rule name, used for fuzzy match.</para>
+        /// <para>The keyword of the rule name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleKeyword</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request.</para>
+        /// <para>The maximum number of entries to return in this request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]

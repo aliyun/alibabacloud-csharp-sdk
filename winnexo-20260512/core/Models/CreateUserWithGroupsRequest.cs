@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateUserWithGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the user (unique within the tenant, required, up to 100 characters).</para>
+        /// <para>The display name of the user. The name must be unique within the tenant and cannot exceed 100 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded password ciphertext encrypted by RSA-OAEP-SHA256 (required).</para>
+        /// <para>The Base64-encoded password ciphertext encrypted by using the RSA-OAEP-SHA256 algorithm.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PasswordEncrypted { get; set; }
 
         /// <summary>
-        /// <para>The list of system role codes. Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER. Default value: APPLICATION_USER.</para>
+        /// <para>The list of initial system role codes. If this parameter is not specified, the <c>APPLICATION_USER</c> role is assigned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -42,17 +42,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using <c>--tenant-id</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>string_value</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The list of initial user group IDs. This parameter is optional. All user groups must belong to the current tenant.</para>
+        /// <para>The list of initial user group IDs. A maximum of 100 user group IDs can be specified. All user groups must belong to the current tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO logon account (unique identifier, required).</para>
+        /// <para>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

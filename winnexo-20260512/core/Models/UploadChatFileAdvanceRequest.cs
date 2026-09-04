@@ -12,16 +12,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The content type of the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image</description></item>
-        /// <item><description><b>document</b>: general document</description></item>
-        /// <item><description><b>alidoc</b>: Alibaba document</description></item>
-        /// <item><description><b>text</b>: text</description></item>
-        /// <item><description><b>video</b>: video</description></item>
-        /// <item><description><b>audio</b>: audio</description></item>
-        /// <item><description><b>archive</b>: archive</description></item>
-        /// <item><description><b>app</b>: application</description></item>
-        /// <item><description><b>link</b>: shortcut</description></item>
-        /// <item><description><b>other</b>: other</description></item>
+        /// <item><description><b>image</b>: Image.</description></item>
+        /// <item><description><b>document</b>: General document.</description></item>
+        /// <item><description><b>alidoc</b>: Alibaba document.</description></item>
+        /// <item><description><b>text</b>: Text.</description></item>
+        /// <item><description><b>video</b>: Video.</description></item>
+        /// <item><description><b>audio</b>: Audio.</description></item>
+        /// <item><description><b>archive</b>: Archive.</description></item>
+        /// <item><description><b>app</b>: Application.</description></item>
+        /// <item><description><b>link</b>: Shortcut.</description></item>
+        /// <item><description><b>other</b>: Other.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The attachment address.</para>
+        /// <para>The Yida attachment address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Stream FileUrlObject { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object name, optional).</para>
+        /// <para>The name of the digital employee (operating object name). This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The tenant ID that takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

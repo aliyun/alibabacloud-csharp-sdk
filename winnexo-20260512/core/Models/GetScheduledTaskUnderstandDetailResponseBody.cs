@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>sourceIds</para>
+            /// <para>The list of source IDs for related skills.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

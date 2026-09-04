@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital human.</para>
+        /// <para>The name of the digital employee.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital human (operating object name, optional).</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

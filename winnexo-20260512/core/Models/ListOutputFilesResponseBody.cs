@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The share token, which is present when sharing is enabled. You can use this token to access the public share preview API.</para>
+                /// <para>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_share_token</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public long? CompletedSlides { get; set; }
 
                     /// <summary>
-                    /// <para>PPT ID</para>
+                    /// <para>The PPT file ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>examplePptId</para>

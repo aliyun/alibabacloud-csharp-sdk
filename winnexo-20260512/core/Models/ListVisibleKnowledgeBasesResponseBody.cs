@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The creation time. This value is a timestamp in milliseconds.</para>
+            /// <para>The creation time. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-11-14T02:18:27Z</para>
+            /// <para>1763086707000</para>
             /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026-03-26T13:57:42Z</para>
+            /// <para>1774533462</para>
             /// </summary>
             [NameInMap("gmtModified")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The number of resources in the FAILED state. This parameter is returned only when listing top-level knowledge base directories.</para>
+            /// <para>The number of resources in the FAILED state. This parameter is returned only when the top-level knowledge base directory list is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of resources in the READY state. This parameter is returned only when listing top-level knowledge base directories.</para>
+            /// <para>The number of resources in the READY state. This parameter is returned only when the top-level knowledge base directory list is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when listing top-level knowledge base directories.</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level knowledge base directory list is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>190F5425-A145-5BBA-980F-082ADB0CA6AF</para>

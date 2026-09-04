@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The datasource status after re-parsing.</para>
+        /// <para>The data source status after re-parsing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFFLINE</para>

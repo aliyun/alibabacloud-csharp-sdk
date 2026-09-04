@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SkillHubDefinitionId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Fixed value: FILE.</para>
+            /// <para>The skill source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUILTIN</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The task status. Returns Running upon submission.</para>
+            /// <para>The task status. Running is returned upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The keys.</para>
+            /// <para>The key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

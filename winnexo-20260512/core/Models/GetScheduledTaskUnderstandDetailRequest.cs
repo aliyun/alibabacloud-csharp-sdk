@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskUnderstandDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group to which the task belongs (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</para>
+        /// <para>The ID of the collaboration group (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the current effective digital employee. This parameter is empty if not configured.</para>
+        /// <para>The name of the current effective digital employee. This value is empty if not configured.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a mini-app ID.</para>
+            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a micro-application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>

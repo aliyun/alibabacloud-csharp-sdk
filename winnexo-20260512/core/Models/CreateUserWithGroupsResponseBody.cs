@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The WINNEXO logon account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleAccountId</para>
+        /// <para><a href="mailto:user123@example.com">user123@example.com</a></para>
         /// </summary>
         [NameInMap("accountId")]
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The display name of the user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>Zhang San</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the user is newly created. A value of false indicates that an existing user joined the tenant.</para>
+        /// <para>Indicates whether the user is newly created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsNewUser { get; set; }
 
         /// <summary>
-        /// <para>The error description. This parameter is empty when the request succeeds.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request trace ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO platform user ID.</para>
+        /// <para>The platform user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

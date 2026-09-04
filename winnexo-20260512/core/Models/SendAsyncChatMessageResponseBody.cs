@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The user message ID. Use this ID to establish a pairing relationship with the assistant message in this turn.</para>
+        /// <para>The user message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60756cc6-8c53-4d1f-8db8-b8c09b81a5cb</para>

@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The SSE event stream payload. On success, the response is in text/event-stream raw frames and must be consumed frame by frame in a streaming manner.</para>
+        /// <para>The incremental content of the current SSE frame.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hello</para>
+        /// </summary>
+        [NameInMap("content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        /// <summary>
+        /// <para>The SSE event stream payload. On success, the response is returned as raw text/event-stream frames that must be consumed frame by frame in streaming mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -48,6 +58,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The SSE event type, such as text, think, heartbeat, done, or error.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>text</para>
+        /// </summary>
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

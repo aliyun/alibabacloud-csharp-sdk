@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-03-04 13:54:52</para>
+        /// <para>1772603692</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-11-14T02:18:27Z</para>
+        /// <para>1763086707</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital human (operating object name, optional).</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</para>

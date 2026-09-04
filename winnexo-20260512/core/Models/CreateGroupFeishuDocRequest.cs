@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_group_child</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Project Plan</para>
+        /// <para>ProjectPlan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

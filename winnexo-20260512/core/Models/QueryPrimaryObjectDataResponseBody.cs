@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<Dictionary<string, string>> Items { get; set; }
 
         /// <summary>
-        /// <para>The error description. This value is empty when the request succeeds.</para>
+        /// <para>The error description. This parameter is empty when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

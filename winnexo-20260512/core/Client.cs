@@ -19,12 +19,6 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "winnexo.cn-shanghai.aliyuncs.com"},
-                {"cn-zhangjiakou", "winnexo.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-hangzhou", "winnexo.cn-hangzhou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -458,6 +452,204 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Batch cancels digital employee favorites for specific object types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchRemoveOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRemoveOperatingObjectFavoritesResponse
+        /// </returns>
+        public BatchRemoveOperatingObjectFavoritesResponse BatchRemoveOperatingObjectFavoritesWithOptions(BatchRemoveOperatingObjectFavoritesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchRemoveOperatingObjectFavoritesShrinkRequest request = new BatchRemoveOperatingObjectFavoritesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectIds))
+            {
+                request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectIdsShrink))
+            {
+                body["objectIds"] = request.ObjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRemoveOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/batchRemoveOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRemoveOperatingObjectFavoritesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch cancels digital employee favorites for specific object types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchRemoveOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRemoveOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<BatchRemoveOperatingObjectFavoritesResponse> BatchRemoveOperatingObjectFavoritesWithOptionsAsync(BatchRemoveOperatingObjectFavoritesRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchRemoveOperatingObjectFavoritesShrinkRequest request = new BatchRemoveOperatingObjectFavoritesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectIds))
+            {
+                request.ObjectIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectIds, "objectIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectIdsShrink))
+            {
+                body["objectIds"] = request.ObjectIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchRemoveOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/batchRemoveOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchRemoveOperatingObjectFavoritesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch cancels digital employee favorites for specific object types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchRemoveOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRemoveOperatingObjectFavoritesResponse
+        /// </returns>
+        public BatchRemoveOperatingObjectFavoritesResponse BatchRemoveOperatingObjectFavorites(BatchRemoveOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchRemoveOperatingObjectFavoritesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch cancels digital employee favorites for specific object types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Idempotently cancels favorites across three independent dimensions: graphName, operatingObjectName, and objectType. The input array accepts 1 to 200 items per request. Each item must be a non-empty string with a maximum length of 128 characters. The server validates and deduplicates items while preserving order. Non-string values, values that exceed the length limit, or arrays that exceed the size limit are rejected. Deletion, per-item status updates, and remaining valid count are completed within a single transaction. To safely cancel all favorites, you must also call ClearOperatingObjectFavorites to clean up historical records, MISSING records, or permission-hidden records that are not visible in the list. Then read back the result to confirm that total is 0.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchRemoveOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchRemoveOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<BatchRemoveOperatingObjectFavoritesResponse> BatchRemoveOperatingObjectFavoritesAsync(BatchRemoveOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchRemoveOperatingObjectFavoritesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
@@ -588,17 +780,195 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Clears all follows of a specific object type for a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearOperatingObjectFavoritesResponse
+        /// </returns>
+        public ClearOperatingObjectFavoritesResponse ClearOperatingObjectFavoritesWithOptions(ClearOperatingObjectFavoritesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/clearOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearOperatingObjectFavoritesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears all follows of a specific object type for a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<ClearOperatingObjectFavoritesResponse> ClearOperatingObjectFavoritesWithOptionsAsync(ClearOperatingObjectFavoritesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/clearOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearOperatingObjectFavoritesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears all follows of a specific object type for a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearOperatingObjectFavoritesResponse
+        /// </returns>
+        public ClearOperatingObjectFavoritesResponse ClearOperatingObjectFavorites(ClearOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ClearOperatingObjectFavoritesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Clears all follows of a specific object type for a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Clears all persisted follows for the current calling user across three independent dimensions: graphName, operatingObjectName, and objectType. This includes historical records, MISSING records, and permission-hidden records that are not visible in the list. The operation does not return invisible object IDs and verifies that the remaining physical record count is zero within the same transaction.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ClearOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<ClearOperatingObjectFavoritesResponse> ClearOperatingObjectFavoritesAsync(ClearOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ClearOperatingObjectFavoritesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a service notice.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <h2>Request description</h2>
+        /// <para>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</para>
         /// <list type="bullet">
         /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
         /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
-        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 time with time zone.</description></item>
         /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
         /// </list>
         /// </description>
@@ -711,12 +1081,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <h2>Request description</h2>
+        /// <para>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</para>
         /// <list type="bullet">
         /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
         /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
-        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 time with time zone.</description></item>
         /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
         /// </list>
         /// </description>
@@ -829,12 +1199,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <h2>Request description</h2>
+        /// <para>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</para>
         /// <list type="bullet">
         /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
         /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
-        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 time with time zone.</description></item>
         /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
         /// </list>
         /// </description>
@@ -860,12 +1230,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <h2>Request description</h2>
+        /// <para>Creates a service notice. The caller must be mapped to a real platform user in the system O&amp;M tenant and must have announcement management permissions.</para>
         /// <list type="bullet">
         /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
         /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
-        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 time with time zone.</description></item>
         /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
         /// </list>
         /// </description>
@@ -1520,18 +1890,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1626,18 +1996,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1732,18 +2102,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1763,18 +2133,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>Connects a specified standard DingTalk group chat to the group knowledge base that the caller has joined.</description></item>
         /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
         /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
-        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
-        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// <item><description>updateFrequency can be configured through preset or a five-segment cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group member identity and target group directory permissions. The same group chat can be created as different Sources.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5024,9 +5394,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5099,9 +5469,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5174,9 +5544,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5204,9 +5574,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
-        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital employee as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authenticated identity only. These fields are ignored if passed in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7061,11 +7431,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
-        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
+        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
         /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
+        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7137,11 +7507,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
-        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
+        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
         /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
+        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7213,11 +7583,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
-        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
+        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
         /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
+        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7244,11 +7614,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
-        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
-        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base folder under a specified tenant.</description></item>
+        /// <item><description>You can set the <c>parentId</c> parameter to specify the parent folder of the new folder. If this parameter is not specified, the folder is created as a root folder by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent folder.</description></item>
         /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
-        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
+        /// <item><description>After the folder is created, the related information about the new folder is returned, such as the folder ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7275,12 +7645,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Creates a user by using OpenAPI.
         ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     1. Parses roleCodes into role_ids (validates against system role enumerations).
         ///     2. Checks whether the user already exists (used to return the isNewUser flag).
-        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
         ///     4. Returns the creation result (including the isNewUser flag).
         ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
         ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
         ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
@@ -7325,6 +7695,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["roleCodes"] = request.RoleCodesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoProvider))
+            {
+                body["ssoProvider"] = request.SsoProvider;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnAccountId))
             {
                 body["wnAccountId"] = request.WnAccountId;
@@ -7359,12 +7733,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Creates a user by using OpenAPI.
         ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     1. Parses roleCodes into role_ids (validates against system role enumerations).
         ///     2. Checks whether the user already exists (used to return the isNewUser flag).
-        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
         ///     4. Returns the creation result (including the isNewUser flag).
         ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
         ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
         ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
@@ -7409,6 +7783,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["roleCodes"] = request.RoleCodesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SsoProvider))
+            {
+                body["ssoProvider"] = request.SsoProvider;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnAccountId))
             {
                 body["wnAccountId"] = request.WnAccountId;
@@ -7443,12 +7821,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Creates a user by using OpenAPI.
         ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     1. Parses roleCodes into role_ids (validates against system role enumerations).
         ///     2. Checks whether the user already exists (used to return the isNewUser flag).
-        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
         ///     4. Returns the creation result (including the isNewUser flag).
         ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
         ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
         ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
@@ -7476,12 +7854,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Creates a user by using OpenAPI.
         ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     1. Parses roleCodes into role_ids (validates against system role enumerations).
         ///     2. Checks whether the user already exists (used to return the isNewUser flag).
-        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed by the caller as an RSA ciphertext).
         ///     4. Returns the creation result (including the isNewUser flag).
         ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to restore the user.
         ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
         ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
@@ -7685,16 +8063,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
-        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
-        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-        ///     4. Returns the creation result (including the isNewUser flag)
-        ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</description></item>
+        /// <item><description>The <c>accountId</c> parameter serves as the logon account for the user and must be unique.</description></item>
+        /// <item><description>The <c>displayName</c> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</description></item>
+        /// <item><description>The optional <c>roleCodes</c> parameter specifies a list of roles for the user. By default, the <c>APPLICATION_USER</c> role is assigned.</description></item>
+        /// <item><description>The <c>userGroupIds</c> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</description></item>
+        /// <item><description>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</description></item>
+        /// <item><description>This operation supports calls over HTTPS and requires the request body in JSON format.</description></item>
+        /// <item><description>For security authentication, AK, BearerToken, and APP are supported.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7777,16 +8156,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
-        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
-        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-        ///     4. Returns the creation result (including the isNewUser flag)
-        ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</description></item>
+        /// <item><description>The <c>accountId</c> parameter serves as the logon account for the user and must be unique.</description></item>
+        /// <item><description>The <c>displayName</c> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</description></item>
+        /// <item><description>The optional <c>roleCodes</c> parameter specifies a list of roles for the user. By default, the <c>APPLICATION_USER</c> role is assigned.</description></item>
+        /// <item><description>The <c>userGroupIds</c> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</description></item>
+        /// <item><description>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</description></item>
+        /// <item><description>This operation supports calls over HTTPS and requires the request body in JSON format.</description></item>
+        /// <item><description>For security authentication, AK, BearerToken, and APP are supported.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7869,16 +8249,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
-        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
-        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-        ///     4. Returns the creation result (including the isNewUser flag)
-        ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</description></item>
+        /// <item><description>The <c>accountId</c> parameter serves as the logon account for the user and must be unique.</description></item>
+        /// <item><description>The <c>displayName</c> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</description></item>
+        /// <item><description>The optional <c>roleCodes</c> parameter specifies a list of roles for the user. By default, the <c>APPLICATION_USER</c> role is assigned.</description></item>
+        /// <item><description>The <c>userGroupIds</c> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</description></item>
+        /// <item><description>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</description></item>
+        /// <item><description>This operation supports calls over HTTPS and requires the request body in JSON format.</description></item>
+        /// <item><description>For security authentication, AK, BearerToken, and APP are supported.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7902,16 +8283,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
-        ///     Business orchestration:
-        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
-        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
-        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
-        ///     4. Returns the creation result (including the isNewUser flag)
-        ///     Error codes:
-        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
-        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
-        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation creates a WINNEXO user under a specified tenant and optionally assigns system roles and user groups to the user.</description></item>
+        /// <item><description>The <c>accountId</c> parameter serves as the logon account for the user and must be unique.</description></item>
+        /// <item><description>The <c>displayName</c> parameter specifies the display name of the user, which must also be unique within the tenant and cannot exceed 100 characters in length.</description></item>
+        /// <item><description>The optional <c>roleCodes</c> parameter specifies a list of roles for the user. By default, the <c>APPLICATION_USER</c> role is assigned.</description></item>
+        /// <item><description>The <c>userGroupIds</c> parameter allows you to add up to 100 user group IDs to the new user. Make sure that all specified user groups belong to the same tenant.</description></item>
+        /// <item><description>The password must be encrypted by using the RSA-OAEP-SHA256 algorithm and submitted in Base64 format.</description></item>
+        /// <item><description>This operation supports calls over HTTPS and requires the request body in JSON format.</description></item>
+        /// <item><description>For security authentication, AK, BearerToken, and APP are supported.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7940,8 +8322,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -8003,8 +8385,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -8066,8 +8448,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -8098,8 +8480,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the caller\&quot;s personal directory.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -8887,7 +9269,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
         /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
-        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -8954,7 +9336,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
         /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
-        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -9021,7 +9403,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
         /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
-        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -9053,7 +9435,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
         /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
-        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
@@ -10219,13 +10601,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>The OSS persistent address (<c>filePath</c>) of the file must be provided during upload.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
         /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
@@ -10311,13 +10693,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>The OSS persistent address (<c>filePath</c>) of the file must be provided during upload.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
         /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
@@ -10403,13 +10785,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>The OSS persistent address (<c>filePath</c>) of the file must be provided during upload.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
         /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
@@ -10442,13 +10824,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>The OSS persistent address (<c>filePath</c>) of the file must be provided during upload.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
         /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
@@ -12683,8 +13065,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12745,8 +13127,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12807,8 +13189,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12832,8 +13214,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13859,13 +14241,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
         /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
         /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
         /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13959,13 +14341,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
         /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
         /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
         /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14059,13 +14441,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
         /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
         /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
         /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14090,13 +14472,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
         /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
         /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
         /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
-        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required for the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14682,20 +15064,214 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
+        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperatingObjectFavoritesResponse
+        /// </returns>
+        public ListOperatingObjectFavoritesResponse ListOperatingObjectFavoritesWithOptions(ListOperatingObjectFavoritesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperatingObjectFavoritesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperatingObjectFavoritesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<ListOperatingObjectFavoritesResponse> ListOperatingObjectFavoritesWithOptionsAsync(ListOperatingObjectFavoritesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectType))
+            {
+                body["objectType"] = request.ObjectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperatingObjectFavorites",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listOperatingObjectFavorites",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperatingObjectFavoritesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperatingObjectFavoritesResponse
+        /// </returns>
+        public ListOperatingObjectFavoritesResponse ListOperatingObjectFavorites(ListOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListOperatingObjectFavoritesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the precise object type follows of a digital employee by page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries follows by three independent dimensions: graphName, operatingObjectName, and objectType. Supports primary objects and explicit first-level associated objects. Uses opaque cursor pagination and is not limited by the 1000-item display window of the follow panel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperatingObjectFavoritesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperatingObjectFavoritesResponse
+        /// </returns>
+        public async Task<ListOperatingObjectFavoritesResponse> ListOperatingObjectFavoritesAsync(ListOperatingObjectFavoritesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListOperatingObjectFavoritesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14768,20 +15344,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14854,20 +15430,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14887,20 +15463,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
-        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
-        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15356,7 +15932,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
@@ -15454,7 +16030,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
@@ -15552,7 +16128,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
@@ -15585,7 +16161,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
@@ -15616,16 +16192,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
-        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
         /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
@@ -15717,16 +16293,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
-        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
         /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
@@ -15818,16 +16394,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
-        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
         /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
@@ -15856,16 +16432,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, and keywords, and supports pagination.</para>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
-        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
-        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match is returned if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs a fuzzy match on the skill name or description.</description></item>
         /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
-        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Valid values: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, results are filtered by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
         /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
@@ -17872,13 +18448,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a service notice.</para>
+        /// <para>Takes a service notice offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// <h2>Operation description</h2>
+        /// <para>Idempotently takes a platform announcement offline by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is taken offline for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
         /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
         /// </description>
         /// 
@@ -17931,13 +18507,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a service notice.</para>
+        /// <para>Takes a service notice offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// <h2>Operation description</h2>
+        /// <para>Idempotently takes a platform announcement offline by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is taken offline for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
         /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
         /// </description>
         /// 
@@ -17990,13 +18566,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a service notice.</para>
+        /// <para>Takes a service notice offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// <h2>Operation description</h2>
+        /// <para>Idempotently takes a platform announcement offline by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is taken offline for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
         /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
         /// </description>
         /// 
@@ -18016,13 +18592,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offlines a service notice.</para>
+        /// <para>Takes a service notice offline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// <h2>Operation description</h2>
+        /// <para>Idempotently takes a platform announcement offline by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is taken offline for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
         /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
         /// </description>
         /// 
@@ -18436,18 +19012,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
+        /// <para>Queries primary object data by operating object name with pagination, and supports filtering and searching.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
-        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
-        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>This API queries primary object data with pagination based on a specified operating object name (such as <c>customer_1</c>).</description></item>
+        /// <item><description>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</description></item>
+        /// <item><description>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</description></item>
         /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
-        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
+        /// <item><description>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18516,18 +19092,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
+        /// <para>Queries primary object data by operating object name with pagination, and supports filtering and searching.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
-        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
-        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>This API queries primary object data with pagination based on a specified operating object name (such as <c>customer_1</c>).</description></item>
+        /// <item><description>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</description></item>
+        /// <item><description>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</description></item>
         /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
-        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
+        /// <item><description>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18596,18 +19172,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
+        /// <para>Queries primary object data by operating object name with pagination, and supports filtering and searching.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
-        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
-        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>This API queries primary object data with pagination based on a specified operating object name (such as <c>customer_1</c>).</description></item>
+        /// <item><description>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</description></item>
+        /// <item><description>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</description></item>
         /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
-        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
+        /// <item><description>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18627,18 +19203,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
+        /// <para>Queries primary object data by operating object name with pagination, and supports filtering and searching.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
-        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
-        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>This API queries primary object data with pagination based on a specified operating object name (such as <c>customer_1</c>).</description></item>
+        /// <item><description>Supports keyword-based searching and allows you to specify whether to return only objects marked as favorites.</description></item>
+        /// <item><description>Complex filter conditions can be used to further refine results, including but not limited to logical operators such as equal to, not equal to, greater than, and less than.</description></item>
         /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
-        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
+        /// <item><description>Data included in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21312,7 +21888,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
-        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the caller\&quot;s tenant ID is used by default.</description></item>
         /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
@@ -21382,7 +21958,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
-        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the caller\&quot;s tenant ID is used by default.</description></item>
         /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
@@ -21452,7 +22028,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
-        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the caller\&quot;s tenant ID is used by default.</description></item>
         /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
@@ -21489,7 +22065,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h3>Precautions</h3>
         /// <list type="bullet">
         /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
-        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the caller\&quot;s tenant ID is used by default.</description></item>
         /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
@@ -21510,18 +22086,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
         /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
         /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
         /// <item><description><b>Parameters</b>:<list type="bullet">
-        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</description></item>
         /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
@@ -21578,18 +22154,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
         /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
         /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
         /// <item><description><b>Parameters</b>:<list type="bullet">
-        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</description></item>
         /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
@@ -21646,18 +22222,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
         /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
         /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
         /// <item><description><b>Parameters</b>:<list type="bullet">
-        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</description></item>
         /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
@@ -21681,18 +22257,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
         /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
         /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
         /// <item><description><b>Parameters</b>:<list type="bullet">
-        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory to check and retry failed data sources.</description></item>
         /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
@@ -23137,12 +23713,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
         /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
@@ -23252,12 +23828,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
         /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
@@ -23367,12 +23943,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
         /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
@@ -23399,12 +23975,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
         /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
         /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
@@ -26838,27 +27414,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a local file in a session.</para>
+        /// <para>Uploads a local file for a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
-        /// <h3>Call methods</h3>
+        /// <para>This API operation uploads a temporary temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</para>
+        /// <h3>How to call</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
         /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the publicly accessible address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26922,27 +27498,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a local file in a session.</para>
+        /// <para>Uploads a local file for a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
-        /// <h3>Call methods</h3>
+        /// <para>This API operation uploads a temporary temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</para>
+        /// <h3>How to call</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
         /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the publicly accessible address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27006,27 +27582,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a local file in a session.</para>
+        /// <para>Uploads a local file for a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
-        /// <h3>Call methods</h3>
+        /// <para>This API operation uploads a temporary temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</para>
+        /// <h3>How to call</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
         /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the publicly accessible address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27045,27 +27621,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a local file in a session.</para>
+        /// <para>Uploads a local file for a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
-        /// <h3>Call methods</h3>
+        /// <para>This API operation uploads a temporary temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted in the request body of this API operation. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS bucket, and creates a temporary temporary file record.</para>
+        /// <h3>How to call</h3>
         /// <list type="bullet">
-        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
-        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates the <c>FileUrl</c> parameter.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then call this API operation directly with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
         /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
-        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually set it.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during the transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
         /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
-        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
         /// <h3>Response parameters</h3>
-        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the publicly accessible address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">

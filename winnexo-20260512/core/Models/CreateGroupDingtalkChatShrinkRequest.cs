@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateGroupDingtalkChatShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation ID, typically used for JSSDK.</para>
+        /// <para>The session ID, typically used for JSSDK.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>The chat name.</para>
+        /// <para>The group chat name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Customer Project Chat</para>
+        /// <para>CustomerProjectGroup</para>
         /// </summary>
         [NameInMap("chatName")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The meeting notes content (optional). This participates in auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Focus on identifying customer requests and to-do items</para>
+        /// <para>Focus on identifying customer demands and to-do items</para>
         /// </summary>
         [NameInMap("notes")]
         [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The source tags.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;Customer&quot;,&quot;Chat&quot;]</para>
+        /// <para>[&quot;Customer&quot;,&quot;GroupChat&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

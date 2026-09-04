@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The SessionId value to filter by. If specified, all Active/Expired status information associated with this session is returned.</para>
+        /// <para>The session ID to filter by. If specified, all Active/Expired status information associated with this session is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

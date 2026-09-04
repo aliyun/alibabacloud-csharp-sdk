@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the list.</para>
+        /// <para>The details of the bill list.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>costSource</para>
+            /// <para>The cost source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> CostSource { get; set; }
 
             /// <summary>
-            /// <para>costSourceDisplayName</para>
+            /// <para>The display name of the cost source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EntryObjectType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bill is a shadow bill.</para>
+            /// <para>Indicates whether this is a shadow bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status. Running is returned upon submission.</para>
+            /// <para>The task status. The status is returned as Running upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>

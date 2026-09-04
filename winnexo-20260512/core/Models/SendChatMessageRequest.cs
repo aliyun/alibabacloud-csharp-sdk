@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable direct connection mode. When set to true, the regular scenario routing is skipped and the direct conversation scenario is entered directly.</para>
+        /// <para>Specifies whether to enable direct connection mode. If set to true, the regular scenario routing is skipped and the direct conversation scenario is entered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
-        /// <para>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</para>
+        /// <para>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]

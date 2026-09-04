@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3a59769c-e631-4b48-84f3-c9bf3a8ae940</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A reserved field for extension use.</para>
+        /// <para>A reserved field for extension purposes.</para>
         /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]

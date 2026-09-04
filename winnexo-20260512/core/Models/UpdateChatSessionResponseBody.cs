@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateChatSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</para>
+        /// <para>The business status code. A value of 200 indicates success. A non-200 value indicates a backend error code (ERR.* / InvalidParameter.*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

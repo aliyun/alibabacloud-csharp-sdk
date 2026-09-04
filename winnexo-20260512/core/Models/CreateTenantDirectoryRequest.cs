@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective tenant.</para>
+        /// <para>The ID of the tenant for which the operation takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

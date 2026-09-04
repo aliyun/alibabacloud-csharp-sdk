@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckHealthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authentication source: bearer / aliyun_gateway.</para>
+        /// <para>The authentication source. Valid values: bearer and aliyun_gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_gateway</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AuthSource { get; set; }
 
         /// <summary>
-        /// <para>The caller type: user / aliyun_main / aliyun_ram / service.</para>
+        /// <para>The caller type. Valid values: user, aliyun_main, aliyun_ram, and service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_main</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

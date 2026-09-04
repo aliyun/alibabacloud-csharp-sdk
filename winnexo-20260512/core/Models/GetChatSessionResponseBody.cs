@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The username of the sharing source. This parameter has a value only when from_share=True.</para>
+            /// <para>The username of the user who shared the message. This parameter has a value only when from_share is set to True.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The session information.</para>
         /// </summary>
         [NameInMap("session")]
         [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the creation time exceeds 30 days.</para>
+            /// <para>Indicates whether the creation time is older than 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

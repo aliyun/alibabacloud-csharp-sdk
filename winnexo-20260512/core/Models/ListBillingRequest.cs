@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListBillingRequest : TeaModel {
         /// <summary>
-        /// <para>The unique business identifier. When bizType is set to LibraryChat, bizId refers to the document library ID.</para>
+        /// <para>The unique business identifier. When bizType is LibraryChat, bizId refers to the document library ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleBizId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter out bills with zero credit consumption. Default value: true (filtered).</para>
+        /// <para>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>start: indicates node creation. This is the default value and does not need to be explicitly set in most cases.</description></item>
-        /// <item><description>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. Set this to stop after the meeting ends to trigger the call. This is used in real-time meeting scenarios.</description></item>
+        /// <item><description>start: indicates task creation. This is the default value and does not need to be explicitly set in most cases.</description></item>
+        /// <item><description>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. After the meeting ends, set this to stop to trigger the call. This is used in real-time meeting scenarios.</description></item>
         /// </list>
         /// <para>Note: When ending a real-time recording, you must set this parameter to stop.</para>
         /// 
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query start time. This is a UNIX timestamp in seconds.</para>
+        /// <para>The query start time. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task status. Running is returned upon submission.</para>
+        /// <para>The task status. The status is returned as Running upon submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>

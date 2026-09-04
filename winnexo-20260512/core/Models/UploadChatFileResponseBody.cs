@@ -22,16 +22,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The content type of the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image</description></item>
-        /// <item><description><b>document</b>: general document</description></item>
-        /// <item><description><b>alidoc</b>: Alibaba document</description></item>
-        /// <item><description><b>text</b>: text</description></item>
-        /// <item><description><b>video</b>: video</description></item>
-        /// <item><description><b>audio</b>: audio</description></item>
-        /// <item><description><b>archive</b>: archive</description></item>
-        /// <item><description><b>app</b>: application</description></item>
-        /// <item><description><b>link</b>: shortcut</description></item>
-        /// <item><description><b>other</b>: other</description></item>
+        /// <item><description><b>image</b>: Image.</description></item>
+        /// <item><description><b>document</b>: General document.</description></item>
+        /// <item><description><b>alidoc</b>: Alibaba document.</description></item>
+        /// <item><description><b>text</b>: Text.</description></item>
+        /// <item><description><b>video</b>: Video.</description></item>
+        /// <item><description><b>audio</b>: Audio.</description></item>
+        /// <item><description><b>archive</b>: Archive.</description></item>
+        /// <item><description><b>app</b>: Application.</description></item>
+        /// <item><description><b>link</b>: Shortcut.</description></item>
+        /// <item><description><b>other</b>: Other.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The publicly accessible URL of the online document.</para>
+        /// <para>The publicly accessible URL of the AliDing online document.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
+        /// <para>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>The attachment address.</para>
+        /// <para>The Yida attachment address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]

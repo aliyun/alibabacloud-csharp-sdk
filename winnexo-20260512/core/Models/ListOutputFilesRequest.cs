@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searching. Matches output titles or item names.</para>
+        /// <para>The keyword for searching. Matches the output title or item name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of items per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display only outputs and output items that have sharing enabled.</para>
+        /// <para>Specifies whether to display only outputs and output items with sharing enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>

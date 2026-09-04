@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EffectiveEnd { get; set; }
 
         /// <summary>
-        /// <para>The effective start time in ISO 8601 format with time zone information. If this parameter is not specified, the notice takes effect immediately.</para>
+        /// <para>The effective start time in ISO 8601 format with time zone. If this parameter is not specified, the notice takes effect immediately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-20T14:00:00+08:00</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EffectiveStart { get; set; }
 
         /// <summary>
-        /// <para>The priority level. Valid values:</para>
+        /// <para>The priority. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

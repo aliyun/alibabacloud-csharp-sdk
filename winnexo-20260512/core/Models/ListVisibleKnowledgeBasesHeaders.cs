@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F892C03F-7E12-5F37-A506-1FC3B065EAC6</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir_group_child</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Project Plan</para>
+        /// <para>ProjectPlan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

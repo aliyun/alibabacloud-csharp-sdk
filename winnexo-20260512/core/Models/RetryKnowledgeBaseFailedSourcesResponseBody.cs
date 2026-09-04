@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? EnqueuedCount { get; set; }
 
         /// <summary>
-        /// <para>enqueuedIds。</para>
+        /// <para>The list of knowledge base source IDs that have been re-enqueued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of resources skipped because they are not in FAILED status.</para>
+        /// <para>The number of resources skipped (not in FAILED status).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

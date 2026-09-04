@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise knowledge base folder. Failed resources in the folder and its subfolders are included recursively.</para>
+        /// <para>The ID of the enterprise knowledge base folder. Failed resources in subfolders are recursively included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? EnqueuedCount { get; set; }
 
         /// <summary>
-        /// <para>enqueuedIds。</para>
+        /// <para>The list of source IDs that have been re-enqueued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

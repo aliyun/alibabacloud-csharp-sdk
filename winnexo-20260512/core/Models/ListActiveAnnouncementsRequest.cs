@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListActiveAnnouncementsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number for pagination.</para>
+        /// <para>The page number for paginated queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for pagination. Default value: 100. Maximum value: 500.</para>
+        /// <para>The number of entries per page. Default value: 100. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

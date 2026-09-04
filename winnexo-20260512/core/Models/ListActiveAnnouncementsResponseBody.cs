@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListActiveAnnouncementsResponseBodyItems> Items { get; set; }
         public class ListActiveAnnouncementsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The business ID of the notice.</para>
+            /// <para>The business ID of the announcement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EffectiveEnd { get; set; }
 
             /// <summary>
-            /// <para>The effective start time in ISO 8601 format with time zone. If this parameter is not specified, the notice takes effect immediately.</para>
+            /// <para>The effective start time in ISO 8601 format with time zone. If not specified, the announcement takes effect immediately.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-20T14:00:00+08:00</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The priority of the free task.</para>
             /// <list type="bullet">
-            /// <item><description><para>Uses the default priority of the project, as shown in the following figure. The default priority values are as follows:</para>
+            /// <item><description><para>Uses the default priority of the project, as shown in the following figure. The default priorities are as follows:</para>
             /// <list type="bullet">
             /// <item><description><para><b>-10</b>: Low. This is the default value.</para>
             /// </description></item>
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// </list>
             /// <para><img src="https://img.alicdn.com/imgextra/i1/O1CN01hNuSPz25juCzgxhmW_!!6000000007563-2-tps-2682-1304.png" alt=""></para>
             /// <list type="bullet">
-            /// <item><description>Custom priority defined by the user, as shown in the following figure, with an additional &quot;Generally urgent&quot; level.</description></item>
+            /// <item><description>Custom priority, as shown in the following figure, with an additional &quot;Moderately urgent&quot; level.</description></item>
             /// </list>
-            /// <para>The value of this parameter is subject to the actual response of the API call. A higher priority corresponds to a larger value.</para>
+            /// <para>The value of this parameter is subject to the actual response of the API. A higher priority corresponds to a larger value.</para>
             /// <para><img src="https://img.alicdn.com/imgextra/i1/O1CN01V67b3i1mkNvJiW8D1_!!6000000004992-2-tps-2128-1126.png" alt=""></para>
             /// 
             /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string PublishedAt { get; set; }
 
             /// <summary>
-            /// <para>The task status. The value Running is returned upon submission.</para>
+            /// <para>The task status. Running is returned upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLISHED</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The title of the scheduled meeting.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>System Maintenance Notification</para>
+            /// <para>System Maintenance Notice</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]

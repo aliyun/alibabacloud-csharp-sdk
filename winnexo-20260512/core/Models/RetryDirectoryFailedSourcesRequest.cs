@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RetryDirectoryFailedSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise knowledge base folder. Failed resources in the folder and its subfolders are included recursively.</para>
+        /// <para>The ID of the enterprise knowledge base folder. Failed resources in subfolders are recursively included.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

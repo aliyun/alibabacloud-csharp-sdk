@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The base64-encoded password ciphertext encrypted by RSA-OAEP-SHA256 (required).</para>
+        /// <para>The base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256 (required).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant in which the operation takes effect.</para>
+        /// <para>The SSO provider type. This parameter is optional if the tenant has only one external logon method. This parameter is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AGENT_ONE</para>
+        /// </summary>
+        [NameInMap("ssoProvider")]
+        [Validation(Required=false)]
+        public string SsoProvider { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the tenant on which the operation takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? CreatedBy { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The refund status. You must query this field to confirm the refund status during processing. Valid values:</para>
+        /// <para>The refund status. You need to query and confirm the refund status during the refund process. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: All refunds succeeded.</description></item>
+        /// <item><description>SUCCESS: All succeeded.</description></item>
         /// <item><description>FAIL: Failed.</description></item>
         /// <item><description>WAIT_PAY: Waiting for refund.</description></item>
         /// <item><description>EXPIRE: Expired.</description></item>

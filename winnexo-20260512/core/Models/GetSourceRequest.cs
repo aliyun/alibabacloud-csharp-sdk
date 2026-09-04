@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSourceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return large detail fields (settings / notes / structuredTables / unstructuredDocs). Default value: False, which returns only metadata.</para>
+        /// <para>Specifies whether to return large detail fields (settings / notes / structuredTables / unstructuredDocs). Default value: False. When set to False, only metadata is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The meeting notes content (optional), which participates in auxiliary analysis.</para>
+        /// <para>The meeting notes content (optional). The notes are used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The user profile card settings.</para>
+        /// <para>The user profile settings.</para>
         /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base affiliation type. Valid values:</para>
+        /// <para>The knowledge base (KB) ownership type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>aliding_kb_doc: DingTalk knowledge base document.</description></item>
         /// <item><description>normal: common knowledge.</description></item>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>structuredTables</para>
+        /// <para>The list of structured tables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
