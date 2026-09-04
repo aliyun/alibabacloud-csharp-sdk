@@ -27,21 +27,47 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListDiagnosisItemsResponseBodyResult> Result { get; set; }
         public class ListDiagnosisItemsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The description of the diagnostic item.</para>
+            /// <para>Indicates whether billable tokens are consumed. The value is true when level is ADVANCED.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>诊断集群写数据是否有堆积当集群的数据写入存在堆积时，会造成BulkReject异常，可能会导致数据丢失，且会造成系统资源消耗严重</para>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("billable")]
+            [Validation(Required=false)]
+            public bool? Billable { get; set; }
+
+            /// <summary>
+            /// <para>The category code. You can use this value to group diagnostic items by category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CLUSTER_HEALTH</para>
+            /// </summary>
+            [NameInMap("category")]
+            [Validation(Required=false)]
+            public string Category { get; set; }
+
+            /// <summary>
+            /// <para>The diagnostic item description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Diagnoses whether data write operations are backlogged in the cluster. When data write operations are backlogged, BulkReject exceptions occur, which may cause data loss and severe system resource consumption</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the cluster API is accessed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("esApiRequired")]
             [Validation(Required=false)]
             public bool? EsApiRequired { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the diagnostic item.</para>
+            /// <para>The diagnostic item identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClusterBulkRejectDiagnostic</para>
@@ -51,14 +77,45 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The name of the diagnostic item.</para>
+            /// <para>The diagnostic item level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>BASIC: basic inspection item (free).</description></item>
+            /// <item><description>ADVANCED: advanced inspection item (consumes billable tokens).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>索引写入BulkReject诊断</para>
+            /// <para>BASIC</para>
+            /// </summary>
+            [NameInMap("level")]
+            [Validation(Required=false)]
+            public string Level { get; set; }
+
+            /// <summary>
+            /// <para>The diagnostic item name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Index Write BulkReject Diagnostics</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The sort order number for display.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("sortOrder")]
+            [Validation(Required=false)]
+            public int? SortOrder { get; set; }
+
+            /// <summary>
+            /// <para>The supported execution modes. Basic items support RULE and AGENT. Advanced items support only AGENT.</para>
+            /// </summary>
+            [NameInMap("supportedModes")]
+            [Validation(Required=false)]
+            public List<string> SupportedModes { get; set; }
 
         }
 

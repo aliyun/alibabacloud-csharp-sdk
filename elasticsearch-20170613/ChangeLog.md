@@ -1,3 +1,12 @@
+2026-09-04 Version: 3.3.5
+- Update API ListDiagnosisItems: add request parameters level.
+- Update API ListDiagnosisItems: add response parameters Body.Result.$.billable.
+- Update API ListDiagnosisItems: add response parameters Body.Result.$.category.
+- Update API ListDiagnosisItems: add response parameters Body.Result.$.level.
+- Update API ListDiagnosisItems: add response parameters Body.Result.$.sortOrder.
+- Update API ListDiagnosisItems: add response parameters Body.Result.$.supportedModes.
+
+
 2026-07-31 Version: 3.3.4
 - Update API DescribeInstance: add response parameters Body.Result.nodeSpec.diskPreference.
 - Update API EnableKibanaPvlNetwork: add request parameters body.managedSecurityGroup.

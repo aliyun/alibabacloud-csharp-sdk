@@ -19,34 +19,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "elasticsearch.us-west-1.aliyuncs.com"},
-                {"us-east-1", "elasticsearch.us-east-1.aliyuncs.com"},
-                {"na-south-1", "elasticsearch.na-south-1.aliyuncs.com"},
-                {"eu-west-1", "elasticsearch.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "elasticsearch.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "elasticsearch.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "elasticsearch.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "elasticsearch.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "elasticsearch.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "elasticsearch.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "elasticsearch.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "elasticsearch.cn-qingdao.aliyuncs.com"},
-                {"cn-north-2-gov-1", "elasticsearch.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-hongkong", "elasticsearch.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou-finance", "elasticsearch.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "elasticsearch.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "elasticsearch.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "elasticsearch.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "elasticsearch.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "elasticsearch.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-5", "elasticsearch.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "elasticsearch.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "elasticsearch.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "elasticsearch.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "elasticsearch.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("elasticsearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -13137,6 +13109,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             {
                 query["lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -13186,6 +13162,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Level))
+            {
+                query["level"] = request.Level;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
