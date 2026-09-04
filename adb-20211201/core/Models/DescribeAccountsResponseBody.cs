@@ -37,6 +37,36 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [Validation(Required=false)]
                 public string Engine { get; set; }
 
+                [NameInMap("PromqlInsertPrivileges")]
+                [Validation(Required=false)]
+                public DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges PromqlInsertPrivileges { get; set; }
+                public class DescribeAccountsResponseBodyAccountListDBAccountPromqlInsertPrivileges : TeaModel {
+                    [NameInMap("PromqlInsertPrivileges")]
+                    [Validation(Required=false)]
+                    public List<string> PromqlInsertPrivileges { get; set; }
+
+                }
+
+                [NameInMap("PromqlSelectNodes")]
+                [Validation(Required=false)]
+                public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes PromqlSelectNodes { get; set; }
+                public class DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectNodes : TeaModel {
+                    [NameInMap("PromqlSelectNodes")]
+                    [Validation(Required=false)]
+                    public List<string> PromqlSelectNodes { get; set; }
+
+                }
+
+                [NameInMap("PromqlSelectPrivileges")]
+                [Validation(Required=false)]
+                public DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges PromqlSelectPrivileges { get; set; }
+                public class DescribeAccountsResponseBodyAccountListDBAccountPromqlSelectPrivileges : TeaModel {
+                    [NameInMap("PromqlSelectPrivileges")]
+                    [Validation(Required=false)]
+                    public List<string> PromqlSelectPrivileges { get; set; }
+
+                }
+
                 [NameInMap("RamUserList")]
                 [Validation(Required=false)]
                 public DescribeAccountsResponseBodyAccountListDBAccountRamUserList RamUserList { get; set; }
@@ -50,6 +80,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 [NameInMap("RamUsers")]
                 [Validation(Required=false)]
                 public string RamUsers { get; set; }
+
+                [NameInMap("promqlSelectNodePercentage")]
+                [Validation(Required=false)]
+                public double? PromqlSelectNodePercentage { get; set; }
 
             }
 

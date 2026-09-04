@@ -1,3 +1,22 @@
+2026-09-04 Version: 5.1.4
+- Update API CreateAccount: add request parameters PromqlInsertPrivileges.
+- Update API CreateAccount: add request parameters PromqlSelectNodePercentage.
+- Update API CreateAccount: add request parameters PromqlSelectPrivileges.
+- Update API CreateAccount: add request parameters ResourceGroupName.
+- Update API DeleteAccount: add request parameters ResourceGroupName.
+- Update API DescribeAccounts: add request parameters ResourceGroupName.
+- Update API DescribeAccounts: add response parameters Body.AccountList.$.PromqlInsertPrivileges.
+- Update API DescribeAccounts: add response parameters Body.AccountList.$.PromqlSelectNodes.
+- Update API DescribeAccounts: add response parameters Body.AccountList.$.PromqlSelectPrivileges.
+- Update API DescribeAccounts: add response parameters Body.AccountList.$.promqlSelectNodePercentage.
+- Update API ModifyAccountDescription: add request parameters ResourceGroupName.
+- Update API ModifyAccountPrivileges: add request parameters PromqlInsertPrivileges.
+- Update API ModifyAccountPrivileges: add request parameters PromqlSelectNodePercentage.
+- Update API ModifyAccountPrivileges: add request parameters PromqlSelectPrivileges.
+- Update API ModifyAccountPrivileges: add request parameters ResourceGroupName.
+- Update API ResetAccountPassword: add request parameters ResourceGroupName.
+
+
 2026-09-02 Version: 5.1.3
 - Update API AddKnowledgeFile: add request parameters Priority.
 

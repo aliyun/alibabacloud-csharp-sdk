@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The table details.</para>
+        /// <para>The detailed table information.</para>
         /// </summary>
         [NameInMap("Table")]
         [Validation(Required=false)]

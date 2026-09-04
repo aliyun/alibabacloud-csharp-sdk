@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBClusterPerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The ID of an enterprise edition, basic edition, or Data Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The ID of a Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster in Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</para>
+        /// <para>You can call the <a href="~~~612397~~~">DescribeDBClusters</a> operation to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range. The time is in UTC and must be in the <em>yyyy-MM-ddTHH:mmZ</em> format.</para>
+        /// <para>The end time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time. The time range cannot exceed two days.</para>
+        /// <para>The end time must be later than the start time, and the interval between the start time and end time cannot exceed two days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The key of the performance metric. Separate multiple keys with commas (,). For a list of supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">metric overview</a>.</para>
+        /// <para>The name of the performance metric (metric key) to query. Separate multiple values with commas (,). For more information about supported metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Monitoring metrics overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AnalyticDB_CPU_Usage_Percentage</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the regions and availability zones supported by AnalyticDB for MySQL, including the region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource pool.</para>
+        /// <para>The resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_default</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ResourcePools { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range. The time is in UTC and must be in the <em>yyyy-MM-ddTHH:mmZ</em> format.</para>
+        /// <para>The start time of the query. Specify the time in UTC in the format of <i>yyyy-MM-ddTHH:mmZ</i>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-10T23:56Z</para>

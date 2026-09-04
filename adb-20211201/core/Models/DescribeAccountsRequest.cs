@@ -37,10 +37,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine</para>
-        /// </description></item>
-        /// <item><description><para><b>Clickhouse</b>: the LindormTable engine</para>
-        /// </description></item>
+        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,6 +51,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the resource group.</para>
+        /// </summary>
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
 
     }
 

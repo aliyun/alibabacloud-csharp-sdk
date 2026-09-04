@@ -2555,7 +2555,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2573,6 +2573,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAccountShrinkRequest request = new CreateAccountShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlInsertPrivileges))
+            {
+                request.PromqlInsertPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlSelectPrivileges))
+            {
+                request.PromqlSelectPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RamUserList))
             {
                 request.RamUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RamUserList, "RamUserList", "json");
@@ -2602,9 +2610,25 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlInsertPrivilegesShrink))
+            {
+                query["PromqlInsertPrivileges"] = request.PromqlInsertPrivilegesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectNodePercentage))
+            {
+                query["PromqlSelectNodePercentage"] = request.PromqlSelectNodePercentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectPrivilegesShrink))
+            {
+                query["PromqlSelectPrivileges"] = request.PromqlSelectPrivilegesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamUserListShrink))
             {
                 query["RamUserList"] = request.RamUserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2632,7 +2656,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2650,6 +2674,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateAccountShrinkRequest request = new CreateAccountShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlInsertPrivileges))
+            {
+                request.PromqlInsertPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlSelectPrivileges))
+            {
+                request.PromqlSelectPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RamUserList))
             {
                 request.RamUserListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RamUserList, "RamUserList", "json");
@@ -2679,9 +2711,25 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlInsertPrivilegesShrink))
+            {
+                query["PromqlInsertPrivileges"] = request.PromqlInsertPrivilegesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectNodePercentage))
+            {
+                query["PromqlSelectNodePercentage"] = request.PromqlSelectNodePercentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectPrivilegesShrink))
+            {
+                query["PromqlSelectPrivileges"] = request.PromqlSelectPrivilegesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamUserListShrink))
             {
                 query["RamUserList"] = request.RamUserListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2709,7 +2757,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2732,7 +2780,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4939,7 +4987,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5100,7 +5148,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5261,7 +5309,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5284,7 +5332,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6822,12 +6870,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an AnalyticDB for MySQL cluster.</para>
+        /// <para>Deletes a database account from a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6856,6 +6904,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6877,12 +6929,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an AnalyticDB for MySQL cluster.</para>
+        /// <para>Deletes a database account from a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6911,6 +6963,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6932,12 +6988,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an AnalyticDB for MySQL cluster.</para>
+        /// <para>Deletes a database account from a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6955,12 +7011,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a database account from an AnalyticDB for MySQL cluster.</para>
+        /// <para>Deletes a database account from a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10123,7 +10179,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10156,6 +10212,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10182,7 +10242,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10215,6 +10275,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10241,7 +10305,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10264,7 +10328,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration information of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15882,12 +15946,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View target cluster performance data.</para>
+        /// <para>Queries the performance data of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15949,12 +16013,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View target cluster performance data.</para>
+        /// <para>Queries the performance data of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16016,12 +16080,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View target cluster performance data.</para>
+        /// <para>Queries the performance data of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16039,12 +16103,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View target cluster performance data.</para>
+        /// <para>Queries the performance data of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For the service endpoint address, see <a href="https://help.aliyun.com/document_detail/612373.html">service endpoint</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31668,8 +31732,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31730,8 +31794,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31792,8 +31856,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31818,8 +31882,8 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Public endpoint of the region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.ap-southeast-1.aliyuncs.com</c>.</description></item>
-        /// <item><description>VPC endpoint of the region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.ap-southeast-1.aliyuncs.com</c>.</description></item>
+        /// <item><description>Public endpoint of a region: <c>adb.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb.cn-hangzhou.aliyuncs.com</c>.</description></item>
+        /// <item><description>VPC endpoint of a region: <c>adb-vpc.&lt;region-id&gt;.aliyuncs.com</c>. Example: <c>adb-vpc.cn-hangzhou.aliyuncs.com</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35564,6 +35628,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -35622,6 +35690,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -35695,7 +35767,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35717,6 +35789,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 request.AccountPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccountPrivileges, "AccountPrivileges", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlInsertPrivileges))
+            {
+                request.PromqlInsertPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlSelectPrivileges))
+            {
+                request.PromqlSelectPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
@@ -35730,9 +35810,25 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlInsertPrivilegesShrink))
+            {
+                query["PromqlInsertPrivileges"] = request.PromqlInsertPrivilegesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectNodePercentage))
+            {
+                query["PromqlSelectNodePercentage"] = request.PromqlSelectNodePercentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectPrivilegesShrink))
+            {
+                query["PromqlSelectPrivileges"] = request.PromqlSelectPrivilegesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -35760,7 +35856,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -35782,6 +35878,14 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 request.AccountPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AccountPrivileges, "AccountPrivileges", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlInsertPrivileges))
+            {
+                request.PromqlInsertPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlInsertPrivileges, "PromqlInsertPrivileges", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PromqlSelectPrivileges))
+            {
+                request.PromqlSelectPrivilegesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PromqlSelectPrivileges, "PromqlSelectPrivileges", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
             {
@@ -35795,9 +35899,25 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlInsertPrivilegesShrink))
+            {
+                query["PromqlInsertPrivileges"] = request.PromqlInsertPrivilegesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectNodePercentage))
+            {
+                query["PromqlSelectNodePercentage"] = request.PromqlSelectNodePercentage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromqlSelectPrivilegesShrink))
+            {
+                query["PromqlSelectPrivileges"] = request.PromqlSelectPrivilegesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -35825,7 +35945,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35848,7 +35968,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the service registration of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36694,12 +36814,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the SQL audit log settings of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36769,12 +36889,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the SQL audit log settings of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36844,12 +36964,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the SQL audit log settings of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36867,12 +36987,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SQL audit settings of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the SQL audit log settings of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For the endpoint of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37074,12 +37194,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the backup policy of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37157,12 +37277,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the backup policy of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37240,12 +37360,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the backup policy of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37263,12 +37383,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the backup policy of a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the endpoint of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38723,7 +38843,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38876,7 +38996,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39029,7 +39149,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39052,7 +39172,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
+        /// <para>For the endpoint of this service, refer to <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41768,6 +41888,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["Engine"] = request.Engine;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -41830,6 +41954,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
+            {
+                query["ResourceGroupName"] = request.ResourceGroupName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

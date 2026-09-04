@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? AuthNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The authentication node specifications ([0-9+]ACU).</para>
+            /// <para>The authentication node specification ([0-9+]ACU).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? InsertNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The insert node specifications ([0-9+]ACU).</para>
+            /// <para>The insert node specification ([0-9+]ACU).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? SelectNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The query node specifications ([0-9+]ACU).</para>
+            /// <para>The query node specification ([0-9+]ACU).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? StorageNodeNum { get; set; }
 
             /// <summary>
-            /// <para>The storage node specifications ([0-9+]ACU).</para>
+            /// <para>The storage node specification ([0-9+]ACU).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The automatic stop interval, in minutes (m).</para>
+        /// <para>The auto-stop interval, in minutes (m).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5m</para>
@@ -192,8 +192,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>Specifies whether to enable the spot instance feature for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Only Job resource groups support this feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>True</b>: enables the spot instance feature.</description></item>
-        /// <item><description><b>False</b>: disables the spot instance feature.</description></item>
+        /// <item><description><b>True</b>: Enables the spot instance feature.</description></item>
+        /// <item><description><b>False</b>: Disables the spot instance feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public Dictionary<string, object> EngineParams { get; set; }
 
         /// <summary>
-        /// <para>The GPU time-sharing elastic plan.</para>
+        /// <para>The GPU time-based elastic plan.</para>
         /// </summary>
         [NameInMap("GpuElasticPlan")]
         [Validation(Required=false)]
@@ -237,8 +237,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>Specifies whether to enable the elastic plan immediately after creation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables the elastic plan immediately.</description></item>
-            /// <item><description>false: does not enable the elastic plan.</description></item>
+            /// <item><description>true: Enables the elastic plan immediately.</description></item>
+            /// <item><description>false: Does not enable the elastic plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<CreateDBResourceGroupRequestGpuElasticPlanRules> Rules { get; set; }
             public class CreateDBResourceGroupRequestGpuElasticPlanRules : TeaModel {
                 /// <summary>
-                /// <para>The end time, specified as a cron expression. The interval must be at least 1 hour.</para>
+                /// <para>The end time as a cron expression. The interval must be at least 1 hour.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 3 * * ?</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string EndCronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The start time, specified as a cron expression. The interval must be at least 1 hour.</para>
+                /// <para>The start time as a cron expression. The interval must be at least 1 hour.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 2 * * ?</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
+        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Introduction to resource groups (Data Lakehouse Edition)</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -328,8 +328,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The maximum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
-        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</description></item>
-        /// <item><description>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</description></item>
+        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 16 ACUs.</description></item>
+        /// <item><description>If the resource group type is Job, the maximum reserved computing resources are the unallocated resources of the cluster, in increments of 8 ACUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -364,8 +364,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The minimum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
-        /// <item><description>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</description></item>
-        /// <item><description>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</description></item>
+        /// <item><description>If the resource group type is Interactive, the minimum reserved computing resources are 16 ACUs.</description></item>
+        /// <item><description>If the resource group type is Job, the minimum reserved computing resources are 0 ACUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -398,9 +398,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The Ray cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>BASIC: basic type, non-high-availability.</para>
+            /// <item><description><para>BASIC: the basic type, which is non-highly available.</para>
             /// </description></item>
-            /// <item><description><para>HIGH_AVAILABILITY: high-availability type.</para>
+            /// <item><description><para>HIGH_AVAILABILITY: the highly available type.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable user ENI connectivity.</para>
+            /// <para>Specifies whether to enable user Elastic Network Interface (ENI) connectivity.</para>
             /// </summary>
             [NameInMap("EnableUserEni")]
             [Validation(Required=false)]
@@ -439,7 +439,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string HeadDiskCapacity { get; set; }
 
             /// <summary>
-            /// <para>The node specifications of the head node.</para>
+            /// <para>The specification of the head node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xlarge</para>
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string WorkerDiskCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications of the worker node.</para>
+                /// <para>The specification of the worker node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xlarge</para>
@@ -607,7 +607,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string QueryTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the target resource group.</para>
+            /// <para>The name of the destination resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job</para>
@@ -621,9 +621,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The scaling policy of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoScaling: enables the AutoScaling automatic scaling policy.</description></item>
-        /// <item><description>Disable: disables automatic scaling.</description></item>
-        /// <item><description>MultiCluster: enables the MultiCluster automatic scaling policy.</description></item>
+        /// <item><description>AutoScaling: enables the AutoScaling auto-scaling policy.</description></item>
+        /// <item><description>Disable: disables auto-scaling.</description></item>
+        /// <item><description>MultiCluster: enables the MultiCluster auto-scaling policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -644,7 +644,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SpecName { get; set; }
 
         /// <summary>
-        /// <para>The name of the target resource group.</para>
+        /// <para>The name of the destination resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

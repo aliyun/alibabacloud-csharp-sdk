@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>数据库连接测试账号</para>
+        /// <para>Database connection test account</para>
         /// </summary>
         [NameInMap("AccountDescription")]
         [Validation(Required=false)]
@@ -84,8 +84,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AnalyticDB</b> (default): AnalyticDB for MySQL engine.</description></item>
-        /// <item><description><b>Clickhouse</b>: wide table engine.</description></item>
+        /// <item><description><b>AnalyticDB</b> (default): the AnalyticDB for MySQL engine.</description></item>
+        /// <item><description><b>Clickhouse</b>: the wide table engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,12 +95,28 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        [NameInMap("PromqlInsertPrivileges")]
+        [Validation(Required=false)]
+        public string PromqlInsertPrivilegesShrink { get; set; }
+
+        [NameInMap("PromqlSelectNodePercentage")]
+        [Validation(Required=false)]
+        public double? PromqlSelectNodePercentage { get; set; }
+
+        [NameInMap("PromqlSelectPrivileges")]
+        [Validation(Required=false)]
+        public string PromqlSelectPrivilegesShrink { get; set; }
+
         /// <summary>
-        /// <para>The list of Alibaba Cloud Resource Access Management (RAM) user IDs to attach. Currently, only one RAM user can be attached.</para>
+        /// <para>The list of Alibaba Cloud RAM user IDs to bind. Currently, only one RAM user can be bound.</para>
         /// </summary>
         [NameInMap("RamUserList")]
         [Validation(Required=false)]
         public string RamUserListShrink { get; set; }
+
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
 
     }
 

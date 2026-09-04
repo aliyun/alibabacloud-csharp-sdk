@@ -21,22 +21,21 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant to the database account.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The list of granted permissions.</para>
         /// </summary>
         [NameInMap("AccountPrivileges")]
         [Validation(Required=false)]
         public List<ModifyAccountPrivilegesRequestAccountPrivileges> AccountPrivileges { get; set; }
         public class ModifyAccountPrivilegesRequestAccountPrivileges : TeaModel {
             /// <summary>
-            /// <para>The objects on which you want to grant permissions, including databases, tables, and columns.</para>
+            /// <para>The privilege object, which is a tuple of database, table, and column.</para>
             /// </summary>
             [NameInMap("PrivilegeObject")]
             [Validation(Required=false)]
             public ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject PrivilegeObject { get; set; }
             public class ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject : TeaModel {
                 /// <summary>
-                /// <para>The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.</para>
+                /// <para>The column to which permissions are granted. This parameter is required when the privilege level is column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>column1</para>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Column { get; set; }
 
                 /// <summary>
-                /// <para>The databases on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Database, Table, or Column.</para>
+                /// <para>The database to which permissions are granted. This parameter is required when the privilege level is database, table, or column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tsdb1</para>
@@ -56,7 +55,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string Database { get; set; }
 
                 /// <summary>
-                /// <para>The tables on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Table or Column.</para>
+                /// <para>The table to which permissions are granted. This parameter is required when the privilege level is table or column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table1</para>
@@ -68,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             }
 
             /// <summary>
-            /// <para>The permission level that you want to assign to the database account. You can call the <c>DescribeEnabledPrivileges</c> operation to query the permission level that can be assigned to the database account.</para>
+            /// <para>The privilege level, obtained from the <c>DescribeEnabledPrivileges</c> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Global</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string PrivilegeType { get; set; }
 
             /// <summary>
-            /// <para>The permissions that you want to grant to the database account.</para>
+            /// <para>The list of granted permissions.</para>
             /// </summary>
             [NameInMap("Privileges")]
             [Validation(Required=false)]
@@ -87,7 +86,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,6 +96,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("PromqlInsertPrivileges")]
+        [Validation(Required=false)]
+        public List<string> PromqlInsertPrivileges { get; set; }
+
+        [NameInMap("PromqlSelectNodePercentage")]
+        [Validation(Required=false)]
+        public double? PromqlSelectNodePercentage { get; set; }
+
+        [NameInMap("PromqlSelectPrivileges")]
+        [Validation(Required=false)]
+        public List<string> PromqlSelectPrivileges { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -107,6 +119,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
 
     }
 

@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the status of SQL audit is updated. Valid values:</para>
+        /// <para>Indicates whether the SQL audit logging status is updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The status is updated.</description></item>
+        /// <item><description><b>false</b>: The status failed to be updated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

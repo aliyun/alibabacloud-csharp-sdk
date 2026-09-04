@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class ModifyAuditLogConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The status to which you want to change the SQL audit feature. Valid values:</para>
+        /// <para>The status of SQL audit logging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><b>on</b>: Enables SQL audit logging.</description></item>
+        /// <item><description><b>off</b>: Disables SQL audit logging.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.</para>
+        /// <para>After SQL audit logging is disabled, all SQL audit logs are deleted. Query and export the SQL audit logs before disabling SQL audit logging. For more information, see <a href="https://help.aliyun.com/document_detail/612426.html">DescribeAuditLogRecords</a>. When SQL audit logging is enabled again, audit logs are displayed starting from the most recent time that audit logging was enabled.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,9 +28,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AuditLogStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> to query the IDs of all clusters in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,8 +45,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The type of the compute engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>XIHE (<b>default</b>)</description></item>
-        /// <item><description>SPARK</description></item>
+        /// <item><description>XIHE (<b>default</b>): Xihe compute engine.</description></item>
+        /// <item><description>SPARK: Spark compute engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,9 +65,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> to query the region ID of a specified cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

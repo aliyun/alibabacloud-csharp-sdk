@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The permissions that you want to grant to the database account.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The list of granted permissions.</para>
         /// </summary>
         [NameInMap("AccountPrivileges")]
         [Validation(Required=false)]
         public string AccountPrivilegesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +38,18 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        [NameInMap("PromqlInsertPrivileges")]
+        [Validation(Required=false)]
+        public string PromqlInsertPrivilegesShrink { get; set; }
+
+        [NameInMap("PromqlSelectNodePercentage")]
+        [Validation(Required=false)]
+        public double? PromqlSelectNodePercentage { get; set; }
+
+        [NameInMap("PromqlSelectPrivileges")]
+        [Validation(Required=false)]
+        public string PromqlSelectPrivilegesShrink { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -49,6 +61,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResourceGroupName")]
+        [Validation(Required=false)]
+        public string ResourceGroupName { get; set; }
 
     }
 
