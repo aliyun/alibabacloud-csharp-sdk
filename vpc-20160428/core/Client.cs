@@ -57,42 +57,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
                 {"cn-zhengzhou-nebula-1", "vpc-nebula.cn-qingdao-nebula.aliyuncs.com"},
                 {"eu-west-1-oxs", "vpc-nebula.cn-shenzhen-cloudstone.aliyuncs.com"},
                 {"rus-west-1-pop", "vpc.aliyuncs.com"},
-                {"cn-beijing", "vpc.cn-beijing.aliyuncs.com"},
-                {"cn-heyuan", "vpc.cn-heyuan.aliyuncs.com"},
-                {"cn-zhangjiakou", "vpc.cn-zhangjiakou.aliyuncs.com"},
-                {"ap-northeast-2", "vpc.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "vpc.ap-northeast-1.aliyuncs.com"},
-                {"ap-southeast-1", "vpc.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "vpc.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-5", "vpc.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-6", "vpc.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "vpc.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-8", "vpc.ap-southeast-8.aliyuncs.com"},
-                {"cn-zhongwei", "vpc.cn-zhongwei.aliyuncs.com"},
-                {"cn-wulanchabu", "vpc.cn-wulanchabu.aliyuncs.com"},
-                {"cn-qingdao", "vpc.cn-qingdao.aliyuncs.com"},
-                {"cn-wuhan-lr", "vpc.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shanghai", "vpc.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "vpc.cn-hongkong.aliyuncs.com"},
-                {"cn-shenzhen", "vpc.cn-shenzhen.aliyuncs.com"},
-                {"cn-nanjing", "vpc.cn-nanjing.aliyuncs.com"},
-                {"cn-fuzhou", "vpc.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "vpc.cn-chengdu.aliyuncs.com"},
-                {"cn-guangzhou", "vpc.cn-guangzhou.aliyuncs.com"},
-                {"cn-huhehaote", "vpc.cn-huhehaote.aliyuncs.com"},
-                {"us-southeast-1", "vpc.us-southeast-1.aliyuncs.com"},
-                {"eu-west-1", "vpc.eu-west-1.aliyuncs.com"},
-                {"eu-west-2", "vpc.eu-west-2.aliyuncs.com"},
-                {"eu-central-1", "vpc.eu-central-1.aliyuncs.com"},
-                {"us-east-1", "vpc.us-east-1.aliyuncs.com"},
-                {"sa-east-1", "vpc.sa-east-1.aliyuncs.com"},
-                {"us-west-1", "vpc.us-west-1.aliyuncs.com"},
-                {"na-south-1", "vpc.na-south-1.aliyuncs.com"},
-                {"me-east-1", "vpc.me-east-1.aliyuncs.com"},
-                {"me-central-1", "vpc.me-central-1.aliyuncs.com"},
-                {"cn-beijing-finance-1", "vpc.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "vpc.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "vpc.cn-wulanchabu-gic-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -18696,14 +18660,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation node continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
         /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
         /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18784,14 +18748,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation node continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
         /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
         /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18872,14 +18836,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation node continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
         /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
         /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18904,14 +18868,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation node continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
+        /// <item><description><b>CreateRouteTargetGroup</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the routing target group instance is not yet created. The creation task continues in the background. You can invoke <b>ListRouteTargetGroup</b> to query the creation status of the routing target group:<list type="bullet">
         /// <item><description>If the routing target group is in the <b>Pending</b> state, the routing target group is being created.</description></item>
         /// <item><description>If the routing target group is in the <b>Available</b>, <b>Unavailable</b>, <b>Switched</b>, or <b>Abnormal</b> state, the routing target group is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
+        /// <item><description><b>Active/standby mode</b>: When you create a routing target group, configure primary and secondary instances that are in different zones and of the same type.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20998,7 +20962,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
@@ -21031,6 +20995,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["CidrBlock"] = request.CidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CidrMask))
+            {
+                query["CidrMask"] = request.CidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -21042,6 +21010,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -21112,7 +21084,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
@@ -21145,6 +21117,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["CidrBlock"] = request.CidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CidrMask))
+            {
+                query["CidrMask"] = request.CidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -21156,6 +21132,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -21226,7 +21206,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
@@ -21264,7 +21244,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to create a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The number of vSwitches in each VPC cannot exceed 150.</description></item>
-        /// <item><description>The first IP address and the last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
+        /// <item><description>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system. For example, the system reserved IP addresses of 192.168.1.0/24 are 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.</description></item>
         /// <item><description>The number of cloud service instances in a vSwitch cannot exceed the remaining available cloud service instances in the VPC (15,000 minus the current number of cloud service instances).</description></item>
         /// <item><description>A cloud service instance can belong to only one vSwitch.</description></item>
         /// <item><description>vSwitches do not support multicast or broadcast.</description></item>
@@ -73383,6 +73363,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -73476,6 +73460,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrBlock))
             {
                 query["Ipv6CidrBlock"] = request.Ipv6CidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6CidrMask))
+            {
+                query["Ipv6CidrMask"] = request.Ipv6CidrMask;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -85242,7 +85230,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set.</para>
+        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85336,7 +85324,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set.</para>
+        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85430,7 +85418,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set.</para>
+        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85448,7 +85436,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set.</para>
+        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

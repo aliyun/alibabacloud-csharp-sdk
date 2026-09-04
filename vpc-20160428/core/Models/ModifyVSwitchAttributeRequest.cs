@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to enable IPv6 for the vSwitch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables IPv6. The VPC to which the vSwitch belongs must have IPv6 enabled. You must also specify Ipv6CidrBlock to assign an IPv6 CIDR block to the vSwitch.</description></item>
-        /// <item><description><b>false</b> (default): disables IPv6. When you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use. You cannot specify Ipv6CidrBlock at the same time.</description></item>
+        /// <item><description><b>true</b>: Enables IPv6. IPv6 must be enabled for the VPC to which the vSwitch belongs. You must also specify Ipv6CidrBlock to allocate an IPv6 CIDR block to the vSwitch.</description></item>
+        /// <item><description><b>false</b> (default): Disables IPv6. Before you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use. You cannot specify Ipv6CidrBlock at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <b>0</b> to <b>255</b>.</para>
-        /// <para>You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This parameter is used to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the same VPC.</para>
+        /// <para>You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs. This parameter allows you to allocate an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the same VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,6 +44,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [NameInMap("Ipv6CidrBlock")]
         [Validation(Required=false)]
         public int? Ipv6CidrBlock { get; set; }
+
+        /// <summary>
+        /// <para>The IPv6 CIDR block mask of the vSwitch. You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs.</para>
+        /// <remarks>
+        /// <para>Only 64 is supported.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>64</para>
+        /// </summary>
+        [NameInMap("Ipv6CidrMask")]
+        [Validation(Required=false)]
+        public int? Ipv6CidrMask { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]

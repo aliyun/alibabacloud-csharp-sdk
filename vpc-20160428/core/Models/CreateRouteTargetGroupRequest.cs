@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ConfigMode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the route target group. You can call the DescribeRegions operation to query the region ID.</para>
+        /// <para>The region ID of the route target group. You can call the DescribeRegions operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The description of the route target group.
-        /// The description must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the route target group. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myRouteTargetGroupDescription</para>
@@ -78,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTargetGroupName { get; set; }
 
         /// <summary>
-        /// <para>The member list of the route target group.</para>
+        /// <para>The list of members in the route target group.</para>
         /// <para>In active/standby mode, the following limits apply to route target group members:</para>
         /// <ol>
         /// <item><description>The number of route target group members must be 2.</description></item>
@@ -102,12 +101,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The member type of the route target group.</para>
+            /// <para>The type of the route target group member.</para>
             /// <para>Supported type:</para>
             /// <list type="bullet">
             /// <item><description><b>GatewayLoadBalancerEndpoint</b></description></item>
             /// </list>
-            /// <para>In active/standby mode, all members of the route target group must be of the same type.</para>
+            /// <para>In active/standby mode, all members in the route target group must be of the same type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

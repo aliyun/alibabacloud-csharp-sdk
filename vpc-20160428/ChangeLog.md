@@ -1,3 +1,9 @@
+2026-09-04 Version: 7.3.1
+- Update API CreateVSwitch: add request parameters CidrMask.
+- Update API CreateVSwitch: add request parameters Ipv6CidrMask.
+- Update API ModifyVSwitchAttribute: add request parameters Ipv6CidrMask.
+
+
 2026-09-01 Version: 7.3.0
 - Support API ModifyVpcCidrBlock.
 

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the DHCP options set. </para>
-        /// <para>The description can be empty or 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be empty or 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DHCP options set to modify.</para>
+        /// <para>The ID of the DHCP options set to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the DHCP options set.</para>
-        /// <para>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The hostname suffix, such as example.com.</para>
-        /// <para>After you attach the DHCP options set to associate VPC, the hostname suffix is automatically subject to synchronization to ECS instances in the VPC.</para>
+        /// <para>After the DHCP options set is associated with a VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses, separated by commas (,).</para>
+        /// <para>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// <remarks>
-        /// <para>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</para>
+        /// <para>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud by default (100.100.2.136 and 100.100.2.138).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DomainNameServers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
-        /// <para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para><b>true</b>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</para>
+        /// <para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the DHCP options set to modify. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region where the DHCP options set to be modified resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
