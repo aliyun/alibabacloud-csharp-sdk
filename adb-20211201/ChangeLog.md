@@ -1,3 +1,12 @@
+2026-09-07 Version: 5.2.0
+- Support API AddKnowledgeTags.
+- Support API AddKnowledgeUploadUser.
+- Support API DeleteKnowledgeFile.
+- Support API ListKnowledgeTags.
+- Support API ListKnowledgeUploadUser.
+- Support API RemoveKnowledgeTags.
+
+
 2026-09-04 Version: 5.1.4
 - Update API CreateAccount: add request parameters PromqlInsertPrivileges.
 - Update API CreateAccount: add request parameters PromqlSelectNodePercentage.

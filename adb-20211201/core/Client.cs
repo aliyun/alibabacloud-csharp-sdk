@@ -254,6 +254,278 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adds tags to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeTagsResponse
+        /// </returns>
+        public AddKnowledgeTagsResponse AddKnowledgeTagsWithOptions(AddKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeTagsResponse
+        /// </returns>
+        public async Task<AddKnowledgeTagsResponse> AddKnowledgeTagsWithOptionsAsync(AddKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeTagsResponse
+        /// </returns>
+        public AddKnowledgeTagsResponse AddKnowledgeTags(AddKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddKnowledgeTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeTagsResponse
+        /// </returns>
+        public async Task<AddKnowledgeTagsResponse> AddKnowledgeTagsAsync(AddKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddKnowledgeTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds authorized users to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeUploadUserResponse
+        /// </returns>
+        public AddKnowledgeUploadUserResponse AddKnowledgeUploadUserWithOptions(AddKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                query["Users"] = request.Users;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeUploadUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds authorized users to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<AddKnowledgeUploadUserResponse> AddKnowledgeUploadUserWithOptionsAsync(AddKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                query["Users"] = request.Users;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddKnowledgeUploadUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds authorized users to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeUploadUserResponse
+        /// </returns>
+        public AddKnowledgeUploadUserResponse AddKnowledgeUploadUser(AddKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddKnowledgeUploadUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds authorized users to a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<AddKnowledgeUploadUserResponse> AddKnowledgeUploadUserAsync(AddKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddKnowledgeUploadUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Allocates a public connection address for a cluster.</para>
         /// </summary>
         /// 
@@ -8306,6 +8578,134 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFormationCrawlerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeFileResponse
+        /// </returns>
+        public DeleteKnowledgeFileResponse DeleteKnowledgeFileWithOptions(DeleteKnowledgeFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeFile",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeFileResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeFileResponse> DeleteKnowledgeFileWithOptionsAsync(DeleteKnowledgeFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeFile",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeFileResponse
+        /// </returns>
+        public DeleteKnowledgeFileResponse DeleteKnowledgeFile(DeleteKnowledgeFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeFileResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeFileResponse> DeleteKnowledgeFileAsync(DeleteKnowledgeFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeFileWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -33878,6 +34278,262 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the tags of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeTagsResponse
+        /// </returns>
+        public ListKnowledgeTagsResponse ListKnowledgeTagsWithOptions(ListKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeTagsResponse
+        /// </returns>
+        public async Task<ListKnowledgeTagsResponse> ListKnowledgeTagsWithOptionsAsync(ListKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeTagsResponse
+        /// </returns>
+        public ListKnowledgeTagsResponse ListKnowledgeTags(ListKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeTagsResponse
+        /// </returns>
+        public async Task<ListKnowledgeTagsResponse> ListKnowledgeTagsAsync(ListKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorized users of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeUploadUserResponse
+        /// </returns>
+        public ListKnowledgeUploadUserResponse ListKnowledgeUploadUserWithOptions(ListKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeUploadUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorized users of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<ListKnowledgeUploadUserResponse> ListKnowledgeUploadUserWithOptionsAsync(ListKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeUploadUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorized users of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeUploadUserResponse
+        /// </returns>
+        public ListKnowledgeUploadUserResponse ListKnowledgeUploadUser(ListKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeUploadUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the authorized users of a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<ListKnowledgeUploadUserResponse> ListKnowledgeUploadUserAsync(ListKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeUploadUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of lake storages.</para>
         /// </summary>
         /// 
@@ -35590,12 +36246,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the description of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35653,12 +36309,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the description of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35716,12 +36372,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the description of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35739,12 +36395,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Modifies the description of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41550,6 +42206,142 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes tags from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeTagsResponse
+        /// </returns>
+        public RemoveKnowledgeTagsResponse RemoveKnowledgeTagsWithOptions(RemoveKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes tags from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeTagsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeTagsResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeTagsResponse> RemoveKnowledgeTagsWithOptionsAsync(RemoveKnowledgeTagsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeTags",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes tags from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeTagsResponse
+        /// </returns>
+        public RemoveKnowledgeTagsResponse RemoveKnowledgeTags(RemoveKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveKnowledgeTagsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes tags from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeTagsResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeTagsResponse> RemoveKnowledgeTagsAsync(RemoveKnowledgeTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveKnowledgeTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the name of a semantic view.</para>
         /// </summary>
         /// 
@@ -41846,12 +42638,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Resets the password of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41913,12 +42705,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Resets the password of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41980,12 +42772,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Resets the password of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42003,12 +42795,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the password of a database account for an AnalyticDB for MySQL cluster.</para>
+        /// <para>Resets the password of a database account for a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</para>
+        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
