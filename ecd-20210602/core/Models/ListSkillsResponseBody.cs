@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
             }
 
             /// <summary>
-            /// <para>The skill slug identifier, which is user-defined and unique within the tenant.</para>
+            /// <para>The skill slug identifier, which is user-defined and unique within the tenant dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>find-skills****</para>

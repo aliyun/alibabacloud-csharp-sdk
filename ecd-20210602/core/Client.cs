@@ -19,33 +19,6 @@ namespace AlibabaCloud.SDK.Ecd20210602
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "ecd.us-west-1.aliyuncs.com"},
-                {"us-east-1", "ecd.us-east-1.aliyuncs.com"},
-                {"me-east-1", "ecd.me-east-1.aliyuncs.com"},
-                {"me-central-1", "ecd.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "ecd.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "ecd.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"},
-                {"cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"},
-                {"cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "ecd.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1035,6 +1008,10 @@ namespace AlibabaCloud.SDK.Ecd20210602
             {
                 query["SupplierType"] = request.SupplierType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCodes))
+            {
+                query["TagCodes"] = request.TagCodes;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1093,6 +1070,10 @@ namespace AlibabaCloud.SDK.Ecd20210602
             {
                 query["SupplierType"] = request.SupplierType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagCodes))
+            {
+                query["TagCodes"] = request.TagCodes;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1146,6 +1127,206 @@ namespace AlibabaCloud.SDK.Ecd20210602
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListSkillsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of desktop applications visible to the current tenant, with support for filtering by application name and source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The query scope is determined by the caller identity and includes applications uploaded by the current tenant and marketplace applications that the tenant is authorized to view. The visibility of marketplace applications is subject to authorization and display policy restrictions. The authorization and auto-installation information in the list represents application configurations and does not indicate the actual installation result on a specific device.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Application identity</b>: Id is a numeric application ID, and AppUid is a character string UID. The two cannot be used interchangeably.</description></item>
+        /// <item><description><b>Authorization scope</b>: DistributeType is used together with AuthType. For example, <c>AuthType=auth_type_user</c> and <c>DistributeType=ALL</c> indicate that the application is allocated to all users on a per-user dimension.</description></item>
+        /// <item><description><b>Auto-installation</b>: AutoInstallmentType specifies the auto-installation scope policy, which is used to distinguish between full, partial, or disabled auto-installation.</description></item>
+        /// <item><description><b>Partial auto-installation</b>: When AutoInstallmentType is set to 1, use SetAutoInstallUser or SetAutoInstallDesktop to configure specific users or cloud desktops. OperationType=1 indicates enabled, and OperationType=2 indicates disabled. ListTenantApp only returns configurations and does not modify auto-installation settings.</description></item>
+        /// <item><description><b>Capabilities and execution results</b>: The silent installation capability is application metadata returned in the response. To determine the actual installation or execution result on a device, use the corresponding execution result query capability.</description></item>
+        /// <item><description><b>Optional information</b>: Information such as timestamps may be empty.</description></item>
+        /// <item><description><b>Compatibility handling</b>: Extension information and subtype do not use closed enumerations. Clients should ignore unrecognized extension fields and be compatible with new enumeration values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTenantAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTenantAppResponse
+        /// </returns>
+        public ListTenantAppResponse ListTenantAppWithOptions(ListTenantAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTenantApp",
+                Version = "2021-06-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTenantAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of desktop applications visible to the current tenant, with support for filtering by application name and source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The query scope is determined by the caller identity and includes applications uploaded by the current tenant and marketplace applications that the tenant is authorized to view. The visibility of marketplace applications is subject to authorization and display policy restrictions. The authorization and auto-installation information in the list represents application configurations and does not indicate the actual installation result on a specific device.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Application identity</b>: Id is a numeric application ID, and AppUid is a character string UID. The two cannot be used interchangeably.</description></item>
+        /// <item><description><b>Authorization scope</b>: DistributeType is used together with AuthType. For example, <c>AuthType=auth_type_user</c> and <c>DistributeType=ALL</c> indicate that the application is allocated to all users on a per-user dimension.</description></item>
+        /// <item><description><b>Auto-installation</b>: AutoInstallmentType specifies the auto-installation scope policy, which is used to distinguish between full, partial, or disabled auto-installation.</description></item>
+        /// <item><description><b>Partial auto-installation</b>: When AutoInstallmentType is set to 1, use SetAutoInstallUser or SetAutoInstallDesktop to configure specific users or cloud desktops. OperationType=1 indicates enabled, and OperationType=2 indicates disabled. ListTenantApp only returns configurations and does not modify auto-installation settings.</description></item>
+        /// <item><description><b>Capabilities and execution results</b>: The silent installation capability is application metadata returned in the response. To determine the actual installation or execution result on a device, use the corresponding execution result query capability.</description></item>
+        /// <item><description><b>Optional information</b>: Information such as timestamps may be empty.</description></item>
+        /// <item><description><b>Compatibility handling</b>: Extension information and subtype do not use closed enumerations. Clients should ignore unrecognized extension fields and be compatible with new enumeration values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTenantAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTenantAppResponse
+        /// </returns>
+        public async Task<ListTenantAppResponse> ListTenantAppWithOptionsAsync(ListTenantAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyName))
+            {
+                query["KeyName"] = request.KeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTenantApp",
+                Version = "2021-06-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTenantAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of desktop applications visible to the current tenant, with support for filtering by application name and source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The query scope is determined by the caller identity and includes applications uploaded by the current tenant and marketplace applications that the tenant is authorized to view. The visibility of marketplace applications is subject to authorization and display policy restrictions. The authorization and auto-installation information in the list represents application configurations and does not indicate the actual installation result on a specific device.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Application identity</b>: Id is a numeric application ID, and AppUid is a character string UID. The two cannot be used interchangeably.</description></item>
+        /// <item><description><b>Authorization scope</b>: DistributeType is used together with AuthType. For example, <c>AuthType=auth_type_user</c> and <c>DistributeType=ALL</c> indicate that the application is allocated to all users on a per-user dimension.</description></item>
+        /// <item><description><b>Auto-installation</b>: AutoInstallmentType specifies the auto-installation scope policy, which is used to distinguish between full, partial, or disabled auto-installation.</description></item>
+        /// <item><description><b>Partial auto-installation</b>: When AutoInstallmentType is set to 1, use SetAutoInstallUser or SetAutoInstallDesktop to configure specific users or cloud desktops. OperationType=1 indicates enabled, and OperationType=2 indicates disabled. ListTenantApp only returns configurations and does not modify auto-installation settings.</description></item>
+        /// <item><description><b>Capabilities and execution results</b>: The silent installation capability is application metadata returned in the response. To determine the actual installation or execution result on a device, use the corresponding execution result query capability.</description></item>
+        /// <item><description><b>Optional information</b>: Information such as timestamps may be empty.</description></item>
+        /// <item><description><b>Compatibility handling</b>: Extension information and subtype do not use closed enumerations. Clients should ignore unrecognized extension fields and be compatible with new enumeration values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTenantAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTenantAppResponse
+        /// </returns>
+        public ListTenantAppResponse ListTenantApp(ListTenantAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTenantAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paging query of desktop applications visible to the current tenant, with support for filtering by application name and source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The query scope is determined by the caller identity and includes applications uploaded by the current tenant and marketplace applications that the tenant is authorized to view. The visibility of marketplace applications is subject to authorization and display policy restrictions. The authorization and auto-installation information in the list represents application configurations and does not indicate the actual installation result on a specific device.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Application identity</b>: Id is a numeric application ID, and AppUid is a character string UID. The two cannot be used interchangeably.</description></item>
+        /// <item><description><b>Authorization scope</b>: DistributeType is used together with AuthType. For example, <c>AuthType=auth_type_user</c> and <c>DistributeType=ALL</c> indicate that the application is allocated to all users on a per-user dimension.</description></item>
+        /// <item><description><b>Auto-installation</b>: AutoInstallmentType specifies the auto-installation scope policy, which is used to distinguish between full, partial, or disabled auto-installation.</description></item>
+        /// <item><description><b>Partial auto-installation</b>: When AutoInstallmentType is set to 1, use SetAutoInstallUser or SetAutoInstallDesktop to configure specific users or cloud desktops. OperationType=1 indicates enabled, and OperationType=2 indicates disabled. ListTenantApp only returns configurations and does not modify auto-installation settings.</description></item>
+        /// <item><description><b>Capabilities and execution results</b>: The silent installation capability is application metadata returned in the response. To determine the actual installation or execution result on a device, use the corresponding execution result query capability.</description></item>
+        /// <item><description><b>Optional information</b>: Information such as timestamps may be empty.</description></item>
+        /// <item><description><b>Compatibility handling</b>: Extension information and subtype do not use closed enumerations. Clients should ignore unrecognized extension fields and be compatible with new enumeration values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListTenantAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTenantAppResponse
+        /// </returns>
+        public async Task<ListTenantAppResponse> ListTenantAppAsync(ListTenantAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTenantAppWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

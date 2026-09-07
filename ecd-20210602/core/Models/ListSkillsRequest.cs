@@ -57,6 +57,13 @@ namespace AlibabaCloud.SDK.Ecd20210602.Models
         [Validation(Required=false)]
         public string SupplierType { get; set; }
 
+        /// <summary>
+        /// <para>TagCodes</para>
+        /// </summary>
+        [NameInMap("TagCodes")]
+        [Validation(Required=false)]
+        public List<string> TagCodes { get; set; }
+
     }
 
 }
