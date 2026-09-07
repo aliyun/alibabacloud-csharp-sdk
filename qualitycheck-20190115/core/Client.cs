@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hangzhou", "qualitycheck.cn-hangzhou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1271,7 +1267,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// <para>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1317,7 +1313,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// <para>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1363,7 +1359,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// <para>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1381,7 +1377,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an Agent batch task for conversation analysis. The application call supports HTTP calls to complete the customer response.</para>
+        /// <para>Creates an Agent batch task for conversation analysis. Application calls support HTTP invocations to complete customer responses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5451,13 +5447,141 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a single AgentM task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentMJobInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentMJobInfoResponse
+        /// </returns>
+        public GetAgentMJobInfoResponse GetAgentMJobInfoWithOptions(GetAgentMJobInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentMJobInfo",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentMJobInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single AgentM task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentMJobInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentMJobInfoResponse
+        /// </returns>
+        public async Task<GetAgentMJobInfoResponse> GetAgentMJobInfoWithOptionsAsync(GetAgentMJobInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentMJobInfo",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentMJobInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single AgentM task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentMJobInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentMJobInfoResponse
+        /// </returns>
+        public GetAgentMJobInfoResponse GetAgentMJobInfo(GetAgentMJobInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentMJobInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a single AgentM task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentMJobInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentMJobInfoResponse
+        /// </returns>
+        public async Task<GetAgentMJobInfoResponse> GetAgentMJobInfoAsync(GetAgentMJobInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentMJobInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the task result of an agent node.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5508,8 +5632,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5560,8 +5684,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5584,8 +5708,8 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
-        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// <para>Queries data uploaded through <a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a> or <a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>, or queries data from a dataset quality check task <a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>. You can query by task ID (taskId) or by time range.
+        /// By default, only partial parameters are returned in the response. Use the requiredFields request parameter to specify which fields to include in the response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8975,6 +9099,134 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InvalidRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists AI analysis assistant tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentMJobInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentMJobInfoResponse
+        /// </returns>
+        public ListAgentMJobInfoResponse ListAgentMJobInfoWithOptions(ListAgentMJobInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentMJobInfo",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentMJobInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists AI analysis assistant tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentMJobInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentMJobInfoResponse
+        /// </returns>
+        public async Task<ListAgentMJobInfoResponse> ListAgentMJobInfoWithOptionsAsync(ListAgentMJobInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BaseMeAgentId))
+            {
+                body["BaseMeAgentId"] = request.BaseMeAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonStr))
+            {
+                body["JsonStr"] = request.JsonStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentMJobInfo",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentMJobInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists AI analysis assistant tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentMJobInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentMJobInfoResponse
+        /// </returns>
+        public ListAgentMJobInfoResponse ListAgentMJobInfo(ListAgentMJobInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAgentMJobInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists AI analysis assistant tasks.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentMJobInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentMJobInfoResponse
+        /// </returns>
+        public async Task<ListAgentMJobInfoResponse> ListAgentMJobInfoAsync(ListAgentMJobInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAgentMJobInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
