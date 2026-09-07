@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string ChannelLayout { get; set; }
 
                     /// <summary>
-                    /// <para>The number of audio channels.</para>
+                    /// <para>The number of channels.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string NumFrames { get; set; }
 
                     /// <summary>
-                    /// <para>The encoding profile.</para>
+                    /// <para>The codec profile.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>High</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string FileName { get; set; }
 
                     /// <summary>
-                    /// <para>The file size in bytes.</para>
+                    /// <para>The file size, in bytes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>27007</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string ModifiedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The storage region of the file.</para>
+                    /// <para>The region where the file is stored.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 }
 
                 /// <summary>
-                /// <para>The video stream information. A media asset may contain multiple video streams.</para>
+                /// <para>The video stream information. A media asset may have multiple video streams.</para>
                 /// </summary>
                 [NameInMap("VideoStreamInfoList")]
                 [Validation(Required=false)]
@@ -568,7 +568,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string Fps { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the video stream contains B-frames.</para>
+                    /// <para>Indicates whether B-frames exist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -648,7 +648,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string PixFmt { get; set; }
 
                     /// <summary>
-                    /// <para>The encoding profile.</para>
+                    /// <para>The codec profile.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>High</para>
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public GetMediaResponseBodyMediaInfoMediaBasicInfo MediaBasicInfo { get; set; }
             public class GetMediaResponseBodyMediaInfoMediaBasicInfo : TeaModel {
                 /// <summary>
-                /// <para>The business type of the media asset (currently unavailable).</para>
+                /// <para>The business type of the media asset. This parameter is currently unavailable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>general</para>
@@ -747,7 +747,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was created.</para>
+                /// <para>The creation time of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-26T04:11:08Z</para>
@@ -757,7 +757,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The content description (the request parameter value of the register media asset API).</para>
+                /// <para>The content description. This is the request parameter value of the RegisterMediaInfo API operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>description</para>
@@ -777,7 +777,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The publicly accessible HTTP URL (the request parameter value of the register media asset API).</para>
+                /// <para>The publicly accessible HTTP URL. This is the request parameter value of the RegisterMediaInfo API operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></para>
@@ -797,7 +797,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string MediaId { get; set; }
 
                 /// <summary>
-                /// <para>The tags, separated by commas (the request parameter value of the register media asset API).</para>
+                /// <para>The tags, separated by commas. This is the request parameter value of the RegisterMediaInfo API operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pitaya,prd-wuxi,248</para>
@@ -807,7 +807,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string MediaTags { get; set; }
 
                 /// <summary>
-                /// <para>The media type of the media asset: image/audio/video.</para>
+                /// <para>The media type of the media asset. Valid values: image, audio, and video.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>image</para>
@@ -913,7 +913,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public GetMediaResponseBodyMediaInfoMediaDynamicInfoDynamicMetaData DynamicMetaData { get; set; }
                 public class GetMediaResponseBodyMediaInfoMediaDynamicInfoDynamicMetaData : TeaModel {
                     /// <summary>
-                    /// <para>The dynamic metadata content.</para>
+                    /// <para>The content of the dynamic metadata.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>

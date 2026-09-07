@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitImageGenerationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, and 1:1.</para>
+        /// <para>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4:3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string AspectRatio { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token.</para>
+        /// <para>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>3e761e9d11edba640c42a1b7</b></b></para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The task input. A JSON string that contains the following fields:</para>
+        /// <para>The task input. This parameter is required. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Prompt: String. Required. The prompt.</description></item>
+        /// <item><description>Prompt: String. Required. The prompt for image generation.</description></item>
         /// <item><description>Medias: A list of media items. Required when the task type is <c>image_to_image</c>. A maximum of 9 items are supported.<remarks>
-        /// <para>The Media structure contains: Type, the media type, String, valid value: image; URL, the media download URL, String; MediaId, the media asset ID, String.</para>
+        /// <para>The Media struct contains the following fields: Type, the media type, String, valid value: image. URL, the download URL of the media, String. MediaId, the media asset ID, String.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The task function parameters. A JSON string. No configuration is required at this time.</para>
+        /// <para>The task feature parameters. The value is a JSON string. You do not need to set this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobParameters { get; set; }
 
         /// <summary>
-        /// <para>The type of the generation task. Valid values:</para>
+        /// <para>The type of the generation task. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>text_to_image: text-to-image.</description></item>
-        /// <item><description>image_to_image: image-to-image.</description></item>
+        /// <item><description>text_to_image: text-to-image generation.</description></item>
+        /// <item><description>image_to_image: image-to-image generation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,11 +71,12 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The model name. Currently supported models:</para>
+        /// <para>The model name. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>wan2.7-image</description></item>
-        /// <item><description>qwen-image-2.0</description></item>
+        /// <item><description>qwen-image-3.0</description></item>
         /// <item><description>qwen-image-2.0-pro</description></item>
+        /// <item><description>qwen-image-2.0</description></item>
+        /// <item><description>wan2.7-image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +107,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Resolution { get; set; }
 
         /// <summary>
-        /// <para>The scene. This is an enumeration type. Currently only <c>general</c> is supported.</para>
+        /// <para>The scenario. This is an enumeration type. Currently, only <c>general</c> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>general</para>

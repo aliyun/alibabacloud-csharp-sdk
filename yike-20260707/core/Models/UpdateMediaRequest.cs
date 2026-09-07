@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public bool? AppendTags { get; set; }
 
+        [NameInMap("BizConfig")]
+        [Validation(Required=false)]
+        public string BizConfig { get; set; }
+
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
@@ -71,10 +75,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string MediaId { get; set; }
 
         /// <summary>
-        /// <para>The tags. Separate multiple tags with commas.</para>
+        /// <para>The tags. Separate multiple tags with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CapCut animation.</para>
+        /// <para>剪映动画</para>
         /// </summary>
         [NameInMap("MediaTags")]
         [Validation(Required=false)]
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user data. The maximum length is 1024 bytes.</para>
+        /// <para>The user data. Maximum length: 1024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

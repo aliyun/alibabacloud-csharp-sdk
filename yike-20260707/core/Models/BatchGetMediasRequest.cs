@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public long? AuthTimeout { get; set; }
 
+        [NameInMap("BizConfig")]
+        [Validation(Required=false)]
+        public string BizConfig { get; set; }
+
         /// <summary>
         /// <para>The IDs of the media assets to query, separated by commas.</para>
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("MediaIds")]
         [Validation(Required=false)]
         public string MediaIds { get; set; }
+
+        [NameInMap("ReturnDynamicMeta")]
+        [Validation(Required=false)]
+        public bool? ReturnDynamicMeta { get; set; }
 
     }
 

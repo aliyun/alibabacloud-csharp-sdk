@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class GetVideoTranslationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID returned by <c>SubmitVideoTranslationJob</c>.</para>
+        /// <para>The video translation job ID returned by SubmitVideoTranslationJob.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// <para>vtj_0123456789abcdef0123456789abcdef</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

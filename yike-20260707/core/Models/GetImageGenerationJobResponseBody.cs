@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string AspectRatio { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is of the String type and is returned when the task is in the Failed state.</para>
+            /// <para>The error message. This parameter is returned only when the task is in the Failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input file not found.</para>

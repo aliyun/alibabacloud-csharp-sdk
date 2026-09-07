@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class DeleteMediasRequest : TeaModel {
+        [NameInMap("BizConfig")]
+        [Validation(Required=false)]
+        public string BizConfig { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to delete the physical files at the same time.</para>
         /// 
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURLs { get; set; }
 
         /// <summary>
-        /// <para>The media asset IDs, separated by commas. Invalid IDs are added to the IgnoredList.</para>
+        /// <para>The media asset IDs, separated by commas. Invalid IDs are added to IgnoredList.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b><b>b48fb04483915d4f2cd8</b></b></b>,<b><b><b>c48fb37407365d4f2cd8</b></b></b></para>

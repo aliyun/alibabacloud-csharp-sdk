@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobResponseBody : TeaModel {
         /// <summary>
-        /// <para><c>data.JobId</c></para>
+        /// <para>The video translation job ID, used to call GetVideoTranslationJob to query the job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vtj_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
+        /// <para>vtj_0123456789abcdef0123456789abcdef</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para><c>requestId</c></para>
+        /// <para>The request ID, used for Tracing Analysis and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>request-id</para>
+        /// <para>req-vt-20260820-001</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string Channels { get; set; }
 
                     /// <summary>
-                    /// <para>The long name of the codec.</para>
+                    /// <para>The long name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
-                    /// <para>The short name of the codec.</para>
+                    /// <para>The short name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>H264</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public List<BatchGetMediasResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList> SubtitleStreamInfoList { get; set; }
                 public class BatchGetMediasResponseBodyMediaInfosFileInfoListSubtitleStreamInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The long name of the codec.</para>
+                    /// <para>The long name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
-                    /// <para>The short name of the codec.</para>
+                    /// <para>The short name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>H264</para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string Bitrate { get; set; }
 
                     /// <summary>
-                    /// <para>The long name of the codec.</para>
+                    /// <para>The long name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xx</para>
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string CodecLongName { get; set; }
 
                     /// <summary>
-                    /// <para>The short name of the codec.</para>
+                    /// <para>The short name of the codec format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>H264</para>

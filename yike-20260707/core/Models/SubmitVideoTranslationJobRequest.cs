@@ -10,44 +10,38 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SubmitVideoTranslationJobRequest : TeaModel {
         /// <summary>
-        /// <para>The user-level idempotency key.</para>
+        /// <para>The user-level idempotency token, up to 40 characters. If the same user submits a request with the same token, the original job is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><b><b>3e761e9d11edba640c42a1b7</b></b></para>
+        /// <para>vt-client-20260820-001</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The job description.</para>
+        /// <para>The job description, used to record business purposes or processing requirements.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>description</para>
+        /// <para>Translate a Chinese product introduction video into English</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The input configuration JSON string:</para>
-        /// <list type="bullet">
-        /// <item><description>Video</description></item>
-        /// <item><description>Audio</description></item>
-        /// <item><description>Subtitle</description></item>
-        /// </list>
-        /// <para><notice>Currently, only OSS addresses under the calling account are supported as input.</notice></para>
+        /// <para>The input configuration JSON string. You must specify either Video or VideoMediaId, but not both. You can specify at most one of Audio or AudioMediaId. Subtitle is optional.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Video&quot;:&quot;oss://bucket/path/input.mp4&quot;}</para>
+        /// <para>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The job parameters JSON string.</para>
+        /// <para>The job parameters JSON string. It must contain at least SourceLanguage and TargetLanguage. You can also configure main subtitle erasure, voice translation, on-screen text translation, and final editing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,11 +52,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobParameters { get; set; }
 
         /// <summary>
-        /// <para>The job type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SubtitleTranslate</description></item>
-        /// <item><description>VoiceTranslate</description></item>
-        /// </list>
+        /// <para>The job type. SubtitleTranslate indicates subtitle translation. VoiceTranslate indicates voice translation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,30 +63,30 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The output configuration JSON string. The OssUri value must be a folder.</para>
+        /// <para>The output configuration JSON string. OssUri is an optional customer OSS output directory. If not specified, a signed URL of the service-owned artifact is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;OssUri&quot;:&quot;oss://bucket/output/&quot;}</para>
+        /// <para>{&quot;OssUri&quot;:&quot;oss://example-bucket/video-translation/output/&quot;}</para>
         /// </summary>
         [NameInMap("Output")]
         [Validation(Required=false)]
         public string Output { get; set; }
 
         /// <summary>
-        /// <para>If not specified, the service generates a default title.</para>
+        /// <para>The job title. If not specified, the service generates a default title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>title</para>
+        /// <para>Product introduction video English translation</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The custom user data JSON string.</para>
+        /// <para>The custom user data JSON string. It can contain the asynchronous notification address NotifyAddress.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;NotifyAddress&quot;:&quot;mns://account.mns.cn-shanghai.aliyuncs.com/queues/video-translation-result&quot;}</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ImportMediaRequest : TeaModel {
+        [NameInMap("BizConfig")]
+        [Validation(Required=false)]
+        public string BizConfig { get; set; }
+
         [NameInMap("CategoryId")]
         [Validation(Required=false)]
         public long? CategoryId { get; set; }
@@ -74,10 +78,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string InputURL { get; set; }
 
         /// <summary>
-        /// <para>The tags of the media asset. Separate multiple tags with commas.</para>
+        /// <para>The tags of the media asset. Separate multiple tags with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AdvancedImageToVideo,AIGenerated.</para>
+        /// <para>AdvancedImageToVideo,AIGenerated</para>
         /// </summary>
         [NameInMap("MediaTags")]
         [Validation(Required=false)]
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The user data. The maximum size is 1024 bytes.</para>
+        /// <para>The user data. Maximum length: 1024 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -132,6 +136,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
+
+        [NameInMap("YikeAssetConfig")]
+        [Validation(Required=false)]
+        public string YikeAssetConfig { get; set; }
 
     }
 

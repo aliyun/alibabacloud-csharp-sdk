@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class UpdateMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ICE media asset ID.</para>
+        /// <para>The Intelligent Cloud Editing (ICE) media asset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>20b48fb04483915d4f2cd8ac</b></b></para>

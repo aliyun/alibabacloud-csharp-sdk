@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class DeleteMediasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs or input URLs that are forbidden to delete.</para>
+        /// <para>The IDs or input URLs that are forbidden from being deleted.</para>
         /// </summary>
         [NameInMap("ForbiddenList")]
         [Validation(Required=false)]
         public List<string> ForbiddenList { get; set; }
 
         /// <summary>
-        /// <para>The ignored IDs or input URLs (invalid or items with retrieval errors).</para>
+        /// <para>The ignored IDs or input URLs, which are invalid or have retrieval errors.</para>
         /// </summary>
         [NameInMap("IgnoredList")]
         [Validation(Required=false)]

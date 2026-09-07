@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <para>The task input.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with the appearance from image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
+            /// <para>{&quot;Prompt&quot;:&quot;Person in image 1 is on a basketball court, dunking with image 2&quot;,&quot;Medias&quot;:[{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;<a href="https://xxx/xxx.jpg%22%7D,%7B%22Type%22:%22image%22,%22Url%22:%22https://xxx/xxx.jpg%22%7D%5D%7D">https://xxx/xxx.jpg&quot;},{&quot;Type&quot;:&quot;image&quot;,&quot;Url&quot;:&quot;https://xxx/xxx.jpg&quot;}]}</a></para>
             /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public int? N { get; set; }
 
             /// <summary>
-            /// <para>The generation result. The value is a JSON string that contains the following fields:</para>
-            /// <para>Medias: a list of media information (Media objects). The Media object contains the following fields:
+            /// <para>The generation result in JsonString format, which contains:</para>
+            /// <para>Medias: a list of media information (Media objects). Fields of a Media object:
             /// MediaId: String. The media asset ID.
             /// OutputUrl: String. The media URL (with authentication string).</para>
             /// 
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>The scene type. Currently, only general is supported.</para>
+            /// <para>The scene type. Currently only general is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>general</para>

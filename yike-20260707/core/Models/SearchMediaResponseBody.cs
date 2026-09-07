@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class SearchMediaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                     public string ModifiedTime { get; set; }
 
                     /// <summary>
-                    /// <para>The storage region of the file.</para>
+                    /// <para>The file storage region.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-shanghai</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string CoverURL { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was created.</para>
+                /// <para>The creation time of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-01T19:48Z</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 public string MediaType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the media asset was last modified.</para>
+                /// <para>The modification time of the media asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-01T20:48Z</para>

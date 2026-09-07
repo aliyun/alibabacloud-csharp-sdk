@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Yike20260707
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "yike.cn-shanghai.aliyuncs.com"},
-                {"ap-southeast-1", "yike.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -70,9 +65,17 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["AuthTimeout"] = request.AuthTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
             {
                 query["MediaIds"] = request.MediaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnDynamicMeta))
+            {
+                query["ReturnDynamicMeta"] = request.ReturnDynamicMeta;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -121,9 +124,17 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["AuthTimeout"] = request.AuthTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaIds))
             {
                 query["MediaIds"] = request.MediaIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReturnDynamicMeta))
+            {
+                query["ReturnDynamicMeta"] = request.ReturnDynamicMeta;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -809,6 +820,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletePhysicalFiles))
             {
                 query["DeletePhysicalFiles"] = request.DeletePhysicalFiles;
@@ -859,6 +874,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletePhysicalFiles))
             {
                 query["DeletePhysicalFiles"] = request.DeletePhysicalFiles;
@@ -1521,7 +1540,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description.</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query a media content analysis job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1541,6 +1561,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
             {
                 query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
@@ -1576,7 +1600,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description.</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query a media content analysis job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1596,6 +1621,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
             {
                 query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputURL))
             {
@@ -1631,7 +1660,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description.</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query a media content analysis job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1654,7 +1684,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description.</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query a media content analysis job.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2184,20 +2215,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
+        /// <para>Queries the status, input parameters, and multilingual outputs of a video translation job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
-        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
-        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
-        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
-        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
-        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
-        /// </list>
+        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2239,20 +2262,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
+        /// <para>Queries the status, input parameters, and multilingual outputs of a video translation job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
-        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
-        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
-        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
-        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
-        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
-        /// </list>
+        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2294,20 +2309,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
+        /// <para>Queries the status, input parameters, and multilingual outputs of a video translation job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
-        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
-        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
-        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
-        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
-        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
-        /// </list>
+        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2325,20 +2332,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status and result of a video translation task by the specified ID.</para>
+        /// <para>Queries the status, input parameters, and multilingual outputs of a video translation job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API retrieves the status and details of a video translation task based on the <c>JobId</c>.</description></item>
-        /// <item><description><c>JobId</c> is a required parameter, passed through query or form.</description></item>
-        /// <item><description>If the task does not exist or does not belong to the current caller, the <c>InvalidParameter</c> error code with HTTP status code 400 is returned.</description></item>
-        /// <item><description>On a successful response, the HTTP status code is 200, and the task object is located in <c>data.Job</c>.</description></item>
-        /// <item><description>When the task is completed (<c>Status=Finished</c>), the output artifacts can be found in the <c>data.Job.Output</c> field. The client needs to perform a JSON parse to obtain the specific results.</description></item>
-        /// <item><description>For tasks with multiple target languages, use <c>Output.AiResult.ResultMap</c> directly to obtain the specific results for each language. If there is only one target language, you can conveniently obtain the editing project ID through <c>data.Job.EditingProjectId</c>.</description></item>
-        /// </list>
+        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2585,8 +2584,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content analysis jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2603,6 +2602,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
@@ -2654,6 +2657,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeAssetConfig))
+            {
+                query["YikeAssetConfig"] = request.YikeAssetConfig;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2681,8 +2688,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content analysis jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2699,6 +2706,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
@@ -2751,6 +2762,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             {
                 query["UserData"] = request.UserData;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeAssetConfig))
+            {
+                query["YikeAssetConfig"] = request.YikeAssetConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2777,8 +2792,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content analysis jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2801,8 +2816,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query media content analysis jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2820,7 +2835,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of categories.</para>
+        /// <para>Retrieves a paged list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2866,7 +2881,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of categories.</para>
+        /// <para>Retrieves a paged list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2912,7 +2927,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of categories.</para>
+        /// <para>Retrieves a paged list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2930,7 +2945,7 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of categories.</para>
+        /// <para>Retrieves a paged list of categories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3157,6 +3172,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
@@ -3219,6 +3238,10 @@ namespace AlibabaCloud.SDK.Yike20260707
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
                 query["CategoryId"] = request.CategoryId;
@@ -4160,21 +4183,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
-        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
-        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
-        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
-        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
-        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
-        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
-        /// </list>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4244,21 +4258,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
-        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
-        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
-        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
-        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
-        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
-        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
-        /// </list>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4328,21 +4333,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
-        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
-        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
-        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
-        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
-        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
-        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
-        /// </list>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4360,21 +4356,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a video translation task that supports subtitle translation, voice translation, and on-screen text translation.</para>
+        /// <para>Submits an asynchronous video translation task that supports subtitle translation, voice translation, main subtitle erasure, and on-screen text translation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description>This API supports multiple video translation features, including subtitle translation and voice translation.</description></item>
-        /// <item><description>The <c>JobType</c> parameter defines the task type, such as <c>SubtitleTranslate</c> and <c>VoiceTranslate</c>.</description></item>
-        /// <item><description>The <c>Input</c> and <c>Output</c> parameters specify the input resource and output path, respectively.</description></item>
-        /// <item><description><c>JobParameters</c> contains language configuration and other feature switches, such as <c>SourceLanguage</c>, <c>TargetLanguage</c>, <c>NeedDetext</c>, and <c>NeedVisualTranslate</c>.</description></item>
-        /// <item><description><c>EditingConfig</c> can be used to specify the style configuration for the final editing and compositing.</description></item>
-        /// <item><description><c>ClientToken</c> is an optional parameter used to ensure the idempotence of the request.</description></item>
-        /// <item><description>Ensure that all required fields are correctly filled in. Otherwise, the request may fail.</description></item>
-        /// </list>
+        /// <para>Submits an asynchronous video translation task. The input supports a media URL or an Intelligent Media Management (IMM) media asset ID. Task parameters specify the source language, target language, and translation capabilities to enable.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4397,7 +4384,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
+        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4448,7 +4435,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
+        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4499,7 +4486,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
+        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4522,7 +4509,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a media asset category, you can call this operation to locate and update the name of the media asset category by category ID.</para>
+        /// <para>After creating a media asset category, you can call this operation to locate and update the name of the category by category ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4705,8 +4692,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4726,6 +4713,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendTags))
             {
                 query["AppendTags"] = request.AppendTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
@@ -4789,8 +4780,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4810,6 +4801,10 @@ namespace AlibabaCloud.SDK.Yike20260707
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppendTags))
             {
                 query["AppendTags"] = request.AppendTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizConfig))
+            {
+                query["BizConfig"] = request.BizConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryId))
             {
@@ -4873,8 +4868,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4897,8 +4892,8 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <para>This API is used to query media content understanding jobs.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation is used to query media content understanding jobs.</para>
         /// </description>
         /// 
         /// <param name="request">
