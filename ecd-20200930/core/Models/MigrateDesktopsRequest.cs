@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The member IP address of the target node for migration.</para>
+        /// <para>The member IP address of the destination node for migration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.10</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TargetMemberIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target office network.</para>
+        /// <para>The ID of the destination office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not yet available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyUserEntitlementRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers to which you want to add end users.</para>
+        /// <para>The list of cloud computer IDs for which to add authorized users.</para>
         /// </summary>
         [NameInMap("AuthorizeDesktopId")]
         [Validation(Required=false)]
         public List<string> AuthorizeDesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the users.</para>
+        /// <para>The list of user IDs (usernames).</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers whose end users you want to remove.</para>
+        /// <para>The list of cloud computer IDs for which to remove authorized users.</para>
         /// </summary>
         [NameInMap("RevokeDesktopId")]
         [Validation(Required=false)]

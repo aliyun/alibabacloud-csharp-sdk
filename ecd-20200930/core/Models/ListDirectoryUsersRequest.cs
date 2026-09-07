@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The fuzzy match query string. All results that contain this character string are returned.</para>
+        /// <para>The fuzzy search string. All results that contain this string are matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeAssignedUser { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.    </para>
+        /// <para>The number of entries per page for a paginated query.    </para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100.    </description></item>
         /// <item><description>Default value: 10.</description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The token for the next query. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

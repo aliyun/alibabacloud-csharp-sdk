@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud desktops. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</para>
+        /// <para>The collection of cloud computer IDs. If multiple cloud computers are created in a single call, multiple cloud computer IDs are returned.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]

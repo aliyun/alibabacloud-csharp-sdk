@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopScenario { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the snapshot was created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter or Chinese character. The name cannot start with <c>auto</c> to avoid conflicts with automatic snapshot names.</para>
+        /// <para>The display name of the snapshot. The name must be 2 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. The name cannot start with <c>auto</c> to avoid conflicts with automatic snapshot names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test data disk</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud disk for which to create the snapshot.</para>
+        /// <para>The type of the cloud disk from which the snapshot is created.</para>
         /// <remarks>
         /// <para>The value is case-insensitive.</para>
         /// </remarks>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SourceDiskType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the snapshot was created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range during which the snapshots were created. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

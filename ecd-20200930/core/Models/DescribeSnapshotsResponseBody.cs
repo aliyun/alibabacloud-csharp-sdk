@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The snapshot creation progress. Unit: percent.</para>
+            /// <para>The snapshot creation progress, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The restore point name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据盘备份</para>
+            /// <para>DataDiskBackup</para>
             /// </summary>
             [NameInMap("RestorePointName")]
             [Validation(Required=false)]

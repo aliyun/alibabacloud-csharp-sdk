@@ -9151,16 +9151,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
+        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud desktops, complete the following preparations:</para>
+        /// <para>Before creating cloud computers, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -9244,7 +9244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9468,16 +9468,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
+        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud desktops, complete the following preparations:</para>
+        /// <para>Before creating cloud computers, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -9561,7 +9561,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9785,16 +9785,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
+        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud desktops, complete the following preparations:</para>
+        /// <para>Before creating cloud computers, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -9878,7 +9878,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -9896,16 +9896,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
+        /// <para>Creates one or more cloud computers. If user information is provided during creation, the cloud computers are assigned directly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating cloud desktops, complete the following preparations:</para>
+        /// <para>Before creating cloud computers, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
-        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
@@ -9989,7 +9989,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -11407,12 +11407,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Global Accelerator (GA) service for an office network.</para>
+        /// <para>Enables Global Accelerator (GA) for an office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11470,12 +11470,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Global Accelerator (GA) service for an office network.</para>
+        /// <para>Enables Global Accelerator (GA) for an office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11533,12 +11533,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Global Accelerator (GA) service for an office network.</para>
+        /// <para>Enables Global Accelerator (GA) for an office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11556,12 +11556,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Global Accelerator (GA) service for an office network.</para>
+        /// <para>Enables Global Accelerator (GA) for an office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, ensure you fully understand the billing methods and <a href="t2208086.xdita#">pricing</a> of the GA service.</para>
+        /// <para>Before calling this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425831.html">pricing</a> of Global Accelerator (GA).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24099,7 +24099,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
+        /// <para>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24165,7 +24165,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
+        /// <para>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24231,7 +24231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
+        /// <para>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24249,7 +24249,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
+        /// <para>Queries the inbound and outbound bandwidth monitoring data of a cloud computer, or the public inbound and outbound bandwidth monitoring data of a premium public bandwidth instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27531,7 +27531,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27605,7 +27605,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27679,7 +27679,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27697,7 +27697,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
+        /// <para>Queries all attributes of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27875,6 +27875,450 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeOnlineUserCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</para>
+        /// <h2>Request examples</h2>
+        /// <para>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</para>
+        /// <h3>Query official printer drivers</h3>
+        /// <para>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+        ///   &quot;Brand&quot;: &quot;hp&quot;,
+        ///   &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///   &quot;Filter&quot;: &quot;LaserJet&quot;,
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h3>Query drivers by driver ID in batches</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;DriverIds&quot;: [
+        ///     &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///     &quot;66666666-7777-4888-8999-000000000000&quot;
+        ///   ],
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <para>When you construct request parameters directly, expand DriverIds by sequence number:</para>
+        /// <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+        /// DriverIds.2=66666666-7777-4888-8999-000000000000
+        /// </c></pre>
+        /// <para>When you use an SDK, pass in a string array and the SDK handles the encoding.</para>
+        /// <h2>Response examples</h2>
+        /// <para>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</para>
+        /// <h3>Successful query</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 1,
+        ///   &quot;DriverInfos&quot;: [
+        ///     {
+        ///       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+        ///       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+        ///       &quot;Brand&quot;: &quot;hp&quot;,
+        ///       &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///       &quot;OsType&quot;: &quot;Windows&quot;,
+        ///       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+        ///       &quot;Source&quot;: &quot;Wuying&quot;,
+        ///       &quot;OwnerType&quot;: &quot;WUYING&quot;
+        ///     }
+        ///   ]
+        /// }
+        /// </c></pre>
+        /// <h3>No matching results</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 0,
+        ///   &quot;DriverInfos&quot;: []
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePeripheralDriversRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeripheralDriversResponse
+        /// </returns>
+        public DescribePeripheralDriversResponse DescribePeripheralDriversWithOptions(DescribePeripheralDriversRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Brand))
+            {
+                query["Brand"] = request.Brand;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                query["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriverIds))
+            {
+                query["DriverIds"] = request.DriverIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerType))
+            {
+                query["OwnerType"] = request.OwnerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePeripheralDrivers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePeripheralDriversResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</para>
+        /// <h2>Request examples</h2>
+        /// <para>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</para>
+        /// <h3>Query official printer drivers</h3>
+        /// <para>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+        ///   &quot;Brand&quot;: &quot;hp&quot;,
+        ///   &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///   &quot;Filter&quot;: &quot;LaserJet&quot;,
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h3>Query drivers by driver ID in batches</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;DriverIds&quot;: [
+        ///     &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///     &quot;66666666-7777-4888-8999-000000000000&quot;
+        ///   ],
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <para>When you construct request parameters directly, expand DriverIds by sequence number:</para>
+        /// <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+        /// DriverIds.2=66666666-7777-4888-8999-000000000000
+        /// </c></pre>
+        /// <para>When you use an SDK, pass in a string array and the SDK handles the encoding.</para>
+        /// <h2>Response examples</h2>
+        /// <para>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</para>
+        /// <h3>Successful query</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 1,
+        ///   &quot;DriverInfos&quot;: [
+        ///     {
+        ///       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+        ///       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+        ///       &quot;Brand&quot;: &quot;hp&quot;,
+        ///       &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///       &quot;OsType&quot;: &quot;Windows&quot;,
+        ///       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+        ///       &quot;Source&quot;: &quot;Wuying&quot;,
+        ///       &quot;OwnerType&quot;: &quot;WUYING&quot;
+        ///     }
+        ///   ]
+        /// }
+        /// </c></pre>
+        /// <h3>No matching results</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 0,
+        ///   &quot;DriverInfos&quot;: []
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePeripheralDriversRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeripheralDriversResponse
+        /// </returns>
+        public async Task<DescribePeripheralDriversResponse> DescribePeripheralDriversWithOptionsAsync(DescribePeripheralDriversRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Brand))
+            {
+                query["Brand"] = request.Brand;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceType))
+            {
+                query["DeviceType"] = request.DeviceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriverIds))
+            {
+                query["DriverIds"] = request.DriverIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerType))
+            {
+                query["OwnerType"] = request.OwnerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePeripheralDrivers",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePeripheralDriversResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</para>
+        /// <h2>Request examples</h2>
+        /// <para>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</para>
+        /// <h3>Query official printer drivers</h3>
+        /// <para>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+        ///   &quot;Brand&quot;: &quot;hp&quot;,
+        ///   &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///   &quot;Filter&quot;: &quot;LaserJet&quot;,
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h3>Query drivers by driver ID in batches</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;DriverIds&quot;: [
+        ///     &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///     &quot;66666666-7777-4888-8999-000000000000&quot;
+        ///   ],
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <para>When you construct request parameters directly, expand DriverIds by sequence number:</para>
+        /// <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+        /// DriverIds.2=66666666-7777-4888-8999-000000000000
+        /// </c></pre>
+        /// <para>When you use an SDK, pass in a string array and the SDK handles the encoding.</para>
+        /// <h2>Response examples</h2>
+        /// <para>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</para>
+        /// <h3>Successful query</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 1,
+        ///   &quot;DriverInfos&quot;: [
+        ///     {
+        ///       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+        ///       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+        ///       &quot;Brand&quot;: &quot;hp&quot;,
+        ///       &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///       &quot;OsType&quot;: &quot;Windows&quot;,
+        ///       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+        ///       &quot;Source&quot;: &quot;Wuying&quot;,
+        ///       &quot;OwnerType&quot;: &quot;WUYING&quot;
+        ///     }
+        ///   ]
+        /// }
+        /// </c></pre>
+        /// <h3>No matching results</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 0,
+        ///   &quot;DriverInfos&quot;: []
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePeripheralDriversRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeripheralDriversResponse
+        /// </returns>
+        public DescribePeripheralDriversResponse DescribePeripheralDrivers(DescribePeripheralDriversRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePeripheralDriversWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</para>
+        /// <h2>Request examples</h2>
+        /// <para>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</para>
+        /// <h3>Query official printer drivers</h3>
+        /// <para>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</para>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;OwnerType&quot;: &quot;WUYING&quot;,
+        ///   &quot;Brand&quot;: &quot;hp&quot;,
+        ///   &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///   &quot;Filter&quot;: &quot;LaserJet&quot;,
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <h3>Query drivers by driver ID in batches</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
+        ///   &quot;Version&quot;: &quot;2020-09-30&quot;,
+        ///   &quot;DriverIds&quot;: [
+        ///     &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///     &quot;66666666-7777-4888-8999-000000000000&quot;
+        ///   ],
+        ///   &quot;PageSize&quot;: 20,
+        ///   &quot;PageNumber&quot;: 1
+        /// }
+        /// </c></pre>
+        /// <para>When you construct request parameters directly, expand DriverIds by sequence number:</para>
+        /// <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
+        /// DriverIds.2=66666666-7777-4888-8999-000000000000
+        /// </c></pre>
+        /// <para>When you use an SDK, pass in a string array and the SDK handles the encoding.</para>
+        /// <h2>Response examples</h2>
+        /// <para>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</para>
+        /// <h3>Successful query</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 1,
+        ///   &quot;DriverInfos&quot;: [
+        ///     {
+        ///       &quot;Id&quot;: &quot;11111111-2222-4333-8444-555555555555&quot;,
+        ///       &quot;Icon&quot;: &quot;https://example.com/icons/printer.png&quot;,
+        ///       &quot;Name&quot;: &quot;HP Universal Printing PCL 6&quot;,
+        ///       &quot;Brand&quot;: &quot;hp&quot;,
+        ///       &quot;DeviceType&quot;: &quot;printer&quot;,
+        ///       &quot;OsType&quot;: &quot;Windows&quot;,
+        ///       &quot;CreateTime&quot;: &quot;2026-09-01T10:30:00+08:00&quot;,
+        ///       &quot;Source&quot;: &quot;Wuying&quot;,
+        ///       &quot;OwnerType&quot;: &quot;WUYING&quot;
+        ///     }
+        ///   ]
+        /// }
+        /// </c></pre>
+        /// <h3>No matching results</h3>
+        /// <pre><code class="language-json">{
+        ///   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
+        ///   &quot;Count&quot;: 0,
+        ///   &quot;DriverInfos&quot;: []
+        /// }
+        /// </c></pre>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePeripheralDriversRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePeripheralDriversResponse
+        /// </returns>
+        public async Task<DescribePeripheralDriversResponse> DescribePeripheralDriversAsync(DescribePeripheralDriversRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePeripheralDriversWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30763,7 +31207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
+        /// <para>Queries the snapshot list and detailed snapshot information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30857,7 +31301,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
+        /// <para>Queries the snapshot list and detailed snapshot information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30951,7 +31395,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
+        /// <para>Queries the snapshot list and detailed snapshot information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30969,7 +31413,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
+        /// <para>Queries the snapshot list and detailed snapshot information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32619,6 +33063,466 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeVirtualMFADevicesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
+        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulDesktopsResponse
+        /// </returns>
+        public DescribeVulDesktopsResponse DescribeVulDesktopsWithOptions(DescribeVulDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdList))
+            {
+                query["DesktopIdList"] = request.DesktopIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
+            {
+                query["IncludeFixResult"] = request.IncludeFixResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyCurrentMonthFixAttempted))
+            {
+                query["OnlyCurrentMonthFixAttempted"] = request.OnlyCurrentMonthFixAttempted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulLevel))
+            {
+                query["VulLevel"] = request.VulLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulDesktopsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
+        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulDesktopsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulDesktopsResponse
+        /// </returns>
+        public async Task<DescribeVulDesktopsResponse> DescribeVulDesktopsWithOptionsAsync(DescribeVulDesktopsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdList))
+            {
+                query["DesktopIdList"] = request.DesktopIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeFixResult))
+            {
+                query["IncludeFixResult"] = request.IncludeFixResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnlyCurrentMonthFixAttempted))
+            {
+                query["OnlyCurrentMonthFixAttempted"] = request.OnlyCurrentMonthFixAttempted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VulLevel))
+            {
+                query["VulLevel"] = request.VulLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulDesktops",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulDesktopsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
+        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulDesktopsResponse
+        /// </returns>
+        public DescribeVulDesktopsResponse DescribeVulDesktops(DescribeVulDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVulDesktopsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves cloud computer information for a vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</description></item>
+        /// <item><description>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulDesktopsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulDesktopsResponse
+        /// </returns>
+        public async Task<DescribeVulDesktopsResponse> DescribeVulDesktopsAsync(DescribeVulDesktopsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVulDesktopsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves vulnerability information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityResponse
+        /// </returns>
+        public DescribeVulnerabilityResponse DescribeVulnerabilityWithOptions(DescribeVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDesktop))
+            {
+                query["IncludeDesktop"] = request.IncludeDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulnerability",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulnerabilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves vulnerability information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityResponse
+        /// </returns>
+        public async Task<DescribeVulnerabilityResponse> DescribeVulnerabilityWithOptionsAsync(DescribeVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CveId))
+            {
+                query["CveId"] = request.CveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeDesktop))
+            {
+                query["IncludeDesktop"] = request.IncludeDesktop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
+            {
+                query["SearchRegionId"] = request.SearchRegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeVulnerability",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeVulnerabilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves vulnerability information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityResponse
+        /// </returns>
+        public DescribeVulnerabilityResponse DescribeVulnerability(DescribeVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeVulnerabilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves vulnerability information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After security protection is enabled, the system automatically scans cloud desktops for system vulnerabilities on a periodic basis (once a day).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeVulnerabilityResponse
+        /// </returns>
+        public async Task<DescribeVulnerabilityResponse> DescribeVulnerabilityAsync(DescribeVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeVulnerabilityWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35679,7 +36583,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35753,7 +36657,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35827,7 +36731,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35845,7 +36749,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) if you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37411,7 +38315,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37469,7 +38373,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37527,7 +38431,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37545,7 +38449,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47107,12 +48011,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</para>
+        /// <para>Adds or removes the authorization of one or more cloud computers for one or more users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify end users only for cloud computers that are in the Running state.</para>
+        /// <para>Only cloud computers in the Running state support modifying authorized users.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47166,12 +48070,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</para>
+        /// <para>Adds or removes the authorization of one or more cloud computers for one or more users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify end users only for cloud computers that are in the Running state.</para>
+        /// <para>Only cloud computers in the Running state support modifying authorized users.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47225,12 +48129,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</para>
+        /// <para>Adds or removes the authorization of one or more cloud computers for one or more users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify end users only for cloud computers that are in the Running state.</para>
+        /// <para>Only cloud computers in the Running state support modifying authorized users.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47248,12 +48152,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions on cloud desktops to end users, or revokes the permissions from the end users.</para>
+        /// <para>Adds or removes the authorization of one or more cloud computers for one or more users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify end users only for cloud computers that are in the Running state.</para>
+        /// <para>Only cloud computers in the Running state support modifying authorized users.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47943,6 +48847,310 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryActiveUserStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryActiveUserStatisticResponse
+        /// </returns>
+        public QueryActiveUserStatisticResponse QueryActiveUserStatisticWithOptions(QueryActiveUserStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryActiveUserStatistic",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryActiveUserStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryActiveUserStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryActiveUserStatisticResponse
+        /// </returns>
+        public async Task<QueryActiveUserStatisticResponse> QueryActiveUserStatisticWithOptionsAsync(QueryActiveUserStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryActiveUserStatistic",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryActiveUserStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryActiveUserStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryActiveUserStatisticResponse
+        /// </returns>
+        public QueryActiveUserStatisticResponse QueryActiveUserStatistic(QueryActiveUserStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryActiveUserStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryActiveUserStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryActiveUserStatisticResponse
+        /// </returns>
+        public async Task<QueryActiveUserStatisticResponse> QueryActiveUserStatisticAsync(QueryActiveUserStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryActiveUserStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEndUserHistoryUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEndUserHistoryUsageResponse
+        /// </returns>
+        public QueryEndUserHistoryUsageResponse QueryEndUserHistoryUsageWithOptions(QueryEndUserHistoryUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdUser))
+            {
+                query["IsAdUser"] = request.IsAdUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEndUserHistoryUsage",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEndUserHistoryUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEndUserHistoryUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEndUserHistoryUsageResponse
+        /// </returns>
+        public async Task<QueryEndUserHistoryUsageResponse> QueryEndUserHistoryUsageWithOptionsAsync(QueryEndUserHistoryUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAdUser))
+            {
+                query["IsAdUser"] = request.IsAdUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEndUserHistoryUsage",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEndUserHistoryUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEndUserHistoryUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEndUserHistoryUsageResponse
+        /// </returns>
+        public QueryEndUserHistoryUsageResponse QueryEndUserHistoryUsage(QueryEndUserHistoryUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryEndUserHistoryUsageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryEndUserHistoryUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEndUserHistoryUsageResponse
+        /// </returns>
+        public async Task<QueryEndUserHistoryUsageResponse> QueryEndUserHistoryUsageAsync(QueryEndUserHistoryUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryEndUserHistoryUsageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the historical daily active user count and monthly active user count for a specified date.</para>
         /// </summary>
         /// 
@@ -48099,6 +49307,166 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryHistoryActiveUserCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserStatisticResponse
+        /// </returns>
+        public QueryHistoryActiveUserStatisticResponse QueryHistoryActiveUserStatisticWithOptions(QueryHistoryActiveUserStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryActiveUserStatistic",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryActiveUserStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserStatisticResponse
+        /// </returns>
+        public async Task<QueryHistoryActiveUserStatisticResponse> QueryHistoryActiveUserStatisticWithOptionsAsync(QueryHistoryActiveUserStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
+            {
+                query["OfficeSiteId"] = request.OfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                query["UserGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryActiveUserStatistic",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryActiveUserStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserStatisticResponse
+        /// </returns>
+        public QueryHistoryActiveUserStatisticResponse QueryHistoryActiveUserStatistic(QueryHistoryActiveUserStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryHistoryActiveUserStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily historical active user count for a tenant within a specified time range. Based on offline statistical data, this operation aggregates and deduplicates active users by date to calculate daily active users (DAU). Filtering by user group and workspace is supported.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserStatisticResponse
+        /// </returns>
+        public async Task<QueryHistoryActiveUserStatisticResponse> QueryHistoryActiveUserStatisticAsync(QueryHistoryActiveUserStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryHistoryActiveUserStatisticWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -48743,12 +50111,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots one or more desktops.</para>
+        /// <para>Restarts one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48806,12 +50174,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots one or more desktops.</para>
+        /// <para>Restarts one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48869,12 +50237,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots one or more desktops.</para>
+        /// <para>Restarts one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -48892,12 +50260,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reboots one or more desktops.</para>
+        /// <para>Restarts one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51299,7 +52667,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51369,7 +52737,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51439,7 +52807,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51457,7 +52825,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52823,12 +54191,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</para>
+        /// <para>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to start must be in the Stopped state.</para>
+        /// <para>The cloud computers must be in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52874,12 +54242,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</para>
+        /// <para>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to start must be in the Stopped state.</para>
+        /// <para>The cloud computers must be in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52925,12 +54293,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</para>
+        /// <para>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to start must be in the Stopped state.</para>
+        /// <para>The cloud computers must be in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52948,12 +54316,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts stopped cloud computers. After the API operation is successfully called, the cloud computers enter the Running state.</para>
+        /// <para>Starts one or more stopped cloud computers. After the operation is called successfully, the cloud computers enter the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers that you want to start must be in the Stopped state.</para>
+        /// <para>The cloud computers must be in the Stopped state.</para>
         /// </description>
         /// 
         /// <param name="request">

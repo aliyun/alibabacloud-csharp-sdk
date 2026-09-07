@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateOfficeSiteAcceleratorRequest : TeaModel {
         /// <summary>
-        /// <para>A list of regions where access points provide acceleration.</para>
+        /// <para>The list of acceleration region information for the access points.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccelerateRegion")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AccelerateRegionId { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth allocated to the acceleration region. Unit: Mbps.</para>
+            /// <para>The bandwidth allocated to the acceleration region. Unit: Mbit/s.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The IP protocol version used to access the GA instance.</para>
+            /// <para>The IP address protocol used to connect to the GA service.</para>
             /// <remarks>
-            /// <para>Only standard pay-as-you-go GA instances support <c>DUAL_STACK</c>.</para>
+            /// <para>The <c>DUAL_STACK</c> type is supported only by standard pay-as-you-go GA instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,13 +53,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The line type.</para>
+            /// <para>The public network line type of the acceleration region.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is required for pay-by-data-transfer GA instances.</para>
-            /// </description></item>
-            /// <item><description><para>The supported line types vary by acceleration region.</para>
-            /// </description></item>
+            /// <item><description>Configure this parameter for GA instances that use the <b>pay-by-data-transfer</b> billing method.</description></item>
+            /// <item><description>The supported public network line types vary by acceleration region.</description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>

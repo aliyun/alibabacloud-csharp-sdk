@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateOfficeSiteAcceleratorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the GA instance.</para>
+        /// <para>The GA instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ga-bp1qxuk10jceqw3zb***p</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The end time. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Unix timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
         /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. The value can be a cloud computer ID or a premium public bandwidth plan ID.</para>
+        /// <para>The instance ID, which can be a cloud computer ID or a premium public bandwidth ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can select the cloud computer type or the premium public bandwidth plan type. If you select the cloud computer type, set InstanceId and MetricType to the cloud computer ID and the traffic type of the cloud computer. The same rule applies to the premium public bandwidth plan type.</para>
+        /// <para>The instance type. You can select the cloud computer type or the premium public bandwidth type. If you select the cloud computer type, set InstanceId and MetricType to the cloud computer ID and the corresponding traffic type of the cloud computer. The same applies to the premium public bandwidth type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The monitoring metric type. This parameter supports the inbound and outbound bandwidth of a cloud computer, and the public inbound and outbound bandwidth of a premium public bandwidth plan.</para>
+        /// <para>The monitoring metric type. Supports inbound and outbound bandwidth of cloud computers, and public inbound and outbound bandwidth of premium public bandwidth instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The start time. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Unix timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
         /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

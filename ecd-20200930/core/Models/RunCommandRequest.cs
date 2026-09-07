@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RunCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The plaintext or Base64-encoded content of the script. The Base64-encoded script content cannot exceed 16 KB.</para>
+        /// <para>The plaintext or Base64-encoded content of the script.<br>The Base64-encoded script content cannot exceed 16 KB.</para>
         /// <remarks>
         /// <para>If the script content is Base64-encoded, set the ContentEncoding parameter to Base64.</para>
         /// </remarks>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The encoding method of the script content.</para>
         /// <remarks>
-        /// <para>If the specified value is not within the valid values, the value is treated as PlainText.</para>
+        /// <para>If the specified value is not within the valid values, the value is treated as <c>PlainText</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>The IDs of cloud computers. Valid values of N: 1 to 50. If you specify multiple cloud computers, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to be executed on all specified cloud computers, reset this parameter.</para>
+        /// <para>The list of cloud computer IDs. Valid values of N: 1 to 50.<br>If multiple cloud computers are specified, the API call succeeds as long as the script is successfully executed on at least one cloud computer. If the script fails to execute on all specified cloud computers, reset this parameter.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The ID of the end user. If this parameter is specified, the command is executed with the permissions of the end user.</para>
         /// <remarks>
-        /// <para>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it is started, and the connection was not preempted by another user). This parameter is not supported for Linux cloud computers.</para>
+        /// <para>The user must have a session record on the cloud computer (the user has logged on and connected to the cloud computer after it was started, and the session was not preempted by another user). This parameter is not supported for Linux cloud computers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for executing the script. Unit: seconds. Default value: 300. A timeout may occur when the script cannot run due to process issues, missing modules, or missing Cloud Assistant Agent. After a timeout, the script process is forcefully terminated.</para>
+        /// <para>The timeout period for executing the script. Unit: seconds. Default value: 300.<br>A timeout may occur when the script cannot run because of process issues, missing modules, or a missing Cloud Assistant client. After a timeout, the script process is forcefully terminated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

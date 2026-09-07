@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebootDesktopsRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to create a snapshot.</para>
+        /// </summary>
         [NameInMap("CreateSnapshot")]
         [Validation(Required=false)]
         public bool? CreateSnapshot { get; set; }
 
         /// <summary>
-        /// <para>An array of 1 to 100 desktop IDs.</para>
+        /// <para>The cloud computer ID. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? OsUpdate { get; set; }
 
         /// <summary>
+        /// <para>The patch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>KB5082063</para>
         /// </summary>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

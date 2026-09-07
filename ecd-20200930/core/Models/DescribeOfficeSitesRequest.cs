@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AccountType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paged query.    </para>
+        /// <para>The number of entries per page for a paginated query.    </para>
         /// <list type="bullet">
         /// <item><description>Maximum value: 100.    </description></item>
         /// <item><description>Default value: 10.</description></item>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Network Security Protection Settings of the office network.</para>
+        /// <para>The security protection configuration of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SASE</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SecurityProtection { get; set; }
 
         /// <summary>
-        /// <para>The status of the office network.</para>
+        /// <para>The office network status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REGISTERED</para>
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the office network of the shared cloud computer resides.</para>
+        /// <para>The VPC ID of the office network for shared cloud computers.</para>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not yet available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
