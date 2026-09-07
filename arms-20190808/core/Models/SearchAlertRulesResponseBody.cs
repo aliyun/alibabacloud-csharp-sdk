@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The template of the alert notification.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Alert name: $Alert name\nFilter condition: $Filter\nAlert time: $Alert time\nAlert content: $Alert content\nNote: The alert persists until a reply email is received. The system will remind you again in 24 hours.</para>
+                    /// <para>报警名称：$报警名称\n筛选条件：$筛选\n报警时间：$报警时间\n报警内容：$报警内容\n注意：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！</para>
                     /// </summary>
                     [NameInMap("AlarmContentTemplate")]
                     [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Alert name: $Alert name\nFilter condition: $Filter\nAlert time: $Alert time\nAlert content: $Alert content\nNote: The alert persists until a reply email is received. The system will remind you again in 24 hours.</para>
+                    /// <para>报警名称：$报警名称\n筛选条件：$筛选\n报警时间：$报警时间\n报警内容：$报警内容\n注意：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// <para>The displayed description of the alert metric.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>response time_ms</para>
+                        /// <para>调用响应时间_ms</para>
                         /// </summary>
                         [NameInMap("Alias")]
                         [Validation(Required=false)]

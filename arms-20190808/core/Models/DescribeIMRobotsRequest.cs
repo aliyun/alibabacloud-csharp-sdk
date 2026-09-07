@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The name of the IM chatbot.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Chatbot name</para>
+        /// <para>robot名称</para>
         /// </summary>
         [NameInMap("RobotName")]
         [Validation(Required=false)]

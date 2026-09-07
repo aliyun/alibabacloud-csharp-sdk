@@ -48,7 +48,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>A description of the reason for removal.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The function is not perfect, and the root cause of the problem cannot be located.</para>
+                /// <para>删除理由描述，ID和Name的对应关系：
+                /// &quot;id&quot;:0,&quot;name&quot;:&quot;功能不完善，无法定位到问题根本原因。&quot;
+                /// &quot;id&quot;:1,&quot;name&quot;:&quot;Agent不稳定，影响应用运行。&quot;
+                /// &quot;id&quot;:2,&quot;name&quot;:&quot;服务不稳定，经常打不开界面。&quot;
+                /// &quot;id&quot;:3,&quot;name&quot;:&quot;报警相关问题。&quot;
+                /// &quot;id&quot;:4,&quot;name&quot;:&quot;价格太贵&quot;
+                /// &quot;id&quot;:5,&quot;name&quot;:&quot;其他原因&quot;</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -60,7 +66,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>Additional remarks when none of the reasons for removal provided are met.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The business scenario cannot be satisfied.</para>
+            /// <para>业务场景覆盖不全</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]

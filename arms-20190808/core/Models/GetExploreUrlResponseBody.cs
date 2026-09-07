@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetExploreUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. 200 means success, other status codes are exceptions.</para>
+        /// <para>The HTTP status code. A value of 200 indicates success. Other values indicate errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Response parameters</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The prompt information of the returned result.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation was successful:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: the operation was successful</description></item>
-        /// <item><description>false: the operation failed</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

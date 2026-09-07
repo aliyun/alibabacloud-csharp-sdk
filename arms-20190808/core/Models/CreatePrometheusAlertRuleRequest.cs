@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The CPU utilization of ${{$labels.pod_name}} has exceeded 80%. Current value: {{$value}}%</para>
+        /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

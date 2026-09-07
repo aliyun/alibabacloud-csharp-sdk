@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Prometheus instance.</para>
+        /// <para>The Prometheus instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

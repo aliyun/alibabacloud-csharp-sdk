@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>应用已存在。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

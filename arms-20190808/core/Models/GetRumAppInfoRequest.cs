@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRumAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The group to which the application belongs.</para>
+        /// <para>The application group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AppGroup { get; set; }
 
         /// <summary>
-        /// <para>The process ID (PID) of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

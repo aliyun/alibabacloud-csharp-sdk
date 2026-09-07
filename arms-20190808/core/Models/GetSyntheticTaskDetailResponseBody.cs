@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The city code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>110100</para>
+                /// <para>11011XX</para>
                 /// </summary>
                 [NameInMap("CityCode")]
                 [Validation(Required=false)]
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The type of the detection point.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>IDC</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("MonitorType")]
                 [Validation(Required=false)]
@@ -467,7 +467,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The ID of the network service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>12001</para>
+                /// <para>12</para>
                 /// </summary>
                 [NameInMap("NetServiceId")]
                 [Validation(Required=false)]
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The number of times that the system sends detection requests.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>20</para>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("SendCount")]
                 [Validation(Required=false)]

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class QueryAppMetadataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned for the request. Valid values:</para>
+        /// <para>The API call status.</para>
         /// <list type="bullet">
-        /// <item><description>2XX: The request is successful.</description></item>
-        /// <item><description>3XX: A redirection message is returned.</description></item>
-        /// <item><description>4XX: The request is invalid.</description></item>
-        /// <item><description>5XX: A server error occurs.</description></item>
+        /// <item><description><para>2xx: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The returned object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;408d5533\&quot;: \&quot;SELECT * FROM user_base_info\&quot;}</para>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51877BAC-330C-5845-BDFD-C7859AD33FB7</para>
@@ -56,10 +60,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the query was successful.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The call was successful.</description></item>
-        /// <item><description><c>false</c>: The call failed.</description></item>
+        /// <item><description><para><c>true</c>: The query was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The query failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The ID of the Grafana workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>grafana-cn-27a3m8eem0a</para>
+            /// <para>grafana-cn-i7m2qn9xa01</para>
             /// </summary>
             [NameInMap("GrafanaWorkspaceId")]
             [Validation(Required=false)]
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>p_dev</para>
+                /// <para>p_运维</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

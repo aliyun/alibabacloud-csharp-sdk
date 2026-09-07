@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteGrafanaWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The Managed Service for Grafana workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaWorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Default value: cn-hangzhou.</para>
+        /// <para>The region ID. Default value: ap-southeast-1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

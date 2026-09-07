@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Indicates whether the alert rule was deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The alert rule was deleted.</description></item>
-        /// <item><description><c>false</c>: The alert rule failed to be deleted.</description></item>
+        /// <item><description><para><c>true</c>: The alert rule was deleted.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The alert rule failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

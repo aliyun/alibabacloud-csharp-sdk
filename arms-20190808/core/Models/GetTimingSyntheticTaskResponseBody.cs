@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>A reserved parameter.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Reserved parameter</para>
+                    /// <para>保留字段。</para>
                     /// </summary>
                     [NameInMap("PrometheusClusterId")]
                     [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>A reserved parameter.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Reserved parameter</para>
+                    /// <para>保留字段。</para>
                     /// </summary>
                     [NameInMap("PrometheusClusterRegion")]
                     [Validation(Required=false)]
@@ -1235,7 +1235,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The name of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AlibabaCloud DNS Task</para>
+            /// <para>拨测任务</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -1292,7 +1292,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>myweb</para>
+                /// <para>p_运维</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

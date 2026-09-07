@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2893</para>
+        /// <para>28**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kafka, mysql, redis, snmp, emr, nubela, and tidb</para>
+        /// <para>tidb</para>
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]

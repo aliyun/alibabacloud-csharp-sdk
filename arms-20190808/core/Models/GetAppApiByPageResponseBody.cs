@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("Total")]
             [Validation(Required=false)]

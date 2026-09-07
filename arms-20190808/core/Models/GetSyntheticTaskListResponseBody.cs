@@ -137,6 +137,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                 /// <summary>
                 /// <para>The name of the task type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>网络质量</para>
                 /// </summary>
                 [NameInMap("TaskTypeName")]
                 [Validation(Required=false)]

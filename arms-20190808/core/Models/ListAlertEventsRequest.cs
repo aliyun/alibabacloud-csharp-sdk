@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The name of the alert.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test-triggered alert</para>
+        /// <para>测试触发的告警</para>
         /// </summary>
         [NameInMap("AlertName")]
         [Validation(Required=false)]

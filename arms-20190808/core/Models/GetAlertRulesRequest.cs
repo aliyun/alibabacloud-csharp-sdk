@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The unique IDs of alert rules.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</description></item>
-        /// <item><description>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</description></item>
+        /// <item><description><para>If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.</para>
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the <b>AlertName</b> parameter does not uniquely identify an alert rule.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the API operation does not filter alert rules based on their names.</description></item>
-        /// <item><description>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</description></item>
+        /// <item><description><para>If you do not specify this parameter, the API operation does not filter alert rules based on their names.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,12 +47,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The status of the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>STOPPED</description></item>
-        /// <item><description>PAUSED</description></item>
+        /// <item><description><para>RUNNING</para>
+        /// </description></item>
+        /// <item><description><para>STOPPED</para>
+        /// </description></item>
+        /// <item><description><para>PAUSED</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</para>
+        /// <para>The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,9 +68,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The type of the alert rule. This parameter is required for the new version of Alert Management. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</description></item>
-        /// <item><description>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</description></item>
-        /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</description></item>
+        /// <item><description><para>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</para>
+        /// </description></item>
+        /// <item><description><para>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</para>
+        /// </description></item>
+        /// <item><description><para>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,6 +83,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string AlertType { get; set; }
 
+        /// <summary>
+        /// <para>The area ID where the rule resides.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("BizRegionId")]
         [Validation(Required=false)]
         public string BizRegionId { get; set; }

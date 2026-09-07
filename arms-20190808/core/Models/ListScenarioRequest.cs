@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pro-content</para>
+        /// <para>测试业务监控</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

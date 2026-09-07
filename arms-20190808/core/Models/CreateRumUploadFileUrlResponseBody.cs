@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateRumUploadFileUrlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The file upload URL.</para>
+        /// <para>The file upload link.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://arms-rum-v2.oss-cn-hangzhou.aliyuncs.com/113197164xxxxx28/b590lhguqs%40f93xxxxxbf31d3/1.0.0-robots.txt?Expires=1713847079&OSSAccessKeyId=STS.NT6XvoxkyqA&Signature=6ptYX4OTjLMrsleTlA2t97">http://arms-rum-v2.oss-cn-hangzhou.aliyuncs.com/113197164xxxxx28/b590lhguqs%40f93xxxxxbf31d3/1.0.0-robots.txt?Expires=1713847079&amp;OSSAccessKeyId=STS.NT6XvoxkyqA&amp;Signature=6ptYX4OTjLMrsleTlA2t97</a></para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message that is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>内部错误，请联系管理员。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><para><c>true</c>: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

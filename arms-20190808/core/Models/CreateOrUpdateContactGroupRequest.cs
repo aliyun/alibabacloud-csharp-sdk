@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The ID of the alert contact group.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, an alert contact group is created.</description></item>
-        /// <item><description>If you specify this parameter, the specified alert contact group is modified.</description></item>
+        /// <item><description><para>If you do not specify this parameter, an alert contact group is created.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, the specified alert contact group is modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

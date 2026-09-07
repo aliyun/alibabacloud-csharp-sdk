@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The language. Default value: zh.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en: English</description></item>
-        /// <item><description>zh: Chinese</description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,14 +51,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The subtype of the environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</description></item>
-        /// <item><description>ECS: ECS</description></item>
-        /// <item><description>Cloud: cloud service</description></item>
+        /// <item><description><para>CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)</para>
+        /// </description></item>
+        /// <item><description><para>ECS: ECS</para>
+        /// </description></item>
+        /// <item><description><para>Cloud: cloud service</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS, ACK, etc.</para>
+        /// <para>ECS、ACK等。</para>
         /// </summary>
         [NameInMap("EnvironmentSubType")]
         [Validation(Required=false)]
@@ -65,9 +70,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The type of the environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CS: Container Service</description></item>
-        /// <item><description>ECS: Elastic Compute Service</description></item>
-        /// <item><description>Cloud: cloud service</description></item>
+        /// <item><description><para>CS: Container Service</para>
+        /// </description></item>
+        /// <item><description><para>ECS: Elastic Compute Service</para>
+        /// </description></item>
+        /// <item><description><para>Cloud: cloud service</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,8 +89,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The payable resource plan.</para>
         /// <list type="bullet">
-        /// <item><description>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</description></item>
-        /// <item><description>Otherwise, leave the parameter empty.</description></item>
+        /// <item><description><para>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</para>
+        /// </description></item>
+        /// <item><description><para>Otherwise, leave the parameter empty.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,9 +128,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Specifies whether agents or exporters are managed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>none: No. By default, no managed agents or exporters are provided for ACK clusters.</description></item>
-        /// <item><description>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</description></item>
-        /// <item><description>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</description></item>
+        /// <item><description><para>none: No. By default, no managed agents or exporters are provided for ACK clusters.</para>
+        /// </description></item>
+        /// <item><description><para>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</para>
+        /// </description></item>
+        /// <item><description><para>agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

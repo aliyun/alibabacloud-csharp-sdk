@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kafka and mysql.</para>
+        /// <para>kafka、mysql等。</para>
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]

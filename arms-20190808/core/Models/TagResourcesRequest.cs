@@ -20,18 +20,25 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The type of the ARMS resources for which you want to modify tags. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WEB: Browser Monitoring</description></item>
-        /// <item><description>APPLICATION: Application Monitoring</description></item>
-        /// <item><description>PROMETHEUS: Managed Service for Prometheus</description></item>
-        /// <item><description>SYNTHETICTASK: Synthetic Monitoring</description></item>
-        /// <item><description>ALERTRULE: Application Monitoring alert rule</description></item>
-        /// <item><description>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</description></item>
-        /// <item><description>XTRACEAPP: Managed Service for OpenTelemetry</description></item>
+        /// <item><description><para>WEB: Browser Monitoring</para>
+        /// </description></item>
+        /// <item><description><para>APPLICATION: Application Monitoring</para>
+        /// </description></item>
+        /// <item><description><para>PROMETHEUS: Managed Service for Prometheus</para>
+        /// </description></item>
+        /// <item><description><para>SYNTHETICTASK: Synthetic Monitoring</para>
+        /// </description></item>
+        /// <item><description><para>ALERTRULE: Application Monitoring alert rule</para>
+        /// </description></item>
+        /// <item><description><para>PROMETHEUSALERTRULE: Managed Service for Prometheus alert rule</para>
+        /// </description></item>
+        /// <item><description><para>XTRACEAPP: Managed Service for OpenTelemetry</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PROMETHEUS</para>
+        /// <para>APPLICATION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

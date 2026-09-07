@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class UpdatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</para>
+        /// <para>The number of days for automatic archiving after storage expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates no archiving.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</para>
+        /// <para>The list of IP addresses for authentication-free read. CIDR notation is supported. Separate multiple IP addresses with line feeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</para>
+        /// <para>The list of IP addresses for authentication-free write. CIDR notation is supported. Separate multiple IP addresses with line feeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Prometheus instance.</para>
+        /// <para>The Prometheus instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read.</para>
+        /// <para>Specifies whether to enable authentication-free read.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free write.</para>
+        /// <para>Specifies whether to enable authentication-free write.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -87,7 +87,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>POSTPAY: Pay-as-you-go based on metric reporting volume.</description></item>
+        /// <item><description>POSTPAY_GB: Pay-as-you-go based on metric write volume.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -108,7 +112,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Prometheus resource group.</para>
+        /// <para>The resource group ID of the Prometheus instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxyexli2****</para>
@@ -118,7 +122,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The data storage duration. Unit: days.</para>
+        /// <para>The data retention period, in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>

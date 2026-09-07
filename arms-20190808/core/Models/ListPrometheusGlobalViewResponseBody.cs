@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The list of global aggregation instances. The value of this parameter is a string in the JSON format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ {groupName: &quot;the name of the global aggregation instance&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, // ..... more items ]</para>
+        /// <para>[   {groupName: &quot;聚合实例名称&quot;, clusterId: &quot;global-v2-clusterid&quot;, endpoint: &quot;cn-hangzhou&quot;}, //   ..... more items ]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

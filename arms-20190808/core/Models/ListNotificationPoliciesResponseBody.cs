@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification sent by email.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} \<a href="{{.generatorURL}}" >Link\</a> {{end}} {{end}}</para>
+                    /// <para>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }}  <a href="{{.generatorURL}}" > 详情链接</a>  {{ end }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("EmailContent")]
                     [Validation(Required=false)]
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert resolution notification sent by email.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{if .generatorURL }} \<a href="{{.generatorURL}}" >Link\</a> {{end}} {{end}}</para>
+                    /// <para>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }}  {{if .generatorURL }} <a href="{{.generatorURL}}" > 详情链接</a>  {{ end }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("EmailRecoverContent")]
                     [Validation(Required=false)]
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification sent by an IM chatbot.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }}&gt; {{.annotations.message}} {{if .generatorURL }} [Link]\({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}</para>
+                    /// <para>{{if .commonLabels.clustername }}   &gt;  集群名称：{{ .commonLabels.clustername }}    {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}   &gt;  应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }}    {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">详情链接</a> {{end}} {{if  eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} （疑似噪音） {{end}}  {{end}}</para>
                     /// </summary>
                     [NameInMap("RobotContent")]
                     [Validation(Required=false)]
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification sent by text message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>\<SmsContent>Notification on the occurrence of a {{ .level }} alert. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</SmsContent></para>
+                    /// <para>发生{{ .level }}告警 告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("SmsContent")]
                     [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert resolution notification sent by text message.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>\<SmsRecoverContent>Alert resolution notification. Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</SmsRecoverContent></para>
+                    /// <para>告警已经恢复 告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("SmsRecoverContent")]
                     [Validation(Required=false)]
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification sent by phone.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>\<TtsContent>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert time: {{ .startTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</TtsContent></para>
+                    /// <para>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 告警时间：{{ .startTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("TtsContent")]
                     [Validation(Required=false)]
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert resolution notification sent by phone.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>\<TtsRecoverContent>Alert name: {{ .commonLabels.alertname }}{{if .commonLabels.clustername }} Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} Notification policy: {{ .dispatchRuleName }} Alert resolution time: {{ .endTime }} Alert content: {{ for .alerts }} {{.annotations.message}} {{ end }}\</TtsRecoverContent></para>
+                    /// <para>告警名称：{{ .commonLabels.alertname }}{{if .commonLabels.clustername }} 集群名称：{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} 应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }} 通知策略：{{ .dispatchRuleName }} 恢复时间：{{ .endTime }} 告警内容：{{ for .alerts }} {{ .annotations.message }} {{ end }}</para>
                     /// </summary>
                     [NameInMap("TtsRecoverContent")]
                     [Validation(Required=false)]

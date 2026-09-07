@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

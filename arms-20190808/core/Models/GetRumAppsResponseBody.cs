@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The description of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TEST</para>
+            /// <para>测试</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>home page</para>
+            /// <para>门户首页。</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>测试</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal error, please contact customer service.</para>
+        /// <para>内部错误，请联系客服。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

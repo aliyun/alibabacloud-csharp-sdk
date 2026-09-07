@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CheckCommercialStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned struct.</para>
+        /// <para>The response struct.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1A474FF8-7861-4D00-81B5-5BC3DA4E****</para>

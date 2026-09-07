@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>查询应用配置成功</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

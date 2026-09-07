@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteGrafanaWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// <para>The status code. A value of 200 indicates success. Other values indicate errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the workspace was deleted. Valid values:</para>
+        /// <para>Indicates whether the Grafana workspace was deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The workspace was deleted.</description></item>
+        /// <item><description>false: The workspace failed to be deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27E653FA-5958-45BE-8AA9-14D884DC****</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c>: The operation was successful.</description></item>
+        /// <item><description><c>false</c>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID, which is used to query the details of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eac0a8048716731735000007137d000b</para>

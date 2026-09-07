@@ -40,21 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The monitoring configuration. The value is a YAML string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>apiVersion: monitoring.coreos.com/v1
-            /// kind: ServiceMonitor
-            /// metadata:
-            ///   name: tomcat-demo
-            ///   namespace: default
-            /// spec:
-            ///   endpoints:
-            ///     - interval: 30s
-            ///       path: /metrics
-            ///       port: tomcat-monitor
-            ///   namespaceSelector:
-            ///     any: true
-            ///   selector:
-            ///     matchLabels:
-            ///       app: tomcat</para>
+            /// <para>参见返回参数补充说明。</para>
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]

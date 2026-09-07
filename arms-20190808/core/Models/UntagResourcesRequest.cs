@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PROMETHEUS</para>
+        /// <para>APPLICATION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// <para>TestTag</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]

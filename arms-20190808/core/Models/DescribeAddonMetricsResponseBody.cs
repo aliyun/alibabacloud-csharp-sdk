@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</para>
+                /// <para>大小为PAGE_SIZE的B树页面被成功压缩的次数。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the metric.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The number of times a B-tree page of size PAGE_SIZE was successfully compressed.</para>
+                /// <para>大小为PAGE_SIZE的B树页面被成功压缩的次数。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The Info-level information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{regionId: the region where the global aggregation instance resides. globalViewClusterId: the ID of the global aggregation instance. failedClusterIds: the IDs of the clusters that failed to be added. A cluster may fail to be added if the specified cluster ID is invalid.}</para>
+            /// <para>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedClusterIds: 添加失败的AliClusterId（一般是clusterId有误）}</para>
             /// </summary>
             [NameInMap("Info")]
             [Validation(Required=false)]

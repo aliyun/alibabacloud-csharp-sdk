@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAddonReleasesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the add-on.</para>
+        /// <para>The name of the addon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mysql</para>

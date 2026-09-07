@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c77f6f2397ea74672872acf5e31374a27</para>
+        /// <para>c77f6f2397ea74672872acf5e31******</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kafka, mysql, redis, snmp, emr, nubela, and tidb</para>
+        /// <para>kafka</para>
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]

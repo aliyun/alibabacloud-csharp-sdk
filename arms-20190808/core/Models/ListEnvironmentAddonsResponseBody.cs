@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListEnvironmentAddonsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,21 +20,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the operation.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListEnvironmentAddonsResponseBodyData Data { get; set; }
         public class ListEnvironmentAddonsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The queried add-ons.</para>
+            /// <para>The list of addons.</para>
             /// </summary>
             [NameInMap("Addons")]
             [Validation(Required=false)]
             public List<ListEnvironmentAddonsResponseBodyDataAddons> Addons { get; set; }
             public class ListEnvironmentAddonsResponseBodyDataAddons : TeaModel {
                 /// <summary>
-                /// <para>The alias of the add-on.</para>
+                /// <para>The alias of the addon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
@@ -42,14 +44,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The tags of the add-on.</para>
+                /// <para>The list of addon tags.</para>
                 /// </summary>
                 [NameInMap("Categories")]
                 [Validation(Required=false)]
                 public List<string> Categories { get; set; }
 
                 /// <summary>
-                /// <para>The dashboards.</para>
+                /// <para>The list of dashboards.</para>
                 /// </summary>
                 [NameInMap("Dashboards")]
                 [Validation(Required=false)]
@@ -57,6 +59,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public class ListEnvironmentAddonsResponseBodyDataAddonsDashboards : TeaModel {
                     /// <summary>
                     /// <para>The description of the dashboard.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL监控大盘信息,监控了连接信息,使用信息等指标</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -85,42 +90,45 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the add-on.</para>
+                /// <para>The description of the addon.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>通过 MySQL Exporter 监控数据库指标</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The supported environments.</para>
+                /// <para>The list of supported environments.</para>
                 /// </summary>
                 [NameInMap("Environments")]
                 [Validation(Required=false)]
                 public List<ListEnvironmentAddonsResponseBodyDataAddonsEnvironments> Environments { get; set; }
                 public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironments : TeaModel {
                     /// <summary>
-                    /// <para>The dependencies of the environment.</para>
+                    /// <para>The dependencies of the addon within the environment.</para>
                     /// </summary>
                     [NameInMap("Dependencies")]
                     [Validation(Required=false)]
                     public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies Dependencies { get; set; }
                     public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsDependencies : TeaModel {
                         /// <summary>
-                        /// <para>The cluster type.</para>
+                        /// <para>The required cluster types.</para>
                         /// </summary>
                         [NameInMap("ClusterTypes")]
                         [Validation(Required=false)]
                         public List<string> ClusterTypes { get; set; }
 
                         /// <summary>
-                        /// <para>The feature that can be installed in the environment.</para>
+                        /// <para>The features available for installation in the environment.</para>
                         /// </summary>
                         [NameInMap("Features")]
                         [Validation(Required=false)]
                         public Dictionary<string, bool?> Features { get; set; }
 
                         /// <summary>
-                        /// <para>The services.</para>
+                        /// <para>The dependent services.</para>
                         /// </summary>
                         [NameInMap("Services")]
                         [Validation(Required=false)]
@@ -130,13 +138,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
                     /// <summary>
                     /// <para>The description of the environment.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL 服务部署在 Kubernetes 集群中。</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the feature is enabled.</para>
+                    /// <para>Indicates whether the addon is supported in this environment.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -146,7 +157,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The tag of the environment.</para>
+                    /// <para>The label of the environment.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>容器环境</para>
                     /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]
@@ -163,14 +177,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The control policies in the environment.</para>
+                    /// <para>The policies related to the addon in this environment.</para>
                     /// </summary>
                     [NameInMap("Policies")]
                     [Validation(Required=false)]
                     public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPolicies Policies { get; set; }
                     public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPolicies : TeaModel {
                         /// <summary>
-                        /// <para>The default alert status.</para>
+                        /// <para>The default status of the alert.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>default</para>
@@ -180,7 +194,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public string AlertDefaultStatus { get; set; }
 
                         /// <summary>
-                        /// <para>The default installation status.</para>
+                        /// <para>Indicates whether the addon is installed by default in the environment.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -190,7 +204,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public bool? DefaultInstall { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether a service account is enabled.</para>
+                        /// <para>Indicates whether a service account is enabled for the addon.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -200,14 +214,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public bool? EnableServiceAccount { get; set; }
 
                         /// <summary>
-                        /// <para>The metric check rule.</para>
+                        /// <para>The rules for checking metric status.</para>
                         /// </summary>
                         [NameInMap("MetricCheckRule")]
                         [Validation(Required=false)]
                         public ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule MetricCheckRule { get; set; }
                         public class ListEnvironmentAddonsResponseBodyDataAddonsEnvironmentsPoliciesMetricCheckRule : TeaModel {
                             /// <summary>
-                            /// <para>The PromQL statements.</para>
+                            /// <para>The PromQL query statements.</para>
                             /// </summary>
                             [NameInMap("PromQL")]
                             [Validation(Required=false)]
@@ -216,7 +230,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         }
 
                         /// <summary>
-                        /// <para>Indicates whether a restart is required after the installation.</para>
+                        /// <para>Indicates whether a restart is required after the addon is installed.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -226,7 +240,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         public bool? NeedRestartAfterIntegration { get; set; }
 
                         /// <summary>
-                        /// <para>The supported protocols.</para>
+                        /// <para>The list of supported protocols.</para>
                         /// </summary>
                         [NameInMap("Protocols")]
                         [Validation(Required=false)]
@@ -253,7 +267,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                             public string Icon { get; set; }
 
                             /// <summary>
-                            /// <para>The tag of the protocol.</para>
+                            /// <para>The label of the protocol.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ARMS</para>
@@ -275,7 +289,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         }
 
                         /// <summary>
-                        /// <para>The target name of the add-on.</para>
+                        /// <para>The target name of the addon.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>cloud-rds-mysql</para>
@@ -289,7 +303,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The URL of the icon.</para>
+                /// <para>The URL of the addon icon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://xxxx">http://xxxx</a></para>
@@ -299,14 +313,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Icon { get; set; }
 
                 /// <summary>
-                /// <para>The collection of keywords.</para>
+                /// <para>The keywords for the addon.</para>
                 /// </summary>
                 [NameInMap("Keywords")]
                 [Validation(Required=false)]
                 public List<string> Keywords { get; set; }
 
                 /// <summary>
-                /// <para>The language.</para>
+                /// <para>The language of the addon metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>zh</para>
@@ -316,7 +330,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was last created.</para>
+                /// <para>The creation time of the latest release of the addon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-09-22T16:56:29+08:00</para>
@@ -326,7 +340,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string LatestReleaseCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the add-on.</para>
+                /// <para>The name of the addon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -336,7 +350,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the add-on can be installed only once.</para>
+                /// <para>Indicates whether the addon can be installed only once per environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -346,7 +360,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? Once { get; set; }
 
                 /// <summary>
-                /// <para>The scenario.</para>
+                /// <para>The application scenario of the addon.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>database</para>
@@ -356,7 +370,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Scene { get; set; }
 
                 /// <summary>
-                /// <para>The version of the agent.</para>
+                /// <para>The addon version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.1</para>
@@ -366,7 +380,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The weight.</para>
+                /// <para>The weight of the addon, which is used for sorting in the UI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>857</para>
@@ -377,11 +391,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the list contains V2 addons.</para>
+            /// </summary>
             [NameInMap("ContainsV2Addon")]
             [Validation(Required=false)]
             public bool? ContainsV2Addon { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -392,6 +411,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
+        /// <para>The message returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -400,7 +421,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32940175-181B-4B93-966E-4BB69176****</para>
@@ -410,6 +431,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values are <c>true</c> if the operation succeeded and <c>false</c> if it failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

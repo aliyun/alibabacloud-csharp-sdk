@@ -83,6 +83,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID of the Prometheus instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxyexli2****</para>
         /// </summary>
@@ -112,6 +114,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        /// <summary>
+        /// <para>Extension information for the Flink VC cluster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("VcExtraInfo")]
         [Validation(Required=false)]
         public string VcExtraInfo { get; set; }

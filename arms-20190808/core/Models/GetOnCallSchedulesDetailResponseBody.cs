@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetOnCallSchedulesDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the scheduling policy.</para>
+        /// <para>The details of the on-call schedule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOnCallSchedulesDetailResponseBodyData Data { get; set; }
         public class GetOnCallSchedulesDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</para>
+            /// <para>The webhook URL of the DingTalk bot for rotation notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5">https://oapi.dingtalk.com/robot/send?access_token=69d4e009547e11069c6513309414937b7bf0482fb9284125b5</a>******</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? AlertRobotId { get; set; }
 
             /// <summary>
-            /// <para>The description of the scheduling policy.</para>
+            /// <para>The description of the on-call schedule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>测试</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduling policy.</para>
+            /// <para>The ID of the on-call schedule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -47,24 +47,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the scheduling policy.</para>
+            /// <para>The name of the on-call schedule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Scheduling policy test</para>
+            /// <para>排班策略测试</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The information about the final user on duty.</para>
+            /// <para>The final list of on-call contacts, after accounting for all rotations and substitutions.</para>
             /// </summary>
             [NameInMap("RenderedFinnalEntries")]
             [Validation(Required=false)]
             public List<GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntries> RenderedFinnalEntries { get; set; }
             public class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntries : TeaModel {
                 /// <summary>
-                /// <para>The date on which the user completed shift work.</para>
+                /// <para>The end time of the on-call duty for the contact.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-30</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string End { get; set; }
 
                 /// <summary>
-                /// <para>The information about the user on duty.</para>
+                /// <para>Details of the final on-call contact.</para>
                 /// </summary>
                 [NameInMap("SimpleContact")]
                 [Validation(Required=false)]
                 public GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntriesSimpleContact SimpleContact { get; set; }
                 public class GetOnCallSchedulesDetailResponseBodyDataRenderedFinnalEntriesSimpleContact : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the user on duty.</para>
+                    /// <para>The contact ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the user on duty.</para>
+                    /// <para>The contact name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Employee 1</para>
+                    /// <para>员工1</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The date from which the user started shift work.</para>
+                /// <para>The start time of the on-call duty for the contact.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-01</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The scheduled users on duty within a time range.</para>
+            /// <para>A list of contacts on duty within the specified time range, as defined by the schedule layers.</para>
             /// </summary>
             [NameInMap("RenderedLayerEntries")]
             [Validation(Required=false)]
             public List<List<GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntries>> RenderedLayerEntries { get; set; }
             public class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntries : TeaModel {
                 /// <summary>
-                /// <para>The date from which the scheduled user was supposed to start shift work.</para>
+                /// <para>The start time of the on-call duty for the contact.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-01</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Start { get; set; }
 
                 /// <summary>
-                /// <para>The date on which the scheduled user was supposed to complete shift work.</para>
+                /// <para>The end time of the on-call duty for the contact.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-30</para>
@@ -142,14 +142,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string End { get; set; }
 
                 /// <summary>
-                /// <para>The information about the scheduled user.</para>
+                /// <para>Details of the on-duty contact.</para>
                 /// </summary>
                 [NameInMap("SimpleContact")]
                 [Validation(Required=false)]
                 public GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntriesSimpleContact SimpleContact { get; set; }
                 public class GetOnCallSchedulesDetailResponseBodyDataRenderedLayerEntriesSimpleContact : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the scheduled user.</para>
+                    /// <para>The contact ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the scheduled user.</para>
+                    /// <para>The contact name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Employee 1</para>
+                    /// <para>员工1</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -173,14 +173,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The information about the substitutes within a time range.</para>
+            /// <para>A list of substitutes scheduled within the specified time range.</para>
             /// </summary>
             [NameInMap("RenderedSubstitudeEntries")]
             [Validation(Required=false)]
             public List<GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntries> RenderedSubstitudeEntries { get; set; }
             public class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntries : TeaModel {
                 /// <summary>
-                /// <para>The date on which the substitute was supposed to complete shift work.</para>
+                /// <para>The end time of the on-call duty for the substitute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-30</para>
@@ -190,14 +190,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string End { get; set; }
 
                 /// <summary>
-                /// <para>The information about the substitute.</para>
+                /// <para>Details of the substitute.</para>
                 /// </summary>
                 [NameInMap("SimpleContact")]
                 [Validation(Required=false)]
                 public GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntriesSimpleContact SimpleContact { get; set; }
                 public class GetOnCallSchedulesDetailResponseBodyDataRenderedSubstitudeEntriesSimpleContact : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the substitute.</para>
+                    /// <para>The substitute ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>234</para>
@@ -207,10 +207,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the substitute.</para>
+                    /// <para>The substitute name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Employee 2</para>
+                    /// <para>员工2</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The date from which the substitute was supposed to start shift work.</para>
+                /// <para>The start time of the on-call duty for the substitute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-01</para>
@@ -231,28 +231,28 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The information about the shift.</para>
+            /// <para>A list of schedule layers.</para>
             /// </summary>
             [NameInMap("ScheduleLayers")]
             [Validation(Required=false)]
             public List<GetOnCallSchedulesDetailResponseBodyDataScheduleLayers> ScheduleLayers { get; set; }
             public class GetOnCallSchedulesDetailResponseBodyDataScheduleLayers : TeaModel {
                 /// <summary>
-                /// <para>The ID list of users on duty.</para>
+                /// <para>A list of contact IDs for the schedule layer.</para>
                 /// </summary>
                 [NameInMap("ContactIds")]
                 [Validation(Required=false)]
                 public List<long?> ContactIds { get; set; }
 
                 /// <summary>
-                /// <para>The limit on the time of the shift.</para>
+                /// <para>A list of restrictions for the schedule layer.</para>
                 /// </summary>
                 [NameInMap("Restrictions")]
                 [Validation(Required=false)]
                 public List<GetOnCallSchedulesDetailResponseBodyDataScheduleLayersRestrictions> Restrictions { get; set; }
                 public class GetOnCallSchedulesDetailResponseBodyDataScheduleLayersRestrictions : TeaModel {
                     /// <summary>
-                    /// <para>The end time of the shift per day.</para>
+                    /// <para>The end time for on-call duty each day.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>18:00</para>
@@ -262,10 +262,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string EndTimeOfDay { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the limit. Valid values:</para>
+                    /// <para>The type of restriction. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>daily_restriction</description></item>
-                    /// <item><description>weekly_restriction</description></item>
+                    /// <item><description><para><c>daily_restriction</c>: A daily time-based restriction.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>weekly_restriction</c>: A weekly time-based restriction.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -276,7 +278,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string RestrictionType { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the shift per day.</para>
+                    /// <para>The start time for on-call duty each day.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>09:00</para>
@@ -288,11 +290,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the shift. Valid values:</para>
+                /// <para>The rotation type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DAY</description></item>
-                /// <item><description>WEEK</description></item>
-                /// <item><description>CUSTOM</description></item>
+                /// <item><description><para><c>DAY</c>: Rotates every day.</para>
+                /// </description></item>
+                /// <item><description><para><c>WEEK</c>: Rotates every week.</para>
+                /// </description></item>
+                /// <item><description><para><c>CUSTOM</c>: Rotates based on a custom schedule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -303,7 +308,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string RotationType { get; set; }
 
                 /// <summary>
-                /// <para>The shift cycle. Unit: hours.</para>
+                /// <para>The shift length for the rotation, in hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -313,7 +318,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? ShiftLength { get; set; }
 
                 /// <summary>
-                /// <para>The date on which the shift change took effect.</para>
+                /// <para>The start time for the rotation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-01</para>

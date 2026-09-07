@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The alias of the feature.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Prometheus agent.</para>
+                /// <para>Prometheus 探针</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the feature.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Collect Metric data using the Prometheus collection specification.</para>
+                /// <para>以 Prometheus 采集规范采集 Metric 数据。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The ID of the security group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sg-bp1c9fcexoalq9po6cp8</para>
+                /// <para>sg-bp1gbhqh8b4dsgvopkry</para>
                 /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The ID of the vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>vsw-bp1qt6ict0dbxgv4wer8l</para>
+                /// <para>vsw-uf6vc2e4ytv8vv05j3u09</para>
                 /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]

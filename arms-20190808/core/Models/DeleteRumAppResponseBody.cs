@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>删除的应用不存在。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The message that appears when the application is deleted.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success to delete app.</para>
+        /// <para>删除应用成功。</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]

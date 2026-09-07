@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetOnCallSchedulesDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which the shift ends. Format: <c>yyyy-MM-dd</c>.</para>
+        /// <para>The end date of the query range in <c>yyyy-MM-dd</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-30</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduling policy.</para>
+        /// <para>The ID of the on-call schedule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The date from which the shift starts. Format: <c>yyyy-MM-dd</c>.</para>
+        /// <para>The start date of the query range in <c>yyyy-MM-dd</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-01</para>

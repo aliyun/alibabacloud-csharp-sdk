@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段。</para>
             /// </summary>
             [NameInMap("TaskCreateTime")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteRumUploadFileRequest : TeaModel {
         /// <summary>
-        /// <para>Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.</para>
+        /// <para>The batch deletion parameters in JSON array format. Leave this parameter empty if you want to delete a single file. If you want to delete multiple files in a batch, specify only this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string BatchItems { get; set; }
 
         /// <summary>
-        /// <para>The file name, with the extension.</para>
+        /// <para>The file name, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.js.map</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The file ID.</para>
+        /// <para>The unique ID of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MS4wLjAtbWFpbi4wZjM0NzRlOSxxxxxx</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The version number of the file.</para>
+        /// <para>The file version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

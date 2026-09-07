@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The name of the alert integration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CloudMonitor integration</para>
+        /// <para>云监控集成</para>
         /// </summary>
         [NameInMap("IntegrationName")]
         [Validation(Required=false)]

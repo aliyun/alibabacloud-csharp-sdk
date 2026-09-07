@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The filter condition in the <c>{&quot;key&quot;:&quot;value&quot;}</c>format. You must specify the <c>key</c> and <c>value</c> of the filter condition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;alertname&quot;:&quot;Container CPU usage is greater than 80%&quot;}</para>
+        /// <para>{&quot;alertname&quot;:&quot;容器CPU使用率大于80%&quot;}</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]

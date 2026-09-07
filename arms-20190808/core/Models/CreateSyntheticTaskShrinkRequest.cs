@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Network synthetic monitoring task</para>
+        /// <para>网络拨测任务</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The name of the business monitoring job.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>k8s_deployment_css-guns-vip-main-prod_silence</para>
+            /// <para>测试业务监控</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CheckCommercialStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID. Default value: cn-hangzhou.</para>
+        /// <para>The region ID. Default value: ap-southeast-1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ARMS sub-service. Valid values:</para>
+        /// <para>The sub-product type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>apm: Application Monitoring</description></item>
-        /// <item><description>rum: RUM</description></item>
+        /// <item><description>rum: Real User Monitoring</description></item>
         /// <item><description>prometheus: Managed Service for Prometheus</description></item>
         /// <item><description>xtrace: Managed Service for OpenTelemetry</description></item>
         /// </list>

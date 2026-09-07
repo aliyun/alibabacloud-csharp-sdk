@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
+                /// <para>cn-hongkong</para>
                 /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]

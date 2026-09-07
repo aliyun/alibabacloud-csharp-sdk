@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The response in JSON format, including the HTTP status code, error code, response message, and trace ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{\\&quot;code\\&quot;:200,\\&quot;data\\&quot;:\\&quot;{\\\\\&quot;code\\\\\&quot;:200,\\\\\&quot;data\\\\\&quot;:true,\\\\\&quot;errorCode\\\\\&quot;:\\\\\&quot;The application is deleted\\\\\&quot;,\\\\\&quot;message\\\\\&quot;:\\\\\&quot;The application is deleted\\\\\&quot;,\\\\\&quot;success\\\\\&quot;:true,\\\\\&quot;traceId\\\\\&quot;:\\\\\&quot;0bc0594d15954826692915817e\<em>\</em>\<em>\</em>\\\\\&quot;}\\&quot;,\\&quot;errorCode\\&quot;:\\&quot;The application is deleted\\&quot;,\\&quot;message\\&quot;:\\&quot;The application is deleted\\&quot;,\\&quot;success\\&quot;:true,\\&quot;traceId\\&quot;:\\&quot;0ab2646915954826692568137d\<em>\</em>\<em>\</em>\\&quot;}</para>
+        /// <para>{\&quot;code\&quot;:200,\&quot;data\&quot;:\&quot;{\\\&quot;code\\\&quot;:200,\\\&quot;data\\\&quot;:true,\\\&quot;errorCode\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;message\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;success\\\&quot;:true,\\\&quot;traceId\\\&quot;:\\\&quot;0bc0594d15954826692915817e****\\\&quot;}\&quot;,\&quot;errorCode\&quot;:\&quot;删除应用成功\&quot;,\&quot;message\&quot;:\&quot;删除应用成功\&quot;,\&quot;success\&quot;:true,\&quot;traceId\&quot;:\&quot;0ab2646915954826692568137d****\&quot;}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</para>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

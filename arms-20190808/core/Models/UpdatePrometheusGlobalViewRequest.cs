@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>To edit a GlobalView aggregated instance, do you require all passed child instances to be verified successfully before creating a GlobalView instance (optional, default to false):</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +82,50 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[ { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-hangzhou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;, &quot;sourceName&quot;:&quot;arms-luyao-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-beijing&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;, &quot;sourceName&quot;:&quot;agent-321-test&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; }, { &quot;headers&quot;:{ }, &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;, &quot;extras&quot;:{ }, &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;, &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;:&quot;&quot;, &quot;userId&quot;:&quot;1672753***********&quot; } ]</para>
+        /// <para>[
+        ///     {
+        ///         &quot;headers&quot;:{</para>
+        /// <pre><c>    },
+        ///     &quot;regionId&quot;:&quot;cn-hangzhou&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
+        /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;arms-luyao-test&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
+        /// },
+        /// {
+        ///     &quot;headers&quot;:{
+        /// 
+        ///     },
+        ///     &quot;regionId&quot;:&quot;cn-beijing&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
+        /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;agent-321-测试&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
+        /// },
+        /// {
+        ///     &quot;headers&quot;:{
+        /// 
+        ///     },
+        ///     &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
+        /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
+        /// }
+        /// </c></pre>
+        /// <para>]</para>
         /// </summary>
         [NameInMap("SubClustersJson")]
         [Validation(Required=false)]

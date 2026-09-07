@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The Info-level information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance.</para>
+            /// <para>{regionId: 实例所属region, globalViewClusterId: 实例Id}</para>
             /// </summary>
             [NameInMap("Info")]
             [Validation(Required=false)]

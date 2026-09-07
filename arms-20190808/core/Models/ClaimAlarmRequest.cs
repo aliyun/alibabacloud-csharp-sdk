@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>184723093</para>
         /// </summary>
         [NameInMap("AlarmId")]
         [Validation(Required=false)]

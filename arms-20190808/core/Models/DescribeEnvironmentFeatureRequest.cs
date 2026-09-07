@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The language. Valid values: en and zh.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]

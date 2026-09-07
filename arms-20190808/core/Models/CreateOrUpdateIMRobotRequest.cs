@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Chatbot name</para>
+        /// <para>robot名称</para>
         /// </summary>
         [NameInMap("RobotName")]
         [Validation(Required=false)]

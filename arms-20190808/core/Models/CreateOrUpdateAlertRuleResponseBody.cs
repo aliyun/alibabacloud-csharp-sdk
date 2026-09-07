@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateOrUpdateAlertRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the alert rule.</para>
+        /// <para>The alert rule object.</para>
         /// </summary>
         [NameInMap("AlertRule")]
         [Validation(Required=false)]
         public CreateOrUpdateAlertRuleResponseBodyAlertRule AlertRule { get; set; }
         public class CreateOrUpdateAlertRuleResponseBodyAlertRule : TeaModel {
             /// <summary>
-            /// <para>The alert check type of the Prometheus alert rule. Valid values:</para>
+            /// <para>The check type of the Prometheus alert rule.</para>
             /// <list type="bullet">
-            /// <item><description>STATIC: a static threshold value.</description></item>
-            /// <item><description>CUSTOM: a custom PromQL statement.</description></item>
+            /// <item><description><para><c>STATIC</c>: The alert is triggered based on a static threshold.</para>
+            /// </description></item>
+            /// <item><description><para><c>CUSTOM</c>: The alert is triggered based on a custom PromQL expression.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,11 +33,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AlertCheckType { get; set; }
 
             /// <summary>
-            /// <para>The alert contact group ID of the Prometheus alert rule. Valid values:</para>
+            /// <para>The alert group for the Prometheus alert rule.</para>
             /// <list type="bullet">
-            /// <item><description>\-1: custom PromQL</description></item>
-            /// <item><description>1: Kubernetes load</description></item>
-            /// <item><description>15: Kubernetes node</description></item>
+            /// <item><description><para><c>-1</c>: Custom PromQL</para>
+            /// </description></item>
+            /// <item><description><para><c>1</c>: Kubernetes Workloads</para>
+            /// </description></item>
+            /// <item><description><para><c>15</c>: Kubernetes Nodes</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +51,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? AlertGroup { get; set; }
 
             /// <summary>
-            /// <para>The alert rule ID.</para>
+            /// <para>The ID of the alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5510445</para>
@@ -66,26 +71,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AlertName { get; set; }
 
             /// <summary>
-            /// <para>The content of the Application Monitoring or Browser Monitoring alert rule.</para>
+            /// <para>The content of the alert rule. This applies to application monitoring and browser monitoring.</para>
             /// </summary>
             [NameInMap("AlertRuleContent")]
             [Validation(Required=false)]
             public CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent AlertRuleContent { get; set; }
             public class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContent : TeaModel {
                 /// <summary>
-                /// <para>The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.</para>
+                /// <para>The alert conditions. This applies to application monitoring and browser monitoring alert rules.</para>
                 /// </summary>
                 [NameInMap("AlertRuleItems")]
                 [Validation(Required=false)]
                 public List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems> AlertRuleItems { get; set; }
                 public class CreateOrUpdateAlertRuleResponseBodyAlertRuleAlertRuleContentAlertRuleItems : TeaModel {
                     /// <summary>
-                    /// <para>The aggregation method of the alert condition. Valid values:</para>
+                    /// <para>The aggregation method for the alert condition.</para>
                     /// <list type="bullet">
-                    /// <item><description>AVG: calculates the average value</description></item>
-                    /// <item><description>SUM: calculates the total value</description></item>
-                    /// <item><description>MAX: selects the maximum value</description></item>
-                    /// <item><description>MIN: selects the minimum value</description></item>
+                    /// <item><description><para><c>AVG</c>: average</para>
+                    /// </description></item>
+                    /// <item><description><para><c>SUM</c>: sum</para>
+                    /// </description></item>
+                    /// <item><description><para><c>MAX</c>: maximum</para>
+                    /// </description></item>
+                    /// <item><description><para><c>MIN</c>: minimum</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -96,17 +105,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Aggregate { get; set; }
 
                     /// <summary>
-                    /// <para>The metric of the alert condition.</para>
+                    /// <para>The metric that is evaluated by the alert condition.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>appstat.jvm.non_heap_used</para>
+                    /// <para>JVM非堆总使用内存量</para>
                     /// </summary>
                     [NameInMap("MetricKey")]
                     [Validation(Required=false)]
                     public string MetricKey { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates the last N minutes.</para>
+                    /// <para>The duration of the time window, in minutes, for evaluating the alert condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -116,16 +125,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public float? N { get; set; }
 
                     /// <summary>
-                    /// <para>The comparison operator that was used to compare the metric value with the threshold. Valid values:</para>
+                    /// <para>The operator used to compare the aggregated metric value with the threshold.</para>
                     /// <list type="bullet">
-                    /// <item><description>CURRENT_GTE: greater than or equal to</description></item>
-                    /// <item><description>CURRENT_LTE: less than or equal to</description></item>
-                    /// <item><description>PREVIOUS_UP: the increase percentage compared with the last period</description></item>
-                    /// <item><description>PREVIOUS_DOWN: the decrease percentage compared with the last period</description></item>
-                    /// <item><description>HOH_UP: the increase percentage compared with the last hour</description></item>
-                    /// <item><description>HOH_DOWN: the decrease percentage compared with the last hour</description></item>
-                    /// <item><description>DOD_UP: the increase percentage compared with the last day</description></item>
-                    /// <item><description>DOD_DOWN: the decrease percentage compared with the last day</description></item>
+                    /// <item><description><para><c>CURRENT_GTE</c>: greater than or equal to</para>
+                    /// </description></item>
+                    /// <item><description><para><c>CURRENT_LTE</c>: less than or equal to</para>
+                    /// </description></item>
+                    /// <item><description><para><c>PREVIOUS_UP</c>: period-over-period increase percentage</para>
+                    /// </description></item>
+                    /// <item><description><para><c>PREVIOUS_DOWN</c>: period-over-period decrease percentage</para>
+                    /// </description></item>
+                    /// <item><description><para><c>HOH_UP</c>: hour-over-hour increase percentage</para>
+                    /// </description></item>
+                    /// <item><description><para><c>HOH_DOWN</c>: hour-over-hour decrease percentage</para>
+                    /// </description></item>
+                    /// <item><description><para><c>DOD_UP</c>: day-over-day increase percentage</para>
+                    /// </description></item>
+                    /// <item><description><para><c>DOD_DOWN</c>: day-over-day decrease percentage</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -136,7 +153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold of the alert condition.</para>
+                    /// <para>The threshold for the alert condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -148,14 +165,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The relationship between multiple alert conditions that were specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</para>
+                /// <para>The logical operator for combining multiple alert conditions. This applies to application monitoring and browser monitoring.</para>
                 /// <list type="bullet">
-                /// <item><description>OR: meets any of the specified conditions.</description></item>
-                /// <item><description>AND: meets all the specified conditions.</description></item>
+                /// <item><description><para><c>OR</c>: The alert is triggered if any condition is met.</para>
+                /// </description></item>
+                /// <item><description><para><c>AND</c>: The alert is triggered only if all conditions are met.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;|&quot;</para>
+                /// <para>OR</para>
                 /// </summary>
                 [NameInMap("Condition")]
                 [Validation(Required=false)]
@@ -164,14 +183,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The status of the alert rule. Valid values:</para>
+            /// <para>The status of the alert rule.</para>
             /// <list type="bullet">
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>STOPPED</description></item>
-            /// <item><description>PAUSED</description></item>
+            /// <item><description><para><c>RUNNING</c>: The alert rule is running.</para>
+            /// </description></item>
+            /// <item><description><para><c>STOPPED</c>: The alert rule is stopped.</para>
+            /// </description></item>
+            /// <item><description><para><c>PAUSED</c>: The alert rule is paused.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>The PAUSED status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</para>
+            /// <para>The <c>PAUSED</c> status indicates that the system has automatically suspended the alert rule due to an abnormality. This can happen if the alert rule generates too many distinct time series or its associated cluster is deleted.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -184,9 +206,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// <para>The type of the alert rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</description></item>
-            /// <item><description>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</description></item>
-            /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</description></item>
+            /// <item><description><para><c>APPLICATION_MONITORING_ALERT_RULE</c>: an alert rule for application monitoring.</para>
+            /// </description></item>
+            /// <item><description><para><c>BROWSER_MONITORING_ALERT_RULE</c>: an alert rule for browser monitoring.</para>
+            /// </description></item>
+            /// <item><description><para><c>PROMETHEUS_MONITORING_ALERT_RULE</c>: an alert rule for Prometheus monitoring.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -204,7 +229,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations> Annotations { get; set; }
             public class CreateOrUpdateAlertRuleResponseBodyAlertRuleAnnotations : TeaModel {
                 /// <summary>
-                /// <para>The key of the annotation.</para>
+                /// <para>The annotation key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -214,7 +239,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value of the annotation.</para>
+                /// <para>The annotation value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -226,10 +251,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</para>
+            /// <para>Indicates whether newly created applications are automatically added to the alert rule. This applies to application monitoring and browser monitoring rules.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables the health check feature.</description></item>
-            /// <item><description><c>false</c>: disables the automatic backup feature.</description></item>
+            /// <item><description><para><c>true</c>: Enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,7 +267,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? AutoAddNewApplication { get; set; }
 
             /// <summary>
-            /// <para>The ID of the monitored cluster.</para>
+            /// <para>The ID of the cluster that is associated with the Prometheus alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ceba9b9ea5b924dd0b6726d2de6******</para>
@@ -250,7 +277,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the alert rule was created. Unit: seconds.</para>
+            /// <para>The UNIX timestamp, in milliseconds, when the alert rule was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1641438611000</para>
@@ -260,7 +287,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The duration of the Prometheus alert rule. Unit: minutes.</para>
+            /// <para>The duration, in minutes, for which a condition must be true before an alert is triggered. This applies only to Prometheus alert rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -270,24 +297,24 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Duration { get; set; }
 
             /// <summary>
-            /// <para>The extended fields.</para>
+            /// <para>The extended fields, returned as a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\\&quot;alarmContext\\&quot;:\\&quot;{\\\\\&quot;content\\\\\&quot;:\\\\Alert name: $Alert name\\\\\\nFilter condition: $Filter condition\\\\\\nAlert time: $Alert time\\\\\\nAlert content: $Alert content\\\\\\nNote: The alert persists before you receive an email that reminds you to clear the alert. You will be reminded of the alert again 24 hours later. \\\\\&quot;,\\\\\&quot;subTitle\\\\\&quot;:\\\\\&quot;\\\\\&quot;}\\&quot;,\\&quot;alertWays\\&quot;:\\&quot;[0,1]\\&quot;,\\&quot;contactGroupIds\\&quot;:\\&quot;381,5075\\&quot;,\\&quot;notice\\&quot;:\\&quot;{\\\\\&quot;endTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeEndTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeStartTime\\\\\&quot;:1480521600000,\\\\\&quot;startTime\\\\\&quot;:1480521600000}\\&quot;}</para>
+            /// <para>{\&quot;alarmContext\&quot;:\&quot;{\\\&quot;content\\\&quot;:\\\&quot;报警名称:$报警名称\\\\n筛选条件: $筛选\\\\n报警时间: $报警时间\\\\n报警内容: $报警内容\\\\n注意！：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！\\\&quot;,\\\&quot;subTitle\\\&quot;:\\\&quot;\\\&quot;}\&quot;,\&quot;alertWays\&quot;:\&quot;[0,1]\&quot;,\&quot;contactGroupIds\&quot;:\&quot;381,5075\&quot;,\&quot;notice\&quot;:\&quot;{\\\&quot;endTime\\\&quot;:1480607940000,\\\&quot;noticeEndTime\\\&quot;:1480607940000,\\\&quot;noticeStartTime\\\&quot;:1480521600000,\\\&quot;startTime\\\&quot;:1480521600000}\&quot;}</para>
             /// </summary>
             [NameInMap("Extend")]
             [Validation(Required=false)]
             public string Extend { get; set; }
 
             /// <summary>
-            /// <para>The filter conditions of the Application Monitoring or Browser Monitoring alert rule.</para>
+            /// <para>The filters of the alert rule. This applies to application monitoring or browser monitoring.</para>
             /// </summary>
             [NameInMap("Filters")]
             [Validation(Required=false)]
             public CreateOrUpdateAlertRuleResponseBodyAlertRuleFilters Filters { get; set; }
             public class CreateOrUpdateAlertRuleResponseBodyAlertRuleFilters : TeaModel {
                 /// <summary>
-                /// <para>The custom filter condition of the Browser Monitoring alert rule.</para>
+                /// <para>The custom filter conditions for the browser monitoring alert rule.</para>
                 /// </summary>
                 [NameInMap("CustomSLSFilters")]
                 [Validation(Required=false)]
@@ -304,10 +331,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The logical operator of the filter condition. Valid values:</para>
+                    /// <para>The operator for the filter condition.</para>
                     /// <list type="bullet">
-                    /// <item><description>\=: equal to</description></item>
-                    /// <item><description>not: not equal to</description></item>
+                    /// <item><description><para><c>=</c>: equals</para>
+                    /// </description></item>
+                    /// <item><description><para><c>not</c>: not equal to</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -318,7 +347,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Opt { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether this filter condition was displayed on the frontend.</para>
+                    /// <para>Indicates whether the filter condition is displayed on the console.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -328,7 +357,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public bool? Show { get; set; }
 
                     /// <summary>
-                    /// <para>The log type of Browser Monitoring. This field was not included in other filter conditions.</para>
+                    /// <para>Used exclusively to distinguish between log types in browser monitoring. This parameter does not apply to other filter conditions.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>null</para>
@@ -338,7 +367,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string T { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the filter condition.</para>
+                    /// <para>The value for the filter condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -350,21 +379,21 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The information of the aggregation dimension.</para>
+                /// <para>The aggregation dimensions.</para>
                 /// </summary>
                 [NameInMap("CustomSLSGroupByDimensions")]
                 [Validation(Required=false)]
                 public List<string> CustomSLSGroupByDimensions { get; set; }
 
                 /// <summary>
-                /// <para>The details of the custom filter condition.</para>
+                /// <para>The configured filter conditions.</para>
                 /// </summary>
                 [NameInMap("CustomSLSWheres")]
                 [Validation(Required=false)]
                 public List<string> CustomSLSWheres { get; set; }
 
                 /// <summary>
-                /// <para>The information about each filter condition of the Application Monitoring or Browser Monitoring alert rule.</para>
+                /// <para>The filter conditions of the alert rule. This applies to application monitoring or browser monitoring.</para>
                 /// </summary>
                 [NameInMap("DimFilters")]
                 [Validation(Required=false)]
@@ -381,7 +410,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string FilterKey { get; set; }
 
                     /// <summary>
-                    /// <para>The logical operator of the filter condition.</para>
+                    /// <para>The operator for the filter condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ALL</para>
@@ -391,7 +420,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string FilterOpt { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the filter condition.</para>
+                    /// <para>The values for the filter condition.</para>
                     /// </summary>
                     [NameInMap("FilterValues")]
                     [Validation(Required=false)]
@@ -402,14 +431,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The tags of the Prometheus alert rule.</para>
+            /// <para>The labels of the Prometheus alert rule.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels> Labels { get; set; }
             public class CreateOrUpdateAlertRuleResponseBodyAlertRuleLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The label key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -419,7 +448,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The label value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -433,11 +462,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// <para>The severity level of the Prometheus alert rule.</para>
             /// <list type="bullet">
-            /// <item><description>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</description></item>
-            /// <item><description>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</description></item>
-            /// <item><description>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</description></item>
-            /// <item><description>P4: Alert notifications are sent for low-priority issues that do not affect your business.</description></item>
-            /// <item><description>Default: Alert notifications are sent regardless of alert levels.</description></item>
+            /// <item><description><para><c>P1</c>: Critical. Indicates major issues that affect core business availability and can have severe consequences.</para>
+            /// </description></item>
+            /// <item><description><para><c>P2</c>: Warning. Indicates issues that impact system availability but have a limited scope.</para>
+            /// </description></item>
+            /// <item><description><para><c>P3</c>: Info. Indicates potential issues or alerts from less critical services.</para>
+            /// </description></item>
+            /// <item><description><para><c>P4</c>: Low priority. Indicates informational alerts that do not affect services.</para>
+            /// </description></item>
+            /// <item><description><para><c>Default</c>: The default level used when no specific severity is required.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -448,17 +482,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The alert message of the Prometheus alert rule.</para>
+            /// <para>The message of the Prometheus alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} Memory usage exceeds 80%. Current value: {{ printf \\\\\&quot;%.2f\\\\\&quot; $value }}%</para>
+            /// <para>命名空间: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / 容器: {{$labels.container}} 内存使用率超过80%, 当前值{{ printf \\\&quot;%.2f\\\&quot; $value }}%</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The metric type of the Application Monitoring or Browser Monitoring alert rule.</para>
+            /// <para>The metric type of the alert rule. This applies to application monitoring and browser monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JVM</para>
@@ -468,7 +502,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string MetricsType { get; set; }
 
             /// <summary>
-            /// <para>Notification Mode.</para>
+            /// <para>The notification mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL_MODE</para>
@@ -478,7 +512,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string NotifyMode { get; set; }
 
             /// <summary>
-            /// <para>The name of the notification policy.</para>
+            /// <para>The notification policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALERT_MANAGER</para>
@@ -488,14 +522,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string NotifyStrategy { get; set; }
 
             /// <summary>
-            /// <para>The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.</para>
+            /// <para>The PIDs of the applications associated with the alert rule. This applies to application monitoring and browser monitoring rules.</para>
             /// </summary>
             [NameInMap("Pids")]
             [Validation(Required=false)]
             public List<string> Pids { get; set; }
 
             /// <summary>
-            /// <para>The PromQL statement of the Prometheus alert rule.</para>
+            /// <para>The PromQL expression for the Prometheus alert rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node_memory_MemAvailable_bytes{} / node_memory_MemTotal_bytes{} * 100</para>
@@ -515,7 +549,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tags that are added to the alert rule.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -544,7 +578,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The timestamp generated when the alert rule was updated. Unit: seconds.</para>
+            /// <para>The UNIX timestamp, in milliseconds, when the alert rule was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1641438611000</para>
@@ -554,7 +588,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public long? UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1131971649******</para>

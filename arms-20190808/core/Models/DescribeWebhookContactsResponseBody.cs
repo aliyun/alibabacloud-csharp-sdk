@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The alert notification template.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Alert time&quot;:&quot;{{ .startTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
+                    /// <para>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;告警时间&quot;:&quot;{{ .startTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
                     /// </summary>
                     [NameInMap("Body")]
                     [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The notification template for clearing alerts.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>{ &quot;Alert name&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;Cluster name&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;Application name&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;Notification policy&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;Recovery time&quot;:&quot;{{ .endTime }}&quot;, &quot;Alert content&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
+                    /// <para>{ &quot;告警名称&quot;:&quot;{{ .commonLabels.alertname }}{{if .commonLabels.clustername }}&quot;, &quot;集群名称&quot;:&quot;{{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}&quot;, &quot;应用名称&quot;:&quot;{{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}&quot;, &quot;通知策略&quot;:&quot;{{ .dispatchRuleName }}&quot;, &quot;恢复时间&quot;:&quot;{{ .endTime }}&quot;, &quot;告警内容&quot;:&quot;{{ for .alerts }} {{ .annotations.message }} {{ end }}&quot; }</para>
                     /// </summary>
                     [NameInMap("RecoverBody")]
                     [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the webhook alert contact.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Webhook name</para>
+                /// <para>webhook名称</para>
                 /// </summary>
                 [NameInMap("WebhookName")]
                 [Validation(Required=false)]

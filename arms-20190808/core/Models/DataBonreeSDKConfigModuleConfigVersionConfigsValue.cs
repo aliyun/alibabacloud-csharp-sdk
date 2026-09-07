@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DataBonreeSDKConfigModuleConfigVersionConfigsValue : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the custom configuration is used.</para>
+        /// <para>Indicates whether to use a custom configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? UseCustom { get; set; }
 
         /// <summary>
-        /// <para>The custom configuration.</para>
+        /// <para>The custom configuration items.</para>
         /// </summary>
         [NameInMap("customConfig")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The description of the version configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>1.1.0版本配置</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the version configuration was updated.</para>
+        /// <para>The update time of the version configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1721112372055</para>

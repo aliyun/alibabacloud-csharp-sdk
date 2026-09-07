@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The ID of the resource.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cff30f0d67d7542dfb05bd114b4b1d7af</para>
+        /// <para>cb9229c48e41144dc96af190841808cb0</para>
         /// </summary>
         [NameInMap("BindResourceId")]
         [Validation(Required=false)]
@@ -71,13 +71,17 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The payable resource plan.</para>
         /// <list type="bullet">
-        /// <item><description>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</description></item>
-        /// <item><description>Otherwise, leave the parameter empty.</description></item>
+        /// <item><description><para>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</para>
+        /// </description></item>
+        /// <item><description><para>Otherwise, leave the parameter empty.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CS_Pro: Container Monitoring Pro</description></item>
-        /// <item><description>CS_Basic: Container Monitoring Basic</description></item>
+        /// <item><description><para>CS_Pro: Container Monitoring Pro</para>
+        /// </description></item>
+        /// <item><description><para>CS_Basic: Container Monitoring Basic</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The ID of the Prometheus instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>c589a1b8db05c4561aefbb898ca8fb1cf</para>
+            /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The ID of the exporter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2893</para>
+            /// <para>28**</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The monitored IP address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>127.0.0.1:3422</para>
+            /// <para>127.0.XX.XX:3422</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9BEF2832-9D95-5E3E-9B10-74887CA17B94</para>
+        /// <para>9BEF2832-9D95-5E3E-9B10-74887C******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

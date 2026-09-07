@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The ID of the synthetic monitoring task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>856566a9cb2a4cafa05aa95ed0ec8f21</para>
+        /// <para>856566a9cb2a4cafa05aa95ed0*******</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

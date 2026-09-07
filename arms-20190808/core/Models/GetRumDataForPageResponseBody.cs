@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved parameter. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段，请忽略。</para>
             /// </summary>
             [NameInMap("Authentication")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved parameter. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段，请忽略。</para>
             /// </summary>
             [NameInMap("Preference")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>StartTime is mandatory for this action.</para>
+        /// <para>内部错误，请联系管理员。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

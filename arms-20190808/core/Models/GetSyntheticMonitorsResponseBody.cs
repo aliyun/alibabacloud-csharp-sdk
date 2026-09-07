@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The city.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Beijing</para>
+            /// <para>北京市</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The country.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China</para>
+            /// <para>中国</para>
             /// </summary>
             [NameInMap("Country")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The carrier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud</para>
+            /// <para>阿里云</para>
             /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Beijing</para>
+            /// <para>浙江</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]

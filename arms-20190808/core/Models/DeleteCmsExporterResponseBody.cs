@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DeleteCmsExporterResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return Result information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of this request. If a fault occurs, you can use this ID to troubleshoot the issue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>27E653FA-5958-45BE-8AA9-14D884DC****</para>
         /// </summary>

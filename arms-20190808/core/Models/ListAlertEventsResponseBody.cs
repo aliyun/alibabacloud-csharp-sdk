@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The name of the alert.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Test-triggered alert</para>
+                    /// <para>测试触发的告警</para>
                     /// </summary>
                     [NameInMap("AlarmName")]
                     [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the alert.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test-triggered alert</para>
+                /// <para>测试触发的告警</para>
                 /// </summary>
                 [NameInMap("AlertName")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the alert event.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>测试</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The user who handled the alert.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Tom</para>
+                /// <para>张三</para>
                 /// </summary>
                 [NameInMap("HandlerName")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the alert integration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Custom integration</para>
+                /// <para>自定义集成</para>
                 /// </summary>
                 [NameInMap("IntegrationName")]
                 [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The name of the notification policy.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>P1 alert notification policy</para>
+                    /// <para>P1告警通知策略</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]

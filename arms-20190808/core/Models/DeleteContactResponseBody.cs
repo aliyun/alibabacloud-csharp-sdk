@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Indicates whether the alert contact is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The alert contact is deleted.</description></item>
-        /// <item><description><c>false</c>: The alert contact is not deleted.</description></item>
+        /// <item><description><para><c>true</c>: The alert contact is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The alert contact is not deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

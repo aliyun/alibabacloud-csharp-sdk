@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListAddonReleasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The result returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public bool? ContainsV2Addon { get; set; }
 
             /// <summary>
-            /// <para>The queried add-ons.</para>
+            /// <para>The collection of addon releases.</para>
             /// </summary>
             [NameInMap("Releases")]
             [Validation(Required=false)]
             public List<ListAddonReleasesResponseBodyDataReleases> Releases { get; set; }
             public class ListAddonReleasesResponseBodyDataReleases : TeaModel {
                 /// <summary>
-                /// <para>The name of the add-on.</para>
+                /// <para>The component name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string AddonName { get; set; }
 
                 /// <summary>
-                /// <para>The number of alert rules.</para>
+                /// <para>The number of alert groups.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? AlertRuleCount { get; set; }
 
                 /// <summary>
-                /// <para>The installation phase.</para>
+                /// <para>The installation phases.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
                 public List<ListAddonReleasesResponseBodyDataReleasesConditions> Conditions { get; set; }
                 public class ListAddonReleasesResponseBodyDataReleasesConditions : TeaModel {
                     /// <summary>
-                    /// <para>The first transition time.</para>
+                    /// <para>The time of the first transition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2018-01-31T14:32:19Z</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string FirstTransitionTime { get; set; }
 
                     /// <summary>
-                    /// <para>The last transition time.</para>
+                    /// <para>The time of the last transition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2018-01-31T14:32:19Z</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Message { get; set; }
 
                     /// <summary>
-                    /// <para>The reason for the failure.</para>
+                    /// <para>The failure reason.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxxx</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Reason { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the phase.</para>
+                    /// <para>The phase status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>True</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the phase.</para>
+                    /// <para>The phase type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Loaded</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration information of the add-on release.</para>
+                /// <para>The configuration of the addon release.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;port&quot;:&quot;9379&quot;}</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Config { get; set; }
 
                 /// <summary>
-                /// <para>The time when the add-on was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-09-22T16:56:29+08:00</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string EnvironmentId { get; set; }
 
                 /// <summary>
-                /// <para>The number of exporters.</para>
+                /// <para>The number of plug-ins.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public long? ExporterCount { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the configuration is available.</para>
+                /// <para>Indicates whether the addon has configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public bool? HaveConfig { get; set; }
 
                 /// <summary>
-                /// <para>The user ID.</para>
+                /// <para>The user ID of the installer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1268790592387</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the component is fully managed.</para>
+                /// <para>Indicates whether the component is managed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string ReleaseName { get; set; }
 
                 /// <summary>
-                /// <para>The scenario.</para>
+                /// <para>The identified scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>database</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the add-on was updated.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-09-22T16:56:29+08:00</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>The version of the add-on.</para>
+                /// <para>The addon version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.1</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>E9C9DA3D-10FE-472E-9EEF-2D0A3E41****</para>
@@ -341,7 +341,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the query was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

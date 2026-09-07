@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreateGrafanaWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>Account quantity.  </para>
+        /// <para><b>Value description:</b>  </para>
+        /// <list type="bullet">
+        /// <item><description>If GrafanaWorkspaceEdition is <b>standard</b>, this parameter is invalid.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>personal_edition</b>, this parameter is invalid. Default Value: 1.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>experts_edition</b>, valid values are 10, 30, or 50. Default Value: 10.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>advanced_edition</b>, this parameter is invalid. Default Value: 100.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -32,6 +41,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
+        /// <para>Whether auto-renewal is enabled. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description>true: Auto-renewal is enabled.  </description></item>
+        /// <item><description>false: Auto-renewal is disabled.</description></item>
+        /// </list>
+        /// <para>Default Value: true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,6 +56,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
+        /// <para>Additional custom account quantity for the User.  </para>
+        /// <para><b>Value description:</b>  </para>
+        /// <list type="bullet">
+        /// <item><description>If GrafanaWorkspaceEdition is <b>standard</b>, this parameter is invalid.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>personal_edition</b>, this parameter is invalid.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>experts_edition</b>, this parameter is invalid.  </description></item>
+        /// <item><description>If GrafanaWorkspaceEdition is <b>advanced_edition</b>, the value range is 0 to 2000 and must be a multiple of 10. Default Value: 0.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -58,6 +83,13 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Subscription duration of the instance. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description>If PricingCycle is <b>Month</b>, indicating monthly billing, the value range is <b>1</b> to <b>9</b>.  </description></item>
+        /// <item><description>If PricingCycle is <b>Year</b>, indicating yearly billing, the value range is <b>1</b> to <b>3</b>.</description></item>
+        /// </list>
+        /// <para>Default Value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -66,6 +98,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Duration { get; set; }
 
         /// <summary>
+        /// <para>Grafana version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

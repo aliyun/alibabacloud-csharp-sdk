@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The ID of the Prometheus instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>c589a1b8db05c4561aefbb898ca8fb1cf</para>
+            /// <para>c77f6f2397ea74672872acf5e31******</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The ID of the exporter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>29374</para>
+            /// <para>293**</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Kafka, mysql, redis, snmp, emr, nubela, and tidb</para>
+            /// <para>kafka</para>
             /// </summary>
             [NameInMap("IntegrationType")]
             [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The monitored IP address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>121.40.62.240:3342</para>
+            /// <para>121.40.XX.XX:3342</para>
             /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1F1D8840-5330-5804-A8DB-C3C5C5CED6BB</para>
+        /// <para>1F1D8840-5330-5804-A8DB-C3C5C5******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

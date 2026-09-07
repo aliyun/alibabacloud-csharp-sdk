@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The exit timestamp of the method call. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1653641800</para>
+        /// <para>1728355143000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The entry timestamp of the method call. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1653555396</para>
+        /// <para>1728351543000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

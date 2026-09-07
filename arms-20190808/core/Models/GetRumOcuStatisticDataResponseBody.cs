@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>内部错误，请联系客户人员。</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

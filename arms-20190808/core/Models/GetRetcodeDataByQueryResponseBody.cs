@@ -29,7 +29,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The Browser Monitoring data returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;total&quot;:0,&quot;auth&quot;:false,&quot;pageSize&quot;:20,&quot;completed&quot;:true,&quot;page&quot;:1,&quot;items&quot;:[]}</para>
+        /// <para>{
+        ///     &quot;total&quot;: 1,
+        ///     &quot;auth&quot;: false,
+        ///     &quot;pageSize&quot;: 20,
+        ///     &quot;completed&quot;: true,
+        ///     &quot;page&quot;: 1,
+        ///     &quot;items&quot;: [
+        ///       {
+        ///         &quot;date&quot;: &quot;1701820800000&quot;,
+        ///         &quot;<b>time</b>&quot;: 1701410567,
+        ///         &quot;uv&quot;: &quot;64&quot;,
+        ///         &quot;<b>source</b>&quot;: &quot;&quot;,
+        ///         &quot;pv&quot;: &quot;890&quot;
+        ///       }
+        ///     ]
+        ///     }</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -39,7 +54,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internal error. Please try again. Contact the DingTalk service account if the issue                              persists after multiple retries.</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

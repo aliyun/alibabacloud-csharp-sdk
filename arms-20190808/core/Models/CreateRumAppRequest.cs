@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Monitoring description</para>
+        /// <para>用户体验监控前端</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The type of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom</para>
+        /// <para>自定义</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

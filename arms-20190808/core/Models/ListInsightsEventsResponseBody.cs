@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The description of the alert event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The overall response time of the [HTTP] service of the application [sd] spikes at [2022-07-27 10:57:00]</para>
+            /// <para>应用【sd】【HTTP】服务整体的响应时间在【2022-07-27 10:57:00】出现突增</para>
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The title of the event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Average response-time spikes of application services</para>
+            /// <para>应用服务整体平均响应时间突增</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

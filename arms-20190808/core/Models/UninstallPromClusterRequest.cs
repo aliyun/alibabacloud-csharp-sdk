@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AliyunLang")]
         [Validation(Required=false)]

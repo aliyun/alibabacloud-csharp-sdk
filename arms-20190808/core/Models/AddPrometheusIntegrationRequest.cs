@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kafka, mysql, redis, snmp, emr, nubela, and tidb</para>
+        /// <para>kafka、mysql、redis、snmp、emr、nubela、tidb等</para>
         /// </summary>
         [NameInMap("IntegrationType")]
         [Validation(Required=false)]

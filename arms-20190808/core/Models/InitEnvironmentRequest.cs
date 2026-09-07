@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class InitEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values: zh and en. Default value: zh.</para>
+        /// <para>The language. Valid values: zh and en. Default: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create a token to improve data security.</para>
+        /// <para>Whether to create an authentication token for enhanced data security.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,11 +41,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Whether agents or exporters are managed. Valid values:</para>
+        /// <para>The agent management mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>none: No. By default, no managed agents or exporters are provided for ACK clusters.</description></item>
-        /// <item><description>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</description></item>
-        /// <item><description>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</description></item>
+        /// <item><description><para>none: unmanaged. Default for ACK clusters.</para>
+        /// </description></item>
+        /// <item><description><para>agent: managed agents only. Default for ASK, ACS, and ACK One clusters.</para>
+        /// </description></item>
+        /// <item><description><para>agent-exproter: managed agents and exporters. Default for cloud services.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The name of the city to which the monitoring point belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Beijing</para>
+            /// <para>北京市</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The region to which the monitoring point belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Beijing</para>
+            /// <para>北京</para>
             /// </summary>
             [NameInMap("District")]
             [Validation(Required=false)]

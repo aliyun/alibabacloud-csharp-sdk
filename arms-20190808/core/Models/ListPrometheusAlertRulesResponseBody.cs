@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The value of the annotation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
+                /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The alert message. Tags can be referenced in the {{$labels.xxx}} format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
+            /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The type of the alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Custom</para>
+            /// <para>自定义</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

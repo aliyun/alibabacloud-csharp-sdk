@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the scheduling policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test scheduling policy</para>
+                /// <para>测试排班策略</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

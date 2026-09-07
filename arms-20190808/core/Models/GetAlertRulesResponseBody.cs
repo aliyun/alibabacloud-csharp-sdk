@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The alert check type of the Prometheus alert rule.</para>
                 /// <list type="bullet">
-                /// <item><description>STATIC: static threshold</description></item>
-                /// <item><description>CUSTOM: custom PromQL</description></item>
+                /// <item><description><para>STATIC: static threshold</para>
+                /// </description></item>
+                /// <item><description><para>CUSTOM: custom PromQL</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -40,9 +42,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The alert contact group ID of the Prometheus alert rule.</para>
                 /// <list type="bullet">
-                /// <item><description>\-1: custom PromQL</description></item>
-                /// <item><description>1: Kubernetes load</description></item>
-                /// <item><description>15: Kubernetes node</description></item>
+                /// <item><description><para>-1: custom PromQL</para>
+                /// </description></item>
+                /// <item><description><para>1: Kubernetes load</para>
+                /// </description></item>
+                /// <item><description><para>15: Kubernetes node</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,10 +94,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// <summary>
                         /// <para>The aggregation method of the alert condition. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>AVG: calculates the average value</description></item>
-                        /// <item><description>SUM: calculates the total value</description></item>
-                        /// <item><description>MAX: selects the maximum value</description></item>
-                        /// <item><description>MIN: selects the minimum value</description></item>
+                        /// <item><description><para>AVG: calculates the average value</para>
+                        /// </description></item>
+                        /// <item><description><para>SUM: calculates the total value</para>
+                        /// </description></item>
+                        /// <item><description><para>MAX: selects the maximum value</para>
+                        /// </description></item>
+                        /// <item><description><para>MIN: selects the minimum value</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -125,14 +134,22 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// <summary>
                         /// <para>The operator that is used to compare the metric value with the threshold. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>CURRENT_GTE: greater than or equal to</description></item>
-                        /// <item><description>CURRENT_LTE: less than or equal to</description></item>
-                        /// <item><description>PREVIOUS_UP: increase in percentage compared with the previous period</description></item>
-                        /// <item><description>PREVIOUS_DOWN: decrease in percentage compared with the previous period</description></item>
-                        /// <item><description>HOH_UP: increase in percentage compared with the same period in the previous hour</description></item>
-                        /// <item><description>HOH_DOWN: decrease in percentage compared with the same period in the previous hour</description></item>
-                        /// <item><description>DOD_UP: increase in percentage compared with the same period in the previous day</description></item>
-                        /// <item><description>DOD_DOWN: decrease in percentage compared with the same period in the previous day</description></item>
+                        /// <item><description><para>CURRENT_GTE: greater than or equal to</para>
+                        /// </description></item>
+                        /// <item><description><para>CURRENT_LTE: less than or equal to</para>
+                        /// </description></item>
+                        /// <item><description><para>PREVIOUS_UP: increase in percentage compared with the previous period</para>
+                        /// </description></item>
+                        /// <item><description><para>PREVIOUS_DOWN: decrease in percentage compared with the previous period</para>
+                        /// </description></item>
+                        /// <item><description><para>HOH_UP: increase in percentage compared with the same period in the previous hour</para>
+                        /// </description></item>
+                        /// <item><description><para>HOH_DOWN: decrease in percentage compared with the same period in the previous hour</para>
+                        /// </description></item>
+                        /// <item><description><para>DOD_UP: increase in percentage compared with the same period in the previous day</para>
+                        /// </description></item>
+                        /// <item><description><para>DOD_DOWN: decrease in percentage compared with the same period in the previous day</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -157,8 +174,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <summary>
                     /// <para>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>OR: The alert rule is triggered if one of the conditions is met.</description></item>
-                    /// <item><description>AND: The alert rule is triggered if all the conditions are met.</description></item>
+                    /// <item><description><para>OR: The alert rule is triggered if one of the conditions is met.</para>
+                    /// </description></item>
+                    /// <item><description><para>AND: The alert rule is triggered if all the conditions are met.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -173,12 +192,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The status of the alert rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RUNNING</description></item>
-                /// <item><description>STOPPED</description></item>
-                /// <item><description>PAUSED</description></item>
+                /// <item><description><para>RUNNING</para>
+                /// </description></item>
+                /// <item><description><para>STOPPED</para>
+                /// </description></item>
+                /// <item><description><para>PAUSED</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</para>
+                /// <para>The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -191,9 +213,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The type of the alert rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</description></item>
-                /// <item><description>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</description></item>
-                /// <item><description>PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule</description></item>
+                /// <item><description><para>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</para>
+                /// </description></item>
+                /// <item><description><para>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</para>
+                /// </description></item>
+                /// <item><description><para>PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -235,8 +260,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: yes</description></item>
-                /// <item><description><c>false</c>: no</description></item>
+                /// <item><description><para><c>true</c>: yes</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: no</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -279,11 +306,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The extended fields.</para>
                 /// <remarks>
-                /// <para> For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.</para>
+                /// <para>For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\\&quot;alarmContext\\&quot;:\\&quot;{\\\\\&quot;content\\\\\&quot;:\\\\Alert name: $Alert name\\\\\\nFilter condition: $Filter condition\\\\\\nAlert time: $Alert time\\\\\\nAlert content: $Alert content\\\\\\nNote: The alert persists before you receive an email that reminds you to clear the alert. You will be reminded of the alert again 24 hours later. \\\\\&quot;,\\\\\&quot;subTitle\\\\\&quot;:\\\\\&quot;\\\\\&quot;}\\&quot;,\\&quot;alertWays\\&quot;:\\&quot;[0,1]\\&quot;,\\&quot;contactGroupIds\\&quot;:\\&quot;381,5075\\&quot;,\\&quot;notice\\&quot;:\\&quot;{\\\\\&quot;endTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeEndTime\\\\\&quot;:1480607940000,\\\\\&quot;noticeStartTime\\\\\&quot;:1480521600000,\\\\\&quot;startTime\\\\\&quot;:1480521600000}\\&quot;}</para>
+                /// <para>{\&quot;alarmContext\&quot;:\&quot;{\\\&quot;content\\\&quot;:\\\&quot;报警名称:$报警名称\\\\n筛选条件: $筛选\\\\n报警时间: $报警时间\\\\n报警内容: $报警内容\\\\n注意！：该报警未收到恢复邮件之前，正在持续报警中，24小时后会再次提醒您！\\\&quot;,\\\&quot;subTitle\\\&quot;:\\\&quot;\\\&quot;}\&quot;,\&quot;alertWays\&quot;:\&quot;[0,1]\&quot;,\&quot;contactGroupIds\&quot;:\&quot;381,5075\&quot;,\&quot;notice\&quot;:\&quot;{\\\&quot;endTime\\\&quot;:1480607940000,\\\&quot;noticeEndTime\\\&quot;:1480607940000,\\\&quot;noticeStartTime\\\&quot;:1480521600000,\\\&quot;startTime\\\&quot;:1480521600000}\&quot;}</para>
                 /// </summary>
                 [NameInMap("Extend")]
                 [Validation(Required=false)]
@@ -316,8 +343,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                         /// <summary>
                         /// <para>The logical operator of the filter condition. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>\=: equal to</description></item>
-                        /// <item><description>not: not equal to</description></item>
+                        /// <item><description><para>\=: equal to</para>
+                        /// </description></item>
+                        /// <item><description><para>not: not equal to</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -443,11 +472,16 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The severity level of the Prometheus alert rule.</para>
                 /// <list type="bullet">
-                /// <item><description>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</description></item>
-                /// <item><description>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</description></item>
-                /// <item><description>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</description></item>
-                /// <item><description>P4: Alert notifications are sent for low-priority issues that do not affect your business.</description></item>
-                /// <item><description>Default: Alert notifications are sent regardless of alert levels.</description></item>
+                /// <item><description><para>P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</para>
+                /// </description></item>
+                /// <item><description><para>P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</para>
+                /// </description></item>
+                /// <item><description><para>P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</para>
+                /// </description></item>
+                /// <item><description><para>P4: Alert notifications are sent for low-priority issues that do not affect your business.</para>
+                /// </description></item>
+                /// <item><description><para>Default: Alert notifications are sent regardless of alert levels.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -461,7 +495,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The alert message of the Prometheus alert rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Namespace: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / Container: {{$labels.container}} CPU usage: {{$labels.metrics_params_opt_label_value}} {{$labels.metrics_params_value}}%. Current value: {{ printf &quot;%.2f&quot; $value }}%</para>
+                /// <para>命名空间: {{$labels.namespace}} / Pod: {{$labels.pod_name}} / 容器: {{$labels.container}} CPU使用率{{$labels.metrics_params_opt_label_value}} {{$labels.metrics_params_value}}%, 当前值{{ printf &quot;%.2f&quot; $value }}%</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]

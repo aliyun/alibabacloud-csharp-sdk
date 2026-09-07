@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class SyncRecordingRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster whose aggregation rule you want to synchronize.</para>
+        /// <para>The ID of the source cluster whose rules are to be synchronized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. The destination region can be the same as the source region.</para>
+        /// <para>The region ID. This can be the same as the region ID of the source cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of clusters to which you want to synchronize the aggregation rule.</para>
+        /// <para>The IDs of the target clusters for batch synchronization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

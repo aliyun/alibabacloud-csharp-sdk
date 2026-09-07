@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>探针类型错误</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

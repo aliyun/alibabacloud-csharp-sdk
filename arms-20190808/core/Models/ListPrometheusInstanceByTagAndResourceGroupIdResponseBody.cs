@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The authorization token.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ad32dxxxx</para>
+                /// <para>GciOiJIUzI1NiJ9***</para>
                 /// </summary>
                 [NameInMap("AuthToken")]
                 [Validation(Required=false)]
@@ -66,12 +66,18 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The instance type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>remote-write: Prometheus instance for Remote Write</description></item>
-                /// <item><description>ecs: Prometheus instances for ECS</description></item>
-                /// <item><description>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</description></item>
-                /// <item><description>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</description></item>
-                /// <item><description>global-view: global aggregation instance</description></item>
-                /// <item><description>aliyun-cs: Prometheus instance for Container Service</description></item>
+                /// <item><description><para>remote-write: Prometheus instance for Remote Write</para>
+                /// </description></item>
+                /// <item><description><para>ecs: Prometheus instances for ECS</para>
+                /// </description></item>
+                /// <item><description><para>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</para>
+                /// </description></item>
+                /// <item><description><para>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</para>
+                /// </description></item>
+                /// <item><description><para>global-view: global aggregation instance</para>
+                /// </description></item>
+                /// <item><description><para>aliyun-cs: Prometheus instance for Container Service</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The public URL for the HTTP API.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></para>
+                /// <para><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></para>
                 /// </summary>
                 [NameInMap("HttpApiInterUrl")]
                 [Validation(Required=false)]
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The internal URL for the HTTP API.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/cn-beijing</a></para>
+                /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></para>
                 /// </summary>
                 [NameInMap("HttpApiIntraUrl")]
                 [Validation(Required=false)]
@@ -114,8 +120,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PREPAY: subscription</description></item>
-                /// <item><description>POSTPAY: pay-as-you-go</description></item>
+                /// <item><description><para>PREPAY: subscription</para>
+                /// </description></item>
+                /// <item><description><para>POSTPAY: pay-as-you-go</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The public URL for Pushgateway.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></para>
+                /// <para><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></para>
                 /// </summary>
                 [NameInMap("PushGatewayInterUrl")]
                 [Validation(Required=false)]
@@ -179,7 +187,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The public URL for remote write.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></para>
+                /// <para><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></para>
                 /// </summary>
                 [NameInMap("RemoteWriteInterUrl")]
                 [Validation(Required=false)]
@@ -229,7 +237,38 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The child instances of the global aggregation instance. The value is a JSON string.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[ { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-hangzhou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;arms-luyao-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-beijing&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;agent-321-test&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; }, { &quot;headers&quot;: {}, &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;, &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;, &quot;extras&quot;: {}, &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78\<em>\</em>\<em>\</em>&quot;, &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;, &quot;dataSource&quot;: &quot;&quot;, &quot;userId&quot;: &quot;167275301789\<em>\</em>\<em>\</em>&quot; } ]</para>
+                /// <para>[
+                ///   {
+                ///     &quot;headers&quot;: {},
+                ///     &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
+                ///     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+                ///     &quot;extras&quot;: {},
+                ///     &quot;clusterId&quot;: &quot;c39a1048921e04fceb039db2fb****&quot;,
+                ///     &quot;sourceName&quot;: &quot;arms-luyao-test&quot;,
+                ///     &quot;dataSource&quot;: &quot;&quot;,
+                ///     &quot;userId&quot;: &quot;167275301789****&quot;
+                ///   },
+                ///   {
+                ///     &quot;headers&quot;: {},
+                ///     &quot;regionId&quot;: &quot;cn-beijing&quot;,
+                ///     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+                ///     &quot;extras&quot;: {},
+                ///     &quot;clusterId&quot;: &quot;c6b6485496d5b400abde22cb47b5****&quot;,
+                ///     &quot;sourceName&quot;: &quot;agent-321-测试&quot;,
+                ///     &quot;dataSource&quot;: &quot;&quot;,
+                ///     &quot;userId&quot;: &quot;167275301789****&quot;
+                ///   },
+                ///   {
+                ///     &quot;headers&quot;: {},
+                ///     &quot;regionId&quot;: &quot;cn-zhangjiakou&quot;,
+                ///     &quot;sourceType&quot;: &quot;AlibabaPrometheus&quot;,
+                ///     &quot;extras&quot;: {},
+                ///     &quot;clusterId&quot;: &quot;c261a4f3200c446659133f1ade78****&quot;,
+                ///     &quot;sourceName&quot;: &quot;zaifeng-cardinality-01&quot;,
+                ///     &quot;dataSource&quot;: &quot;&quot;,
+                ///     &quot;userId&quot;: &quot;167275301789****&quot;
+                ///   }
+                /// ]</para>
                 /// </summary>
                 [NameInMap("SubClustersJson")]
                 [Validation(Required=false)]

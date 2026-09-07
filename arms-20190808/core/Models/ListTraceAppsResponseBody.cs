@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Resource group</para>
+            /// <para>rg-acfmxyexli2****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]

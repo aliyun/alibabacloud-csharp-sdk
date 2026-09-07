@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the dashboard.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>MySQL monitors the market information, monitoring the connection information, usage information and other indicators</para>
+                /// <para>MySQL监控大盘信息，监控了连接信息、使用信息等指标</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The description of the add-on.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Monitor database indicators with MySQL Exporter</para>
+            /// <para>通过 MySQL Exporter 监控数据库指标</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of the environment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The MySQL service is deployed in a Kubernetes cluster.</para>
+                /// <para>MySQL 服务部署在 Kubernetes 集群中。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The tag of the environment.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Container</para>
+                /// <para>容器环境</para>
                 /// </summary>
                 [NameInMap("Label")]
                 [Validation(Required=false)]

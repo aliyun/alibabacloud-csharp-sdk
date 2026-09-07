@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The content of the alert notification.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>&quot;Alert name: Alert1\nAlert time: 2020-07-24 12:14:00\nAlert content: A total of four alerts are triggered: \<em>\</em>\<em>\</em>&quot;</para>
+                /// <para>&quot;报警名称：Alert1\n报警时间：2020-07-24 12:14:00\n报警内容：共有4条记录触发异常：****&quot;</para>
                 /// </summary>
                 [NameInMap("AlarmContent")]
                 [Validation(Required=false)]

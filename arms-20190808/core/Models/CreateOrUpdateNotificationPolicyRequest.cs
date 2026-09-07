@@ -122,7 +122,30 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{     &quot;notifyStartTime&quot;:&quot;00:00&quot;,     &quot;notifyEndTime&quot;:&quot;23:59&quot;,     &quot;notifyChannels&quot;:[         &quot;dingTalk&quot;,         &quot;email&quot;,         &quot;sms&quot;,         &quot;tts&quot;,         &quot;webhook&quot;     ],     &quot;notifyObjects&quot;:[         {             &quot;notifyObjectType&quot;:&quot;CONTACT&quot;,             &quot;notifyObjectId&quot;:123,             &quot;notifyObjectName&quot;:&quot;test&quot;         }     ] }</para>
+        /// <para>{
+        ///     &quot;notifyStartTime&quot;: &quot;00:00&quot;,
+        ///     &quot;notifyEndTime&quot;: &quot;23:59&quot;,
+        ///     &quot;notifyChannels&quot;: [
+        ///         &quot;dingTalk&quot;,
+        ///         &quot;email&quot;,
+        ///         &quot;sms&quot;,
+        ///         &quot;tts&quot;,
+        ///         &quot;webhook&quot;
+        ///     ],
+        ///     &quot;notifyObjects&quot;: [
+        ///         {
+        ///             &quot;notifyObjectType&quot;: &quot;CONTACT&quot;,
+        ///             &quot;notifyObjectId&quot;: 123,
+        ///             &quot;notifyObjectName&quot;: &quot;test&quot;,
+        ///             &quot;notifyChannels&quot;: [
+        ///                 &quot;email&quot;,
+        ///                 &quot;sms&quot;,
+        ///                 &quot;tts&quot;
+        ///             ],</para>
+        /// <pre><c>    }
+        /// ]
+        /// </c></pre>
+        /// <para>}</para>
         /// </summary>
         [NameInMap("NotifyRule")]
         [Validation(Required=false)]
@@ -132,7 +155,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The notification template. The default notification template is provided below the table.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }} &gt; Cluster name: {{ .commonLabels.clustername }} {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }} &gt; Application name: {{ .commonLabels._aliyun_arms_involvedObject_name }} {{ end }}{{ for .alerts }} &gt; {{.annotations.message}} {{if .generatorURL }} [Link]\({{.generatorURL}}) {{ end }} {{if eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} (Suspected noise) {{end}} {{end}}&quot;</para>
+        /// <para>{ &quot;robotContent&quot;:&quot;{{if .commonLabels.clustername }}   &gt;  集群名称：{{ .commonLabels.clustername }}    {{ end }}{{if eq &quot;app&quot; .commonLabels._aliyun_arms_involvedObject_kind }}   &gt;  应用名称：{{ .commonLabels._aliyun_arms_involvedObject_name }}    {{ end }}{{ for .alerts }} &gt;  {{ .annotations.message }} {{if .generatorURL }} <a href="%7B%7B.generatorURL%7D%7D">详情链接</a> {{end}} {{if  eq &quot;true&quot; .labels._aliyun_arms_is_denoise_filtered }} （疑似噪音） {{end}}  {{end}}&quot; }</para>
         /// </summary>
         [NameInMap("NotifyTemplate")]
         [Validation(Required=false)]

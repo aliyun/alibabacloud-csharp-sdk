@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
+        /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -108,8 +108,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The method that is used to send alert notifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ALERT_MANAGER</c>: Alert notifications are sent by Operation Center. This is the default value.</description></item>
-        /// <item><description><c>DISPATCH_RULE</c>: Alert notifications are sent based on the specified notification policy.</description></item>
+        /// <item><description><para><c>ALERT_MANAGER</c>: Alert notifications are sent by Operation Center. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><c>DISPATCH_RULE</c>: Alert notifications are sent based on the specified notification policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +165,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The type of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Kubernetes component alert</para>
+        /// <para>Kubernetes组件告警</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

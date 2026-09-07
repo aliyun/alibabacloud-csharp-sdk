@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class DoInsightsActionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// <para>Status code. 200 indicates success; other status codes indicate exceptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters vary with the value of module.</para>
+        /// <para>The return parameter type is related to the module value passed in.</para>
         /// <list type="bullet">
         /// <item><description><para>QueryTopo</para>
         /// <pre><c>{
-        /// &quot;nodes&quot;: [Object] # The nodes. For more information, see node details in the supplementary notes of response parameters.
-        /// &quot;edges&quot;: [Object] # The edges. For more information, see edge details in the supplementary notes of response parameters.
+        ///  &quot;nodes&quot;: [Object] #Node collection. See the Node definition in the supplementary description of return parameters.
+        ///  &quot;edges&quot;: [Object] #Edge collection. See the Edge definition in the supplementary description of return parameters.
         /// }
         /// </c></pre>
         /// </description></item>
@@ -33,24 +33,23 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <pre><c>{
         ///   &quot;nodeRed&quot;: {
         ///       &quot;nodeId&quot;: {
-        ///           &quot;count&quot;: double, # The total number of requests in the specified time range.
-        ///           &quot;error&quot;: double, # The total number of errors in the specified time range.
-        ///           &quot;rt&quot;: double, # The average response time in the specified time range. Unit: milliseconds.
+        ///           &quot;count&quot;: double, #Total number of requests during the query period
+        ///           &quot;error&quot;: double, #Total number of errors during the query period
+        ///           &quot;rt&quot;: double, #Average latency during the query period, in milliseconds
         ///       }
         ///   },
         ///   &quot;edgeRed&quot;: {
         ///       &quot;edgeId&quot;: {
-        ///           &quot;count&quot;: double, # The total number of requests in the specified time range.
-        ///           &quot;error&quot;: double, # The total number of errors in the specified time range.
-        ///           &quot;rt&quot;: double, # The average response time in the specified time range. Unit: milliseconds.
+        ///           &quot;count&quot;: double, #Total number of requests during the query period
+        ///           &quot;error&quot;: double, #Total number of errors during the query period
+        ///           &quot;rt&quot;: double, #Average latency during the query period, in milliseconds
         ///       }
         ///   }
         /// </c></pre>
         /// </description></item>
         /// </list>
-        /// <para>}</para>
-        /// <pre><c>
-        /// </c></pre>
+        /// <para>}
+        ///   ```</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -116,7 +115,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The message returned when the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -136,10 +135,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Whether the query is successful:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c>: Successful.</description></item>
+        /// <item><description><c>false</c>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

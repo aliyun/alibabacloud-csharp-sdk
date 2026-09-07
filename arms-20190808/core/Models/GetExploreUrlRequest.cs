@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The query statement that corresponds to the data source.</para>
+        /// <para>The query statement for the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{app=&quot;buy2&quot;}</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Grafana data source.</para>
+        /// <para>The Grafana data source type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

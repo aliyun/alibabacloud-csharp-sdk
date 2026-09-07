@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ScenarioName</para>
+        /// <para>测试POP业务监控</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-zhangjaikou</para>
+        /// <para>cn-zhangjiakou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

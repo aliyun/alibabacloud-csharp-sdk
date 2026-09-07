@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class ListCmsInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,10 +32,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud service integration. Valid values:</para>
+        /// <para>The type of integrated cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>direct: self-monitoring</description></item>
-        /// <item><description>cms: Hybrid Cloud Monitoring</description></item>
+        /// <item><description><para><c>direct</c>: An integration for cloud products that are monitored by the product itself.</para>
+        /// </description></item>
+        /// <item><description><para><c>cms</c>: An integration with CloudMonitor.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

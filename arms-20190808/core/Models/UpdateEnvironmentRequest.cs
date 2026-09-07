@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The payable resource plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</description></item>
-        /// <item><description>Otherwise, leave the parameter empty.</description></item>
+        /// <item><description><para>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.</para>
+        /// </description></item>
+        /// <item><description><para>Otherwise, leave the parameter empty.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

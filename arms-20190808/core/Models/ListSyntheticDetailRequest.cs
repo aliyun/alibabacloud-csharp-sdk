@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段。</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段。</para>
             /// </summary>
             [NameInMap("OpType")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>保留字段。</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

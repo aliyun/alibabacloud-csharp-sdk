@@ -14,8 +14,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public long? EndTimeMs { get; set; }
 
         /// <summary>
-        /// <para>The metadata IDs. Separate multiple IDs with commas (,).</para>
-        /// <para>You can obtain the exception ID on the <b>Exception Analysis</b> page of your application in the ARMS console.</para>
+        /// <para>The metadata IDs. Use a comma (,) to separate multiple IDs.</para>
+        /// <para>You can obtain the exception ID on the <b>exception analysis</b> page of the target application in the ARMS console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string MetaIds { get; set; }
 
         /// <summary>
-        /// <para>The metadata type. Valid values:</para>
+        /// <para>The type of the metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>sql: obtains an SQL statement based on sqlId.</description></item>
-        /// <item><description>exception: obtains the exception stack based on exceptionId.</description></item>
+        /// <item><description><para>sql: Retrieves the SQL statement by sqlId.</para>
+        /// </description></item>
+        /// <item><description><para>exception: Retrieves the exception stack by exceptionId.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,11 +43,11 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string MetaType { get; set; }
 
         /// <summary>
-        /// <para>The process identifier (PID) of the application. You can obtain the PID of an application by calling the <b>ListTraceApps</b> operation.</para>
+        /// <para>The application ID. To obtain the ID, call the <b>ListTraceApps</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ggxw4lnjuz@54364d85b97dc56</para>
+        /// <para>ggxw4lnjuz@54364d85b******</para>
         /// </summary>
         [NameInMap("Pid")]
         [Validation(Required=false)]

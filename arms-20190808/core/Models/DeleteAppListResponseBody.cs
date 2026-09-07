@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;{\&quot;code\&quot;:200,\&quot;data\&quot;:\&quot;{\\\&quot;code\\\&quot;:200,\\\&quot;data\\\&quot;:true,\\\&quot;errorCode\\ \&quot;:\\\&quot;Deletion of application successful\\\&quot;,\\\&quot;Message\\\&quot;:\\\&quot;Deletion of application successful\\\&quot;,\\\&quot;Successful\\\&quot;:true,\ \\&quot;traceId\\\&quot;:\\\&quot;0bc1667516940677164677396d0088\\\&quot;}\&quot;,\&quot;errorCode\&quot;:\&quot;Batch deletion of applications successful\&quot;,\&quot;message\&quot;:\&quot;Batch deletion of applications successful\ &quot;,\&quot;Success\&quot;:true,\&quot;traceId\&quot;:\&quot;210f470416940677161213505e0e7a\&quot;}&quot;</para>
+        /// <para>&quot;{\&quot;code\&quot;:200,\&quot;data\&quot;:\&quot;{\\\&quot;code\\\&quot;:200,\\\&quot;data\\\&quot;:true,\\\&quot;errorCode\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;message\\\&quot;:\\\&quot;删除应用成功\\\&quot;,\\\&quot;success\\\&quot;:true,\\\&quot;traceId\\\&quot;:\\\&quot;0bc1667516940677164677396d0088\\\&quot;}\&quot;,\&quot;errorCode\&quot;:\&quot;批量删除应用成功\&quot;,\&quot;message\&quot;:\&quot;批量删除应用成功\&quot;,\&quot;success\&quot;:true,\&quot;traceId\&quot;:\&quot;210f470416940677161213505e0e7a\&quot;}&quot;</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The error message returned for invalid request parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;Deletion of application successful&quot;</para>
+        /// <para>“批量删除应用成功”</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -147,8 +147,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><para><c>true</c></para>
+        /// </description></item>
+        /// <item><description><para><c>false</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

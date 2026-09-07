@@ -123,8 +123,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>Indicates whether the application is displayed in the Application Real-Time Monitoring Service (ARMS) console. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: yes</description></item>
-                /// <item><description><c>false</c>: no</description></item>
+                /// <item><description><para><c>true</c>: yes</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: no</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,8 +168,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The type of the monitoring task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>TRACE</c>: Application Monitoring</description></item>
-                /// <item><description><c>RETCODE</c>: Browser Monitoring</description></item>
+                /// <item><description><para><c>TRACE</c>: Application Monitoring</para>
+                /// </description></item>
+                /// <item><description><para><c>RETCODE</c>: Browser Monitoring</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The contact group to which the contact belongs. If your contacts are added to multiple contact groups, the contact groups are separated by vertical bars (|).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default Group | SRE Group</para>
+                /// <para>默认分组|SRE分组</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]

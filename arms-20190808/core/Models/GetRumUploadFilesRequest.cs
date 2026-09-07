@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRumUploadFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</para>
+        /// <para>The file type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>source-map: SourceMap file.</description></item>
+        /// <item><description>mapping: Android symbol table file.</description></item>
+        /// <item><description>dsym: iOS dSYM file.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>source-map</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The process ID (PID) of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aoxxxxxly@741623b4e91****</para>
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</para>
+        /// <para>The file version number. If this parameter is not specified, files of all versions are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class AddPrometheusGlobalViewResponseBody : TeaModel {
         /// <summary>
-        /// <para>状态码。说明 200表示成功。</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the array object.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public class AddPrometheusGlobalViewResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The Info-level information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedInstances: 数据源JSON list中，添加失败的单个JSON的list}</para>
             /// </summary>
             [NameInMap("Info")]
             [Validation(Required=false)]
@@ -37,14 +40,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The list of instances that failed to be added.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[{&quot;sourceName&quot;: &quot;Data source name- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</para>
+                /// <para>[{&quot;sourceName&quot;: &quot;数据源名称- ArmsPrometheus&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;userId&quot;:&quot;UserID&quot;,&quot;clusterId&quot;:&quot;ClusterId&quot;,}]</para>
                 /// </summary>
                 [NameInMap("FailedInstances")]
                 [Validation(Required=false)]
                 public string FailedInstances { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the global aggregation instance.</para>
+                /// <para>The aggregation instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>global-v2-cn-1483223059272121-jmjjfznz</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>The additional description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -76,10 +79,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Indicates whether the query was successful.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c></description></item>
-            /// <item><description><c>false</c></description></item>
+            /// <item><description><c>true</c>: Successful.</description></item>
+            /// <item><description><c>false</c>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// <para>返回结果的提示信息。</para>
+        /// <para>The message returned for the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34ED024E-9E31-434A-9E4E-D9D15C3****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetRumExceptionStackRequest : TeaModel {
         /// <summary>
-        /// <para>The binary images, which represent all executable files loaded into the process address space when a crash occurs.</para>
+        /// <para>The binary images, which represent all executable files loaded into the process address space at the time of the crash.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iOSDemo:arm64%3B1489F4D3-6DE2-300C-90E9-E1B869675351%3B0x0000000104064000\nAlibabaCloudRUM:arm64%3BAB7B3A8E-6CEE-325D-BCBB-8DA50E61804F%3B0x0000000106660000\nlibdispatch.dylib:arm</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ExceptionBinaryImages { get; set; }
 
         /// <summary>
-        /// <para>The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.</para>
+        /// <para>The error stack information in JSON list format. Each list element contains three fields: call_stack.info, call_stack.thread.name, and call_stack.thread.id, which represent the stack information, thread name, and thread ID, respectively. This is identical to the exception.stack field in the Simple Log Service logstore-rum.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ExceptionStack { get; set; }
 
         /// <summary>
-        /// <para>The ID of the exception thread.</para>
+        /// <para>The exception thread ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16643</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ExceptionThreadId { get; set; }
 
         /// <summary>
-        /// <para>Extra information about iOS symbol tables. You can leave this parameter empty.</para>
+        /// <para>The additional system symbol table information for iOS parsing. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GraphicsServices:system/GraphicsServices/85419099-269B-336D-86B4-0D52D0FF6923/GraphicsServices;WebCore:system/WebCore/BF44A3F4-85D4-38C8-BF26-197F06ADE273/WebCore</para>
@@ -82,15 +82,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>The parsing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>js: Parses JavaScript errors.</description></item>
-        /// <item><description>sym: Parses PC errors.</description></item>
-        /// <item><description>har: Parses HarmonyOS errors.</description></item>
-        /// <item><description>dSYM: Parses iOS errors.</description></item>
-        /// <item><description>so: Parses Android errors.</description></item>
+        /// <item><description>js: JavaScript error parsing</description></item>
+        /// <item><description>sym: PC parsing</description></item>
+        /// <item><description>har: HarmonyOS parsing</description></item>
+        /// <item><description>dSYM: iOS parsing</description></item>
+        /// <item><description>so: Android parsing.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>source-map</para>
+        /// <para>js</para>
         /// </summary>
         [NameInMap("SourcemapType")]
         [Validation(Required=false)]

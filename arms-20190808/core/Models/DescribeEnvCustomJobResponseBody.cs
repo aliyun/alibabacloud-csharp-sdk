@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>If the <b>encryptYaml</b> parameter is set to <c>true</c>, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Refer to supplementary instructions.</para>
+            /// <para>参见补充说明。</para>
             /// </summary>
             [NameInMap("ConfigYaml")]
             [Validation(Required=false)]

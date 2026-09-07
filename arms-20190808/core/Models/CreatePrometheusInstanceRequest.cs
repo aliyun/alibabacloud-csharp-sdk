@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class CreatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Does it require all child instances to be verified successfully before creating a GlobalView instance. The default is false, which means partial success is possible.</para>
+        /// <para>Specifies whether all sub-instances must pass validation before the GlobalView instance is created. Default value: false, which indicates that partial success is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public bool? AllSubClustersSuccess { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</para>
+        /// <para>The number of days to automatically archive data after the storage period expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates that data is not archived.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ACK cluster. This parameter is required if you set the ClusterType parameter to aliyun-cs.</para>
+        /// <para>The Container Service cluster ID. This parameter is required when ClusterType is set to aliyun-cs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc7a37ee31aea4ed1a059eff8034b****</para>
@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the created cluster. This parameter is required if you set the ClusterType parameter to remote-write or ecs.</para>
+        /// <para>The name of the cluster to create. This parameter is required when ClusterType is set to remote-write, ecs, or global-view.</para>
+        /// <para>For ecs instances, the ClusterName must follow the format &quot;name-vpc-id&quot;, and the name part cannot exceed 24 characters. Example: &quot;mytest1-vpc-xxxxxxxxxxx&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clusterNameOfTest</para>
@@ -50,15 +51,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The type of the Prometheus instance. Valid values:</para>
+        /// <para>The instance type. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>remote-write: Prometheus instance for Remote Write</description></item>
-        /// <item><description>ecs (unavailable): Prometheus instance for ECS</description></item>
-        /// <item><description>global-view: Prometheus instance for GlobalView</description></item>
-        /// <item><description>aliyun-cs: Prometheus instance for Container Service</description></item>
-        /// <item><description>cloud-product (unavailable): Prometheus instance for Alibaba Cloud services</description></item>
-        /// <item><description>cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring</description></item>
-        /// <item><description>flink (unavailable): Prometheus instance for Flink</description></item>
+        /// <item><description>remote-write: Prometheus for Remote Write.</description></item>
+        /// <item><description>ecs (no longer supported): Prometheus for ECS.</description></item>
+        /// <item><description>global-view: Prometheus for GlobalView.</description></item>
+        /// <item><description>aliyun-cs (no longer supported): Prometheus for Container Service.</description></item>
+        /// <item><description>cloud-product (no longer supported): Prometheus for Cloud Service.</description></item>
+        /// <item><description>cloud-monitor (no longer supported): Prometheus for Hybrid Cloud Monitoring.</description></item>
+        /// <item><description>flink (no longer supported): Prometheus for Flink.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The data storage duration. Unit: days.</para>
+        /// <para>The data storage duration, in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -80,7 +81,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.</para>
+        /// <para>The ID of the bound Grafana workspace. Set this parameter to &quot;free&quot; when you use the shared Grafana edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>grafana-bp1*****</para>
@@ -90,7 +91,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string GrafanaInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data. Empty: The user-defined default billing mode is used. If you do not specify a default value, you are charged based on the amount of reported metric data.</para>
+        /// <para>The Billable methods. Valid values:
+        /// POSTPAY: pay-as-you-go based on the number of reported metrics.
+        /// POSTPAY_GB: pay-as-you-go based on the volume of written metrics.
+        /// Empty: uses the default billing method configured by the user. If no default is configured, the system defaults to billing based on the number of reported metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. If you use a Prometheus instance to monitor an Alibaba Cloud service in China, this parameter must be set to cn-shanghai.</para>
+        /// <para>The actual region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxyexli2****</para>
@@ -121,7 +125,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group. This parameter is required if you set the ClusterType parameter to ecs.</para>
+        /// <para>The Network Security group ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp1********</para>
@@ -131,62 +135,61 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>JSON string for child instances of the globalView instance.</para>
+        /// <para>The JSON string of sub-instances for the GlobalView instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>When the clusterType is global view, this parameter needs to be passed: a list of information about the clusters that need to be aggregated.
-        /// Example:
+        /// <para>当clusterType为global-view时，需要传此参数：需要聚合的集群的信息列表；示例：
         /// [
-        ///   {
-        ///     &quot;Headers&quot;:{</para>
-        /// <pre><c>},
-        /// &quot;RegionId&quot;: &quot;cn hangzhou&quot;,
-        /// &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-        /// &quot;Extras&quot;:{
+        ///     {
+        ///         &quot;headers&quot;:{</para>
+        /// <pre><c>    },
+        ///     &quot;regionId&quot;:&quot;cn-hangzhou&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
         /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c39a1048921e04f***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;arms-luyao-test&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
         /// },
-        /// &quot;ClusterId&quot;: &quot;c39a1048921e04f ****************&quot;,
-        /// &quot;SourceName&quot;: &quot;test1&quot;,
-        /// &quot;DataSource&quot;: &quot;&quot;,
-        /// &quot;UserId&quot;: &quot;1672753 ******************&quot;
-        /// </c></pre>
-        /// <para>  },
-        ///   {
-        ///     &quot;Headers&quot;:{</para>
-        /// <pre><c>},
-        /// &quot;RegionId&quot;: &quot;cn beijing&quot;,
-        /// &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-        /// &quot;Extras&quot;:{
+        /// {
+        ///     &quot;headers&quot;:{
         /// 
-        /// },
-        /// &quot;ClusterId&quot;: &quot;c6b6485496d5b40 ****************&quot;,
-        /// &quot;SourceName&quot;: &quot;test2&quot;,
-        /// &quot;DataSource&quot;: &quot;&quot;,
-        /// &quot;UserId&quot;: &quot;1672753 ******************&quot;
-        /// </c></pre>
-        /// <para>  },
-        ///   {
-        ///     &quot;Headers&quot;:{</para>
-        /// <pre><c>},
-        /// &quot;RegionId&quot;: &quot;cn zhangjiakou&quot;,
-        /// &quot;SourceType&quot;: &quot;Alibaba Prometheus&quot;,
-        /// &quot;Extras&quot;:{
+        ///     },
+        ///     &quot;regionId&quot;:&quot;cn-beijing&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
         /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c6b6485496d5b40***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;agent-321-测试&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
         /// },
-        /// &quot;ClusterId&quot;: &quot;c261a4f3200c446 ****************&quot;,
-        /// &quot;SourceName&quot;: &quot;test3&quot;,
-        /// &quot;DataSource&quot;: &quot;&quot;,
-        /// &quot;UserId&quot;: &quot;1672753 ******************&quot;
+        /// {
+        ///     &quot;headers&quot;:{
+        /// 
+        ///     },
+        ///     &quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,
+        ///     &quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,
+        ///     &quot;extras&quot;:{
+        /// 
+        ///     },
+        ///     &quot;clusterId&quot;:&quot;c261a4f3200c446***********&quot;,
+        ///     &quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,
+        ///     &quot;dataSource&quot;:&quot;&quot;,
+        ///     &quot;userId&quot;:&quot;1672753***********&quot;
+        /// }
         /// </c></pre>
-        /// <para>  }
-        /// ]</para>
+        /// <para>]</para>
         /// </summary>
         [NameInMap("SubClustersJson")]
         [Validation(Required=false)]
         public string SubClustersJson { get; set; }
 
         /// <summary>
-        /// <para>The tags of the instance. You can configure this parameter to manage tags for the instance.</para>
+        /// <para>The custom tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -203,6 +206,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public List<CreatePrometheusInstanceRequestTags> Tags { get; set; }
         public class CreatePrometheusInstanceRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
             /// </summary>
@@ -211,6 +216,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
             /// </summary>
@@ -221,7 +228,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. This parameter is required if you set the ClusterType parameter to ecs.</para>
+        /// <para>The vSwitch ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1*********</para>
@@ -231,7 +238,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of virtual private cloud (VPC). This parameter is required if you set the ClusterType parameter to ecs.</para>
+        /// <para>The VPC ID. This parameter is required when ClusterType is set to ecs or aliyun-cs for a managed ASK cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-rpn**********</para>

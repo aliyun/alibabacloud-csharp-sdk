@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>Indicates whether targets are matched.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Match successful.</para>
+            /// <para>匹配成功。</para>
             /// </summary>
             [NameInMap("MatchedMsg")]
             [Validation(Required=false)]

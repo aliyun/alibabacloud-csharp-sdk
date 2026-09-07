@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a global aggregation instance in Prometheus Service.</para>
+        /// <para>Adds an aggregation instance for ARMS Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -631,7 +631,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a global aggregation instance in Prometheus Service.</para>
+        /// <para>Adds an aggregation instance for ARMS Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -695,7 +695,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a global aggregation instance in Prometheus Service.</para>
+        /// <para>Adds an aggregation instance for ARMS Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -719,7 +719,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a global aggregation instance in Prometheus Service.</para>
+        /// <para>Adds an aggregation instance for ARMS Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1745,6 +1745,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await AppendInstancesToPrometheusGlobalViewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create or update Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ApplyScenarioRequest
         /// </param>
@@ -1828,6 +1833,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ApplyScenarioResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create or update Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ApplyScenarioRequest
         /// </param>
@@ -1911,6 +1921,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ApplyScenarioResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create or update Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ApplyScenarioRequest
         /// </param>
@@ -1924,6 +1939,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return ApplyScenarioWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create or update Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ApplyScenarioRequest
         /// </param>
@@ -2539,12 +2559,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Application Real-Time Monitoring Service (ARMS) is available for commercial use in a region.</para>
+        /// <para>Checks the commercial activation status of a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to check whether ARMS is available for commercial use in a region.</para>
+        /// <para>Retrieves the commercial activation status of a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2582,12 +2602,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Application Real-Time Monitoring Service (ARMS) is available for commercial use in a region.</para>
+        /// <para>Checks the commercial activation status of a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to check whether ARMS is available for commercial use in a region.</para>
+        /// <para>Retrieves the commercial activation status of a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2625,12 +2645,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Application Real-Time Monitoring Service (ARMS) is available for commercial use in a region.</para>
+        /// <para>Checks the commercial activation status of a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to check whether ARMS is available for commercial use in a region.</para>
+        /// <para>Retrieves the commercial activation status of a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2648,12 +2668,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether Application Real-Time Monitoring Service (ARMS) is available for commercial use in a region.</para>
+        /// <para>Checks the commercial activation status of a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to check whether ARMS is available for commercial use in a region.</para>
+        /// <para>Retrieves the commercial activation status of a product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3590,6 +3610,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDispatchRuleRequest
         /// </param>
@@ -3635,6 +3660,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Creates a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDispatchRuleRequest
@@ -3682,6 +3712,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateDispatchRuleRequest
         /// </param>
@@ -3699,6 +3734,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Creates a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDispatchRuleRequest
@@ -4399,19 +4439,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace in Managed Service for Grafana.</para>
+        /// <para>Create a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</para>
+        /// <para>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To create workspaces, you must complete real-name verification.</description></item>
-        /// <item><description>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <c>These editions charge fees.</c></description></item>
-        /// <item><description>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <c>These editions do not charge fees.</c></description></item>
+        /// <item><description>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </description></item>
+        /// <item><description>Regular users can only create Developer, Expert, or Pro editions (<c>fees apply</c>).  </description></item>
+        /// <item><description>Internal testing users can only create the internal testing edition (<c>free of charge</c>).</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4511,19 +4551,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace in Managed Service for Grafana.</para>
+        /// <para>Create a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</para>
+        /// <para>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To create workspaces, you must complete real-name verification.</description></item>
-        /// <item><description>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <c>These editions charge fees.</c></description></item>
-        /// <item><description>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <c>These editions do not charge fees.</c></description></item>
+        /// <item><description>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </description></item>
+        /// <item><description>Regular users can only create Developer, Expert, or Pro editions (<c>fees apply</c>).  </description></item>
+        /// <item><description>Internal testing users can only create the internal testing edition (<c>free of charge</c>).</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4623,19 +4663,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace in Managed Service for Grafana.</para>
+        /// <para>Create a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</para>
+        /// <para>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To create workspaces, you must complete real-name verification.</description></item>
-        /// <item><description>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <c>These editions charge fees.</c></description></item>
-        /// <item><description>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <c>These editions do not charge fees.</c></description></item>
+        /// <item><description>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </description></item>
+        /// <item><description>Regular users can only create Developer, Expert, or Pro editions (<c>fees apply</c>).  </description></item>
+        /// <item><description>Internal testing users can only create the internal testing edition (<c>free of charge</c>).</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4653,19 +4693,19 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace in Managed Service for Grafana.</para>
+        /// <para>Create a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call the operation, make sure that you have learned about the billing methods and <a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of Managed Service for Grafana.</para>
+        /// <para>Ensure that you fully understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/grafana/product-overview/billing-4?spm=openapi-amp.newDocPublishment.0.0.7453281fkrsWrp">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt">pricing</a> of the Managed Service for Grafana product before using this API.  </para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>To create workspaces, you must complete real-name verification.</description></item>
-        /// <item><description>Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. <c>These editions charge fees.</c></description></item>
-        /// <item><description>Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. <c>These editions do not charge fees.</c></description></item>
+        /// <item><description>Identity verification is required to create a Managed Service for Grafana instance. &lt;props=&quot;china&quot;&gt;You can refer to the <a href="https://help.aliyun.com/zh/account/user-guide/individual-identities">Account Identity Verification</a> documentation to complete the verification.  </description></item>
+        /// <item><description>Regular users can only create Developer, Expert, or Pro editions (<c>fees apply</c>).  </description></item>
+        /// <item><description>Internal testing users can only create the internal testing edition (<c>free of charge</c>).</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4679,6 +4719,182 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>指定工作区下创建账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public CreateGrafanaWorkspaceAccountResponse CreateGrafanaWorkspaceAccountWithOptions(CreateGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNotes))
+            {
+                query["AccountNotes"] = request.AccountNotes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
+            {
+                query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            {
+                query["AliyunUid"] = request.AliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGrafanaWorkspaceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>指定工作区下创建账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<CreateGrafanaWorkspaceAccountResponse> CreateGrafanaWorkspaceAccountWithOptionsAsync(CreateGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNotes))
+            {
+                query["AccountNotes"] = request.AccountNotes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
+            {
+                query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunUid))
+            {
+                query["AliyunUid"] = request.AliyunUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGrafanaWorkspaceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>指定工作区下创建账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public CreateGrafanaWorkspaceAccountResponse CreateGrafanaWorkspaceAccount(CreateGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGrafanaWorkspaceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>指定工作区下创建账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<CreateGrafanaWorkspaceAccountResponse> CreateGrafanaWorkspaceAccountAsync(CreateGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGrafanaWorkspaceAccountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4847,7 +5063,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule.</para>
+        /// <para>Create or modify alarm rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5009,7 +5225,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule.</para>
+        /// <para>Create or modify alarm rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5171,7 +5387,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule.</para>
+        /// <para>Create or modify alarm rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5189,7 +5405,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an alert rule.</para>
+        /// <para>Create or modify alarm rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6490,6 +6706,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreatePrometheusAlertRuleRequest
         /// </param>
@@ -6575,6 +6798,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Creates an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePrometheusAlertRuleRequest
@@ -6662,6 +6892,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreatePrometheusAlertRuleRequest
         /// </param>
@@ -6680,6 +6917,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>建议使用<a href="https://help.aliyun.com/document_detail/411960.html">CreateOrUpdateAlertRule</a>接口创建Prometheus告警规则。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreatePrometheusAlertRuleRequest
         /// </param>
@@ -6695,7 +6939,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6793,7 +7037,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6891,7 +7135,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6909,7 +7153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7479,12 +7723,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</para>
+        /// <para>Generates a presigned URL for uploading application artifacts, such as source map files, symbol table files, and dSYM files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</para>
+        /// <para>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7562,12 +7806,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</para>
+        /// <para>Generates a presigned URL for uploading application artifacts, such as source map files, symbol table files, and dSYM files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</para>
+        /// <para>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7645,12 +7889,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</para>
+        /// <para>Generates a presigned URL for uploading application artifacts, such as source map files, symbol table files, and dSYM files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</para>
+        /// <para>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7668,12 +7912,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a file upload URL to upload SourceMap files, symbol table files, or dSYM files.</para>
+        /// <para>Generates a presigned URL for uploading application artifacts, such as source map files, symbol table files, and dSYM files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation returns a URL. You can upload files to the URL. For more information, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload local files with signed URLs</a>.</para>
+        /// <para>This operation returns a presigned URL for uploading a file. For instructions, see <a href="https://help.aliyun.com/document_detail/2579659.html">Upload files by using URLs</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7986,6 +8230,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates a scheduled synthetic test task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// CreateTimingSyntheticTaskRequest
         /// </param>
@@ -8097,6 +8346,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Creates a scheduled synthetic test task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTimingSyntheticTaskRequest
@@ -8210,6 +8464,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates a scheduled synthetic test task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTimingSyntheticTaskRequest
         /// </param>
@@ -8228,6 +8487,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Creates a scheduled synthetic test task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTimingSyntheticTaskRequest
         /// </param>
@@ -8245,6 +8509,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Adds a contact for webhook alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWebhookRequest
@@ -8316,6 +8585,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Adds a contact for webhook alerts.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateWebhookRequest
         /// </param>
@@ -8386,6 +8660,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Adds a contact for webhook alerts.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateWebhookRequest
         /// </param>
@@ -8403,6 +8682,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Adds a contact for webhook alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateWebhookContact接口创建或修改Webhook告警联系人。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWebhookRequest
@@ -8850,6 +9134,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes an DeleteAlertContactGroup contact group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAlertContactGroupRequest
         /// </param>
@@ -8895,6 +9184,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes an DeleteAlertContactGroup contact group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAlertContactGroupRequest
@@ -8942,6 +9236,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes an DeleteAlertContactGroup contact group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteAlertContactGroupRequest
         /// </param>
@@ -8959,6 +9258,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes an DeleteAlertContactGroup contact group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteContactGroup接口删除告警联系人组。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAlertContactGroupRequest
@@ -9375,7 +9679,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls a Prometheus instance.</para>
+        /// <para>Uninstall Prometheus for an Alibaba Cloud service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9427,7 +9731,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls a Prometheus instance.</para>
+        /// <para>Uninstall Prometheus for an Alibaba Cloud service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9479,7 +9783,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls a Prometheus instance.</para>
+        /// <para>Uninstall Prometheus for an Alibaba Cloud service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9503,7 +9807,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uninstalls a Prometheus instance.</para>
+        /// <para>Uninstall Prometheus for an Alibaba Cloud service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9766,6 +10070,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes the dispatch policy of a specified ID.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDispatchRuleRequest
         /// </param>
@@ -9811,6 +10120,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes the dispatch policy of a specified ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDispatchRuleRequest
@@ -9858,6 +10172,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes the dispatch policy of a specified ID.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDispatchRuleRequest
         /// </param>
@@ -9875,6 +10194,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes the dispatch policy of a specified ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的DeleteNotificationPolicy接口删除指定ID的通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDispatchRuleRequest
@@ -10871,15 +11195,20 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Managed Service for Prometheus workspace.</para>
+        /// <para>Deletes a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <c>free of charge</c>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;&gt;</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</description></item>
+        /// <item><description>This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
+        /// <item><description>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10925,15 +11254,20 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Managed Service for Prometheus workspace.</para>
+        /// <para>Deletes a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <c>free of charge</c>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;&gt;</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</description></item>
+        /// <item><description>This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
+        /// <item><description>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10979,15 +11313,20 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Managed Service for Prometheus workspace.</para>
+        /// <para>Deletes a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <c>free of charge</c>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;&gt;</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</description></item>
+        /// <item><description>This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
+        /// <item><description>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -11005,15 +11344,20 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Managed Service for Prometheus workspace.</para>
+        /// <para>Deletes a Managed Service for Grafana workspace instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is <c>free of charge</c>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;&gt;</para>
+        /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the <a href="https://usercenter2.aliyun.com/refund/refund">User Center</a> to unsubscribe from workspaces.</description></item>
+        /// <item><description>This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
+        /// <item><description>Developer Edition, Pro Edition, and Advanced Edition instances do not support deletion. Go to <a href="https://usercenter2.aliyun.com/refund/refund">Expenses and Costs</a> to unsubscribe from the resource.
+        /// &lt;props=&quot;intl&quot;&gt;
+        /// This operation supports deletion only for beta (<c>free</c>) Grafana instances.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -11027,6 +11371,286 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public DeleteGrafanaWorkspaceAccountResponse DeleteGrafanaWorkspaceAccountWithOptions(DeleteGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<DeleteGrafanaWorkspaceAccountResponse> DeleteGrafanaWorkspaceAccountWithOptionsAsync(DeleteGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public DeleteGrafanaWorkspaceAccountResponse DeleteGrafanaWorkspaceAccount(DeleteGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGrafanaWorkspaceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<DeleteGrafanaWorkspaceAccountResponse> DeleteGrafanaWorkspaceAccountAsync(DeleteGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGrafanaWorkspaceAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public DeleteGrafanaWorkspaceAccountRoleResponse DeleteGrafanaWorkspaceAccountRoleWithOptions(DeleteGrafanaWorkspaceAccountRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspaceAccountRole",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceAccountRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public async Task<DeleteGrafanaWorkspaceAccountRoleResponse> DeleteGrafanaWorkspaceAccountRoleWithOptionsAsync(DeleteGrafanaWorkspaceAccountRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGrafanaWorkspaceAccountRole",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGrafanaWorkspaceAccountRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public DeleteGrafanaWorkspaceAccountRoleResponse DeleteGrafanaWorkspaceAccountRole(DeleteGrafanaWorkspaceAccountRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteGrafanaWorkspaceAccountRoleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public async Task<DeleteGrafanaWorkspaceAccountRoleResponse> DeleteGrafanaWorkspaceAccountRoleAsync(DeleteGrafanaWorkspaceAccountRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteGrafanaWorkspaceAccountRoleWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12447,12 +13071,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file such as a symbol table or SourceMap.</para>
+        /// <para>Deletes files such as symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12522,12 +13146,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file such as a symbol table or SourceMap.</para>
+        /// <para>Deletes files such as symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12597,12 +13221,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file such as a symbol table or SourceMap.</para>
+        /// <para>Deletes files such as symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12620,12 +13244,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a file such as a symbol table or SourceMap.</para>
+        /// <para>Deletes files such as symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in Hangzhou, Singapore, and Silicon Valley. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12641,6 +13265,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await DeleteRumUploadFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScenarioRequest
         /// </param>
@@ -12682,6 +13311,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteScenarioResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScenarioRequest
         /// </param>
@@ -12723,6 +13357,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<DeleteScenarioResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScenarioRequest
         /// </param>
@@ -12736,6 +13375,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return DeleteScenarioWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a Business Monitoring.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScenarioRequest
         /// </param>
@@ -13150,6 +13794,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes a scheduled synthetic monitoring task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTimingSyntheticTaskRequest
         /// </param>
@@ -13199,6 +13848,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes a scheduled synthetic monitoring task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTimingSyntheticTaskRequest
@@ -13250,6 +13904,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Deletes a scheduled synthetic monitoring task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteTimingSyntheticTaskRequest
         /// </param>
@@ -13267,6 +13926,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Deletes a scheduled synthetic monitoring task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTimingSyntheticTaskRequest
@@ -14194,6 +14858,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Queries the information about a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDispatchRuleRequest
         /// </param>
@@ -14239,6 +14908,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Queries the information about a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDispatchRuleRequest
@@ -14286,6 +14960,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Queries the information about a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDispatchRuleRequest
         /// </param>
@@ -14303,6 +14982,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Queries the information about a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的ListNotificationPolicies接口查询通知策略信息。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDispatchRuleRequest
@@ -14463,7 +15147,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
+        /// <para>Queries the metric drop rule for a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14509,7 +15193,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
+        /// <para>Queries the metric drop rule for a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14555,7 +15239,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
+        /// <para>Queries the metric drop rule for a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14573,7 +15257,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of discarded metrics of a specified environment instance.</para>
+        /// <para>Queries the metric drop rule for a specified environment instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15655,7 +16339,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs actions based on the specified module type.</para>
+        /// <para>Executes the corresponding action based on the module type specified by the parameter.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15707,7 +16391,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs actions based on the specified module type.</para>
+        /// <para>Executes the corresponding action based on the module type specified by the parameter.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15759,7 +16443,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs actions based on the specified module type.</para>
+        /// <para>Executes the corresponding action based on the module type specified by the parameter.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15777,7 +16461,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs actions based on the specified module type.</para>
+        /// <para>Executes the corresponding action based on the module type specified by the parameter.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16203,7 +16887,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert rules.</para>
+        /// <para>Query the created alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16285,7 +16969,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert rules.</para>
+        /// <para>Query the created alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16367,7 +17051,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert rules.</para>
+        /// <para>Query the created alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16385,7 +17069,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries alert rules.</para>
+        /// <para>Query the created alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17247,7 +17931,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Explore feature of Grafana.</para>
+        /// <para>Retrieves data using the Explore feature of Grafana.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17307,7 +17991,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Explore feature of Grafana.</para>
+        /// <para>Retrieves data using the Explore feature of Grafana.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17367,7 +18051,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Explore feature of Grafana.</para>
+        /// <para>Retrieves data using the Explore feature of Grafana.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17391,7 +18075,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Explore feature of Grafana.</para>
+        /// <para>Retrieves data using the Explore feature of Grafana.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18063,7 +18747,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduling policy.</para>
+        /// <para>Use the GetOnCallSchedulesDetail API to retrieve the details of an on-call schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18101,7 +18785,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduling policy.</para>
+        /// <para>Use the GetOnCallSchedulesDetail API to retrieve the details of an on-call schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18139,7 +18823,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduling policy.</para>
+        /// <para>Use the GetOnCallSchedulesDetail API to retrieve the details of an on-call schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18157,7 +18841,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduling policy.</para>
+        /// <para>Use the GetOnCallSchedulesDetail API to retrieve the details of an on-call schedule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18443,7 +19127,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Prometheus instance.</para>
+        /// <para>Retrieves information about a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18489,7 +19173,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Prometheus instance.</para>
+        /// <para>Retrieves information about a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18535,7 +19219,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Prometheus instance.</para>
+        /// <para>Retrieves information about a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18553,7 +19237,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Prometheus instance.</para>
+        /// <para>Retrieves information about a specified Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19571,12 +20255,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a single application in Browser Monitoring.</para>
+        /// <para>Retrieves a single Frontend Monitoring application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19626,12 +20310,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a single application in Browser Monitoring.</para>
+        /// <para>Retrieves a single Frontend Monitoring application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19681,12 +20365,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a single application in Browser Monitoring.</para>
+        /// <para>Retrieves a single Frontend Monitoring application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19704,12 +20388,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a single application in Browser Monitoring.</para>
+        /// <para>Retrieves a single Frontend Monitoring application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>User experience monitoring is available only in China (Hangzhou), Asia Pacific SE 1 (Singapore), and US West 1 (Silicon Valley). Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20123,12 +20807,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exception stack information of a Real User Monitoring (RUM) application.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) exception stack information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20202,12 +20886,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exception stack information of a Real User Monitoring (RUM) application.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) exception stack information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20281,12 +20965,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exception stack information of a Real User Monitoring (RUM) application.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) exception stack information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20304,12 +20988,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exception stack information of a Real User Monitoring (RUM) application.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) exception stack information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20479,12 +21163,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) related files, including symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20558,12 +21242,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) related files, including symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20637,12 +21321,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) related files, including symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20660,12 +21344,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Real User Monitoring (RUM)-related files, such as symbol tables and SourceMap.</para>
+        /// <para>Retrieves Real User Monitoring (RUM) related files, including symbol tables and SourceMap files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21014,6 +21698,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains detection points.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// GetSyntheticMonitorsRequest
         /// </param>
@@ -21057,6 +21746,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Obtains detection points.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSyntheticMonitorsRequest
@@ -21102,6 +21796,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains detection points.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSyntheticMonitorsRequest
         /// </param>
@@ -21119,6 +21818,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Obtains detection points.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSyntheticMonitorsRequest
@@ -21570,6 +22274,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains the details of a synthetic monitoring task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTimingSyntheticTaskRequest
         /// </param>
@@ -21607,6 +22316,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Obtains the details of a synthetic monitoring task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTimingSyntheticTaskRequest
@@ -21646,6 +22360,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains the details of a synthetic monitoring task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetTimingSyntheticTaskRequest
         /// </param>
@@ -21663,6 +22382,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Obtains the details of a synthetic monitoring task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTimingSyntheticTaskRequest
@@ -22119,6 +22843,154 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetTraceAppConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>代理指定工作区的HTTP API 接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrafanaWorkspaceHttpApiProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrafanaWorkspaceHttpApiProxyResponse
+        /// </returns>
+        public GrafanaWorkspaceHttpApiProxyResponse GrafanaWorkspaceHttpApiProxyWithOptions(GrafanaWorkspaceHttpApiProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyStr))
+            {
+                body["BodyStr"] = request.BodyStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrafanaWorkspaceHttpApiProxy",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrafanaWorkspaceHttpApiProxyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>代理指定工作区的HTTP API 接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrafanaWorkspaceHttpApiProxyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrafanaWorkspaceHttpApiProxyResponse
+        /// </returns>
+        public async Task<GrafanaWorkspaceHttpApiProxyResponse> GrafanaWorkspaceHttpApiProxyWithOptionsAsync(GrafanaWorkspaceHttpApiProxyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyStr))
+            {
+                body["BodyStr"] = request.BodyStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GrafanaWorkspaceHttpApiProxy",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GrafanaWorkspaceHttpApiProxyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>代理指定工作区的HTTP API 接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrafanaWorkspaceHttpApiProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrafanaWorkspaceHttpApiProxyResponse
+        /// </returns>
+        public GrafanaWorkspaceHttpApiProxyResponse GrafanaWorkspaceHttpApiProxy(GrafanaWorkspaceHttpApiProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GrafanaWorkspaceHttpApiProxyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>代理指定工作区的HTTP API 接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GrafanaWorkspaceHttpApiProxyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GrafanaWorkspaceHttpApiProxyResponse
+        /// </returns>
+        public async Task<GrafanaWorkspaceHttpApiProxyResponse> GrafanaWorkspaceHttpApiProxyAsync(GrafanaWorkspaceHttpApiProxyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GrafanaWorkspaceHttpApiProxyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22995,12 +23867,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Create a managed (ASK/ECS) Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</para>
+        /// <para>This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\&quot;s cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23088,12 +23960,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Create a managed (ASK/ECS) Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</para>
+        /// <para>This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\&quot;s cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23181,12 +24053,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Create a managed (ASK/ECS) Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</para>
+        /// <para>This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\&quot;s cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23210,12 +24082,12 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a Prometheus agent for serverless Kubernetes (ASK) clusters or Elastic Compute Service (ECS) clusters.</para>
+        /// <para>Create a managed (ASK/ECS) Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.</para>
+        /// <para>This applies only to ASK and ECS instances, and only if Alibaba Cloud Prometheus has not been previously installed on the cluster. The managed Prometheus instance will be installed on the cloud service side and will not be visible within the user\&quot;s cluster.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23235,8 +24107,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alerts that have been triggered.</para>
+        /// <para>Invoke the ListActivatedAlerts API to query the list of triggered alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListActivatedAlertsRequest
@@ -23289,8 +24166,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alerts that have been triggered.</para>
+        /// <para>Invoke the ListActivatedAlerts API to query the list of triggered alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListActivatedAlertsRequest
@@ -23343,8 +24225,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alerts that have been triggered.</para>
+        /// <para>Invoke the ListActivatedAlerts API to query the list of triggered alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListActivatedAlertsRequest
@@ -23361,8 +24248,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alerts that have been triggered.</para>
+        /// <para>Invoke the ListActivatedAlerts API to query the list of triggered alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the ListAlerts API of the new alert management system to query the alert sending history.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListActivatedAlertsRequest
@@ -23379,7 +24271,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the add-ons installed in an environment.</para>
+        /// <para>Queries the addons installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23429,7 +24321,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the add-ons installed in an environment.</para>
+        /// <para>Queries the addons installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23479,7 +24371,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the add-ons installed in an environment.</para>
+        /// <para>Queries the addons installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23497,7 +24389,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the add-ons installed in an environment.</para>
+        /// <para>Queries the addons installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24207,7 +25099,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the collection of cloud services.</para>
+        /// <para>Queries the data collection status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24263,7 +25155,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the collection of cloud services.</para>
+        /// <para>Queries the data collection status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24319,7 +25211,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the collection of cloud services.</para>
+        /// <para>Queries the data collection status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24343,7 +25235,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the collection of cloud services.</para>
+        /// <para>Queries the data collection status of cloud services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25315,7 +26207,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
+        /// <para>Lists the add-ons installed in a specified environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25361,7 +26253,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
+        /// <para>Lists the add-ons installed in a specified environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25407,7 +26299,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
+        /// <para>Lists the add-ons installed in a specified environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25425,7 +26317,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
+        /// <para>Lists the add-ons installed in a specified environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26759,6 +27651,142 @@ namespace AlibabaCloud.SDK.ARMS20190808
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListGrafanaWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作区下的阿里云账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public ListGrafanaWorkspaceAccountResponse ListGrafanaWorkspaceAccountWithOptions(ListGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGrafanaWorkspaceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作区下的阿里云账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<ListGrafanaWorkspaceAccountResponse> ListGrafanaWorkspaceAccountWithOptionsAsync(ListGrafanaWorkspaceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGrafanaWorkspaceAccount",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGrafanaWorkspaceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作区下的阿里云账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public ListGrafanaWorkspaceAccountResponse ListGrafanaWorkspaceAccount(ListGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListGrafanaWorkspaceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定工作区下的阿里云账号列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListGrafanaWorkspaceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGrafanaWorkspaceAccountResponse
+        /// </returns>
+        public async Task<ListGrafanaWorkspaceAccountResponse> ListGrafanaWorkspaceAccountAsync(ListGrafanaWorkspaceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListGrafanaWorkspaceAccountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -28469,6 +29497,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await ListRetcodeAppsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain Business Monitoring details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScenarioRequest
         /// </param>
@@ -28522,6 +29555,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ListScenarioResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain Business Monitoring details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScenarioRequest
         /// </param>
@@ -28575,6 +29613,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<ListScenarioResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain Business Monitoring details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScenarioRequest
         /// </param>
@@ -28588,6 +29631,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return ListScenarioWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain Business Monitoring details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScenarioRequest
         /// </param>
@@ -28758,6 +29806,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains the results of one or more synthetic tests.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ListSyntheticDetailRequest
         /// </param>
@@ -28809,6 +29862,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Obtains the results of one or more synthetic tests.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListSyntheticDetailRequest
@@ -28862,6 +29920,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains the results of one or more synthetic tests.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSyntheticDetailRequest
         /// </param>
@@ -28880,6 +29943,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Obtains the results of one or more synthetic tests.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州 region 提供服务，使用 SDK 或 OpenAPI 时请选择杭州 region 对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSyntheticDetailRequest
         /// </param>
@@ -28897,6 +29965,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Queries scheduled synthetic monitoring tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListTimingSyntheticTasksRequest
@@ -28946,6 +30019,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Queries scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ListTimingSyntheticTasksRequest
         /// </param>
@@ -28994,6 +30072,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Queries scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTimingSyntheticTasksRequest
         /// </param>
@@ -29011,6 +30094,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Queries scheduled synthetic monitoring tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTimingSyntheticTasksRequest
@@ -29767,7 +30855,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encoding mapping content based on the metadata IDs and metadata type.</para>
+        /// <para>Queries application metadata by ID and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29805,7 +30893,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encoding mapping content based on the metadata IDs and metadata type.</para>
+        /// <para>Queries application metadata by ID and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29843,7 +30931,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encoding mapping content based on the metadata IDs and metadata type.</para>
+        /// <para>Queries application metadata by ID and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29861,7 +30949,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encoding mapping content based on the metadata IDs and metadata type.</para>
+        /// <para>Queries application metadata by ID and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33599,8 +34687,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动报警</para>
+        /// <para>Invoke the StartAlert API to start an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAlertRequest
@@ -33645,8 +34738,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动报警</para>
+        /// <para>Invoke the StartAlert API to start an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAlertRequest
@@ -33691,8 +34789,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动报警</para>
+        /// <para>Invoke the StartAlert API to start an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAlertRequest
@@ -33709,8 +34812,13 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动报警</para>
+        /// <para>Invoke the StartAlert API to start an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the AlertStatus parameter of the CreateOrUpdateAlertRule API in the new alert management system to update the running status of an alert rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAlertRequest
@@ -33729,6 +34837,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Starts scheduled synthetic monitoring tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StartTimingSyntheticTaskRequest
@@ -33782,6 +34895,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Starts scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// StartTimingSyntheticTaskRequest
         /// </param>
@@ -33834,6 +34952,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Starts scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartTimingSyntheticTaskRequest
         /// </param>
@@ -33852,6 +34975,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Starts scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartTimingSyntheticTaskRequest
         /// </param>
@@ -33869,6 +34997,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Call StartAlert to stop an alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAlertRequest
@@ -33916,6 +35049,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Call StartAlert to stop an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopAlertRequest
         /// </param>
@@ -33962,6 +35100,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Call StartAlert to stop an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopAlertRequest
         /// </param>
@@ -33980,6 +35123,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Call StartAlert to stop an alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理CreateOrUpdateAlertRule接口的AlertStatus参数更新告警规则运行状态。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopAlertRequest
         /// </param>
@@ -33997,6 +35145,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Stops scheduled synthetic monitoring tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// StopTimingSyntheticTaskRequest
@@ -34050,6 +35203,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Stops scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// StopTimingSyntheticTaskRequest
         /// </param>
@@ -34102,6 +35260,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Stops scheduled synthetic monitoring tasks.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopTimingSyntheticTaskRequest
         /// </param>
@@ -34119,6 +35282,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Stops scheduled synthetic monitoring tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopTimingSyntheticTaskRequest
@@ -34267,7 +35435,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the aggregation rule of a cluster to other clusters in a region.</para>
+        /// <para>Batch synchronizes the aggregation rules of a cluster to other target clusters across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34323,7 +35491,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the aggregation rule of a cluster to other clusters in a region.</para>
+        /// <para>Batch synchronizes the aggregation rules of a cluster to other target clusters across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34379,7 +35547,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the aggregation rule of a cluster to other clusters in a region.</para>
+        /// <para>Batch synchronizes the aggregation rules of a cluster to other target clusters across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34403,7 +35571,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronizes the aggregation rule of a cluster to other clusters in a region.</para>
+        /// <para>Batch synchronizes the aggregation rules of a cluster to other target clusters across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35234,6 +36402,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates UpdateAlertContactGroup alarm contact group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertContactGroupRequest
         /// </param>
@@ -35287,6 +36460,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Updates UpdateAlertContactGroup alarm contact group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAlertContactGroupRequest
@@ -35342,6 +36520,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates UpdateAlertContactGroup alarm contact group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertContactGroupRequest
         /// </param>
@@ -35360,6 +36543,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates UpdateAlertContactGroup alarm contact group.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateContactGroup接口创建或修改告警联系人组。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertContactGroupRequest
         /// </param>
@@ -35373,6 +36561,16 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return await UpdateAlertContactGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke the UpdateAlertRule API to update an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertRuleRequest
         /// </param>
@@ -35426,6 +36624,16 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<UpdateAlertRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke the UpdateAlertRule API to update an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertRuleRequest
         /// </param>
@@ -35479,6 +36687,16 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return TeaModel.ToObject<UpdateAlertRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke the UpdateAlertRule API to update an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertRuleRequest
         /// </param>
@@ -35492,6 +36710,16 @@ namespace AlibabaCloud.SDK.ARMS20190808
             return UpdateAlertRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke the UpdateAlertRule API to update an alert rule.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is no longer maintained. Use the CreateOrUpdateAlertRule API of the new alert management system to create or modify an alert rule.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAlertRuleRequest
         /// </param>
@@ -35509,6 +36737,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Modifies a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDispatchRuleRequest
@@ -35556,6 +36789,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Modifies a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDispatchRuleRequest
         /// </param>
@@ -35602,6 +36840,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Modifies a dispatch policy.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDispatchRuleRequest
         /// </param>
@@ -35619,6 +36862,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Modifies a dispatch policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>当前接口已不再维护，请使用新版告警管理的CreateOrUpdateNotificationPolicy接口创建或修改通知策略。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDispatchRuleRequest
@@ -36595,6 +37843,158 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public UpdateGrafanaWorkspaceAccountRoleResponse UpdateGrafanaWorkspaceAccountRoleWithOptions(UpdateGrafanaWorkspaceAccountRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspaceAccountRole",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceAccountRoleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public async Task<UpdateGrafanaWorkspaceAccountRoleResponse> UpdateGrafanaWorkspaceAccountRoleWithOptionsAsync(UpdateGrafanaWorkspaceAccountRoleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrafanaWorkspaceId))
+            {
+                query["GrafanaWorkspaceId"] = request.GrafanaWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGrafanaWorkspaceAccountRole",
+                Version = "2019-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGrafanaWorkspaceAccountRoleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public UpdateGrafanaWorkspaceAccountRoleResponse UpdateGrafanaWorkspaceAccountRole(UpdateGrafanaWorkspaceAccountRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateGrafanaWorkspaceAccountRoleWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改指定工作区下账号的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGrafanaWorkspaceAccountRoleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGrafanaWorkspaceAccountRoleResponse
+        /// </returns>
+        public async Task<UpdateGrafanaWorkspaceAccountRoleResponse> UpdateGrafanaWorkspaceAccountRoleAsync(UpdateGrafanaWorkspaceAccountRoleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateGrafanaWorkspaceAccountRoleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the version of a Grafana workspace.</para>
         /// </summary>
         /// 
@@ -37146,6 +38546,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdatePrometheusAlertRuleRequest
         /// </param>
@@ -37235,6 +38640,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePrometheusAlertRuleRequest
@@ -37326,6 +38736,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdatePrometheusAlertRuleRequest
         /// </param>
@@ -37343,6 +38758,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Updates a Prometheus alert rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>UpdatePrometheusAlertRule 接口已不再维护，请使用 CreateOrUpdateAlertRule 接口创建或修改告警规则。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePrometheusAlertRuleRequest
@@ -37551,7 +38971,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37633,7 +39053,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37715,7 +39135,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37733,7 +39153,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a Prometheus instance.</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38288,7 +39708,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38387,7 +39807,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38486,7 +39906,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38509,7 +39929,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
+        /// <para>Real User Monitoring is currently available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38718,6 +40138,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates a scheduled synthetic test task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateTimingSyntheticTaskRequest
         /// </param>
@@ -38825,6 +40250,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Updates a scheduled synthetic test task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateTimingSyntheticTaskRequest
@@ -38934,6 +40364,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <para>Updates a scheduled synthetic test task.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateTimingSyntheticTaskRequest
         /// </param>
@@ -38951,6 +40386,11 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// <summary>
         /// <para>Updates a scheduled synthetic test task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>云拨测目前仅在杭州region提供服务，使用SDK或OpenAPI时请选择杭州region对应的服务接入点。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTimingSyntheticTaskRequest

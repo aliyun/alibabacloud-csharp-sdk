@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The name of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test alert</para>
+        /// <para>告警测试</para>
         /// </summary>
         [NameInMap("AlertName")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The notification object configured in the notification policy, responsible for handling alerts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alice</para>
+        /// <para>张三</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]

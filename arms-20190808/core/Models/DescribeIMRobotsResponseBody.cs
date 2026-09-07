@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The name of the notification policy.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Notification policy test</para>
+                    /// <para>通知策略测试</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the IM chatbot.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Chatbot name</para>
+                /// <para>robot名称</para>
                 /// </summary>
                 [NameInMap("RobotName")]
                 [Validation(Required=false)]

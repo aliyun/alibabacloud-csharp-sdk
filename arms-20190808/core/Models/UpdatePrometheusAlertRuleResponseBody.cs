@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The value of the annotation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
+                /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The returned message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The CPU utilization of ${{$labels.pod_name}} exceeds 80%. Current value: {{$value}}%</para>
+            /// <para>${{$labels.pod_name}}CPU使用率大于80%，当前值{{$value}}%</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -167,8 +167,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// <para>The method of that is used to send alert notifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ALERT_MANAGER</c>: Alert notifications are sent by Operation Center.</description></item>
-            /// <item><description><c>DISPATCH_RULE</c>: Alert notifications are sent based on the specified notification policy.</description></item>
+            /// <item><description><para><c>ALERT_MANAGER</c>: Alert notifications are sent by Operation Center.</para>
+            /// </description></item>
+            /// <item><description><para><c>DISPATCH_RULE</c>: Alert notifications are sent based on the specified notification policy.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,8 +183,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// <para>Indicates whether the alert rule is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>1</c>: The alert rule is enabled.</description></item>
-            /// <item><description><c>0</c>: The alert rule is disabled.</description></item>
+            /// <item><description><para><c>1</c>: The alert rule is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>0</c>: The alert rule is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +200,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The type of the alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Kubernetes component alert</para>
+            /// <para>Kubernetes组件告警</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -217,8 +221,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><para><c>true</c></para>
+        /// </description></item>
+        /// <item><description><para><c>false</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

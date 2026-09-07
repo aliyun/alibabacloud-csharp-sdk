@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The alias of the feature.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Prometheus Agent</para>
+            /// <para>Prometheus 探针</para>
             /// </summary>
             [NameInMap("Alias")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The description of the feature.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Collect Metric data using the Prometheus collection specification.</para>
+            /// <para>以 Prometheus 采集规范采集 Metric 数据。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

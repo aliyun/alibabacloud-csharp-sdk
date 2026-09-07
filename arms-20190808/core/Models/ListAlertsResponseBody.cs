@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>Time to claim the alarm.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>-1</para>
+                /// <para>告警从发生到认领之间的时长</para>
                 /// </summary>
                 [NameInMap("AcknowledgeTime")]
                 [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The content of the alert notification.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>[Notification policy: Send notifications to DingTalk groups] Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</para>
+                    /// <para>【通知策略: 钉群通知】 主机监控 节点机IP: 10.76.XX.XX 节点机内存利用率最近1分钟求平均 &gt;= 1.0 %, 当前值84.7454 %</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The description of the activity.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>[Alert Claimed] The alert is claimed</para>
+                    /// <para>[告警认领]认领了该告警</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The name of the handler.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>O\&amp;M Engineer A</para>
+                    /// <para>运维A</para>
                     /// </summary>
                     [NameInMap("HandlerName")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The name of the event.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Test-triggered alert</para>
+                    /// <para>测试触发的告警</para>
                     /// </summary>
                     [NameInMap("AlertName")]
                     [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The description of the event.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Host monitoring. Host IP address: 10.76.XX.XX. Average memory usage of the host in the last 1 minute ≥ 1.0%. Current value: 84.7454%.</para>
+                    /// <para>主机监控 节点机IP: 10.76.XX.XX 节点机内存利用率最近1分钟求平均 &gt;= 1.0 %, 当前值84.7454 %</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the alert rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test alert</para>
+                /// <para>告警测试</para>
                 /// </summary>
                 [NameInMap("AlertName")]
                 [Validation(Required=false)]
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The description of a event execution status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[Notification Strategy: ARMS Front-end Alarm]\nPage Indicator Page Name: Home JS Error Number Average in the last 5 minutes &gt;= 1.0 times, current value 1.0000 times\n</para>
+                /// <para>[告警通知]通过[webhook]通知了xxx(成功）</para>
                 /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the notification policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DingTalk Notification</para>
+                /// <para>钉群通知</para>
                 /// </summary>
                 [NameInMap("DispatchRuleName")]
                 [Validation(Required=false)]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>Alarm handler.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alice</para>
+                /// <para>认领、关闭告警的处理人</para>
                 /// </summary>
                 [NameInMap("Handler")]
                 [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The contact card of an instant messaging app.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Robot</para>
+                /// <para>钉钉的名片。</para>
                 /// </summary>
                 [NameInMap("NotifyRobots")]
                 [Validation(Required=false)]
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The notification object configured in the notification policy, responsible for handling alerts.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alice</para>
+                /// <para>通知策略中配置的联系人通知对象</para>
                 /// </summary>
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>Alarm recovery time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>-1</para>
+                /// <para>告警从发生到恢复之间的时长</para>
                 /// </summary>
                 [NameInMap("RecoverTime")]
                 [Validation(Required=false)]
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The Alert solution.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>--</para>
+                /// <para>重启解决</para>
                 /// </summary>
                 [NameInMap("Solution")]
                 [Validation(Required=false)]

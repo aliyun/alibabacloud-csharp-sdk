@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The Info-level information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{regionId: the region where the aggregation instance resides. globalViewClusterId: the ID of the aggregation instance. failedInstances: the ID of the object that failed to be added.}</para>
+            /// <para>{regionId: 实例所属region, globalViewClusterId: 实例Id, failedInstances: 数据源JSON list中，添加失败的单个JSON的list}</para>
             /// </summary>
             [NameInMap("Info")]
             [Validation(Required=false)]

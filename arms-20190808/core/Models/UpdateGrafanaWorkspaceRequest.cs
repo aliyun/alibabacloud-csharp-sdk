@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
         /// <summary>
         /// <para>The description of the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>线上生产环境Grafana</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

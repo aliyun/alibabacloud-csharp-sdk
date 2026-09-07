@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 {
     public class GetPrometheusInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</para>
+        /// <para>The status code. A value of 200 indicates success. Other values indicate errors.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,19 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPrometheusInstanceResponseBodyData Data { get; set; }
         public class GetPrometheusInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The permission type. Valid values: readWrite, readOnly, and httpReadOnly</para>
+            /// <para>The permission type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>readWrite</description></item>
+            /// <item><description>readOnly</description></item>
+            /// <item><description>httpReadOnly.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>readWrite</para>
@@ -37,7 +42,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.</para>
+            /// <para>The number of days that data is automatically archived after the storage period expires. Valid values: 60, 90, 180, and 365. A value of 0 indicates that data is not archived.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -47,27 +52,27 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? ArchiveDuration { get; set; }
 
             /// <summary>
-            /// <para>The whitelist of IP addresses for which password-free read is enabled.</para>
+            /// <para>The whitelist policy for authentication-free read access.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>0.0.0.0/0</para>
             /// </summary>
             [NameInMap("AuthFreeReadPolicy")]
             [Validation(Required=false)]
             public string AuthFreeReadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The whitelist of IP addresses for which password-free write is enabled.</para>
+            /// <para>The whitelist policy for authentication-free write access.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>null</para>
+            /// <para>0.0.0.0/0</para>
             /// </summary>
             [NameInMap("AuthFreeWritePolicy")]
             [Validation(Required=false)]
             public string AuthFreeWritePolicy { get; set; }
 
             /// <summary>
-            /// <para>The authorization token.</para>
+            /// <para>The authorization token string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GciOiJIUzI1NiJ9***</para>
@@ -77,7 +82,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string AuthToken { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Prometheus instance.</para>
+            /// <para>The Prometheus instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c589a1b8db05c4561aefbb898ca8fb1cf</para>
@@ -87,7 +92,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the monitoring object.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prom1</para>
@@ -98,12 +103,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>remote-write: general-purpose Prometheus instance</description></item>
-            /// <item><description>ecs: Prometheus instances for ECS</description></item>
-            /// <item><description>cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland</description></item>
-            /// <item><description>cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland</description></item>
-            /// <item><description>global-view: global aggregation instance</description></item>
-            /// <item><description>aliyun-cs: Prometheus instance for Container Service</description></item>
+            /// <item><description>remote-write (Prometheus for Remote Write)</description></item>
+            /// <item><description>ecs (Prometheus for ECS)</description></item>
+            /// <item><description>cloud-monitor (Prometheus for Cloud Service in the Chinese mainland)</description></item>
+            /// <item><description>cloud-product (Prometheus for Cloud Service outside the Chinese mainland)</description></item>
+            /// <item><description>global-view (Prometheus for GlobalView)</description></item>
+            /// <item><description>aliyun-cs (Prometheus for Container Service).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +119,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The data storage status at the backend.</para>
+            /// <para>The status of the backend data storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -124,20 +129,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string DbInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether password-free read is enabled.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>Indicates whether authentication-free read access is enabled.</para>
             /// </summary>
             [NameInMap("EnableAuthFreeRead")]
             [Validation(Required=false)]
             public bool? EnableAuthFreeRead { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether password-free write is enabled.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>Indicates whether authentication-free write access is enabled.</para>
             /// </summary>
             [NameInMap("EnableAuthFreeWrite")]
             [Validation(Required=false)]
@@ -154,14 +153,14 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string EnableAuthToken { get; set; }
 
             /// <summary>
-            /// <para>The extra information. This parameter is returned only for console requests.</para>
+            /// <para>The extended information. This parameter is returned only for console requests.</para>
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExtraInfo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Grafana workspace.</para>
+            /// <para>The Grafana workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>grafana-rnggfvhlcdl6m71***</para>
@@ -171,7 +170,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string GrafanaInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The public URL for the HTTP API.</para>
+            /// <para>The public endpoint for HTTP API.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx">https://cn-beijing.arms.aliyuncs.com:9443/api/v1/prometheus/xxx</a></para>
@@ -181,7 +180,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string HttpApiInterUrl { get; set; }
 
             /// <summary>
-            /// <para>The internal URL for the HTTP API.</para>
+            /// <para>The internal endpoint for HTTP API.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx</a></para>
@@ -201,8 +200,8 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY: subscription</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,7 +212,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The time when the billing method was modified.</para>
+            /// <para>The time when the billing method of the instance was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-26T06:05:01Z</para>
@@ -223,7 +222,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PaymentTypeUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The product to which the Prometheus instance belongs. Valid values: arms and cms.</para>
+            /// <para>The product to which the Prometheus instance belongs (arms or cms).</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms</para>
@@ -233,7 +232,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The public URL for Pushgateway.</para>
+            /// <para>The public endpoint for push gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v2</a></para>
@@ -243,7 +242,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string PushGatewayInterUrl { get; set; }
 
             /// <summary>
-            /// <para>The internal URL for Pushgateway.</para>
+            /// <para>The internal endpoint for push gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v2</a></para>
@@ -263,7 +262,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The public URL for remote read.</para>
+            /// <para>The public endpoint for remote read.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></para>
@@ -273,7 +272,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RemoteReadInterUrl { get; set; }
 
             /// <summary>
-            /// <para>The internal URL for remote read.</para>
+            /// <para>The internal endpoint for remote read.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read">http://cn-beijing-intranet.arms.aliyuncs.com:9090/api/v1/prometheus/xxx/api/v1/read</a></para>
@@ -283,7 +282,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RemoteReadIntraUrl { get; set; }
 
             /// <summary>
-            /// <para>The public URL for remote write.</para>
+            /// <para>The public endpoint for remote write.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write">https://cn-beijing.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></para>
@@ -293,7 +292,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string RemoteWriteInterUrl { get; set; }
 
             /// <summary>
-            /// <para>The internal URL for remote write.</para>
+            /// <para>The internal endpoint for remote write.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write">http://cn-beijing-intranet.arms.aliyuncs.com/prometheus/xxx/api/v3/write</a></para>
@@ -313,7 +312,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource. Set the value to PROMETHEUS.</para>
+            /// <para>The fixed value: PROMETHEUS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PROMETHEUS</para>
@@ -323,7 +322,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group. This parameter is returned only for Prometheus instances for ECS.</para>
+            /// <para>The security group ID. This parameter is returned only for Prometheus for ECS instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-8vbdgmf4nraiqa9bx0jo</para>
@@ -333,7 +332,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The data storage duration. Unit: days.</para>
+            /// <para>The storage duration, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -343,10 +342,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public int? StorageDuration { get; set; }
 
             /// <summary>
-            /// <para>The child instances of the global aggregation instance. The value is a JSON string.</para>
+            /// <para>The JSON string of sub-instances for the GlobalView instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73\<em>\</em>\<em>&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899\<em>\</em>\<em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;}]</para>
+            /// <para>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73***&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5****&quot;,&quot;sourceName&quot;:&quot;agent-321-测试&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;}]</para>
             /// </summary>
             [NameInMap("SubClustersJson")]
             [Validation(Required=false)]
@@ -360,7 +359,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public List<string> SupportAuthTypes { get; set; }
 
             /// <summary>
-            /// <para>The tags of the instance.</para>
+            /// <para>The tags bound to the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -399,7 +398,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID. This parameter is returned only for Prometheus instances for ECS.</para>
+            /// <para>The vSwitch ID. This parameter is returned only for Prometheus for ECS instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-f8z73vcja1tqnw90aav5a</para>
@@ -409,7 +408,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>Version</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>V1</para>
@@ -419,7 +418,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID. This parameter is returned only for Prometheus instances for ECS.</para>
+            /// <para>The VPC associated with the cluster. This parameter is returned only for Prometheus for ECS instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-8vb02uk57qbcktqcvqqqj</para>
@@ -431,7 +430,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned for the result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>message</para>

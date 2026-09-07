@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The type of the file. You can set this parameter to &quot;application/zip&quot;, &quot;text/plain&quot;, or an empty string.</para>
+        /// <para>The file type. Valid values include <c>&quot;application/zip&quot;</c> and <c>&quot;text/plain&quot;</c>. You can also pass an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text/plain</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The process ID (PID) of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iioe7jcnuk@582846f37******</para>
@@ -66,7 +66,15 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</para>
+        /// <para>The file type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>source-map: a source map file</para>
+        /// </description></item>
+        /// <item><description><para>mapping: an Android symbol table file</para>
+        /// </description></item>
+        /// <item><description><para>dsym: an iOS dSYM file</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>source-map</para>
@@ -76,7 +84,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string SourcemapType { get; set; }
 
         /// <summary>
-        /// <para>The file ID.</para>
+        /// <para>The UUID of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125bdb39-a415-4503-bd96-e293925fc64c</para>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The version number of the file.</para>
+        /// <para>The file version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

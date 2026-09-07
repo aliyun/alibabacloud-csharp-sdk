@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The name of the escalation policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>prod escalation policy</para>
+                /// <para>prod升级策略</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

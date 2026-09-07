@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The alias of the add-on.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>MySQL Exporter</para>
+                    /// <para>Prometheus探针</para>
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The description of the add-on.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Collect mysql indicator information</para>
+                    /// <para>以 Prometheus 采集规范采集 Metric 数据</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -165,9 +165,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The type of the environment instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CS: Container Service</description></item>
-                /// <item><description>ECS: Elastic Compute Service</description></item>
-                /// <item><description>Cloud: cloud service</description></item>
+                /// <item><description><para>CS: Container Service</para>
+                /// </description></item>
+                /// <item><description><para>ECS: Elastic Compute Service</para>
+                /// </description></item>
+                /// <item><description><para>Cloud: cloud service</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,7 +191,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The alias of the feature.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Prometheus Agent</para>
+                    /// <para>Prometheus 探针</para>
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
@@ -198,7 +201,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                     /// <para>The description of the feature.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Collect Metric data using the Prometheus collection specification</para>
+                    /// <para>以 Prometheus 采集规范采集 Metric 数据</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -229,8 +232,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>The payable resource plan.</para>
                 /// <list type="bullet">
-                /// <item><description>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</description></item>
-                /// <item><description>Otherwise, leave the parameter empty.</description></item>
+                /// <item><description><para>If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.</para>
+                /// </description></item>
+                /// <item><description><para>Otherwise, leave the parameter empty.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -283,9 +288,12 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <summary>
                 /// <para>Indicates whether agents or exporters are managed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>none: No. By default, no managed agents or exporters are provided for ACK clusters.</description></item>
-                /// <item><description>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</description></item>
-                /// <item><description>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</description></item>
+                /// <item><description><para>none: No. By default, no managed agents or exporters are provided for ACK clusters.</para>
+                /// </description></item>
+                /// <item><description><para>agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.</para>
+                /// </description></item>
+                /// <item><description><para>agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

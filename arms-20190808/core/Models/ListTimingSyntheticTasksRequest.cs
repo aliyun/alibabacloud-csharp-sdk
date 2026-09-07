@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AlibabaCloud DNS Task</para>
+            /// <para>拨测</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

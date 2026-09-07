@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>The name of the webhook alert contact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Webhook name</para>
+        /// <para>webhook名称</para>
         /// </summary>
         [NameInMap("WebhookName")]
         [Validation(Required=false)]

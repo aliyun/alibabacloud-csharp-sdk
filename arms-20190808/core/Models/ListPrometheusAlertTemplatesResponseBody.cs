@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The name of the alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The available memory on the node is less than 10%</para>
+            /// <para>节点内存可用率不足10%</para>
             /// </summary>
             [NameInMap("AlertName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 /// <para>The value of the annotation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%</para>
+                /// <para>节点 {{ $labels.instance }} 可用内存不足10%，当前可用内存 {{ $value }}%</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The available memory on node {{ $labels.instance }} is less than 10%. Available memory: {{ $value }}%</para>
+            /// <para>节点 {{ $labels.instance }} 可用内存不足10%，当前可用内存 {{ $value }}%</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             /// <para>The type of the alert rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Node</para>
+            /// <para>节点</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]

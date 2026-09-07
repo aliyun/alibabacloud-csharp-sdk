@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Refer to supplementary instructions.</para>
+        /// <para>参见补充说明。</para>
         /// </summary>
         [NameInMap("ConfigYaml")]
         [Validation(Required=false)]

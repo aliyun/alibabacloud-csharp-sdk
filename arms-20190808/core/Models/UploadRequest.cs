@@ -63,12 +63,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>We recommend that you do not specify this parameter.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>null</para>
-        /// </summary>
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
