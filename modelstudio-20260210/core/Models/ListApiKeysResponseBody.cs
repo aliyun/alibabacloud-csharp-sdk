@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 
                     /// <summary>
                     /// <para>Indicates whether access to all models with inference permissions in the workspace is allowed.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
                     /// </summary>
                     [NameInMap("allowAllModels")]
                     [Validation(Required=false)]
@@ -138,6 +141,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
             public string WorkspaceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>workspace_test</para>
+            /// </summary>
+            [NameInMap("workspaceName")]
+            [Validation(Required=false)]
+            public string WorkspaceName { get; set; }
 
         }
 

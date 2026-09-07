@@ -146,6 +146,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [Validation(Required=false)]
             public string WorkspaceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>workspace_test</para>
+            /// </summary>
+            [NameInMap("workspaceName")]
+            [Validation(Required=false)]
+            public string WorkspaceName { get; set; }
+
         }
 
         /// <summary>
