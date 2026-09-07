@@ -1808,6 +1808,178 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a backend filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackendReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackendReportResponse
+        /// </returns>
+        public CreateBackendReportResponse CreateBackendReportWithOptions(CreateBackendReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                body["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportObjects))
+            {
+                bodyFlat["ReportObjects"] = request.ReportObjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Targets))
+            {
+                bodyFlat["Targets"] = request.Targets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityType))
+            {
+                body["ValidityType"] = request.ValidityType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBackendReport",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBackendReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backend filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackendReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackendReportResponse
+        /// </returns>
+        public async Task<CreateBackendReportResponse> CreateBackendReportWithOptionsAsync(CreateBackendReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                body["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
+            {
+                body["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                body["Reason"] = request.Reason;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportObjects))
+            {
+                bodyFlat["ReportObjects"] = request.ReportObjects;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Targets))
+            {
+                bodyFlat["Targets"] = request.Targets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidityType))
+            {
+                body["ValidityType"] = request.ValidityType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBackendReport",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBackendReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backend filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackendReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackendReportResponse
+        /// </returns>
+        public CreateBackendReportResponse CreateBackendReport(CreateBackendReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBackendReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backend filing.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBackendReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBackendReportResponse
+        /// </returns>
+        public async Task<CreateBackendReportResponse> CreateBackendReportAsync(CreateBackendReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBackendReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create a custom identity source user for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -15764,6 +15936,126 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ImportEnterpriseAccelerateTargetsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately invalidates an approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InvalidateApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvalidateApprovalResponse
+        /// </returns>
+        public InvalidateApprovalResponse InvalidateApprovalWithOptions(InvalidateApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalId))
+            {
+                body["ApprovalId"] = request.ApprovalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvalidateApproval",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvalidateApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately invalidates an approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InvalidateApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvalidateApprovalResponse
+        /// </returns>
+        public async Task<InvalidateApprovalResponse> InvalidateApprovalWithOptionsAsync(InvalidateApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApprovalId))
+            {
+                body["ApprovalId"] = request.ApprovalId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InvalidateApproval",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InvalidateApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately invalidates an approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InvalidateApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvalidateApprovalResponse
+        /// </returns>
+        public InvalidateApprovalResponse InvalidateApproval(InvalidateApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InvalidateApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Immediately invalidates an approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InvalidateApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InvalidateApprovalResponse
+        /// </returns>
+        public async Task<InvalidateApprovalResponse> InvalidateApprovalAsync(InvalidateApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InvalidateApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public List<string> ApprovalIds { get; set; }
 
         /// <summary>
-        /// <para>The end time for approval instance creation, in seconds-level timestamp.</para>
+        /// <para>The end time for querying approval instance creation, in seconds-level timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736750500</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time for approval instance creation, in seconds-level timestamp.</para>
+        /// <para>The start time for querying approval instance creation, in seconds-level timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1730000000</para>
@@ -88,7 +88,11 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of report effective statuses. Valid values: Enabled, Expired.</para>
+        /// <para>The list of report effective statuses, serialized in Flat format. Duplicate values are not allowed. Only records with an approval status of Approved are matched. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enabled: effective.</description></item>
+        /// <item><description>Expired: expired or invalidated.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("EffectStatuses")]
         [Validation(Required=false)]
@@ -127,6 +131,14 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
         /// <summary>
         /// <para>The adaptation policy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DomainBlacklist</b>: Domain name blacklist.</description></item>
+        /// <item><description><b>DomainWhitelist</b>: Domain name whitelist.</description></item>
+        /// <item><description><b>SoftwareBlock</b>: Software blocking.</description></item>
+        /// <item><description><b>AppUninstall</b>: Agent uninstallation.</description></item>
+        /// <item><description><b>DlpSend</b>: File outbound transfer.</description></item>
+        /// <item><description><b>PeripheralBlock</b>: Peripheral control.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DlpSend</para>
@@ -156,7 +168,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         public string ProcessName { get; set; }
 
         /// <summary>
-        /// <para>The list of report types. If not specified, only ApprovalReport is queried.</para>
+        /// <para>The list of report types, serialized in Flat format. Duplicate values are not allowed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ApprovalReport: approval report.</description></item>
+        /// <item><description>BackendReport: backend report.
+        /// If not specified, only ApprovalReport is queried by default.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ReportTypes")]
         [Validation(Required=false)]

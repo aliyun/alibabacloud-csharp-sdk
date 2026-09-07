@@ -1,3 +1,8 @@
+2026-09-07 Version: 1.29.0
+- Support API CreateBackendReport.
+- Support API InvalidateApproval.
+
+
 2026-09-02 Version: 1.28.0
 - Support API ListNetBandwidth.
 

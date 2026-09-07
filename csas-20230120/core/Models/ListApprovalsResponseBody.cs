@@ -110,6 +110,12 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
                 /// <summary>
                 /// <para>The status of the approval progress node. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Pending</b>: Pending approval.</description></item>
+                /// <item><description><b>Approved</b>: Approved.</description></item>
+                /// <item><description><b>Rejected</b>: Rejected.</description></item>
+                /// <item><description><b>Revoked</b>: Revoked.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Approved</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the action was performed on the approval progress node. The value is a UNIX timestamp in seconds.</para>
+                /// <para>The time when the approval progress node was executed. The value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1736752000</para>
@@ -130,6 +136,18 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 
             }
 
+            /// <summary>
+            /// <para>The approval type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: built-in approval.</description></item>
+            /// <item><description>1: DingTalk approval.</description></item>
+            /// <item><description>2: WeCom approval.</description></item>
+            /// <item><description>3: Lark approval.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ApprovalType")]
             [Validation(Required=false)]
             public int? ApprovalType { get; set; }
@@ -148,7 +166,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The department of the approval instance creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>QA Department</para>
+            /// <para>CN=cn***,OU=h***</para>
             /// </summary>
             [NameInMap("CreatorDepartment")]
             [Validation(Required=false)]
@@ -178,21 +196,28 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The username of the approval instance creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Mr. Wang</para>
+            /// <para>Wang***</para>
             /// </summary>
             [NameInMap("CreatorUsername")]
             [Validation(Required=false)]
             public string CreatorUsername { get; set; }
 
             /// <summary>
-            /// <para>The effective status of the report. Enabled indicates that the report is effective. Expired indicates that the report has expired.</para>
+            /// <para>The filing effective status. An empty string is returned when the approval status is not Approved. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Enabled: effective.</description></item>
+            /// <item><description>Expired: expired or reached the expiration date.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enabled</para>
             /// </summary>
             [NameInMap("EffectStatus")]
             [Validation(Required=false)]
             public string EffectStatus { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the approval instance. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The filing deadline. The value is a UNIX timestamp in seconds. The value 0 is returned when ValidityType is set to Permanent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757952000</para>
@@ -202,14 +227,19 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public long? EndTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy associated with the approval instance. Valid values:</para>
+            /// <para>The policy type associated with the approval instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DomainBlacklist</b>: domain name blacklist.</description></item>
-            /// <item><description><b>DomainWhitelist</b>: domain name whitelist.</description></item>
-            /// <item><description><b>SoftwareBlock</b>: software blocking.</description></item>
-            /// <item><description><b>AppUninstall</b>: terminal uninstallation.</description></item>
-            /// <item><description><b>DlpSend</b>: file outgoing.</description></item>
-            /// <item><description><b>PeripheralBlock</b>: peripheral control.</description></item>
+            /// <item><description><b>DomainBlacklist</b>: Domain name blacklist.</description></item>
+            /// <item><description><b>DomainWhitelist</b>: Domain name whitelist.</description></item>
+            /// <item><description><b>SoftwareBlock</b>: Software blocking.</description></item>
+            /// <item><description><b>DeviceRegistration</b>: Excess registration.</description></item>
+            /// <item><description><b>AppUninstall</b>: Endpoint uninstallation.</description></item>
+            /// <item><description><b>DlpSend</b>: File outbound transfer.</description></item>
+            /// <item><description><b>PeripheralBlock</b>: Peripheral control.</description></item>
+            /// <item><description><b>EndpointHardening</b>: Endpoint hardening.</description></item>
+            /// <item><description><b>oftwareHardening</b>: Software hardening.</description></item>
+            /// <item><description><b>AiAgentBlock</b>: AI Agent control.</description></item>
+            /// <item><description><b>PrivateAccessBlock</b>: Internal network access.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -233,7 +263,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the process associated with the approval instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>Test***</para>
             /// </summary>
             [NameInMap("ProcessName")]
             [Validation(Required=false)]
@@ -243,14 +273,21 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The reason for creating the approval instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a test</para>
+            /// <para>Temporary access for the project</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The report type. ApprovalReport indicates an approval report. BackendReport indicates a backend report.</para>
+            /// <para>The filing type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ApprovalReport: approval filing.</description></item>
+            /// <item><description>BackendReport: backend filing.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BackendReport</para>
             /// </summary>
             [NameInMap("ReportType")]
             [Validation(Required=false)]
@@ -280,14 +317,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             /// <para>The name of the template associated with the approval instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>Template***</para>
             /// </summary>
             [NameInMap("SchemaName")]
             [Validation(Required=false)]
             public string SchemaName { get; set; }
 
             /// <summary>
-            /// <para>The approval instance status. Valid values:</para>
+            /// <para>The instance status of the approval. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Pending</b>: Pending approval.</description></item>
+            /// <item><description><b>Approved</b>: Approved.</description></item>
+            /// <item><description><b>Rejected</b>: Denied.</description></item>
+            /// <item><description><b>Revoked</b>: Revoked.</description></item>
+            /// <item><description><b>Expired</b>: Expired.</description></item>
+            /// <item><description><b>Deleted</b>: Deleted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Pending</para>
@@ -297,7 +342,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The validity duration type. When the value is Permanent, EndTimestamp returns 0.</para>
+            /// <para>The validity duration type. Valid values: FixedTime, Permanent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Permanent</para>
             /// </summary>
             [NameInMap("ValidityType")]
             [Validation(Required=false)]
