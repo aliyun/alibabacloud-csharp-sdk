@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "eds-user.cn-shanghai.aliyuncs.com"},
-                {"ap-southeast-1", "eds-user.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eds-user", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1876,7 +1871,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user groups.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1958,7 +1953,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user groups.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2040,7 +2035,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user groups.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2058,7 +2053,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query user groups.</para>
+        /// <para>Queries user groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3488,6 +3483,178 @@ namespace AlibabaCloud.SDK.Eds_user20210308
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdUsersCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdUsersCountResponse
+        /// </returns>
+        public GetAdUsersCountResponse GetAdUsersCountWithOptions(GetAdUsersCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                body["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAdUsersCount",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAdUsersCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdUsersCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdUsersCountResponse
+        /// </returns>
+        public async Task<GetAdUsersCountResponse> GetAdUsersCountWithOptionsAsync(GetAdUsersCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                body["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAdUsersCount",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAdUsersCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdUsersCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdUsersCountResponse
+        /// </returns>
+        public GetAdUsersCountResponse GetAdUsersCount(GetAdUsersCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAdUsersCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAdUsersCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAdUsersCountResponse
+        /// </returns>
+        public async Task<GetAdUsersCountResponse> GetAdUsersCountAsync(GetAdUsersCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAdUsersCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains the information about the current logon administrator based on the authorization code.</para>
         /// </summary>
         /// 
@@ -3604,6 +3771,178 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetManagerInfoByAuthCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUsersCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsersCountResponse
+        /// </returns>
+        public GetUsersCountResponse GetUsersCountWithOptions(GetUsersCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                body["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUsersCount",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUsersCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUsersCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsersCountResponse
+        /// </returns>
+        public async Task<GetUsersCountResponse> GetUsersCountWithOptionsAsync(GetUsersCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                body["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SolutionId))
+            {
+                body["SolutionId"] = request.SolutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUsersCount",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUsersCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUsersCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsersCountResponse
+        /// </returns>
+        public GetUsersCountResponse GetUsersCount(GetUsersCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUsersCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</para>
+        /// <remarks>
+        /// <para>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<c>Status</c>取值为0，表示该便捷账号未被锁定；若<c>Status</c>取值为9，表示该便捷账号已被锁定。</para>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUsersCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsersCountResponse
+        /// </returns>
+        public async Task<GetUsersCountResponse> GetUsersCountAsync(GetUsersCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUsersCountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class DescribeGroupsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is for internal use only.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude user groups that are already associated with a logon policy.</para>
+        /// <para>Specifies whether to exclude user groups that have associated logon policies.</para>
         /// </summary>
         [NameInMap("ExcludeAttachedLoginPolicyGroups")]
         [Validation(Required=false)]
         public bool? ExcludeAttachedLoginPolicyGroups { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group.</para>
+        /// <para>The user group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ug-16nf7xxh4o9gc****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the user group.</para>
+        /// <para>The user group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestGroup</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string IdpId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a logon policy. If you specify this parameter, the call returns only user groups associated with the policy.</para>
+        /// <para>Filters user groups by the specified associated logon policy.</para>
         /// </summary>
         [NameInMap("LoginPolicyId")]
         [Validation(Required=false)]
         public string LoginPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is for internal use only.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string SolutionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether file approval is enabled.</para>
+        /// <para>Indicates whether file approval is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
