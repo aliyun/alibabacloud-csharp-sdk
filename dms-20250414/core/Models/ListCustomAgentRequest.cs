@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. The default value is 20.</para>
+        /// <para>The number of records per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query all published custom agents. The default value is false.</para>
+        /// <para>Specifies whether to query all custom agents in the published state. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? QueryAllReleased { get; set; }
 
         /// <summary>
-        /// <para>A keyword for a fuzzy search on the names and descriptions of custom agents.</para>
+        /// <para>The search keyword. Supports fuzzy search by custom agent name and description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试Agent</para>
+        /// <para>TestAgent</para>
         /// </summary>
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56kv1pvl9uvt9**********bb</para>

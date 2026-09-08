@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentFeedbackResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDataAgentFeedbackResponseBodyData Data { get; set; }
         public class CreateDataAgentFeedbackResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The feedback content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;feedback_type&quot;:&quot;PRODUCT_SUGGESTION&quot;,&quot;user_feedback&quot;: &quot;test&quot;,&quot;email&quot;:&quot;<a href="mailto:yourname@example.com">yourname@example.com</a>&quot;,&quot;is_authorized&quot;:&quot;Y&quot;}</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string FeedbackContent { get; set; }
 
             /// <summary>
+            /// <para>The feedback type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ISSUE_REPORT</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string FeedbackType { get; set; }
 
             /// <summary>
+            /// <para>The like value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public int? LikeValue { get; set; }
 
             /// <summary>
+            /// <para>The region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The agent session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>h8r********4fch</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The feedback target ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>h8r********4fch_sdesfews</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string TargetId { get; set; }
 
             /// <summary>
+            /// <para>The feedback target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SESSION</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>89a07eac-96ff-48be-983b-f22c55*****</para>
         /// </summary>
@@ -112,6 +139,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

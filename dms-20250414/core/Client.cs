@@ -19,17 +19,6 @@ namespace AlibabaCloud.SDK.Dms20250414
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"},
-                {"cn-beijing", "dms.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "dms.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "dms.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"},
-                {"us-west-1", "dms.us-west-1.aliyuncs.com"},
-                {"us-east-1", "dms.us-east-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -2262,7 +2251,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Agent点赞点踩功能</para>
+        /// <para>Creates feedback for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2332,7 +2321,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Agent点赞点踩功能</para>
+        /// <para>Creates feedback for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2402,7 +2391,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Agent点赞点踩功能</para>
+        /// <para>Creates feedback for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2420,7 +2409,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Agent点赞点踩功能</para>
+        /// <para>Creates feedback for a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10693,6 +10682,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>Queries the operation logs of the SQL window.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlConsoleOperationLogRequest
         /// </param>
@@ -10762,6 +10756,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <summary>
         /// <para>Queries the operation logs of the SQL window.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSqlConsoleOperationLogRequest
@@ -10833,6 +10832,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>Queries the operation logs of the SQL window.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetSqlConsoleOperationLogRequest
         /// </param>
@@ -10850,6 +10854,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <summary>
         /// <para>Queries the operation logs of the SQL window.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the service endpoint must match the region where the instance resides. Otherwise, the complete SQL window operation logs cannot be retrieved.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSqlConsoleOperationLogRequest
@@ -12110,7 +12119,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
+        /// <para>Lists all custom agents in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12172,7 +12181,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
+        /// <para>Lists all custom agents in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12234,7 +12243,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
+        /// <para>Lists all custom agents in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12252,7 +12261,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
+        /// <para>Lists all custom agents in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18837,7 +18846,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
@@ -18964,7 +18973,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
@@ -19091,7 +19100,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
@@ -19120,7 +19129,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>

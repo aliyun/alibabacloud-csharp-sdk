@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCustomAgentResponseBodyData Data { get; set; }
         public class ListCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of custom agent objects.</para>
+            /// <para>The list of data content.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<ListCustomAgentResponseBodyDataContent> Content { get; set; }
             public class ListCustomAgentResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The parent Alibaba Cloud account ID.</para>
+                /// <para>The Alibaba Cloud primary account ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16738266********</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CreatorUserName { get; set; }
 
                 /// <summary>
-                /// <para>The custom agent ID.</para>
+                /// <para>The ID of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ca-4y3ca4khkcu**********ysf</para>
@@ -90,8 +90,6 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentId { get; set; }
 
                 /// <summary>
-                /// <para>The current DMS unit.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -100,7 +98,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string DMSUnit { get; set; }
 
                 /// <summary>
-                /// <para>The data scope, specified as a JSON string.</para>
+                /// <para>The specified data scope in JSON string format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -109,7 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 ///   &quot;personal&quot; : {
                 ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
                 ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-                ///     &quot;Database&quot; : &quot;测试表格</b></b></b>.xlsx&quot;,
+                ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
                 ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
                 ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
                 ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -128,7 +126,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The description of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent测试描述</para>
+                /// <para>AgentTestDescription</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -156,7 +154,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? ForbiddenAppendDataSource { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to prevent user inquiries during the process.</para>
+                    /// <para>Specifies whether to disable user inquiries during the process.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -166,7 +164,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipAskHuman { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to skip the plan confirmation step.</para>
+                    /// <para>Specifies whether to skip the plan confirmation step.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -176,7 +174,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipPlan { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to skip all SQL confirmations.</para>
+                    /// <para>Specifies whether to skip all SQL confirmations.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -186,7 +184,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public bool? SkipSqlConfirm { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether to skip the confirmation for generating a web report.</para>
+                    /// <para>Specifies whether to skip the web report rendering confirmation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -198,7 +196,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the agent was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -208,7 +206,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the agent was last modified.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -218,20 +216,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The instructions.</para>
+                /// <para>The instruction.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>分析框架：
-                /// 1、需按日、周、月维度监控核心指标（GMV、订单量、UV、转化率），分析趋势变化及同比/环比波动；
-                /// 2、划分新老客、渠道、地域进行拆解，识别增长来源与短板；
-                /// 3、结合用户行为路径（浏览→加购→支付）开展漏斗分析，定位流失环节；</para>
+                /// <para>Analysis framework:</para>
+                /// <ol>
+                /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) by day, week, and month dimensions, and analyze trends and year-over-year/month-over-month fluctuations.</description></item>
+                /// <item><description>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
+                /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</description></item>
+                /// </ol>
                 /// </summary>
                 [NameInMap("Instruction")]
                 [Validation(Required=false)]
                 public string Instruction { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the agent is configured with a recurring task.</para>
+                /// <para>Indicates whether a periodic task is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -241,14 +241,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsScheduleTask { get; set; }
 
                 /// <summary>
-                /// <para>The provided knowledge.</para>
+                /// <para>The knowledge.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>核心指标定义：
-                /// 1、GMV（成交总额）指订单金额总和，含已支付及未支付成功订单；
-                /// 2、订单量为每日有效下单笔数；
-                /// 3、UV（独立访客）指访问网站或APP的去重用户数；
-                /// 4、转化率=支付订单数 / UV，反映流量转化效率；</para>
+                /// <para>Core metric definitions:</para>
+                /// <ol>
+                /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</description></item>
+                /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
+                /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
+                /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</description></item>
+                /// </ol>
                 /// </summary>
                 [NameInMap("Knowledge")]
                 [Validation(Required=false)]
@@ -295,7 +297,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 }
 
                 /// <summary>
-                /// <para>The user who last modified the agent.</para>
+                /// <para>The modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20372822********</para>
@@ -305,7 +307,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Modifier { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user who last modified the agent.</para>
+                /// <para>The name of the modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HaoY*****</para>
@@ -318,14 +320,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <para>The name of the custom agent.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent测试名称</para>
+                /// <para>AgentTestName</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>If a recurring task is configured, this indicates its next scheduled runtime.</para>
+                /// <para>The next run time of the periodic task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1767715200</para>
@@ -335,7 +337,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? NextRuntime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the agent was taken offline.</para>
+                /// <para>The offline time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -359,7 +361,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string RelatedSessionId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the agent was published.</para>
+                /// <para>The publish time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -368,15 +370,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string ReleaseTime { get; set; }
 
-                /// <summary>
-                /// <para>The recurring task configuration.</para>
-                /// </summary>
                 [NameInMap("ScheduleTaskConfig")]
                 [Validation(Required=false)]
                 public ListCustomAgentResponseBodyDataContentScheduleTaskConfig ScheduleTaskConfig { get; set; }
                 public class ListCustomAgentResponseBodyDataContentScheduleTaskConfig : TeaModel {
                     /// <summary>
-                    /// <para>The cron expression for the recurring task.</para>
+                    /// <para>The cron expression for the timed scheduling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 0 ? * 1-7</para>
@@ -386,10 +385,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     public string CronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The query for the recurring task.</para>
+                    /// <para>The query of the periodic task.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>分析一下这份数据，给出简报</para>
+                    /// <para>Analyze this data and provide a brief report</para>
                     /// </summary>
                     [NameInMap("Query")]
                     [Validation(Required=false)]
@@ -418,10 +417,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The formatting instructions for the text report.</para>
+                /// <para>The text report format.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>文字报告要求所有数字不使用阿拉伯数字，全部转为中文数字</para>
+                /// <para>The text report requires all numbers to be converted from Arabic numerals to Chinese numerals</para>
                 /// </summary>
                 [NameInMap("TextReportConfig")]
                 [Validation(Required=false)]
@@ -432,10 +431,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public List<string> UserSpecifiedSkillList { get; set; }
 
                 /// <summary>
-                /// <para>The formatting instructions for the web report.</para>
+                /// <para>The web report format.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>网页报告要求所有数字不使用阿拉伯数字，全部转为中文数字</para>
+                /// <para>The web report requires all numbers to be converted from Arabic numerals to Chinese numerals</para>
                 /// </summary>
                 [NameInMap("WebReportConfig")]
                 [Validation(Required=false)]
@@ -468,7 +467,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -478,7 +477,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -510,7 +509,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -520,7 +519,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>67E910F2-4B62-5B0C-ACA3-7547695C****</para>
@@ -532,10 +531,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.                                 </description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
