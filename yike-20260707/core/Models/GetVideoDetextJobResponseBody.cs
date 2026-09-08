@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             /// <para>The normalized input configuration JSON string saved at submission time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;VideoMediaId&quot;:&quot;media-video-001&quot;}</para>
+            /// <para>{&quot;VideoUrl&quot;:&quot;<a href="https://example.com/input.mp4%22%7D">https://example.com/input.mp4&quot;}</a></para>
             /// </summary>
             [NameInMap("Input")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The task output JSON string. When the task succeeds, AiResult.DetextVideoURL contains the URL of the video with text erased.</para>
+            /// <para>The task result JSON string. When Status is Finished, deserialize this field and read AiResult.DetextVideoURL to obtain the URL of the video after text erasure. The video URL is not guaranteed to be included when the task has not completed successfully. If Output.OssUri is specified at submission time, the result is stored in the specified OSS location. Otherwise, a signed URL is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AiResult&quot;:{&quot;DetextVideoURL&quot;:&quot;<a href="https://example.com/detext/detext.mp4%22%7D%7D">https://example.com/detext/detext.mp4&quot;}}</a></para>

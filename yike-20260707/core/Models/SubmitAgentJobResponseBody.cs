@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class SubmitVideoDetextJobResponseBody : TeaModel {
+    public class SubmitAgentJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The video text erasure job ID. Use this ID to call GetVideoDetextJob to query the job.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vdt_0123456789abcdef0123456789abcdef</para>
+        /// <para>35ed5e9588184f2e8d862ee07437971a</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used for Tracing Analysis and troubleshooting.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>req-detext-20260820-001</para>
+        /// <para><b><b><b>3B-0E1A-586A-AC29-742247</b></b></b></para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
