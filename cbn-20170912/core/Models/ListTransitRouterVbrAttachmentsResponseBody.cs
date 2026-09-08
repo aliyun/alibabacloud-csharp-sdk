@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query.</para>
+        /// <para>The token that determines the start point of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is empty, no more data is returned.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for this parameter, it is the token that you can use to retrieve the next page of results.</para>
-        /// </description></item>
+        /// <item><description>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,19 +54,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of VBR connections.</para>
+        /// <para>The list of VBR connections.</para>
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVbrAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the Enterprise Edition transit router automatically advertises routes to the VBR.</para>
+            /// <para>Indicates whether the Enterprise Edition forward routing automatically publishes route entries to the VBR instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>false</b>: no.</para>
-            /// </description></item>
-            /// <item><description><para><b>true</b>: yes.</para>
-            /// </description></item>
+            /// <item><description><b>false</b>: The Enterprise Edition forward routing does not automatically publish route entries to the VBR instance.</description></item>
+            /// <item><description><b>true</b>: The Enterprise Edition forward routing automatically publishes route entries to the VBR instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The CEN instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-j3jzhw1zpau2km****</para>
@@ -90,7 +86,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the VBR connection was created.</para>
-            /// <para>The time is displayed in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T15:20Z</para>
@@ -99,17 +95,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            /// <summary>
+            /// <para>The cloud service that manages the VBR connection. This parameter is returned only when the VBR connection is managed by a cloud service. The standard code of the cloud service is returned. If the VBR connection is managed by you, this parameter is not returned.</para>
+            /// </summary>
             [NameInMap("ManagedService")]
             [Validation(Required=false)]
             public string ManagedService { get; set; }
 
             /// <summary>
-            /// <para>The payer for the network instance. Valid values:</para>
+            /// <para>The payer of the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PayByCenOwner</b>: The connection fee and data transfer fee for the VBR are paid by the account that owns the transit router.</para>
-            /// </description></item>
-            /// <item><description><para><b>PayByResourceOwner</b>: The connection fee and data transfer fee for the VBR are paid by the account that owns the VBR.</para>
-            /// </description></item>
+            /// <item><description><b>PayByCenOwner</b>: The connection fee and data processing fee of the VBR instance are paid by the account to which the transit router instance belongs.</description></item>
+            /// <item><description><b>PayByResourceOwner</b>: The connection fee and data processing fee of the VBR instance are paid by the account to which the VBR instance belongs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,8 +117,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the connection.</para>
-            /// <para>The value is set to <b>VBR</b>, which indicates a VBR instance.</para>
+            /// <para>The type of resource to which the connection belongs.</para>
+            /// <para>The value is <b>VBR</b>, which indicates a virtual border router instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VBR</para>
@@ -131,14 +128,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the VBR connection.</para>
+            /// <para>The status of the VBR connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Attached</b>: The connection is established.</para>
-            /// </description></item>
-            /// <item><description><para><b>Attaching</b>: The connection is being established.</para>
-            /// </description></item>
-            /// <item><description><para><b>Detaching</b>: The connection is being removed.</para>
-            /// </description></item>
+            /// <item><description><b>Attached</b>: The VBR connection is attached.</description></item>
+            /// <item><description><b>Attaching</b>: The VBR connection is being attached.</description></item>
+            /// <item><description><b>Detaching</b>: The VBR connection is being detached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,7 +202,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router.</para>
+            /// <para>The Enterprise Edition forward routing instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1su1ytdxtataupl****</para>
@@ -218,7 +212,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// <para>The VBR ID.</para>
+            /// <para>The VBR instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vbr-bp1svadp4lq38janc****</para>
@@ -228,7 +222,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VbrId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+            /// <para>The ID of the account to which the VBR instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1688111111111111</para>
@@ -238,7 +232,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VbrOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the VBR is deployed.</para>
+            /// <para>The region ID of the VBR instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

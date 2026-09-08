@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyGrantInstanceToTransitRouterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>A token used to ensure the idempotence of the request.</para>
-        /// <para>You can generate this token from your client, but you must ensure it is unique for each request. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the request\&quot;s <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> is unique for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The payer for the network instance.</para>
+        /// <para>The payer of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

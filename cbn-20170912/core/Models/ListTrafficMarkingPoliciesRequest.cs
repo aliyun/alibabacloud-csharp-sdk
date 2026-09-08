@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTrafficMarkingPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>You do not need to specify this parameter for the first query.</para>
-        /// </description></item>
-        /// <item><description><para>If a next query is to be sent, set the value to the <b>NextToken</b> value returned from the last API call.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent query exists.</description></item>
+        /// <item><description>If a subsequent query exists, set the value to the <b>NextToken</b> value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the traffic marking policy.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the traffic marking policy.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMarkingPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the TransitRouter instance.</para>
+        /// <para>The ID of the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-bp1rmwxnk221e3fas****</para>

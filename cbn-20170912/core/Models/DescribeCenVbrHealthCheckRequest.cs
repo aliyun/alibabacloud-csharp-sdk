@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenVbrHealthCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-6hpdgj7ni6pz1k****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VBR.</para>
+        /// <para>The VBR instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbr-bp1kznorjeembsuhl****</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the VBR.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the VBR instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1250123456123456</para>
@@ -76,8 +76,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Virtual Border Router (VBR) is deployed.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a>.</para>
+        /// <para>The region ID of the VBR instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page when entries are returned in pages. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that determines the start point of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description>You do not need to specify this parameter for the first query or if no subsequent query is to be sent.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the value to the <b>NextToken</b> value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The prefix list ID.</para>
+        /// <para>The ID of the prefix list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-6ehtn5kqxgeyy08fi****</para>
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions.</para>
+        /// <para>The filter conditions for route entry CIDR blocks.</para>
         /// </summary>
         [NameInMap("RouteFilter")]
         [Validation(Required=false)]
         public List<ListTransitRouterRouteEntriesRequestRouteFilter> RouteFilter { get; set; }
         public class ListTransitRouterRouteEntriesRequestRouteFilter : TeaModel {
             /// <summary>
-            /// <para>The match pattern for filtering CIDR blocks. Valid values:</para>
+            /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PrefixExactMatchCidrs</b>: exact matching.</description></item>
-            /// <item><description><b>LongestPrefixMatchCidrs</b>: longest prefix matching. You can specify IP addresses and CIDR blocks.</description></item>
-            /// <item><description><b>SubnetOfMatchCidrs</b>: subnet matching. The subnets of the specified CIDR blocks, including the CIDR block, are matches against the match conditions.</description></item>
-            /// <item><description><b>SupernetOfMatchCidrs</b>: supernet matching. The supernets of the CIDR block, including the CIDR block, are matched against the match conditions.</description></item>
+            /// <item><description><b>PrefixExactMatchCidrs</b>: exact match.</description></item>
+            /// <item><description><b>LongestPrefixMatchCidrs</b>: longest prefix match. IP addresses and CIDR blocks are supported.</description></item>
+            /// <item><description><b>SubnetOfMatchCidrs</b>: subnet match. Matches subnets of the specified CIDR block, including the specified CIDR block itself.</description></item>
+            /// <item><description><b>SupernetOfMatchCidrs</b>: supernet match. Matches supernets of the specified CIDR block, including the specified CIDR block itself.</description></item>
             /// </list>
-            /// <para>By default, the logical operator among filter conditions is <b>AND</b>. Information about a route entry is returned only if the route entry matches all filter conditions. Filter conditions must be unique.</para>
+            /// <para>Multiple filter conditions have an <b>AND</b> relationship by default, which means that a route entry must meet all filter conditions to be considered a match. You cannot specify the same filter condition more than once.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrefixExactMatchCidrs</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value.</para>
+            /// <para>The list of filter condition values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The destination CIDR block of the route. <b>This parameter is to be deprecated. We recommend that you use the RouteFilter parameter</b>.</para>
+        /// <para>The destination CIDR block of the route entry (<b>This parameter will be deprecated. Use the RouteFilter parameter instead</b>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/24</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryDestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The route ID.</para>
+        /// <para>The IDs of the route entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rte-oklkgwmj97z6dn****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> TransitRouterRouteEntryIds { get; set; }
 
         /// <summary>
-        /// <para>The route name.</para>
+        /// <para>The names of the route entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> TransitRouterRouteEntryNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance connection that you want to specify as the next hop.</para>
+        /// <para>The ID of the network instance connection associated with the next hop of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopId { get; set; }
 
         /// <summary>
-        /// <para>The next hop ID.</para>
+        /// <para>The instance ID of the next hop of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-m5ent6du8deaq5*****</para>
@@ -146,12 +146,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopResourceId { get; set; }
 
         /// <summary>
-        /// <para>The next hop type. Valid values:</para>
+        /// <para>The type of the next hop instance of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>VBR</b></description></item>
-        /// <item><description><b>TR</b></description></item>
-        /// <item><description><b>VPN</b></description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC) instance.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance.</description></item>
+        /// <item><description><b>TR</b>: transit router instance.</description></item>
+        /// <item><description><b>VPN</b>: IPsec connection instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,8 +164,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BlackHole</b>: routes network traffic to a black hole.</description></item>
-        /// <item><description><b>Attachment</b>: routes network traffic to a network instance connection.</description></item>
+        /// <item><description><b>BlackHole</b>: the route entry is a blackhole route.</description></item>
+        /// <item><description><b>Attachment</b>: the next hop of the route entry is a network instance connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopType { get; set; }
 
         /// <summary>
-        /// <para>The source instance ID.</para>
+        /// <para>The instance ID of the origin of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-m5ent6du8deaq5*****</para>
@@ -186,12 +186,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryOriginResourceId { get; set; }
 
         /// <summary>
-        /// <para>The source instance type. Valid values:</para>
+        /// <para>The type of the origin instance of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>VBR</b></description></item>
-        /// <item><description><b>TR</b></description></item>
-        /// <item><description><b>VPN</b></description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC) instance.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance.</description></item>
+        /// <item><description><b>TR</b>: transit router instance.</description></item>
+        /// <item><description><b>VPN</b>: IPsec connection instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,16 +202,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryOriginResourceType { get; set; }
 
         /// <summary>
-        /// <para>The status of the route. Valid values:</para>
+        /// <para>The status of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b></description></item>
-        /// <item><description><b>Active</b> (default)</description></item>
-        /// <item><description><b>Rejected</b></description></item>
-        /// <item><description><b>Prohibited</b></description></item>
-        /// <item><description><b>Standby</b></description></item>
-        /// <item><description><b>Candidate</b></description></item>
+        /// <item><description><b>All</b>: queries route entries in all states.</description></item>
+        /// <item><description><b>Active (default)</b>: queries only route entries in the active state.</description></item>
+        /// <item><description><b>Rejected</b>: queries only route entries that are rejected due to route conflicts.</description></item>
+        /// <item><description><b>Prohibited</b>: queries only route entries that are prohibited because they match a routing policy.</description></item>
+        /// <item><description><b>Standby</b>: queries only route entries that serve as standby routes.</description></item>
+        /// <item><description><b>Candidate</b>: queries only route entries that serve as candidate routes.</description></item>
         /// </list>
-        /// <para>If you do not specify a value, routes in the active state are queried.</para>
+        /// <para>If you do not specify this parameter, only route entries in the active state are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -221,10 +221,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryStatus { get; set; }
 
         /// <summary>
-        /// <para>The route type. Valid values:</para>
+        /// <para>The type of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Propagated</b>: automatically learned by the route table.</description></item>
-        /// <item><description><b>Static</b>: static routes.</description></item>
+        /// <item><description><b>Propagated</b>: generated by automatic learning on the current route table.</description></item>
+        /// <item><description><b>Static</b>: generated by static configuration on the current route table.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the Enterprise Edition transit router route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

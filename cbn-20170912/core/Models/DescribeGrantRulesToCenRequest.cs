@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGrantRulesToCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The instance ID of the CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance to query.</para>
+        /// <para>The instance ID of the network instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-rj9gt5nll27onu7****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the network instance.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the network instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1250123456123456</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ChildInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether IPv6 is enabled.</para>
+        /// <para>Specifies whether IPv6 is enabled:</para>
         /// <ol>
-        /// <item><description><para>This parameter applies only when <b>ProductType</b> is set to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>Set to <b>true</b> to return only VPCs with IPv6 enabled, or <b>false</b> to return only those with IPv6 disabled. If you omit this parameter, the response is not filtered by the IPv6 status.</para>
-        /// </description></item>
+        /// <item><description>This parameter takes effect only when ProductType is set to &quot;VPC&quot;.</description></item>
+        /// <item><description>A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If this parameter is left empty, results are not filtered by this parameter.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -58,10 +56,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If you omit this parameter, all entries are returned. The <b>MaxResults</b> value in the response then indicates the total number of entries.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter, the response is paginated. The <b>MaxResults</b> value specifies the number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. The <b>MaxResults</b> value in the response indicates the number of entries on the current page. Setting <b>MaxResults</b> to <b>20</b> is recommended.</para>
-        /// </description></item>
+        /// <item><description>If you do not specify the <b>MaxResults</b> parameter, pagination is not required. The <b>MaxResults</b> value in the response indicates the total number of entries.</description></item>
+        /// <item><description>If you specify the <b>MaxResults</b> parameter, pagination is required. The <b>MaxResults</b> value specifies the number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. The <b>MaxResults</b> value in the response indicates the number of entries in the current page. We recommend that you set <b>MaxResults</b> to <b>20</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,12 +68,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results.</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Omit this parameter for the first request.</para>
-        /// </description></item>
-        /// <item><description><para>Set this parameter to the <b>NextToken</b> value from the previous response to retrieve the next page of results.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent query exists.</description></item>
+        /// <item><description>If a subsequent query exists, set this parameter to the <b>NextToken</b> value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,15 +92,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: a virtual private cloud (VPC).</para>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: a virtual border router (VBR).</para>
+        /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: a Cloud Connect Network (CCN) instance.</para>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network (CCN).</para>
         /// </description></item>
-        /// <item><description><para><b>VPN</b>: an IPsec-VPN connection.</para>
+        /// <item><description><para><b>VPN</b>: IPsec connection.</para>
         /// </description></item>
-        /// <item><description><para><b>ECR</b>: an Express Connect router.</para>
+        /// <item><description><para><b>ECR</b>: Express Connect Router (ECR).</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -119,8 +113,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the network instance is located.</para>
-        /// <para>You can call the <a href="t2264556.xdita#"></a>operation to query region IDs.</para>
+        /// <para>The region ID of the network instance.                   </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

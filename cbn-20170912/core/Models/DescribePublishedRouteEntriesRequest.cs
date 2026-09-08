@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribePublishedRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the network instance is deployed.</para>
-        /// <para>For more information, see <a href="t2264556.xdita#"></a>.</para>
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the network instance.</para>
+        /// <para>The route table ID of the network instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp174d1gje79u1g4****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network instance. Valid values:</para>
+        /// <para>The type of the network instance. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
         /// </description></item>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route that you want to query.</para>
+        /// <para>The destination CIDR block of the route entry to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.0.0/16</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

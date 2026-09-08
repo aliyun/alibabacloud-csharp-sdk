@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenChildInstanceRouteEntriesToAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-dc4vwznpwbobrl****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the network instance.</para>
+        /// <para>The route table ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The default value is <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,12 +41,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>Specifies whether a next query token (Token) exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is your first query, leave this parameter empty.</para>
-        /// </description></item>
-        /// <item><description><para>If a next query is required, set the value to the NextToken value returned from the last call.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first query or if no next query exists.</description></item>
+        /// <item><description>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,16 +71,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The filter for the destination CIDR block.</para>
+        /// <para>The destination CIDR block filter.</para>
         /// </summary>
         [NameInMap("RouteFilter")]
         [Validation(Required=false)]
         public List<ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter> RouteFilter { get; set; }
         public class ListCenChildInstanceRouteEntriesToAttachmentRequestRouteFilter : TeaModel {
             /// <summary>
-            /// <para>The route matching mode.</para>
+            /// <para>The route match mode.</para>
             /// <list type="bullet">
-            /// <item><description><b>prefix-exact-match</b>: exact match</description></item>
+            /// <item><description><b>prefix-exact-match</b>: exact match.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>A list of destination CIDR blocks.</para>
+            /// <para>The list of destination CIDR blocks.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The type of the managed routing service. If this parameter is empty, the route is not managed. Set the value to TR. This value indicates that the route is managed by a transit router.</para>
+        /// <para>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TR</para>

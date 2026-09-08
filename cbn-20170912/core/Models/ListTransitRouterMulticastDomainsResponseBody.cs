@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token that determines the start point of the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the value of <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> TransitRouterMulticastDomains { get; set; }
         public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains : TeaModel {
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-h19xdb0qy2b3ir****</para>
@@ -73,14 +71,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The options of the multicast domain.</para>
+            /// <para>The feature options of the multicast domain.</para>
             /// </summary>
             [NameInMap("Options")]
             [Validation(Required=false)]
             public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions Options { get; set; }
             public class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether IGMPv2 is enabled for the multicast domain.</para>
+                /// <para>Indicates whether IGMP is enabled for the multicast domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
@@ -90,6 +88,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Igmpv2Support { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether strict multicast source control is enabled for the multicast domain.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
                 /// </summary>
@@ -100,8 +100,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The ID of the region where the transit router is deployed.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
+            /// <para>The region ID of the transit router.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -112,7 +112,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The status of the multicast domain.</para>
-            /// <para>The value is <b>Active</b>, which indicates that the multicast domain is available.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Active</c>: The multicast domain is available.</description></item>
+            /// <item><description><c>Modifying</c>: The multicast domain is being modified.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The ID of the transit router.</para>
+            /// <para>The transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1c23ijrl6d6c226h***</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPeerAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token that determines the start point of the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is empty, no more data is returned.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for this parameter, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,19 +54,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of inter-region connections.</para>
+        /// <para>The list of inter-region connections.</para>
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterPeerAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the Enterprise Edition transit router automatically advertises routes to the peer region.</para>
+            /// <para>Indicates whether the Enterprise Edition transit router instance automatically advertises routes of the inter-region connection to the peer region.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>false</b> (default): No.</para>
-            /// </description></item>
-            /// <item><description><para><b>true</b>: Yes.</para>
-            /// </description></item>
+            /// <item><description><b>false</b> (default): No.</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,12 +75,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth of the inter-region connection. Unit: Mbit/s.</para>
+            /// <para>The bandwidth value of the inter-region connection. Unit: Mbit/s.</para>
             /// <list type="bullet">
-            /// <item><description><para>If <b>BandwidthType</b> is set to <b>BandwidthPackage</b>, this parameter indicates the bandwidth that is allocated to the inter-region connection.</para>
-            /// </description></item>
-            /// <item><description><para>If <b>BandwidthType</b> is set to <b>DataTransfer</b>, this parameter indicates the maximum bandwidth of the inter-region connection.</para>
-            /// </description></item>
+            /// <item><description>If <b>BandwidthType</b> is set to <b>BandwidthPackage</b>, this parameter indicates the bandwidth that the inter-region connection can use.</description></item>
+            /// <item><description>If <b>BandwidthType</b> is set to <b>DataTransfer</b>, this parameter indicates the bandwidth limit of the inter-region connection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,9 +91,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The bandwidth allocation method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>BandwidthPackage</b>: Bandwidth is allocated from a bandwidth plan.</para>
+            /// <item><description><para><b>BandwidthPackage</b>: Bandwidth is allocated from a bandwidth package.</para>
             /// </description></item>
-            /// <item><description><para><b>DataTransfer</b>: The inter-region connection is not allocated a specific bandwidth and is billed on a pay-by-traffic basis.</para>
+            /// <item><description><para><b>DataTransfer</b>: No bandwidth is allocated to the inter-region connection. Data transfer is pay-as-you-go.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -111,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string BandwidthType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bandwidth plan that is associated with the inter-region connection.</para>
+            /// <para>The ID of the bandwidth package associated with the inter-region connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cenbwp-3xrxupouolw5ou****</para>
@@ -121,7 +115,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenBandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The CEN instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-j3jzhw1zpau2km****</para>
@@ -132,7 +126,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the inter-region connection was created.</para>
-            /// <para>The time is displayed in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mmZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in UTC. Format: <c>YYYY-MM-DDThh:mmZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-16T02:50Z</para>
@@ -144,10 +138,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The default link type.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Gold</b> (default): Gold.</para>
-            /// </description></item>
-            /// <item><description><para><b>Platinum</b>: Platinum.</para>
-            /// </description></item>
+            /// <item><description><b>Gold</b> (default): gold.</description></item>
+            /// <item><description><b>Platinum</b>: Platinum.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +150,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string DefaultLinkType { get; set; }
 
             /// <summary>
-            /// <para>The connected areas of the bandwidth plan.</para>
+            /// <para>The connected areas of the bandwidth package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>china_china</para>
@@ -168,7 +160,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string GeographicSpanId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the peer transit router.</para>
+            /// <para>The instance ID of the peer transit routing router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-m5eq27g6bndum7e88****</para>
@@ -178,7 +170,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string PeerTransitRouterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the peer transit router belongs.</para>
+            /// <para>The ID of the account to which the peer transit router instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>253460731706911258</para>
@@ -188,7 +180,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? PeerTransitRouterOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the peer transit router is deployed.</para>
+            /// <para>The region ID of the peer transit router instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao</para>
@@ -198,7 +190,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string PeerTransitRouterRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the Enterprise Edition transit router is deployed.</para>
+            /// <para>The region ID of the Enterprise Edition transit router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -208,16 +200,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of resource that is associated with the connection.</para>
+            /// <para>The type of resource associated with the connection.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
-            /// </description></item>
-            /// <item><description><para><b>CCN</b>: Cloud Connect Network (CCN) instance.</para>
-            /// </description></item>
-            /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
-            /// </description></item>
-            /// <item><description><para><b>TR</b>: transit router.</para>
-            /// </description></item>
+            /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
+            /// <item><description><b>CCN</b>: Cloud Connect Network instance.</description></item>
+            /// <item><description><b>VBR</b>: virtual border router (VBR) instance.</description></item>
+            /// <item><description><b>TR</b>: transit router instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -230,14 +218,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the inter-region connection.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Attached</b>: The connection is attached.</para>
-            /// </description></item>
-            /// <item><description><para><b>Attaching</b>: The connection is being attached.</para>
-            /// </description></item>
-            /// <item><description><para><b>Detaching</b>: The connection is being detached.</para>
-            /// </description></item>
-            /// <item><description><para><b>Detached</b>: The connection is detached.</para>
-            /// </description></item>
+            /// <item><description><b>Attached</b>: attached.</description></item>
+            /// <item><description><b>Attaching</b>: being attached.</description></item>
+            /// <item><description><b>Detaching</b>: being detached.</description></item>
+            /// <item><description><b>Detached</b>: detached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -248,7 +232,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -287,7 +271,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the inter-region connection.</para>
+            /// <para>The inter-region connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-5u4qbayfv2io5v****</para>
@@ -307,7 +291,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router.</para>
+            /// <para>The Enterprise Edition transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1su1ytdxtataupl****</para>

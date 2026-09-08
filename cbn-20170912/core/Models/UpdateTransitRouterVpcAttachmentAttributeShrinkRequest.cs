@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTransitRouterVpcAttachmentAttributeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VPC.</para>
+        /// <para>Specifies whether to allow the Enterprise Edition forward router to automatically publish route entry to the VPC-connected instance.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: The transit router does not automatically advertise routes.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: The transit router automatically advertises routes.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,9 +25,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can generate the token from your client, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,12 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, which checks for issues such as permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the system modifies the name and description of the VPC connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a check request. The system validates the request without modifying the VPC connection. If the check passes, the system returns the ID of the request. Otherwise, the system returns an error.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the name and description of the VPC connection are modified.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the verification is performed, and the name and description of the VPC connection are not modified. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,14 +52,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The collection of feature attributes.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public string OptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The payer of the network instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByCenOwner</para>
@@ -89,8 +85,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the VPC connection.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The description of the VPC connection.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -111,8 +107,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the VPC connection.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The name of the VPC connection.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -122,7 +118,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// <para>The feature properties of the VPC connection. This parameter is deprecated. We recommend that you use the <c>Options</c> parameter.</para>
+        /// <para>The list of feature attributes of the VPC connection (to be deprecated. Use the new parameter Options instead).</para>
         /// </summary>
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]

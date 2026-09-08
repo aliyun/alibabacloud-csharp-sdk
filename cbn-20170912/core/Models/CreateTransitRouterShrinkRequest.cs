@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a client token to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. The dry run checks permissions and whether the required parameters are specified. Valid values:</para>
+        /// <para>Specifies whether to execute a dry run, without performing the actual request. The dry run includes permission verification, instance status verification, and forwarding and routing checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends the request and creates the instance after the request passes the check.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a dry run request to check the parameters without creating the instance. The system checks the required parameters, request format, and permissions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): sends a normal request and creates the Enterprise Edition transit router instance after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: sends a check request, without creating the Enterprise Edition transit router instance. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,8 +57,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Enterprise Edition transit router is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Enterprise Edition transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,12 +79,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): disables the multicast feature.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: enables the multicast feature.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): disables the multicast feature.</description></item>
+        /// <item><description><b>true</b>: enables the multicast feature.</description></item>
         /// </list>
-        /// <para>The multicast feature is supported only in some regions. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support multicast.</para>
+        /// <para>Only Enterprise Edition transit routers in some regions support the multicast feature. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support the multicast feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -96,16 +92,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? SupportMulticast { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterShrinkRequestTag> Tag { get; set; }
         public class CreateTransitRouterShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>You can specify at most 20 tag keys.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -115,9 +111,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
-            /// <para>The tag value can be empty or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The CIDR blocks of the transit router.</para>
+        /// <para>The list of transit router CIDR blocks.</para>
         /// </summary>
         [NameInMap("TransitRouterCidrList")]
         [Validation(Required=false)]
@@ -137,7 +133,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the Enterprise Edition transit router instance.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the Enterprise Edition transit router instance.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>

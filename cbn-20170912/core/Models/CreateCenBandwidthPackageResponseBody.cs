@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenBandwidthPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>The instance ID of the new bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cenbwp-4c2zaavbvh5fx****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order for the bandwidth plan.</para>
+        /// <para>The order ID of the bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20156420004****</para>

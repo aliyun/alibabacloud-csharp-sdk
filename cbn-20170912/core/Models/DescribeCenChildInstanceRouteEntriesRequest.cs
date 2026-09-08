@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenChildInstanceRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the network instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -43,7 +43,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the network instance. If you do not specify a route table ID, the system queries the routes in the system route tables of the VPCs by default.</para>
+        /// <para>The routing table ID of the network instance.
+        /// If you do not specify a routing table ID when querying route entries of a VPC-connected instance, the system queries route entries in the system routing table of the VPC-connected instance by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-p0wxx3apzgn6uqp3r****</para>
@@ -55,10 +56,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
-        /// <item><description><b>ECR</b>: Express Connect Router (ECR)</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network (CCN).</para>
+        /// </description></item>
+        /// <item><description><para><b>ECR</b>: Express Connect Router (ECR).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>500</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging queries. Default value: <b>10</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -106,13 +111,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The status of the route. Valid values:</para>
+        /// <para>The status of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Active</b>: available</description></item>
-        /// <item><description><b>Candidate</b>: standby</description></item>
-        /// <item><description><b>Rejected</b>: rejected</description></item>
-        /// <item><description><b>Prohibited</b>: prohibited</description></item>
-        /// <item><description><b>All</b> (default): all routes</description></item>
+        /// <item><description><para><b>Active</b>: active.</para>
+        /// </description></item>
+        /// <item><description><para><b>Candidate</b>: candidate.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rejected</b>: rejected.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prohibited</b>: prohibited.</para>
+        /// </description></item>
+        /// <item><description><para><b>All</b> (default): queries route entries in all states of the network instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

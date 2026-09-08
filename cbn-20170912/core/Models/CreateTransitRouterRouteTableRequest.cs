@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class CreateTransitRouterRouteTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token from your client to ensure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request is different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the request for potential issues, including required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, a custom route table is created.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): sends a normal request and creates the custom route table after the request passes the verification.</description></item>
+        /// <item><description><b>true</b>: sends a check request without creating the custom route table. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,19 +54,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The features of the route table.</para>
+        /// <para>The route table options.</para>
         /// </summary>
         [NameInMap("RouteTableOptions")]
         [Validation(Required=false)]
         public CreateTransitRouterRouteTableRequestRouteTableOptions RouteTableOptions { get; set; }
         public class CreateTransitRouterRouteTableRequestRouteTableOptions : TeaModel {
             /// <summary>
-            /// <para>The multi-region equal-cost multi-path (ECMP) routing feature. Valid values:</para>
+            /// <para>The multi-region equal-cost multi-path (ECMP) routing setting. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>disable</b> (default): disables the multi-region ECMP routing feature. If you disable the multi-region ECMP routing feature, routes that are learned from different regions but have the same prefix and attributes select the transit router with the smallest region ID as the next hop. The region ID is sorted in alphabetical order. In this case, the latency and bandwidth consumption of the traffic may change. Make sure that you are aware of the impact before you disable the feature.</para>
-            /// </description></item>
-            /// <item><description><para><b>enable</b>: enables the multi-region ECMP routing feature. If you enable the multi-region ECMP routing feature, routes that are learned from different regions but have the same prefix and attributes are considered ECMP routes. In this case, the latency and bandwidth consumption of the traffic may change. Make sure that you are aware of the impact before you enable the feature.</para>
-            /// </description></item>
+            /// <item><description><b>disable</b> (default): disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions prefer the transit router whose Region ID is the smallest (sorted alphabetically) as the next hop when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before disabling this feature.</description></item>
+            /// <item><description><b>enable</b>: enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This may change traffic latency and bandwidth consumption between regions. Make sure that you fully evaluate the impact before enabling this feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,8 +77,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The tag.</para>
-        /// <para>You can specify up to 20 tags in each call.</para>
+        /// <para>The tag information.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -90,8 +86,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class CreateTransitRouterRouteTableRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with \<c>aliyun\\</c> or \<c>acs:\\</c>. It cannot contain \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
-            /// <para>You can specify up to 20 tag keys.</para>
+            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -102,8 +98,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value of the resource.</para>
-            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with \<c>aliyun\\</c> or \<c>acs:\\</c> and cannot contain \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify up to 20 tag values.</para>
+            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -127,7 +123,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the custom route table.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the custom route table.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>

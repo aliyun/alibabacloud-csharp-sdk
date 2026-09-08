@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenRouteMapsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the routing policy is applied.</para>
+        /// <para>The ID of the region where the route map is applied.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy.</para>
+        /// <para>The ID of the route map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cenrmap-y40mxdvf7joc12****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RouteMapId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the transit router that is associated with the routing policy.</para>
+        /// <para>The ID of the transit router route table associated with the route map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-gw8nx3515m1mbd1z1****</para>
@@ -88,15 +88,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The direction in which the routing policy is applied. Valid values:</para>
+        /// <para>The direction in which the route map is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RegionIn</b>: Inbound. The routing policy is applied to routes that are advertised to the gateway of a region.</description></item>
+        /// <item><description><b>RegionIn</b>: Routes are advertised to the regional gateway of the CEN instance.</description></item>
         /// </list>
-        /// <para>For example, routes are advertised from network instances in the current region to the gateway of the current region, or routes from other regions are advertised to the gateway of the current region.</para>
+        /// <para> For example, routes are advertised from a network instance in the local region to the local regional gateway, or routes are advertised from a regional gateway in another region to the local regional gateway.</para>
         /// <list type="bullet">
-        /// <item><description><b>RegionOut</b>: Outbound. The routing policy is applied to routes that are advertised from the gateway of a region.</description></item>
+        /// <item><description><b>RegionOut</b>: Routes are advertised from the regional gateway of the CEN instance.</description></item>
         /// </list>
-        /// <para>For example, routes are advertised from the gateway of the current region to network instances in the current region, or to gateways in other regions.</para>
+        /// <para> For example, routes are advertised from the local regional gateway to network instances in the local region, or routes are advertised from the local regional gateway to regional gateways in other regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RegionOut</para>

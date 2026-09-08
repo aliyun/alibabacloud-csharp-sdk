@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterPrefixListAssociationRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the task.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without dissociating the prefix list. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the prefix list is dissociated.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is not yet available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,10 +41,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
-        /// <remarks>
-        /// <para>If <b>NextHopType</b> is set to <b>BlackHole</b>, you must set this parameter to <b>BlackHole</b>.</para>
-        /// </remarks>
+        /// <para>The ID of the next hop connection.</para>
+        /// <para>If the CIDR blocks in the prefix list are blackhole routes, set this parameter to <b>BlackHole</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,12 +53,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The type of the next hop. Valid values:</para>
+        /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BlackHole</b>: All the CIDR blocks in the prefix list are blackhole routes. Packets destined for the CIDR blocks are dropped.</description></item>
-        /// <item><description><b>VPC</b>: The next hop of the CIDR blocks in the prefix list is a VPC connection.</description></item>
-        /// <item><description><b>VBR</b>: The next hop of the CIDR blocks in the prefix list is a VBR connection.</description></item>
+        /// <item><description><b>BlackHole</b>: All CIDR blocks in the prefix list are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</description></item>
+        /// <item><description><b>VPC</b>: The next hop of the CIDR blocks in the prefix list is a Virtual Private Cloud (VPC) connection.</description></item>
+        /// <item><description><b>VBR</b>: The next hop of the CIDR blocks in the prefix list is a Virtual Border Router (VBR) connection.</description></item>
         /// <item><description><b>TR</b>: The next hop of the CIDR blocks in the prefix list is an inter-region connection.</description></item>
+        /// <item><description><b>ECR</b>: The next hop of the CIDR blocks in the prefix list is an Express Connect Router (ECR) instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +89,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The ID of the transit routing instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the transit router.</para>
+        /// <para>The ID of the transit router route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

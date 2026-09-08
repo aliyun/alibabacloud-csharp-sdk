@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchesToCenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of vSwitches.</para>
+        /// <para>The list of vSwitch information.</para>
         /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public List<ListGrantVSwitchesToCenResponseBodyVSwitches> VSwitches { get; set; }
         public class ListGrantVSwitchesToCenResponseBodyVSwitches : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1194lh263wx1gsk****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the vSwitch belongs.</para>
+            /// <para>The VPC-connected instance ID to which the vSwitch belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp12ge2tq5gzdc915****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone to which the vSwitch belongs.</para>
+            /// <para>The zone ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>

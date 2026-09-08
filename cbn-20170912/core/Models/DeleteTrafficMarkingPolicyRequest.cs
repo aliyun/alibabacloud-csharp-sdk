@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the value of <b>RequestId</b> as the value of <b>ClientToken</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without deleting the traffic marking policy. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the traffic marking policy is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Whether to force delete the traffic marking policy. Valid values:</para>
+        /// <para>Specifies whether to force delete the traffic marking policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): checks whether there is a traffic classification rule before deleting the traffic marking policy. If there is, the traffic marking policy cannot be deleted and an error is returned.</description></item>
-        /// <item><description><b>true</b>: When you delete a traffic marking policy, all traffic classification rules are deleted by default.</description></item>
+        /// <item><description><b>false</b> (default): Before the traffic marking policy is deleted, the system checks whether traffic categorization rules exist. If traffic categorization rules exist, the traffic marking policy cannot be deleted and an error message is returned.</description></item>
+        /// <item><description><b>true</b>: When the traffic marking policy is deleted, all traffic categorization rules are also deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ListTransitRouterMulticastDomainAssociationsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token from your client to ensure that it is unique among different requests. The ClientToken parameter can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,12 +31,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Valid values:</para>
+        /// <para>The token that determines the start point of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is your first query and no next query is to be sent, ignore this parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If a next query is to be sent, set the value to the NextToken value returned from the last API call.</para>
-        /// </description></item>
+        /// <item><description>If this is the first query or no subsequent query is to be sent, you do not need to specify this parameter.</description></item>
+        /// <item><description>If a subsequent query is to be sent, set the value to the NextToken value returned in the previous call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The type of resource associated with the multicast domain.</para>
-        /// <para>The value is <b>VPC</b>.</para>
+        /// <para>Set the value to <b>VPC</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance connection.</para>
+        /// <para>The network instance connection ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-p90y3ymbbwuvy5****</para>
@@ -94,7 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the multicast domain.</para>
+        /// <para>The multicast domain ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-mcast-domain-91wpg6wbhchjeq****</para>

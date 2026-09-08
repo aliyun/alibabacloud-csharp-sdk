@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchEnisRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance to which the VPC is connected.</para>
+        /// <para>The ID of the CEN instance to which the VPC-connected instance is connected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 10 to 500.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 10 to 500.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the default value is 20.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify a value greater than 500, the default value is 500.</para>
-        /// </description></item>
+        /// <item><description>If you do not set this parameter, the default value is 20.</description></item>
+        /// <item><description>If the value you set is greater than 500, the default value is 500.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,14 +36,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The IDs of network interface controllers (NICs).</para>
         /// </summary>
         [NameInMap("NetworkInterfaceId")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ENI.</para>
+        /// <para>The name of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-eni-name</para>
@@ -55,12 +53,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is your first query, you do not need to specify this parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If a next query is to be sent, set the value to the NextToken value that was returned from the last call.</para>
-        /// </description></item>
+        /// <item><description>If this is the first query or no next query exists, leave this parameter empty.</description></item>
+        /// <item><description>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The primary private IPv4 address of the ENI.</para>
+        /// <para>The primary private IP IPv4 address of the elastic network interfaces (ENIs). You can use this parameter to filter network interface controllers (NICs) by primary private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>192.168.**.**</c></para>
@@ -97,8 +93,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a vSwitch in the VPC.</para>
-        /// <para>You can query information about the ENIs in only one vSwitch at a time.</para>
+        /// <para>The ID of a vSwitch in the VPC-connected instance.</para>
+        /// <para>You can query network interface controller (NIC) information for only one vSwitch at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the VPC-connected instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

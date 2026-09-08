@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that ensures the idempotence of the request.</para>
-        /// <para>Generate a unique token on your client for each request. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -23,10 +23,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run. The system checks the required parameters, request format, and service limits. If the check fails, an error message is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends the request. If the request passes the check, the name and description of the multicast domain are modified.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. After the request passes the dry run, the name and description of the multicast domain are modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,13 +42,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public ModifyTransitRouterMulticastDomainRequestOptions Options { get; set; }
         public class ModifyTransitRouterMulticastDomainRequestOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. When this feature is enabled, hosts can use IGMP to dynamically join or leave multicast groups. Set the value to <b>enable</b>.</para>
+            /// <para>Specifies whether to enable the IGMP feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using Internet Group Management Protocol (IGMP). Valid values: <b>enable</b>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>The IGMP feature is in public preview. To use this feature, contact your account manager.</para>
-            /// </description></item>
-            /// <item><description><para>You cannot disable the IGMP feature after it is enabled.</para>
-            /// </description></item>
+            /// <item><description>The IGMP feature is in public preview. To use this feature, contact your account manager to request access.</description></item>
+            /// <item><description>The IGMP feature cannot be disabled after it is enabled.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -62,6 +58,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Igmpv2Support { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all ECS instances in the associated vSwitch can serve as multicast sources. If this feature is enabled, only ENIs that are statically configured or have sent IGMP Join messages can serve as multicast sources. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>enable</c>: enables the strict multicast source control feature.</description></item>
+            /// <item><description><c>disable</c>: disables the strict multicast source control feature.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>The strict multicast source control feature takes effect only for multicast domains with the IGMP feature enabled.</description></item>
+            /// <item><description>Only one multicast domain with the strict multicast source control feature disabled can be created under a transit router.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new description of the multicast domain.</para>
-        /// <para>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -111,7 +119,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The new name of the multicast domain.</para>
-        /// <para>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

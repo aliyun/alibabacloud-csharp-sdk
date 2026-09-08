@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ActiveFlowLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: no</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

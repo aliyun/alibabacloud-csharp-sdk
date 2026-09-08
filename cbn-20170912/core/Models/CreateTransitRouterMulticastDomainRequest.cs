@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterMulticastDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-a7syd349kne38g****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token on your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-4266****</para>
@@ -33,10 +33,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the multicast domain is created.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the multicast domain is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,26 +45,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The multicast domain options.</para>
+        /// <para>The multicast domain feature options.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public CreateTransitRouterMulticastDomainRequestOptions Options { get; set; }
         public class CreateTransitRouterMulticastDomainRequestOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. After you enable IGMP, hosts can dynamically join or leave multicast groups using IGMP. Valid values:</para>
+            /// <para>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>enable</b>: enables the IGMP feature.</para>
-            /// </description></item>
-            /// <item><description><para><b>disable</b> (default): disables the IGMP feature.</para>
-            /// </description></item>
+            /// <item><description><b>enable</b>: enables the IGMP feature.</description></item>
+            /// <item><description><b>disable</b> (default): disables the IGMP feature.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><para>The IGMP feature is in public preview. To use this feature, contact your account manager to request permissions.</para>
-            /// </description></item>
-            /// <item><description><para>After the IGMP feature is enabled, you cannot disable it.</para>
-            /// </description></item>
+            /// <item><description>The IGMP feature is in public preview. To use this feature, contact your account manager to apply for permissions.</description></item>
+            /// <item><description>After the IGMP feature is enabled, it cannot be disabled.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -78,6 +72,18 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Igmpv2Support { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all ECS instances in the associated vSwitch can serve as multicast sources. If this feature is enabled, only ENIs that are statically configured or that have sent IGMP Join messages can serve as multicast sources. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>enable</c>: enables the strict multicast source control feature.</description></item>
+            /// <item><description><c>disable</c>: disables the strict multicast source control feature.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>The strict multicast source control feature takes effect only for multicast domains with the IGMP feature enabled.</description></item>
+            /// <item><description>Currently, only one multicast domain with the strict multicast source control feature disabled can be created under a transit router.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -96,8 +102,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</para>
+        /// <para>The region ID of the transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -115,17 +121,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
-        /// <para>You can specify up to 20 tags in each call.</para>
+        /// <para>The tag information.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterMulticastDomainRequestTag> Tag { get; set; }
         public class CreateTransitRouterMulticastDomainRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>You can specify up to 20 tag keys.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>Once you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -135,9 +141,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string or a string of up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify up to 20 tag values.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>Once you specify this parameter, it cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The instance ID of the transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-p0wr9p28r92d598y6****</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the multicast domain.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the multicast domain.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with \<c>http\\://\\</c> or \<c>https\\://\\</c>.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

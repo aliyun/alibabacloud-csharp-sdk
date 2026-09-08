@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenInterRegionTrafficQosPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation mode of the guaranteed bandwidth. You can specify an absolute bandwidth value or a bandwidth percentage. Valid values:</para>
+        /// <para>The bandwidth guarantee mode. You can configure QoS queues based on absolute bandwidth values or bandwidth percentages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>byBandwidth</b>: allocates an absolute bandwidth value for the QoS queue.</para>
+        /// <item><description><para><b>byBandwidth</b>: configures QoS queues based on absolute bandwidth values.</para>
         /// </description></item>
-        /// <item><description><para><b>byBandwidthPercent</b> (default): allocates a bandwidth percentage for the OoS queue.</para>
+        /// <item><description><para><b>byBandwidthPercent</b> (default): configures QoS queues based on bandwidth percentages.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655****</para>
@@ -36,17 +36,25 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the cross-region traffic scheduling policy is created.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("ConsoleDryRun")]
         [Validation(Required=false)]
         public bool? ConsoleDryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether only to precheck the API request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: prechecks the request but does not create the QoS policy. The system checks the required parameters, the request format, and the service limits. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: sends the API request. If the request passes the precheck, the QoS policy is created. This is the default value.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the traffic scheduling policy is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,8 +81,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the QoS policy.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The description of the traffic scheduling policy.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -84,8 +92,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the QoS policy.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The name of the traffic scheduling policy.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -95,19 +103,19 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The information about the QoS queue.</para>
-        /// <para>You can add at most three QoS queues in a QoS policy by calling this operation. To add more QoS queues, call the CreateCenInterRegionTrafficQosQueue operation.</para>
+        /// <para>The queue information of the traffic scheduling policy.</para>
+        /// <para>You can create up to 3 queues. To create more queues, call CreateCenInterRegionTrafficQosQueue.</para>
         /// </summary>
         [NameInMap("TrafficQosQueues")]
         [Validation(Required=false)]
         public List<CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues> TrafficQosQueues { get; set; }
         public class CreateCenInterRegionTrafficQosPolicyRequestTrafficQosQueues : TeaModel {
             /// <summary>
-            /// <para>The absolute bandwidth that can be consumed by the QoS queue. Unit: Mbit/s.</para>
-            /// <para>Each QoS policy supports at most 10 queues. You can specify a valid bandwidth value for each queue.</para>
-            /// <para>For example, a value of 1 specifies that the queue can consume 1 Mbit/s of the inter-region bandwidth.</para>
+            /// <para>The absolute bandwidth value that the queue can use for inter-region traffic, in Mbit/s.</para>
+            /// <para>A traffic scheduling policy supports up to 10 queues, and each queue can be assigned an absolute bandwidth value.</para>
+            /// <para>For example, if you enter 1, traffic that matches the queue can use up to 1 Mbit/s of inter-region bandwidth.</para>
             /// <remarks>
-            /// <para>The sum of the absolute bandwidth values of all the queues in a QoS policy cannot exceed the total bandwidth of the inter-region connection.</para>
+            /// <para>The sum of absolute bandwidth values of all allocated queues in a traffic scheduling policy cannot exceed the inter-region bandwidth value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -118,17 +126,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The Differentiated Services Code Point (DSCP) value that matches the current queue.</para>
-            /// <para>Each QoS policy supports at most three queues. You can specify at most 60 DSCP values for each queue. Separate multiple DCSP values with commas (,).</para>
+            /// <para>The DSCP values that the queue matches.</para>
+            /// <para>A traffic scheduling policy supports up to 3 queues, and each queue can match up to 60 DSCP values. Separate multiple DSCP values with commas (,).</para>
             /// </summary>
             [NameInMap("Dscps")]
             [Validation(Required=false)]
             public List<int?> Dscps { get; set; }
 
             /// <summary>
-            /// <para>The description of the current queue.</para>
-            /// <para>Each QoS policy supports at most 10 queues. You can specify a description for each queue.</para>
-            /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
+            /// <para>The description of the queue.</para>
+            /// <para>A traffic scheduling policy supports up to 10 queues, and each queue can have a description.</para>
+            /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -138,9 +146,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string QosQueueDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the current queue.</para>
-            /// <para>Each QoS policy supports at most three queues. You can specify a name for each queue.</para>
-            /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+            /// <para>The name of the queue.</para>
+            /// <para>A traffic scheduling policy supports up to 3 queues, and each queue can be assigned a name.</para>
+            /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>
@@ -150,11 +158,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string QosQueueName { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the inter-region bandwidth that can be used by the queue.</para>
-            /// <para>Each QoS policy supports at most 10 queues. You can specify a valid percentage for each queue.</para>
-            /// <para>For example, a value of <b>1</b> specifies that the queue can consume 1% of the inter-region bandwidth.</para>
+            /// <para>The percentage of inter-region bandwidth that the queue can use.</para>
+            /// <para>A traffic scheduling policy supports up to 10 queues, and each queue can be assigned a percentage of inter-region bandwidth.</para>
+            /// <para>For example, if you enter <b>1</b>, traffic that matches the queue can use up to 1% of the inter-region bandwidth.</para>
             /// <remarks>
-            /// <para>The sum of the percentage values of all the queues in a QoS policy cannot exceed 100%.</para>
+            /// <para>The sum of bandwidth percentages of all queues in a traffic scheduling policy cannot exceed 100%.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -178,7 +186,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The ID of the transit router instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

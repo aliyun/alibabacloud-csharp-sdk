@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterVpcAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is empty, all results have been returned.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, it is the token to start the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,19 +54,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of VPC connections.</para>
+        /// <para>The list of VPC connections.</para>
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the Enterprise Edition transit router automatically advertises routes to the VPC.</para>
+            /// <para>Indicates whether the Enterprise Edition transit router automatically publishes route entries to the VPC instance.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>false</b>: Routes are not automatically advertised.</para>
-            /// </description></item>
-            /// <item><description><para><b>true</b>: Routes are automatically advertised.</para>
-            /// </description></item>
+            /// <item><description><b>false</b>: The forward router does not automatically publish route entries.</description></item>
+            /// <item><description><b>true</b>: The forward router automatically publishes route entries.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The CEN instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-j3jzhw1zpau2km****</para>
@@ -89,8 +85,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the VPC connection.</para>
-            /// <para>The value is always <b>POSTPAY</b>, which indicates the pay-as-you-go billing method.</para>
+            /// <para>The billing type of the VPC connection.</para>
+            /// <para>The value is <b>POSTPAY</b>, which indicates pay-as-you-go.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the VPC connection was created.</para>
-            /// <para>The time is in the <c>YYYY-MM-DDThh:mmZ</c> format and in UTC.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T02:14Z</para>
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud service to which the resource belongs.</para>
+            /// <para>The cloud service to which the connection belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAS</para>
@@ -121,19 +117,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ManagedService { get; set; }
 
             /// <summary>
-            /// <para>A collection of feature attributes.</para>
+            /// <para>The collection of feature attributes.</para>
             /// </summary>
             [NameInMap("Options")]
             [Validation(Required=false)]
             public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions Options { get; set; }
             public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether appliance mode is enabled.</para>
+                /// <para>Indicates whether the appliance mode is enabled.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>disable</b> (default): Appliance mode is disabled.</para>
-                /// </description></item>
-                /// <item><description><para><b>enable</b>: Appliance mode is enabled.</para>
-                /// </description></item>
+                /// <item><description><b>disable</b> (default): No.</description></item>
+                /// <item><description><b>enable</b>: Yes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,12 +138,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string ApplianceModeSupport { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether IPv6 is enabled.</para>
+                /// <para>Indicates whether IPv6 is supported.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>disable</b> (default): IPv6 is disabled.</para>
-                /// </description></item>
-                /// <item><description><para><b>enable</b>: IPv6 is enabled.</para>
-                /// </description></item>
+                /// <item><description><b>disable</b> (default): No.</description></item>
+                /// <item><description><b>enable</b>: Yes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,12 +154,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>Specifies who pays for the network instance. Valid values:</para>
+            /// <para>The payer of the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PayByCenOwner</b>: The account that owns the CEN instance pays the fees.</para>
-            /// </description></item>
-            /// <item><description><para><b>PayByResourceOwner</b>: The account that owns the network instance pays the fees.</para>
-            /// </description></item>
+            /// <item><description><b>PayByCenOwner</b>: The fees generated by the network instance are paid by the account that owns the CEN instance.</description></item>
+            /// <item><description><b>PayByResourceOwner</b>: The fees generated by the network instance are paid by the account that owns the network instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -178,8 +168,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The type of resource to which the connection is attached.</para>
-            /// <para>The value is always <b>VPC</b>, which indicates a VPC.</para>
+            /// <para>The resource type of the connection.</para>
+            /// <para>The value is <b>VPC</b>, which indicates a VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -191,12 +181,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the VPC connection.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Attached</b>: The connection is established.</para>
-            /// </description></item>
-            /// <item><description><para><b>Attaching</b>: The connection is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>Detaching</b>: The connection is being deleted.</para>
-            /// </description></item>
+            /// <item><description><b>Attached</b>: attached.</description></item>
+            /// <item><description><b>Attaching</b>: being attached.</description></item>
+            /// <item><description><b>Detaching</b>: being detached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +194,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>A list of tags.</para>
+            /// <para>The tag information.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -246,7 +233,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC connection.</para>
+            /// <para>The VPC connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -266,7 +253,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router.</para>
+            /// <para>The Enterprise Edition transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1su1ytdxtataupl****</para>
@@ -276,14 +263,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// <para>The feature attributes of the VPC connection. This parameter is deprecated. We recommend that you use the Options parameter instead.</para>
+            /// <para>The list of feature attributes of the VPC connection (to be deprecated. Use the new parameter Options instead).</para>
             /// </summary>
             [NameInMap("TransitRouterVPCAttachmentOptions")]
             [Validation(Required=false)]
             public Dictionary<string, string> TransitRouterVPCAttachmentOptions { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1h8vbrbcgohcju5****</para>
@@ -293,7 +280,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that owns the VPC.</para>
+            /// <para>The ID of the account that owns the VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1250123456123456</para>
@@ -303,7 +290,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public long? VpcOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the VPC is deployed.</para>
+            /// <para>The region ID of the VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -313,14 +300,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VpcRegionId { get; set; }
 
             /// <summary>
-            /// <para>The zone mappings of the VPC connection. This includes the vSwitches and elastic network interfaces (ENIs) in the associated VPC.</para>
+            /// <para>The zone information of the VPC connection and the vSwitch and network interface controller (NIC) information of the associated VPC instance that are active for forwarding and routing traffic.</para>
             /// </summary>
             [NameInMap("ZoneMappings")]
             [Validation(Required=false)]
             public List<ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings> ZoneMappings { get; set; }
             public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsZoneMappings : TeaModel {
                 /// <summary>
-                /// <para>The ID of the ENI that the Enterprise Edition transit router creates in the vSwitch.</para>
+                /// <para>The ID of the network interface controller (NIC) that the Enterprise Edition transit router created in the vSwitch for forwarding and routing traffic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-bp149hmyaqegerml****</para>
@@ -330,7 +317,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string NetworkInterfaceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp1a214sbus8z3b54****</para>
@@ -340,7 +327,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>

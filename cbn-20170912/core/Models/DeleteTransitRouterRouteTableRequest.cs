@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterRouteTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token from your client to ensure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. A dry run checks for issues such as permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run for this delete request, including permission and instance status checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Sends a normal request. The custom route table is deleted after the request passes the check.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Sends a check request. The system checks the required parameters, request format, and permissions. If the check fails, an error message is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned. The custom route table is not deleted.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. After the request passes the check, the custom route table is directly deleted.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the check is performed, and the custom route table is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

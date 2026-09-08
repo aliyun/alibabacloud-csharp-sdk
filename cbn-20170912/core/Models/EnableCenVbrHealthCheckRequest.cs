@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class EnableCenVbrHealthCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
-        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http:// </c>or <c>https://</c>.</para>
+        /// <para>The description.  </para>
+        /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time interval at which probe packets are sent during a health check. Unit: seconds. Default value: 2. Valid values: <b>2</b> to <b>3</b>.</para>
+        /// <para>The interval at which health check probe packets are sent. Unit: seconds. Default value: <b>2</b>. Valid values: <b>2</b> to <b>3</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -42,16 +42,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? HealthCheckInterval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable only the detection feature. Valid values:</para>
+        /// <para>Specifies whether to enable only the health check detection feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Yes.</para>
-        /// <pre><c>  If you enable only the detection feature, the system performs a health check but does not switch routes when the Express Connect circuit is down.
+        /// <item><description><para><b>true</b>: Only the detection feature is enabled.</para>
+        /// <pre><c>  If only the health check detection feature is enabled, route switchover is not triggered when the health check detects that the link is down.
         /// 
-        ///   &gt; Make sure that you have another way to ensure link redundancy. Otherwise, network interruptions may occur.
+        ///   &gt; Make sure that you have other methods to ensure link redundancy. Otherwise, enabling this feature may cause link interruptions.
         /// </c></pre>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): No.</para>
-        /// <pre><c>  This feature is disabled by default. If the health check detects a link failure and a redundant route is available in the CEN instance, the system immediately switches to the available route.
+        /// <item><description><para><b>false</b> (default): The detection-only feature is not enabled.</para>
+        /// <pre><c>  This feature is disabled by default. When the health check detects that the link is down, if redundant routes exist in the CEN instance, the health check immediately triggers a route switchover to use an available link.
         /// </c></pre>
         /// </description></item>
         /// </list>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? HealthCheckOnly { get; set; }
 
         /// <summary>
-        /// <para>The source IP address for the health check. You can configure the source IP address in one of the following ways:</para>
+        /// <para>The source IP address for health checks. The following configuration methods are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Automatic IP address</b> (recommended): The system automatically assigns an IP address from the 100.96.0.0/16 CIDR block.</para>
+        /// <item><description><para><b>Automatically generated source IP</b> (recommended): The system automatically allocates an IP address from the 100.96.0.0/16 CIDR block.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom IP address</b>: You can specify an unused IP address from the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The specified IP address cannot conflict with an IP address that is used for communication in the CEN instance. The specified IP address also cannot conflict with the Alibaba Cloud-side or client-side IP address of the VBR instance.</para>
+        /// <item><description><para><b>Custom source IP</b>: The source IP address can be any unused IP address within the 10.0.0.0/8, 192.168.0.0/16, or 172.16.0.0/12 CIDR block. The IP address cannot cause an IP address conflict with addresses that need to communicate with each other in the CEN instance, or with the Alibaba Cloud-side or customer-side IP address of the VBR instance.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -80,8 +80,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HealthCheckSourceIp { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address for the health check.</para>
-        /// <para>The destination IP address is the client-side IP address of the VBR instance.</para>
+        /// <para>The destination IP address for health checks.</para>
+        /// <para>The destination IP address is the customer-side IP address of the VBR instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HealthCheckTargetIp { get; set; }
 
         /// <summary>
-        /// <para>The number of probe packets that are sent during a health check. Unit: packets. Valid values: 3 to <b>8</b>. Default value: <b>8</b>.</para>
+        /// <para>The number of probe packets sent during a health check. Unit: packets. Valid values: <b>3</b> to <b>8</b>. Default value: <b>8</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VBR instance.</para>
+        /// <para>The VBR instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,9 +129,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VbrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VBR instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the VBR instance.</para>
         /// <remarks>
-        /// <para>This parameter is required if the VBR instance and the CEN instance belong to different Alibaba Cloud accounts.</para>
+        /// <para>This parameter is required if the VBR instance and the CEN instance belong to different accounts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VbrInstanceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VBR instance is deployed.</para>
+        /// <para>The region ID of the VBR instance.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 

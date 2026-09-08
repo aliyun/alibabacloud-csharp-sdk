@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterAvailableResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of available zone IDs.</para>
+        /// <para>The list of zone IDs.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<string> AvailableZones { get; set; }
 
         /// <summary>
-        /// <para>A list of primary zone IDs.</para>
+        /// <para>The list of primary zone IDs.</para>
         /// </summary>
         [NameInMap("MasterZones")]
         [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of secondary zone IDs.</para>
+        /// <para>The list of secondary zone IDs.</para>
         /// </summary>
         [NameInMap("SlaveZones")]
         [Validation(Required=false)]
         public List<string> SlaveZones { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the returned zones support the multicast feature.</para>
+        /// <para>Indicates whether the zone information is for multicast-enabled zones.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

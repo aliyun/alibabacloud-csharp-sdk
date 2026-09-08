@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchesToCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether IPv6 is enabled. Valid values: true and false. If you do not specify this parameter, the query is not filtered by this property.</para>
+        /// <para>Specifies whether IPv6 is enabled. A value of true indicates that IPv6 is enabled. A value of false indicates that IPv6 is not enabled. If you leave this parameter empty, the system does not filter by this property.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Valid values: <b>1</b> to <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC is deployed.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the VPC-connected instance.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,12 +92,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The zone ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you specify a zone ID, only the vSwitches in that zone are queried.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not specify a zone ID, the vSwitches in all zones of the VPC are queried by default.</para>
-        /// </description></item>
+        /// <item><description>If you specify a zone ID, the system queries only the vSwitches that are in the specified zone of the VPC-connected instance.</description></item>
+        /// <item><description>If you do not specify a zone ID, the system queries the vSwitches in all active zones of the VPC-connected instance by default.</description></item>
         /// </list>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

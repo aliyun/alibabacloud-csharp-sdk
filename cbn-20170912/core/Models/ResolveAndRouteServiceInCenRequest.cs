@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ResolveAndRouteServiceInCenRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the regions where the cloud service is accessed.</para>
+        /// <para>The list of region IDs that access the cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> AccessRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the cloud service.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>descname</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks of the cloud service.</para>
+        /// <para>The IP address or CIDR block of the cloud service.</para>
         /// <remarks>
-        /// <para>In most cases, multiple IP addresses or CIDR blocks are assigned to a cloud service. We recommend that you call this operation multiple times to add all IP addresses and CIDR blocks of the cloud service.</para>
+        /// <para>Cloud services typically use multiple IP addresses or CIDR blocks. Call this operation repeatedly to add all IP addresses or CIDR blocks of the cloud service.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the cloud service is deployed.</para>
+        /// <para>The region ID of the cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string HostRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC that is associated with the cloud service.</para>
+        /// <para>The VPC-connected instance ID associated with the cloud service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

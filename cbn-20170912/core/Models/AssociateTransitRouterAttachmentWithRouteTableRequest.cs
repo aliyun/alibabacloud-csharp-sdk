@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class AssociateTransitRouterAttachmentWithRouteTableRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to make sure that the value is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check for potential issues, such as permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to execute a dry run. The dry run checks parameter validity, instance status, and whether the network instance connection can be associated with the forward route table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends a normal request. An association is created after the request passes the check.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a check request to perform a dry run. The system checks the required parameters, request format, and other items. No association is created. If the check fails, an error message is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the request passes the check, the route table association is created.</description></item>
+        /// <item><description><b>true</b>: sends a check request. No route table association is created after the request passes the check. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error message is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the Enterprise Edition transit router route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

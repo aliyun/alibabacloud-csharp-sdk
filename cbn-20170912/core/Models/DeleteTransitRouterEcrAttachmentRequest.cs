@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterEcrAttachmentRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request.</description></item>
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a request ID is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the configuration of the inter-region connection is directly modified.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the verification is performed, and the configuration of the inter-region connection is not modified. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly delete the ECR connection. Valid values:</para>
+        /// <para>Specifies whether to forcefully delete the ECR connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): checks for resource dependencies such as associated forwarding and route learning before deleting the ECR connection. If such resources exist, the ECR connection is not deleted and an error message is returned.</description></item>
-        /// <item><description><b>true</b>: deletes the ECR connections and all dependent resources.</description></item>
+        /// <item><description><b>false</b> (default): Before the ECR connection is deleted, the system checks whether related resource dependencies exist, such as associated forwarding and route learning. If related dependencies exist, the ECR connection cannot be deleted and the corresponding error is returned.</description></item>
+        /// <item><description><b>true</b>: When the ECR connection is deleted, all related dependencies are deleted by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

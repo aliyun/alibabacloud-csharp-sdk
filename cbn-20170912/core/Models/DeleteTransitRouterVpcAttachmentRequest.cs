@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterVpcAttachmentRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not set this parameter, <b>ClientToken</b> is set to the value of <b>RequestId</b>. The value of <b>RequestId</b> for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Default values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the VPC connection is deleted.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the check is performed. The VPC connection is not deleted. The system checks required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the VPC connection. Valid values:</para>
+        /// <para>Specifies whether to force delete the VPC connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): checks resources such as associated forwarding correlations and route learning policies that are related to the VPC connection before it is deleted. If such a resource exists, the VPC connection is not deleted and an error message is returned.</description></item>
-        /// <item><description><b>true</b>: deletes the VPC connection and all resources that are related to the VPC connection.</description></item>
+        /// <item><description><b>false</b> (default): Before the VPC connection is deleted, the system checks whether related resource dependencies exist, such as associated forwarding and routing learning. If related dependencies exist, the VPC connection is not deleted and the corresponding error is returned.</description></item>
+        /// <item><description><b>true</b>: When the VPC connection is deleted, all related dependencies are also deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

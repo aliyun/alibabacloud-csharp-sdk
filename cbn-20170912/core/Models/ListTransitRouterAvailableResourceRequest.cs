@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the Enterprise Edition transit router is deployed.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</para>
+        /// <para>The region ID of the Enterprise Edition transit router.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,12 +38,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only information about zones that support the multicast feature.</para>
+        /// <para>Specifies whether to query only the multicast-enabled zones.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Yes.</para>
-        /// <para>If you enable this feature and the <b>ListTransitRouterAvailableResource</b> operation returns an empty response, it indicates that Enterprise Edition transit routers in the current region do not support the multicast feature.</para>
+        /// <item><description><para><b>true</b>: queries only the multicast-enabled zones.</para>
+        /// <para>  If the <b>ListTransitRouterAvailableResource</b> operation returns an empty result, the Enterprise Edition transit router in the current region does not support multicast.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): No.</para>
+        /// <item><description><para><b>false</b> (default): does not query only the multicast-enabled zones.</para>
         /// </description></item>
         /// </list>
         /// 

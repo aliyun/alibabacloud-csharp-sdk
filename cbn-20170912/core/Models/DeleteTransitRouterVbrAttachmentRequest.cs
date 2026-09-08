@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterVbrAttachmentRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Use the client to generate the token, but you must make sure that the token is unique among requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>When left empty, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends a request and deletes the VBR connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a check request without deleting the VBR connection. The system checks the required parameters and request syntax. If the request fails the dry run, an error code is returned. If the request passes the dry run, a request ID is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the VBR connection is deleted.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the verification is performed, and the VBR connection is not deleted. The system checks whether the required parameters are specified and whether the request format is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,12 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly delete the VBR connection. Valid values:</para>
+        /// <para>Specifies whether to force delete the VBR connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): The system checks resources, such as forwarding associations or route learning. If there are such resources, the VBR connection is not deleted and an error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: When the VBR connection is deleted, all associated resources are also deleted.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Before the VBR connection is deleted, the system checks whether related resource dependencies exist, such as associated forwarding and routing learning. If dependencies exist, the deletion is not allowed and the corresponding error is returned.</description></item>
+        /// <item><description><b>true</b>: When the VBR connection is deleted, all related dependencies are also deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

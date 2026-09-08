@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteCenChildInstanceRouteEntryToAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token from your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,15 +46,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. A dry run checks for potential issues, including permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Sends a normal request. The route entry of the network instance is deleted after the request passes the check.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Sends a check request. The system checks the required parameters and the request format. If the check fails, an error message is returned. If the check succeeds, the corresponding request ID is returned. The route entry of the network instance is not deleted.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, the route entry of the network instance is deleted.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the check is performed. The route entry of the network instance is not deleted. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not in effect.</para>
+        /// <para>This parameter is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that belongs to the network instance.</para>
+        /// <para>The route table ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

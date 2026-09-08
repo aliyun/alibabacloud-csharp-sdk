@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class RefreshTransitRouteTableAggregationRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>When left empty, the system automatically uses the RequestId as the ClientToken. The RequestId is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouteTableAggregationCidr { get; set; }
 
         /// <summary>
-        /// <para>The route table ID of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the Enterprise Edition transit router route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

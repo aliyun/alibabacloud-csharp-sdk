@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class ModifyTrafficMatchRuleToTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique parameter value from your client for each request. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Performs a dry run. The system checks for required parameters, the request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends a normal request. After the request passes the check, the stream classification rule is added to the traffic marking policy.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system does not add a traffic categorization rule to the traffic marking policy. Instead, the system checks whether the required request parameters are specified, whether the request format is valid, and whether the business restrictions are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. After the request passes the check, the traffic categorization rule is added to the traffic marking policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,8 +65,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMarkingPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The description of the stream classification rule.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. The description cannot start with http\:// or https\://.</para>
+        /// <para>The description of the traffic classification rule.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>descriptiontest</para>
@@ -78,7 +76,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMatchRuleDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stream classification rule.</para>
+        /// <para>The ID of the traffic classification rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,8 +87,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMatchRuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stream classification rule.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. The name cannot start with http\:// or https\://.</para>
+        /// <para>The name of the traffic classification rule.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListGrantVSwitchEnisResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of ENI information.</para>
+        /// <para>The list of network interface controller (NIC) information.</para>
         /// </summary>
         [NameInMap("GrantVSwitchEnis")]
         [Validation(Required=false)]
         public List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> GrantVSwitchEnis { get; set; }
         public class ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis : TeaModel {
             /// <summary>
-            /// <para>The description of the ENI.</para>
+            /// <para>The description of the elastic network interfaces (ENIs). This describes the network interface controller (NIC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>created by CBN</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENI.</para>
+            /// <para>The ID of the elastic network interfaces (ENIs). This is the network interface controller (NIC) identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-p0w172vv82kxzb49****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ENI.</para>
+            /// <para>The name of the elastic network interfaces (ENIs). This is the network interface controller (NIC) name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-eni-name</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NetworkInterfaceName { get; set; }
 
             /// <summary>
-            /// <para>The primary private IPv4 address of the ENI.</para>
+            /// <para>The primary private IP IPv4 address of the elastic network interfaces (ENIs). This is the network interface controller (NIC) primary private IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>192.168.**.**</c></para>
@@ -57,14 +57,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string PrimaryIpAddress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the ENI is created by a transit router.</para>
+            /// <para>Indicates whether the elastic network interface (ENI) is created by a transit router for routing and forwarding purposes.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The ENI is created by a transit router.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: The ENI is not created by a transit router.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: The ENI is created by a transit router.</description></item>
+            /// <item><description><b>false</b>: The ENI is not created by a transit router.</description></item>
             /// </list>
-            /// <para>ENIs created by transit routers cannot be used as multicast sources or members.</para>
+            /// <para>Elastic network interfaces (ENIs) created by transit routers cannot serve as multicast sources or multicast members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? TransitRouterFlag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-p0w9s2ig1jnwgrbzl****</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-p0w9alkte4w2htrqe****</para>
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries returned for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query.</para>
+        /// <para>The token returned for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -126,11 +124,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: When you use the MaxResults and NextToken parameters for paging, the returned Total parameter value is meaningless.</para>
         /// </remarks>
-        /// <para>This parameter is invalid if you use MaxResults and NextToken to perform a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

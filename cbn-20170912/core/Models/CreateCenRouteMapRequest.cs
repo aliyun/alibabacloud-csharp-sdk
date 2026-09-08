@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenRouteMapRequest : TeaModel {
         /// <summary>
-        /// <para>The match method that is used to match routes based on the AS path. Valid values:</para>
+        /// <para>The match mode of the AS path list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Include</b>: fuzzy match. A route is a match if the AS path of the route overlaps with the AS path in the match conditions.</para>
+        /// <item><description><para><b>Include</b>: fuzzy match. A match is successful if the AS path in the match condition overlaps with the AS path of the route being matched. </para>
         /// </description></item>
-        /// <item><description><para><b>Complete</b>: exact match. A route is a match only if the AS path of the route matches the AS path in the match conditions.</para>
+        /// <item><description><para><b>Complete</b>: exact match. A match is successful only if the AS path in the match condition is the same as the AS path of the route being matched.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string AsPathMatchMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the routing policy is applied.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region to which the routing policy is applied.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,15 +49,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenRegionId { get; set; }
 
         /// <summary>
-        /// <para>The match method that is used to match routes against the prefix list. Valid values:</para>
+        /// <para>The match mode of the prefix list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Include</b>: fuzzy match. A route is a match if the route prefix is included in the match conditions.</description></item>
+        /// <item><description><b>Include</b>: fuzzy match. A match is successful if the route prefix in the match condition contains the route prefix of the route being matched.</description></item>
         /// </list>
-        /// <para>For example, if you set the match condition to 1.1.0.0/16 and fuzzy match is applied, the route whose prefix is 1.1.1.0/24 meets the match condition.</para>
+        /// <para> For example, a policy that defines 10.10.0.0/16 can fuzzy match the route 10.10.1.0/24.</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: exact match. A route is a match only if the route prefix is the same as the prefix specified in the match condition.</description></item>
+        /// <item><description><b>Complete</b>: exact match. A match is successful only if the route prefix in the match condition is the same as the route prefix of the route being matched.</description></item>
         /// </list>
-        /// <para>For example, if you set the match condition to 1.1.0.0/16 and exact match is applied, only the route whose prefix is 1.1.0.0/16 meets the match condition.</para>
+        /// <para> For example, a policy that defines 10.10.0.0/16 can only exact match the route 10.10.0.0/16.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Include</para>
@@ -67,11 +67,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CidrMatchMode { get; set; }
 
         /// <summary>
-        /// <para>The match method that is used to match routes based on the community. Valid values:</para>
+        /// <para>The match mode of the Community. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Include</b>: fuzzy match. A route is a match if the community of the route overlaps with the community in the match conditions.</para>
+        /// <item><description><para><b>Include</b>: fuzzy match. A match is successful if the Community in the match condition overlaps with the Community of the route being matched. </para>
         /// </description></item>
-        /// <item><description><para><b>Complete</b>: exact match. A route is a match only if the community of the route matches the community in the match conditions.</para>
+        /// <item><description><para><b>Complete</b>: exact match. A match is successful only if the Community in the match condition is the same as the Community of the route being matched.</para>
+        /// </description></item>
+        /// <item><description><para><b>Contain</b>: inclusive match. A match is successful only if the Community of the route being matched contains all the Communities specified in the match condition.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -83,14 +85,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CommunityMatchMode { get; set; }
 
         /// <summary>
-        /// <para>The action to be performed on the community. Valid values:</para>
+        /// <para>The action to perform on the Community. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Additive</b>: adds the community to the route.</para>
+        /// <item><description><para><b>Additive</b>: adds a Community to the route.</para>
         /// </description></item>
-        /// <item><description><para><b>Replace</b>: replaces the original community of the route.</para>
+        /// <item><description><para><b>Replace</b>: replaces the existing Community of the route.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter specifies the action to be performed when a route meets the match condition.</para>
+        /// <para>This parameter specifies the action to perform after a route matches the condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Additive</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the routing policy.</para>
-        /// <para>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -111,23 +113,23 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The types of destination network instance to which the routes belong. The following types of network instances are supported:</para>
+        /// <para>The list of destination instance types that the route must match. The following instance types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// <item><description><para><b>VPC</b>: VPC instance.</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: VBR</para>
+        /// <item><description><para><b>VBR</b>: VBR instance.</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: CCN instance</para>
+        /// <item><description><para><b>CCN</b>: CCN instance.</para>
         /// </description></item>
-        /// <item><description><para><b>VPN</b>: IPsec connection</para>
+        /// <item><description><para><b>VPN</b>: IPsec connection.</para>
         /// <remarks>
-        /// <para>This parameter does not take effect if the IPsec-VPN connection or SSL client is associated with a transit router through a VPN gateway and a VPC. This parameter takes effect only if the IPsec connection is directly connected to the transit router.</para>
+        /// <para>If an IPsec connection or SSL server is bound to a VPN gateway instance and is connected to a transit router instance through the VPC associated with the VPN gateway instance, this parameter does not take effect. This parameter takes effect only when an IPsec connection is directly bound to a transit router instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <para>You can specify one or more network instance types.</para>
+        /// <para>You can specify multiple instance types.</para>
         /// <remarks>
-        /// <para>The destination network instance types are valid only if the routing policy is applied to scenarios where routes are advertised from the gateway in the current region to network instances in the current region.</para>
+        /// <para>The destination instance type list takes effect only when the routing policy direction is outbound from the regional gateway and the destination instance types are instance types in the local region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,9 +140,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationChildInstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The prefix list against which routes are matched.</para>
-        /// <para>Specify IP addresses in CIDR notations. You can specify at most 64 CIDR blocks.</para>
-        /// <para>IPv4 and IPv4 addresses are supported.</para>
+        /// <para>The prefix list that the route must match.</para>
+        /// <para>IP address ranges in the prefix list are in CIDR format. You can specify up to 64 IP address ranges.</para>
+        /// <para>Both IPv4 and IPv6 formats are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.10.0/24</para>
@@ -150,22 +152,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationCidrBlocks { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the destination network instances to which the routes belong. The following network instance types are supported:</para>
+        /// <para>The list of destination instance IDs that the route must match. The following types of instance IDs are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>VPC</para>
-        /// </description></item>
-        /// <item><description><para>VBR</para>
-        /// </description></item>
-        /// <item><description><para>CCN instance</para>
-        /// </description></item>
-        /// <item><description><para>SAG instance</para>
-        /// </description></item>
-        /// <item><description><para>The ID of the IPsec-VPN connection.</para>
-        /// </description></item>
+        /// <item><description>Virtual Private Cloud (VPC) instance ID</description></item>
+        /// <item><description>Virtual Border Router (VBR) instance ID</description></item>
+        /// <item><description>Cloud Connect Network (CCN) instance ID</description></item>
+        /// <item><description>Smart Access Gateway instance ID</description></item>
+        /// <item><description>IPsec connection ID</description></item>
         /// </list>
-        /// <para>You can enter at most 64 IDs.</para>
+        /// <para>You can specify up to 64 instance IDs.</para>
         /// <remarks>
-        /// <para>The destination instance IDs take effect only when Direction is set to Export from Regional Gateway and the destination instances are deployed in the current region.</para>
+        /// <para>The destination instance ID list takes effect only when the routing policy direction is outbound from the regional gateway and the destination instance IDs are instance IDs in the local region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -176,11 +173,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude destination instance IDs. Valid values:</para>
+        /// <para>Specifies whether to use the exclude matching mode for the destination instance ID list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): A route is a match if the destination instance ID is included in the list specified by <b>SourceInstanceIds.N</b>.</para>
+        /// <item><description><para><b>false</b> (default): no. A match is successful if the destination instance ID of the route is in the <b>DestinationInstanceIds.N</b> list.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: A route is a match if the destination network instance ID is not in the list specified by <b>SourceInstanceIds.N</b>.</para>
+        /// <item><description><para><b>true</b>: yes. A match is successful if the destination instance ID of the route is not in the <b>DestinationInstanceIds.N</b> list.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -192,16 +189,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DestinationInstanceIdsReverseMatch { get; set; }
 
         /// <summary>
-        /// <para>The destination region IDs of the route. You can specify at most 64 region IDs.</para>
+        /// <para>The list of destination region IDs that the route must match. You can specify up to 64 region IDs.</para>
         /// </summary>
         [NameInMap("DestinationRegionIds")]
         [Validation(Required=false)]
         public List<string> DestinationRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the destination route tables to which routes are evaluated. You can enter at most 64 route table IDs.</para>
+        /// <para>The list of destination route table IDs that the route must match. You can specify up to 64 route table IDs.</para>
         /// <remarks>
-        /// <para>The destination route table IDs take effect only when Direction is set to Export from Regional Gateway and the destination route tables belong to network instances deployed in the current region.</para>
+        /// <para>The destination route table ID list takes effect only when the routing policy direction is outbound from the regional gateway and the destination route table IDs are route table IDs of network instances in the local region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -212,11 +209,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> DestinationRouteTableIds { get; set; }
 
         /// <summary>
-        /// <para>The action to be performed on a route that meets all the match conditions. Valid values:</para>
+        /// <para>The action to perform after all conditions are matched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Permit</b>: the route is permitted.</para>
+        /// <item><description><para><b>Permit</b>: permits the matched routes.</para>
         /// </description></item>
-        /// <item><description><para><b>Deny</b>: the route is denied.</para>
+        /// <item><description><para><b>Deny</b>: denies the matched routes.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -229,14 +226,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string MapResult { get; set; }
 
         /// <summary>
-        /// <para>The type of IP address in the match condition. Valid values:</para>
+        /// <para>The IP address type that the route must match. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>IPv4</b>: IPv4 address</para>
-        /// </description></item>
-        /// <item><description><para><b>IPv6</b>: IPv6 address</para>
-        /// </description></item>
+        /// <item><description><b>IPv4</b>: matches only IPv4 routes.</description></item>
+        /// <item><description><b>IPv6</b>: matches only IPv6 routes.</description></item>
         /// </list>
-        /// <para>This parameter can be empty. If no value is specified, all types of IP address are a match.</para>
+        /// <para>This parameter can be left empty, which indicates that all types of routes are matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -246,10 +241,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string MatchAddressType { get; set; }
 
         /// <summary>
-        /// <para>The AS paths based on which routes are compared.</para>
-        /// <para>You can specify at most 64 AS numbers.</para>
+        /// <para>The AS path list that the route must match.</para>
+        /// <para>You can specify up to 64 AS numbers.</para>
         /// <remarks>
-        /// <para>Only the AS-SEQUENCE parameter is supported. The AS-SET, AS-CONFED-SEQUENCE, and AS-CONFED-SET parameters are not supported. In other words, only the AS number list is supported. Sets and sub-lists are not supported.</para>
+        /// <para>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only AS number lists are supported, not sets or sublists.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -260,11 +255,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<long?> MatchAsns { get; set; }
 
         /// <summary>
-        /// <para>The community set based on which routes are compared.</para>
-        /// <para>Specify the community in the format of n:m. Valid values of n and m: <b>1</b> to <b>65535</b>. Each community must comply with the RFC 1997 standard. The RFC 8092 standard that defines Border Gateway Protocol (BGP) large communities is not supported.</para>
-        /// <para>You can specify at most 64 communities.</para>
+        /// <para>The Community set that the route must match.</para>
+        /// <para>Each Community is in the n:m format, where the value ranges of n and m are <b>1</b> to <b>65535</b>. Communities must comply with RFC 1997. Large Communities (RFC 8092) are not supported.</para>
+        /// <para>You can specify up to 64 Communities.</para>
         /// <remarks>
-        /// <para>If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.</para>
+        /// <para>Incorrect Community configurations may cause routes to fail to be advertised to on-premises data centers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -275,14 +270,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> MatchCommunitySet { get; set; }
 
         /// <summary>
-        /// <para>The priority of the routing policy that you want to associate with the current one.</para>
+        /// <para>Policy priority of the next associated routing policy.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when the <b>MapResult</b> parameter is set to <b>Permit</b>. This way, the permitted route is matched against the next routing policy.</para>
-        /// </description></item>
-        /// <item><description><para>The region and direction of the routing policy to be associated must be the same as those of the current routing policy.</para>
-        /// </description></item>
-        /// <item><description><para>The priority of the next routing policy must be lower than the priority of the current routing policy.</para>
-        /// </description></item>
+        /// <item><description>You can set policy priority of the next associated routing policy only when <b>MapResult</b> is set to <b>Permit</b>. Only routes that are permitted continue to match the next associated routing policy.</description></item>
+        /// <item><description>The next associated routing policy must have the same region and direction as the current routing policy.</description></item>
+        /// <item><description>Policy priority of the next associated routing policy must be lower than policy priority of the current routing policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -293,11 +285,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? NextPriority { get; set; }
 
         /// <summary>
-        /// <para>The community set on which actions are performed.</para>
-        /// <para>Specify the community in the format of n:m. Valid values of n and m: <b>1</b> to <b>65535</b>. Each community must comply with RFC 1997. The RFC 8092 standard that defines BGP large communities is not supported.</para>
-        /// <para>You can specify at most 32 communities.</para>
+        /// <para>The Community set to be executed.</para>
+        /// <para>Each Community is in the n:m format, where the value ranges of n and m are <b>1</b> to <b>65535</b>. Communities must comply with RFC 1997. Large Communities (RFC 8092) are not supported.</para>
+        /// <para>You can specify up to 32 Communities.</para>
         /// <remarks>
-        /// <para>If the configurations of the communities are incorrect, routes may fail to be advertised to your data center.</para>
+        /// <para>Incorrect Community configurations may cause routes to fail to be advertised to on-premises data centers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -316,9 +308,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new priority of the route.</para>
-        /// <para>Valid values: <b>1</b> to <b>100</b>. The default priority is <b>50</b>. A smaller value indicates a higher priority.</para>
-        /// <para>This parameter specifies the action to be performed when a route meets the match condition.</para>
+        /// <para>The modified priority of the route.</para>
+        /// <para>Valid values: <b>1</b> to <b>100</b>. The default priority of a route is <b>50</b>. A smaller value indicates a higher priority.</para>
+        /// <para>This parameter specifies the action to perform after a route matches the condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -328,15 +320,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Preference { get; set; }
 
         /// <summary>
-        /// <para>The AS paths that are prepended by using an action statement when regional gateways receive or advertise routes.</para>
-        /// <para>The AS paths vary based on the direction in which the routing policy is applied:</para>
+        /// <para>The AS path that is prepended when the regional gateway receives or publishes route entries.</para>
+        /// <para>The requirements for configuring the prepended AS path vary based on the routing policy direction:</para>
         /// <list type="bullet">
-        /// <item><description><para>If AS paths are prepended to a routing policy that is applied in the inbound direction, you must specify source network instance IDs and the source region in the match condition. In addition, the source region must be the same as the region where the routing policy is applied.</para>
+        /// <item><description><para>When the direction is inbound to the regional gateway, the match condition must include the source instance ID list and source region, and the source region must be the same as the region to which the routing policy is applied.</para>
         /// </description></item>
-        /// <item><description><para>If AS paths are prepended to a routing policy that is applied in the outbound direction, you must specify destination network instance IDs in the match condition.</para>
+        /// <item><description><para>When the direction is outbound from the regional gateway, the match condition must include the destination instance ID list.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter specifies the action to be performed when a route meets the match condition. You can specify at most 32 AS numbers.</para>
+        /// <para>This parameter specifies the action to execute after a route matches the condition. You can specify up to 32 AS numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>65501</para>
@@ -346,9 +338,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<long?> PrependAsPath { get; set; }
 
         /// <summary>
-        /// <para>The priority of the routing policy. Valid values: <b>1</b> to <b>100</b>. A smaller value indicates a higher priority.</para>
+        /// <para>Policy priority of the routing policy. Valid values: <b>1</b> to <b>100</b>. A smaller value indicates a higher priority.</para>
         /// <remarks>
-        /// <para>You cannot specify the same priority for routing policies that apply in the same region and direction. The system matches routes against the match conditions of routing policies in descending order of priority. A smaller value indicates a higher priority. You must set the priorities to proper values.</para>
+        /// <para>Policy priority of routing policies in the same region and with the same direction must be unique. When a routing policy is executed, the system starts matching conditional statements from the routing policy with the smallest priority value. Specify policy priority based on the expected matching order.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -368,16 +360,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of route to be compared. Valid values: The following route types are supported:</para>
+        /// <para>The list of routing types that the route must match. The following routing types are supported:</para>
         /// <list type="bullet">
         /// <item><description><para><b>System</b>: system routes that are automatically generated by the system.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom</b>: custom routes that are manually added.</para>
+        /// <item><description><para><b>Custom</b>: custom routes that are manually added by users.</para>
         /// </description></item>
-        /// <item><description><para><b>BGP</b>: routes that are advertised over BGP.</para>
+        /// <item><description><para><b>BGP</b>: BGP routes that are propagated through the BGP routing protocol.</para>
         /// </description></item>
         /// </list>
-        /// <para>You can specify multiple route types.</para>
+        /// <para>You can specify multiple routing types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System</para>
@@ -387,24 +379,22 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> RouteTypes { get; set; }
 
         /// <summary>
-        /// <para>The types of source network instance to which the routes belong. The following types of network instances are supported:</para>
+        /// <para>The list of source instance types that the route must match. The following instance types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// <item><description><para><b>VPC</b>: VPC instance.</para>
         /// </description></item>
-        /// <item><description><para><b>VBR</b>: VBR</para>
+        /// <item><description><para><b>VBR</b>: virtual border router instance.</para>
         /// </description></item>
-        /// <item><description><para><b>CCN</b>: CCN instance</para>
+        /// <item><description><para><b>CCN</b>: CCN instance.</para>
         /// </description></item>
-        /// <item><description><para><b>VPN</b>: VPN gateway or IPsec connection</para>
+        /// <item><description><para><b>VPN</b>: VPN gateway instance or IPsec connection.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the IPsec-VPN connection or SSL client is associated with a VPN gateway, the VPC associated with the VPN gateway must be connected to a transit router, and the VPN gateway must use BGP dynamic routing. Otherwise, this parameter cannot take effect.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter takes effect if the IPsec connection is directly connected to a transit router.</para>
-        /// </description></item>
+        /// <item><description>If an IPsec connection or SSL server is attached to a VPN gateway instance, the VPC associated with the VPN gateway instance must be connected to a transit router instance, and the VPN gateway instance must run the BGP dynamic routing protocol for this parameter to take effect.</description></item>
+        /// <item><description>If an IPsec connection is directly attached to a transit router instance, this parameter takes effect.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>You can specify one or more network instance types.</para>
+        /// <para>You can specify multiple instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -414,20 +404,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> SourceChildInstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the source network instances to which the routes belong. The following network instance types are supported:</para>
+        /// <para>The list of source instance IDs that the route must match. The following types of instance IDs are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>Virtual private cloud (VPC)</para>
-        /// </description></item>
-        /// <item><description><para>Virtual border router (VBR)</para>
-        /// </description></item>
-        /// <item><description><para>Cloud Connect Network (CCN) instance</para>
-        /// </description></item>
-        /// <item><description><para>Smart Access Gateway (SAG) instance</para>
-        /// </description></item>
-        /// <item><description><para>The ID of the IPsec-VPN connection.</para>
-        /// </description></item>
+        /// <item><description>Virtual Private Cloud (VPC) instance ID</description></item>
+        /// <item><description>Virtual Border Router (VBR) instance ID</description></item>
+        /// <item><description>Cloud Connect Network (CCN) instance ID</description></item>
+        /// <item><description>Smart Access Gateway instance ID</description></item>
+        /// <item><description>IPsec connection ID</description></item>
         /// </list>
-        /// <para>You can enter at most 64 IDs.</para>
+        /// <para>You can specify up to 64 instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-adeg3544fdf34vf****</para>
@@ -437,11 +422,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> SourceInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude source instance IDs. Valid values:</para>
+        /// <para>Specifies whether to use the exclude matching mode for the source instance ID list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): A route is a match if the source instance ID is included in the list specified by <b>SourceInstanceIds.N</b>.</para>
+        /// <item><description><para><b>false</b> (default): no. A match is successful if the source instance ID of the route is in the <b>SourceInstanceIds.N</b> list.</para>
         /// </description></item>
-        /// <item><description><para><b>true</b>: A route is a match if the source network instance ID is not in the list specified by <b>SourceInstanceIds.N</b>.</para>
+        /// <item><description><para><b>true</b>: yes. A match is successful if the source instance ID of the route is not in the <b>SourceInstanceIds.N</b> list.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -453,8 +438,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? SourceInstanceIdsReverseMatch { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the source regions from which routes are evaluated. You can enter at most 64 region IDs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The list of source region IDs that the route must match. You can specify up to 64 region IDs.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -464,7 +449,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> SourceRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the source route tables from which routes are evaluated. You can enter at most 64 route table IDs.</para>
+        /// <para>The list of source route table IDs that the route must match. You can specify up to 64 route table IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-adfr233vf34rvd4****</para>
@@ -474,7 +459,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<string> SourceRouteTableIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the transit router.</para>
+        /// <para>The route table ID of the transit router.</para>
         /// <para>If you do not specify a route table ID, the routing policy is automatically associated with the default route table of the transit router.</para>
         /// 
         /// <b>Example:</b>
@@ -487,13 +472,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The direction in which the routing policy is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RegionIn</b>: Routes are advertised to the gateways in the regions that are connected by the CEN instance.</description></item>
+        /// <item><description><b>RegionIn</b>: the inbound direction of the regional gateway. Routes are transmitted to the CEN regional gateway.</description></item>
         /// </list>
-        /// <para>For example, routes are advertised from network instances deployed in the current region or other regions to the gateway deployed in the current region.</para>
+        /// <para> For example, a route is advertised from a network instance in the local region to the local regional gateway, or a route is advertised from another region to the local regional gateway.</para>
         /// <list type="bullet">
-        /// <item><description><b>RegionOut</b>: Routes are advertised from the gateways in the regions that are connected by the CEN instance.</description></item>
+        /// <item><description><b>RegionOut</b>: the outbound direction of the regional gateway. Routes are transmitted from the CEN regional gateway.</description></item>
         /// </list>
-        /// <para>For example, routes are advertised from the gateway deployed in the current region to network instances deployed in the same region, or to gateways deployed in other regions.</para>
+        /// <para> For example, a route is advertised from the local regional gateway to a network instance in the local region, or to a regional gateway in another region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

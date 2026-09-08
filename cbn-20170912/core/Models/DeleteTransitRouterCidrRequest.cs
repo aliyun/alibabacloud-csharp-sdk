@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterCidrRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a client-side token that is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: sends a check request without deleting the CIDR block. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the CIDR block is deleted.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run without deleting the transit router CIDR block. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and then deletes the transit router CIDR block after the request passes the check.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,8 +46,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to obtain the region ID.</para>
+        /// <para>The region ID of the transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,8 +66,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CIDR block of the transit router.</para>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> to query the ID of the CIDR block.</para>
+        /// <para>The ID of the transit router CIDR block.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462772.html">ListTransitRouterCidr</a> operation to query the ID of a transit router CIDR block.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterCidrId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The transit router instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

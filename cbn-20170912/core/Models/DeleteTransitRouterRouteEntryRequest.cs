@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DeleteTransitRouterRouteEntryRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The token must be unique for each request and can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. A dry run checks for potential issues, such as missing parameter values, incorrect request syntax, and service limits. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status validation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Sends the request. If the request passes the check, the route entry is deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Performs only a dry run. The system checks the request for potential issues. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and directly deletes the route entry after the request passes the validation.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the validation is performed. The route entry is not deleted. The system checks required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route.</para>
+        /// <para>The destination CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/24</para>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance connection that serves as the next hop.</para>
+        /// <para>The ID of the network instance connection associated with the next hop of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -86,12 +84,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopId { get; set; }
 
         /// <summary>
-        /// <para>The type of the next hop. Valid values:</para>
+        /// <para>The next hop type of the route entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BlackHole</b>: The route is a blackhole route. You do not need to specify a next hop.</para>
-        /// </description></item>
-        /// <item><description><para><b>Attachment</b>: The next hop is a network instance connection. You must specify the ID of the network instance connection.</para>
-        /// </description></item>
+        /// <item><description><b>BlackHole</b>: The route entry is a blackhole route. You do not need to specify the next-hop information.</description></item>
+        /// <item><description><b>Attachment</b>: The next hop of the route entry is a network instance connection. You must also specify the ID of the network instance connection as the next hop.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterRouteEntryNextHopType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the Enterprise Edition transit router route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-bp1dudbh2d5na6b50****</para>

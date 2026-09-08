@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for paging queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</para>
@@ -128,10 +128,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the current API call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the API call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call is successful.</para>
+        /// <item><description><para><b>true</b>: successful.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// <item><description><para><b>false</b>: failed.</para>
         /// </description></item>
         /// </list>
         /// 

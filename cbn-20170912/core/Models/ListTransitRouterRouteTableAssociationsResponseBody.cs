@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTableAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not returned, it indicates that no more results are to be returned.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for this parameter, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of forwarding associations.</para>
+        /// <para>The list of route association relationships.</para>
         /// </summary>
         [NameInMap("TransitRouterAssociations")]
         [Validation(Required=false)]
@@ -73,16 +71,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the next hop resource.</para>
+            /// <para>The type of the next hop resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
-            /// </description></item>
-            /// <item><description><para><b>VBR</b>: virtual border router (VBR).</para>
-            /// </description></item>
-            /// <item><description><para><b>TR</b>: transit router.</para>
-            /// </description></item>
-            /// <item><description><para><b>VPN</b>: VPN connection.</para>
-            /// </description></item>
+            /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
+            /// <item><description><b>VBR</b>: virtual border router (VBR) instance.</description></item>
+            /// <item><description><b>TR</b>: transit router instance.</description></item>
+            /// <item><description><b>VPN</b>: VPN connection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,16 +87,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the association.</para>
+            /// <para>The status of the route association. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Active</b>: The association is active.</para>
-            /// </description></item>
-            /// <item><description><para><b>Associating</b>: The association is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>Dissociating</b>: The association is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><b>Deleted</b>: The association is deleted.</para>
-            /// </description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Associating</b>: being associated.</description></item>
+            /// <item><description><b>Dissociating</b>: being dissociated.</description></item>
+            /// <item><description><b>Deleted</b>: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +113,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+            /// <para>The ID of the Enterprise Edition transit router route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-bp1dudbh2d5na6b50****</para>

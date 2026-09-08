@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterVpcAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to the VPC.</para>
+        /// <para>Specifies whether to allow the Enterprise Edition transit router to automatically publish routing entries to the VPC instance.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Do not automatically advertise routes.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Automatically advertise routes.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-j3jzhw1zpau2km****</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. The default value is <b>POSTPAY</b> (pay-as-you-go).</para>
+        /// <para>The billing method. Default value: <b>POSTPAY</b>, which indicates pay-as-you-go.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -46,10 +44,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure request idempotency.</para>
-        /// <para>You must generate a value on your client that is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token, which is unique for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,12 +58,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check the validity of the request without creating the resource. The check includes permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to execute a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Sends a normal request. The system creates the VPC connection if the request is valid.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Sends only a check request. The system checks required parameters, request format, and permissions. The VPC connection is not created. If the check fails, an error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and creates the VPC connection after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the check is performed, and the VPC connection is not created. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,11 +71,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        /// <summary>
+        /// <para>The collection of feature attributes.</para>
+        /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public CreateTransitRouterVpcAttachmentRequestOptions Options { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestOptions : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to enable the appliance mode.</para>
+            /// <list type="bullet">
+            /// <item><description><b>disable</b> (default): No.</description></item>
+            /// <item><description><b>enable</b>: Yes.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -88,6 +93,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ApplianceModeSupport { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether IPv6 is supported.</para>
+            /// <list type="bullet">
+            /// <item><description><b>disable</b> (default): No.</description></item>
+            /// <item><description><b>enable</b>: Yes.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -106,8 +117,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC is located.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the VPC-connected instance.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -125,16 +136,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the VPC connection.</para>
-        /// <para>You can add up to 20 tags.</para>
+        /// <para>The list of tags.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterVpcAttachmentRequestTag> Tag { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
-            /// <para>The tag key cannot be an empty string. The key can be up to 64 characters long and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -144,8 +156,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
-            /// <para>The tag value can be an empty string or a string up to 128 characters long. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagtest</para>
@@ -158,7 +171,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the VPC connection.</para>
-        /// <para>The description can be empty or 1 to 256 characters long, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -169,7 +182,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the VPC connection.</para>
-        /// <para>The name can be empty or 1 to 128 characters long, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>
@@ -179,7 +192,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Enterprise Edition transit router.</para>
+        /// <para>The instance ID of the Enterprise Edition transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-bp1su1ytdxtataupl****</para>
@@ -189,14 +202,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The properties of the VPC connection. This parameter is deprecated. We recommend that you use the <c>Options</c> parameter instead.</para>
+        /// <para>The list of feature attributes for the VPC connection (to be deprecated, use the new parameter Options instead).</para>
         /// </summary>
         [NameInMap("TransitRouterVPCAttachmentOptions")]
         [Validation(Required=false)]
         public Dictionary<string, string> TransitRouterVPCAttachmentOptions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The instance ID of the VPC-connected instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -207,9 +220,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the VPC. By default, this is the ID of the current Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID to which the VPC-connected instance belongs. The default value is the Alibaba Cloud account ID of the current logon user.</para>
         /// <remarks>
-        /// <para>This parameter is required if you want to attach a cross-account network instance.</para>
+        /// <para>This parameter is required if you want to load a cross-account network instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -220,8 +233,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? VpcOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone mappings for the VPC connection. For each mapping, you must specify a vSwitch in a zone that is supported by the Enterprise Edition transit router.</para>
-        /// <para>You can specify up to 10 zone mappings.</para>
+        /// <para>Select a vSwitch instance in a zone supported by the Enterprise Edition transit router.</para>
+        /// <para>You can add up to 10 entries at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ZoneMappings")]
@@ -229,7 +242,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public List<CreateTransitRouterVpcAttachmentRequestZoneMappings> ZoneMappings { get; set; }
         public class CreateTransitRouterVpcAttachmentRequestZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The ID of the vSwitch instance in a zone supported by the Enterprise Edition transit router.</para>
+            /// <para>You can select vSwitch instances for up to 10 zones at a time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -240,8 +254,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone. The zone must be supported by the Enterprise Edition transit router.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query available zones.</para>
+            /// <para>The ID of a zone supported by the Enterprise Edition transit router.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query zone IDs.</para>
+            /// <para>You can select up to 10 zones at a time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

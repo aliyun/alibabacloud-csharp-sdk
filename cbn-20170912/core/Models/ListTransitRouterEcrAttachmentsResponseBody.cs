@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterEcrAttachmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFmyTO70tTpLG6I3FmYAXGKPd****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -50,15 +50,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the ECR connections.</para>
+        /// <para>The list of ECR connection information.</para>
         /// </summary>
         [NameInMap("TransitRouterAttachments")]
         [Validation(Required=false)]
         public List<ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments> TransitRouterAttachments { get; set; }
         public class ListTransitRouterEcrAttachmentsResponseBodyTransitRouterAttachments : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.</para>
-            /// <para>The value is <b>true</b>, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.</para>
+            /// <para>Indicates whether the Enterprise Edition transit router automatically publishes route entries to the ECR instance.</para>
+            /// <para>The value is <b>true</b> only, which indicates that route entries are automatically published.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public bool? AutoPublishRouteEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The CEN instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-j3jzhw1zpau2km****</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The time when the ECR connection was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-15T02:14Z</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECR with which the ECR connection is associated.</para>
+            /// <para>The instance ID of the associated Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-n78omt2qsko06y****</para>
@@ -99,20 +99,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string EcrId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the ECR connection belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the ECR instance belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1688111111111111</para>
+            /// <para>1210123456123456</para>
             /// </summary>
             [NameInMap("EcrOwnerId")]
             [Validation(Required=false)]
             public long? EcrOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The entity that pays the fees of the network instance. Valid values: Valid values:</para>
+            /// <para>The payer of the network instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PayByCenOwner</b>: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.</description></item>
-            /// <item><description><b>PayByResourceOwner</b>: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.</description></item>
+            /// <item><description><b>PayByCenOwner</b>: The connection fee and data processing fee of the ECR instance are paid by the account that owns the transit router instance.</description></item>
+            /// <item><description><b>PayByResourceOwner</b>: The connection fee and data processing fee of the ECR instance are paid by the account that owns the ECR instance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The type of resource to which the transit router is connected. Valid values:</para>
-            /// <para>The value is <b>ECR</b>, which indicates ECR connections.</para>
+            /// <para>The resource type of the connection.</para>
+            /// <para>The value is <b>ECR</b> only, which indicates an Express Connect Router (ECR) instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECR</para>
@@ -134,11 +134,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the ECR connection. Valid values:</para>
+            /// <para>The status of the ECR connection.</para>
             /// <list type="bullet">
-            /// <item><description><b>Attached</b></description></item>
-            /// <item><description><b>Attaching</b></description></item>
-            /// <item><description><b>Detaching</b></description></item>
+            /// <item><description><b>Attached</b>: attached.</description></item>
+            /// <item><description><b>Attaching</b>: being attached.</description></item>
+            /// <item><description><b>Detaching</b>: being detached.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECR connection.</para>
+            /// <para>The ECR connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Enterprise Edition transit router.</para>
+            /// <para>The Enterprise Edition transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-bp1su1ytdxtataupl****</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The region ID of the transit router.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region information corresponding to the region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>

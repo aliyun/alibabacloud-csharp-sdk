@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>A client token to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value from your client for each request. The \<c>ClientToken\\</c> parameter can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -32,20 +32,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query multicast members.</para>
+        /// <para>Specifies whether to query multicast members. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: No.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Yes.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter works with \<c>IsGroupSource\\</c>.</para>
+        /// <para>This parameter is used together with IsGroupSource.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify \<c>IsGroupMember\\</c> or \<c>IsGroupSource\\</c>, the system queries both multicast members and sources.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify one or both parameters, the system queries resources based on the specified parameters.</para>
-        /// </description></item>
+        /// <item><description>If neither parameter is configured, both multicast sources and members are queried by default.</description></item>
+        /// <item><description>If only one parameter is configured or both are configured, the query is based on the configured parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -57,20 +53,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? IsGroupMember { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query multicast sources.</para>
+        /// <para>Specifies whether to query multicast sources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: No.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Yes.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter works with \<c>IsGroupMember\\</c>.</para>
+        /// <para>This parameter is used together with IsGroupMember.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify \<c>IsGroupSource\\</c> or \<c>IsGroupMember\\</c>, the system queries both multicast sources and members.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify one or both parameters, the system queries resources based on the specified parameters.</para>
-        /// </description></item>
+        /// <item><description>If neither parameter is configured, both multicast sources and members are queried by default.</description></item>
+        /// <item><description>If only one parameter is configured or both are configured, the query is based on the configured parameters.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -82,7 +74,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? IsGroupSource { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,19 +84,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A list of Elastic Network Interface (ENI) IDs.</para>
+        /// <para>The list of elastic network interface (ENI) IDs.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public List<string> NetworkInterfaceIds { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is your first query or if no next page exists, do not specify this parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If a next page exists, set this parameter to the \<c>NextToken\\</c> value that is returned from the previous call.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
+        /// <item><description>If a next query exists, set the value to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,14 +113,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of IDs of cross-region multicast domains.</para>
+        /// <para>The list of cross-region multicast domain IDs.</para>
         /// </summary>
         [NameInMap("PeerTransitRouterMulticastDomains")]
         [Validation(Required=false)]
         public List<string> PeerTransitRouterMulticastDomains { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource associated with the multicast resource.</para>
+        /// <para>The resource ID associated with the multicast resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-p0w9alkte4w2htrqe****</para>
@@ -148,12 +138,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the multicast resource.</para>
+        /// <para>The type of the multicast resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: queries information about multicast resources in a VPC.</para>
-        /// </description></item>
-        /// <item><description><para><b>TR</b>: queries information about cross-region multicast resources.</para>
-        /// </description></item>
+        /// <item><description><b>VPC</b>: queries multicast resources in a virtual private cloud (VPC).</description></item>
+        /// <item><description><b>TR</b>: queries cross-region multicast resources.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,8 +152,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance connection.</para>
-        /// <para>You must specify \<c>TransitRouterMulticastDomainId\\</c> or \<c>TransitRouterAttachmentId\\</c>.</para>
+        /// <para>The network instance connection ID.</para>
+        /// <para>You must specify at least one of TransitRouterMulticastDomainId and TransitRouterAttachmentId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-g3kz2k3u76amsk****</para>
@@ -175,8 +163,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the multicast domain.</para>
-        /// <para>You must specify \<c>TransitRouterMulticastDomainId\\</c> or \<c>TransitRouterAttachmentId\\</c>.</para>
+        /// <para>The multicast domain ID.</para>
+        /// <para>You must specify at least one of TransitRouterMulticastDomainId and TransitRouterAttachmentId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-mcast-domain-5mjb5gjb6dgu98****</para>
@@ -186,7 +174,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterMulticastDomainId { get; set; }
 
         /// <summary>
-        /// <para>A list of vSwitch IDs.</para>
+        /// <para>The list of vSwitch IDs.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]

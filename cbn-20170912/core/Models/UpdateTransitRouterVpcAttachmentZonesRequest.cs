@@ -10,19 +10,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class UpdateTransitRouterVpcAttachmentZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The zones and vSwitches that you want to add to the VPC connection.</para>
+        /// <para>The list of zones and vSwitches to add to the VPC connection.</para>
         /// </summary>
         [NameInMap("AddZoneMappings")]
         [Validation(Required=false)]
         public List<UpdateTransitRouterVpcAttachmentZonesRequestAddZoneMappings> AddZoneMappings { get; set; }
         public class UpdateTransitRouterVpcAttachmentZonesRequestAddZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch that you want to add to the VPC connection.</para>
-            /// <para>You can specify at most 10 vSwitches in each call.</para>
+            /// <para>The ID of the vSwitch to add to the VPC connection.</para>
+            /// <para>You can add up to 10 vSwitches at a time.</para>
             /// <list type="bullet">
-            /// <item><description>If the VPC connection belongs to the current Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the IDs of the vSwitches and zones of the VPC.</description></item>
-            /// <item><description>If the VPC connection belongs to another Alibaba Cloud account, you can call the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the IDs of the vSwitches and zones of the VPC.</description></item>
+            /// <item><description>If the Alibaba Cloud account that you use to log on and the VPC-connected instance belong to the same account, you can invoke the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query the vSwitch IDs and the IDs of the zones to which the vSwitches belong in the VPC-connected instance.</description></item>
+            /// <item><description>If the Alibaba Cloud account that you use to log on and the VPC-connected instance belong to different accounts, you can invoke the <a href="https://help.aliyun.com/document_detail/427599.html">ListGrantVSwitchesToCen</a> operation to query the vSwitch IDs and the IDs of the zones to which the vSwitches belong in the VPC-connected instance.</description></item>
             /// </list>
+            /// <para>If you set <b>VSwitchId</b>, you must also set <b>ZoneId</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-wz988dda8ldm4uvmx****</para>
@@ -32,8 +33,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the vSwitch that you want to add to the VPC connection is deployed.</para>
-            /// <para>You can specify at most 10 vSwitches in each call.</para>
+            /// <para>The ID of the zone to which the vSwitch to add to the VPC connection belongs.</para>
+            /// <para>You can add up to 10 vSwitches at a time.</para>
+            /// <para>If you set <b>ZoneId</b>, you must also set <b>VSwitchId</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>
@@ -46,9 +48,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,8 +63,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned. The zones and vSwitches of the VPC connection are not modified.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the zones and vSwitches of the VPC connection are modified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,15 +83,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zones and vSwitches that you want to remove from the VPC connection.</para>
+        /// <para>The list of zones and vSwitches to remove from the VPC connection.</para>
         /// </summary>
         [NameInMap("RemoveZoneMappings")]
         [Validation(Required=false)]
         public List<UpdateTransitRouterVpcAttachmentZonesRequestRemoveZoneMappings> RemoveZoneMappings { get; set; }
         public class UpdateTransitRouterVpcAttachmentZonesRequestRemoveZoneMappings : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch that you want to remove from the VPC connection.</para>
-            /// <para>You can remove at most 10 vSwitches from a VPC in each call.</para>
+            /// <para>The ID of the vSwitch to remove from the VPC connection.</para>
+            /// <para>You can remove up to 10 vSwitches at a time.</para>
+            /// <para>If you set <b>VSwitchId</b>, you must also set <b>ZoneId</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-wz9f5izl6wshndmta****</para>
@@ -99,7 +102,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the vSwitch that you want to remove from the VPC connection is deployed.</para>
+            /// <para>The ID of the zone to which the vSwitch to remove from the VPC connection belongs.</para>
+            /// <para>You can remove up to 10 vSwitches at a time.</para>
+            /// <para>If you set <b>ZoneId</b>, you must also set <b>VSwitchId</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>

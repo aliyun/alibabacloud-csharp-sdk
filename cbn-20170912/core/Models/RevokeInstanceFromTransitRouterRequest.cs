@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC</description></item>
-        /// <item><description><b>ExpressConnect</b>: VBR</description></item>
-        /// <item><description><b>VPN</b>: IPsec-VPN connection</description></item>
-        /// <item><description><b>ECR</b>: ECR</description></item>
+        /// <item><description><b>VPC</b>: VPC instance.</description></item>
+        /// <item><description><b>ExpressConnect</b>: VBR instance.</description></item>
+        /// <item><description><b>VPN</b>: IPsec connection.</description></item>
+        /// <item><description><b>ECR</b>: ECR instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The region ID of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

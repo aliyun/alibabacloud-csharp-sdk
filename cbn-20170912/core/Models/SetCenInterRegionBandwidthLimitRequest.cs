@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class SetCenInterRegionBandwidthLimitRequest : TeaModel {
         /// <summary>
-        /// <para>The inter-region bandwidth between the two regions. Unit: Mbps.</para>
+        /// <para>The inter-region bandwidth between the two regions. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? BandwidthLimit { get; set; }
 
         /// <summary>
-        /// <para>The method used to allocate bandwidth. Valid value:</para>
+        /// <para>The bandwidth allocation method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BandwidthPackage</b> (default): allocates bandwidth from a bandwidth plan.</description></item>
+        /// <item><description><b>BandwidthPackage</b> (default): Bandwidth is allocated from the bandwidth package.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The ID of the local region.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the regions where network instances can be attached to a CEN instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query the regions of the network instances that can be attached to a CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

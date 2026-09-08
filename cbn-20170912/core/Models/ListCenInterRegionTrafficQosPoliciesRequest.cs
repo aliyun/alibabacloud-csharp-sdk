@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this is your first query or no next page exists, do not specify this parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If a next page exists, set the value to the <b>NextToken</b> value returned from the previous call.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no next query exists.</description></item>
+        /// <item><description>If a next query exists, set the value to the <b>NextToken</b> value returned in the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,8 +50,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The description of the QoS policy.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length. It cannot start with http\:// or https\://.</para>
+        /// <para>The description of the traffic scheduling policy.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The ID of the traffic scheduling policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-rnghap5gc8155x****</para>
@@ -73,8 +71,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the QoS policy.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length. It cannot start with http\:// or https\://.</para>
+        /// <para>The name of the traffic scheduling policy.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -94,7 +92,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the TransitRouter instance.</para>
+        /// <para>The transit router instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-bp1rmwxnk221e3fas****</para>

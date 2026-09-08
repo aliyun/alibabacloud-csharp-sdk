@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DissociateTransitRouterAttachmentFromRouteTableRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that ensures the idempotence of the request.</para>
-        /// <para>Generate a unique token on your client. The client token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): Sends a normal request. If the request passes the check, the network instance connection is dissociated from the route table.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Sends a dry run request to check the required parameters, request format, and permissions. An error message is returned if the request fails the dry run. The corresponding request ID is returned if the request passes the dry run.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request and dissociates the forwarding association after the request passes the check.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. Only the check is performed. The forwarding association is not dissociated. The check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check passes, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the Enterprise Edition transit router.</para>
+        /// <para>The ID of the Enterprise Edition transit router route table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

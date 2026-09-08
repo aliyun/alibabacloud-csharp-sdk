@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterCidrAllocationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you did not set the <b>MaxResults</b> parameter in the request, this parameter indicates the total number of entries.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the <b>MaxResults</b> parameter in the request, this parameter indicates the number of entries on the current page.</para>
-        /// </description></item>
+        /// <item><description>If you did not specify the <b>MaxResults</b> request parameter, it indicates that you did not need to query results by page. The value of <b>MaxResults</b> in the response indicates the total number of entries.</description></item>
+        /// <item><description>If you specified the <b>MaxResults</b> request parameter, it indicates that you needed to query results by page. The value of <b>MaxResults</b> in the response indicates the number of entries on the current page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
-        /// </description></item>
-        /// <item><description><para>If <b>NextToken</b> is not empty, the value of this parameter indicates the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent request exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token that is used for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,14 +58,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of CIDR block allocations.</para>
+        /// <para>The allocation details of the transit router CIDR block.</para>
         /// </summary>
         [NameInMap("TransitRouterCidrAllocations")]
         [Validation(Required=false)]
         public List<ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations> TransitRouterCidrAllocations { get; set; }
         public class ListTransitRouterCidrAllocationResponseBodyTransitRouterCidrAllocations : TeaModel {
             /// <summary>
-            /// <para>The allocated CIDR block.</para>
+            /// <para>The allocated CIDR block under the transit router CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.0/28</para>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string AttachmentName { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block of the transit router.</para>
+            /// <para>The transit router CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.0/24</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Cidr { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CIDR block of the transit router.</para>
+            /// <para>The ID of the transit router CIDR block.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cidr-0zv0q9crqpntzz****</para>

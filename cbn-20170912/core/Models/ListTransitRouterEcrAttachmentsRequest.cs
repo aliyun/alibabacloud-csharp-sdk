@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterEcrAttachmentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that determines the start point of the next query. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists. </description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -71,17 +71,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
-        /// <para>You can specify at most 20 tags.</para>
+        /// <para>The tag information.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTransitRouterEcrAttachmentsRequestTag> Tag { get; set; }
         public class ListTransitRouterEcrAttachmentsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>The tag value can be an empty string or up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ID of the ECR connection.</para>
+        /// <para>The ECR connection ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-attach-nls9fzkfat8934****</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The transit router instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-6ehx7q2jze8ch5ji0****</para>

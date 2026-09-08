@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenAttachedChildInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance that is attached to the CEN instance.</para>
+        /// <para>The instance ID of the network instance loaded to the CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the network instance.                   </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VBR</b>: virtual border router (VBR)</description></item>
-        /// <item><description><b>CCN</b>: Cloud Connect Network (CCN) instance</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

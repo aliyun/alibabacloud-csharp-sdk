@@ -11,10 +11,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DescribeGrantRulesToResourceRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If you omit this parameter, all entries are returned in a single response. In this case, the <b>MaxResults</b> field in the response indicates the total number of entries.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify the <b>MaxResults</b> parameter, the query is paginated. <b>MaxResults</b> sets the number of entries per page. The value must be an integer from <b>1</b> to <b>100</b>. The <b>MaxResults</b> value in the response indicates the number of entries on the current page. The recommended value for this parameter is <b>20</b>.</para>
-        /// </description></item>
+        /// <item><description>If you do not specify the <b>MaxResults</b> parameter, paged query is not required. The value of <b>MaxResults</b> in the response indicates the total number of entries.</description></item>
+        /// <item><description>If you specify the <b>MaxResults</b> parameter, paged query is required. The value of <b>MaxResults</b> specifies the number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. The value of <b>MaxResults</b> in the response indicates the number of entries in the current page. We recommend that you set <b>MaxResults</b> to <b>20</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,12 +23,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Omit this parameter for the first request.</para>
-        /// </description></item>
-        /// <item><description><para>For subsequent requests, set this parameter to the <b>NextToken</b> value from the previous response.</para>
-        /// </description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent query exists.</description></item>
+        /// <item><description>If a subsequent query exists, set the value to the <b>NextToken</b> value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,14 +47,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: a Virtual Private Cloud (VPC) instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>ExpressConnect</b>: a Virtual Border Router (VBR) instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>VPN</b>: an IPsec connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECR</b>: an ExpressConnect Router (ECR) instance.</para>
-        /// </description></item>
+        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC) instance.</description></item>
+        /// <item><description><b>ExpressConnect</b>: Virtual border router (VBR) instance.</description></item>
+        /// <item><description><b>VPN</b>: IPsec connection.</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR) instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,7 +73,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

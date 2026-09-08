@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenAttachedChildInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-5mv960yjhja0dh****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The time when the network instance was attached to the CEN instance.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the network instance was attached.</para>
+        /// <para>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-07-30T07:53Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceAttachTime { get; set; }
 
         /// <summary>
-        /// <para>The details about the network instance.</para>
+        /// <para>The details of the network instance.</para>
         /// </summary>
         [NameInMap("ChildInstanceAttributes")]
         [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zebdboka7d7t37vo****</para>
@@ -130,11 +130,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network instance. Valid values:</para>
+        /// <para>The type of the network instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: VPC</description></item>
-        /// <item><description><b>VBR</b>: VBR</description></item>
-        /// <item><description><b>CCN</b>: CCN instance</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>VBR</b>: virtual border router.</para>
+        /// </description></item>
+        /// <item><description><para><b>CCN</b>: Cloud Connect Network.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The cloud service that the network instance belongs to. Its standard code is only returned when the VPC is connected to the transit router. For self-managed VPCs, no code is returned.</para>
+        /// <para>The cloud service to which the network instance belongs. This parameter is returned only when a VPC occupied by a cloud service is connected to a transit router. If the VPC is managed by you, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>swas</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ManagedService { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADD98358-D265-4060-87CB-A2427F5A8944</para>
@@ -165,11 +168,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the network instance is attached to the CEN instance.</para>
+        /// <para>The attachment status of the network instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>Attaching</b>: The network instance is being attached to the CEN instance.</description></item>
-        /// <item><description><b>Attached</b>: The network instance is attached to the CEN instance.</description></item>
-        /// <item><description><b>Detaching</b>: The network instance is being detached from the CEN instance.</description></item>
+        /// <item><description><b>Attaching</b>: being attached.</description></item>
+        /// <item><description><b>Attached</b>: attached.</description></item>
+        /// <item><description><b>Detaching</b>: being detached.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

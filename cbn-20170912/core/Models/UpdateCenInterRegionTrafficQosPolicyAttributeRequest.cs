@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <c>DryRunOperation</c> is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. After the request passes the dry run, the name and description of the traffic scheduling policy are modified.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new description of the QoS policy.</para>
-        /// <para>The description must be 1 to 256 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</para>
+        /// <para>The new description of the traffic scheduling policy.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The ID of the traffic scheduling policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,8 +75,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficQosPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the QoS policy.</para>
-        /// <para>The name must be 1 to 128 characters in length, and cannot start with http\:// or https\://. You can also leave this parameter empty.</para>
+        /// <para>The new name of the traffic scheduling policy.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>

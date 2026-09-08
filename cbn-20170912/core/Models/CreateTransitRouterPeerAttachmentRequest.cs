@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterPeerAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the local Enterprise Edition transit router to automatically advertise the routes of the inter-region connection to the peer transit router. Valid values:</para>
+        /// <para>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes of the inter-region connection to the peer region.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): no.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: yes.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): no.</description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,11 +24,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? AutoPublishRouteEnabled { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth value of the inter-region connection. Unit: Mbps.</para>
+        /// <para>The bandwidth value of the inter-region connection. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description><para>When <b>BandwidthType</b> is set to <b>BandwidthPackage</b>, this parameter specifies the bandwidth value that the inter-region connection can use.</para>
+        /// <item><description><para>If <b>BandwidthType</b> is set to <b>BandwidthPackage</b>, this parameter specifies the bandwidth that can be used by the inter-region connection.</para>
         /// </description></item>
-        /// <item><description><para>When <b>BandwidthType</b> is set to <b>DataTransfer</b>, this parameter specifies the maximum bandwidth value of the inter-region connection.</para>
+        /// <item><description><para>If <b>BandwidthType</b> is set to <b>DataTransfer</b>, this parameter specifies the bandwidth limit of the inter-region connection.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -42,11 +40,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to allocate bandwidth to the inter-region connection. Valid values:</para>
+        /// <para>The bandwidth allocation method of the inter-region connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BandwidthPackage</b>: allocates bandwidth from a bandwidth plan.</para>
+        /// <item><description><para><b>BandwidthPackage</b>: allocates bandwidth from a bandwidth package.</para>
         /// </description></item>
-        /// <item><description><para><b>DataTransfer</b>: does not allocate bandwidth to the inter-region connection and charges based on pay-by-traffic.</para>
+        /// <item><description><para><b>DataTransfer</b>: does not allocate bandwidth to the inter-region connection. The system charges you based on the actual traffic.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,9 +56,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string BandwidthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth plan that you want to associate with the inter-region connection.</para>
+        /// <para>The ID of the bandwidth package to be associated with the inter-region connection.</para>
         /// <remarks>
-        /// <para>You do not need to configure this parameter when <b>BandwidthType</b> is set to <b>DataTransfer</b>.</para>
+        /// <para>If <b>BandwidthType</b> is set to <b>DataTransfer</b>, you do not need to configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-j3jzhw1zpau2km****</para>
@@ -81,10 +79,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,9 +93,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The default line type.</para>
+        /// <para>The default link type.</para>
         /// <para>Valid values: Platinum and Gold. Default value: Gold.</para>
-        /// <para>You can set this parameter to Platinum only when the bandwidth allocation method is pay-by-traffic.</para>
+        /// <para>The link type can be set to Platinum only when the bandwidth allocation method is pay-by-data-transfer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gold</para>
@@ -107,12 +105,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string DefaultLinkType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run, including permission and instance status verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends a normal request. After the request passes the check, the system creates an inter-region connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a check request. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, a request ID is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): sends a normal request. If the request passes the verification, the inter-region connection is created.</description></item>
+        /// <item><description><b>true</b>: sends a check request. Only the verification is performed. No inter-region connection is created. The system checks whether the required parameters are specified, and validates the request format. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,7 +138,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PeerTransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the peer transit router instance is deployed.</para>
+        /// <para>The region ID of the peer transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
@@ -152,8 +148,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PeerTransitRouterRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the local Enterprise Edition transit router instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the local Enterprise Edition transit router instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -172,16 +168,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The tag information.</para>
-        /// <para>You can specify at most 20 tags in each call.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTransitRouterPeerAttachmentRequestTag> Tag { get; set; }
         public class CreateTransitRouterPeerAttachmentRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that you want to attach.</para>
-            /// <para>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key of the resource.</para>
+            /// <para>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag_A1</para>
@@ -191,9 +187,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that you want to attach to the specified resource.</para>
-            /// <para>The tag value can be an empty string or a string of up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https:// </c>.</para>
-            /// <para>Each key-value pair must be unique. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value of the resource.</para>
+            /// <para>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value_A1</para>
@@ -206,7 +202,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the inter-region connection.</para>
-        /// <para>The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdesc</para>
@@ -217,7 +213,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the inter-region connection.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testname</para>

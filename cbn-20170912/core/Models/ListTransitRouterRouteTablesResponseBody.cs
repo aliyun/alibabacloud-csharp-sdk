@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterRouteTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page when entries are returned by page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTables : TeaModel {
             /// <summary>
             /// <para>The time when the route table was created.</para>
-            /// <para>The time is displayed in the YYYY-MM-DDThh:mmZ format in UTC.</para>
+            /// <para>The time is displayed in UTC in the YYYY-MM-DDThh:mmZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-03-15T09:39Z</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the Enterprise Edition transit router is deployed.</para>
+            /// <para>The region ID of the Enterprise Edition transit router instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -84,19 +82,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The features of the route table.</para>
+            /// <para>The route table feature options.</para>
             /// </summary>
             [NameInMap("RouteTableOptions")]
             [Validation(Required=false)]
             public ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions RouteTableOptions { get; set; }
             public class ListTransitRouterRouteTablesResponseBodyTransitRouterRouteTablesRouteTableOptions : TeaModel {
                 /// <summary>
-                /// <para>The multi-region ECMP routing feature. Valid values:</para>
+                /// <para>Multi-region equal-cost multi-path (ECMP) routing. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>disable</b>: Disables multi-region ECMP routing. After this feature is disabled, for routes that are learned from different regions and have the same prefix and other attributes, the system selects the transit router with the smallest region ID as the next hop. Region IDs are sorted in alphabetical order. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you disable the feature.</para>
-                /// </description></item>
-                /// <item><description><para><b>enable</b>: Enables multi-region ECMP routing. After this feature is enabled, for routes that are learned from different regions and have the same prefix and other attributes, ECMP routing is formed. This changes the latency and bandwidth consumption between different regions. Make sure that you fully evaluate the impact before you enable the feature.</para>
-                /// </description></item>
+                /// <item><description><b>disable</b>: Disables multi-region ECMP routing. After multi-region ECMP routing is disabled, routes with the same prefix learned from different regions select the transit router (TR) with the smallest Region ID (sorted alphabetically) as the next hop when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before disabling this feature.</description></item>
+                /// <item><description><b>enable</b>: Enables multi-region ECMP routing. After multi-region ECMP routing is enabled, routes with the same prefix learned from different regions form ECMP routes when other route attributes are the same. This changes the traffic latency and bandwidth consumed between different regions. Make sure that you fully evaluate the impact before enabling this feature.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -138,7 +134,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             }
 
             /// <summary>
-            /// <para>The ID of the transit router.</para>
+            /// <para>The transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-8vb8bie2koduo5awz****</para>
@@ -180,12 +176,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the route table.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Creating</b>: The route table is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>Deleting</b>: The route table is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><b>Active</b>: The route table is available.</para>
-            /// </description></item>
+            /// <item><description><b>Creating</b>: being created.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,10 +191,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The type of the route table.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Custom</b>: a custom route table.</para>
-            /// </description></item>
-            /// <item><description><para><b>System</b>: the default route table.</para>
-            /// </description></item>
+            /// <item><description><b>Custom</b>: custom route table.</description></item>
+            /// <item><description><b>System</b>: system default route table.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

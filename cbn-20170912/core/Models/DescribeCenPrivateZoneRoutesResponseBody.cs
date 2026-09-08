@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenPrivateZoneRoutesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-7qthudw0ll6jmc****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of the DNS servers for the PrivateZone service.</para>
+        /// <para>The IP address of the DNS server for the PrivateZone service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100.100.XX.XX/32,100.100.XX.XX/32</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

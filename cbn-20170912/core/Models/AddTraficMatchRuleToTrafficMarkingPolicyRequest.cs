@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class AddTraficMatchRuleToTrafficMarkingPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId value as the client token. The RequestId value may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and business restrictions without adding a traffic classification rule to the traffic marking policy. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs the actual request. After the check passes, a traffic classification rule is directly added to the traffic marking policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,17 +65,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TrafficMarkingPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The information about the traffic classification rule.</para>
-        /// <para>You can specify at most 50 traffic classification rules.</para>
+        /// <para>The list of traffic classification rules.</para>
+        /// <para>You can add up to 50 traffic classification rules at a time.</para>
         /// </summary>
         [NameInMap("TrafficMatchRules")]
         [Validation(Required=false)]
         public List<AddTraficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules> TrafficMatchRules { get; set; }
         public class AddTraficMatchRuleToTrafficMarkingPolicyRequestTrafficMatchRules : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block that is used to match packets.</para>
-            /// <para>The traffic classification rule matches the packets whose destination IP addresses fall within the specified destination CIDR block. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</para>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>The destination CIDR block of the traffic packet.</para>
+            /// <para>The traffic classification rule matches traffic whose destination IP address falls within the destination CIDR block. If you do not set this parameter, the traffic classification rule matches traffic with any destination IP address.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.10.0/24</para>
@@ -85,27 +85,27 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string DstCidr { get; set; }
 
             /// <summary>
-            /// <para>The destination port range that is used to match packets. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
-            /// <para>The traffic classification rule matches the packets whose destination ports fall within the destination port range. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</para>
-            /// <para>You can specify at most two ports. Take note of the following rules:</para>
+            /// <para>The destination port of the traffic packet. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
+            /// <para>The traffic classification rule matches traffic whose destination port number falls within the destination port range. If you do not set this parameter, the traffic classification rule matches traffic with any destination port number.</para>
+            /// <para>This parameter supports up to two port numbers. The input format is described as follows:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number such as 1, the system matches the packets whose destination port is port 1.</description></item>
-            /// <item><description>If you enter two port numbers such as 1 and 200, the system matches the packets whose destination ports fall between 1 and 200.</description></item>
-            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, the system matches traffic whose destination port is 1 by default.</description></item>
+            /// <item><description>If you enter two port numbers, such as 1 and 200, the system matches traffic whose destination port falls within the range of 1 to 200 by default.</description></item>
+            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any destination port is matched.</description></item>
             /// </list>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// </summary>
             [NameInMap("DstPortRange")]
             [Validation(Required=false)]
             public List<int?> DstPortRange { get; set; }
 
             /// <summary>
-            /// <para>The differentiated services code point (DSCP) value that is used to match packets. Valid values: <b>0</b> to <b>63</b>.</para>
-            /// <para>The traffic classification rule matches the packets that contain the specified DSCP value. If you do not set this parameter, packets are considered a match regardless of the DSCP value.</para>
+            /// <para>The Differentiated Services Code Point (DSCP) value of the traffic packet. Valid values: <b>0</b> to <b>63</b>.</para>
+            /// <para>The traffic classification rule matches traffic that contains the specified DSCP value. If you do not set this parameter, the traffic classification rule matches traffic with any DSCP value.</para>
             /// <remarks>
-            /// <para> The DSCP value that you specify for this parameter is the DSCP value that packets carry before they are transmitted over the inter-region connection.</para>
+            /// <para>The DSCP value refers to the DSCP value that the traffic packet already carries before entering the inter-region connection.</para>
             /// </remarks>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -115,9 +115,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public int? MatchDscp { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used to match packets.</para>
-            /// <para>Valid values: <b>HTTP</b>, <b>HTTPS</b>, <b>TCP</b>, <b>UDP</b>, <b>SSH</b>, and <b>Telnet</b>. For more information, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</para>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>The protocol type of the traffic packet.</para>
+            /// <para>The traffic classification rule supports matching traffic of multiple protocol types, such as <b>HTTP</b>, <b>HTTPS</b>, <b>TCP</b>, <b>UDP</b>, <b>SSH</b>, and <b>Telnet</b>. For more protocol types, log on to the <a href="https://cen.console.aliyun.com/cen/list">Cloud Enterprise Network (CEN) console</a>.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -127,9 +127,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block that is used to match packets.</para>
-            /// <para>The traffic classification rule matches the packets whose source IP addresses fall within the specified source CIDR block. If you do not set this parameter, packets are considered a match regardless of the source IP address.</para>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>The source CIDR block of the traffic packet.</para>
+            /// <para>The traffic classification rule matches traffic whose source IP address falls within the source CIDR block. If you do not set this parameter, the traffic classification rule matches traffic with any source IP address.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.0/24</para>
@@ -139,15 +139,15 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string SrcCidr { get; set; }
 
             /// <summary>
-            /// <para>The source port range that is used to match packets. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
-            /// <para>The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not set this parameter, packets are considered a match regardless of the source port.</para>
-            /// <para>You can specify at most two ports. Take note of the following rules:</para>
+            /// <para>The source port of the traffic packet. Valid values: <b>-1</b> and <b>1</b> to <b>65535</b>.</para>
+            /// <para>The traffic classification rule matches traffic whose source port number falls within the source port range. If you do not set this parameter, the traffic classification rule matches traffic with any source port number.</para>
+            /// <para>This parameter supports up to two port numbers. The input format is described as follows:</para>
             /// <list type="bullet">
-            /// <item><description>If you enter only one port number such as 1, the system matches the packets whose source port is 1.</description></item>
-            /// <item><description>If you enter two port numbers such as 1 and 200, the system matches the packets whose source ports fall between 1 and 200.</description></item>
-            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.</description></item>
+            /// <item><description>If you enter only one port number, such as 1, the system matches traffic whose source port is 1 by default.</description></item>
+            /// <item><description>If you enter two port numbers, such as 1 and 200, the system matches traffic whose source port falls within the range of 1 to 200 by default.</description></item>
+            /// <item><description>If you enter two port numbers and one of them is -1, the other port number must also be -1, which indicates that traffic with any source port is matched.</description></item>
             /// </list>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// </summary>
             [NameInMap("SrcPortRange")]
             [Validation(Required=false)]
@@ -155,8 +155,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The description of the traffic classification rule.</para>
-            /// <para>The description must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The description must start with a letter.</para>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -167,8 +166,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The name of the traffic classification rule.</para>
-            /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</para>
-            /// <para>You can specify at most 50 traffic classification rules.</para>
+            /// <para>You can add up to 50 traffic classification rules at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>

@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
-        /// <para>This parameter is not required for resources of the Cen and BandwidthPackage types. It is required for all other resource types.</para>
+        /// <para>The region ID of the resource instance.</para>
+        /// <para>This parameter is not required when the resource type is Cen or BandwidthPackage. This parameter is required for all other resource types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs.</para>
+        /// <para>The resources.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,17 +48,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
-        /// <para><b>Cen</b>: a CEN instance.</para>
-        /// <para><b>BandwidthPackage</b>: a bandwidth plan.</para>
-        /// <para><b>TransitRouter</b>: a transit router instance.</para>
-        /// <para><b>TransitRouterVpcAttachment</b>: a VPC connection.</para>
-        /// <para><b>TransitRouterVbrAttachment</b>: a VBR connection.</para>
-        /// <para><b>TransitRouterPeerAttachment</b>: an inter-region connection.</para>
-        /// <para><b>TransitRouterVpnAttachment</b>: a VPN connection.</para>
-        /// <para><b>TransitRouterRouteTable</b>: a route table.</para>
-        /// <para><b>Flowlog</b>: a flow log.</para>
-        /// <para><b>TransitRouterMulticastDomain</b>: a multicast domain.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <para><b>Cen</b>: CEN instance.</para>
+        /// <para><b>BandwidthPackage</b>: bandwidth package instance.</para>
+        /// <para><b>TransitRouter</b>: transit router instance.</para>
+        /// <para><b>TransitRouterVpcAttachment</b>: VPC connection instance.</para>
+        /// <para><b>TransitRouterVbrAttachment</b>: VBR connection instance.</para>
+        /// <para><b>TransitRouterPeerAttachment</b>: inter-region connection instance.</para>
+        /// <para><b>TransitRouterVpnAttachment</b>: VPN connection instance.</para>
+        /// <para><b>TransitRouterRouteTable</b>: route table instance.</para>
+        /// <para><b>Flowlog</b>: flow log instance.</para>
+        /// <para><b>TransitRouterMulticastDomain</b>: multicast domain instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>You can enter multiple tag keys. The value of <b>N</b> ranges from <b>1</b> to <b>20</b>.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify multiple tag keys. Valid values of <b>N</b>: <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>Each tag key must have a tag value. The value of <b>N</b> ranges from <b>1</b> to <b>20</b>.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. Valid values of <b>N</b>: <b>1</b> to <b>20</b>.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>

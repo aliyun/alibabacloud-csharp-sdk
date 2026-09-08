@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The new maximum bandwidth of the bandwidth plan. Unit: Mbps.</para>
+        /// <para>The new peak bandwidth of the bandwidth plan instance. Unit: Mbit/s.</para>
         /// <para>Valid values: <b>2</b> to <b>10000</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>The instance ID of the bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

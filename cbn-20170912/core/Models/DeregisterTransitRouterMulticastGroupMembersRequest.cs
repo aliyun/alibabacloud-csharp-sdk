@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeregisterTransitRouterMulticastGroupMembersRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a unique value from your client for each request. The ClientToken parameter supports only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -23,10 +23,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Sends a check request without deleting the multicast member. The system checks required parameters, the request format, and service limits. If the check fails, the corresponding error is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Sends a normal request. After the request passes the check, the multicast member is deleted.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run without removing the multicast member. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. After the check succeeds, the multicast member is removed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string GroupIpAddress { get; set; }
 
         /// <summary>
-        /// <para>A list of Elastic Network Interface (ENI) IDs.</para>
+        /// <para>The list of network interface controller (NIC) IDs.</para>
         /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of inter-region multicast domain IDs.</para>
+        /// <para>The list of cross-region multicast domain IDs.</para>
         /// </summary>
         [NameInMap("PeerTransitRouterMulticastDomains")]
         [Validation(Required=false)]

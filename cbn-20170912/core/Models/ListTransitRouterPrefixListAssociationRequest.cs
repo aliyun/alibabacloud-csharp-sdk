@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The ID of the next hop connection.</para>
         /// <remarks>
-        /// <para>If you want to query information about the prefix list that is used to generate blackhole routes, set this parameter to <b>BlackHole</b>.</para>
+        /// <para>To query information about a prefix list that generates blackhole routes, set this parameter to <b>BlackHole</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance that is associated with the next hop connection.</para>
+        /// <para>The network instance ID associated with the next hop connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-6eh7fp9hdqa2wv85t****</para>
@@ -35,14 +35,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The next hop type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BlackHole</b>: queries the prefix lists that generate blackhole routes.</para>
-        /// </description></item>
-        /// <item><description><para><b>VPC</b>: queries the prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>VBR</b>: queries the prefix lists whose next hop is a virtual border router (VBR) connection.</para>
-        /// </description></item>
-        /// <item><description><para><b>TR</b>: queries the prefix lists whose next hop is an inter-region connection.</para>
-        /// </description></item>
+        /// <item><description><b>BlackHole</b>: queries information about prefix lists that generate blackhole routes.</description></item>
+        /// <item><description><b>VPC</b>: queries information about prefix lists whose next hop is a Virtual Private Cloud (VPC) connection.</description></item>
+        /// <item><description><b>VBR</b>: queries information about prefix lists whose next hop is a Virtual Border Router (VBR) connection.</description></item>
+        /// <item><description><b>TR</b>: queries information about prefix lists whose next hop is an inter-region connection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list to query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string PrefixListId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
+        /// <para>The region ID of the transit router instance.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -123,10 +119,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The status of the prefix list.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Active</b>: The prefix list is active.</para>
-        /// </description></item>
-        /// <item><description><para><b>Updating</b>: The prefix list is being updated.</para>
-        /// </description></item>
+        /// <item><description><b>Active</b>: active.</description></item>
+        /// <item><description><b>Updating</b>: being updated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +131,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The transit router instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the transit router.</para>
+        /// <para>The ID of the transit router route table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vtb-6ehgc262hr170qgyc****</para>

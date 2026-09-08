@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenChildInstanceRouteEntriesToAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that is used for the next query.</para>
+        /// <para>Indicates whether a next query token (Token) exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query is sent.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +34,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the route.</para>
+        /// <para>The details of the route entries.</para>
         /// </summary>
         [NameInMap("RouteEntry")]
         [Validation(Required=false)]
         public List<ListCenChildInstanceRouteEntriesToAttachmentResponseBodyRouteEntry> RouteEntry { get; set; }
         public class ListCenChildInstanceRouteEntriesToAttachmentResponseBodyRouteEntry : TeaModel {
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-9adwg6ghpq8oq4dp7q</para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table of the network instance.</para>
+            /// <para>The route table ID of the network instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-bp1tlaj1c4nxr2t3e****</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ChildInstanceRouteTableId { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block of the route.</para>
+            /// <para>The destination CIDR block of the route entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.0.0/8</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string DestinationCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The type of the managed routing service. If this parameter is empty, the route is not managed. The value TR indicates that the route is managed by a transit router.</para>
+            /// <para>The type of route hosting. If this field is empty, the route is not hosted. Valid values: TR, which indicates that the hosting type is transit router.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TR</para>
@@ -83,14 +81,11 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the route. Valid values:</para>
+            /// <para>The status of the route entry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Available</b>: The route is active.</para>
-            /// </description></item>
-            /// <item><description><para><b>Pending</b>: The route is being configured.</para>
-            /// </description></item>
-            /// <item><description><para><b>Modifying</b>: The route is being modified.</para>
-            /// </description></item>
+            /// <item><description><b>Available</b>: available.</description></item>
+            /// <item><description><b>Pending</b>: being configured.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListCenInterRegionTrafficQosPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, no next page exists.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that determines the start point of the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,19 +54,17 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of QoS policies.</para>
+        /// <para>The list of traffic scheduling policies.</para>
         /// </summary>
         [NameInMap("TrafficQosPolicies")]
         [Validation(Required=false)]
         public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies> TrafficQosPolicies { get; set; }
         public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPolicies : TeaModel {
             /// <summary>
-            /// <para>The bandwidth guarantee type.</para>
+            /// <para>The bandwidth guarantee type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>byBandwidth</b>: The QoS queues are configured based on an absolute bandwidth value.</para>
-            /// </description></item>
-            /// <item><description><para><b>byBandwidthPercent</b>: The QoS queues are configured based on a bandwidth percentage.</para>
-            /// </description></item>
+            /// <item><description><b>byBandwidth</b>: configures QoS queues by absolute bandwidth value.</description></item>
+            /// <item><description><b>byBandwidthPercent</b>: configures QoS queues by bandwidth percentage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string BandwidthGuaranteeMode { get; set; }
 
             /// <summary>
-            /// <para>The description of the QoS policy.</para>
+            /// <para>The description of the traffic scheduling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desctest</para>
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the QoS policy.</para>
+            /// <para>The ID of the traffic scheduling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qos-rnghap5gc8155x****</para>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the QoS policy.</para>
+            /// <para>The name of the traffic scheduling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nametest</para>
@@ -109,16 +105,12 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TrafficQosPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The status of the QoS policy.</para>
+            /// <para>The status of the traffic scheduling policy.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Creating</b>: The policy is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>Active</b>: The policy is active.</para>
-            /// </description></item>
-            /// <item><description><para><b>Modifying</b>: The policy is being modified.</para>
-            /// </description></item>
-            /// <item><description><para><b>Deleting</b>: The policy is being deleted.</para>
-            /// </description></item>
+            /// <item><description><b>Creating</b>: being created.</description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Modifying</b>: being modified.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +128,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public List<ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues> TrafficQosQueues { get; set; }
             public class ListCenInterRegionTrafficQosPoliciesResponseBodyTrafficQosPoliciesTrafficQosQueues : TeaModel {
                 /// <summary>
-                /// <para>The bandwidth value allocated to the queue of the inter-region connection. This parameter is returned when the bandwidth guarantee type is byBandwidth.</para>
+                /// <para>The inter-region bandwidth allocated to the current queue when the bandwidth guarantee type is set to the absolute value mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -146,14 +138,14 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string Bandwidth { get; set; }
 
                 /// <summary>
-                /// <para>The Differentiated Services Code Point (DSCP) values of the traffic messages that are matched by the queue.</para>
+                /// <para>The DSCP values of the traffic packets to be matched by the current queue.</para>
                 /// </summary>
                 [NameInMap("Dscps")]
                 [Validation(Required=false)]
                 public List<int?> Dscps { get; set; }
 
                 /// <summary>
-                /// <para>The actual bandwidth of the queue.</para>
+                /// <para>The actual effective bandwidth of the current queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.35</para>
@@ -193,7 +185,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
                 public string QosQueueName { get; set; }
 
                 /// <summary>
-                /// <para>The percentage of the inter-region connection bandwidth that is used by the queue. This parameter is returned when the bandwidth guarantee type is byBandwidthPercent.</para>
+                /// <para>The percentage of inter-region bandwidth occupied by the current queue when the bandwidth guarantee type is set to the percentage mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -215,7 +207,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the TransitRouter instance.</para>
+            /// <para>The transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-2ze4ta4v32umj0rb***</para>

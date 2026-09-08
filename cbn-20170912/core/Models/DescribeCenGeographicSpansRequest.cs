@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeCenGeographicSpansRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the geographic span.</para>
+        /// <para>The ID of the connected areas.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system queries all geographic spans that are supported by Cloud Enterprise Network (CEN).</para>
+        /// <para>If you do not specify this parameter, the system queries information about all connected areas supported by CEN.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

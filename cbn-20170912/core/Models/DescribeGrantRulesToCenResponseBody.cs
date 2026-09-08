@@ -67,10 +67,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>The maximum number of entries to return per page.</para>
-        /// </description></item>
-        /// <item><description><para>This value is the same as the <b>MaxResults</b> value that you specified in the request.</para>
-        /// </description></item>
+        /// <item><description>If you did not specify the <b>MaxResults</b> request parameter, pagination is not required. The <b>MaxResults</b> value in the response indicates the total number of entries.</description></item>
+        /// <item><description>If you specified the <b>MaxResults</b> request parameter, pagination is required. The <b>MaxResults</b> value in the response indicates the number of entries in the current page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,12 +79,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the <b>NextToken</b> parameter is empty, no more results are available.</para>
-        /// </description></item>
-        /// <item><description><para>To retrieve the next page, set the NextToken request parameter to this value.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +103,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

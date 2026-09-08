@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeRouteConflictRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the network instance to query.</para>
+        /// <para>The instance ID of the network instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the network instance is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the network instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the network instance.</para>
+        /// <para>The route table ID of the network instance to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the conflicting route.</para>
+        /// <para>The destination CIDR block of the conflicting route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.16.0.0/16</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page during paging. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
     public class DeleteTransitRouterVpnAttachmentRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> of each request is unique.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, the VPN connection is deleted.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run without deleting the VPN connection. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and then deletes the VPN connection after the request passes the dry run.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,12 +38,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the VPN connection. Valid values:</para>
+        /// <para>Specifies whether to force delete the VPN connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): checks for resource dependencies, such as associated forwarding and route learning, before the VPN connection is deleted. If a dependency is found, the deletion fails and an error message is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: deletes the VPN connection and all its dependencies.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): checks whether related resource dependencies exist before deleting the VPN connection, such as associated forwarding and routing learning. If dependencies exist, the VPN connection is not deleted and the corresponding error is returned.</description></item>
+        /// <item><description><b>true</b>: deletes the VPN connection along with all related dependencies.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateCenChildInstanceRouteEntryToAttachmentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route.</para>
+        /// <para>The destination CIDR block of the route entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,15 +46,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run, without performing the actual request. The dry run checks permissions and the status of the instance. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b> (default): sends a normal request and creates a route for the network instance after the request passes the check.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: sends a dry run request to check the request parameters. If the request passes the check, the system does not create a route for the network instance. The system checks the required parameters and the request format. If the request fails the check, an error message is returned. If the request passes the check, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the request passes the check, a route entry is added to the network instance.</description></item>
+        /// <item><description><b>true</b>: Sends a check request. No route entry is added to the network instance. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter is not currently in effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

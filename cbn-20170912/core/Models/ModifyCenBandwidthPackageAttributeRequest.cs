@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ModifyCenBandwidthPackageAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bandwidth plan.</para>
+        /// <para>The instance ID of the bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenBandwidthPackageId { get; set; }
 
         /// <summary>
-        /// <para>The new description for the bandwidth plan.</para>
-        /// <para>The description can be empty or 1 to 256 characters long. It cannot start with http\:// or https\://.</para>
+        /// <para>The new description of the bandwidth plan instance.  </para>
+        /// <para>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Bandwidth package</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The new name for the bandwidth plan.</para>
-        /// <para>The name can be empty or 1 to 128 characters long. It cannot start with http\:// or https\://.</para>
+        /// <para>The new name of the bandwidth plan instance.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

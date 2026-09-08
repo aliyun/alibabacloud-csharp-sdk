@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterPrefixListAssociationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The ID of the next hop connection.</para>
             /// <remarks>
-            /// <para>If <b>BlackHole</b> is returned, it indicates that all CIDR blocks in the prefix list are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</para>
+            /// <para>If the value is <b>BlackHole</b>, all CIDR blocks in the prefix list are blackhole routes, and all traffic destined for the CIDR blocks in the prefix list is dropped.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string NextHop { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network instance that is associated with the next hop connection.</para>
+            /// <para>The network instance ID associated with the next hop connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-6eh7fp9hdqa2wv85t****</para>
@@ -62,14 +62,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The next hop type.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>BlackHole</b>: The routes are blackhole routes. All traffic destined for the CIDR blocks in the prefix list is dropped.</para>
-            /// </description></item>
-            /// <item><description><para><b>VPC</b>: The next hop is a Virtual Private Cloud (VPC) connection.</para>
-            /// </description></item>
-            /// <item><description><para><b>VBR</b>: The next hop is a virtual border router (VBR) connection.</para>
-            /// </description></item>
-            /// <item><description><para><b>TR</b>: The next hop is an inter-region connection.</para>
-            /// </description></item>
+            /// <item><description><b>BlackHole</b>: the CIDR blocks in the prefix list are blackhole routes, and all traffic destined for the CIDR blocks in the prefix list is dropped.</description></item>
+            /// <item><description><b>VPC</b>: the next hop of the CIDR blocks in the prefix list is a Virtual Private Cloud (VPC) connection.</description></item>
+            /// <item><description><b>VBR</b>: the next hop of the CIDR blocks in the prefix list is a Virtual Border Router (VBR) connection.</description></item>
+            /// <item><description><b>TR</b>: the next hop of the CIDR blocks in the prefix list is an inter-region connection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,10 +98,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The status of the prefix list.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Active</b>: The prefix list is active.</para>
-            /// </description></item>
-            /// <item><description><para><b>Updating</b>: The prefix list is being updated.</para>
-            /// </description></item>
+            /// <item><description><b>Active</b>: active.</description></item>
+            /// <item><description><b>Updating</b>: being updated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +110,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the transit router.</para>
+            /// <para>The transit router instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-6ehx7q2jze8ch5ji0****</para>
@@ -126,7 +120,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table of the transit router.</para>
+            /// <para>The ID of the transit router route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-6ehgc262hr170qgyc****</para>
@@ -148,7 +142,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

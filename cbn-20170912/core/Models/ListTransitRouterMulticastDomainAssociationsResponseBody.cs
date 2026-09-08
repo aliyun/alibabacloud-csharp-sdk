@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class ListTransitRouterMulticastDomainAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. Valid values:</para>
+        /// <para>The token that determines the start point of the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, it indicates that no next query is to be sent.</para>
-        /// </description></item>
-        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value is the token that is used for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query is to be sent.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
             /// <summary>
             /// <para>The type of resource associated with the multicast domain.</para>
-            /// <para>The value is <b>VPC</b>.</para>
+            /// <para>Set the value to <b>VPC</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -96,12 +94,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             /// <summary>
             /// <para>The association status.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Associated</b>: The resource is associated with the multicast domain.</para>
-            /// </description></item>
-            /// <item><description><para><b>Associating</b>: The resource is being associated with the multicast domain.</para>
-            /// </description></item>
-            /// <item><description><para><b>Dissociating</b>: The resource is being dissociated from the multicast domain.</para>
-            /// </description></item>
+            /// <item><description><b>Associated</b>: associated.</description></item>
+            /// <item><description><b>Associating</b>: being associated.</description></item>
+            /// <item><description><b>Dissociating</b>: being dissociated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +107,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network instance connection.</para>
+            /// <para>The network instance connection ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-p90y3ymbbwuvy5****</para>
@@ -122,7 +117,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterAttachmentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the multicast domain.</para>
+            /// <para>The multicast domain ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-mcast-domain-91wpg6wbhchjeq****</para>
@@ -132,7 +127,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             public string TransitRouterMulticastDomainId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-p0wxk12u6okfkr8xy****</para>

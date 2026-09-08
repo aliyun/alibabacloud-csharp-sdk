@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class DescribeGeographicRegionMembershipRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the area that you want to query. Valid values:</para>
+        /// <para>The ID of the area to query. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>china</b>: the Chinese mainland</description></item>
-        /// <item><description><b>asia-pacific</b>: Asia Pacific</description></item>
-        /// <item><description><b>europe</b>: Europe</description></item>
-        /// <item><description><b>north-america</b>: North America</description></item>
+        /// <item><description><para><b>china</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>asia-pacific</b>: Asia-Pacific.</para>
+        /// </description></item>
+        /// <item><description><para><b>europe</b>: Europe.</para>
+        /// </description></item>
+        /// <item><description><para><b>north-america</b>: North America.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

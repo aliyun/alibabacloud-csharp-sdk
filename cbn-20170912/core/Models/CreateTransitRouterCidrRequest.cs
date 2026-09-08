@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class CreateTransitRouterCidrRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block of the transit router.</para>
+        /// <para>The transit router CIDR block.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a token on your client to make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID is different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The description of the transit router CIDR block.</para>
-        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desctest</para>
@@ -48,10 +48,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the transit router CIDR block is created.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, the transit router CIDR block is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 
         /// <summary>
         /// <para>The name of the transit router CIDR block.</para>
-        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http\:// or https\://.</para>
+        /// <para>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nametest</para>
@@ -81,13 +79,13 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow the system to automatically add a route that points to the transit router CIDR block to the route table of the transit router.</para>
+        /// <para>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b> (default): Yes.</para>
-        /// <para>After you create a VPN connection that uses a private VPN gateway and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the associated transit router. The destination of this route is the transit router CIDR block. The transit router CIDR block is the CIDR block from which a gateway IP address is allocated to the IPsec connection. This blackhole route is advertised only to the route tables of virtual border routers (VBRs) that are connected to the transit router.</para>
-        /// <para>A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection. The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.</para>
+        /// <item><description><para><b>true</b> (default): allows the system to automatically add a route.</para>
+        /// <para>   If you select this option, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning relationship with the VPN connection:</para>
+        /// <para>A blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses are allocated to IPsec connections. This blackhole route is propagated only to the route tables of Virtual Border Router (VBR) instances associated with the transit router.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: No.</para>
+        /// <item><description><para><b>false</b>: does not allow the system to automatically add a route.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -99,8 +97,8 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public bool? PublishCidrRoute { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the transit router is deployed.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
+        /// <para>The region ID of the transit router.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The transit routing instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

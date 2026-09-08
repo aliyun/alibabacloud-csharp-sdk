@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
 {
     public class PublishRouteEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network instance.</para>
+        /// <para>The network instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the network instance is deployed.</para>
+        /// <para>The region ID of the network instance.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table of the network instance.</para>
+        /// <para>The route table ID of the network instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
-        /// </description></item>
-        /// <item><description><para><b>VBR</b>: virtual border router.</para>
-        /// </description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,7 +69,7 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         public string ChildInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route that you want to advertise.</para>
+        /// <para>The destination CIDR block of the route entry to be published.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
