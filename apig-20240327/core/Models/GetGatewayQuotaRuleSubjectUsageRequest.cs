@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleSubjectUsageRequest : TeaModel {
         /// <summary>
+        /// <para>The end time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates startTime based on the rule cycle.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1788425220</para>
+        /// </summary>
+        [NameInMap("endTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to filter out zero values.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The start time for querying consumption record details, in UNIX timestamp format (seconds). If only this parameter is specified, the system automatically calculates endTime based on the rule cycle.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1788338820</para>
+        /// </summary>
+        [NameInMap("startTime")]
+        [Validation(Required=false)]
+        public long? StartTime { get; set; }
 
     }
 

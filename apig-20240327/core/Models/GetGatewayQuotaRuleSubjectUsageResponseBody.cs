@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CachedAmount { get; set; }
 
             /// <summary>
+            /// <para>The exact value of total cached consumption. Supports decimals in credit scenarios.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20.5</para>
+            /// </summary>
+            [NameInMap("cachedAmountDecimal")]
+            [Validation(Required=false)]
+            public double? CachedAmountDecimal { get; set; }
+
+            /// <summary>
             /// <para>The paginated consumption details.</para>
             /// 
             /// <b>Example:</b>
@@ -70,6 +80,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? CachedAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The exact value of cached consumption. Supports decimals in credit scenarios.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10.5</para>
+                    /// </summary>
+                    [NameInMap("cachedAmountDecimal")]
+                    [Validation(Required=false)]
+                    public double? CachedAmountDecimal { get; set; }
+
+                    /// <summary>
                     /// <para>The consumer name.</para>
                     /// 
                     /// <b>Example:</b>
@@ -90,6 +110,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? InputAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The exact value of input consumption. Supports decimals in credit scenarios.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>120.5</para>
+                    /// </summary>
+                    [NameInMap("inputAmountDecimal")]
+                    [Validation(Required=false)]
+                    public double? InputAmountDecimal { get; set; }
+
+                    /// <summary>
                     /// <para>The model name.</para>
                     /// 
                     /// <b>Example:</b>
@@ -108,6 +138,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("outputAmount")]
                     [Validation(Required=false)]
                     public long? OutputAmount { get; set; }
+
+                    /// <summary>
+                    /// <para>The exact value of output consumption. Supports decimals in credit scenarios.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>80.5</para>
+                    /// </summary>
+                    [NameInMap("outputAmountDecimal")]
+                    [Validation(Required=false)]
+                    public double? OutputAmountDecimal { get; set; }
 
                     /// <summary>
                     /// <para>The request ID.</para>
@@ -139,6 +179,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [Validation(Required=false)]
                     public long? UsedAmount { get; set; }
 
+                    /// <summary>
+                    /// <para>The exact value of total consumption. Supports decimals in credit scenarios.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>210.5</para>
+                    /// </summary>
+                    [NameInMap("usedAmountDecimal")]
+                    [Validation(Required=false)]
+                    public double? UsedAmountDecimal { get; set; }
+
                 }
 
                 /// <summary>
@@ -162,7 +212,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>The total number of records.</para>
+                /// <para>The total number of entries.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -184,6 +234,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? InputAmount { get; set; }
 
             /// <summary>
+            /// <para>The exact value of total input consumption. Supports decimals in credit scenarios.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>300.5</para>
+            /// </summary>
+            [NameInMap("inputAmountDecimal")]
+            [Validation(Required=false)]
+            public double? InputAmountDecimal { get; set; }
+
+            /// <summary>
             /// <para>The total output token consumption.</para>
             /// 
             /// <b>Example:</b>
@@ -192,6 +252,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("outputAmount")]
             [Validation(Required=false)]
             public long? OutputAmount { get; set; }
+
+            /// <summary>
+            /// <para>The exact value of total output consumption. Supports decimals in credit scenarios.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>180.5</para>
+            /// </summary>
+            [NameInMap("outputAmountDecimal")]
+            [Validation(Required=false)]
+            public double? OutputAmountDecimal { get; set; }
 
             /// <summary>
             /// <para>Indicates whether the quota limit is exceeded.</para>
@@ -204,11 +274,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? OverLimit { get; set; }
 
             /// <summary>
-            /// <para>The subject type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>consumer</description></item>
-            /// <item><description>consumer_group</description></item>
-            /// </list>
+            /// <para>The quota dimension. Valid values: token and credit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>token</para>
+            /// </summary>
+            [NameInMap("quotaDimension")]
+            [Validation(Required=false)]
+            public string QuotaDimension { get; set; }
+
+            /// <summary>
+            /// <para>The subject type. Valid values: consumer and consumer_group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>consumer_group</para>
@@ -236,6 +312,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("usedAmount")]
             [Validation(Required=false)]
             public long? UsedAmount { get; set; }
+
+            /// <summary>
+            /// <para>The exact value of the total used amount of the subject. Supports decimals in credit scenarios.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>500.5</para>
+            /// </summary>
+            [NameInMap("usedAmountDecimal")]
+            [Validation(Required=false)]
+            public double? UsedAmountDecimal { get; set; }
 
         }
 

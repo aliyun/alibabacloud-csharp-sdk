@@ -19,34 +19,6 @@ namespace AlibabaCloud.SDK.APIG20240327
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"},
-                {"ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"},
-                {"cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"},
-                {"cn-heyuan", "apig.cn-heyuan.aliyuncs.com"},
-                {"cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"},
-                {"cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "apig.cn-beijing.aliyuncs.com"},
-                {"ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "apig.cn-chengdu.aliyuncs.com"},
-                {"cn-qingdao", "apig.cn-qingdao.aliyuncs.com"},
-                {"cn-shanghai", "apig.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "apig.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"},
-                {"cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"},
-                {"us-west-1", "apig.us-west-1.aliyuncs.com"},
-                {"us-east-1", "apig.us-east-1.aliyuncs.com"},
-                {"eu-central-1", "apig.eu-central-1.aliyuncs.com"},
-                {"eu-west-1", "apig.eu-west-1.aliyuncs.com"},
-                {"me-east-1", "apig.me-east-1.aliyuncs.com"},
-                {"me-central-1", "apig.me-central-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -11200,7 +11172,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11220,6 +11192,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
             {
                 query["filterFailedRequests"] = request.FilterFailedRequests;
@@ -11231,6 +11207,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11259,7 +11239,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11279,6 +11259,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterFailedRequests))
             {
                 query["filterFailedRequests"] = request.FilterFailedRequests;
@@ -11290,6 +11274,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11318,7 +11306,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11342,7 +11330,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
