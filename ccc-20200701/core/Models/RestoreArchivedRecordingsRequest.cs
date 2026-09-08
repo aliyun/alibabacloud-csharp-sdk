@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RestoreArchivedRecordingsRequest : TeaModel {
         /// <summary>
+        /// <para>List of contact IDs, in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[\&quot;job-216750038017142784\&quot;]</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactIds { get; set; }
 
         /// <summary>
+        /// <para>Cloud Contact Center instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

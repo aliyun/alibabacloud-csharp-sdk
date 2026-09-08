@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListIntervalSkillGroupReportRequest : TeaModel {
         /// <summary>
+        /// <para>End Time, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is the current time. If Interval is Daily, the maximum interval between StartTime and EndTime is 180 days. If Interval is Hourly, the maximum interval is 10 days. The time precision for statistics is hourly, snapped backward to the nearest hour, using an open interval. For example, if the Start Time is 11:12:20 and the End Time is 11:45:50, the aligned input parameter Time Range becomes [11:00:00, 12:00:00), meaning greater than or equal to 11:00:00 and less than 12:00:00.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1604725528000</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Segment statistics type. The default is Daily (aggregated by day).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Hourly</para>
         /// </summary>
@@ -35,11 +40,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Interval { get; set; }
 
+        /// <summary>
+        /// <para>Media type. The default is Audio. Other valid values include Chat and Video.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VIDEO</para>
+        /// </summary>
         [NameInMap("MediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
         /// <summary>
+        /// <para>Skill group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupId { get; set; }
 
         /// <summary>
+        /// <para>Start Time, formatted as a UNIX timestamp in milliseconds. This parameter is optional. The default value is 00:00 of the current day. Statistics are aggregated by hour, rounded down to the nearest hour, and the interval is closed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1604639129000</para>
         /// </summary>

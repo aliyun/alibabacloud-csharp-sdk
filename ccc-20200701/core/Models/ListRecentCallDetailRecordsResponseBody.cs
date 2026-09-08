@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListRecentCallDetailRecordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRecentCallDetailRecordsResponseBodyData Data { get; set; }
         public class ListRecentCallDetailRecordsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of call records.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListRecentCallDetailRecordsResponseBodyDataList> List { get; set; }
             public class ListRecentCallDetailRecordsResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>List of agent IDs. Multiple values are separated by commas.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>agent@ccc-test</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string AgentIds { get; set; }
 
                 /// <summary>
+                /// <para>Call duration in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string CallDuration { get; set; }
 
                 /// <summary>
+                /// <para>Called number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1332315****</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string CalledNumber { get; set; }
 
                 /// <summary>
+                /// <para>Calling number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0533128****</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string CallingNumber { get; set; }
 
                 /// <summary>
+                /// <para>The reason the call ended.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string ContactDisposition { get; set; }
 
                 /// <summary>
+                /// <para>Call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>job-7660472242845****</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string ContactId { get; set; }
 
                 /// <summary>
+                /// <para>Call type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Outbound</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string ContactType { get; set; }
 
                 /// <summary>
+                /// <para>Call duration in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
+                /// <para>Instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Skill groups to which the agent participating in the call belongs. Multiple skill groups are separated by commas.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup@ccc-test</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string SkillGroupIds { get; set; }
 
                 /// <summary>
+                /// <para>Call start time. For inbound calls, it starts when the call enters IVR. For outbound calls, it starts when the call is answered. The format is a Unix timestamp string in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1532448000000</para>
                 /// </summary>
@@ -116,6 +146,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
+            /// <para>Page number, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -124,6 +156,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Page size, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -132,6 +166,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total count. The actual total is returned only when PageNumber is 1; otherwise, it is 0.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -142,6 +178,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -149,11 +187,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</para>
         /// </summary>

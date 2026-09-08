@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ImportRamUsersResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Data, import execution ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1ca2b084-6f0a-454b-9851-29768a9a5832</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03C67DAD-EB26-41D8-949D-9B0C470FB716</para>
         /// </summary>

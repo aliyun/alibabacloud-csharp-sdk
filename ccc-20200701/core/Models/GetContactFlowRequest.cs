@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetContactFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The contact flow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactFlowId { get; set; }
 
         /// <summary>
+        /// <para>The draft ID. This is the ID of the editable draft version for the current contact flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DraftId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

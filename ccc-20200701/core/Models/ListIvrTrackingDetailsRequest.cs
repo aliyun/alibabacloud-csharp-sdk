@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListIvrTrackingDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Page number, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

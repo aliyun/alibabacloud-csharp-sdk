@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListVoicemailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListVoicemailsResponseBodyData Data { get; set; }
         public class ListVoicemailsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of voicemail records.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListVoicemailsResponseBodyDataList> List { get; set; }
             public class ListVoicemailsResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The called number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0533128****</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Callee { get; set; }
 
                 /// <summary>
+                /// <para>The calling number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>073xxxx7539</para>
                 /// </summary>
@@ -41,11 +53,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string Caller { get; set; }
 
+                /// <summary>
+                /// <para>The start time of the call.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1532448000000，已废弃，请使用StartTime。</para>
+                /// </summary>
                 [NameInMap("CdrStartTime")]
                 [Validation(Required=false)]
                 public long? CdrStartTime { get; set; }
 
                 /// <summary>
+                /// <para>The call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>job-125152394144124921</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string ContactId { get; set; }
 
                 /// <summary>
+                /// <para>The duration of the voicemail message in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the CC instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the voicemail.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>voicemail-test</para>
                 /// </summary>
@@ -77,11 +103,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The duration of the voicemail message in seconds.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10，已废弃，请使用Duration</para>
+                /// </summary>
                 [NameInMap("RecordingDuration")]
                 [Validation(Required=false)]
                 public long? RecordingDuration { get; set; }
 
                 /// <summary>
+                /// <para>The start time of the voicemail.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1631440860000</para>
                 /// </summary>
@@ -92,6 +126,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -100,6 +136,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -108,6 +146,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries. This parameter is returned only when \<c>PageNumber\\</c> is set to 1. For other values of \<c>PageNumber\\</c>, this parameter returns 0.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -118,6 +158,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -125,11 +167,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</para>
         /// </summary>

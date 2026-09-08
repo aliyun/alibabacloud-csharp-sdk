@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetMonoRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>Call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        /// <summary>
+        /// <para>Expiration time, in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>300</para>
+        /// </summary>
         [NameInMap("ExpireSeconds")]
         [Validation(Required=false)]
         public long? ExpireSeconds { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

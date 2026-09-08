@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RemoveBlacklistCallTaggingRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the Cloud Contact Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Call ID. Provide this field only for masked numbers (containing \*). Do not provide it for unmasked numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-6538214103685****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

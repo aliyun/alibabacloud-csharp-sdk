@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SaveDocumentRequest : TeaModel {
         /// <summary>
+        /// <para>Document ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DocumentId { get; set; }
 
         /// <summary>
+        /// <para>The document content to save. It must conform to the rules defined in the schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DocumentJson { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EAF3C248-E123-441B-A545-B6CD02E98EED</para>
         /// </summary>

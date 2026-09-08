@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListInstancesOfUserRequest : TeaModel {
         /// <summary>
+        /// <para>Paging ordinal number, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Paging size, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

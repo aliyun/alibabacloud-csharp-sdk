@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class StartPrivacyCallRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The callee\&quot;s number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Callee { get; set; }
 
         /// <summary>
+        /// <para>The caller\&quot;s number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Caller { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Cloud Contact Center (CCC) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

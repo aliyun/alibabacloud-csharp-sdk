@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddPersonalNumbersToUserRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>List of numbers to be added. The numbers must be attachable to the agent corresponding to UserId. If you are unsure which numbers the agent can attach, refer to the ListPersonalNumbersOfUser API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NumberList { get; set; }
 
         /// <summary>
+        /// <para>Agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

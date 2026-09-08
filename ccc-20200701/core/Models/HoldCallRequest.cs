@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class HoldCallRequest : TeaModel {
         /// <summary>
+        /// <para>Channel ID to be held.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>A unique ID provided by the agent endpoint to represent an agent workbench. An agent can have multiple workbenches of different types, such as browser, iOS, or Android, but only one can be active at a time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACC-YUNBS-1.0.10-****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Call job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +52,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>Name of the hold music. This parameter is optional and defaults to empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Music")]
         [Validation(Required=false)]
         public string Music { get; set; }
 
         /// <summary>
+        /// <para>Agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>

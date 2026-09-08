@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListOutboundNumbersOfUserRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>A JSON-formatted list of skill group IDs. If specified, the operation returns outbound numbers for the specified skill groups. If omitted, it returns outbound numbers for all skill groups associated with the agent. Note: The agent must be a member of the specified skill groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;skillgroup1@ccc-test&quot;,&quot;skillgroup2@ccc-test&quot;]</para>
         /// </summary>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupIdList { get; set; }
 
         /// <summary>
+        /// <para>The agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>

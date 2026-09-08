@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListCallSummariesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>List of call IDs.</para>
+        /// </summary>
         [NameInMap("ContactIdList")]
         [Validation(Required=false)]
         public string ContactIdListShrink { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

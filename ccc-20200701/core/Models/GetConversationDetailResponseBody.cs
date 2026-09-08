@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetConversationDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,15 +29,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>List of conversations.</para>
+        /// </summary>
         [NameInMap("Phrases")]
         [Validation(Required=false)]
         public List<GetConversationDetailResponseBodyPhrases> Phrases { get; set; }
         public class GetConversationDetailResponseBodyPhrases : TeaModel {
             /// <summary>
+            /// <para>The offset of the sentence start time relative to the session start time, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>240</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? Begin { get; set; }
 
             /// <summary>
+            /// <para>The offset of the sentence end time relative to the session start time, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1280</para>
             /// </summary>
@@ -49,11 +66,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public int? End { get; set; }
 
+            /// <summary>
+            /// <para>Is finished.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("Finished")]
             [Validation(Required=false)]
             public bool? Finished { get; set; }
 
             /// <summary>
+            /// <para>The ARN of the role. The system uses this identifier internally to identify the role. This parameter does not require management.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>agent@ccc-test</para>
             /// </summary>
@@ -61,10 +86,22 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Identity { get; set; }
 
+            /// <summary>
+            /// <para>Role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>客服</para>
+            /// </summary>
             [NameInMap("Role")]
             [Validation(Required=false)]
             public string Role { get; set; }
 
+            /// <summary>
+            /// <para>Conversation text content.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>欢迎致电云联络中心</para>
+            /// </summary>
             [NameInMap("Words")]
             [Validation(Required=false)]
             public string Words { get; set; }
@@ -72,6 +109,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7E407F9B-A278-52A0-B193-3EE5471D7A87</para>
         /// </summary>

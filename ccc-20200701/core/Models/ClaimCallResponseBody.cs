@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ClaimCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,19 +19,30 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ClaimCallResponseBodyData Data { get; set; }
         public class ClaimCallResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The call context.</para>
+            /// </summary>
             [NameInMap("CallContext")]
             [Validation(Required=false)]
             public ClaimCallResponseBodyDataCallContext CallContext { get; set; }
             public class ClaimCallResponseBodyDataCallContext : TeaModel {
+                /// <summary>
+                /// <para>The channel contexts.</para>
+                /// </summary>
                 [NameInMap("ChannelContexts")]
                 [Validation(Required=false)]
                 public List<ClaimCallResponseBodyDataCallContextChannelContexts> ChannelContexts { get; set; }
                 public class ClaimCallResponseBodyDataCallContextChannelContexts : TeaModel {
                     /// <summary>
+                    /// <para>The call type of the channel.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>OUTBOUND</para>
                     /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string CallType { get; set; }
 
                     /// <summary>
+                    /// <para>The channel ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ch:user:1390501****-&gt;8032****:1609138902226:job-653821410368****</para>
                     /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string ChannelId { get; set; }
 
                     /// <summary>
+                    /// <para>The state of the channel.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ANSWERED</para>
                     /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string ChannelState { get; set; }
 
                     /// <summary>
+                    /// <para>The channel variables.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>a=b;c=d;</para>
                     /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string ChannelVariables { get; set; }
 
                     /// <summary>
+                    /// <para>The destination of the channel.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1390501****</para>
                     /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Destination { get; set; }
 
                     /// <summary>
+                    /// <para>The call ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>job-6573574060089****</para>
                     /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string JobId { get; set; }
 
                     /// <summary>
+                    /// <para>The originator of the channel.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0830019****</para>
                     /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string Originator { get; set; }
 
                     /// <summary>
+                    /// <para>The party who initiated the channel release.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1390501****</para>
                     /// </summary>
@@ -93,11 +120,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     [Validation(Required=false)]
                     public string ReleaseInitiator { get; set; }
 
+                    /// <summary>
+                    /// <para>The reason why the channel was released. This is a SIP response code. For more information, see the SIP protocol specification.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>无</para>
+                    /// </summary>
                     [NameInMap("ReleaseReason")]
                     [Validation(Required=false)]
                     public string ReleaseReason { get; set; }
 
                     /// <summary>
+                    /// <para>The Unix timestamp that indicates the last time the channel state changed. Unit: milliseconds.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1609225718295</para>
                     /// </summary>
@@ -106,6 +141,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public long? Timestamp { get; set; }
 
                     /// <summary>
+                    /// <para>The agent extension number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>8059****</para>
                     /// </summary>
@@ -114,6 +151,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                     public string UserExtension { get; set; }
 
                     /// <summary>
+                    /// <para>The agent ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>invoker@ccc-test</para>
                     /// </summary>
@@ -124,6 +163,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -132,6 +173,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>job-6538214103685****</para>
                 /// </summary>
@@ -142,6 +185,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
+            /// <para>The context ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456</para>
             /// </summary>
@@ -149,11 +194,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? ContextId { get; set; }
 
+            /// <summary>
+            /// <para>The agent context.</para>
+            /// </summary>
             [NameInMap("UserContext")]
             [Validation(Required=false)]
             public ClaimCallResponseBodyDataUserContext UserContext { get; set; }
             public class ClaimCallResponseBodyDataUserContext : TeaModel {
                 /// <summary>
+                /// <para>The break code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Customized</para>
                 /// </summary>
@@ -162,6 +212,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string BreakCode { get; set; }
 
                 /// <summary>
+                /// <para>The device ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>device-xxxx</para>
                 /// </summary>
@@ -170,6 +222,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string DeviceId { get; set; }
 
                 /// <summary>
+                /// <para>The extension number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0830019****</para>
                 /// </summary>
@@ -178,6 +232,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string Extension { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -186,6 +242,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The call ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>job-6573574060089****</para>
                 /// </summary>
@@ -194,6 +252,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string JobId { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether this is an outbound scenario.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -201,11 +261,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public bool? OutboundScenario { get; set; }
 
+                /// <summary>
+                /// <para>The list of signed-in skill group IDs.</para>
+                /// </summary>
                 [NameInMap("SignedSkillGroupIdList")]
                 [Validation(Required=false)]
                 public List<string> SignedSkillGroupIdList { get; set; }
 
                 /// <summary>
+                /// <para>The agent ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user@ccc-test</para>
                 /// </summary>
@@ -214,6 +279,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>The agent state.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Dialing</para>
                 /// </summary>
@@ -222,6 +289,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string UserState { get; set; }
 
                 /// <summary>
+                /// <para>The work mode.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ON_SITE</para>
                 /// </summary>
@@ -234,6 +303,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -241,15 +312,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>93CDC17E-3E8A-48F2-99E5-FA2E238DE8B4</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddCasesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The predictive outbound call activity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string CampaignId { get; set; }
 
+        /// <summary>
+        /// <para>The list of outbound call cases.</para>
+        /// </summary>
         [NameInMap("CaseList")]
         [Validation(Required=false)]
         public string CaseListShrink { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

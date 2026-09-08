@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DeleteDocumentsRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of document IDs.</para>
+        /// </summary>
         [NameInMap("DocumentIds")]
         [Validation(Required=false)]
         public List<string> DocumentIds { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0630E5DF-CEB0-445B-8626-D5C7481181C3</para>
         /// </summary>
@@ -32,7 +38,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>schema id</para>
+        /// <para>The schema ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

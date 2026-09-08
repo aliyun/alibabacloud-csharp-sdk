@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetTicketTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4ca2e2-c8d19b82c-d7ce393ac8197d3ab</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>Template version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1703517780627</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
+        /// <para>Agent extension number. This parameter is optional. You must specify either UserId or Extension.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8003****</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Extension { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Agent ID. This parameter is optional. You must specify either UserId or Extension.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>

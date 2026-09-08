@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class TakeBreakResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TakeBreakResponseBodyData Data { get; set; }
         public class TakeBreakResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after the agent is published but before becoming idle), RingingTimeout (break caused by ringing timeout), and RejectCall (break caused by the agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lunchtime</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string BreakCode { get; set; }
 
             /// <summary>
+            /// <para>Device ID, which is the identity ID of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACC-YUNBS-1.0.10-****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>The agent\&quot;s extension number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8001****</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Extension { get; set; }
 
             /// <summary>
+            /// <para>The time when the last heartbeat from the agent was received, formatted as a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1609249563836</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public long? Heartbeat { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -61,11 +76,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Call ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
+            /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>The agent\&quot;s personal phone number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1390000****</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Mobile { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the agent is in outbound-only mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? OutboundScenario { get; set; }
 
             /// <summary>
+            /// <para>The UNIX timestamp (in milliseconds) indicating when the agent was most recently reserved. Being reserved means an incoming call will be assigned to the agent shortly.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1609234221864</para>
             /// </summary>
@@ -89,11 +116,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public long? Reserved { get; set; }
 
+            /// <summary>
+            /// <para>List of skill group IDs that the agent has signed into.</para>
+            /// </summary>
             [NameInMap("SignedSkillGroupIdList")]
             [Validation(Required=false)]
             public List<string> SignedSkillGroupIdList { get; set; }
 
             /// <summary>
+            /// <para>Agent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>agent@ccc-test</para>
             /// </summary>
@@ -102,6 +134,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>Agent status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>BREAK</para>
             /// </summary>
@@ -110,6 +144,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string UserState { get; set; }
 
             /// <summary>
+            /// <para>Work mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ON_SITE</para>
             /// </summary>
@@ -120,6 +156,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -127,15 +165,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>List of response parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B59382D2-5755-4C6D-861F-FA2AAD8F89F7</para>
         /// </summary>

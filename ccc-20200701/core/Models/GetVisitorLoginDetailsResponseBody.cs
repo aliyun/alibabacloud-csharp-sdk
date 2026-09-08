@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetVisitorLoginDetailsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetVisitorLoginDetailsResponseBodyData Data { get; set; }
         public class GetVisitorLoginDetailsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Chat session application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7pjxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatAppId { get; set; }
 
             /// <summary>
+            /// <para>Chat session application key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>955e4bd7xxxxxxxxxxxxxd7898ba9fa0d0</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatAppKey { get; set; }
 
             /// <summary>
+            /// <para>Chat device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4c51c9116c36537cb850dc1081d745df</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatDeviceId { get; set; }
 
             /// <summary>
+            /// <para>Chat session login token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;accessToken&quot;:&quot;oauth_cloud_key:+4oJXUAFSWxGD2YuRW4V/oUN0/8qJGNc0I<em><b><b><b><b>n1E3DOr3Q3lX00ZnTpyqRi8Y6hYoLYA7n2ZkWuv485hVtXeSgnIQkKxXPbMgwoLxWaK//lI5Dn/mb4YuDifigv+ZyFzc+07vxm9ZFu/NjA==&quot;,&quot;accessTokenExpiredTime&quot;:86400000,&quot;refreshToken&quot;:&quot;oauth_cloud_key:/U+8UueDmpeUszhXC+SWow4pNLZp2C</b></b></b></b></em>**U/377BNXF+Mjo1lFgDk6GtEjNNoJpapX2mHH8GcRke2+yKQs/w4gAN9xSMn543Ciung+93pXV6IpQGbEVlu&quot;}</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatLoginToken { get; set; }
 
             /// <summary>
+            /// <para>Chat session server address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wss://wss.im.dingtalk.cn</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatServerUrl { get; set; }
 
             /// <summary>
+            /// <para>Visitor\&quot;s identity ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dac9c001****a15684ea91a81317</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -79,15 +98,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Parameter information.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19D09CCC-F298-4124-849A-AFA217819011</para>
         /// </summary>

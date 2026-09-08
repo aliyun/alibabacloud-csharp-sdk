@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListUnassignedNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>Page number for paging, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Performs Fuzzy Matching based on the number. This parameter is optional and defaults to empty. An empty value indicates no filtering.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0833</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetUploadAudioDataParamsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetUploadAudioDataParamsResponseBodyData Data { get; set; }
         public class GetUploadAudioDataParamsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Parameters related to offline quality inspection audio files.</para>
+            /// </summary>
             [NameInMap("ParamsStr")]
             [Validation(Required=false)]
             public string ParamsStr { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -35,11 +45,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID, which can be used for LogSearch of the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03C67DAD-EB26-41D8-949D-9B0C470FB716</para>
         /// </summary>

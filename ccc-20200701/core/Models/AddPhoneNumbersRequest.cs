@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddPhoneNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the IVR contact flow to attach. This parameter is valid only when the number usage includes inbound calls. It is optional and defaults to empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dDMD_0mif4hv</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactFlowId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Number group ID. You can view number grouping information in the Cloud Contact Center console. This parameter is optional and defaults to empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2cb77c29-5f60-4b90-b21e-9d2ba9833f14</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NumberGroupId { get; set; }
 
         /// <summary>
+        /// <para>List of phone numbers to add.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;0101234****&quot;, &quot;0105678****&quot;]</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NumberList { get; set; }
 
         /// <summary>
+        /// <para>Usage of the phone number. Note: If the provided number is a 400 number, the usage must be set to Inbound.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
     public class ListLegacyAppraiseLogsRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1620273600000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ccc-test</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -41,9 +32,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -51,9 +39,6 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1604638129000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SwitchToConferenceRequest : TeaModel {
         /// <summary>
+        /// <para>Invalid field. You can enter any value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>device</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Agent ID. If not specified, the agent mapped to the current Resource Access Management (RAM) user is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>

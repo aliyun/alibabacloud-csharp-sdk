@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ChangeWorkModeResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ChangeWorkModeResponseBodyData Data { get; set; }
         public class ChangeWorkModeResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Break status code, which can be either System-defined or Custom-defined. System-defined break codes include: Warm-up (temporary break state after agent is published and before becoming idle), RingingTimeout (break caused by agent ringing timeout), and RejectCall (break caused by agent rejecting a call). There are no restrictions on Custom-defined status codes; customers can define them according to their business needs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Warm-up</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string BreakCode { get; set; }
 
             /// <summary>
+            /// <para>Device ID, which is the identity of a browser-based Web Real-Time Communication (WebRTC) softphone or a physical phone device. Only one type of device can be registered at a time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACC-YUNBS-1.0.10-****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>Agent extension number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8001****</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Extension { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -53,11 +66,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Call ID. If this field has a value, the agent is currently in a call.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
+            /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the agent has enabled outbound-only mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -65,11 +86,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public bool? OutboundScenario { get; set; }
 
+            /// <summary>
+            /// <para>List of skill group IDs that the agent has signed into.</para>
+            /// </summary>
             [NameInMap("SignedSkillGroupIdList")]
             [Validation(Required=false)]
             public List<string> SignedSkillGroupIdList { get; set; }
 
             /// <summary>
+            /// <para>Agent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>agent@ccc-test</para>
             /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>Agent status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OFFLINE</para>
             /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string UserState { get; set; }
 
             /// <summary>
+            /// <para>Work mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ON_SITE</para>
             /// </summary>
@@ -96,6 +126,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -103,15 +135,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Response parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>87731ED1-6224-48A5-99E3-6237FF9B1C00</para>
         /// </summary>

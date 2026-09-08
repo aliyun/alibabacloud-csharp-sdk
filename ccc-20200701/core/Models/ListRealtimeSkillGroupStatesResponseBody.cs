@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListRealtimeSkillGroupStatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,22 +19,43 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListRealtimeSkillGroupStatesResponseBodyData Data { get; set; }
         public class ListRealtimeSkillGroupStatesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of real-time skill group status data.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListRealtimeSkillGroupStatesResponseBodyDataList> List { get; set; }
             public class ListRealtimeSkillGroupStatesResponseBodyDataList : TeaModel {
+                /// <summary>
+                /// <para>Break statistics.</para>
+                /// </summary>
                 [NameInMap("BreakCodeDetailList")]
                 [Validation(Required=false)]
                 public List<ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList> BreakCodeDetailList { get; set; }
                 public class ListRealtimeSkillGroupStatesResponseBodyDataListBreakCodeDetailList : TeaModel {
+                    /// <summary>
+                    /// <para>Break status code</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>客户自定义参数，比如午餐、会议等</para>
+                    /// </summary>
                     [NameInMap("BreakCode")]
                     [Validation(Required=false)]
                     public string BreakCode { get; set; }
 
+                    /// <summary>
+                    /// <para>The number of times the break status occurred</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public long? Count { get; set; }
@@ -40,6 +63,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 }
 
                 /// <summary>
+                /// <para>Number of agents currently on break.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -48,6 +73,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? BreakingAgents { get; set; }
 
                 /// <summary>
+                /// <para>Instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -56,6 +83,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Number of agents currently logged in.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -64,6 +93,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? LoggedInAgents { get; set; }
 
                 /// <summary>
+                /// <para>Current maximum queue waiting time, in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -72,6 +103,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? LongestWaitingTime { get; set; }
 
                 /// <summary>
+                /// <para>Number of agents in outbound-only mode and in an idle status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -80,6 +113,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? OutboundScenarioReadyAgents { get; set; }
 
                 /// <summary>
+                /// <para>Number of agents currently idle.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -88,6 +123,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? ReadyAgents { get; set; }
 
                 /// <summary>
+                /// <para>Skill group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup@ccc-test</para>
                 /// </summary>
@@ -96,6 +133,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string SkillGroupId { get; set; }
 
                 /// <summary>
+                /// <para>Skill group name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>skillgroup</para>
                 /// </summary>
@@ -104,6 +143,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string SkillGroupName { get; set; }
 
                 /// <summary>
+                /// <para>Number of agents currently on a call.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -111,11 +152,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public long? TalkingAgents { get; set; }
 
+                /// <summary>
+                /// <para>Total number of agents.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
+                /// </summary>
                 [NameInMap("TotalAgents")]
                 [Validation(Required=false)]
                 public long? TotalAgents { get; set; }
 
                 /// <summary>
+                /// <para>Number of calls currently in the queue.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -124,6 +173,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public long? WaitingCalls { get; set; }
 
                 /// <summary>
+                /// <para>Number of agents currently in post-processing.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -134,6 +185,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
+            /// <para>Page number, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -142,6 +195,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Page size, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -150,6 +205,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -160,6 +217,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -167,11 +226,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26A34338-5CD9-4C95-A7A6-5BDCE76C6B94</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class UpdateSchemaPropertyRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Field</para>
+        /// </summary>
         [NameInMap("Property")]
         [Validation(Required=false)]
         public UpdateSchemaPropertyRequestProperty Property { get; set; }
         public class UpdateSchemaPropertyRequestProperty : TeaModel {
             /// <summary>
+            /// <para>Specifies whether the property is an array.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? Array { get; set; }
 
             /// <summary>
+            /// <para>Extension attributes</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;instanceId\&quot;:\&quot;4cc3f160-ca64-49ff-bc70-390a044a4e83\&quot;,\&quot;appId\&quot;:\&quot;1684145288664\&quot;,\&quot;commodityCode\&quot;:\&quot;dide_pre\&quot;,\&quot;dide_pre_set\&quot;:\&quot;version_ent\&quot;}</para>
             /// </summary>
@@ -40,6 +48,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Attributes { get; set; }
 
             /// <summary>
+            /// <para>Data type</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DataType { get; set; }
 
             /// <summary>
+            /// <para>Description.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the property is disabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -67,11 +80,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
+            /// <summary>
+            /// <para>Display name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>姓名</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Display order</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -80,6 +101,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? DisplayOrder { get; set; }
 
             /// <summary>
+            /// <para>Editor type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>textbox</para>
             /// </summary>
@@ -88,6 +111,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string EditorType { get; set; }
 
             /// <summary>
+            /// <para>Maximum length</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -96,6 +121,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? MaxLength { get; set; }
 
             /// <summary>
+            /// <para>Maximum value</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -104,6 +131,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public double? Maximum { get; set; }
 
             /// <summary>
+            /// <para>Minimum length</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -112,6 +141,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? MinLength { get; set; }
 
             /// <summary>
+            /// <para>Minimum value</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10800</para>
             /// </summary>
@@ -120,6 +151,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public double? Minimum { get; set; }
 
             /// <summary>
+            /// <para>Name</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -130,6 +162,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Regular expression validation rule</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(.*)</para>
             /// </summary>
@@ -137,11 +171,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Pattern { get; set; }
 
+            /// <summary>
+            /// <para>Regular expression validation error message</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>不是有效的email地址</para>
+            /// </summary>
             [NameInMap("PatternErrorMessage")]
             [Validation(Required=false)]
             public string PatternErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Read-only</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -150,6 +192,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? ReadOnly { get; set; }
 
             /// <summary>
+            /// <para>Required</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -160,6 +204,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BC976D32-AC4C-4E0F-8AA9-F4BC6C4E2B3E</para>
         /// </summary>

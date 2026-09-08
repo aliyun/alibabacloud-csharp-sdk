@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddTicketTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The assignee for the signature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Assignee { get; set; }
 
         /// <summary>
+        /// <para>Comments.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请assignee处理。</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +43,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The position to add the signature.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Before: Before the current handler.</para>
+        /// </description></item>
+        /// <item><description><para>After: After the current handler.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>After</para>
         /// </summary>
@@ -45,6 +59,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Position { get; set; }
 
         /// <summary>
+        /// <para>The ticket flow node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,6 +70,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListCampaignTrendingReportRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the predictive outbound calling Activity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CampaignId { get; set; }
 
         /// <summary>
+        /// <para>The end time. This parameter is optional. The default value is the end time of the predictive outbound dialing activity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-14 20:59:59</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Start Time. This parameter is optional. The default value is the Start Time of the predictive outbound calling Activity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-14 00:00:00</para>
         /// </summary>

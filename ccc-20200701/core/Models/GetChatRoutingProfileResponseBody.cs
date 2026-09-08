@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetChatRoutingProfileResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetChatRoutingProfileResponseBodyData Data { get; set; }
         public class GetChatRoutingProfileResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Agent session concurrent configuration.</para>
+            /// <list type="bullet">
+            /// <item><description><para>AllowExceedingLimitWhenTransferring: Allow exceeding the limit when transferring. When transferring sessions to other agents, exceeding the recipient\&quot;s limit is allowed, but the total cannot exceed 30.</para>
+            /// </description></item>
+            /// <item><description><para>AllowExceedingLimitWhenClaiming: Allow exceeding the limit when claiming. When an agent actively claims sessions from the queue, exceeding the limit is allowed, but the total cannot exceed 30.</para>
+            /// </description></item>
+            /// <item><description><para>ConcurrencyLimit: The number of network business sessions an agent can process simultaneously.</para>
+            /// </description></item>
+            /// <item><description><para>Enabled: Enable this configuration.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;AllowExceedingLimitWhenTransferring&quot;: false,
@@ -35,6 +52,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AgentConcurrencySettings { get; set; }
 
             /// <summary>
+            /// <para>Session configuration.</para>
+            /// <list type="bullet">
+            /// <item><description>IdleChatTimeoutSeconds: Automatic session end time. If no customer response is received within a specific period, the system ends the session. Unit: seconds.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;IdleChatTimeoutSeconds&quot;:300}</para>
             /// </summary>
@@ -43,6 +65,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ChatSettings { get; set; }
 
             /// <summary>
+            /// <para>Agent session allocation configuration.</para>
+            /// <list type="bullet">
+            /// <item><description><para>AgentRingTimeoutSeconds: Agent processing timeout limit.</para>
+            /// </description></item>
+            /// <item><description><para>MaxNumberOfConversationsAgentCanMiss: The maximum number of consecutive unanswered sessions an agent can miss.</para>
+            /// </description></item>
+            /// <item><description><para>PostAgentMissingConversionsAction: After an agent misses more than the set number of consecutive responses, the system sets the agent\&quot;s status, such as Break, Invisible, or Nothing (remain unchanged).</para>
+            /// </description></item>
+            /// <item><description><para>Enabled: Enable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;AgentRingTimeoutSeconds&quot;: 30,
@@ -56,6 +90,14 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DistributionSettings { get; set; }
 
             /// <summary>
+            /// <para>Call distribution type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Automatic distribution (Automatic).</para>
+            /// </description></item>
+            /// <item><description><para>Manual distribution (Manual).</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Automatic</para>
             /// </summary>
@@ -66,6 +108,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -73,11 +117,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30C7D235-DDCF-4C7F-A462-5E2598252C2B</para>
         /// </summary>

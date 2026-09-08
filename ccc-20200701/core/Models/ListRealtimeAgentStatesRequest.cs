@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListRealtimeAgentStatesRequest : TeaModel {
         /// <summary>
+        /// <para>List of agent IDs, formatted as a JSON array string. The array can contain up to 20 elements. This parameter is optional and defaults to empty, which matches all agents under the current instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;agent1@ccc-test&quot;, &quot;agent2@ccc-test&quot;]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AgentIdList { get; set; }
 
         /// <summary>
+        /// <para>Perform fuzzy matching by agent name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent</para>
         /// </summary>
@@ -26,14 +30,17 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>Filters by a list of call types. The value is a string in JSON array format, where each array element is a call type. This parameter is optional and defaults to empty, which matches all call types.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[&quot;INBOUND&quot;, &quot;OUTBOUND&quot;]</para>
+        /// <para>[&quot;Inbound&quot;, &quot;Outbound&quot;]</para>
         /// </summary>
         [NameInMap("CallTypeList")]
         [Validation(Required=false)]
         public string CallTypeList { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,11 +50,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Media type. The default is Audio. Other options include Chat (text), Video, and ALL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AUDIO</para>
+        /// </summary>
         [NameInMap("MediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
         /// <summary>
+        /// <para>Filters agents who are in outbound-only mode. This parameter is optional and defaults to empty, which means no filtering by outbound-only mode is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -56,6 +71,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? OutboundScenario { get; set; }
 
         /// <summary>
+        /// <para>Page number, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +82,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +93,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Performs fuzzy filtering based on the full or partial agent display name, agent ID, or agent extension number. This parameter is optional and defaults to empty, which means no filtering is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent</para>
         /// </summary>
@@ -84,6 +103,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Filter by skill group ID. This parameter is optional and defaults to empty, which means no filtering is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>skillgroup@ccc-test</para>
         /// </summary>
@@ -92,6 +113,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupId { get; set; }
 
         /// <summary>
+        /// <para>Filters by a list of statuses. This parameter is optional and defaults to empty, which matches all statuses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;ACW&quot;, &quot;Dialing&quot;]</para>
         /// </summary>
@@ -100,6 +123,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string StateList { get; set; }
 
         /// <summary>
+        /// <para>Filter by work mode list. This parameter is optional and defaults to empty, which means all work modes are matched.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;OFFICE_PHONE&quot;,&quot;ON_SITE&quot;]</para>
         /// </summary>

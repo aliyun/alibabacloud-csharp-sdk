@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ReleaseChatRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ccc-test</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Channel token for network services.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3bjEn0YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jg************Hwej7WgWrmA=</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>User ID. Visitor ID or agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>edbcf95a-ef9f-4296-a0a6-985ac9e36db3</para>
         /// </summary>
@@ -44,6 +51,13 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>User type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>CUSTOMER: visitor</para>
+        /// </description></item>
+        /// <item><description><para>AGENT: agent</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

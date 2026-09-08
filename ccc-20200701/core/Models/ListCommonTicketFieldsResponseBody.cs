@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListCommonTicketFieldsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCommonTicketFieldsResponseBodyData Data { get; set; }
         public class ListCommonTicketFieldsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1703517780627</para>
             /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>Schema ID。</para>
+            /// <para>Schema ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ticketing</para>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -47,11 +56,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>List of fields.</para>
+            /// </summary>
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public Dictionary<string, DataPropertiesValue> Properties { get; set; }
 
             /// <summary>
+            /// <para>Last modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1716211430928</para>
             /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -69,15 +85,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>List of error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30C7D235-DDCF-4C7F-A462-5E2598252C2B</para>
         /// </summary>

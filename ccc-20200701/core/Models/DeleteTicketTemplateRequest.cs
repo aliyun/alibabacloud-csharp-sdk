@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DeleteTicketTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ef1e71e9-ae9d-487c-96ad-9181d85cf802</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ticket template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>43c2671b-8939-4223-</b>*-6bd187905cc8_1717664210492</para>
         /// </summary>

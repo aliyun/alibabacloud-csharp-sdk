@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ReadyForServiceRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID. This parameter is meaningless and can be filled with any value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>device</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enter outbound-only mode after being published. This parameter is optional and defaults to false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? OutboundScenario { get; set; }
 
         /// <summary>
+        /// <para>Agent ID. If not specified, it defaults to the agent mapped to the current RAM account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user-test@ccc-test</para>
         /// </summary>

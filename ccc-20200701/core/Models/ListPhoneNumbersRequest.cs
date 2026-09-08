@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListPhoneNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the number is active. This parameter is optional. The default value is empty, which means no filtering is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Active { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The paging ordinal number, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, ranging from 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Performs fuzzy matching based on the number. This parameter is optional and defaults to empty. An empty value indicates no filtering.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0833</para>
         /// </summary>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SearchPattern { get; set; }
 
         /// <summary>
+        /// <para>Usage of the number. This parameter is optional. The default value is empty, which means no filtering is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Bidirection</para>
         /// </summary>

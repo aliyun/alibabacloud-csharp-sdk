@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ImportDocumentsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The key of the OSS file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string OssFileKey { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7BEEA660-A45A-45E3-98CC-AFC65E715C23</para>
         /// </summary>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>schema id</para>
+        /// <para>The schema ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

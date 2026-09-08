@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateTicketRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-38860977107324****</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string ContactId { get; set; }
 
+        /// <summary>
+        /// <para>Ticket field information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;productName&quot;:&quot;玩具1&quot;}</para>
+        /// </summary>
         [NameInMap("Context")]
         [Validation(Required=false)]
         public string Context { get; set; }
 
         /// <summary>
+        /// <para>Customer ID, the customer ID in Cloud Contact Center customer profiles.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>51e155ce-3747-4f21-b402-13c69597b920</para>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CustomerId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Ticket source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CHAT</para>
         /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>Ticket template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e9e4c76c-948d-4a6e-9ce2-9da0f5967a73</para>
         /// </summary>
@@ -55,6 +70,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        /// <summary>
+        /// <para>Ticket title.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>售后工单。</para>
+        /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }

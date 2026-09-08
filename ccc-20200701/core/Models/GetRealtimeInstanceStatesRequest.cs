@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetRealtimeInstanceStatesRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Media type. The default is audio (AUDIO).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AUDIO</para>
+        /// </summary>
         [NameInMap("MediaType")]
         [Validation(Required=false)]
         public string MediaType { get; set; }

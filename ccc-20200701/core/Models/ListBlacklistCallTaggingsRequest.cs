@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListBlacklistCallTaggingsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Contact Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of numbers to query for their blacklist tag status. The jobId field is required if a number is encrypted (contains \<em>\</em>\*).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

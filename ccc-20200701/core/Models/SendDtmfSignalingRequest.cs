@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SendDtmfSignalingRequest : TeaModel {
         /// <summary>
+        /// <para>The channel ID of the call to which DTMF tones are to be sent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>Device ID. This parameter is meaningless and can be filled with any value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>device</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>DTMF key information, which refers to the keys on a dial pad, including 0–9, \*, and #.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Dtmf { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The agent ID that sends DTMF.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>

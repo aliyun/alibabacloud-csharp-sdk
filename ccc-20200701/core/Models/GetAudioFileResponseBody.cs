@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetAudioFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Audio file data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAudioFileResponseBodyData Data { get; set; }
         public class GetAudioFileResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Audio file name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-file.wav</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AudioFileName { get; set; }
 
             /// <summary>
+            /// <para>Audio resource ID, the UUID of the audio file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>c1a06b46-302a-4c6e-928b-a43c0df485cf</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AudioResourceId { get; set; }
 
             /// <summary>
+            /// <para>Creation Time of the audio resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -53,11 +66,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Display name of the audio.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>欢迎语</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Key of the audio resource file in OSS.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test/test-file.wav</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string OssFileKey { get; set; }
 
             /// <summary>
+            /// <para>Last Updated At of the audio resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-07-14 10:48:43.0</para>
             /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -83,11 +108,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEE26562-D921-5CB2-AE49-E4C45A42D432</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetNumberLocationResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNumberLocationResponseBodyData Data { get; set; }
         public class GetNumberLocationResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>City of the number\&quot;s registration location.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>北京</para>
+            /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
+            /// <para>Number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1312121****</para>
             /// </summary>
@@ -33,6 +46,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Number { get; set; }
 
+            /// <summary>
+            /// <para>Province of the number\&quot;s registration location.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>北京</para>
+            /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
@@ -40,6 +59,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -47,11 +68,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>584AA2E3-9AC4-561B-BC8D-C74BA11B1387</para>
         /// </summary>

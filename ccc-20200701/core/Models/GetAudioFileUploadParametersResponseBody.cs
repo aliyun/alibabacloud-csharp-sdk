@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetAudioFileUploadParametersResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAudioFileUploadParametersResponseBodyData Data { get; set; }
         public class GetAudioFileUploadParametersResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>AccessKey ID used for signing.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
+            /// <para>Expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1647313420</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>Key of the OSS file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test/test-file.wav</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string FilePath { get; set; }
 
             /// <summary>
+            /// <para>Endpoint domain name of OSS.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com">https://ccc-v2-online.oss-cn-shanghai.aliyuncs.com</a></para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Host { get; set; }
 
             /// <summary>
+            /// <para>Signature policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eyJleHBpcmF0aW9uIjoiMjAyMi0wNi0yOVQwMDoyOTowMC42NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiYXVkaW8vMTU3NzI0NzExNTQ5MDQwMS9seS1vbmxpbmUvMjAyMjA2MjkwNzI5MDAvIl1d****</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Policy { get; set; }
 
             /// <summary>
+            /// <para>Signature information of the temporary credential for file upload, used to authenticate the upload request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HIyClras8IcVlbTV7RIJWJbU****</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -79,11 +98,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C81FD1A5-4B99-470A-A527-D80150228784</para>
         /// </summary>

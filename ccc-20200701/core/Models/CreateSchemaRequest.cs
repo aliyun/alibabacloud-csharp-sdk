@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateSchemaRequest : TeaModel {
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,7 +22,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>schema id</para>
+        /// <para>The schema ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>profile</para>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +42,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of fields.</para>
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public List<CreateSchemaRequestProperties> Properties { get; set; }
         public class CreateSchemaRequestProperties : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the field is an array.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? Array { get; set; }
 
             /// <summary>
+            /// <para>The extended properties.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Clusters\&quot;: {\&quot;Description\&quot;: \&quot;The list of clusters.\&quot;}, \&quot;ClusterIds\&quot;: {\&quot;Description\&quot;: \&quot;The list of cluster IDs.\&quot;}}</para>
             /// </summary>
@@ -60,6 +70,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Attributes { get; set; }
 
             /// <summary>
+            /// <para>The data type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -70,6 +81,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string DataType { get; set; }
 
             /// <summary>
+            /// <para>The description of the version.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -80,6 +93,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the field is disabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -87,11 +102,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public bool? Disabled { get; set; }
 
+            /// <summary>
+            /// <para>The display name for agents.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>显示名称</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The display order in the list.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -100,6 +123,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? DisplayOrder { get; set; }
 
             /// <summary>
+            /// <para>The editor type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>textbox</para>
             /// </summary>
@@ -108,6 +133,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string EditorType { get; set; }
 
             /// <summary>
+            /// <para>The maximum length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -116,6 +143,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? MaxLength { get; set; }
 
             /// <summary>
+            /// <para>The maximum value of the number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -124,6 +153,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public double? Maximum { get; set; }
 
             /// <summary>
+            /// <para>The minimum length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -132,6 +163,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? MinLength { get; set; }
 
             /// <summary>
+            /// <para>The minimum value of the number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -140,6 +173,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public double? Minimum { get; set; }
 
             /// <summary>
+            /// <para>The name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -150,6 +184,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The regular expression that is used for validation.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -159,11 +195,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Pattern { get; set; }
 
+            /// <summary>
+            /// <para>The error message that is returned when the regular expression fails to match.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>错误的格式</para>
+            /// </summary>
             [NameInMap("PatternErrorMessage")]
             [Validation(Required=false)]
             public string PatternErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the field is read-only.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -172,6 +216,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public bool? ReadOnly { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the field is required.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -182,6 +228,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7BEEA660-A45A-45E3-98CC-AFC65E715C23</para>
         /// </summary>

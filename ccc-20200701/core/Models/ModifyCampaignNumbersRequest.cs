@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifyCampaignNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>The campaign ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CampaignId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the number collection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3971876649-<b><b>-</b></b>-098763a382a09</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Cloud Call Center (CCC) instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +41,9 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of numbers.</para>
+        /// </summary>
         [NameInMap("NumberList")]
         [Validation(Required=false)]
         public List<string> NumberList { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListFlashSmsTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>Flash SMS configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>71b396fa-1*********-70b7c0</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Flash SMS provider ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Uincall</para>
         /// </summary>

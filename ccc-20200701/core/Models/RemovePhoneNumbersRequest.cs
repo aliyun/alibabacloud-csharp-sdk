@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RemovePhoneNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to force the removal. If a number is associated with a skill group, contact flow, or agent, you must set this parameter to <c>true</c> to remove it. The default value is <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of numbers to remove.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

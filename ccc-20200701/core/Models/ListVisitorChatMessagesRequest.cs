@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListVisitorChatMessagesRequest : TeaModel {
         /// <summary>
+        /// <para>Web business channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cf584733-<em><b>-</b></em>-9699-cb77aa3b7aa6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AccessChannelId { get; set; }
 
         /// <summary>
+        /// <para>Web business channel token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9XYGTGWtq2wXzVikKuip_zeVGl6O4VJ-l-<em>-</em>-JPofhap4P7fAevuE=</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AccessToken { get; set; }
 
         /// <summary>
+        /// <para>End time, in UNIX timestamp format. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1650316799000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Cloud Contact Center instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ccc-test</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Token for the next page. Do not include this parameter in your first request. The service returns it in the response. Include it in subsequent requests.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1737193352340::7463707254.EAUNIT</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -58,6 +70,11 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Sorting order. Default is descending.</para>
+        /// <para>Valid values:</para>
+        /// <para>ASC: ascending.</para>
+        /// <para>DESC: descending.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SortOrder { get; set; }
 
         /// <summary>
+        /// <para>Start time, in UNIX timestamp format. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1647325450000</para>
         /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>Visitor ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fcd020fe-****-1a272a174a7d</para>
         /// </summary>

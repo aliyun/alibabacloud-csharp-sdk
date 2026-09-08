@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RemoveSkillGroupsFromUserRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of skill group IDs to disassociate, formatted as a JSON array string, where each array element is a skill group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupIdList { get; set; }
 
         /// <summary>
+        /// <para>Agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RemoveDoNotCallNumbersRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>List of Do Not Call numbers to be deleted, formatted as a JSON array string. The array length must be between 1 and 300.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;1900000****&quot;,&quot;1312211****&quot;]</para>
         /// </summary>

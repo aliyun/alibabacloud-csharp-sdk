@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class DeleteContactFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the contact flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

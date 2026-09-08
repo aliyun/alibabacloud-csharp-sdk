@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListFeedbacksRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the CCC instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ccc-test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of task IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;20251216-8B9B7B02-16FE-54BE-942A-F59DE0656032&quot;]</para>
         /// </summary>

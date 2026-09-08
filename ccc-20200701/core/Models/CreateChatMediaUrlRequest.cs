@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateChatMediaUrlRequest : TeaModel {
         /// <summary>
+        /// <para>Cloud Contact Center instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>media id</para>
+        /// <para>Media ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string MimeType { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9F766284-F103-4298-8EC5-19F9F9BE5522</para>
         /// </summary>

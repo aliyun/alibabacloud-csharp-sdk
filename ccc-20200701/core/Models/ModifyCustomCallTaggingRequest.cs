@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifyCustomCallTaggingRequest : TeaModel {
         /// <summary>
+        /// <para>A list of number tag names. You must provide the complete list of number tags to be modified, and ensure that these number tags have already been created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;TagA&quot;,&quot;TagB&quot;]</para>
         /// </summary>
@@ -17,11 +19,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string CallTagNameList { get; set; }
 
+        /// <summary>
+        /// <para>The new description for the inbound number mark. This parameter is optional. The default value is empty, which indicates that the description will not be modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>王先生</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number associated with the inbound number mark. The system matches the inbound number mark to be modified based on this number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddBlacklistCallTaggingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Contact Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The call ID. If the phone number is encrypted and contains asterisks (\*), specify the JobId. This parameter is not required for unencrypted numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-6582589278232****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

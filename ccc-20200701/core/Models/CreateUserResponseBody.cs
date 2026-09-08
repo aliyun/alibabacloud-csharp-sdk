@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,19 +19,36 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateUserResponseBodyData Data { get; set; }
         public class CreateUserResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The URL of the agent\&quot;s profile picture.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="http://abc.com/sam.jpg">http://abc.com/sam.jpg</a></para>
+            /// </summary>
             [NameInMap("AvatarUrl")]
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
+            /// <summary>
+            /// <para>The display name of the agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>坐席小王</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:username@example.com">username@example.com</a></para>
             /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>The agent\&quot;s extension number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8032****</para>
             /// </summary>
@@ -46,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Extension { get; set; }
 
             /// <summary>
+            /// <para>The logon name of the agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>agent</para>
             /// </summary>
@@ -54,6 +77,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string LoginName { get; set; }
 
             /// <summary>
+            /// <para>The personal phone number of the agent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1382114****</para>
             /// </summary>
@@ -61,11 +86,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string Mobile { get; set; }
 
+            /// <summary>
+            /// <para>The agent\&quot;s nickname.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>老王。</para>
+            /// </summary>
             [NameInMap("Nickname")]
             [Validation(Required=false)]
             public string Nickname { get; set; }
 
             /// <summary>
+            /// <para>The agent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>agent@ccc-test</para>
             /// </summary>
@@ -74,6 +107,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The work mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ON_SITE</para>
             /// </summary>
@@ -84,6 +119,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -91,15 +128,26 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BA03159C-E808-4FF1-B27E-A61B6E888D7F</para>
         /// </summary>

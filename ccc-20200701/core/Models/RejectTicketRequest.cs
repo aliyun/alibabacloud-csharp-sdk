@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RejectTicketRequest : TeaModel {
+        /// <summary>
+        /// <para>The comment on the ticket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请补充信息。</para>
+        /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ticket ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f2c6722b-cd13-442d-bf10-22a07c70d6d5</para>
         /// </summary>

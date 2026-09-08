@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetSchemaRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03C67DAD-EB26-41D8-949D-9B0C470FB716</para>
         /// </summary>
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>schema id</para>
+        /// <para>The ID of the schema.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

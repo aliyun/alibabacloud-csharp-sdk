@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃预测式外呼活动</para>
+        /// <para>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃预测式外呼活动</para>
+        /// <para>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃预测式外呼活动</para>
+        /// <para>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃预测式外呼活动</para>
+        /// <para>Invoke AbortCampaign to stop the predictive outbound calling Activity corresponding to the specified Activity ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -190,6 +190,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AbortCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call this operation to accept a chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AcceptChatRequest
         /// </param>
@@ -231,6 +236,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AcceptChatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call this operation to accept a chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AcceptChatRequest
         /// </param>
@@ -272,6 +282,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AcceptChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call this operation to accept a chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AcceptChatRequest
         /// </param>
@@ -285,6 +300,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AcceptChatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call this operation to accept a chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AcceptChatRequest
         /// </param>
@@ -300,7 +320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -350,7 +370,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -400,7 +420,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -418,7 +438,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Adds a blacklist tag to a specified phone number. You can use this feature with your Interactive Voice Response (IVR) settings to block frequent harassing calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -436,7 +456,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -492,7 +512,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -548,7 +568,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -566,7 +586,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Invoke AddCases to add an outbound call list to a predictive dialing activity identified by a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -582,6 +602,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddCasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the AddFeedback API to evaluate and rate AI features.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddFeedbackRequest
         /// </param>
@@ -635,6 +660,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddFeedbackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the AddFeedback API to evaluate and rate AI features.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddFeedbackRequest
         /// </param>
@@ -688,6 +718,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddFeedbackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the AddFeedback API to evaluate and rate AI features.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddFeedbackRequest
         /// </param>
@@ -701,6 +736,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddFeedbackWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the AddFeedback API to evaluate and rate AI features.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddFeedbackRequest
         /// </param>
@@ -716,7 +756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -770,7 +810,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -824,7 +864,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -842,7 +882,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>Adds one or more phone numbers to a skill group by calling AddNumbersToSkillGroup.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -860,7 +900,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加个人号码</para>
+        /// <para>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -910,7 +950,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加个人号码</para>
+        /// <para>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -960,7 +1000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加个人号码</para>
+        /// <para>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -978,7 +1018,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加个人号码</para>
+        /// <para>You can invoke AddPersonalNumbersToUser to add one or more personal outbound numbers to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -996,7 +1036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1046,7 +1086,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1096,7 +1136,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1114,7 +1154,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加号码</para>
+        /// <para>You can invoke AddPhoneNumberToSkillGroups to associate a phone number with one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1132,7 +1172,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加号码</para>
+        /// <para>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1190,7 +1230,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加号码</para>
+        /// <para>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1248,7 +1288,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加号码</para>
+        /// <para>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,7 +1306,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加号码</para>
+        /// <para>You can invoke AddPhoneNumbers to add one or more phone numbers to a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1420,7 +1460,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1470,7 +1510,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1520,7 +1560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1538,7 +1578,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddSkillGroupsToUser to add one or more skill groups to a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1554,6 +1594,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await AddSkillGroupsToUserWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use AddTicketTask to add a signature and assign an assignee.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddTicketTaskRequest
         /// </param>
@@ -1611,6 +1656,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use AddTicketTask to add a signature and assign an assignee.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddTicketTaskRequest
         /// </param>
@@ -1668,6 +1718,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<AddTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use AddTicketTask to add a signature and assign an assignee.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddTicketTaskRequest
         /// </param>
@@ -1681,6 +1736,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return AddTicketTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use AddTicketTask to add a signature and assign an assignee.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddTicketTaskRequest
         /// </param>
@@ -1696,7 +1756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1746,7 +1806,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1796,7 +1856,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1814,7 +1874,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组添加用户</para>
+        /// <para>You can invoke AddUsersToSkillGroup to add one or more agents to the same skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1832,8 +1892,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分析对话</para>
+        /// <para>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
@@ -1886,8 +1951,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分析对话</para>
+        /// <para>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
@@ -1940,8 +2010,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分析对话</para>
+        /// <para>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
@@ -1958,8 +2033,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分析对话</para>
+        /// <para>Analyze the specified text-based conversation content and extract summary-related information, such as the title, keywords, summary, and other specified details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API can be used for both online chat sessions and voice sessions. When used for voice sessions, the real-time speech-to-text transcription feature must be enabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AnalyzeConversationRequest
@@ -1976,7 +2056,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>接电话</para>
+        /// <para>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2030,7 +2110,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>接电话</para>
+        /// <para>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2084,7 +2164,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>接电话</para>
+        /// <para>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2102,7 +2182,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>接电话</para>
+        /// <para>You can invoke AnswerCall to answer the call associated with a specified call ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2120,7 +2200,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2178,7 +2258,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2236,7 +2316,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2254,7 +2334,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加联系人</para>
+        /// <para>Adds cases to a predictive campaign in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2276,8 +2356,13 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入坐席</para>
+        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssignUsersRequest
@@ -2344,8 +2429,13 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入坐席</para>
+        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssignUsersRequest
@@ -2412,8 +2502,13 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入坐席</para>
+        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssignUsersRequest
@@ -2436,8 +2531,13 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入坐席</para>
+        /// <para>Call AssignUsers to import one or more RAM users into a specified instance. After the import, the RAM users become agents in the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Accounts with RAM permissions can view all RAM users under an Alibaba Cloud account in the RAM console. You can access the RAM console at https\://ram.console.aliyun.com/users.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AssignUsersRequest
@@ -2456,7 +2556,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BargeInCall</para>
+        /// <para>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2518,7 +2618,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BargeInCall</para>
+        /// <para>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2580,7 +2680,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BargeInCall</para>
+        /// <para>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2598,7 +2698,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>BargeInCall</para>
+        /// <para>You can invoke BargeInCall to forcibly insert into an ongoing call associated with a specified call ID under a specified instance. After the forced insertion succeeds, the original two-party call becomes a three-party conference call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2616,7 +2716,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>盲转</para>
+        /// <para>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2722,7 +2822,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>盲转</para>
+        /// <para>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2828,7 +2928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>盲转</para>
+        /// <para>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2846,7 +2946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>盲转</para>
+        /// <para>Directly transfer a call to another agent, a skill group queue, or an external number. Direct transfer is also known as blind transfer or single-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3048,7 +3148,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-取消</para>
+        /// <para>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3102,7 +3202,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-取消</para>
+        /// <para>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3156,7 +3256,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-取消</para>
+        /// <para>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3174,7 +3274,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-取消</para>
+        /// <para>You can invoke the CancelAttendedTransfer API to cancel an attended transfer. You can call this API at any time after initiating the attended transfer and before completing it, even if the transferee has already answered the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3192,7 +3292,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// <para>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3242,7 +3342,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// <para>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3292,7 +3392,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// <para>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3310,7 +3410,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改隐身状态(等同于仅外呼场景)</para>
+        /// <para>Changes an agent\&quot;s status to invisible. This is equivalent to the outbound-only mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3328,7 +3428,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席工作模式</para>
+        /// <para>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3390,7 +3490,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席工作模式</para>
+        /// <para>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3452,7 +3552,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席工作模式</para>
+        /// <para>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3470,7 +3570,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席工作模式</para>
+        /// <para>You can invoke ChangeWorkMode to change the agent\&quot;s work mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3488,7 +3588,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认领电话</para>
+        /// <para>Call the <c>ClaimCall</c> API to assign a call to an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3550,7 +3650,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认领电话</para>
+        /// <para>Call the <c>ClaimCall</c> API to assign a call to an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3612,7 +3712,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认领电话</para>
+        /// <para>Call the <c>ClaimCall</c> API to assign a call to an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3630,7 +3730,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>认领电话</para>
+        /// <para>Call the <c>ClaimCall</c> API to assign a call to an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3646,6 +3746,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ClaimCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClaimChatRequest
         /// </param>
@@ -3691,6 +3796,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ClaimChatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClaimChatRequest
         /// </param>
@@ -3736,6 +3846,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ClaimChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClaimChatRequest
         /// </param>
@@ -3749,6 +3864,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ClaimChatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call ClaimChat to claim the chat for a specified Job ID in a specified instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ClaimChatRequest
         /// </param>
@@ -3764,7 +3884,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>辅导</para>
+        /// <para>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3826,7 +3946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>辅导</para>
+        /// <para>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3888,7 +4008,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>辅导</para>
+        /// <para>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3906,7 +4026,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>辅导</para>
+        /// <para>You can invoke CoachCall to coach a specified agent in a specified call (identified by a call ID) under a specified instance. During the coaching session, the coached agent can hear the coach\&quot;s voice, but the customer cannot hear the coach\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3924,7 +4044,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交ivr流程</para>
+        /// <para>Commits a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3982,7 +4102,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交ivr流程</para>
+        /// <para>Commits a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4040,7 +4160,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交ivr流程</para>
+        /// <para>Commits a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4058,7 +4178,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交ivr流程</para>
+        /// <para>Commits a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4076,7 +4196,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-完成</para>
+        /// <para>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4130,7 +4250,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-完成</para>
+        /// <para>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4184,7 +4304,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-完成</para>
+        /// <para>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4202,7 +4322,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-完成</para>
+        /// <para>You can invoke CompleteAttendedTransfer to complete a consultative transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4220,7 +4340,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体文件</para>
+        /// <para>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4278,7 +4398,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体文件</para>
+        /// <para>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4336,7 +4456,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体文件</para>
+        /// <para>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4354,7 +4474,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建媒体文件</para>
+        /// <para>You can invoke CreateAudioFile to create an audio resource under a specified instance. The created audio resource can be used in the instance, such as selecting the audio file for playback during IVR.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4372,7 +4492,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话小结</para>
+        /// <para>Use the CreateCallSummary operation to create a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +4546,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话小结</para>
+        /// <para>Use the CreateCallSummary operation to create a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4480,7 +4600,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话小结</para>
+        /// <para>Use the CreateCallSummary operation to create a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4498,7 +4618,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话小结</para>
+        /// <para>Use the CreateCallSummary operation to create a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4516,7 +4636,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建号码标签</para>
+        /// <para>You can invoke CreateCallTags to create multiple call tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,7 +4682,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建号码标签</para>
+        /// <para>You can invoke CreateCallTags to create multiple call tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4608,7 +4728,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建号码标签</para>
+        /// <para>You can invoke CreateCallTags to create multiple call tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4626,7 +4746,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建号码标签</para>
+        /// <para>You can invoke CreateCallTags to create multiple call tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4644,7 +4764,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预测式外呼活动</para>
+        /// <para>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4768,7 +4888,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预测式外呼活动</para>
+        /// <para>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4892,7 +5012,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预测式外呼活动</para>
+        /// <para>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4910,7 +5030,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预测式外呼活动</para>
+        /// <para>You can invoke CreateCampaign to create a predictive outbound calling activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5044,7 +5164,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ivr流程</para>
+        /// <para>Creates an IVR flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5102,7 +5222,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ivr流程</para>
+        /// <para>Creates an IVR flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5160,7 +5280,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ivr流程</para>
+        /// <para>Creates an IVR flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5178,7 +5298,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ivr流程</para>
+        /// <para>Creates an IVR flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5200,7 +5320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建呼入控制号码</para>
+        /// <para>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5252,7 +5372,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建呼入控制号码</para>
+        /// <para>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5304,7 +5424,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建呼入控制号码</para>
+        /// <para>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5328,7 +5448,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建呼入控制号码</para>
+        /// <para>You can invoke CreateCustomCallTagging to create one or more inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5348,7 +5468,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Invoke CreateInstance to create a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5406,7 +5526,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Invoke CreateInstance to create a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5464,7 +5584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Invoke CreateInstance to create a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5482,7 +5602,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Invoke CreateInstance to create a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5644,7 +5764,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能组</para>
+        /// <para>You can call CreateSkillGroup to create a skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5702,7 +5822,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能组</para>
+        /// <para>You can call CreateSkillGroup to create a skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5760,7 +5880,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能组</para>
+        /// <para>You can call CreateSkillGroup to create a skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5778,7 +5898,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建技能组</para>
+        /// <para>You can call CreateSkillGroup to create a skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5794,6 +5914,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await CreateSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use CreateTicket to create a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTicketRequest
         /// </param>
@@ -5855,6 +5980,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use CreateTicket to create a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTicketRequest
         /// </param>
@@ -5916,6 +6046,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<CreateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use CreateTicket to create a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTicketRequest
         /// </param>
@@ -5929,6 +6064,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return CreateTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use CreateTicket to create a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTicketRequest
         /// </param>
@@ -5944,8 +6084,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席</para>
+        /// <para>Call the CreateUser operation to create a new agent in a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -6034,8 +6179,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席</para>
+        /// <para>Call the CreateUser operation to create a new agent in a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -6124,8 +6274,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席</para>
+        /// <para>Call the CreateUser operation to create a new agent in a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -6142,8 +6297,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席</para>
+        /// <para>Call the CreateUser operation to create a new agent in a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creating an agent is equivalent to creating a Resource Access Management (RAM) sub-account. Agents in Cloud Contact Center are mapped to RAM sub-accounts. Therefore, the parameters for creating an agent are similar to those for creating a RAM account. For example, LoginName is the logon name for the RAM account. Email is the email address associated with the RAM account. This email address receives an email containing the initial logon password for the RAM account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -6160,7 +6320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语音文件</para>
+        /// <para>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6206,7 +6366,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语音文件</para>
+        /// <para>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6252,7 +6412,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语音文件</para>
+        /// <para>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6270,7 +6430,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除语音文件</para>
+        /// <para>You can invoke DeleteAudioFile to delete the audio file associated with a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6288,7 +6448,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除号码标签</para>
+        /// <para>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6334,7 +6494,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除号码标签</para>
+        /// <para>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6380,7 +6540,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除号码标签</para>
+        /// <para>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6398,7 +6558,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除号码标签</para>
+        /// <para>You can invoke DeleteCallTag to delete a phone number tag under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6416,7 +6576,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ivr流程</para>
+        /// <para>Deletes the specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6466,7 +6626,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ivr流程</para>
+        /// <para>Deletes the specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6516,7 +6676,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ivr流程</para>
+        /// <para>Deletes the specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6534,7 +6694,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除ivr流程</para>
+        /// <para>Deletes the specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6552,7 +6712,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除呼入控制号码</para>
+        /// <para>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6598,7 +6758,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除呼入控制号码</para>
+        /// <para>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6644,7 +6804,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除呼入控制号码</para>
+        /// <para>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6662,7 +6822,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除呼入控制号码</para>
+        /// <para>You can invoke DeleteCustomCallTagging to delete the inbound number tag associated with a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7280,7 +7440,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能组</para>
+        /// <para>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7330,7 +7490,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能组</para>
+        /// <para>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7380,7 +7540,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能组</para>
+        /// <para>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7398,7 +7558,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除技能组</para>
+        /// <para>Invoke DeleteSkillGroup to delete the skill group associated with the specified skill group ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7414,6 +7574,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketRequest
         /// </param>
@@ -7455,6 +7620,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketRequest
         /// </param>
@@ -7496,6 +7666,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketRequest
         /// </param>
@@ -7509,6 +7684,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketRequest
         /// </param>
@@ -7522,6 +7702,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DeleteTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketTemplateRequest
         /// </param>
@@ -7563,6 +7748,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketTemplateRequest
         /// </param>
@@ -7604,6 +7794,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DeleteTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketTemplateRequest
         /// </param>
@@ -7617,6 +7812,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DeleteTicketTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ticket template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTicketTemplateRequest
         /// </param>
@@ -7754,6 +7954,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await DisableSchemaPropertyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableTicketTemplateRequest
         /// </param>
@@ -7795,6 +8000,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DisableTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableTicketTemplateRequest
         /// </param>
@@ -7836,6 +8046,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<DisableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableTicketTemplateRequest
         /// </param>
@@ -7849,6 +8064,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return DisableTicketTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the DisableTicketTemplate operation to disable a ticket template. A disabled template cannot be selected when you create a new ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableTicketTemplateRequest
         /// </param>
@@ -7864,7 +8084,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃当前IVR流程</para>
+        /// <para>Revoke contact flow editing and discard the associated draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7914,7 +8134,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃当前IVR流程</para>
+        /// <para>Revoke contact flow editing and discard the associated draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7964,7 +8184,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃当前IVR流程</para>
+        /// <para>Revoke contact flow editing and discard the associated draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7982,7 +8202,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>废弃当前IVR流程</para>
+        /// <para>Revoke contact flow editing and discard the associated draft.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8122,6 +8342,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await EnableSchemaPropertyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableTicketTemplateRequest
         /// </param>
@@ -8163,6 +8388,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EnableTicketTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableTicketTemplateRequest
         /// </param>
@@ -8204,6 +8434,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<EnableTicketTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableTicketTemplateRequest
         /// </param>
@@ -8217,6 +8452,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return EnableTicketTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The EnableTicketTemplate operation publishes a ticket template. Published ticket templates can be used to create tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableTicketTemplateRequest
         /// </param>
@@ -8232,7 +8472,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会议</para>
+        /// <para>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8282,7 +8522,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会议</para>
+        /// <para>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8332,7 +8572,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会议</para>
+        /// <para>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8350,7 +8590,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>结束会议</para>
+        /// <para>You can invoke EndConference to make the specified agent exit the call associated with the specified call ID under the specified instance. The call must be in a conference state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8488,7 +8728,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出全部呼入号码标签</para>
+        /// <para>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8536,7 +8776,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出全部呼入号码标签</para>
+        /// <para>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8584,7 +8824,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出全部呼入号码标签</para>
+        /// <para>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8608,7 +8848,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出全部呼入号码标签</para>
+        /// <para>You can invoke ExportCustomCallTagging to export all inbound number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8628,7 +8868,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出黑名单号码</para>
+        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8678,7 +8918,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出黑名单号码</para>
+        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8728,7 +8968,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出黑名单号码</para>
+        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8746,7 +8986,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出黑名单号码</para>
+        /// <para>The ExportDoNotCallNumbers operation exports a filtered list of do-not-call numbers from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8762,6 +9002,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ExportDoNotCallNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the FinishTicketTask operation to process tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishTicketTaskRequest
         /// </param>
@@ -8811,6 +9056,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<FinishTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the FinishTicketTask operation to process tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishTicketTaskRequest
         /// </param>
@@ -8860,6 +9110,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<FinishTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the FinishTicketTask operation to process tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishTicketTaskRequest
         /// </param>
@@ -8873,6 +9128,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return FinishTicketTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the FinishTicketTask operation to process tickets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishTicketTaskRequest
         /// </param>
@@ -9000,7 +9260,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件</para>
+        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9046,7 +9306,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件</para>
+        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9092,7 +9352,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件</para>
+        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9110,7 +9370,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件</para>
+        /// <para>Invoke GetAudioFile to obtain the audio file information corresponding to a specified audio resource ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9128,7 +9388,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件下载链接</para>
+        /// <para>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9174,7 +9434,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件下载链接</para>
+        /// <para>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9220,7 +9480,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件下载链接</para>
+        /// <para>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9238,7 +9498,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件下载链接</para>
+        /// <para>Invoke GetAudioFileDownloadUrl to obtain the OSS download link for a specified audio resource under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9256,7 +9516,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件上传参数</para>
+        /// <para>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9302,7 +9562,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件上传参数</para>
+        /// <para>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9348,7 +9608,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件上传参数</para>
+        /// <para>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9366,7 +9626,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音文件上传参数</para>
+        /// <para>Invoke the GetAudioFileUploadParameters API to obtain audio file upload parameters. Before creating an audio file, you must first call this API to retrieve the upload parameters and then call CreateAudioFile to create the audio file. This API is typically invoked by the default public cloud CRM system provided by Cloud Contact Center. It is not recommended for integration customers to call this API directly, because file upload must be performed through a Page operation first; only after the upload is complete can the GetAudioFileUploadParameters API be called.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9384,7 +9644,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录详情</para>
+        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9430,7 +9690,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录详情</para>
+        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9476,7 +9736,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录详情</para>
+        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9494,7 +9754,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录详情</para>
+        /// <para>You can invoke the GetCallDetailRecord operation to retrieve call details for a specific call ID within a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9512,7 +9772,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动信息</para>
+        /// <para>Gets a predictive outbound campaign by its ID from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9558,7 +9818,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动信息</para>
+        /// <para>Gets a predictive outbound campaign by its ID from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9604,7 +9864,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动信息</para>
+        /// <para>Gets a predictive outbound campaign by its ID from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9622,7 +9882,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动信息</para>
+        /// <para>Gets a predictive outbound campaign by its ID from a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9640,7 +9900,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// <para>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9686,7 +9946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// <para>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9732,7 +9992,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// <para>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9750,7 +10010,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测试外呼号码配置文件上传链接</para>
+        /// <para>Invoke GetCaseFileUploadUrl to obtain the OSS upload parameters for a predictive outbound calling list file under a specified instance. When creating a predictive outbound calling Activity by importing a file, you must first invoke this API to retrieve the file upload parameters and then invoke the CreateCampaign API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9882,6 +10142,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetChatMediaUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use GetChatRoutingProfile to retrieve the chat routing configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatRoutingProfileRequest
         /// </param>
@@ -9919,6 +10184,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetChatRoutingProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use GetChatRoutingProfile to retrieve the chat routing configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatRoutingProfileRequest
         /// </param>
@@ -9956,6 +10226,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use GetChatRoutingProfile to retrieve the chat routing configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatRoutingProfileRequest
         /// </param>
@@ -9969,6 +10244,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetChatRoutingProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use GetChatRoutingProfile to retrieve the chat routing configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetChatRoutingProfileRequest
         /// </param>
@@ -9984,7 +10264,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ivr流程信息</para>
+        /// <para>Retrieve a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10034,7 +10314,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ivr流程信息</para>
+        /// <para>Retrieve a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10084,7 +10364,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ivr流程信息</para>
+        /// <para>Retrieve a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10102,7 +10382,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ivr流程信息</para>
+        /// <para>Retrieve a specified contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10120,7 +10400,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话文本信息</para>
+        /// <para>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10170,7 +10450,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话文本信息</para>
+        /// <para>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10220,7 +10500,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话文本信息</para>
+        /// <para>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10238,7 +10518,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话文本信息</para>
+        /// <para>Call GetConversationDetail to obtain the conversation details for the call corresponding to the specified contact ID within the specified instance. The instance and skill group must have quality inspection push enabled to obtain these details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10384,7 +10664,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取黑名单文件上传地址</para>
+        /// <para>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10430,7 +10710,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取黑名单文件上传地址</para>
+        /// <para>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10476,7 +10756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取黑名单文件上传地址</para>
+        /// <para>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10494,7 +10774,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取黑名单文件上传地址</para>
+        /// <para>Invoke GetDoNotCallFileUploadParameters to obtain the upload parameters for a do-not-call file. When importing prohibited outbound call numbers through a file, you must first invoke this API to upload the do-not-call number file to the public OSS space of Cloud Contact Center, and then invoke ImportDoNotCallNumbers to execute the import.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10628,7 +10908,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取早媒体音频</para>
+        /// <para>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10674,7 +10954,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取早媒体音频</para>
+        /// <para>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10720,7 +11000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取早媒体音频</para>
+        /// <para>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10738,7 +11018,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取早媒体音频</para>
+        /// <para>Retrieve early-media audio recordings for a call in a specified Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10756,7 +11036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计呼入号码信息</para>
+        /// <para>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10810,7 +11090,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计呼入号码信息</para>
+        /// <para>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10864,7 +11144,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计呼入号码信息</para>
+        /// <para>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10882,7 +11162,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计呼入号码信息</para>
+        /// <para>Invoke GetHistoricalCallerReport to retrieve the historical inbound call report for a specified calling number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10900,7 +11180,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动历史报表</para>
+        /// <para>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10938,7 +11218,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动历史报表</para>
+        /// <para>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10976,7 +11256,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动历史报表</para>
+        /// <para>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10994,7 +11274,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动历史报表</para>
+        /// <para>You can invoke the GetHistoricalCampaignReport API to retrieve the historical data report of a predictive outbound calling activity corresponding to a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11012,7 +11292,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫数据</para>
+        /// <para>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11066,7 +11346,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫数据</para>
+        /// <para>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11120,7 +11400,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫数据</para>
+        /// <para>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11138,7 +11418,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫数据</para>
+        /// <para>You can invoke GetHistoricalInstanceReport to obtain the historical data report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11156,7 +11436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例信息</para>
+        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11198,7 +11478,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例信息</para>
+        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11240,7 +11520,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例信息</para>
+        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11258,7 +11538,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例信息</para>
+        /// <para>Retrieves the details of a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11276,7 +11556,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫信息</para>
+        /// <para>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11330,7 +11610,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫信息</para>
+        /// <para>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11384,7 +11664,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫信息</para>
+        /// <para>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11402,7 +11682,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计实例呼叫信息</para>
+        /// <para>You can call GetInstanceTrendingReport to retrieve the trend report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11420,7 +11700,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IVR轨迹小结</para>
+        /// <para>Retrieve the IVR tracking summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11466,7 +11746,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IVR轨迹小结</para>
+        /// <para>Retrieve the IVR tracking summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11512,7 +11792,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IVR轨迹小结</para>
+        /// <para>Retrieve the IVR tracking summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11530,7 +11810,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IVR轨迹小结</para>
+        /// <para>Retrieve the IVR tracking summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11548,7 +11828,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取登录信息</para>
+        /// <para>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11598,7 +11878,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取登录信息</para>
+        /// <para>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11648,7 +11928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取登录信息</para>
+        /// <para>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11666,7 +11946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取登录信息</para>
+        /// <para>Invoke GetLoginDetails to obtain the agent\&quot;s logon information, including basic agent information, server address information, authentication information, and more. This API can only be invoked by the agent themselves; administrators are not permitted to invoke it on behalf of others.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11684,7 +11964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// <para>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11734,7 +12014,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// <para>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11784,7 +12064,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// <para>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11802,7 +12082,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于播放和下载</para>
+        /// <para>You can invoke GetMonoRecording to obtain the single-track recording of a specified call under a specified instance. A single-track recording contains only one audio track, with both the agent-side and customer-side recordings merged into the same track in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11820,7 +12100,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// <para>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11866,7 +12146,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// <para>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11912,7 +12192,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// <para>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11930,7 +12210,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话对应的录音, 用于分轨或者质检</para>
+        /// <para>You can invoke GetMultiChannelRecording to obtain the multi-track recording of a specified call under a specified instance. In the multi-track recording, the agent\&quot;s and customer\&quot;s audio are distributed across different sound channels. During each playback, only one sound channel can be played, meaning you can hear only one party\&quot;s voice. The format is MKV.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11948,7 +12228,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询号码归属地</para>
+        /// <para>Invoke the GetNumberLocation API to obtain number location information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11994,7 +12274,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询号码归属地</para>
+        /// <para>Invoke the GetNumberLocation API to obtain number location information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12040,7 +12320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询号码归属地</para>
+        /// <para>Invoke the GetNumberLocation API to obtain number location information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12058,7 +12338,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询号码归属地</para>
+        /// <para>Invoke the GetNumberLocation API to obtain number location information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12076,7 +12356,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼实时状态</para>
+        /// <para>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12114,7 +12394,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼实时状态</para>
+        /// <para>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12152,7 +12432,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼实时状态</para>
+        /// <para>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12170,7 +12450,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼实时状态</para>
+        /// <para>You can invoke GetRealtimeCampaignStats to retrieve real-time agent status data for a predictive outbound calling Activity with a specified ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12188,7 +12468,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时查询实例状态信息</para>
+        /// <para>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12234,7 +12514,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时查询实例状态信息</para>
+        /// <para>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12280,7 +12560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时查询实例状态信息</para>
+        /// <para>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12298,7 +12578,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>实时查询实例状态信息</para>
+        /// <para>You can invoke GetRealtimeInstanceStates to obtain the real-time status of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12432,7 +12712,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组</para>
+        /// <para>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12478,7 +12758,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组</para>
+        /// <para>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12524,7 +12804,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组</para>
+        /// <para>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12542,7 +12822,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组</para>
+        /// <para>You can invoke GetSkillGroup to obtain information about the skill group corresponding to a specified skill group ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12558,6 +12838,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the content of a session summary template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSummaryTemplateRequest
         /// </param>
@@ -12599,6 +12884,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetSummaryTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the content of a session summary template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSummaryTemplateRequest
         /// </param>
@@ -12640,6 +12930,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetSummaryTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the content of a session summary template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSummaryTemplateRequest
         /// </param>
@@ -12653,6 +12948,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetSummaryTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the content of a session summary template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetSummaryTemplateRequest
         /// </param>
@@ -12666,6 +12966,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetSummaryTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specific ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketRequest
         /// </param>
@@ -12707,6 +13012,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specific ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketRequest
         /// </param>
@@ -12748,6 +13058,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specific ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketRequest
         /// </param>
@@ -12761,6 +13076,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a specific ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketRequest
         /// </param>
@@ -12774,6 +13094,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketSummaryReportRequest
         /// </param>
@@ -12851,6 +13176,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketSummaryReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketSummaryReportRequest
         /// </param>
@@ -12928,6 +13258,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetTicketSummaryReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketSummaryReportRequest
         /// </param>
@@ -12941,6 +13276,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetTicketSummaryReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call GetTicketSummaryReport to retrieve a summary of ticket statuses.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetTicketSummaryReportRequest
         /// </param>
@@ -12956,7 +13296,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工单模版</para>
+        /// <para>Call GetTicketTemplate to retrieve ticket template definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13006,7 +13346,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工单模版</para>
+        /// <para>Call GetTicketTemplate to retrieve ticket template definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13056,7 +13396,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工单模版</para>
+        /// <para>Call GetTicketTemplate to retrieve ticket template definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13074,7 +13414,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工单模版</para>
+        /// <para>Call GetTicketTemplate to retrieve ticket template definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13092,7 +13432,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// <para>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13138,7 +13478,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// <para>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13184,7 +13524,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// <para>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13202,7 +13542,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取TURN服务的临时用户名和密码</para>
+        /// <para>Call GetTurnCredentials to get the connection credentials for a Cloud Contact Center Point of Presence (PoP). These credentials include a username and password for authentication. Connecting to Cloud Contact Center through a PoP improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13220,7 +13560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的TURN服务器列表</para>
+        /// <para>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13262,7 +13602,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的TURN服务器列表</para>
+        /// <para>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13304,7 +13644,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的TURN服务器列表</para>
+        /// <para>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13322,7 +13662,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的TURN服务器列表</para>
+        /// <para>Call GetTurnServerList to get a list of front-end access points for Alibaba Cloud Contact Center. Connecting through these access points improves network quality and stability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13340,7 +13680,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检参数</para>
+        /// <para>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13378,7 +13718,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检参数</para>
+        /// <para>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13416,7 +13756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检参数</para>
+        /// <para>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13434,7 +13774,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取质检参数</para>
+        /// <para>Obtain the parameters related to offline quality inspection audio files. Normally, if the Customer has configured the quality inspection feature in Cloud Contact Center, the audio files requiring offline quality inspection and their corresponding parameters are automatically passed to Intelligent Quality Inspection. You only need to invoke this API to obtain the parameters for pushing quality inspection recordings when the Customer has not configured the quality inspection feature in Cloud Contact Center and wishes to manually push Cloud Contact Center call recordings to the quality inspection system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13452,7 +13792,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席</para>
+        /// <para>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13502,7 +13842,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席</para>
+        /// <para>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13552,7 +13892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席</para>
+        /// <para>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13570,7 +13910,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席</para>
+        /// <para>You can invoke GetUser to obtain the agent information corresponding to a specified agent ID under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13698,6 +14038,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await GetVideoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVisitorLoginDetailsRequest
         /// </param>
@@ -13747,6 +14092,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVisitorLoginDetailsRequest
         /// </param>
@@ -13796,6 +14146,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<GetVisitorLoginDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVisitorLoginDetailsRequest
         /// </param>
@@ -13809,6 +14164,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return GetVisitorLoginDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call GetVisitorLoginDetails to retrieve login, server address, and authentication information for network service visitors.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetVisitorLoginDetailsRequest
         /// </param>
@@ -13824,7 +14184,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// <para>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13870,7 +14230,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// <para>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13916,7 +14276,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// <para>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13934,7 +14294,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取语音邮箱录音, 用于播放和下载</para>
+        /// <para>You can invoke GetVoicemailRecording to obtain the voicemail recording of a specified call under a specified instance. The recording is single-track and in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13952,7 +14312,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保持通话</para>
+        /// <para>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14014,7 +14374,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保持通话</para>
+        /// <para>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14076,7 +14436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保持通话</para>
+        /// <para>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14094,7 +14454,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保持通话</para>
+        /// <para>You can invoke HoldCall to hold the call associated with a specified call ID under a specified instance. After the call is held, it will be temporarily suspended, and the held party will hear hold music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14112,7 +14472,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入管理员</para>
+        /// <para>Imports one or more admins to a specified instance. The caller must have the <c>AliyunCCCFullAccess</c> permission, which you can grant in the RAM console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14158,7 +14518,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入管理员</para>
+        /// <para>Imports one or more admins to a specified instance. The caller must have the <c>AliyunCCCFullAccess</c> permission, which you can grant in the RAM console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14204,7 +14564,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入管理员</para>
+        /// <para>Imports one or more admins to a specified instance. The caller must have the <c>AliyunCCCFullAccess</c> permission, which you can grant in the RAM console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14222,7 +14582,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入管理员</para>
+        /// <para>Imports one or more admins to a specified instance. The caller must have the <c>AliyunCCCFullAccess</c> permission, which you can grant in the RAM console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14356,7 +14716,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入自有线路号码</para>
+        /// <para>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14418,7 +14778,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入自有线路号码</para>
+        /// <para>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14480,7 +14840,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入自有线路号码</para>
+        /// <para>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14498,7 +14858,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入自有线路号码</para>
+        /// <para>Imports your organization’s telephone line numbers. Before performing the first import, contact Cloud Contact Center technical support to add the numbers to the allowlist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14520,7 +14880,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件导入呼入控制号码</para>
+        /// <para>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14572,7 +14932,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件导入呼入控制号码</para>
+        /// <para>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14624,7 +14984,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件导入呼入控制号码</para>
+        /// <para>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14648,7 +15008,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件导入呼入控制号码</para>
+        /// <para>You can invoke ImportCustomCallTagging to import multiple inbound number tags into a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14668,7 +15028,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加黑名单号码</para>
+        /// <para>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14722,7 +15082,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加黑名单号码</para>
+        /// <para>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14776,7 +15136,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加黑名单号码</para>
+        /// <para>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14794,7 +15154,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加黑名单号码</para>
+        /// <para>Imports one or more do-not-call numbers to a specified instance. You can import numbers by manual entry or file upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14936,7 +15296,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入ram用户</para>
+        /// <para>Import existing RAM users as contact center agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14994,7 +15354,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入ram用户</para>
+        /// <para>Import existing RAM users as contact center agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15052,7 +15412,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入ram用户</para>
+        /// <para>Import existing RAM users as contact center agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15070,7 +15430,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入ram用户</para>
+        /// <para>Import existing RAM users as contact center agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15088,7 +15448,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-发起</para>
+        /// <para>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15186,7 +15546,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-发起</para>
+        /// <para>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15284,7 +15644,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-发起</para>
+        /// <para>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15302,7 +15662,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关注转-发起</para>
+        /// <para>Consultation transfer refers to transferring a call to another agent, a skill group queue, or an external number. It is also known as follow transfer or two-step transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15320,7 +15680,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打断通话</para>
+        /// <para>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15382,7 +15742,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打断通话</para>
+        /// <para>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15444,7 +15804,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打断通话</para>
+        /// <para>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15462,7 +15822,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打断通话</para>
+        /// <para>You can invoke InterceptCall to forcibly disconnect the call associated with a specified call ID under a given instance. The call must be in the listener state, and the forced disconnection must be initiated by the listener. After the forced disconnection succeeds, the agent who was originally talking with the customer will be disconnected, and the agent who initiated the forced disconnection will replace the original agent and continue the conversation with the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15480,7 +15840,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起IVR认证流程</para>
+        /// <para>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15542,7 +15902,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起IVR认证流程</para>
+        /// <para>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15604,7 +15964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起IVR认证流程</para>
+        /// <para>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15622,7 +15982,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起IVR认证流程</para>
+        /// <para>You can invoke LaunchAuthentication to temporarily transfer a call into a specified IVR flow. After invoking this API, the call enters an IVR interaction phase, which is commonly used for identity verification operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15640,7 +16000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起话后满意度调查IVR流程</para>
+        /// <para>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15718,7 +16078,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起话后满意度调查IVR流程</para>
+        /// <para>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15796,7 +16156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起话后满意度调查IVR流程</para>
+        /// <para>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15814,7 +16174,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起话后满意度调查IVR流程</para>
+        /// <para>Invoke LaunchSurvey to send a satisfaction survey. This operation causes the agent to hang up. If it is a voice-based satisfaction survey, the customer enters the IVR satisfaction survey flow after the agent hangs up and completes the satisfaction collection within the IVR flow. If it is an SMS-based satisfaction survey, the call ends and the customer receives a satisfaction survey text message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15832,7 +16192,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取坐席状态记录列表</para>
+        /// <para>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15886,7 +16246,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取坐席状态记录列表</para>
+        /// <para>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15940,7 +16300,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取坐席状态记录列表</para>
+        /// <para>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15958,7 +16318,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取坐席状态记录列表</para>
+        /// <para>Invoke ListAgentStateLogs to obtain the status log list of a specified agent under a specified instance. Note that this API will soon expire. Use the override API ListRealtimeAgentStates instead.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15980,7 +16340,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentStates for ACC</para>
+        /// <para>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16052,7 +16412,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentStates for ACC</para>
+        /// <para>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16124,7 +16484,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentStates for ACC</para>
+        /// <para>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16148,7 +16508,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentStates for ACC</para>
+        /// <para>You can invoke the ListAgentStates API to retrieve a list of agent statuses under a specified instance, filtered by specified conditions. This API is available only to specific Users. Other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16172,7 +16532,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentSummaryReportsSinceMidnight for acc</para>
+        /// <para>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16216,7 +16576,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentSummaryReportsSinceMidnight for acc</para>
+        /// <para>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16260,7 +16620,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentSummaryReportsSinceMidnight for acc</para>
+        /// <para>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16284,7 +16644,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListAgentSummaryReportsSinceMidnight for acc</para>
+        /// <para>You can invoke the ListAgentSummaryReportsSinceMidnight API to retrieve agent historical data reports under a specified instance, filtered by given conditions. The statistics cover data from 00:00 of the current day up to the current time. This API is available only to specific users; other customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16304,7 +16664,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼呼叫记录</para>
+        /// <para>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16342,7 +16702,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼呼叫记录</para>
+        /// <para>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16380,7 +16740,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼呼叫记录</para>
+        /// <para>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16398,7 +16758,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼呼叫记录</para>
+        /// <para>You can invoke ListAttempts to obtain the list of contact dialing records for a specified predictive outbound calling Activity under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16416,7 +16776,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件列表</para>
+        /// <para>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16474,7 +16834,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件列表</para>
+        /// <para>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16532,7 +16892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件列表</para>
+        /// <para>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16550,7 +16910,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音频文件列表</para>
+        /// <para>Invoke ListAudioFiles to obtain the list of audio files under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16568,7 +16928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Queries the blacklist tag status of specified numbers in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16614,7 +16974,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Queries the blacklist tag status of specified numbers in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16660,7 +17020,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Queries the blacklist tag status of specified numbers in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16678,7 +17038,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Queries the blacklist tag status of specified numbers in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16696,7 +17056,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席工作台坐席调用转接使用</para>
+        /// <para>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16754,7 +17114,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席工作台坐席调用转接使用</para>
+        /// <para>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16812,7 +17172,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席工作台坐席调用转接使用</para>
+        /// <para>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16830,7 +17190,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席工作台坐席调用转接使用</para>
+        /// <para>You can invoke ListBriefSkillGroups to obtain the list of skill group summary information under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16848,8 +17208,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
@@ -16970,8 +17335,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
@@ -17092,8 +17462,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
@@ -17110,8 +17485,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话详情</para>
+        /// <para>You can invoke ListCallDetailRecords to obtain a list of call details filtered by specified search conditions under a specified instance. This API is no longer iteratively updated. We recommend that you use the ListCallDetailRecordsV2 API instead.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>To ensure query efficiency, the TotalCount field in the response data is populated only when the first page is queried. For other pages, this field returns 0.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsRequest
@@ -17128,8 +17508,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录列表</para>
+        /// <para>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
@@ -17274,8 +17659,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录列表</para>
+        /// <para>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
@@ -17420,8 +17810,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录列表</para>
+        /// <para>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
@@ -17438,8 +17833,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话记录列表</para>
+        /// <para>Retrieves a list of call detail records that match the specified filter criteria for a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ListCallDetailRecordsV2 is used to override the ListCallDetailRecords operation. New fields and query conditions will undergo continuous optimization in ListCallDetailRecordsV2. To ensure query efficiency, the TotalCount field in the response is populated only when you query the first page. For other pages, the value 0 is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCallDetailRecordsV2Request
@@ -17454,6 +17854,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCallDetailRecordsV2WithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the ListCallSummaries operation to retrieve call summaries.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListCallSummariesRequest
         /// </param>
@@ -17501,6 +17906,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCallSummariesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the ListCallSummaries operation to retrieve call summaries.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListCallSummariesRequest
         /// </param>
@@ -17548,6 +17958,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCallSummariesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the ListCallSummaries operation to retrieve call summaries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallSummariesRequest
         /// </param>
@@ -17561,6 +17976,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListCallSummariesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the ListCallSummaries operation to retrieve call summaries.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCallSummariesRequest
         /// </param>
@@ -17576,7 +17996,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出号码标签</para>
+        /// <para>You can invoke ListCallTags to obtain all number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17626,7 +18046,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出号码标签</para>
+        /// <para>You can invoke ListCallTags to obtain all number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17676,7 +18096,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出号码标签</para>
+        /// <para>You can invoke ListCallTags to obtain all number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17694,7 +18114,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出号码标签</para>
+        /// <para>You can invoke ListCallTags to obtain all number tags under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17712,7 +18132,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动趋势报表</para>
+        /// <para>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17750,7 +18170,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动趋势报表</para>
+        /// <para>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17788,7 +18208,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动趋势报表</para>
+        /// <para>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17806,7 +18226,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动趋势报表</para>
+        /// <para>Obtain the trend report of the predictive outbound calling activity with the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17824,7 +18244,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动列表</para>
+        /// <para>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17902,7 +18322,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动列表</para>
+        /// <para>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17980,7 +18400,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动列表</para>
+        /// <para>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17998,7 +18418,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动列表</para>
+        /// <para>Calls ListCampaigns to obtain the list of predictive dialing campaigns under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18016,7 +18436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动的联系人呼叫详情</para>
+        /// <para>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18078,7 +18498,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动的联系人呼叫详情</para>
+        /// <para>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18140,7 +18560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动的联系人呼叫详情</para>
+        /// <para>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18158,7 +18578,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取预测式外呼活动的联系人呼叫详情</para>
+        /// <para>Invoke ListCases to obtain the execution details list of the outbound contact list for the predictive dialing Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18174,6 +18594,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCasesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListCategories to retrieve category information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCategoriesRequest
         /// </param>
@@ -18219,6 +18644,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCategoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListCategories to retrieve category information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCategoriesRequest
         /// </param>
@@ -18264,6 +18694,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCategoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListCategories to retrieve category information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCategoriesRequest
         /// </param>
@@ -18277,6 +18712,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListCategoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListCategories to retrieve category information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCategoriesRequest
         /// </param>
@@ -18290,6 +18730,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListCategoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the ticket field types that are defined for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCommonTicketFieldsRequest
         /// </param>
@@ -18327,6 +18772,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCommonTicketFieldsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the ticket field types that are defined for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCommonTicketFieldsRequest
         /// </param>
@@ -18364,6 +18814,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListCommonTicketFieldsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the ticket field types that are defined for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCommonTicketFieldsRequest
         /// </param>
@@ -18377,6 +18832,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListCommonTicketFieldsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the ticket field types that are defined for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListCommonTicketFieldsRequest
         /// </param>
@@ -18392,7 +18852,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询系统配置</para>
+        /// <para>Retrieves the config items for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18442,7 +18902,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询系统配置</para>
+        /// <para>Retrieves the config items for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18492,7 +18952,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询系统配置</para>
+        /// <para>Retrieves the config items for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18510,7 +18970,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询系统配置</para>
+        /// <para>Retrieves the config items for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18528,7 +18988,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ivr流程</para>
+        /// <para>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18594,7 +19054,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ivr流程</para>
+        /// <para>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18660,7 +19120,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ivr流程</para>
+        /// <para>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18678,7 +19138,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ivr流程</para>
+        /// <para>Call ListContactFlows to retrieve the IVR contact flows for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18700,7 +19160,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出呼入控制号码</para>
+        /// <para>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18764,7 +19224,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出呼入控制号码</para>
+        /// <para>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18828,7 +19288,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出呼入控制号码</para>
+        /// <para>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18852,7 +19312,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出呼入控制号码</para>
+        /// <para>You can invoke ListCustomCallTagging to obtain the list of inbound number marks under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18872,7 +19332,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询可用设备</para>
+        /// <para>Obtain the device list of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18918,7 +19378,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询可用设备</para>
+        /// <para>Obtain the device list of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18964,7 +19424,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询可用设备</para>
+        /// <para>Obtain the device list of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18982,7 +19442,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询可用设备</para>
+        /// <para>Obtain the device list of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19000,7 +19460,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询黑名单号码</para>
+        /// <para>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19058,7 +19518,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询黑名单号码</para>
+        /// <para>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19116,7 +19576,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询黑名单号码</para>
+        /// <para>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19134,7 +19594,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询黑名单号码</para>
+        /// <para>Retrieves the list of prohibited outbound call numbers under a specified instance, filtered by specified search conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19312,7 +19772,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询反馈记录</para>
+        /// <para>Queries feedback records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19358,7 +19818,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询反馈记录</para>
+        /// <para>Queries feedback records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19404,7 +19864,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询反馈记录</para>
+        /// <para>Queries feedback records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19422,7 +19882,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询反馈记录</para>
+        /// <para>Queries feedback records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19438,6 +19898,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListFeedbacksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsApplicationsRequest
         /// </param>
@@ -19491,6 +19956,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsApplicationsRequest
         /// </param>
@@ -19544,6 +20014,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsApplicationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsApplicationsRequest
         /// </param>
@@ -19557,6 +20032,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListFlashSmsApplicationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use ListFlashSmsApplication to obtain third-party flash SMS configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsApplicationsRequest
         /// </param>
@@ -19570,6 +20050,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListFlashSmsApplicationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListFlashSmsSettingsRequest
         /// </param>
@@ -19629,6 +20114,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsSettingsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ListFlashSmsSettingsRequest
         /// </param>
@@ -19688,6 +20178,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListFlashSmsSettingsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsSettingsRequest
         /// </param>
@@ -19701,6 +20196,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListFlashSmsSettingsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Call the ListFlashSmsSettings operation to retrieve the flash SMS configurations for a specified skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsSettingsRequest
         /// </param>
@@ -19716,7 +20216,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模板列表</para>
+        /// <para>Use ListFlashSmsTemplates to retrieve flash SMS template information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19766,7 +20266,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模板列表</para>
+        /// <para>Use ListFlashSmsTemplates to retrieve flash SMS template information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19816,7 +20316,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模板列表</para>
+        /// <para>Use ListFlashSmsTemplates to retrieve flash SMS template information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19834,7 +20334,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取闪信模板列表</para>
+        /// <para>Use ListFlashSmsTemplates to retrieve flash SMS template information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19852,7 +20352,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGroupChatMessages</para>
+        /// <para>Retrieves the records of group chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19910,7 +20410,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGroupChatMessages</para>
+        /// <para>Retrieves the records of group chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19968,7 +20468,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGroupChatMessages</para>
+        /// <para>Retrieves the records of group chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19986,7 +20486,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListGroupChatMessages</para>
+        /// <para>Retrieves the records of group chat messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20004,7 +20504,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史作息报告</para>
+        /// <para>Retrieves historical data reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20076,7 +20576,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史作息报告</para>
+        /// <para>Retrieves historical data reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20148,7 +20648,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史作息报告</para>
+        /// <para>Retrieves historical data reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20166,7 +20666,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史作息报告</para>
+        /// <para>Retrieves historical data reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20184,7 +20684,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListHistoricalAgentSkillGroupReport</para>
+        /// <para>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20256,7 +20756,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListHistoricalAgentSkillGroupReport</para>
+        /// <para>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20328,7 +20828,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListHistoricalAgentSkillGroupReport</para>
+        /// <para>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20346,7 +20846,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListHistoricalAgentSkillGroupReport</para>
+        /// <para>You can call ListHistoricalAgentSkillGroupReport to retrieve historical skill group reports for one or more agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20364,7 +20864,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组汇总报表</para>
+        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20432,7 +20932,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组汇总报表</para>
+        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20500,7 +21000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组汇总报表</para>
+        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20518,7 +21018,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组汇总报表</para>
+        /// <para>You can invoke ListHistoricalSkillGroupReport to obtain historical data reports for one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20536,8 +21036,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -20582,8 +21087,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -20628,8 +21138,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -20646,8 +21161,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Invoke the ListInstances API to obtain the list of Cloud Contact Center instances under the current Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If a RAM user needs to invoke this API, the RAM user must have the &quot;Manage Cloud Call Center (CCC)&quot; permission (AliyunCCCFullAccess).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -20664,7 +21184,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20710,7 +21230,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20756,7 +21276,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20774,7 +21294,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>You can invoke ListInstancesOfUser to obtain the list of Cloud Contact Center instances to which the User belongs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20792,7 +21312,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席报表</para>
+        /// <para>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20854,7 +21374,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席报表</para>
+        /// <para>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20916,7 +21436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席报表</para>
+        /// <para>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20934,7 +21454,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询坐席报表</para>
+        /// <para>You can invoke ListIntervalAgentReport to obtain the segment statistical report of a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20952,7 +21472,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListIntervalAgentSkillGroupReport</para>
+        /// <para>Retrieves the interval-based statistical report for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20990,7 +21510,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListIntervalAgentSkillGroupReport</para>
+        /// <para>Retrieves the interval-based statistical report for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21028,7 +21548,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListIntervalAgentSkillGroupReport</para>
+        /// <para>Retrieves the interval-based statistical report for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21046,7 +21566,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListIntervalAgentSkillGroupReport</para>
+        /// <para>Retrieves the interval-based statistical report for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21064,7 +21584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例报表</para>
+        /// <para>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21118,7 +21638,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例报表</para>
+        /// <para>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21172,7 +21692,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例报表</para>
+        /// <para>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21190,7 +21710,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例报表</para>
+        /// <para>You can invoke ListIntervalInstanceReport to obtain the segment statistical report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21208,7 +21728,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组报表</para>
+        /// <para>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21270,7 +21790,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组报表</para>
+        /// <para>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21332,7 +21852,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组报表</para>
+        /// <para>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21350,7 +21870,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组报表</para>
+        /// <para>You can invoke ListIntervalSkillGroupReport to obtain the segment-based statistical report of a specified skill group under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21368,7 +21888,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ivr轨迹</para>
+        /// <para>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21422,7 +21942,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ivr轨迹</para>
+        /// <para>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21476,7 +21996,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ivr轨迹</para>
+        /// <para>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21494,7 +22014,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ivr轨迹</para>
+        /// <para>Invoke ListIvrTrackingDetails to obtain the IVR tracking details of a specified call under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21516,7 +22036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentEventLogs</para>
+        /// <para>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21584,7 +22104,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentEventLogs</para>
+        /// <para>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21652,7 +22172,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentEventLogs</para>
+        /// <para>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21676,7 +22196,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentEventLogs</para>
+        /// <para>You can invoke ListLegacyAgentEventLogs to obtain the list of 1.0 legacy agent event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21700,7 +22220,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentStatusLogs</para>
+        /// <para>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21768,7 +22288,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentStatusLogs</para>
+        /// <para>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21836,7 +22356,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentStatusLogs</para>
+        /// <para>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21860,7 +22380,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyAgentStatusLogs</para>
+        /// <para>You can invoke ListLegacyAgentStatusLogs to obtain the list of legacy agent status logs for version 1.0. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22032,7 +22552,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyQueueEventLogs</para>
+        /// <para>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22094,7 +22614,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyQueueEventLogs</para>
+        /// <para>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22156,7 +22676,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyQueueEventLogs</para>
+        /// <para>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22174,7 +22694,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListLegacyQueueEventLogs</para>
+        /// <para>You can invoke ListLegacyQueueEventLogs to obtain the list of 1.0 legacy queue event logs. This API is available only to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22192,7 +22712,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单轨录音</para>
+        /// <para>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22246,7 +22766,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单轨录音</para>
+        /// <para>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22300,7 +22820,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单轨录音</para>
+        /// <para>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22318,7 +22838,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单轨录音</para>
+        /// <para>Call ListMonoRecordings to retrieve single-track recordings for each party in a specified call under a specified instance. During a call, each party has a channel, and each channel generates a combined track recording in WAV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22336,7 +22856,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分轨录音</para>
+        /// <para>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22390,7 +22910,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分轨录音</para>
+        /// <para>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22444,7 +22964,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分轨录音</para>
+        /// <para>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22462,7 +22982,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取分轨录音</para>
+        /// <para>Call ListMultiChannelRecordings to retrieve the multi-channel recordings for each party in a specified call and instance. Each party has a call channel that corresponds to a multi-channel recording in MKV format.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22480,7 +23000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息推送记录</para>
+        /// <para>Query notification records that were not sent using Message Queue (MQ).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22526,7 +23046,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息推送记录</para>
+        /// <para>Query notification records that were not sent using Message Queue (MQ).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22572,7 +23092,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息推送记录</para>
+        /// <para>Query notification records that were not sent using Message Queue (MQ).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22590,7 +23110,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消息推送记录</para>
+        /// <para>Query notification records that were not sent using Message Queue (MQ).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22608,7 +23128,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该坐席可用的外呼号码列表</para>
+        /// <para><c>ListOutboundNumbersOfUser</c> retrieves the outbound numbers for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22666,7 +23186,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该坐席可用的外呼号码列表</para>
+        /// <para><c>ListOutboundNumbersOfUser</c> retrieves the outbound numbers for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22724,7 +23244,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该坐席可用的外呼号码列表</para>
+        /// <para><c>ListOutboundNumbersOfUser</c> retrieves the outbound numbers for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22742,7 +23262,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>该坐席可用的外呼号码列表</para>
+        /// <para><c>ListOutboundNumbersOfUser</c> retrieves the outbound numbers for a specified agent in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22760,8 +23280,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取个人外呼号码列表</para>
+        /// <para>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
@@ -22822,8 +23347,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取个人外呼号码列表</para>
+        /// <para>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
@@ -22884,8 +23414,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取个人外呼号码列表</para>
+        /// <para>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
@@ -22902,8 +23437,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取个人外呼号码列表</para>
+        /// <para>You can invoke ListPersonalNumbersOfUser to obtain the list of personal outbound numbers for a specified agent under a specified instance. You can also use this API to retrieve the list of numbers that can be added as personal outbound numbers for an agent.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a number is already attached to a skill group, it will not appear in the list of numbers available as personal outbound numbers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPersonalNumbersOfUserRequest
@@ -22920,7 +23460,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码列表</para>
+        /// <para>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22982,7 +23522,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码列表</para>
+        /// <para>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23044,7 +23584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码列表</para>
+        /// <para>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23062,7 +23602,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码列表</para>
+        /// <para>You can invoke ListPhoneNumbers to obtain the phone number list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23080,8 +23620,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组绑定的号码</para>
+        /// <para>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
@@ -23146,8 +23691,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组绑定的号码</para>
+        /// <para>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
@@ -23212,8 +23762,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组绑定的号码</para>
+        /// <para>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
@@ -23230,8 +23785,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组绑定的号码</para>
+        /// <para>You can invoke the ListPhoneNumbersOfSkillGroup API to obtain the list of phone numbers associated with a specified skill group under a specified instance. You can also use this API to query phone numbers that are not currently associated with the skill group but can be associated with it.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: If a phone number is already used as a personal outbound number, it will not appear in the list of numbers available for association with a skill group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneNumbersOfSkillGroupRequest
@@ -23248,7 +23808,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户权限</para>
+        /// <para>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23290,7 +23850,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户权限</para>
+        /// <para>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23332,7 +23892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户权限</para>
+        /// <para>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23350,7 +23910,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户权限</para>
+        /// <para>Invoke ListPrivilegesOfUser to obtain the permissions owned by the current User.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23368,8 +23928,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ram用户</para>
+        /// <para>Lists RAM users that have not been imported into a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRamUsersRequest
@@ -23422,8 +23987,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ram用户</para>
+        /// <para>Lists RAM users that have not been imported into a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRamUsersRequest
@@ -23476,8 +24046,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ram用户</para>
+        /// <para>Lists RAM users that have not been imported into a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRamUsersRequest
@@ -23494,8 +24069,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询ram用户</para>
+        /// <para>Lists RAM users that have not been imported into a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A Resource Access Management (RAM) user can be imported as an agent into multiple Cloud Contact Center (CCC) instances. However, an agent can be associated with only one RAM account. When you create an agent in a CCC instance, a corresponding RAM account is also created. To avoid creating redundant RAM accounts when you set up a new instance, you can call the ListRamUsers operation to list RAM users that have not been imported into the instance. You can then call the operation that imports RAM users to add them to the new instance. This prevents creating unnecessary RAM accounts and conserves resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRamUsersRequest
@@ -23512,7 +24092,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询坐席状态</para>
+        /// <para>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23600,7 +24180,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询坐席状态</para>
+        /// <para>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23688,7 +24268,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询坐席状态</para>
+        /// <para>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23706,7 +24286,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询坐席状态</para>
+        /// <para>You can invoke ListRealtimeAgentStates to obtain a real-time status data report for one or more specified agents in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23724,7 +24304,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询技能组状态报表</para>
+        /// <para>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23784,7 +24364,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询技能组状态报表</para>
+        /// <para>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23844,7 +24424,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询技能组状态报表</para>
+        /// <para>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23862,7 +24442,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询技能组状态报表</para>
+        /// <para>You can invoke ListRealtimeSkillGroupStates to obtain the real-time skill group status report for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23880,7 +24460,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史通话记录</para>
+        /// <para>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23944,7 +24524,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史通话记录</para>
+        /// <para>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24008,7 +24588,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史通话记录</para>
+        /// <para>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24026,7 +24606,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询历史通话记录</para>
+        /// <para>You can invoke ListRecentCallDetailRecords to obtain the list of recent call detail records for agents mapped to the current Resource Access Management (RAM) user under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24044,7 +24624,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询角色</para>
+        /// <para>You can invoke ListRoles to obtain all roles under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24086,7 +24666,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询角色</para>
+        /// <para>You can invoke ListRoles to obtain all roles under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24128,7 +24708,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询角色</para>
+        /// <para>You can invoke ListRoles to obtain all roles under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24146,7 +24726,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询角色</para>
+        /// <para>You can invoke ListRoles to obtain all roles under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24168,7 +24748,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupStates for acc</para>
+        /// <para>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24212,7 +24792,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupStates for acc</para>
+        /// <para>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24256,7 +24836,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupStates for acc</para>
+        /// <para>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24280,7 +24860,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupStates for acc</para>
+        /// <para>You can invoke the ListSkillgroupStates API to obtain the status list of specified skill groups under a specified instance. This API is only available to specific Users, and other Customers are not recommended to invoke it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24304,7 +24884,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupSummaryReportsSinceMidnight for acc</para>
+        /// <para>The <c>ListSkillgroupSummaryReportsSinceMidnight</c> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24348,7 +24928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupSummaryReportsSinceMidnight for acc</para>
+        /// <para>The <c>ListSkillgroupSummaryReportsSinceMidnight</c> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24392,7 +24972,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupSummaryReportsSinceMidnight for acc</para>
+        /// <para>The <c>ListSkillgroupSummaryReportsSinceMidnight</c> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24416,7 +24996,7 @@ namespace AlibabaCloud.SDK.CCC20200701
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListSkillGroupSummaryReportsSinceMidnight for acc</para>
+        /// <para>The <c>ListSkillgroupSummaryReportsSinceMidnight</c> operation retrieves historical summary reports, filtered by specified conditions, for skill groups in a specified instance. The report contains data from 00:00 (midnight) today to the time of the request. This operation is available to specific users only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24436,7 +25016,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组列表</para>
+        /// <para>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24494,7 +25074,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组列表</para>
+        /// <para>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24552,7 +25132,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组列表</para>
+        /// <para>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24570,7 +25150,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组列表</para>
+        /// <para>You can invoke ListSkillGroups to obtain the list of skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24588,7 +25168,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户技能组级别</para>
+        /// <para>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24650,7 +25230,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户技能组级别</para>
+        /// <para>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24712,7 +25292,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户技能组级别</para>
+        /// <para>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24730,7 +25310,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户技能组级别</para>
+        /// <para>You can use this API to retrieve the list of skill levels for skill groups associated with a specified agent under a specified instance. You can also use this API to query the list of skill groups that the agent can be associated with but is not currently associated with.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24748,7 +25328,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// <para>Queries the details of SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24802,7 +25382,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// <para>Queries the details of SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24856,7 +25436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// <para>Queries the details of SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24874,7 +25454,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用ListSmsMetadata获取短信配置信息。</para>
+        /// <para>Queries the details of SMS configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24998,6 +25578,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListTicketTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of ticket templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketTemplatesRequest
         /// </param>
@@ -25055,6 +25640,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListTicketTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of ticket templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketTemplatesRequest
         /// </param>
@@ -25112,6 +25702,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListTicketTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of ticket templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketTemplatesRequest
         /// </param>
@@ -25125,6 +25720,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListTicketTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of ticket templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketTemplatesRequest
         /// </param>
@@ -25138,6 +25738,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListTicketTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tickets for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketsRequest
         /// </param>
@@ -25231,6 +25836,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListTicketsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tickets for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketsRequest
         /// </param>
@@ -25324,6 +25934,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListTicketsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tickets for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketsRequest
         /// </param>
@@ -25337,6 +25952,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListTicketsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tickets for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTicketsRequest
         /// </param>
@@ -25352,7 +25972,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取未分配号码列表</para>
+        /// <para>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25402,7 +26022,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取未分配号码列表</para>
+        /// <para>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25452,7 +26072,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取未分配号码列表</para>
+        /// <para>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25470,7 +26090,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取未分配号码列表</para>
+        /// <para>You can invoke ListUnassignedNumbers to obtain the list of numbers under your Alibaba Cloud account that have not been assigned to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25488,7 +26108,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组级别列表</para>
+        /// <para>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25550,7 +26170,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组级别列表</para>
+        /// <para>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25612,7 +26232,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组级别列表</para>
+        /// <para>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25630,7 +26250,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能组级别列表</para>
+        /// <para>You can invoke the ListUserLevelsOfSkillGroup API to retrieve the list of agent skill levels under a specified skill group in a given instance. You can also use this API to retrieve the list of agents who can be associated with but are not currently associated with the specified skill group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25648,7 +26268,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Invoke ListUsers to obtain the agent list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25706,7 +26326,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Invoke ListUsers to obtain the agent list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25764,7 +26384,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Invoke ListUsers to obtain the agent list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25782,7 +26402,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Invoke ListUsers to obtain the agent list under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25800,7 +26420,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListVisitorChatMessages</para>
+        /// <para>You can use ListVisitorChatMessages to retrieve visitor chat records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25874,7 +26494,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListVisitorChatMessages</para>
+        /// <para>You can use ListVisitorChatMessages to retrieve visitor chat records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25948,7 +26568,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListVisitorChatMessages</para>
+        /// <para>You can use ListVisitorChatMessages to retrieve visitor chat records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25966,7 +26586,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListVisitorChatMessages</para>
+        /// <para>You can use ListVisitorChatMessages to retrieve visitor chat records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25984,7 +26604,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询语音信箱列表</para>
+        /// <para>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26054,7 +26674,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询语音信箱列表</para>
+        /// <para>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26124,7 +26744,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询语音信箱列表</para>
+        /// <para>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26142,7 +26762,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询语音信箱列表</para>
+        /// <para>You can call the ListVoicemails operation to retrieve a list of voicemails for a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26158,6 +26778,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListVoicemailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWaitingChatsRequest
         /// </param>
@@ -26199,6 +26824,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListWaitingChatsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWaitingChatsRequest
         /// </param>
@@ -26240,6 +26870,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ListWaitingChatsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWaitingChatsRequest
         /// </param>
@@ -26253,6 +26888,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ListWaitingChatsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ListWaitingChats operation allows agents to retrieve chats that are waiting in a queue to be assigned or claimed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListWaitingChatsRequest
         /// </param>
@@ -26266,6 +26906,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ListWaitingChatsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -26339,6 +26984,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MakeCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -26412,6 +27062,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<MakeCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -26425,6 +27080,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return MakeCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can invoke MakeCall to initiate a call. The callee can be an internal agent or an external customer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -26440,7 +27100,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改媒体文件</para>
+        /// <para>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26502,7 +27162,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改媒体文件</para>
+        /// <para>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26564,7 +27224,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改媒体文件</para>
+        /// <para>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26582,7 +27242,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改媒体文件</para>
+        /// <para>You can invoke ModifyAudioFile to modify the audio file associated with a specified audio resource ID under a given instance. You can update the audio file name, display name, and the OSS key of the audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26600,7 +27260,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改活动外呼号码</para>
+        /// <para>Modifies the calling numbers for a batch prediction outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26660,7 +27320,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改活动外呼号码</para>
+        /// <para>Modifies the calling numbers for a batch prediction outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26720,7 +27380,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改活动外呼号码</para>
+        /// <para>Modifies the calling numbers for a batch prediction outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26738,7 +27398,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改活动外呼号码</para>
+        /// <para>Modifies the calling numbers for a batch prediction outbound campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26756,7 +27416,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26810,7 +27470,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26864,7 +27524,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26882,7 +27542,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>You can invoke ModifyCustomCallTagging to modify the description and attached number tags of an inbound number mark for a specified number under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26900,7 +27560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26946,7 +27606,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26992,7 +27652,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27010,7 +27670,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>You can invoke ModifyInstance to modify a Cloud Contact Center instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27028,7 +27688,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改电话号码</para>
+        /// <para>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27082,7 +27742,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改电话号码</para>
+        /// <para>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27136,7 +27796,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改电话号码</para>
+        /// <para>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27154,7 +27814,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改电话号码</para>
+        /// <para>You can invoke ModifyPhoneNumber to modify the information of a specified phone number under a specified instance, primarily to update the number\&quot;s usage and the attached contact flow ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27172,7 +27832,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改技能组</para>
+        /// <para>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27226,7 +27886,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改技能组</para>
+        /// <para>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27280,7 +27940,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改技能组</para>
+        /// <para>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27298,7 +27958,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改技能组</para>
+        /// <para>You can invoke ModifySkillGroup to modify the information of a skill group associated with a specified skill group ID under a specified instance, primarily updating the skill group\&quot;s display name and description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27316,7 +27976,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组</para>
+        /// <para>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27366,7 +28026,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组</para>
+        /// <para>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27416,7 +28076,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组</para>
+        /// <para>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27434,7 +28094,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组</para>
+        /// <para>Modify the skill level of a specified agent in one or more skill groups under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27452,7 +28112,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席</para>
+        /// <para>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27530,7 +28190,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席</para>
+        /// <para>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27608,7 +28268,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席</para>
+        /// <para>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27626,7 +28286,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席</para>
+        /// <para>You can invoke ModifyUser to modify the information of a specified agent under a specified instance. You can modify the phone number, work mode, role, and agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27644,7 +28304,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组级别</para>
+        /// <para>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27694,7 +28354,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组级别</para>
+        /// <para>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27744,7 +28404,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组级别</para>
+        /// <para>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27762,7 +28422,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改坐席技能组级别</para>
+        /// <para>You can invoke ModifyUserLevelsOfSkillGroup to modify the skill levels of one or more agents under a specified skill group in a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27780,7 +28440,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话监听</para>
+        /// <para>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27838,7 +28498,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话监听</para>
+        /// <para>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27896,7 +28556,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话监听</para>
+        /// <para>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27914,7 +28574,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通话监听</para>
+        /// <para>You can invoke MonitorCall to listen to a call associated with a specified call ID under a specified instance. The call must be in a state where both the agent and the customer are normally connected, and the agent initiating the listening must have permission to monitor the target agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27932,7 +28592,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静音</para>
+        /// <para>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27990,7 +28650,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静音</para>
+        /// <para>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28048,7 +28708,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静音</para>
+        /// <para>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28066,7 +28726,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>静音</para>
+        /// <para>You can invoke MuteCall to mute the call associated with a specified call ID under a specified instance. This operation can only be invoked by an agent who is in a talking state, and the agent can only mute themselves. After the agent mutes themselves, the customer will no longer hear the agent\&quot;s voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28084,7 +28744,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停预测式外呼活动</para>
+        /// <para>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28130,7 +28790,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停预测式外呼活动</para>
+        /// <para>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28176,7 +28836,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停预测式外呼活动</para>
+        /// <para>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28194,7 +28854,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停预测式外呼活动</para>
+        /// <para>Invoke PauseCampaign to pause the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28212,7 +28872,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选择外呼号码</para>
+        /// <para>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28266,7 +28926,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选择外呼号码</para>
+        /// <para>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28320,7 +28980,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选择外呼号码</para>
+        /// <para>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28338,7 +28998,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>选择外呼号码</para>
+        /// <para>You can invoke PickOutboundNumbers to select an appropriate caller number based on the provided callee number. The number selection logic is controlled by an Intelligent algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28356,7 +29016,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询座席状态</para>
+        /// <para>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28406,7 +29066,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询座席状态</para>
+        /// <para>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28456,7 +29116,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询座席状态</para>
+        /// <para>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28474,7 +29134,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询座席状态</para>
+        /// <para>Polls the agent status of a specified agent under a specified instance. This operation is typically invoked by the frontend agent Workbench to synchronize agent status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28776,7 +29436,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布ivr流程</para>
+        /// <para>Publishes a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28826,7 +29486,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布ivr流程</para>
+        /// <para>Publishes a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28876,7 +29536,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布ivr流程</para>
+        /// <para>Publishes a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28894,7 +29554,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布ivr流程</para>
+        /// <para>Publishes a contact flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28912,7 +29572,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>就绪/示闲</para>
+        /// <para>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28966,7 +29626,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>就绪/示闲</para>
+        /// <para>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29020,7 +29680,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>就绪/示闲</para>
+        /// <para>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29038,7 +29698,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>就绪/示闲</para>
+        /// <para>You can invoke ReadyForService to make a specified agent under a specified instance ready. After becoming ready, the agent enters the idle status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29056,7 +29716,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重拨</para>
+        /// <para>Redial the number in the desensitized call record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29126,7 +29786,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重拨</para>
+        /// <para>Redial the number in the desensitized call record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29196,7 +29856,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重拨</para>
+        /// <para>Redial the number in the desensitized call record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29214,7 +29874,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重拨</para>
+        /// <para>Redial the number in the desensitized call record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29232,7 +29892,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29286,7 +29946,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29340,7 +30000,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29358,7 +30018,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers a Session Initiation Protocol (SIP) device with a specified agent in an instance. A SIP device can be a physical SIP phone or a softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29376,7 +30036,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29430,7 +30090,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29484,7 +30144,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29502,7 +30162,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册设备</para>
+        /// <para>Registers one or more SIP devices to specified agents in an instance. A SIP device can be a SIP phone or a SIP softphone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29518,6 +30178,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RegisterDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects a chat assigned to an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectChatRequest
         /// </param>
@@ -29559,6 +30224,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RejectChatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects a chat assigned to an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectChatRequest
         /// </param>
@@ -29600,6 +30270,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RejectChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects a chat assigned to an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectChatRequest
         /// </param>
@@ -29613,6 +30288,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RejectChatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects a chat assigned to an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectChatRequest
         /// </param>
@@ -29626,6 +30306,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RejectChatWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectTicketRequest
         /// </param>
@@ -29671,6 +30356,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RejectTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectTicketRequest
         /// </param>
@@ -29716,6 +30406,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<RejectTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectTicketRequest
         /// </param>
@@ -29729,6 +30424,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return RejectTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Use the RejectTicket operation to reject a ticket. The ticket creator can add information to a rejected ticket and then resubmit it.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RejectTicketRequest
         /// </param>
@@ -29744,7 +30444,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放对话</para>
+        /// <para>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29802,7 +30502,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放对话</para>
+        /// <para>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29860,7 +30560,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放对话</para>
+        /// <para>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29878,7 +30578,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放对话</para>
+        /// <para>You can invoke ReleaseCall to hang up the call associated with a specified call ID under a specified instance. The invoker must be an agent and currently in a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29894,6 +30594,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ReleaseCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ReleaseChat operation ends the current chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseChatRequest
         /// </param>
@@ -29947,6 +30652,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReleaseChatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ReleaseChat operation ends the current chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseChatRequest
         /// </param>
@@ -30000,6 +30710,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ReleaseChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ReleaseChat operation ends the current chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseChatRequest
         /// </param>
@@ -30013,6 +30728,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ReleaseChatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>The ReleaseChat operation ends the current chat.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseChatRequest
         /// </param>
@@ -30028,7 +30748,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Removes the blacklist tag from a specified phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30078,7 +30798,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Removes the blacklist tag from a specified phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30128,7 +30848,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Removes the blacklist tag from a specified phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30146,7 +30866,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑呼入控制号码</para>
+        /// <para>Removes the blacklist tag from a specified phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30164,7 +30884,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除黑名单号码</para>
+        /// <para>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30210,7 +30930,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除黑名单号码</para>
+        /// <para>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30256,7 +30976,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除黑名单号码</para>
+        /// <para>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30274,7 +30994,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除黑名单号码</para>
+        /// <para>You can invoke RemoveDoNotCallNumbers to delete one or more Do Not Call number configuration items under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30292,7 +31012,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除个人号码</para>
+        /// <para>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30342,7 +31062,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除个人号码</para>
+        /// <para>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30392,7 +31112,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除个人号码</para>
+        /// <para>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30410,7 +31130,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除个人号码</para>
+        /// <para>You can invoke RemovePersonalNumbersFromUser to delete one or more personal outbound numbers associated with a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30428,7 +31148,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30478,7 +31198,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30528,7 +31248,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30546,7 +31266,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumberFromSkillGroups to delete the binding relationship between a specified phone number and one or more skill groups under a given instance. This operation removes only the association between the phone number and the skill groups, not the actual phone number itself.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30564,7 +31284,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除电话号码</para>
+        /// <para>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30614,7 +31334,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除电话号码</para>
+        /// <para>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30664,7 +31384,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除电话号码</para>
+        /// <para>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30682,7 +31402,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除电话号码</para>
+        /// <para>Removes one or more numbers from an instance. This action disassociates the numbers from the instance but does not permanently delete them. It also disassociates all associated resources, such as skill groups, contact flows, and agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30700,7 +31420,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30750,7 +31470,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30800,7 +31520,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30818,7 +31538,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除技能组下的电话号码</para>
+        /// <para>You can invoke RemovePhoneNumbersFromSkillGroup to delete the association between one or more phone numbers and a specified skill group under a given instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30836,7 +31556,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除多个技能组下的坐席</para>
+        /// <para>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30886,7 +31606,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除多个技能组下的坐席</para>
+        /// <para>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30936,7 +31656,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除多个技能组下的坐席</para>
+        /// <para>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30954,7 +31674,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除多个技能组下的坐席</para>
+        /// <para>You can invoke RemoveSkillGroupsFromUser to delete the association between one or more skill groups and a specified agent under a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30972,7 +31692,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席</para>
+        /// <para>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31030,7 +31750,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席</para>
+        /// <para>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31088,7 +31808,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席</para>
+        /// <para>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31106,7 +31826,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席</para>
+        /// <para>You can invoke RemoveUsers to delete one or more agents from a specified instance. This operation only detaches the RAM accounts from the instance and removes the agents mapped to those RAM accounts from the instance. It does not delete the RAM accounts themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31124,7 +31844,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席下的技能组</para>
+        /// <para>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31174,7 +31894,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席下的技能组</para>
+        /// <para>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31224,7 +31944,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席下的技能组</para>
+        /// <para>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31242,7 +31962,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除坐席下的技能组</para>
+        /// <para>You can invoke RemoveUsersFromSkillGroup to delete the association between one or more agents and a specified skill group under a specified instance. This operation only removes the association between the skill group and the agents and does not delete the agents themselves.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31260,7 +31980,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席状态</para>
+        /// <para>Resets the state of a specific agent in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31310,7 +32030,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席状态</para>
+        /// <para>Resets the state of a specific agent in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31360,7 +32080,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席状态</para>
+        /// <para>Resets the state of a specific agent in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31378,7 +32098,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席状态</para>
+        /// <para>Resets the state of a specific agent in a specific instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31396,7 +32116,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席密码</para>
+        /// <para>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31446,7 +32166,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席密码</para>
+        /// <para>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31496,7 +32216,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席密码</para>
+        /// <para>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31514,7 +32234,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置坐席密码</para>
+        /// <para>Invoke ResetUserPassword to reset the logon password of a specified agent under a specified instance. In practice, agents do not have logon passwords; this operation actually modifies the logon password of the RAM account associated with the agent. This is typically used in scenarios where a customer service representative forgets the logon password of their RAM account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31532,7 +32252,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>录音解冻</para>
+        /// <para>Restores call recordings for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31578,7 +32298,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>录音解冻</para>
+        /// <para>Restores call recordings for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31624,7 +32344,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>录音解冻</para>
+        /// <para>Restores call recordings for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31642,7 +32362,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>录音解冻</para>
+        /// <para>Restores call recordings for the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31658,6 +32378,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await RestoreArchivedRecordingsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResubmitTicketRequest
         /// </param>
@@ -31703,6 +32428,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResubmitTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResubmitTicketRequest
         /// </param>
@@ -31748,6 +32478,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ResubmitTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResubmitTicketRequest
         /// </param>
@@ -31761,6 +32496,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ResubmitTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use the ResubmitTicket API to resubmit a rejected or returned ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResubmitTicketRequest
         /// </param>
@@ -31776,7 +32516,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复预测式外呼活动</para>
+        /// <para>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31822,7 +32562,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复预测式外呼活动</para>
+        /// <para>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31868,7 +32608,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复预测式外呼活动</para>
+        /// <para>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31886,7 +32626,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复预测式外呼活动</para>
+        /// <para>Invoke ResumeCampaign to recover the predictive outbound calling Activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31904,7 +32644,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取回</para>
+        /// <para>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31962,7 +32702,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取回</para>
+        /// <para>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32020,7 +32760,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取回</para>
+        /// <para>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32038,7 +32778,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取回</para>
+        /// <para>You can invoke RetrieveCall to retrieve a call associated with a specified call ID under a specified instance. The call must be on hold for the retrieve operation to be performed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32188,7 +32928,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32250,7 +32990,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32312,7 +33052,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32330,7 +33070,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke SaveRTCStatsV2 to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. This API is not relevant for regular customers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32348,7 +33088,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存终端埋点日志</para>
+        /// <para>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32422,7 +33162,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存终端埋点日志</para>
+        /// <para>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32496,7 +33236,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存终端埋点日志</para>
+        /// <para>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32514,7 +33254,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存终端埋点日志</para>
+        /// <para>Invoke the SaveTerminalLog API to report agent-side log information. Regular customers do not need to be concerned with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32532,7 +33272,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32594,7 +33334,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32656,7 +33396,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32674,7 +33414,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRTCStats API to report Web Real-Time Communication (WebRTC) voice transmission statistics information from the agent side. Regular customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32692,7 +33432,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32750,7 +33490,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32808,7 +33548,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32826,7 +33566,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>客服侧数据收集</para>
+        /// <para>Invoke the SaveWebRtcInfo API to report WebRTC call status information from the agent side, including call quality monitoring data, for backend statistics and monitoring. Customers do not need to concern themselves with this API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32844,7 +33584,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在接通的电话上发送DTMF信号</para>
+        /// <para>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32906,7 +33646,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在接通的电话上发送DTMF信号</para>
+        /// <para>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32968,7 +33708,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在接通的电话上发送DTMF信号</para>
+        /// <para>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32986,7 +33726,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在接通的电话上发送DTMF信号</para>
+        /// <para>You can invoke SendDtmfSignaling to send DTMF keypress information during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33156,7 +33896,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线</para>
+        /// <para>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33218,7 +33958,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线</para>
+        /// <para>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33280,7 +34020,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线</para>
+        /// <para>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33298,7 +34038,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上线</para>
+        /// <para>You can invoke SignInGroup to sign an agent into a specified skill group under a specified instance, which is the operation for publishing the agent online.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33316,7 +34056,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线</para>
+        /// <para>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33366,7 +34106,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线</para>
+        /// <para>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33416,7 +34156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线</para>
+        /// <para>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33434,7 +34174,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线</para>
+        /// <para>You can call SignOutGroup to check out an agent from the skill group they are currently signed into, which is equivalent to performing an unpublish operation for the agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33452,8 +34192,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>双呼</para>
+        /// <para>You can invoke StartBack2BackCall to initiate a back-to-back call.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
@@ -33518,8 +34263,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>双呼</para>
+        /// <para>You can invoke StartBack2BackCall to initiate a back-to-back call.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
@@ -33584,8 +34334,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>双呼</para>
+        /// <para>You can invoke StartBack2BackCall to initiate a back-to-back call.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
@@ -33602,8 +34357,13 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>双呼</para>
+        /// <para>You can invoke StartBack2BackCall to initiate a back-to-back call.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A back-to-back call differs from a traditional two-party call in that the caller does not directly call the callee. Instead, a Back-to-Back Agent is used. The Back-to-Back Agent first calls the caller, and after the connection is established, it calls the callee and then joins both parties into a single conference. In this mode, because all message streams of each call pass through the Back-to-Back Agent, the service provider (SP) can offer value-added services such as call timing, call recording, and number masking.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartBack2BackCallRequest
@@ -33618,6 +34378,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await StartBack2BackCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a chat session.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// StartChatRequest
         /// </param>
@@ -33673,6 +34438,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartChatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a chat session.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// StartChatRequest
         /// </param>
@@ -33728,6 +34498,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<StartChatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a chat session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartChatRequest
         /// </param>
@@ -33741,6 +34516,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return StartChatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a chat session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartChatRequest
         /// </param>
@@ -33756,7 +34536,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始会议</para>
+        /// <para>You can invoke StartConference to initiate a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33814,7 +34594,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始会议</para>
+        /// <para>You can invoke StartConference to initiate a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33872,7 +34652,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始会议</para>
+        /// <para>You can invoke StartConference to initiate a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33890,7 +34670,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始会议</para>
+        /// <para>You can invoke StartConference to initiate a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33908,7 +34688,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑ivr流程</para>
+        /// <para>Start editing a contact flow and generate a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33954,7 +34734,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑ivr流程</para>
+        /// <para>Start editing a contact flow and generate a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34000,7 +34780,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑ivr流程</para>
+        /// <para>Start editing a contact flow and generate a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34018,7 +34798,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑ivr流程</para>
+        /// <para>Start editing a contact flow and generate a draft version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34036,8 +34816,15 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始预测试外呼</para>
+        /// <para>Invoke StartPredictiveCall to initiate predictive outbound calling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+        /// For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+        /// Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
@@ -34110,8 +34897,15 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始预测试外呼</para>
+        /// <para>Invoke StartPredictiveCall to initiate predictive outbound calling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+        /// For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+        /// Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
@@ -34184,8 +34978,15 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始预测试外呼</para>
+        /// <para>Invoke StartPredictiveCall to initiate predictive outbound calling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+        /// For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+        /// Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
@@ -34202,8 +35003,15 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始预测试外呼</para>
+        /// <para>Invoke StartPredictiveCall to initiate predictive outbound calling.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to supporting agents initiating outbound calls from the agent Workbench, Cloud Call Center also enables your Operational System backend to initiate outbound calls and transfer the call to an agent after it is answered. This allows you to seamlessly embed Cloud Call Center features into your Business Process.
+        /// For example, your Customer can enter their phone number on your WeChat Official Account and click a button to inquire about a product. Your backend system then invokes this API to call the Customer’s Phone. After the call is connected, the system plays back the message: “We have received your inquiry about our product via the Official Account. We are now connecting you to an advisor. Please wait.” The call is then transferred to an appropriate agent.
+        /// Compared with the DialEX API in version 1.0, this API offers greater flexibility in configuration. In addition to customizing the IVR for transfer-in, you can also pass custom parameters, which can be played back by voice within the IVR to support notification scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartPredictiveCallRequest
@@ -34220,7 +35028,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起隐私呼叫</para>
+        /// <para>Starts a privacy call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34274,7 +35082,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起隐私呼叫</para>
+        /// <para>Starts a privacy call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34328,7 +35136,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起隐私呼叫</para>
+        /// <para>Starts a privacy call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34346,7 +35154,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发起隐私呼叫</para>
+        /// <para>Starts a privacy call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34364,7 +35172,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交预测式外呼活动</para>
+        /// <para>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34410,7 +35218,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交预测式外呼活动</para>
+        /// <para>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34456,7 +35264,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交预测式外呼活动</para>
+        /// <para>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34474,7 +35282,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交预测式外呼活动</para>
+        /// <para>Invoke SubmitCampaign to start the predictive outbound calling activity corresponding to the specified ID under the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34492,7 +35300,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换关注/咨询转到会议</para>
+        /// <para>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34546,7 +35354,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换关注/咨询转到会议</para>
+        /// <para>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34600,7 +35408,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换关注/咨询转到会议</para>
+        /// <para>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34618,7 +35426,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换关注/咨询转到会议</para>
+        /// <para>You can invoke SwitchToConference to switch the status of a specified call under a specified instance to a three-party conference. This is typically used in scenarios where a consultation is converted into a conference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34636,7 +35444,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>小休</para>
+        /// <para>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34690,7 +35498,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>小休</para>
+        /// <para>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34744,7 +35552,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>小休</para>
+        /// <para>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34762,7 +35570,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>小休</para>
+        /// <para>You can invoke TakeBreak to set a specified agent in a specified instance to the break state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34778,6 +35586,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await TakeBreakWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateTicketRequest
         /// </param>
@@ -34823,6 +35636,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TerminateTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateTicketRequest
         /// </param>
@@ -34868,6 +35686,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TerminateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateTicketRequest
         /// </param>
@@ -34881,6 +35704,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TerminateTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Closes a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateTicketRequest
         /// </param>
@@ -34894,6 +35722,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await TerminateTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call TransferTicketTask to transfer a ticket to another user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferTicketTaskRequest
         /// </param>
@@ -34947,6 +35780,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TransferTicketTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call TransferTicketTask to transfer a ticket to another user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferTicketTaskRequest
         /// </param>
@@ -35000,6 +35838,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<TransferTicketTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call TransferTicketTask to transfer a ticket to another user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferTicketTaskRequest
         /// </param>
@@ -35013,6 +35856,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TransferTicketTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call TransferTicketTask to transfer a ticket to another user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferTicketTaskRequest
         /// </param>
@@ -35028,7 +35876,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消静音</para>
+        /// <para>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35086,7 +35934,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消静音</para>
+        /// <para>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35144,7 +35992,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消静音</para>
+        /// <para>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35162,7 +36010,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消静音</para>
+        /// <para>[responses_200_schema_properties_Data_properties_UserContext_properties_UserState_type]string</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35180,7 +36028,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册设备</para>
+        /// <para>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35226,7 +36074,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册设备</para>
+        /// <para>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35272,7 +36120,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册设备</para>
+        /// <para>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35290,7 +36138,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除注册设备</para>
+        /// <para>You can invoke UnregisterDevice to delete the device registration record of a specified agent under a specified instance. After deletion, the SIP phone or SIP softphone associated with the agent becomes inactive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35308,7 +36156,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话小结</para>
+        /// <para>Updates a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35358,7 +36206,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话小结</para>
+        /// <para>Updates a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35408,7 +36256,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话小结</para>
+        /// <para>Updates a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35426,7 +36274,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话小结</para>
+        /// <para>Updates a call summary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35444,7 +36292,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预测试外呼活动</para>
+        /// <para>Updates outbound campaign parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35514,7 +36362,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预测试外呼活动</para>
+        /// <para>Updates outbound campaign parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35584,7 +36432,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预测试外呼活动</para>
+        /// <para>Updates outbound campaign parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35602,7 +36450,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预测试外呼活动</para>
+        /// <para>Updates outbound campaign parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35618,6 +36466,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await UpdateCampaignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use UpdateChatRoutingProfile to configure session transfers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateChatRoutingProfileRequest
         /// </param>
@@ -35659,6 +36512,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use UpdateChatRoutingProfile to configure session transfers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateChatRoutingProfileRequest
         /// </param>
@@ -35700,6 +36558,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateChatRoutingProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use UpdateChatRoutingProfile to configure session transfers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateChatRoutingProfileRequest
         /// </param>
@@ -35713,6 +36576,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return UpdateChatRoutingProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use UpdateChatRoutingProfile to configure session transfers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateChatRoutingProfileRequest
         /// </param>
@@ -35728,7 +36596,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35782,7 +36650,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35836,7 +36704,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35854,7 +36722,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新系统配置</para>
+        /// <para>Use the UpdateConfigItems operation to add or modify configuration items for an instance, such as hiding the caller ID for inbound calls or allowing agents to hang up.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36008,7 +36876,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSubscription</para>
+        /// <para>Use the UpdateSubscription operation to configure message subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36086,7 +36954,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSubscription</para>
+        /// <para>Use the UpdateSubscription operation to configure message subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36164,7 +37032,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSubscription</para>
+        /// <para>Use the UpdateSubscription operation to configure message subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36182,7 +37050,7 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateSubscription</para>
+        /// <para>Use the UpdateSubscription operation to configure message subscriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36198,6 +37066,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await UpdateSubscriptionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateTicket updates the content of a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTicketRequest
         /// </param>
@@ -36251,6 +37124,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateTicket updates the content of a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTicketRequest
         /// </param>
@@ -36304,6 +37182,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<UpdateTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateTicket updates the content of a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTicketRequest
         /// </param>
@@ -36317,6 +37200,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return UpdateTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>UpdateTicket updates the content of a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateTicketRequest
         /// </param>
@@ -36330,6 +37218,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await UpdateTicketWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use WithdrawTicket to withdraw a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// WithdrawTicketRequest
         /// </param>
@@ -36375,6 +37268,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<WithdrawTicketResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use WithdrawTicket to withdraw a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// WithdrawTicketRequest
         /// </param>
@@ -36420,6 +37318,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<WithdrawTicketResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use WithdrawTicket to withdraw a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// WithdrawTicketRequest
         /// </param>
@@ -36433,6 +37336,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return WithdrawTicketWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can use WithdrawTicket to withdraw a ticket.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// WithdrawTicketRequest
         /// </param>

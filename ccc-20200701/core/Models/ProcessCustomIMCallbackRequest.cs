@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ProcessCustomIMCallbackRequest : TeaModel {
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AccessChannelId { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,13 +43,29 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The message content.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>消息内容，格式如下：</para>
+        /// <para>文本消息：
+        /// { &quot;contentType&quot;:&quot;Text&quot;, &quot;text&quot;:&quot;你好  &quot; }</para>
+        /// <para>图片消息：
+        /// { &quot;contentType&quot;:&quot;Image&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot;, &quot;fileType&quot;: &quot;png&quot;, &quot;fileSize&quot;: 1233 }</para>
+        /// <para>视频消息：
+        /// { &quot;contentType&quot;:&quot;Video&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot; &quot;duration&quot;: 12, &quot;fileSize&quot;: 1233, }</para>
+        /// <para>音频消息：
+        /// { &quot;contentType&quot;:&quot;Audio&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot; &quot;duration&quot;: 12, &quot;fileSize&quot;: 1233 }</para>
+        /// <para>文件消息：
+        /// { &quot;contentType&quot;:&quot;File&quot;, &quot;mediaId&quot;: &quot;xxx-xxx-xxx&quot;, &quot;fileSize&quot;: 223232, &quot;filename&quot;: &quot;xyz. zip&quot; }</para>
         /// </summary>
         [NameInMap("MessageContent")]
         [Validation(Required=false)]
         public string MessageContent { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03C67DAD-EB26-41D8-949D-9B0C470FB716</para>
         /// </summary>
@@ -55,6 +74,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The profile picture ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -63,6 +84,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SenderAvatarMediaId { get; set; }
 
         /// <summary>
+        /// <para>The user ID of the message sender.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +95,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SenderId { get; set; }
 
         /// <summary>
+        /// <para>The name of the sender.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tom</para>
         /// </summary>

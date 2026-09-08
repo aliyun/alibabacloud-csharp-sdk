@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class SaveWebRTCStatsRequest : TeaModel {
         /// <summary>
+        /// <para>The call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>General information.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[null,&quot;&quot;,&quot;&quot;,&quot;1647337928819&quot;,&quot;1647337888816&quot;,&quot;agent&quot;,null,&quot;上海&quot;,&quot;10.10.XX.XX&quot;,&quot;11.1.XX.XX&quot;,&quot;2002&quot;]</para>
         /// </summary>
         [NameInMap("GeneralInfo")]
         [Validation(Required=false)]
         public string GeneralInfo { get; set; }
 
         /// <summary>
+        /// <para>The access point address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +43,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string GoogAddress { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +54,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The content of the receiver report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +65,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ReceiverReport { get; set; }
 
         /// <summary>
+        /// <para>The content of the sender report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

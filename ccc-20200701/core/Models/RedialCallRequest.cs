@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class RedialCallRequest : TeaModel {
         /// <summary>
+        /// <para>Callee number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1318888****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Callee { get; set; }
 
         /// <summary>
+        /// <para>Caller number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0109810****</para>
         /// </summary>
@@ -25,11 +29,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Caller { get; set; }
 
+        /// <summary>
+        /// <para>Unique ID provided by the agent endpoint to identify an agent Workbench.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CCC-x.x.x.x-chrome102-bsdf911812c60f61e</para>
+        /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID of the call center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Call job ID. The job ID of the previous call used for redialing.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-6581536084722****</para>
         /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Per-call data. It must not exceed 128 bytes and is primarily used for extension purposes. Ordinary customers do not need to pay attention to it.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a=b</para>
         /// </summary>
@@ -56,6 +71,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Tags { get; set; }
 
         /// <summary>
+        /// <para>Timeout. If the call is not answered within the time specified by this parameter, it is automatically disconnected.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -64,6 +81,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? TimeoutSeconds { get; set; }
 
         /// <summary>
+        /// <para>User ID of the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>samzhang@abc</para>
         /// </summary>

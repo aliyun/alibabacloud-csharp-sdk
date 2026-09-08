@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ClaimCallRequest : TeaModel {
         /// <summary>
+        /// <para>A JSON string that lists the agents and their corresponding skill groups eligible to claim the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         /// {
@@ -23,6 +25,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CandidateUserListJson { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,6 +36,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the skill group that the call is assigned to.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_sg_****@ccc-test</para>
         /// </summary>
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupId { get; set; }
 
         /// <summary>
+        /// <para>A unique business identifier for scheduling purposes. Subsequent event notifications include this identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tags</para>
         /// </summary>
@@ -59,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Tags { get; set; }
 
         /// <summary>
+        /// <para>The ID of the agent claiming the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>invoker@ccc-test</para>
         /// </summary>

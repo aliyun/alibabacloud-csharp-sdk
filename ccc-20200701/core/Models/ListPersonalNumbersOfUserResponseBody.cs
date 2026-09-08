@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListPersonalNumbersOfUserResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListPersonalNumbersOfUserResponseBodyData Data { get; set; }
         public class ListPersonalNumbersOfUserResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of numbers.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListPersonalNumbersOfUserResponseBodyDataList> List { get; set; }
             public class ListPersonalNumbersOfUserResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether the number is active.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -33,11 +43,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public bool? Active { get; set; }
 
+                /// <summary>
+                /// <para>The city where the phone number is registered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>乐山</para>
+                /// </summary>
                 [NameInMap("City")]
                 [Validation(Required=false)]
                 public string City { get; set; }
 
                 /// <summary>
+                /// <para>ID of the IVR contact flow associated with this number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>a3fb6c62-9b49-4942-ae5b-cf2abd4123ek</para>
                 /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string ContactFlowId { get; set; }
 
                 /// <summary>
+                /// <para>Instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ccc-test</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>08330011****</para>
                 /// </summary>
@@ -61,6 +83,12 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string Number { get; set; }
 
+                /// <summary>
+                /// <para>The province where the phone number is registered.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>四川</para>
+                /// </summary>
                 [NameInMap("Province")]
                 [Validation(Required=false)]
                 public string Province { get; set; }
@@ -68,6 +96,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             }
 
             /// <summary>
+            /// <para>Page number, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -76,6 +106,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Page size, ranging from 1 to 100.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -84,6 +116,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -94,6 +128,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -101,11 +137,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EEEE671A-3E24-4A04-81E6-6C4F5B39DF75</para>
         /// </summary>

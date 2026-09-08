@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListMultiChannelRecordingsRequest : TeaModel {
         /// <summary>
+        /// <para>Agent call channel ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ch-user-<b><b>-</b></b>-1772180844645-job-******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AgentChannelId { get; set; }
 
         /// <summary>
+        /// <para>Agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>Call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

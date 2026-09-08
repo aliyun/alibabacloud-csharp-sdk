@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetVisitorLoginDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>Chat device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ChatDeviceId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ccc-test</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Channel token for network services.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9XYGTGWtq2wFi_Bpg7aUnIoYi_vG_rO3b<em><b>YtsxbHRHrYHlz1LDBLJAyZcLxieRQR4h_6AnWvTjJeNU5jgxzO</b></em>**bHwej7WgWrmA</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>Visitor ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

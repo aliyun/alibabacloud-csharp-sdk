@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ModifyPhoneNumberRequest : TeaModel {
         /// <summary>
+        /// <para>The IVR contact flow ID attached to the number. This field is valid only when the number usage is Inbound or Bidirection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>78128960-bb00-4ddc-8a82-923a8c5bd22d</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ContactFlowId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Number { get; set; }
 
         /// <summary>
+        /// <para>Number usage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

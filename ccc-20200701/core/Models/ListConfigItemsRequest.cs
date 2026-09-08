@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListConfigItemsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the object to which the config item applies. This can be the ID of an Alibaba Cloud account, an instance, a skill group, or an agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ObjectId { get; set; }
 
         /// <summary>
+        /// <para>The type of the object.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class WithdrawTicketRequest : TeaModel {
         /// <summary>
+        /// <para>The comments.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>撤回，补充信息</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +32,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ticket ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

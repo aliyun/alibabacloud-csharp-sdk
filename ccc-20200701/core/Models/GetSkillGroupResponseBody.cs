@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class GetSkillGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,19 +19,36 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSkillGroupResponseBodyData Data { get; set; }
         public class GetSkillGroupResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Description of the skill group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>云联络中心的测试技能组。</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>Display name of the skill group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试技能组</para>
+            /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -37,11 +56,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Media type. The default value is AUDIO. Other valid values include CHAT and VIDEO.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>VIDEO</para>
+            /// </summary>
             [NameInMap("MediaType")]
             [Validation(Required=false)]
             public string MediaType { get; set; }
 
             /// <summary>
+            /// <para>Name of the skill group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>skillgroup</para>
             /// </summary>
@@ -50,6 +77,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Skill group ID, in the format: skill group name\@instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>skillgroup@ccc-test</para>
             /// </summary>
@@ -60,6 +89,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -67,11 +98,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>Response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CF1C21B9-2D49-4B54-880F-FBE248C16903</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListAgentStatesRequest : TeaModel {
         /// <summary>
+        /// <para>Filters by a list of agent IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent@ccc-test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string AgentIds { get; set; }
 
         /// <summary>
+        /// <para>Filters out offline agents. This parameter is fixed to true and does not support false at present.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// 
@@ -29,6 +33,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? ExcludeOfflineUsers { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +44,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Page number, ranging from 1 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -47,6 +54,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size, ranging from 1 to 300.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -55,6 +64,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filters by skill group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>skillgroup@ccc-test</para>
         /// </summary>
@@ -63,6 +74,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string SkillGroupId { get; set; }
 
         /// <summary>
+        /// <para>Filters agents by status. Only a single status can be specified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
         /// </summary>

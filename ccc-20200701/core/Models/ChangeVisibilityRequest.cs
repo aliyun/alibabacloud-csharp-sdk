@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ChangeVisibilityRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Connect Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to set the agent\&quot;s status to invisible.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public bool? Invisible { get; set; }
 
         /// <summary>
+        /// <para>The ID of the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sam@szpczf</para>
         /// </summary>

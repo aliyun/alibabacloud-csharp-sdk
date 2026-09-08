@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListNotificationRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Contact Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>A list of notification keys to query. For example, if you specify a call ID, the API returns all notifications for that call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

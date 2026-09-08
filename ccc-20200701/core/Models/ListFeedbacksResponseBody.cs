@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListFeedbacksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned dataset.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFeedbacksResponseBodyData> Data { get; set; }
         public class ListFeedbacksResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The call ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>job-25920271311543****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string ContactId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ccc-test</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20251216-8B9B7B02-16FE-54BE-942A-F59DE0656032</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The task name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PostCallAnalyzer:solution</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string TaskName { get; set; }
 
             /// <summary>
+            /// <para>The user\&quot;s rating for the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-1</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public int? UserRating { get; set; }
 
             /// <summary>
+            /// <para>The data from user feedback.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxxxxx</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -79,11 +98,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26E54929-CA86-1035-9B42-0C8F291BB027</para>
         /// </summary>

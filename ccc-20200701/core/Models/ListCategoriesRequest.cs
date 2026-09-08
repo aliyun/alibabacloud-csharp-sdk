@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListCategoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ticket category. Specify this parameter to return information about the subcategories of the specified category. If you leave this parameter empty, information about all categories in the instance is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43c2671b-<em><b>-</b></em>-86d0-6bd187905cc8</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The category type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Ticket</para>
         /// </summary>

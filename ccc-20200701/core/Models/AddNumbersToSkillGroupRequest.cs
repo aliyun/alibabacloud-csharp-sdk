@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AddNumbersToSkillGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of phone number group IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;38f5b191-b764-45b8-bd93-4b65f839e13a&quot;]</para>
+        /// </summary>
         [NameInMap("InstNumberGroupIdList")]
         [Validation(Required=false)]
         public string InstNumberGroupIdList { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of phone numbers. Ensure that the phone numbers already exist in the current instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;0103182****&quot;,&quot;0102387****&quot;]</para>
         /// </summary>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NumberList { get; set; }
 
         /// <summary>
+        /// <para>The skill group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

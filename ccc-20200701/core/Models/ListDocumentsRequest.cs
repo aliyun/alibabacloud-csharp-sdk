@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class ListDocumentsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJ0YWJsZUlkIjoiY2Y2MTQxYjA5NDY0NDUxMzk5YjFjMTA5YTMxZWNkMzEiLCJ0b2tlbiI6IjAwMDAwMDAwMDAwNzAzNzcifQ==</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EAF3C248-E123-441B-A545-B6CD02E98EED</para>
         /// </summary>
@@ -44,7 +51,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>schema id</para>
+        /// <para>The schema ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,15 +61,32 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string SchemaId { get; set; }
 
+        /// <summary>
+        /// <para>The search conditional expression.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>支持Lucene搜索语法</para>
+        /// </summary>
         [NameInMap("SearchPattern")]
         [Validation(Required=false)]
         public string SearchPattern { get; set; }
 
+        /// <summary>
+        /// <para>The custom sorting value.</para>
+        /// </summary>
         [NameInMap("Sorts")]
         [Validation(Required=false)]
         public List<ListDocumentsRequestSorts> Sorts { get; set; }
         public class ListDocumentsRequestSorts : TeaModel {
             /// <summary>
+            /// <para>The sorting order. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ASC (default): ascending order.</para>
+            /// </description></item>
+            /// <item><description><para>DESC: descending order.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -71,6 +95,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
             public string Order { get; set; }
 
             /// <summary>
+            /// <para>The field name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>

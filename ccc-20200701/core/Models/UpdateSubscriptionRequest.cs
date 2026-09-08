@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class UpdateSubscriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The endpoint for MQ. The service endpoint for webhook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,19 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         [Validation(Required=false)]
         public string AccessPoint { get; set; }
 
+        /// <summary>
+        /// <para>Leave blank.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("AliyunUid")]
         [Validation(Required=false)]
         public long? AliyunUid { get; set; }
 
         /// <summary>
+        /// <para>For MQ, enter the topic name. For webhook, enter Topic_Webhook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ccc-event</para>
         /// </summary>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string DefaultTopic { get; set; }
 
         /// <summary>
+        /// <para>The message subscription checklist.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +52,7 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string EventSubscriptionsJson { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Cloud Contact Center instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +63,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The MQ instance ID. Specify this only when MqType is rocketmq4 or rocketmq5.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rmq-cn-****</para>
         /// </summary>
@@ -60,6 +73,16 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string MqInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The message push type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>rocketmq4</para>
+        /// </description></item>
+        /// <item><description><para>rocketmq5</para>
+        /// </description></item>
+        /// <item><description><para>webhook</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>rocketmq5</para>
         /// </summary>
@@ -68,6 +91,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string MqType { get; set; }
 
         /// <summary>
+        /// <para>The MQ password. Specify this only when MqType is rocketmq5.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>password</para>
         /// </summary>
@@ -76,6 +101,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>For Message Queue (MQ), enter the Group ID. For webhook, enter PID_Webhook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GID_xxx</para>
         /// </summary>
@@ -84,6 +111,8 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
         public string ProducerId { get; set; }
 
         /// <summary>
+        /// <para>The MQ username. Specify this only when MqType is rocketmq5.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>username</para>
         /// </summary>
