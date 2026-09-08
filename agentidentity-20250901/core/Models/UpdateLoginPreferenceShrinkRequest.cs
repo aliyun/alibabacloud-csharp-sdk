@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class UpdateLoginPreferenceShrinkRequest : TeaModel {
+        [NameInMap("AllowedPostLogoutRedirectUris")]
+        [Validation(Required=false)]
+        public string AllowedPostLogoutRedirectUrisShrink { get; set; }
+
         [NameInMap("LoginPreference")]
         [Validation(Required=false)]
         public string LoginPreferenceShrink { get; set; }

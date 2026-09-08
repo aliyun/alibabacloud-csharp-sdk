@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>idaas_xxxx</para>
+            /// </summary>
+            [NameInMap("IDaaSInstanceId")]
+            [Validation(Required=false)]
+            public string IDaaSInstanceId { get; set; }
+
             [NameInMap("OAuth2CredentialProviderName")]
             [Validation(Required=false)]
             public string OAuth2CredentialProviderName { get; set; }
@@ -44,6 +52,34 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [NameInMap("OAuthType")]
             [Validation(Required=false)]
             public string OAuthType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>app_xxxxx</para>
+            /// </summary>
+            [NameInMap("OutboundApplicationId")]
+            [Validation(Required=false)]
+            public string OutboundApplicationId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>agent-xxxx</para>
+            /// </summary>
+            [NameInMap("OutboundAudience")]
+            [Validation(Required=false)]
+            public string OutboundAudience { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>client_xxxx</para>
+            /// </summary>
+            [NameInMap("OutboundClientId")]
+            [Validation(Required=false)]
+            public string OutboundClientId { get; set; }
+
+            [NameInMap("SourcePlatform")]
+            [Validation(Required=false)]
+            public string SourcePlatform { get; set; }
 
             [NameInMap("TokenVaultName")]
             [Validation(Required=false)]

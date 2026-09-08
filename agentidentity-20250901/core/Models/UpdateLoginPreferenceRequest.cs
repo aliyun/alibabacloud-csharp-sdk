@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class UpdateLoginPreferenceRequest : TeaModel {
+        [NameInMap("AllowedPostLogoutRedirectUris")]
+        [Validation(Required=false)]
+        public List<string> AllowedPostLogoutRedirectUris { get; set; }
+
         [NameInMap("LoginPreference")]
         [Validation(Required=false)]
         public UpdateLoginPreferenceRequestLoginPreference LoginPreference { get; set; }

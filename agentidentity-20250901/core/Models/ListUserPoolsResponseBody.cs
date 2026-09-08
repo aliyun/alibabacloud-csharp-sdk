@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("OIDCDiscoveryURL")]
+            [Validation(Required=false)]
+            public string OIDCDiscoveryURL { get; set; }
+
+            [NameInMap("SigninBaseURL")]
+            [Validation(Required=false)]
+            public string SigninBaseURL { get; set; }
+
             [NameInMap("SourcePlatform")]
             [Validation(Required=false)]
             public string SourcePlatform { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
 {
     public class CreateWorkloadIdentityShrinkRequest : TeaModel {
+        [NameInMap("AllowedConsentCallbackURLs")]
+        [Validation(Required=false)]
+        public string AllowedConsentCallbackURLsShrink { get; set; }
+
         [NameInMap("AllowedResourceOAuth2ReturnURLs")]
         [Validation(Required=false)]
         public string AllowedResourceOAuth2ReturnURLsShrink { get; set; }

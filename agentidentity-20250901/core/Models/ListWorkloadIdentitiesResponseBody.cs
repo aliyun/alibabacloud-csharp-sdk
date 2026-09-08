@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public List<ListWorkloadIdentitiesResponseBodyWorkloadIdentities> WorkloadIdentities { get; set; }
         public class ListWorkloadIdentitiesResponseBodyWorkloadIdentities : TeaModel {
+            [NameInMap("AllowedConsentCallbackURLs")]
+            [Validation(Required=false)]
+            public List<string> AllowedConsentCallbackURLs { get; set; }
+
             [NameInMap("AllowedResourceOAuth2ReturnURLs")]
             [Validation(Required=false)]
             public List<string> AllowedResourceOAuth2ReturnURLs { get; set; }

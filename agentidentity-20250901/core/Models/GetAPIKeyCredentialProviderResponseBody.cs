@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("SourcePlatform")]
+            [Validation(Required=false)]
+            public string SourcePlatform { get; set; }
+
             [NameInMap("TokenVaultName")]
             [Validation(Required=false)]
             public string TokenVaultName { get; set; }

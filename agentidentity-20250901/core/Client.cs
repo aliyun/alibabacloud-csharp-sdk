@@ -2133,11 +2133,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateWorkloadIdentityShrinkRequest request = new CreateWorkloadIdentityShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedConsentCallbackURLs))
+            {
+                request.AllowedConsentCallbackURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedResourceOAuth2ReturnURLs))
             {
                 request.AllowedResourceOAuth2ReturnURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedConsentCallbackURLsShrink))
+            {
+                body["AllowedConsentCallbackURLs"] = request.AllowedConsentCallbackURLsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedResourceOAuth2ReturnURLsShrink))
             {
                 body["AllowedResourceOAuth2ReturnURLs"] = request.AllowedResourceOAuth2ReturnURLsShrink;
@@ -2213,11 +2221,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateWorkloadIdentityShrinkRequest request = new CreateWorkloadIdentityShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedConsentCallbackURLs))
+            {
+                request.AllowedConsentCallbackURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedResourceOAuth2ReturnURLs))
             {
                 request.AllowedResourceOAuth2ReturnURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedConsentCallbackURLsShrink))
+            {
+                body["AllowedConsentCallbackURLs"] = request.AllowedConsentCallbackURLsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedResourceOAuth2ReturnURLsShrink))
             {
                 body["AllowedResourceOAuth2ReturnURLs"] = request.AllowedResourceOAuth2ReturnURLsShrink;
@@ -9569,11 +9585,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateLoginPreferenceShrinkRequest request = new UpdateLoginPreferenceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedPostLogoutRedirectUris))
+            {
+                request.AllowedPostLogoutRedirectUrisShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedPostLogoutRedirectUris, "AllowedPostLogoutRedirectUris", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LoginPreference))
             {
                 request.LoginPreferenceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoginPreference, "LoginPreference", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedPostLogoutRedirectUrisShrink))
+            {
+                query["AllowedPostLogoutRedirectUris"] = request.AllowedPostLogoutRedirectUrisShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPreferenceShrink))
             {
                 query["LoginPreference"] = request.LoginPreferenceShrink;
@@ -9623,11 +9647,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateLoginPreferenceShrinkRequest request = new UpdateLoginPreferenceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedPostLogoutRedirectUris))
+            {
+                request.AllowedPostLogoutRedirectUrisShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedPostLogoutRedirectUris, "AllowedPostLogoutRedirectUris", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LoginPreference))
             {
                 request.LoginPreferenceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LoginPreference, "LoginPreference", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedPostLogoutRedirectUrisShrink))
+            {
+                query["AllowedPostLogoutRedirectUris"] = request.AllowedPostLogoutRedirectUrisShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoginPreferenceShrink))
             {
                 query["LoginPreference"] = request.LoginPreferenceShrink;
@@ -10909,11 +10941,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateWorkloadIdentityShrinkRequest request = new UpdateWorkloadIdentityShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedConsentCallbackURLs))
+            {
+                request.AllowedConsentCallbackURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedResourceOAuth2ReturnURLs))
             {
                 request.AllowedResourceOAuth2ReturnURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedConsentCallbackURLsShrink))
+            {
+                body["AllowedConsentCallbackURLs"] = request.AllowedConsentCallbackURLsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedResourceOAuth2ReturnURLsShrink))
             {
                 body["AllowedResourceOAuth2ReturnURLs"] = request.AllowedResourceOAuth2ReturnURLsShrink;
@@ -10977,11 +11017,19 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateWorkloadIdentityShrinkRequest request = new UpdateWorkloadIdentityShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedConsentCallbackURLs))
+            {
+                request.AllowedConsentCallbackURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedConsentCallbackURLs, "AllowedConsentCallbackURLs", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AllowedResourceOAuth2ReturnURLs))
             {
                 request.AllowedResourceOAuth2ReturnURLsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AllowedResourceOAuth2ReturnURLs, "AllowedResourceOAuth2ReturnURLs", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedConsentCallbackURLsShrink))
+            {
+                body["AllowedConsentCallbackURLs"] = request.AllowedConsentCallbackURLsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedResourceOAuth2ReturnURLsShrink))
             {
                 body["AllowedResourceOAuth2ReturnURLs"] = request.AllowedResourceOAuth2ReturnURLsShrink;
