@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
     public class UpdateMarketingPreferenceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The message returned when the call failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -34,6 +40,12 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

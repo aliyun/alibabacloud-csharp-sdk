@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
     public class ReadMarketingPreferenceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned by the system. For more information about error codes, see error codes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The execution result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ReadMarketingPreferenceResponseBodyData Data { get; set; }
         public class ReadMarketingPreferenceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether notifications are allowed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             public bool? AllowMarketing { get; set; }
 
             /// <summary>
+            /// <para>The email address of the contact in Account Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t*@qq.*</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             public string ContactEmail { get; set; }
 
             /// <summary>
+            /// <para>The contact ID in Account Center. A value of 0 indicates the account contact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             public long? ContactId { get; set; }
 
             /// <summary>
+            /// <para>The mobile phone number of the contact in Account Center (masked).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>130*123</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             public string ContactMobile { get; set; }
 
             /// <summary>
+            /// <para>The name of the contact in Account Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
             public string ContactName { get; set; }
 
             /// <summary>
+            /// <para>The position of the contact in Account Center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CEO</para>
             /// </summary>
@@ -72,14 +89,18 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         }
 
         /// <summary>
+        /// <para>The message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>Succeeded</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A5F62766-1C2F-1F56-A39D-63E3D30F0633</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

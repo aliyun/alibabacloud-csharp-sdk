@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
     public class ReadMarketingPreferenceRequest : TeaModel {
         /// <summary>
+        /// <para>The language.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The application name of the requester.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The business line of the requester.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string BizName { get; set; }
 
         /// <summary>
+        /// <para>The request protocol type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string CallerProtocol { get; set; }
 
         /// <summary>
+        /// <para>The source of the operation terminal.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string ClientSource { get; set; }
 
         /// <summary>
+        /// <para>The contact ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public long? ContactId { get; set; }
 
         /// <summary>
+        /// <para>The cookies of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string Cookies { get; set; }
 
         /// <summary>
+        /// <para>The URL of the source page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string SrcUrl { get; set; }
 
         /// <summary>
+        /// <para>The tenant information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string TenantCode { get; set; }
 
         /// <summary>
+        /// <para>The user type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>

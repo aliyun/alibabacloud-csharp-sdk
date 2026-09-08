@@ -2188,7 +2188,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户营销偏好</para>
+        /// <para>Retrieves the marketing preferences of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2266,7 +2266,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户营销偏好</para>
+        /// <para>Retrieves the marketing preferences of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2344,7 +2344,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户营销偏好</para>
+        /// <para>Retrieves the marketing preferences of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2362,7 +2362,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户营销偏好</para>
+        /// <para>Retrieves the marketing preferences of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3444,6 +3444,190 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the metadata service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadMetaConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadMetaConfigResponse
+        /// </returns>
+        public ReadMetaConfigResponse ReadMetaConfigWithOptions(ReadMetaConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerProtocol))
+            {
+                body["CallerProtocol"] = request.CallerProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSource))
+            {
+                body["ClientSource"] = request.ClientSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
+            {
+                body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
+            {
+                body["SrcUrl"] = request.SrcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                body["TenantCode"] = request.TenantCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
+            {
+                body["UidType"] = request.UidType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadMetaConfig",
+                Version = "2024-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadMetaConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadMetaConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadMetaConfigResponse
+        /// </returns>
+        public async Task<ReadMetaConfigResponse> ReadMetaConfigWithOptionsAsync(ReadMetaConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerProtocol))
+            {
+                body["CallerProtocol"] = request.CallerProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSource))
+            {
+                body["ClientSource"] = request.ClientSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
+            {
+                body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
+            {
+                body["SrcUrl"] = request.SrcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                body["TenantCode"] = request.TenantCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
+            {
+                body["UidType"] = request.UidType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReadMetaConfig",
+                Version = "2024-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReadMetaConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadMetaConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadMetaConfigResponse
+        /// </returns>
+        public ReadMetaConfigResponse ReadMetaConfig(ReadMetaConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ReadMetaConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the metadata service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ReadMetaConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReadMetaConfigResponse
+        /// </returns>
+        public async Task<ReadMetaConfigResponse> ReadMetaConfigAsync(ReadMetaConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ReadMetaConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the count of read messages for each category.</para>
         /// </summary>
         /// 
@@ -4040,7 +4224,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户订阅列表</para>
+        /// <para>Retrieves the subscription list of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4122,7 +4306,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户订阅列表</para>
+        /// <para>Retrieves the subscription list of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4204,7 +4388,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户订阅列表</para>
+        /// <para>Retrieves the subscription list of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4222,7 +4406,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户订阅列表</para>
+        /// <para>Retrieves the subscription list of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5076,7 +5260,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新营销偏好</para>
+        /// <para>Updates marketing preferences.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5158,7 +5342,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新营销偏好</para>
+        /// <para>Updates marketing preferences.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5240,7 +5424,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新营销偏好</para>
+        /// <para>Updates marketing preferences.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5258,7 +5442,7 @@ namespace AlibabaCloud.SDK.Notifications20241225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新营销偏好</para>
+        /// <para>Updates marketing preferences.</para>
         /// </summary>
         /// 
         /// <param name="request">

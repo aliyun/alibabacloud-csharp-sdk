@@ -8,9 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
-    public class ReadUserSubscriptionListRequest : TeaModel {
+    public class ReadMetaConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language type of the returned information. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -20,20 +24,20 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The application project name of the caller.</para>
+        /// <para>The application project name of the requester.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>xxxApp</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The business line of the caller.</para>
+        /// <para>The business line of the requester.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>SystemAlerts</para>
         /// </summary>
         [NameInMap("BizName")]
         [Validation(Required=false)]
@@ -43,44 +47,24 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         /// <para>The request protocol type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>https</para>
         /// </summary>
         [NameInMap("CallerProtocol")]
         [Validation(Required=false)]
         public string CallerProtocol { get; set; }
 
         /// <summary>
-        /// <para>The category group code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>prod_msg</para>
-        /// </summary>
-        [NameInMap("CategoryGroupCode")]
-        [Validation(Required=false)]
-        public string CategoryGroupCode { get; set; }
-
-        /// <summary>
-        /// <para>The channel group.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>base</para>
-        /// </summary>
-        [NameInMap("ChannelGroupCode")]
-        [Validation(Required=false)]
-        public string ChannelGroupCode { get; set; }
-
-        /// <summary>
         /// <para>The source of the operation terminal.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>h5</para>
         /// </summary>
         [NameInMap("ClientSource")]
         [Validation(Required=false)]
         public string ClientSource { get; set; }
 
         /// <summary>
-        /// <para>The cookies of the user.</para>
+        /// <para>The user cookies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -93,7 +77,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         /// <para>The URL of the source page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para><a href="https://example.com/notify,0">https://example.com/notify,0</a></para>
         /// </summary>
         [NameInMap("SrcUrl")]
         [Validation(Required=false)]
@@ -103,7 +87,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         /// <para>The tenant information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>T002</para>
         /// </summary>
         [NameInMap("TenantCode")]
         [Validation(Required=false)]
@@ -113,7 +97,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         /// <para>The user type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>aliyunPk</para>
         /// </summary>
         [NameInMap("UidType")]
         [Validation(Required=false)]
