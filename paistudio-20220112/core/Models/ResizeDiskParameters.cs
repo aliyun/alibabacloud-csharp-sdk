@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
-    public class Rules : TeaModel {
+    public class ResizeDiskParameters : TeaModel {
         /// <summary>
-        /// <para>The node scheduling rule configuration.</para>
+        /// <para>The target disk capacity after the change.</para>
         /// </summary>
-        [NameInMap("Scheduling")]
+        [NameInMap("NewDiskSize")]
         [Validation(Required=false)]
-        public SchedulingRule Scheduling { get; set; }
+        public string NewDiskSize { get; set; }
 
     }
 

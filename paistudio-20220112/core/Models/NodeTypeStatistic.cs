@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class NodeTypeStatistic : TeaModel {
         /// <summary>
+        /// <para>The number of resource nodes of the specification that can be bound.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? CanBeBoundCount { get; set; }
 
         /// <summary>
+        /// <para>The resource node specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.4xlarge</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeType { get; set; }
 
         /// <summary>
+        /// <para>The total number of resource nodes of the specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

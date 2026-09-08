@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotaActiveUserUsagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of user resource usage details.</para>
+        /// <para>The list of user resource usage details.</para>
         /// </summary>
         [NameInMap("QuotaUserUsage")]
         [Validation(Required=false)]
         public List<QuotaUser> QuotaUserUsage { get; set; }
 
+        /// <summary>
+        /// <para>The user usage information.</para>
+        /// </summary>
         [NameInMap("QuotaUserUsages")]
         [Validation(Required=false)]
         public List<QuotaUser> QuotaUserUsages { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7C42CC7-2E85-508A-84F4-923B605FD10F</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the filter criteria.</para>
+        /// <para>The number of instances that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of quotas.</para>
+        /// <para>The list of resource quotas.</para>
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the request.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23</para>

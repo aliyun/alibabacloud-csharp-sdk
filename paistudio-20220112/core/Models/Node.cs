@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class Node : TeaModel {
         /// <summary>
-        /// <para>The accelerator type of the resource node instance, such as CPU or GPU.</para>
+        /// <para>The accelerator type of the resource node specifications (CPU/GPU).</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPU</para>
@@ -20,14 +20,20 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AcceleratorType { get; set; }
 
         /// <summary>
-        /// <para>The number of allocatable CPU cores.</para>
+        /// <para>The number of CPU cores that can be allocated to users.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4</para>
         /// </summary>
         [NameInMap("AllocatableCPU")]
         [Validation(Required=false)]
         public string AllocatableCPU { get; set; }
 
         /// <summary>
-        /// <para>The amount of allocatable memory in GiB.</para>
+        /// <para>The memory size that can be allocated to users.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("AllocatableMemory")]
         [Validation(Required=false)]
@@ -37,12 +43,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? AncestorQuotaWorkloadNum { get; set; }
 
+        /// <summary>
+        /// <para>The zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C</para>
+        /// </summary>
         [NameInMap("AvailabilityZone")]
         [Validation(Required=false)]
         public string AvailabilityZone { get; set; }
 
         /// <summary>
-        /// <para>The list of quotas that are bound to the node.</para>
+        /// <para>The list of bound quotas.</para>
         /// </summary>
         [NameInMap("BoundQuotas")]
         [Validation(Required=false)]
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string CPU { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the resource node.</para>
+        /// <para>The creator of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>281044699048527748</para>
@@ -91,7 +103,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPU { get; set; }
 
         /// <summary>
-        /// <para>The GPU memory size in GiB.</para>
+        /// <para>The GPU memory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32</para>
         /// </summary>
         [NameInMap("GPUMemory")]
         [Validation(Required=false)]
@@ -110,7 +125,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The time when the resource node was created.</para>
+        /// <para>The creation time of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
@@ -120,12 +135,15 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Obsolete]
         public string GmtCreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The creation time of the resource node.</para>
+        /// </summary>
         [NameInMap("GmtCreatedTime")]
         [Validation(Required=false)]
         public string GmtCreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource node expires.</para>
+        /// <para>The expiration time of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-22T00:00:00Z</para>
@@ -135,7 +153,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GmtExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the resource node was last modified.</para>
+        /// <para>The update time of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-10T11:49:47Z</para>
@@ -144,12 +162,18 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
+        /// <summary>
+        /// <para>The high-speed interconnect zone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C3</para>
+        /// </summary>
         [NameInMap("HyperZone")]
         [Validation(Required=false)]
         public string HyperZone { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the node is bound to a quota.</para>
+        /// <para>Indicates whether the resource node is bound to a quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -179,7 +203,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LimitGPU { get; set; }
 
         /// <summary>
-        /// <para>The maximum memory size in GiB.</para>
+        /// <para>The maximum memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -199,7 +223,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string MachineGroupId { get; set; }
 
         /// <summary>
-        /// <para>The memory size in GiB.</para>
+        /// <para>The memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -207,6 +231,26 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public string Memory { get; set; }
+
+        /// <summary>
+        /// <para>The GPU memory of the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>640G</para>
+        /// </summary>
+        [NameInMap("NodeGPUMemory")]
+        [Validation(Required=false)]
+        public string NodeGPUMemory { get; set; }
+
+        /// <summary>
+        /// <para>The GPU memory of the node in bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>687194767360</para>
+        /// </summary>
+        [NameInMap("NodeGPUMemoryBytes")]
+        [Validation(Required=false)]
+        public long? NodeGPUMemoryBytes { get; set; }
 
         /// <summary>
         /// <para>The name of the resource node.</para>
@@ -229,7 +273,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string NodeStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the resource node.</para>
+        /// <para>The node specifications type of the resource node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c8i.xlarge</para>
@@ -299,7 +343,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestGPU { get; set; }
 
         /// <summary>
-        /// <para>The requested memory size in GiB.</para>
+        /// <para>The requested memory size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -332,19 +376,28 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public long? SelfQuotaWorkloadNum { get; set; }
 
+        /// <summary>
+        /// <para>The names of the child nodes.</para>
+        /// </summary>
         [NameInMap("SubNodes")]
         [Validation(Required=false)]
         public List<string> SubNodes { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores that are reserved for the system.</para>
+        /// <para>The number of system-reserved CPU cores.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("SystemReservedCPU")]
         [Validation(Required=false)]
         public string SystemReservedCPU { get; set; }
 
         /// <summary>
-        /// <para>The amount of memory that is reserved for the system in GiB.</para>
+        /// <para>The system-reserved memory size.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("SystemReservedMemory")]
         [Validation(Required=false)]

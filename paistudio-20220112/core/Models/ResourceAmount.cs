@@ -30,6 +30,22 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string GPU { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>80G</para>
+        /// </summary>
+        [NameInMap("GPUMemory")]
+        [Validation(Required=false)]
+        public string GPUMemory { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>85899345920</para>
+        /// </summary>
+        [NameInMap("GPUMemoryBytes")]
+        [Validation(Required=false)]
+        public long? GPUMemoryBytes { get; set; }
+
+        /// <summary>
         /// <para>GPU card type</para>
         /// 
         /// <b>Example:</b>

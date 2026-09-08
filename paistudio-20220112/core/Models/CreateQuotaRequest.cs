@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation strategy for the quota. Only <c>ByNodeSpecs</c> is supported.</para>
+        /// <para>The quota allocation strategy. Currently, only ByNodeSpecs is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ByNodeSpecs</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string AllocateStrategy { get; set; }
 
         /// <summary>
-        /// <para>The native cluster specification for the quota.</para>
+        /// <para>The specifications of the native cluster for the resource quota.</para>
         /// </summary>
         [NameInMap("ClusterSpec")]
         [Validation(Required=false)]
         public ClusterSpec ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The description of the quota.</para>
+        /// <para>The quota description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test quota</para>
@@ -37,30 +37,24 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The tags for the quota.</para>
+        /// <para>The quota labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The minimum resources for the quota. You can define this in one of the following ways:</para>
+        /// <para>The minimum quota configuration. Valid options:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ResourceAmount</c>: Specifies the CPU, memory, and GPU details.</para>
-        /// </description></item>
-        /// <item><description><para><c>NodeSpecs</c>: Specifies the node specification and the number of nodes.</para>
-        /// </description></item>
+        /// <item><description>ResourceAmount: specifies CPU, memory, or GPU details.</description></item>
+        /// <item><description>NodeSpecs: specifies the instance type and quantity.</description></item>
         /// </list>
         /// <para>Constraints:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this quota allocates resources from a dedicated resource group, you must use the <c>NodeSpecs</c> method.</para>
-        /// </description></item>
-        /// <item><description><para>If this quota allocates resources from a parent quota, both methods are allowed. However, all its child quotas must use the same method.</para>
-        /// </description></item>
-        /// <item><description><para>All GPU specifications within the quota must have the same GPU type.</para>
-        /// </description></item>
-        /// <item><description><para>For quotas with the resource type set to ECS or Lingjun, only the <c>NodeSpecs</c> method can be used.</para>
-        /// </description></item>
+        /// <item><description>If the quota allocates resources from a dedicated resource group, only the NodeSpecs strategy is allowed.</description></item>
+        /// <item><description>If the quota allocates resources from a parent quota, both strategies are allowed, but all child quotas must use the same strategy.</description></item>
+        /// <item><description>All GPU specifications within a quota must use the same GPU type.</description></item>
+        /// <item><description>Resource quotas with the ECS or Lingjun resource type can only use the NodeSpecs strategy.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Min")]
@@ -68,12 +62,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public ResourceSpec Min { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent quota.</para>
+        /// <para>The parent QuotaId:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, a root quota is created. Resources are allocated from a dedicated resource group.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify this parameter, a child quota is created. Resources are allocated from the nodes that are bound to the root quota.</para>
-        /// </description></item>
+        /// <item><description>If ParentQuotaId is empty, a root quota is created and machines are allocated from the dedicated resource group.</description></item>
+        /// <item><description>If ParentQuotaId is not empty, a child quota is created and resources are allocated from the nodes bound to the root quota.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,16 +76,12 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ParentQuotaId { get; set; }
 
         /// <summary>
-        /// <para>The queuing strategy for the quota. Four strategies are supported:</para>
+        /// <para>Four queuing policies are supported for quotas.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PaiStrategyIntelligent</c>: The intelligent strategy.</para>
-        /// </description></item>
-        /// <item><description><para><c>PaiStrategyBalance</c>: The balance strategy.</para>
-        /// </description></item>
-        /// <item><description><para><c>PaiStrategyRoundRobin</c>: The round-robin strategy.</para>
-        /// </description></item>
-        /// <item><description><para><c>PaiStrategyStrictFIFO</c>: The FIFO strategy.</para>
-        /// </description></item>
+        /// <item><description>PaiStrategyIntelligent: intelligent policies.</description></item>
+        /// <item><description>PaiStrategyBalance: balanced policy.</description></item>
+        /// <item><description>PaiStrategyRoundRobin: resource-priority policy.</description></item>
+        /// <item><description>PaiStrategyStrictFIFO: FIFO policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,12 +95,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QueueStrategy { get; set; }
 
         /// <summary>
-        /// <para>Constraints for the <c>QuotaConfig</c> parameter:</para>
+        /// <para>QuotaConfig configuration constraints:</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is ignored if the resource type is ECS or Lingjun.</para>
-        /// </description></item>
-        /// <item><description><para>If the resource type is ACS, the specified VPC and ACS configurations are applied.</para>
-        /// </description></item>
+        /// <item><description>This configuration does not take effect when the ECS or Lingjun resource type is used.</description></item>
+        /// <item><description>When the ACS resource type is used, the user VPC information and ACS configuration take effect.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("QuotaConfig")]
@@ -120,7 +106,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public QuotaConfig QuotaConfig { get; set; }
 
         /// <summary>
-        /// <para>The name of the quota.</para>
+        /// <para>The quota name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-quota</para>
@@ -130,12 +116,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the dedicated resource groups. The following constraints apply:</para>
+        /// <para>The list of dedicated resource groups. Constraints:</para>
         /// <list type="bullet">
-        /// <item><description><para>Only a root quota, for which <c>ParentQuotaId</c> is empty, can allocate nodes from a resource group.</para>
-        /// </description></item>
-        /// <item><description><para>The VPC configurations of the specified resource groups must be the same.</para>
-        /// </description></item>
+        /// <item><description>Only root quotas (where ParentQuotaId is empty) can allocate machines from resource groups.</description></item>
+        /// <item><description>The VPC configurations in the specified resource groups must be consistent.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
@@ -143,7 +127,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public List<string> ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type of the quota. Valid values: Lingjun, ECS, and ACS. Default value: ECS.</para>
+        /// <para>The quota resource type (Lingjun/ECS/ACS). Default value: ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>

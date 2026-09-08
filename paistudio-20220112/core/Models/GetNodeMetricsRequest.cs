@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time step. Default value: 5m. The supported time units are:</para>
+        /// <para>The time step. Default value: 5m. Valid values for the time unit:</para>
         /// <list type="bullet">
         /// <item><description><para>h: hours.</para>
         /// </description></item>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <item><description><para>s: seconds.</para>
         /// </description></item>
         /// </list>
-        /// <para>If the value does not contain a unit, the default unit is s (seconds).</para>
+        /// <para>If no unit is specified, the default unit is s (seconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1h</para>
@@ -66,10 +66,9 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string TimeStep { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes Labels.
-        /// Valid values:</para>
-        /// <para>false: does not display non-essential information (default value)
-        /// true: displays non-essential information</para>
+        /// <para>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</para>
+        /// <para>false: does not display non-essential information (default).
+        /// true: displays non-essential information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

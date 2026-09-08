@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class ListQuotasRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the results by cluster type.</para>
+        /// <para>The cluster type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RayCluster</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string HasResource { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by labels. Specify labels as key=value pairs, separated by commas (,).</para>
+        /// <para>Filters by label key and value. Separate multiple labels with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>official=true,gpu=false</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The layout mode. Valid values: Tree and List.</para>
+        /// <para>The display mode. Valid values: tree or list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tree</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string LayoutMode { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values are desc and asc.</para>
+        /// <para>The sort order. Valid values: desc or asc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return. The minimum value is 1.</para>
+        /// <para>The page number to query. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The minimum value is 1.</para>
+        /// <para>The number of entries per page. Minimum value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by parent quota ID:</para>
+        /// <para>Filters by ParentQuotaId:</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified, all quotas within the tenant are returned, including both root and child quotas.</para>
+        /// <item><description><para>Not specified: lists all quotas under the tenant, including root quotas and child quotas.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is set to an empty string, all root quotas are returned.</para>
+        /// <item><description><para>Empty string: lists all root quotas.</para>
         /// </description></item>
-        /// <item><description><para>If a specific parent quota ID is provided, all child quotas of that parent are returned.</para>
+        /// <item><description><para>Non-empty string: lists all child quotas of the specified ParentQuotaId.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ParentQuotaId { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of up to 100 quota IDs to filter the results. Only exact matching is supported.</para>
+        /// <para>Comma-separated QuotaIds for filtering. Only exact match is supported. A maximum of 100 IDs can be specified at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota1ci8g793pgm,quotajradxh43rgb</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaIds { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by quota name. Fuzzy matching is supported.</para>
+        /// <para>Filters by QuotaName. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotajradxh43rgb</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string QuotaName { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values are Lingjun, ECS, and ACS. The default value is ECS.</para>
+        /// <para>The resource type of the quota (Lingjun/ECS/ACS). Default value: ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>QuotaName</para>
         /// </description></item>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of quota statuses to filter the results. Only exact matching is supported.</para>
+        /// <para>Comma-separated quota statuses for filtering. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Creating</para>
@@ -162,12 +162,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Statuses { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return detailed information. Valid values:</para>
+        /// <para>Specifies whether to display details. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Returns detailed information.</para>
-        /// </description></item>
-        /// <item><description><para>false: Does not return detailed information.</para>
-        /// </description></item>
+        /// <item><description>true: Displays details.</description></item>
+        /// <item><description>false: Does not display details.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,7 +176,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by version.</para>
+        /// <para>Filters by version information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -188,7 +186,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string Versions { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of up to 10 workspace IDs to filter the results. Only exact matching is supported.</para>
+        /// <para>Comma-separated WorkspaceIds for filtering. Only exact match is supported. A maximum of 10 IDs can be specified at a time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21345,38727</para>

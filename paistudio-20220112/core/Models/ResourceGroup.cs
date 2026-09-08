@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>The user ID of the creator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>161228528250****</para>
+        /// <para>1612285282502324</para>
         /// </summary>
         [NameInMap("CreatorID")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <para>The ID of the PAI resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg17tmvwiokh****</para>
+        /// <para>rg17tmvwiokhzaxg</para>
         /// </summary>
         [NameInMap("ResourceGroupID")]
         [Validation(Required=false)]

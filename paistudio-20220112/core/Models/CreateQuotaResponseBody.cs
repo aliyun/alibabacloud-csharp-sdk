@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class CreateQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The quota ID.</para>
+        /// <para>The resource quota ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotad2kd8ljpsno</para>

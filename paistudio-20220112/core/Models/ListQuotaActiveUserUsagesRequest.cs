@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>desc</c>: descending order.</para>
-        /// </description></item>
-        /// <item><description><para><c>asc</c>: ascending order.</para>
-        /// </description></item>
+        /// <item><description>desc: descending order.</description></item>
+        /// <item><description>asc: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>If true, retrieves resource usage from the current quota only.</para>
+        /// <para>Specifies whether to view only the resource usage in the current quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,24 +54,16 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? SelfOnly { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid values:</para>
+        /// <para>The field by which to sort the returned results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>QuotaId</para>
-        /// </description></item>
-        /// <item><description><para>SubmittedCPU</para>
-        /// </description></item>
-        /// <item><description><para>SubmittedMemory</para>
-        /// </description></item>
-        /// <item><description><para>SubmittedGPU</para>
-        /// </description></item>
-        /// <item><description><para>UsedCPU</para>
-        /// </description></item>
-        /// <item><description><para>UsedMemory</para>
-        /// </description></item>
-        /// <item><description><para>UsedGPU</para>
-        /// </description></item>
-        /// <item><description><para>WorkloadCount</para>
-        /// </description></item>
+        /// <item><description>QuotaId</description></item>
+        /// <item><description>SubmittedCPU</description></item>
+        /// <item><description>SubmittedMemory</description></item>
+        /// <item><description>SubmittedGPU</description></item>
+        /// <item><description>UsedCPU</description></item>
+        /// <item><description>UsedMemory</description></item>
+        /// <item><description>UsedGPU</description></item>
+        /// <item><description>WorkloadCount</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +74,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by user ID.</para>
+        /// <para>The user ID for which to query resource usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200xxxxxx</para>
@@ -94,7 +84,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by username.</para>
+        /// <para>The username for which to query resource usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

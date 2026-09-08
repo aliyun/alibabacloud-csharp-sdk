@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sorting criterion.</para>
+        /// <para>The sorting field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtModified</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         /// <item><description><para>s: seconds.</para>
         /// </description></item>
         /// </list>
-        /// <para>If no unit is specified, the default unit s (seconds) is used.</para>
+        /// <para>If no unit is specified, the default unit is s (seconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1h</para>

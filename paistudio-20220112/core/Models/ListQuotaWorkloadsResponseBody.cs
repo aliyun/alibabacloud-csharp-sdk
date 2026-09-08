@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of workloads that match the filter criteria.</para>
+        /// <para>The number of instances that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>A list of workloads.</para>
+        /// <para>The list of workload information.</para>
         /// </summary>
         [NameInMap("Workloads")]
         [Validation(Required=false)]

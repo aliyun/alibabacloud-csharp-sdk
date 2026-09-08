@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
 {
     public class GetQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return detailed information.</para>
+        /// <para>Specifies whether to display detailed information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the metadata of nodes that are attached to the resource quota.</para>
+        /// <para>Specifies whether to return the node metadata bound to the quota.</para>
         /// </summary>
         [NameInMap("WithNodeMeta")]
         [Validation(Required=false)]

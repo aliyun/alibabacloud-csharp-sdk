@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         public string PodStatus { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to obtain information about the resource group.</para>
+        /// <para>The resource group ID. Each resource group has a globally unique resource group ID. You can use the resource group ID to retrieve information about the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
