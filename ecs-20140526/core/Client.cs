@@ -1901,23 +1901,23 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more IPv6 addresses to an Elastic Network Interface (ENI).</para>
+        /// <para>Allocates one or more IPv6 addresses to an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can specify IPv6 addresses from the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs, or specify the number of IPv6 addresses to enable automatic creation of IPv6 addresses. Note the following items:</para>
+        /// <para>You can specify IPv6 addresses within the CIDR block of the vSwitch to which the elastic network interface (ENI) belongs, or specify the number of IPv6 addresses for automatic creation of IPv6 addresses. Note the following items:</para>
         /// <list type="bullet">
         /// <item><description>The vSwitch to which the ENI belongs must have IPv6 enabled. For more information, see <a href="https://help.aliyun.com/document_detail/98923.html">Enable an IPv6 CIDR block for an existing vSwitch</a>.</description></item>
-        /// <item><description>The ENI must be in the Active (Available) or InUse state.</description></item>
-        /// <item><description>When you operate a primary ENI, the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>The number of IPv6 addresses that can be allocated to a single network interface controller (NIC) depends on the instance type of the instance to which the ENI is attached.<list type="bullet">
-        /// <item><description>If the ENI is in the Active (Available) state, up to 10 IPv6 addresses can be allocated.</description></item>
-        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</description></item>
+        /// <item><description>The ENI must be in the Active or InUse state.</description></item>
+        /// <item><description>When you operate on a primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>The number of IPv6 addresses that can be allocated to a single NIC depends on the instance type of the instance to which the NIC is attached.<list type="bullet">
+        /// <item><description>If the ENI is in the Active state, you can allocate up to 10 IPv6 addresses to the ENI.</description></item>
+        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2004,23 +2004,23 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more IPv6 addresses to an Elastic Network Interface (ENI).</para>
+        /// <para>Allocates one or more IPv6 addresses to an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can specify IPv6 addresses from the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs, or specify the number of IPv6 addresses to enable automatic creation of IPv6 addresses. Note the following items:</para>
+        /// <para>You can specify IPv6 addresses within the CIDR block of the vSwitch to which the elastic network interface (ENI) belongs, or specify the number of IPv6 addresses for automatic creation of IPv6 addresses. Note the following items:</para>
         /// <list type="bullet">
         /// <item><description>The vSwitch to which the ENI belongs must have IPv6 enabled. For more information, see <a href="https://help.aliyun.com/document_detail/98923.html">Enable an IPv6 CIDR block for an existing vSwitch</a>.</description></item>
-        /// <item><description>The ENI must be in the Active (Available) or InUse state.</description></item>
-        /// <item><description>When you operate a primary ENI, the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>The number of IPv6 addresses that can be allocated to a single network interface controller (NIC) depends on the instance type of the instance to which the ENI is attached.<list type="bullet">
-        /// <item><description>If the ENI is in the Active (Available) state, up to 10 IPv6 addresses can be allocated.</description></item>
-        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</description></item>
+        /// <item><description>The ENI must be in the Active or InUse state.</description></item>
+        /// <item><description>When you operate on a primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>The number of IPv6 addresses that can be allocated to a single NIC depends on the instance type of the instance to which the NIC is attached.<list type="bullet">
+        /// <item><description>If the ENI is in the Active state, you can allocate up to 10 IPv6 addresses to the ENI.</description></item>
+        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2107,23 +2107,23 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more IPv6 addresses to an Elastic Network Interface (ENI).</para>
+        /// <para>Allocates one or more IPv6 addresses to an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can specify IPv6 addresses from the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs, or specify the number of IPv6 addresses to enable automatic creation of IPv6 addresses. Note the following items:</para>
+        /// <para>You can specify IPv6 addresses within the CIDR block of the vSwitch to which the elastic network interface (ENI) belongs, or specify the number of IPv6 addresses for automatic creation of IPv6 addresses. Note the following items:</para>
         /// <list type="bullet">
         /// <item><description>The vSwitch to which the ENI belongs must have IPv6 enabled. For more information, see <a href="https://help.aliyun.com/document_detail/98923.html">Enable an IPv6 CIDR block for an existing vSwitch</a>.</description></item>
-        /// <item><description>The ENI must be in the Active (Available) or InUse state.</description></item>
-        /// <item><description>When you operate a primary ENI, the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>The number of IPv6 addresses that can be allocated to a single network interface controller (NIC) depends on the instance type of the instance to which the ENI is attached.<list type="bullet">
-        /// <item><description>If the ENI is in the Active (Available) state, up to 10 IPv6 addresses can be allocated.</description></item>
-        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</description></item>
+        /// <item><description>The ENI must be in the Active or InUse state.</description></item>
+        /// <item><description>When you operate on a primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>The number of IPv6 addresses that can be allocated to a single NIC depends on the instance type of the instance to which the NIC is attached.<list type="bullet">
+        /// <item><description>If the ENI is in the Active state, you can allocate up to 10 IPv6 addresses to the ENI.</description></item>
+        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2142,23 +2142,23 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns one or more IPv6 addresses to an Elastic Network Interface (ENI).</para>
+        /// <para>Allocates one or more IPv6 addresses to an elastic network interface (ENI).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can specify IPv6 addresses from the CIDR block of the vSwitch to which the Elastic Network Interface (ENI) belongs, or specify the number of IPv6 addresses to enable automatic creation of IPv6 addresses. Note the following items:</para>
+        /// <para>You can specify IPv6 addresses within the CIDR block of the vSwitch to which the elastic network interface (ENI) belongs, or specify the number of IPv6 addresses for automatic creation of IPv6 addresses. Note the following items:</para>
         /// <list type="bullet">
         /// <item><description>The vSwitch to which the ENI belongs must have IPv6 enabled. For more information, see <a href="https://help.aliyun.com/document_detail/98923.html">Enable an IPv6 CIDR block for an existing vSwitch</a>.</description></item>
-        /// <item><description>The ENI must be in the Active (Available) or InUse state.</description></item>
-        /// <item><description>When you operate a primary ENI, the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>The number of IPv6 addresses that can be allocated to a single network interface controller (NIC) depends on the instance type of the instance to which the ENI is attached.<list type="bullet">
-        /// <item><description>If the ENI is in the Active (Available) state, up to 10 IPv6 addresses can be allocated.</description></item>
-        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</description></item>
+        /// <item><description>The ENI must be in the Active or InUse state.</description></item>
+        /// <item><description>When you operate on a primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>The number of IPv6 addresses that can be allocated to a single NIC depends on the instance type of the instance to which the NIC is attached.<list type="bullet">
+        /// <item><description>If the ENI is in the Active state, you can allocate up to 10 IPv6 addresses to the ENI.</description></item>
+        /// <item><description>If the ENI is attached to an instance, the number of IPv6 addresses that can be allocated is limited by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated IPv6 address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2177,17 +2177,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
+        /// <para>Assigns one or more secondary private IP addresses to an elastic network interfaces (ENIs). You can specify idle private IP addresses from the vSwitch to which the elastic network interfaces (ENIs) belongs, or specify the number of private IP addresses to automatically allocate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only elastic network interfaces (ENIs) in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an elastic network interfaces (ENIs) is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2274,17 +2274,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
+        /// <para>Assigns one or more secondary private IP addresses to an elastic network interfaces (ENIs). You can specify idle private IP addresses from the vSwitch to which the elastic network interfaces (ENIs) belongs, or specify the number of private IP addresses to automatically allocate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only elastic network interfaces (ENIs) in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an elastic network interfaces (ENIs) is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2371,17 +2371,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
+        /// <para>Assigns one or more secondary private IP addresses to an elastic network interfaces (ENIs). You can specify idle private IP addresses from the vSwitch to which the elastic network interfaces (ENIs) belongs, or specify the number of private IP addresses to automatically allocate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only elastic network interfaces (ENIs) in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an elastic network interfaces (ENIs) is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2400,17 +2400,17 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allocates one or more secondary private IP addresses to an Elastic Network Interface (ENI). You can specify idle private IP addresses within the vSwitch to which the ENI belongs, or specify the number of private endpoint addresses to automatically allocate private IP addresses.</para>
+        /// <para>Assigns one or more secondary private IP addresses to an elastic network interfaces (ENIs). You can specify idle private IP addresses from the vSwitch to which the elastic network interfaces (ENIs) belongs, or specify the number of private IP addresses to automatically allocate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Only ENIs in the Available or InUse state are supported.</description></item>
-        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the NIC is attached must be in the Running or Stopped state.</description></item>
-        /// <item><description>When an Elastic Network Interface (ENI) is in the active (<c>Available</c>) state, you can allocate up to 49 secondary private IP addresses to it. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
-        /// <item><description>After you successfully invoke this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
+        /// <item><description>Only elastic network interfaces (ENIs) in the Available or InUse state are supported.</description></item>
+        /// <item><description>When you operate the primary network interface controller (NIC), the instance to which the network interface controller (NIC) is attached must be in the Running or Stopped state.</description></item>
+        /// <item><description>When an elastic network interfaces (ENIs) is in the Available state, you can allocate up to 49 secondary private IP addresses to the ENI. After the ENI is attached to an instance, the number of secondary private IP addresses that can be allocated to the ENI is subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</description></item>
+        /// <item><description>After you call this operation, you can obtain the allocated secondary private IP address information from the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31813,7 +31813,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine codes, usage status, and lists of created ECS instances on dedicated hosts. You can filter results by specifying parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details you need, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
+        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine code, usage status, and the list of created ECS instances on the dedicated hosts. You can specify parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details of dedicated hosts, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31821,7 +31821,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>You can query the details of one or more dedicated hosts by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Specify DedicatedHostIds to query the details of specific dedicated hosts.</description></item>
+        /// <item><description>Specify DedicatedHostIds to query the details of dedicated hosts.</description></item>
         /// <item><description>Specify DedicatedHostClusterId to query the details of dedicated hosts in a dedicated host cluster.</description></item>
         /// </list>
         /// </description>
@@ -31863,6 +31863,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedHostDetail))
+            {
+                query["NeedHostDetail"] = request.NeedHostDetail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -31941,7 +31945,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine codes, usage status, and lists of created ECS instances on dedicated hosts. You can filter results by specifying parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details you need, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
+        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine code, usage status, and the list of created ECS instances on the dedicated hosts. You can specify parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details of dedicated hosts, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31949,7 +31953,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>You can query the details of one or more dedicated hosts by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Specify DedicatedHostIds to query the details of specific dedicated hosts.</description></item>
+        /// <item><description>Specify DedicatedHostIds to query the details of dedicated hosts.</description></item>
         /// <item><description>Specify DedicatedHostClusterId to query the details of dedicated hosts in a dedicated host cluster.</description></item>
         /// </list>
         /// </description>
@@ -31991,6 +31995,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedHostDetail))
+            {
+                query["NeedHostDetail"] = request.NeedHostDetail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -32069,7 +32077,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine codes, usage status, and lists of created ECS instances on dedicated hosts. You can filter results by specifying parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details you need, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
+        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine code, usage status, and the list of created ECS instances on the dedicated hosts. You can specify parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details of dedicated hosts, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32077,7 +32085,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>You can query the details of one or more dedicated hosts by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Specify DedicatedHostIds to query the details of specific dedicated hosts.</description></item>
+        /// <item><description>Specify DedicatedHostIds to query the details of dedicated hosts.</description></item>
         /// <item><description>Specify DedicatedHostClusterId to query the details of dedicated hosts in a dedicated host cluster.</description></item>
         /// </list>
         /// </description>
@@ -32097,7 +32105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine codes, usage status, and lists of created ECS instances on dedicated hosts. You can filter results by specifying parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details you need, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
+        /// <para>Queries the details of one or more dedicated hosts. You can retrieve information such as the physical performance metrics, machine code, usage status, and the list of created ECS instances on the dedicated hosts. You can specify parameters such as dedicated host IDs, dedicated host cluster ID, hostname, and status to precisely query the details of dedicated hosts, providing strong support for efficient management and optimization of cloud computing compute resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32105,7 +32113,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>You can query the details of one or more dedicated hosts by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>Specify DedicatedHostIds to query the details of specific dedicated hosts.</description></item>
+        /// <item><description>Specify DedicatedHostIds to query the details of dedicated hosts.</description></item>
         /// <item><description>Specify DedicatedHostClusterId to query the details of dedicated hosts in a dedicated host cluster.</description></item>
         /// </list>
         /// </description>
@@ -50982,7 +50990,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The request parameters RegionId, DiskIds, and InstanceId act as filters. These parameters have a logical AND relationship.  </description></item>
-        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but the response is empty.</description></item>
+        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but an empty result set is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51078,7 +51086,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The request parameters RegionId, DiskIds, and InstanceId act as filters. These parameters have a logical AND relationship.  </description></item>
-        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but the response is empty.</description></item>
+        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but an empty result set is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51174,7 +51182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The request parameters RegionId, DiskIds, and InstanceId act as filters. These parameters have a logical AND relationship.  </description></item>
-        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but the response is empty.</description></item>
+        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but an empty result set is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -51202,7 +51210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>The request parameters RegionId, DiskIds, and InstanceId act as filters. These parameters have a logical AND relationship.  </description></item>
-        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but the response is empty.</description></item>
+        /// <item><description>If you do not specify any parameters, the filters do not take effect. If DiskIds and SnapshotLinkIds are both empty arrays, the filters are considered valid, but an empty result set is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69881,19 +69889,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the deployment set of an Elastic Compute Service (ECS) instance or migrates an ECS instance to a dedicated host. You can change the instance type of an ECS instance when you migrate the instance.</para>
+        /// <para>Modifies the deployment set of an ECS instance or migrates an ECS instance to a dedicated host. You can also change the instance type while migrating the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you migrate an ECS instance to a dedicated host or change the ECS instance type while migrating the instance, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the <b>Stopped</b> (Stopped) state. The instance is automatically restarted after it is migrated.</description></item>
-        /// <item><description>The network type of the instance must be Virtual Private Cloud (VPC).</description></item>
-        /// <item><description>The instance and the destination dedicated host to which to migrate the instance must belong to the same account and reside in the same region and zone.</description></item>
-        /// <item><description>A pay-as-you-go instance can be migrated to a subscription dedicated host. A subscription instance can be migrated only between subscription dedicated hosts. The expiration date of the subscription instance cannot be later than that of the destination dedicated host.</description></item>
-        /// <item><description>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or spot instances from a shared host to a dedicated host.</description></item>
-        /// <item><description>You can redeploy an instance to a specific dedicated host cluster.</description></item>
+        /// <item><description>The ECS instance must be in the <b>Stopped</b> state. The instance automatically restarts after migration.</description></item>
+        /// <item><description>Only VPC-connected ECS instances are supported.</description></item>
+        /// <item><description>The ECS instance and the dedicated host must belong to the same account, region, and zone.</description></item>
+        /// <item><description>Pay-as-you-go ECS instances can be migrated to subscription dedicated hosts. Subscription ECS instances can be migrated only between subscription dedicated hosts, and the instance expiration time cannot be later than the expiration time of the destination dedicated host.</description></item>
+        /// <item><description>When you migrate an ECS instance from a shared host to a dedicated host, the billing method of the instance must be pay-as-you-go. Subscription instances and spot instances are not supported.</description></item>
+        /// <item><description>ECS instances can be redeployed to a specified dedicated host cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69996,19 +70004,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the deployment set of an Elastic Compute Service (ECS) instance or migrates an ECS instance to a dedicated host. You can change the instance type of an ECS instance when you migrate the instance.</para>
+        /// <para>Modifies the deployment set of an ECS instance or migrates an ECS instance to a dedicated host. You can also change the instance type while migrating the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you migrate an ECS instance to a dedicated host or change the ECS instance type while migrating the instance, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the <b>Stopped</b> (Stopped) state. The instance is automatically restarted after it is migrated.</description></item>
-        /// <item><description>The network type of the instance must be Virtual Private Cloud (VPC).</description></item>
-        /// <item><description>The instance and the destination dedicated host to which to migrate the instance must belong to the same account and reside in the same region and zone.</description></item>
-        /// <item><description>A pay-as-you-go instance can be migrated to a subscription dedicated host. A subscription instance can be migrated only between subscription dedicated hosts. The expiration date of the subscription instance cannot be later than that of the destination dedicated host.</description></item>
-        /// <item><description>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or spot instances from a shared host to a dedicated host.</description></item>
-        /// <item><description>You can redeploy an instance to a specific dedicated host cluster.</description></item>
+        /// <item><description>The ECS instance must be in the <b>Stopped</b> state. The instance automatically restarts after migration.</description></item>
+        /// <item><description>Only VPC-connected ECS instances are supported.</description></item>
+        /// <item><description>The ECS instance and the dedicated host must belong to the same account, region, and zone.</description></item>
+        /// <item><description>Pay-as-you-go ECS instances can be migrated to subscription dedicated hosts. Subscription ECS instances can be migrated only between subscription dedicated hosts, and the instance expiration time cannot be later than the expiration time of the destination dedicated host.</description></item>
+        /// <item><description>When you migrate an ECS instance from a shared host to a dedicated host, the billing method of the instance must be pay-as-you-go. Subscription instances and spot instances are not supported.</description></item>
+        /// <item><description>ECS instances can be redeployed to a specified dedicated host cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -70111,19 +70119,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the deployment set of an Elastic Compute Service (ECS) instance or migrates an ECS instance to a dedicated host. You can change the instance type of an ECS instance when you migrate the instance.</para>
+        /// <para>Modifies the deployment set of an ECS instance or migrates an ECS instance to a dedicated host. You can also change the instance type while migrating the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you migrate an ECS instance to a dedicated host or change the ECS instance type while migrating the instance, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the <b>Stopped</b> (Stopped) state. The instance is automatically restarted after it is migrated.</description></item>
-        /// <item><description>The network type of the instance must be Virtual Private Cloud (VPC).</description></item>
-        /// <item><description>The instance and the destination dedicated host to which to migrate the instance must belong to the same account and reside in the same region and zone.</description></item>
-        /// <item><description>A pay-as-you-go instance can be migrated to a subscription dedicated host. A subscription instance can be migrated only between subscription dedicated hosts. The expiration date of the subscription instance cannot be later than that of the destination dedicated host.</description></item>
-        /// <item><description>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or spot instances from a shared host to a dedicated host.</description></item>
-        /// <item><description>You can redeploy an instance to a specific dedicated host cluster.</description></item>
+        /// <item><description>The ECS instance must be in the <b>Stopped</b> state. The instance automatically restarts after migration.</description></item>
+        /// <item><description>Only VPC-connected ECS instances are supported.</description></item>
+        /// <item><description>The ECS instance and the dedicated host must belong to the same account, region, and zone.</description></item>
+        /// <item><description>Pay-as-you-go ECS instances can be migrated to subscription dedicated hosts. Subscription ECS instances can be migrated only between subscription dedicated hosts, and the instance expiration time cannot be later than the expiration time of the destination dedicated host.</description></item>
+        /// <item><description>When you migrate an ECS instance from a shared host to a dedicated host, the billing method of the instance must be pay-as-you-go. Subscription instances and spot instances are not supported.</description></item>
+        /// <item><description>ECS instances can be redeployed to a specified dedicated host cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -70142,19 +70150,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the deployment set of an Elastic Compute Service (ECS) instance or migrates an ECS instance to a dedicated host. You can change the instance type of an ECS instance when you migrate the instance.</para>
+        /// <para>Modifies the deployment set of an ECS instance or migrates an ECS instance to a dedicated host. You can also change the instance type while migrating the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Take note of the following items:</para>
+        /// <para>When you migrate an ECS instance to a dedicated host or change the ECS instance type while migrating the instance, the following conditions must be met:</para>
         /// <list type="bullet">
-        /// <item><description>The instance must be in the <b>Stopped</b> (Stopped) state. The instance is automatically restarted after it is migrated.</description></item>
-        /// <item><description>The network type of the instance must be Virtual Private Cloud (VPC).</description></item>
-        /// <item><description>The instance and the destination dedicated host to which to migrate the instance must belong to the same account and reside in the same region and zone.</description></item>
-        /// <item><description>A pay-as-you-go instance can be migrated to a subscription dedicated host. A subscription instance can be migrated only between subscription dedicated hosts. The expiration date of the subscription instance cannot be later than that of the destination dedicated host.</description></item>
-        /// <item><description>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or spot instances from a shared host to a dedicated host.</description></item>
-        /// <item><description>You can redeploy an instance to a specific dedicated host cluster.</description></item>
+        /// <item><description>The ECS instance must be in the <b>Stopped</b> state. The instance automatically restarts after migration.</description></item>
+        /// <item><description>Only VPC-connected ECS instances are supported.</description></item>
+        /// <item><description>The ECS instance and the dedicated host must belong to the same account, region, and zone.</description></item>
+        /// <item><description>Pay-as-you-go ECS instances can be migrated to subscription dedicated hosts. Subscription ECS instances can be migrated only between subscription dedicated hosts, and the instance expiration time cannot be later than the expiration time of the destination dedicated host.</description></item>
+        /// <item><description>When you migrate an ECS instance from a shared host to a dedicated host, the billing method of the instance must be pay-as-you-go. Subscription instances and spot instances are not supported.</description></item>
+        /// <item><description>ECS instances can be redeployed to a specified dedicated host cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -71769,39 +71777,39 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance in a virtual private cloud (VPC) network type.</para>
+        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> state.</para>
+        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <list type="bullet">
-        /// <item><description>When you modify the private IP address or vSwitch of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the private IP address or vSwitch of an instance, note the following:<list type="bullet">
         /// <item><description>A newly created ECS instance must be restarted before you can call this operation.</description></item>
         /// <item><description>After a successful modification, the ECS instance must be restarted before you can call this operation again.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you modify the VPC of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the VPC of an instance, note the following:<list type="bullet">
         /// <item><description><para><b>Instance:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instance status: The instance cannot be locked, pending release, expired, in expiration recycling, or in overdue payment recycling. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
-        /// <item><description>ECS instances that are associated with load balancing instances are not supported.</description></item>
-        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be in migration, cannot have already initiated a VPC change, or cannot have its database managed by Data Transmission Service (DTS).</description></item>
+        /// <item><description>Instance status: The instance cannot be in the locked, pending release, expired, expiring, or overdue payment states. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
+        /// <item><description>ECS instances associated with a load balancing instance are not supported.</description></item>
+        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be undergoing migration, cannot already be switching VPCs, and databases deployed on the instance cannot be managed by DTS.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>Network:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instances configured with EIP in network interface controller (NIC) visible pattern or multi-EIP to NIC visible pattern are not supported.</description></item>
-        /// <item><description>Instances attached to a high availability virtual IP address (HaVip) are not supported.</description></item>
-        /// <item><description>Instances whose vSwitch is associated with a custom route table are not supported.</description></item>
+        /// <item><description>Instances configured with EIP-visible mode or multi-EIP-visible mode on their Elastic Network Interfaces (ENIs) are not supported.</description></item>
+        /// <item><description>Instances attached to a High Availability Virtual IP (HaVip) are not supported.</description></item>
+        /// <item><description>Instances whose vSwitch is attached to a custom route table are not supported.</description></item>
         /// <item><description>Instances with Global Accelerator (GA) enabled are not supported.</description></item>
         /// <item><description>Instances attached to secondary Elastic Network Interfaces (ENIs) are not supported.</description></item>
-        /// <item><description>Instances that have been allocated IPv6 addresses are not supported.</description></item>
-        /// <item><description>Instances whose primary NIC has multiple IP addresses are not supported.</description></item>
-        /// <item><description>The specified vSwitch must belong to the destination VPC.</description></item>
+        /// <item><description>Instances with IPv6 addresses allocated are not supported.</description></item>
+        /// <item><description>Instances whose primary network interface controller (NIC) has multiple IP addresses are not supported.</description></item>
+        /// <item><description>The specified vSwitch must belong to the target VPC.</description></item>
         /// <item><description>The zone of the vSwitch must remain the same before and after the modification.</description></item>
-        /// <item><description>If you specify a private IP for the primary NIC, the IP address must be active and within the CIDR block of the vSwitch. If you do not specify one, an IP address is randomly allocated. Make sure that the destination vSwitch has a sufficient available IP address count.</description></item>
-        /// <item><description>If you use a VPC shared by another account, make sure that the destination security group was created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
+        /// <item><description>If you specify a private IP for the primary network interface controller (NIC), the IP address must be within the vSwitch CIDR block and available. If you do not specify one, an IP address is randomly allocated, and the target vSwitch must have sufficient available IP addresses.</description></item>
+        /// <item><description>If you are using a VPC shared with you by another account, make sure that the target security group is created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -71880,39 +71888,39 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance in a virtual private cloud (VPC) network type.</para>
+        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> state.</para>
+        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <list type="bullet">
-        /// <item><description>When you modify the private IP address or vSwitch of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the private IP address or vSwitch of an instance, note the following:<list type="bullet">
         /// <item><description>A newly created ECS instance must be restarted before you can call this operation.</description></item>
         /// <item><description>After a successful modification, the ECS instance must be restarted before you can call this operation again.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you modify the VPC of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the VPC of an instance, note the following:<list type="bullet">
         /// <item><description><para><b>Instance:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instance status: The instance cannot be locked, pending release, expired, in expiration recycling, or in overdue payment recycling. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
-        /// <item><description>ECS instances that are associated with load balancing instances are not supported.</description></item>
-        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be in migration, cannot have already initiated a VPC change, or cannot have its database managed by Data Transmission Service (DTS).</description></item>
+        /// <item><description>Instance status: The instance cannot be in the locked, pending release, expired, expiring, or overdue payment states. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
+        /// <item><description>ECS instances associated with a load balancing instance are not supported.</description></item>
+        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be undergoing migration, cannot already be switching VPCs, and databases deployed on the instance cannot be managed by DTS.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>Network:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instances configured with EIP in network interface controller (NIC) visible pattern or multi-EIP to NIC visible pattern are not supported.</description></item>
-        /// <item><description>Instances attached to a high availability virtual IP address (HaVip) are not supported.</description></item>
-        /// <item><description>Instances whose vSwitch is associated with a custom route table are not supported.</description></item>
+        /// <item><description>Instances configured with EIP-visible mode or multi-EIP-visible mode on their Elastic Network Interfaces (ENIs) are not supported.</description></item>
+        /// <item><description>Instances attached to a High Availability Virtual IP (HaVip) are not supported.</description></item>
+        /// <item><description>Instances whose vSwitch is attached to a custom route table are not supported.</description></item>
         /// <item><description>Instances with Global Accelerator (GA) enabled are not supported.</description></item>
         /// <item><description>Instances attached to secondary Elastic Network Interfaces (ENIs) are not supported.</description></item>
-        /// <item><description>Instances that have been allocated IPv6 addresses are not supported.</description></item>
-        /// <item><description>Instances whose primary NIC has multiple IP addresses are not supported.</description></item>
-        /// <item><description>The specified vSwitch must belong to the destination VPC.</description></item>
+        /// <item><description>Instances with IPv6 addresses allocated are not supported.</description></item>
+        /// <item><description>Instances whose primary network interface controller (NIC) has multiple IP addresses are not supported.</description></item>
+        /// <item><description>The specified vSwitch must belong to the target VPC.</description></item>
         /// <item><description>The zone of the vSwitch must remain the same before and after the modification.</description></item>
-        /// <item><description>If you specify a private IP for the primary NIC, the IP address must be active and within the CIDR block of the vSwitch. If you do not specify one, an IP address is randomly allocated. Make sure that the destination vSwitch has a sufficient available IP address count.</description></item>
-        /// <item><description>If you use a VPC shared by another account, make sure that the destination security group was created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
+        /// <item><description>If you specify a private IP for the primary network interface controller (NIC), the IP address must be within the vSwitch CIDR block and available. If you do not specify one, an IP address is randomly allocated, and the target vSwitch must have sufficient available IP addresses.</description></item>
+        /// <item><description>If you are using a VPC shared with you by another account, make sure that the target security group is created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -71991,39 +71999,39 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance in a virtual private cloud (VPC) network type.</para>
+        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> state.</para>
+        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <list type="bullet">
-        /// <item><description>When you modify the private IP address or vSwitch of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the private IP address or vSwitch of an instance, note the following:<list type="bullet">
         /// <item><description>A newly created ECS instance must be restarted before you can call this operation.</description></item>
         /// <item><description>After a successful modification, the ECS instance must be restarted before you can call this operation again.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you modify the VPC of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the VPC of an instance, note the following:<list type="bullet">
         /// <item><description><para><b>Instance:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instance status: The instance cannot be locked, pending release, expired, in expiration recycling, or in overdue payment recycling. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
-        /// <item><description>ECS instances that are associated with load balancing instances are not supported.</description></item>
-        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be in migration, cannot have already initiated a VPC change, or cannot have its database managed by Data Transmission Service (DTS).</description></item>
+        /// <item><description>Instance status: The instance cannot be in the locked, pending release, expired, expiring, or overdue payment states. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
+        /// <item><description>ECS instances associated with a load balancing instance are not supported.</description></item>
+        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be undergoing migration, cannot already be switching VPCs, and databases deployed on the instance cannot be managed by DTS.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>Network:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instances configured with EIP in network interface controller (NIC) visible pattern or multi-EIP to NIC visible pattern are not supported.</description></item>
-        /// <item><description>Instances attached to a high availability virtual IP address (HaVip) are not supported.</description></item>
-        /// <item><description>Instances whose vSwitch is associated with a custom route table are not supported.</description></item>
+        /// <item><description>Instances configured with EIP-visible mode or multi-EIP-visible mode on their Elastic Network Interfaces (ENIs) are not supported.</description></item>
+        /// <item><description>Instances attached to a High Availability Virtual IP (HaVip) are not supported.</description></item>
+        /// <item><description>Instances whose vSwitch is attached to a custom route table are not supported.</description></item>
         /// <item><description>Instances with Global Accelerator (GA) enabled are not supported.</description></item>
         /// <item><description>Instances attached to secondary Elastic Network Interfaces (ENIs) are not supported.</description></item>
-        /// <item><description>Instances that have been allocated IPv6 addresses are not supported.</description></item>
-        /// <item><description>Instances whose primary NIC has multiple IP addresses are not supported.</description></item>
-        /// <item><description>The specified vSwitch must belong to the destination VPC.</description></item>
+        /// <item><description>Instances with IPv6 addresses allocated are not supported.</description></item>
+        /// <item><description>Instances whose primary network interface controller (NIC) has multiple IP addresses are not supported.</description></item>
+        /// <item><description>The specified vSwitch must belong to the target VPC.</description></item>
         /// <item><description>The zone of the vSwitch must remain the same before and after the modification.</description></item>
-        /// <item><description>If you specify a private IP for the primary NIC, the IP address must be active and within the CIDR block of the vSwitch. If you do not specify one, an IP address is randomly allocated. Make sure that the destination vSwitch has a sufficient available IP address count.</description></item>
-        /// <item><description>If you use a VPC shared by another account, make sure that the destination security group was created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
+        /// <item><description>If you specify a private IP for the primary network interface controller (NIC), the IP address must be within the vSwitch CIDR block and available. If you do not specify one, an IP address is randomly allocated, and the target vSwitch must have sufficient available IP addresses.</description></item>
+        /// <item><description>If you are using a VPC shared with you by another account, make sure that the target security group is created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -72046,39 +72054,39 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance in a virtual private cloud (VPC) network type.</para>
+        /// <para>Modifies the VPC, private IP address, security group, or vSwitch of a VPC-type ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> state.</para>
+        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <list type="bullet">
-        /// <item><description>When you modify the private IP address or vSwitch of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the private IP address or vSwitch of an instance, note the following:<list type="bullet">
         /// <item><description>A newly created ECS instance must be restarted before you can call this operation.</description></item>
         /// <item><description>After a successful modification, the ECS instance must be restarted before you can call this operation again.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you modify the VPC of an instance, take note of the following items:<list type="bullet">
+        /// <item><description>When you modify the VPC of an instance, note the following:<list type="bullet">
         /// <item><description><para><b>Instance:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instance status: The instance cannot be locked, pending release, expired, in expiration recycling, or in overdue payment recycling. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
-        /// <item><description>ECS instances that are associated with load balancing instances are not supported.</description></item>
-        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be in migration, cannot have already initiated a VPC change, or cannot have its database managed by Data Transmission Service (DTS).</description></item>
+        /// <item><description>Instance status: The instance cannot be in the locked, pending release, expired, expiring, or overdue payment states. For more information, see <a href="https://help.aliyun.com/document_detail/25380.html">Instance lifetime</a>.</description></item>
+        /// <item><description>ECS instances associated with a load balancing instance are not supported.</description></item>
+        /// <item><description>The instance cannot be in use by other cloud services. For example, the instance cannot be undergoing migration, cannot already be switching VPCs, and databases deployed on the instance cannot be managed by DTS.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>Network:</b></para>
         /// <list type="bullet">
-        /// <item><description>Instances configured with EIP in network interface controller (NIC) visible pattern or multi-EIP to NIC visible pattern are not supported.</description></item>
-        /// <item><description>Instances attached to a high availability virtual IP address (HaVip) are not supported.</description></item>
-        /// <item><description>Instances whose vSwitch is associated with a custom route table are not supported.</description></item>
+        /// <item><description>Instances configured with EIP-visible mode or multi-EIP-visible mode on their Elastic Network Interfaces (ENIs) are not supported.</description></item>
+        /// <item><description>Instances attached to a High Availability Virtual IP (HaVip) are not supported.</description></item>
+        /// <item><description>Instances whose vSwitch is attached to a custom route table are not supported.</description></item>
         /// <item><description>Instances with Global Accelerator (GA) enabled are not supported.</description></item>
         /// <item><description>Instances attached to secondary Elastic Network Interfaces (ENIs) are not supported.</description></item>
-        /// <item><description>Instances that have been allocated IPv6 addresses are not supported.</description></item>
-        /// <item><description>Instances whose primary NIC has multiple IP addresses are not supported.</description></item>
-        /// <item><description>The specified vSwitch must belong to the destination VPC.</description></item>
+        /// <item><description>Instances with IPv6 addresses allocated are not supported.</description></item>
+        /// <item><description>Instances whose primary network interface controller (NIC) has multiple IP addresses are not supported.</description></item>
+        /// <item><description>The specified vSwitch must belong to the target VPC.</description></item>
         /// <item><description>The zone of the vSwitch must remain the same before and after the modification.</description></item>
-        /// <item><description>If you specify a private IP for the primary NIC, the IP address must be active and within the CIDR block of the vSwitch. If you do not specify one, an IP address is randomly allocated. Make sure that the destination vSwitch has a sufficient available IP address count.</description></item>
-        /// <item><description>If you use a VPC shared by another account, make sure that the destination security group was created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
+        /// <item><description>If you specify a private IP for the primary network interface controller (NIC), the IP address must be within the vSwitch CIDR block and available. If you do not specify one, an IP address is randomly allocated, and the target vSwitch must have sufficient available IP addresses.</description></item>
+        /// <item><description>If you are using a VPC shared with you by another account, make sure that the target security group is created by your account in the shared VPC, not by the VPC owner\&quot;s account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -74041,24 +74049,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
+        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a>.</b>
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a>.</b>
-        /// This operation is asynchronous. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a> of ECS.</b>
+        /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the source and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot modify the instance type of an expired instance. Perform a renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
+        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a>.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74172,24 +74180,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
+        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a>.</b>
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a>.</b>
-        /// This operation is asynchronous. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a> of ECS.</b>
+        /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the source and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot modify the instance type of an expired instance. Perform a renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
+        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a>.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74303,24 +74311,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
+        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a>.</b>
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a>.</b>
-        /// This operation is asynchronous. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a> of ECS.</b>
+        /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the source and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot modify the instance type of an expired instance. Perform a renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
+        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a>.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -74346,24 +74354,24 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the instance type of a subscription ECS instance. You can upgrade or downgrade the instance type. The new instance type takes effect for the entire lifecycle of the instance.</para>
+        /// <para>Modifies ECS instance type of a subscription Elastic Compute Service (ECS) instance. You can upgrade or downgrade ECS instance type. The new instance type takes effect for the entire lifecycle of ECS instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a>.</b>
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>, and <a href="https://help.aliyun.com/document_detail/116043.html">refund rules for specification downgrades</a> of ECS.</b>
         /// &lt;props=&quot;intl&quot;&gt;
-        /// <b>Before you call this operation, make sure that you fully understand the billing of ECS, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a>.</b>
-        /// This operation is asynchronous. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
+        /// <b>Before you call this operation, make sure that you fully understand the billing methods, <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a>, and <a href="https://help.aliyun.com/document_detail/476339.html">refund rules for specification downgrades</a> of ECS.</b>
+        /// This is an asynchronous operation. The configuration change takes effect after approximately 5 to 10 seconds. Before you upgrade or downgrade ECS instance type of a subscription ECS instance, you can call <a href="https://help.aliyun.com/document_detail/2679954.html">DescribeResourcesModification</a> to query ECS instance types to which the current instance can be changed.
         /// <b>Precautions</b></para>
         /// <list type="bullet">
-        /// <item><description>If the NVMe properties of the source and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
-        /// <item><description>You cannot modify the instance type of an expired instance. Perform a renewal and try again.</description></item>
+        /// <item><description>If the NVMe properties of the original and target instance types are different (the <c>NvmeSupport</c> property returned by <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>) and the operating system is Windows (the <c>OSType</c> property returned by <a href="https://help.aliyun.com/document_detail/2679689.html">DescribeInstances</a>), complete the operations described in <a href="~~2978777#7de04a1c9fo50~~">Preventive measures</a> before you perform the Upgrade/Downgrade.</description></item>
+        /// <item><description>You cannot change the instance type of an expired instance. Complete the renewal and try again.</description></item>
         /// <item><description>Downgrade the instance type:<list type="bullet">
         /// <item><description>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// <item><description>The price difference between the original and new instance types is refunded to your original payer. Consumed vouchers are not refundable.</description></item>
-        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a>.</description></item>
+        /// <item><description>The new instance type takes effect only after you <a href="https://help.aliyun.com/document_detail/25441.html">start the instance</a> following the Upgrade/Downgrade.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>Upgrade the instance type: <list type="bullet">
@@ -79017,222 +79025,6 @@ namespace AlibabaCloud.SDK.Ecs20140526
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await OpenSnapshotServiceWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Purchases an elastic capacity reservation service. You can use this operation to purchase an elastic capacity reservation service that is prepared and in an inactive state.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh?spm=5176.28117011.nav-v2-dropdown-language.exp-location-zh.9ae4165bF98IHz&_p_lc=1">pricing</a> of elastic capacity reservation before you use this operation.
-        /// Before you purchase an elastic capacity reservation service, you can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query available elastic capacity reservation services.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PurchaseElasticityAssuranceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// PurchaseElasticityAssuranceResponse
-        /// </returns>
-        public PurchaseElasticityAssuranceResponse PurchaseElasticityAssuranceWithOptions(PurchaseElasticityAssuranceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
-            {
-                query["PeriodUnit"] = request.PeriodUnit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivatePoolOptions))
-            {
-                query["PrivatePoolOptions"] = request.PrivatePoolOptions;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "PurchaseElasticityAssurance",
-                Version = "2014-05-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<PurchaseElasticityAssuranceResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Purchases an elastic capacity reservation service. You can use this operation to purchase an elastic capacity reservation service that is prepared and in an inactive state.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh?spm=5176.28117011.nav-v2-dropdown-language.exp-location-zh.9ae4165bF98IHz&_p_lc=1">pricing</a> of elastic capacity reservation before you use this operation.
-        /// Before you purchase an elastic capacity reservation service, you can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query available elastic capacity reservation services.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PurchaseElasticityAssuranceRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// PurchaseElasticityAssuranceResponse
-        /// </returns>
-        public async Task<PurchaseElasticityAssuranceResponse> PurchaseElasticityAssuranceWithOptionsAsync(PurchaseElasticityAssuranceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
-            {
-                query["ClientToken"] = request.ClientToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
-            {
-                query["OwnerAccount"] = request.OwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
-            {
-                query["PeriodUnit"] = request.PeriodUnit;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
-            {
-                query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivatePoolOptions))
-            {
-                query["PrivatePoolOptions"] = request.PrivatePoolOptions;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "PurchaseElasticityAssurance",
-                Version = "2014-05-26",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<PurchaseElasticityAssuranceResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Purchases an elastic capacity reservation service. You can use this operation to purchase an elastic capacity reservation service that is prepared and in an inactive state.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh?spm=5176.28117011.nav-v2-dropdown-language.exp-location-zh.9ae4165bF98IHz&_p_lc=1">pricing</a> of elastic capacity reservation before you use this operation.
-        /// Before you purchase an elastic capacity reservation service, you can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query available elastic capacity reservation services.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PurchaseElasticityAssuranceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// PurchaseElasticityAssuranceResponse
-        /// </returns>
-        public PurchaseElasticityAssuranceResponse PurchaseElasticityAssurance(PurchaseElasticityAssuranceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return PurchaseElasticityAssuranceWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Purchases an elastic capacity reservation service. You can use this operation to purchase an elastic capacity reservation service that is prepared and in an inactive state.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh?spm=5176.28117011.nav-v2-dropdown-language.exp-location-zh.9ae4165bF98IHz&_p_lc=1">pricing</a> of elastic capacity reservation before you use this operation.
-        /// Before you purchase an elastic capacity reservation service, you can call <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> to query available elastic capacity reservation services.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// PurchaseElasticityAssuranceRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// PurchaseElasticityAssuranceResponse
-        /// </returns>
-        public async Task<PurchaseElasticityAssuranceResponse> PurchaseElasticityAssuranceAsync(PurchaseElasticityAssuranceRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await PurchaseElasticityAssuranceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -90773,7 +90565,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassigns one or more IPv6 addresses from an Elastic Network Interface (ENI).</para>
+        /// <para>Revokes one or more IPv6 addresses from a network interface controller (NIC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -90781,7 +90573,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The Elastic Network Interface (ENI) must be in the <b>Active</b> (Available) or <b>InUse</b> state.</description></item>
+        /// <item><description>The network interface controller (NIC) must be in the <b>active</b> (Available) or <b>InUse</b> state.</description></item>
         /// <item><description>If you are operating on a primary network interface controller (NIC), the ECS instance to which the NIC is attached must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// </list>
         /// </description>
@@ -90857,7 +90649,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassigns one or more IPv6 addresses from an Elastic Network Interface (ENI).</para>
+        /// <para>Revokes one or more IPv6 addresses from a network interface controller (NIC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -90865,7 +90657,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The Elastic Network Interface (ENI) must be in the <b>Active</b> (Available) or <b>InUse</b> state.</description></item>
+        /// <item><description>The network interface controller (NIC) must be in the <b>active</b> (Available) or <b>InUse</b> state.</description></item>
         /// <item><description>If you are operating on a primary network interface controller (NIC), the ECS instance to which the NIC is attached must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// </list>
         /// </description>
@@ -90941,7 +90733,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassigns one or more IPv6 addresses from an Elastic Network Interface (ENI).</para>
+        /// <para>Revokes one or more IPv6 addresses from a network interface controller (NIC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -90949,7 +90741,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The Elastic Network Interface (ENI) must be in the <b>Active</b> (Available) or <b>InUse</b> state.</description></item>
+        /// <item><description>The network interface controller (NIC) must be in the <b>active</b> (Available) or <b>InUse</b> state.</description></item>
         /// <item><description>If you are operating on a primary network interface controller (NIC), the ECS instance to which the NIC is attached must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// </list>
         /// </description>
@@ -90969,7 +90761,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unassigns one or more IPv6 addresses from an Elastic Network Interface (ENI).</para>
+        /// <para>Revokes one or more IPv6 addresses from a network interface controller (NIC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -90977,7 +90769,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <h2>Operation description</h2>
         /// <para>When you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The Elastic Network Interface (ENI) must be in the <b>Active</b> (Available) or <b>InUse</b> state.</description></item>
+        /// <item><description>The network interface controller (NIC) must be in the <b>active</b> (Available) or <b>InUse</b> state.</description></item>
         /// <item><description>If you are operating on a primary network interface controller (NIC), the ECS instance to which the NIC is attached must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// </list>
         /// </description>

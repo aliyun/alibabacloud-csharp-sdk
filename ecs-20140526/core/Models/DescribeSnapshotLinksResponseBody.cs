@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page as specified in the request.</para>
+        /// <para>The number of entries per page that you specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshot chains.</para>
         /// <remarks>
-        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for a paged query, the returned <c>TotalCount</c> value is invalid. For paging, use <c>NextToken</c> and <c>MaxResults</c> instead.</para>
+        /// <para>When you use the MaxResults and NextToken parameters for paged query, the returned TotalCount value is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

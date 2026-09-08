@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The reason why the dedicated host is locked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>financial: The dedicated host is locked due to an overdue payment.</description></item>
+        /// <item><description>financial: The dedicated host is locked due to overdue payments.</description></item>
         /// <item><description>security: The dedicated host is locked for security reasons.</description></item>
         /// </list>
         /// 
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. If you set this parameter, the MaxResults and NextToken parameters are used together for paging.</para>
+        /// <para>The maximum number of entries per page for a paged query. If you set this parameter, it indicates that the paging method using the MaxResults and NextToken parameters is used.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <para>The detailed information of the dedicated host.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("NeedHostDetail")]
+        [Validation(Required=false)]
+        public string NeedHostDetail { get; set; }
 
         /// <summary>
         /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
@@ -156,8 +166,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPUs, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Displays socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</description></item>
-        /// <item><description>false: Does not display socket-level capacity information.</description></item>
+        /// <item><description>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</description></item>
+        /// <item><description>false: Do not display socket-level capacity information.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Notice: </para>
@@ -199,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// <para>The tags. Valid values of N: 0 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

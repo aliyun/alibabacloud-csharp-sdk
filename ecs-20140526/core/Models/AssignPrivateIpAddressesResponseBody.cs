@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignPrivateIpAddressesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the network interface controller (NIC) to which secondary private IP addresses are allocated.</para>
+        /// <para>The information about the elastic network interfaces (ENIs) to which secondary private IP addresses are assigned.</para>
         /// </summary>
         [NameInMap("AssignedPrivateIpAddressesSet")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The ID of the network interface controller (NIC).</para>
+            /// <para>The elastic network interfaces (ENIs) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp125p95hhdhn3ot****</para>

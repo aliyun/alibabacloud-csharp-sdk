@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> state. For other restrictions on the instance, carefully read the <b>operation description</b> section.</para>
+        /// <para>When you call this operation, the ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. For other restrictions on the instance, read the <b>Operation description</b> section carefully.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new private IP address.</para>
         /// <remarks>
-        /// <para>The <c>PrivateIpAddress</c> parameter depends on <c>VSwitchId</c>. The specified IP address must be within the CIDR block of the vSwitch.</para>
+        /// <para>The PrivateIpAddress parameter depends on VSwitchId. The specified IP address must be within the CIDR block of the vSwitch.</para>
         /// </remarks>
-        /// <para>Default value: If this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the vSwitch.</para>
+        /// <para>Default value: If this parameter is not specified, an IP address is randomly assigned from the CIDR block of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>172.17.**.**</c></para>
@@ -54,12 +54,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the security groups to which the instance is added after the VPC is changed. This parameter is required only when the <c>VpcId</c> parameter is specified.</para>
+        /// <para>The list of security group IDs that the instance joins after the VPC is modified. This parameter is required only when the VpcId parameter is specified.</para>
         /// <list type="bullet">
-        /// <item><description>The security groups must belong to the destination VPC.</description></item>
-        /// <item><description>You can specify one or more security groups. The number of security groups is subject to the limits on the number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</description></item>
+        /// <item><description>The VPC of the security group must match the target VPC.</description></item>
+        /// <item><description>Specifies the list of security groups that the instance joins after the modification. You can specify one or more security groups. The number of security groups is subject to the limit on the number of security groups that an instance can join. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Limits</a>.</description></item>
         /// <item><description>All security groups in the list must be of the same type.</description></item>
-        /// <item><description>Switching between security group types is supported. When you switch an ECS instance between security group types, make sure that you understand the differences in security group rule configurations between the two types to avoid impacts on instance networking. For more information, see <a href="https://help.aliyun.com/document_detail/25387.html">Security group overview</a>.</description></item>
+        /// <item><description>Switching between security group types is supported.
+        ///     When an ECS instance switches between security group types, make sure that you understand the differences in the security group rule configurations of the two security group types to avoid affecting the instance network. For more information, see <a href="https://help.aliyun.com/document_detail/25387.html">Security group overview</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,9 +73,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the specified ID is the current vSwitch of the instance, the vSwitch remains unchanged.</description></item>
-        /// <item><description>If the specified ID is a new vSwitch and the <c>VpcId</c> parameter is empty, the new and old vSwitches must belong to the same zone and the same VPC.</description></item>
-        /// <item><description>If the <c>VpcId</c> parameter is not empty, the vSwitch specified by this parameter must belong to the specified VPC and must be in the same zone as the original vSwitch.</description></item>
+        /// <item><description>If the specified ID is the current vSwitch of the instance, the vSwitch of the instance remains unchanged.</description></item>
+        /// <item><description>If the specified ID is a new vSwitch and the VpcId parameter is not specified, the new and original vSwitches must belong to the same zone and the same VPC.</description></item>
+        /// <item><description>If the VpcId parameter is specified, the vSwitch ID specified in this parameter must belong to the VpcId and must be in the same zone as the original vSwitch.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination VPC.</para>
+        /// <para>The target VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1vwnn14rqpyiczj****</para>

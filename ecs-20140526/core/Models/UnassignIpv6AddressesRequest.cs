@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>One or more IPv6 prefixes to unassign. Valid values of N: 1 to 10.</para>
+        /// <para>One or more IPv6 prefixes to revoke. Valid values of N: 1 to 10.</para>
         /// </summary>
         [NameInMap("Ipv6Prefix")]
         [Validation(Required=false)]
         public List<string> Ipv6Prefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic Network Interface (ENI).</para>
+        /// <para>The network interface controller (NIC) ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Elastic Network Interface (ENI). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
