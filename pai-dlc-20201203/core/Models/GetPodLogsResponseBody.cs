@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetPodLogsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The container information that may be associated with the node.</para>
+        /// </summary>
+        [NameInMap("ContainerInfo")]
+        [Validation(Required=false)]
+        public ContainerInfo ContainerInfo { get; set; }
+
+        /// <summary>
+        /// <para>The containers used to filter logs. Separate multiple container names with commas (,).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pytorch,aimaster-worker</para>
+        /// </summary>
+        [NameInMap("Containers")]
+        [Validation(Required=false)]
+        public string Containers { get; set; }
+
+        /// <summary>
         /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>

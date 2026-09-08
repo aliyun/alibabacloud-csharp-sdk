@@ -3075,6 +3075,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Containers))
+            {
+                query["Containers"] = request.Containers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
             {
                 query["DownloadToFile"] = request.DownloadToFile;
@@ -3137,6 +3141,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Containers))
+            {
+                query["Containers"] = request.Containers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadToFile))
             {
                 query["DownloadToFile"] = request.DownloadToFile;
