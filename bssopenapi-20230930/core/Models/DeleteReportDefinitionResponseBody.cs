@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the response struct.</para>
+        /// <para>The response struct metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

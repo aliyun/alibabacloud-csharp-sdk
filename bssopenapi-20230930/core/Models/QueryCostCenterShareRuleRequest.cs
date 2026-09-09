@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The enterprise entity ID.</para>
+            /// <para>The ID of the enterprise entity.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
-        /// <para>Reserved field.</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// <para>The ID of the primary sales channel. If empty, the sales channel ID of the current user is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
-        /// <para>Reserved field.</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nYCisJwqt18pP5E9yb47iu</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The owner account ID of the cost center.</para>
+        /// <para>The ID of the user to whom the financial unit belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1529600453335198</para>

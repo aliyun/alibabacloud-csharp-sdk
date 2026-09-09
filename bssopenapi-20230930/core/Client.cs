@@ -8340,12 +8340,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center sharing rules</para>
+        /// <para>Queries the cost allocation rules of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// <para>Queries the cost allocation rules of a user\&quot;s financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8403,12 +8403,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center sharing rules</para>
+        /// <para>Queries the cost allocation rules of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// <para>Queries the cost allocation rules of a user\&quot;s financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8466,12 +8466,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center sharing rules</para>
+        /// <para>Queries the cost allocation rules of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// <para>Queries the cost allocation rules of a user\&quot;s financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8489,12 +8489,12 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query cost center sharing rules</para>
+        /// <para>Queries the cost allocation rules of financial units.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// <para>Queries the cost allocation rules of a user\&quot;s financial units.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8892,7 +8892,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the credit control limit for a fund account</para>
+        /// <para>Sets the credit limit for a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8909,6 +8909,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CancelCredit))
+            {
+                body["CancelCredit"] = request.CancelCredit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
                 body["CreditAmount"] = request.CreditAmount;
@@ -8942,7 +8946,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the credit control limit for a fund account</para>
+        /// <para>Sets the credit limit for a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8959,6 +8963,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CancelCredit))
+            {
+                body["CancelCredit"] = request.CancelCredit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
                 body["CreditAmount"] = request.CreditAmount;
@@ -8992,7 +9000,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the credit control limit for a fund account</para>
+        /// <para>Sets the credit limit for a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9010,7 +9018,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the credit control limit for a fund account</para>
+        /// <para>Sets the credit limit for a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
