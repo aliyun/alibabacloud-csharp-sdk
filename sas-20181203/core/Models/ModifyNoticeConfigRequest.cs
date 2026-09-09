@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyNoticeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The notification configuration type. By default, notifications are sent through SMS, email, or internal message. Valid values:</para>
+        /// <para>The notification configuration type. By default, notifications are sent by SMS, email, or internal message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cms</b>: CloudMonitor push.</description></item>
         /// </list>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>yundun_security_Weekreport</b>: Security weekly report (email only)</description></item>
         /// <item><description><b>sas_healthcheck</b>: Baseline check</description></item>
-        /// <item><description><b>yundun_defennce_antiRansomware_overflow</b>: Anti-ransomware storage exceeded</description></item>
-        /// <item><description><b>yundun_sas_cloudsiem_log</b>: Threat analysis log excess notification</description></item>
+        /// <item><description><b>yundun_defennce_antiRansomware_overflow</b>: Anti-ransomware storage space exceeded</description></item>
+        /// <item><description><b>yundun_sas_cloudsiem_log</b>: Cloud Threat Detection and Response (CTDR) log excess notification</description></item>
         /// <item><description><b>sas_suspicious</b>: Security alert</description></item>
         /// <item><description><b>yundun_aegis_AV_true</b>: Precise defense</description></item>
         /// <item><description><b>yundun_sas_ak_leakage AccessKey</b>: AccessKey leak intelligence</description></item>
@@ -70,12 +70,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>yundun_sas_cloud_native_firewall_Defense</b>: Container firewall active defense notification (email only)</description></item>
         /// <item><description><b>yundun_IP_Blocking</b>: Malicious IP blocking alerting notification</description></item>
         /// <item><description><b>yundun_sas_anti_virus_config</b>: Virus scan notification</description></item>
-        /// <item><description><b>yundun_sas_log</b>: Log excess</description></item>
+        /// <item><description><b>yundun_sas_log</b>: Log storage exceeded</description></item>
         /// <item><description><b>yundun_honeypot_alarm</b>: Cloud honeypot alerting</description></item>
         /// <item><description><b>aliyun_rasp_alarm</b>: Application protection alerting</description></item>
         /// <item><description><b>yundun_soar_incident_generate</b>: New security incident</description></item>
         /// <item><description><b>yundun_soar_incident_update</b>: Updated security incident<remarks>
-        /// <para><b>yundun_security_Weekreport</b> sends a weekly report to notify about unresolved vulnerabilities.</para>
+        /// <para><b>yundun_security_Weekreport</b> is sent as a weekly report to notify you of unresolved vulnerabilities.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -138,11 +138,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <h3>Notification time limit</h3>
         /// <h4>When the BizType field is empty: valid values</h4>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No limit</description></item>
-        /// <item><description><b>1</b>: Notifications are sent only during 08:00-22:00</description></item>
+        /// <item><description><b>0</b>: No limit.</description></item>
+        /// <item><description><b>1</b>: Notifications are sent only between 08:00 and 22:00.</description></item>
         /// </list>
         /// <h4>When the BizType field is <c>cms</c>: description</h4>
-        /// <para>Specifies the push frequency limit in seconds. The minimum value is <b>60</b>.</para>
+        /// <para>Specifies the push frequency limit, in seconds. The minimum value is <b>60</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

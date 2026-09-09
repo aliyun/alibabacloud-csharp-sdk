@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperateType { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers on which you want to fix the vulnerabilities.</para>
+        /// <para>The UUIDs of the servers on which you want to fix vulnerabilities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Uuids")]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<int?> AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The number of the page to return in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,11 +79,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of operation performed on the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b>: deletes the file.</description></item>
-        /// <item><description><b>WRITE</b>: writes to the file.</description></item>
-        /// <item><description><b>READ</b>: reads the file.</description></item>
-        /// <item><description><b>RENAME</b>: renames the file.</description></item>
-        /// <item><description><b>CHOWN</b>: changes the file owner and associated group.</description></item>
+        /// <item><description><b>DELETE</b>: Delete the file.</description></item>
+        /// <item><description><b>WRITE</b>: Write to the file.</description></item>
+        /// <item><description><b>READ</b>: Read the file.</description></item>
+        /// <item><description><b>RENAME</b>: Rename the file.</description></item>
+        /// <item><description><b>CHOWN</b>: Change the file owner and associated group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paging query.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

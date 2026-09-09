@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEventLevelCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The response code. The value <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The statistics of alerts by risk level.</para>
+        /// <para>The statistics of security alerts by severity level.</para>
         /// </summary>
         [NameInMap("EventLevels")]
         [Validation(Required=false)]
         public DescribeEventLevelCountResponseBodyEventLevels EventLevels { get; set; }
         public class DescribeEventLevelCountResponseBodyEventLevels : TeaModel {
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Reminder.</para>
+            /// <para>The number of security alerts with the Reminder severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Remind { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Urgent.</para>
+            /// <para>The number of security alerts with the Urgent severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Serious { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Suspicious.</para>
+            /// <para>The number of security alerts with the Suspicious severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE8CA5EA-24EF-5D41-B735-53ACE7XXXXX</para>

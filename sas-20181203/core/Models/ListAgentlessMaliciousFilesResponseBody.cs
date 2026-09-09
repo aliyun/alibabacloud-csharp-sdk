@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FilePath { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the first scan, in milliseconds.</para>
+            /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest scan, in milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description>serious: urgent</description></item>
             /// <item><description>suspicious: suspicious</description></item>
-            /// <item><description>remind: reminder.</description></item>
+            /// <item><description>remind: reminder</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NoteId { get; set; }
 
                 /// <summary>
-                /// <para>The time of the remark record.</para>
+                /// <para>The time of the remark record. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-27 14:49:21</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateResult { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert was handled, in milliseconds.</para>
+            /// <para>The timestamp when the alert was handled. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The object type of the scan target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: image.</description></item>
+            /// <item><description>2: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListAgentlessMaliciousFilesResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessMaliciousFilesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of malicious file entries displayed on the current page in a paging query.</para>
+            /// <para>The number of malicious files displayed on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page in a paging query.</para>
+            /// <para>The maximum number of entries to return per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

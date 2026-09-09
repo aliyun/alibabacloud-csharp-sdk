@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageGroupedVulListRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to filter by agentless fix capability. true: queries only vulnerabilities that support agentless fix. false: queries vulnerabilities that are not marked as supporting agentless fix. If this parameter is not specified, no filtering is applied based on this condition.</para>
+        /// </summary>
+        [NameInMap("AgentlessCanFix")]
+        [Validation(Required=false)]
+        public bool? AgentlessCanFix { get; set; }
+
+        /// <summary>
         /// <para>The alias of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query vulnerabilities of only the latest image. If this parameter is not set, vulnerabilities of all images are queried. Valid values:</para>
+        /// <para>Specifies whether to query vulnerabilities only for the latest image. If this parameter is not set, vulnerabilities for all images are queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
@@ -110,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,9 +140,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The priority level for fixing the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high-priority vulnerability (typically a high-risk vulnerability)</description></item>
-        /// <item><description><b>later</b>: medium-priority vulnerability (typically a medium-risk vulnerability)</description></item>
-        /// <item><description><b>nntf</b>: low-priority vulnerability (typically a low-risk vulnerability).</description></item>
+        /// <item><description><b>asap</b>: High-priority vulnerability that must be fixed as soon as possible.</description></item>
+        /// <item><description><b>later</b>: Medium-priority vulnerability that can be fixed later.</description></item>
+        /// <item><description><b>nntf</b>: Low-priority vulnerability that does not need to be fixed for now.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of image vulnerabilities to display on each page during a paging query. Default value: <b>20</b>, which indicates that 20 image vulnerabilities are displayed on each page.</para>
+        /// <para>The number of image vulnerabilities to display on each page in a paging query. Default value: <b>20</b>, which indicates 20 image vulnerabilities per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -215,6 +222,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -222,7 +235,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The vulnerability tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AI</b>: vulnerabilities related to AI components.</description></item>
+        /// <item><description><b>AI</b>: vulnerabilities related to AI components</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,7 +256,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: image system vulnerability</description></item>
-        /// <item><description><b>sca</b>: image application vulnerability.</description></item>
+        /// <item><description><b>sca</b>: image application vulnerability</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

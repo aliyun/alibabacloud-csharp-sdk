@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateCustomBlockRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address that you want to specify in the policy.</para>
+        /// <para>The IP address to block. Traffic from this IP address to the server is blocked.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BlockIp { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction that you want to specify in the policy. Valid values:</para>
+        /// <para>The direction of traffic to block between the custom IP address and the server.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>in</b>: inbound</description></item>
         /// <item><description><b>out</b>: outbound</description></item>
@@ -36,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Bound { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the policy.</para>
+        /// <para>The expiration time of the policy. This value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,). You can call DescribeCloudCenterInstances to obtain the UUIDs of asset instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEventLevelCountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster that you want to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,20 +23,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The key of the condition that is used to query alert events on containers. Valid values:</para>
+        /// <para>The container search field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instanceId</b>: the ID of the asset</description></item>
-        /// <item><description><b>appName</b>: the name of the application</description></item>
-        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
-        /// <item><description><b>regionId</b>: the ID of the region</description></item>
-        /// <item><description><b>nodeName</b>: the name of the node</description></item>
-        /// <item><description><b>namespace</b>: the namespace</description></item>
-        /// <item><description><b>clusterName</b>: the name of the cluster</description></item>
-        /// <item><description><b>image</b>: the name of the image</description></item>
-        /// <item><description><b>imageRepoName</b>: the name of the image repository</description></item>
-        /// <item><description><b>imageRepoNamespace</b>: the namespace to which the image repository belongs</description></item>
-        /// <item><description><b>imageRepoTag</b>: the tag that is added to the image</description></item>
-        /// <item><description><b>imageDigest</b>: the digest of the image</description></item>
+        /// <item><description><b>instanceId</b>: instance ID</description></item>
+        /// <item><description><b>appName</b>: application name</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID</description></item>
+        /// <item><description><b>regionId</b>: region</description></item>
+        /// <item><description><b>nodeName</b>: node name</description></item>
+        /// <item><description><b>namespace</b>: namespace</description></item>
+        /// <item><description><b>clusterName</b>: cluster name</description></item>
+        /// <item><description><b>image</b>: image name</description></item>
+        /// <item><description><b>imageRepoName</b>: image repository name</description></item>
+        /// <item><description><b>imageRepoNamespace</b>: image repository namespace</description></item>
+        /// <item><description><b>imageRepoTag</b>: image tag</description></item>
+        /// <item><description><b>imageDigest</b>: image digest</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// <para>The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).</para>
+        /// <para>The value of the field that you want to query. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>c951761046a9c4afe92be0a7b5bexxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container.</para>
+        /// <para>The container IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The source identifier of the request. Set this parameter to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The type of the accounts that you want to query. Default value: <b>0</b>. Valid values:</para>
+        /// <para>The multi-account query type. Default value: <b>0</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the current account.</description></item>
-        /// <item><description><b>1</b>: all accounts.</description></item>
+        /// <item><description><b>0</b>: Query data of the current account.</description></item>
+        /// <item><description><b>1</b>: Query data of all accounts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,15 +90,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? MultiAccountActionType { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>containerId</b>: the ID of the container</description></item>
-        /// <item><description><b>uuid</b>: the UUID of the asset</description></item>
+        /// <item><description><b>containerId</b>: container ID</description></item>
+        /// <item><description><b>uuid</b>: asset ID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

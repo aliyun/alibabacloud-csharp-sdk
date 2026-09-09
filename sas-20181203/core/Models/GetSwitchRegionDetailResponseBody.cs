@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSwitchRegionDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? EcsCount { get; set; }
 
                 /// <summary>
-                /// <para>The planned migration time.</para>
+                /// <para>The planned migration time. The value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1692858597000</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The migration status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>0</b>: waiting for migration</description></item>
-                /// <item><description><b>1</b>: switchover succeeded.</description></item>
+                /// <item><description><b>1</b>: switchover succeeded</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. The China Chinese mainland generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>

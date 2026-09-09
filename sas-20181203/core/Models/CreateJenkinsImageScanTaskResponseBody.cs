@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateJenkinsImageScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateJenkinsImageScanTaskResponseBodyData Data { get; set; }
         public class CreateJenkinsImageScanTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The quota for image scan.</para>
+            /// <para>The number of scan authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ImageScanCapacity { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image repository.</para>
+            /// <para>The repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-upze3gcopm9c****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the image repository.</para>
+            /// <para>The repository instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-0gkaatghnmnt****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scan task.</para>
+            /// <para>The scan node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fc98d58eb56f699d49bf7ebbd6d7****</para>

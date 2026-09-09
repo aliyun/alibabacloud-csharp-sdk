@@ -12,13 +12,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The alert notification level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: no alert</para>
+        /// <item><description><para>0: No alerts.</para>
         /// </description></item>
-        /// <item><description><para>1: reminder</para>
+        /// <item><description><para>1: Reminder.</para>
         /// </description></item>
-        /// <item><description><para>2: suspicious</para>
+        /// <item><description><para>2: Suspicious.</para>
         /// </description></item>
-        /// <item><description><para>3: high-risk.</para>
+        /// <item><description><para>3: High-risk.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the operating system. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>windows</b>: Windows</description></item>
+        /// <item><description><b>windows</b>: Windows.</description></item>
         /// <item><description><b>linux</b>: Linux.</description></item>
         /// </list>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The action to take when the rule is triggered. Valid values:</para>
+        /// <para>The action of the policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>monitor</b>: Alert.</description></item>
         /// <item><description><b>block</b>: Block.</description></item>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to select all rules.</para>
+        /// <para>Specifies whether to select all.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The vulnerability whitelist information.</para>
         /// <remarks>
-        /// <para>Notice: This data is not returned when you add or update vulnerability whitelists in batches. It is returned only when you add or update a single vulnerability whitelist entry.</para>
+        /// <para>Notice: This data is not returned when you add or update vulnerability whitelists in batches. This data is returned only when you add or update a single vulnerability whitelist entry.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("VulWhitelistList")]

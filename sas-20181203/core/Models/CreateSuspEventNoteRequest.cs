@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSuspEventNoteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the security alert event to which you want to add a note. Call <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> to obtain the ID of the alert event.</para>
+        /// <para>The ID of the alert event for which you want to add a note. Call <a href="https://help.aliyun.com/document_detail/251497.html">DescribeSuspEvents</a> to obtain the alert event ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Note { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

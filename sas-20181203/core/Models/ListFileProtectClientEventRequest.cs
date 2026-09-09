@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<int?> AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page when paging is used in a paged query.</para>
+        /// <para>The number of the page to return in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,11 +89,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of operation performed on the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b>: deletes the file.</description></item>
-        /// <item><description><b>WRITE</b>: writes to the file.</description></item>
-        /// <item><description><b>READ</b>: reads the file.</description></item>
-        /// <item><description><b>RENAME</b>: renames the file.</description></item>
-        /// <item><description><b>CHOWN</b>: changes the file owner and associated group.</description></item>
+        /// <item><description><b>DELETE</b>: File deletion.</description></item>
+        /// <item><description><b>WRITE</b>: File write.</description></item>
+        /// <item><description><b>READ</b>: File read.</description></item>
+        /// <item><description><b>RENAME</b>: File rename.</description></item>
+        /// <item><description><b>CHOWN</b>: Setting the file owner and file group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when paging is used in a paged query.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1650470399999</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The UUID of the server to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

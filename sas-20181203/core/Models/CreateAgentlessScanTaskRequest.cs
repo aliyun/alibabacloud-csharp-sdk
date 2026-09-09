@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the instance resides. Valid values:</para>
+        /// <para>The region ID of the instance to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b> (default): China.</description></item>
         /// <item><description><b>ap-southeast-1</b>: outside China.</description></item>
@@ -97,6 +97,62 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("TargetType")]
         [Validation(Required=false)]
         public int? TargetType { get; set; }
+
+        /// <summary>
+        /// <para>The list of targets for image security remediation. Each target specifies the source image, the region, the name of the remediated image, and the vulnerability identifiers to be fixed.</para>
+        /// </summary>
+        [NameInMap("Targets")]
+        [Validation(Required=false)]
+        public List<CreateAgentlessScanTaskRequestTargets> Targets { get; set; }
+        public class CreateAgentlessScanTaskRequestTargets : TeaModel {
+            /// <summary>
+            /// <para>The ID of the source ECS custom image to be remediated. The image must be located in the region specified by RegionId of this target.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>m-bp1example123456789</para>
+            /// </summary>
+            [NameInMap("ImageId")]
+            [Validation(Required=false)]
+            public string ImageId { get; set; }
+
+            /// <summary>
+            /// <para>The name of the source ECS custom image to be remediated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>source-image</para>
+            /// </summary>
+            [NameInMap("OriginImageName")]
+            [Validation(Required=false)]
+            public string OriginImageName { get; set; }
+
+            /// <summary>
+            /// <para>The name of the ECS image generated after remediation.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>patched-image-20260909</para>
+            /// </summary>
+            [NameInMap("OutputImageName")]
+            [Validation(Required=false)]
+            public string OutputImageName { get; set; }
+
+            /// <summary>
+            /// <para>The region ID of the source image to be remediated, such as cn-hangzhou.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            /// <summary>
+            /// <para>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified. Each identifier must be unique and non-empty.</para>
+            /// </summary>
+            [NameInMap("VulnerabilityIds")]
+            [Validation(Required=false)]
+            public List<string> VulnerabilityIds { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The UUIDs of the assets to be detected.</para>

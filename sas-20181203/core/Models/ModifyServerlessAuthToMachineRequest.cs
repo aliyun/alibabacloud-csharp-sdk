@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindAppList { get; set; }
 
         /// <summary>
-        /// <para>The Asset Type for the operation. Valid values:</para>
+        /// <para>The Asset Type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>INSTANCE</b>: Instance.</description></item>
         /// <item><description><b>APP</b>: Application.</description></item>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</para>
         /// <remarks>
         /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The logical relationship among multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: The search conditions are evaluated with a logical OR.</description></item>
-        /// <item><description><b>AND</b>: The search conditions are evaluated with a logical AND.</description></item>
+        /// <item><description><b>OR</b>: Multiple conditions are evaluated using a logical OR.</description></item>
+        /// <item><description><b>AND</b>: Multiple conditions are evaluated using a logical AND.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,13 +136,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NtmVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable pre-binding. Valid values:</para>
+        /// <para>Specifies whether to perform a pre-binding operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</para>
+        /// <para>After pre-binding is enabled, the corresponding number of authorization licenses are automatically bound to the specified servers after the purchase is completed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

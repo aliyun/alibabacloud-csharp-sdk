@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyCronDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyCronDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyCronDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of fingerprint information entries for scheduled task assets on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The value of NextToken that is returned when the NextToken method is used.</para>
+            /// <para>The NextToken value returned when the NextToken method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// <para>The number of scheduled task asset fingerprint information entries displayed per page in a paging query. Default value: <b>10</b>, which indicates that 10 entries of scheduled task asset fingerprint information are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of fingerprint information entries for scheduled task assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of the scheduled tasks.</para>
+        /// <para>The details of the fingerprint information for scheduled task assets.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyCronDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyCronDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>The command that is used to run the scheduled task.</para>
+            /// <para>The execution command of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/lib64/sa/sa1 1 1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Cmd { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last fingerprint collection. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest Asset Fingerprints scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649149566000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-hp35tftuh52wbp1g****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc-host-****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the server.</para>
+            /// <para>The IP address list of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the path to the scheduled task.</para>
+            /// <para>The MD5 hash of the scheduled task path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4cc8f97c2bf9cbabb2c2be2erqw****</para>
@@ -156,14 +156,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The interval at which the scheduled task is performed.</para>
+            /// <para>The execution cycle of the scheduled task.</para>
             /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public string Period { get; set; }
 
             /// <summary>
-            /// <para>The path to the scheduled task.</para>
+            /// <para>The path of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/etc/cron.d/root</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The username of the account that runs the scheduled task.</para>
+            /// <para>The account name that runs the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B0C4E12E-CCE1-109D-9E62-7B95CBBAEF8C</para>

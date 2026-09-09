@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Finish { get; set; }
 
             /// <summary>
-            /// <para>The time when the task ended. This parameter is returned only when the task status is Finished. Otherwise, an empty value is returned.</para>
+            /// <para>The time when the task ended. This parameter is returned only when the task status is Finished. Otherwise, an empty value is returned. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669693430977</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The creation method. Valid values:</para>
+            /// <para>The creation method. The task can be created from the console or by calling an API operation. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>console_batch</b>: console</description></item>
-            /// <item><description><b>openapi</b>: API.</description></item>
+            /// <item><description><b>openapi</b>: API</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The time when the task started.</para>
+            /// <para>The time when the task started. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1668614400000</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The scan target type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IMAGE</b>: image.</description></item>
+            /// <item><description><b>IMAGE</b>: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
+            /// <item><description><b>IMAGE_SCAN</b>: image scan</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

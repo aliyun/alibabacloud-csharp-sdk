@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageInfoListRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
         /// <para>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

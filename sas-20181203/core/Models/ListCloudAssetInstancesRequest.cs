@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The list of assets of the cloud asset instance.</para>
+        /// <para>The list of cloud asset instance types.</para>
         /// </summary>
         [NameInMap("CloudAssetTypes")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The subtype of the cloud service.</para>
             /// <remarks>
-            /// <para>For details, refer to AssetSubType in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
+            /// <para>For specific meanings, refer to the AssetSubType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the cloud asset.</para>
             /// <remarks>
-            /// <para>For details, refer to AssetType in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
+            /// <para>For specific meanings, refer to the AssetType parameter in the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The server vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-            /// <item><description><b>1</b>: Off-cloud asset</description></item>
+            /// <item><description><b>1</b>: Non-cloud asset</description></item>
             /// <item><description><b>2</b>: IDC asset</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: Other cloud assets</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: Third-party cloud asset</description></item>
             /// <item><description><b>8</b>: Lightweight asset</description></item>
             /// </list>
             /// 
@@ -91,13 +91,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The conditions used to search for assets. This parameter is in JSON format and contains the following fields:</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the search item.</description></item>
-        /// <item><description><b>value</b>: the value of the search item.</description></item>
-        /// <item><description><b>logicalExp</b>: the logical relationship between multiple search item values. Valid values:<list type="bullet">
-        /// <item><description><b>OR</b>: indicates that multiple search item values have an <b>OR</b> relationship.</description></item>
-        /// <item><description><b>AND</b>: indicates that multiple search item values have an <b>AND</b> relationship.<remarks>
+        /// <item><description><b>name</b>: The search item.</description></item>
+        /// <item><description><b>value</b>: The value of the search item.</description></item>
+        /// <item><description><b>logicalExp</b>: The logical relationship between multiple search item values. Valid values:<list type="bullet">
+        /// <item><description><b>OR</b>: The search item values are evaluated using the OR operator.</description></item>
+        /// <item><description><b>AND</b>: The search item values are evaluated using the AND operator.<remarks>
         /// <para>You can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// </description></item>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The number of the current page to return in paginated queries.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -122,6 +122,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return sale-related data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Returns sale-related data.</description></item>
+        /// <item><description><b>false</b>: Does not return sale-related data.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("IsSaleData")]
         [Validation(Required=false)]
         public bool? IsSaleData { get; set; }
@@ -129,8 +136,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The logical relationship between multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: indicates that multiple search conditions have an <b>OR</b> relationship.</description></item>
-        /// <item><description><b>AND</b>: indicates that multiple search conditions have an <b>AND</b> relationship.</description></item>
+        /// <item><description><b>OR</b>: The search conditions are evaluated using the OR operator.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are evaluated using the AND operator.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows that can be displayed per page. Maximum value: 100. Default value: 20.</para>
+        /// <para>The maximum number of entries per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -151,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -160,6 +167,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the Alibaba Cloud account of the resource folder member accounts.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

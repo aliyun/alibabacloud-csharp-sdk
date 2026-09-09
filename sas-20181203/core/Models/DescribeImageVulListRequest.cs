@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether the vulnerability has been handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: handled</description></item>
-        /// <item><description><b>n</b>: not handled.</description></item>
+        /// <item><description><b>y</b>: Handled.</description></item>
+        /// <item><description><b>n</b>: Not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,6 +82,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to group results by image asset before pagination. If set to true, one vulnerability record is returned for each asset, and TotalCount indicates the total number of assets. If set to false or not specified, results are paginated by vulnerability record. Asset grouping is not applied when MaxId is specified.</para>
+        /// </summary>
+        [NameInMap("GroupByAsset")]
+        [Validation(Required=false)]
+        public bool? GroupByAsset { get; set; }
 
         /// <summary>
         /// <para>The name of the container image.</para>
@@ -104,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language type of the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,11 +145,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The priority level of vulnerability fixing. Valid values:</para>
+        /// <para>The priority level for fixing the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high-priority vulnerability</description></item>
-        /// <item><description><b>later</b>: medium-priority vulnerability</description></item>
-        /// <item><description><b>nntf</b>: low-priority vulnerability.</description></item>
+        /// <item><description><b>asap</b>: High-priority vulnerability that must be fixed as soon as possible.</description></item>
+        /// <item><description><b>later</b>: Medium-priority vulnerability that can be fixed later.</description></item>
+        /// <item><description><b>nntf</b>: Low-priority vulnerability that does not need to be fixed for now.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>Settings for the number of vulnerabilities to display on each page in a paged query. Default value: <b>10</b>, which indicates that 10 vulnerabilities are displayed on each page.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates 10 vulnerability entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -232,6 +239,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RepoRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -239,7 +252,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The vulnerability tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AI</b>: vulnerability related to AI components.</description></item>
+        /// <item><description><b>AI</b>: vulnerabilities related to AI components</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -259,9 +272,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The fix status of the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: unfixed</description></item>
-        /// <item><description><b>4</b>: being fixed</description></item>
-        /// <item><description><b>7</b>: fixed.</description></item>
+        /// <item><description><b>1</b>: Unfixed.</description></item>
+        /// <item><description><b>4</b>: Being fixed.</description></item>
+        /// <item><description><b>7</b>: Fixed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

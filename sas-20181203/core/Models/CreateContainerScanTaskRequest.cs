@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateContainerScanTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <para>The ID of the container cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container.</para>
+        /// <para>The container ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c927cf190e886696db53cda0efb57145394ccf0bf9f525353fa5c22a26e4****</para>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeScreenScoreThreadResponseBodyData Data { get; set; }
         public class DescribeScreenScoreThreadResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The security score trend list.</para>
+            /// <para>The list of security score trends.</para>
             /// </summary>
             [NameInMap("SocreThread")]
             [Validation(Required=false)]
             public List<string> SocreThread { get; set; }
 
             /// <summary>
-            /// <para>The security score trend date list.</para>
+            /// <para>The list of dates for security score trends.</para>
             /// </summary>
             [NameInMap("SocreThreadDate")]
             [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The query type of the element to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EDGE</b>: connection information.</description></item>
+        /// <item><description><b>EDGE</b>: connection information</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DstNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The end time of the network connectivity.</para>
+        /// <para>The end time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649260799999</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SrcNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time of the network connectivity.</para>
+        /// <para>The start time of the network connectivity. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1666886400000</para>

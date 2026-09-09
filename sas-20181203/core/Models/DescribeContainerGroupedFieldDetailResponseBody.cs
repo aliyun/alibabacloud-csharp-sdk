@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerGroupedFieldDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node-local-dns</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterCurrentVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8ca91e0907d94efaba7fb0827eb9****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhhtest</para>
@@ -67,16 +67,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster. Valid values:</para>
+            /// <para>The cluster status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>STARTING: The cluster is being started.</description></item>
-            /// <item><description>START_FAILED: The cluster fails to be started.</description></item>
-            /// <item><description>BOOTSTRAPPING: The bootstrap action is being performed for the cluster.</description></item>
-            /// <item><description>RUNNING: The cluster is running.</description></item>
-            /// <item><description>TERMINATING: The cluster is being terminated.</description></item>
-            /// <item><description>TERMINATED: The cluster is terminated.</description></item>
-            /// <item><description>TERMINATED_WITH_ERRORS: The cluster is terminated due to an exception.</description></item>
-            /// <item><description>TERMINATE_FAILED: The cluster fails to be terminated.</description></item>
+            /// <item><description>STARTING: Starting.</description></item>
+            /// <item><description>START_FAILED: Failed to start.</description></item>
+            /// <item><description>BOOTSTRAPPING: Initializing bootstrap actions.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>TERMINATING: Terminating.</description></item>
+            /// <item><description>TERMINATED: Terminated.</description></item>
+            /// <item><description>TERMINATED_WITH_ERRORS: Terminated due to an exception.</description></item>
+            /// <item><description>TERMINATE_FAILED: Failed to terminate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,11 +87,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterState { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Kubernetes</b>: dedicated Kubernetes cluster.</description></item>
             /// <item><description><b>ManagedKubernetes</b>: standard managed cluster (edge cluster).</description></item>
-            /// <item><description><b>Ask</b>: serverless Kubernetes (ASK) cluster.</description></item>
+            /// <item><description><b>Ask</b>: standard serverless cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ContainerCount { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1702433618301</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>shangliang-test</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The name of the pod.</para>
+            /// <para>The POD name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node-local-dns-zwsxl</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>The number of pods.</para>
+            /// <para>The number of PODs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PodCount { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the pod.</para>
+            /// <para>The IP address of the POD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1.1</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PodIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>

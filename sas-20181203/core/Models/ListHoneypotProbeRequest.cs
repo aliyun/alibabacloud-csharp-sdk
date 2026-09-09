@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotProbeRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the probe.</para>
+        /// <para>The probe name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>probe-test</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</para>
+        /// <para>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
         /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The probe type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>host_probe</b>: host probe</description></item>
-        /// <item><description><b>vpc_black_hole_probe</b>: VPC blackhole probe.</description></item>
+        /// <item><description><b>vpc_black_hole_probe</b>: VPC blackhole probe</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

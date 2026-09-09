@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdatePostPaidBindRelRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic binding for new assets. Valid values:</para>
+        /// <para>Specifies whether to automatically bind new assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled</description></item>
-        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether to bind all servers. Default value: <b>false</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><b>true</b>: Bind all servers.</description></item>
+            /// <item><description><b>false</b>: Do not bind all servers.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public bool? BindAll { get; set; }
 
+            /// <summary>
+            /// <para>The free quota type.</para>
+            /// </summary>
             [NameInMap("FreeType")]
             [Validation(Required=false)]
             public string FreeType { get; set; }
@@ -92,12 +95,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The abbreviated name of the cloud service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sas</b>: Security Center</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }

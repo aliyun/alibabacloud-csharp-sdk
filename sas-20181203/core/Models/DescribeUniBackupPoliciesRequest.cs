@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUniBackupPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number from which to start displaying query results. Default value: <b>1</b>, which indicates that query results are displayed starting from page 1.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to display per page for a paginated query. The default number of entries per page is 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave PageSize empty.</para>
+        /// <para>Set PageSize to a non-empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the database anti-ransomware backup policy.</para>
+        /// <para>The name of the anti-ransomware backup policy for databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto_oracle_Hpm</para>

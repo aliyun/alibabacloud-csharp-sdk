@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the vulnerability whitelist.</para>
         /// <remarks>
-        /// <para>To delete a vulnerability whitelist, provide the vulnerability whitelist ID. You can obtain this ID by calling the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation.</para>
+        /// <para>To delete a vulnerability whitelist, provide the vulnerability whitelist ID. You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to obtain this ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,6 +22,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

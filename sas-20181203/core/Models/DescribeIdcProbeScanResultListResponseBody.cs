@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the IDC server room.</para>
+            /// <para>The IDC name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3K机房广州</para>
+            /// <para>3K IDC Guangzhou</para>
             /// </summary>
             [NameInMap("IdcName")]
             [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IpSegment { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest scan, in milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720006818000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The operating system type of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>linux</b>.</description></item>
+            /// <item><description><b>linux</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query.</para>
+            /// <para>The page number in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

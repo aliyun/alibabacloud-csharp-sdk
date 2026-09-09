@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportCustomizeReportRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the security report that you want to export. Valid values:</para>
+        /// <para>The type of the export. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>HTML</b></description></item>
         /// <item><description><b>PDF</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is HTML. PDF is supported only for security reports in version 2.0.0.</para>
+        /// <para>Default value: HTML. PDF is supported only for security reports of version 2.0.0.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the security report.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// <para>You can call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? ReportId { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

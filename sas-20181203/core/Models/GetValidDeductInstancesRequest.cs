@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Modules { get; set; }
 
         /// <summary>
-        /// <para>The status of the resource plan. The default value is valid. This parameter does not support modification.</para>
+        /// <para>The status of the resource plan. Default value: valid. This parameter does not support modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

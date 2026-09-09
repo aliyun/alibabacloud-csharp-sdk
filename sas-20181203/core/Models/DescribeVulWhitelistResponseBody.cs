@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries on the current page in paging.</para>
+        /// <para>The number of entries on the current page when paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in paging.</para>
+        /// <para>The current page number when paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in paging.</para>
+        /// <para>The number of entries per page when paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of whitelisted vulnerabilities.</para>
+        /// <para>The list of vulnerability whitelist entries.</para>
         /// </summary>
         [NameInMap("VulWhitelists")]
         [Validation(Required=false)]

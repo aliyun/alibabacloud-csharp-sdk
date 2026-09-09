@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateContainerScanTaskByAppNameRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the container application.</para>
+        /// <para>The container application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-centos-01</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language type of the request and response.</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateK8sAccessInfoRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayApiName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayPopName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayProjectName { get; set; }
 
         /// <summary>
-        /// <para>The SLS Logstore of the audit log.</para>
+        /// <para>The SLS Logstore for audit logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit-cf6baf6afa106eca665296fdf68b65bf</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuditLogStore { get; set; }
 
         /// <summary>
-        /// <para>The SLS project of the audit log.</para>
+        /// <para>The Simple Log Service (SLS) project for audit logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-log-custom-huxintest1018-2</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The CPU architecture, which can be ARM or x86.</para>
+        /// <para>The CPU architecture, which can be ARM architecture or x86 architecture.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arm</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CpuArch { get; set; }
 
         /// <summary>
-        /// <para>The expiration time for container access.</para>
+        /// <para>The expiration time for container access. This value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExpireDate { get; set; }
 
         /// <summary>
-        /// <para>The queried group ID.</para>
+        /// <para>The ID of the server group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

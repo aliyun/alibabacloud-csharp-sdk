@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database anti-ransomware backup policy.</para>
+        /// <para>The ID of the anti-ransomware backup policy for the database.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The <b>reset_time</b> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The point in time to which you want to restore the database.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account in the resource directory (Alibaba Cloud account).</para>
+        /// <para>The ID of the member accounts in the resource folder (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

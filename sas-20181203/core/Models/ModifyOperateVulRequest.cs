@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyOperateVulRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -39,17 +39,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</para>
+        /// <para>For other vulnerability types, call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. This parameter is required only when you handle Windows system vulnerabilities. You can ignore this parameter for other vulnerability types. Valid values:<list type="bullet">
+        /// <item><description><b>isFront</b>: Specifies whether the Windows patch is a prerequisite patch. This field is required only when handling Windows system vulnerabilities and can be ignored for other vulnerability types. Valid values:<list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain vulnerability information.</para>
+        /// <para>Batch processing of vulnerabilities is supported. Separate multiple vulnerability entries with commas (,). Call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to obtain the vulnerability information.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The operation to perform on the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vul_fix</b>: fixes the vulnerability.</description></item>
-        /// <item><description><b>vul_verify</b>: verifies the vulnerability.</description></item>
-        /// <item><description><b>vul_ignore</b>: ignores the vulnerability.</description></item>
-        /// <item><description><b>vul_undo_ignore</b>: cancels ignoring the vulnerability.</description></item>
-        /// <item><description><b>vul_delete</b>: deletes the vulnerability.</description></item>
+        /// <item><description><b>vul_fix</b>: Fix the vulnerability.</description></item>
+        /// <item><description><b>vul_verify</b>: Verify the vulnerability.</description></item>
+        /// <item><description><b>vul_ignore</b>: Ignore the vulnerability.</description></item>
+        /// <item><description><b>vul_undo_ignore</b>: Cancel ignoring the vulnerability.</description></item>
+        /// <item><description><b>vul_delete</b>: Delete the vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,6 +91,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

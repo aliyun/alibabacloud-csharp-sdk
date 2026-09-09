@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<GetValidDeductInstancesResponseBodyDataDeductPackageList> DeductPackageList { get; set; }
             public class GetValidDeductInstancesResponseBodyDataDeductPackageList : TeaModel {
                 /// <summary>
-                /// <para>The number of consumed quotas in the current metering cycle.</para>
+                /// <para>The number of consumed authorizations in the current metering cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? CurrentPeriodUsed { get; set; }
 
                 /// <summary>
-                /// <para>The end time.</para>
+                /// <para>The end time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1737734400000</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public double? InitCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The resource plan instance ID.</para>
+                /// <para>The instance ID of the resource plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas_**_dp_cn-2***</para>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The module code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>POST_HOST</b>: host and container protection</description></item>
-                /// <item><description><b>CSPM</b>: cloud product configuration check</description></item>
-                /// <item><description><b>VUL</b>: vulnerability scanning</description></item>
+                /// <item><description><b>POST_HOST</b>: Host and container protection.</description></item>
+                /// <item><description><b>CSPM</b>: Cloud product configuration check.</description></item>
+                /// <item><description><b>VUL</b>: Vulnerability scanning.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Module { get; set; }
 
                 /// <summary>
-                /// <para>The number of consumed quotas up to the previous billing cycle.</para>
+                /// <para>The number of consumed authorizations up to the end of the previous billing cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -128,6 +128,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>The trial version.</para>
+            /// </summary>
             [NameInMap("TrialVersion")]
             [Validation(Required=false)]
             public int? TrialVersion { get; set; }

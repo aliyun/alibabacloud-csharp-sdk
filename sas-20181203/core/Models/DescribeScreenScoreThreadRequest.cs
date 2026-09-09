@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The source of the security score. If left empty, the default value is Security Center. Valid values:</para>
+        /// <para>The source of the security score. If this parameter is left empty, the default value is Security Center. Valid values:</para>
         /// <para>0: Security Center.</para>
         /// <para>1: Alibaba Cloud ApsaraDB console.</para>
         /// 

@@ -16,20 +16,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the types of vulnerabilities to detect by using the one-click scan feature. Valid values:</para>
+        /// <para>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
-        /// <item><description><b>app</b>: application vulnerability detected by the web scanner.</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
-        /// <item><description><b>image</b>: container image vulnerability.</description></item>
-        /// <item><description><b>sca</b>: application vulnerability detected by software constituency parsing.<remarks>
+        /// <item><description><b>app</b>: Application vulnerability detected by the web scanner.</description></item>
+        /// <item><description><b>emg</b>: Emergency vulnerability.</description></item>
+        /// <item><description><b>image</b>: Container image vulnerability.</description></item>
+        /// <item><description><b>sca</b>: Application vulnerability detected by software constituency parsing.<remarks>
         /// <para>If this parameter is left empty, all vulnerability types are detected.</para>
         /// </remarks>
         /// </description></item>

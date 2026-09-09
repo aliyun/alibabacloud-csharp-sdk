@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulCheckTaskStatusDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the status information about the vulnerability scan tasks on the server.</para>
+        /// <para>The list of vulnerability task statuses for the server.</para>
         /// </summary>
         [NameInMap("TaskStatuses")]
         [Validation(Required=false)]
         public List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses> TaskStatuses { get; set; }
         public class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatuses : TeaModel {
             /// <summary>
-            /// <para>The ID of the main task.</para>
+            /// <para>The main task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16190385</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of status information about the vulnerability scan subtask.</para>
+            /// <para>The list of vulnerability detection task statuses.</para>
             /// </summary>
             [NameInMap("TaskStatusList")]
             [Validation(Required=false)]
             public List<DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList> TaskStatusList { get; set; }
             public class DescribeVulCheckTaskStatusDetailResponseBodyTaskStatusesTaskStatusList : TeaModel {
                 /// <summary>
-                /// <para>The error code returned.</para>
+                /// <para>The failure code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>push_command_failed</para>
@@ -54,13 +54,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The status of the subtask. Valid values:</para>
+                /// <para>The completion status of the check. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: unhandled</description></item>
-                /// <item><description><b>1</b>: collecting</description></item>
-                /// <item><description><b>2</b>: collected</description></item>
-                /// <item><description><b>3</b>: matching</description></item>
-                /// <item><description><b>4</b>: complete</description></item>
+                /// <item><description><b>0</b>: Unprocessed.</description></item>
+                /// <item><description><b>1</b>: Collecting.</description></item>
+                /// <item><description><b>2</b>: Collection completed.</description></item>
+                /// <item><description><b>3</b>: Matching.</description></item>
+                /// <item><description><b>4</b>: Completed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,12 +71,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the vulnerability. Valid values:</para>
+                /// <para>The vulnerability type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
                 /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
                 /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-                /// <item><description><b>sca</b>: vulnerability that is detected based on software component analysis</description></item>
+                /// <item><description><b>sca</b>: sca vulnerability</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The total number of vulnerability scan tasks on the server.</para>
+        /// <para>The total number of vulnerability subtasks for the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

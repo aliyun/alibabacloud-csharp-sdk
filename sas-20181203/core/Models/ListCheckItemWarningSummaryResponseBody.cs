@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCheckItemWarningSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of check item risk statistics.</para>
+        /// <para>The list of check item risk statistics information.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListCheckItemWarningSummaryResponseBodyList> List { get; set; }
         public class ListCheckItemWarningSummaryResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The suggestion on the check item.</para>
+            /// <para>The suggestion for the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>In the Administrative Tools window, double-click Local Security Policy. In the Local Security Policy window that appears, choose Security Settings\\Local Policies\\Audit Policy, configure all audit policies as: <c>Success, Failure</c>.</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Advice { get; set; }
 
             /// <summary>
-            /// <para>The types of the baselines to which the check item belongs.</para>
+            /// <para>The list of affiliated baseline categories.</para>
             /// </summary>
             [NameInMap("AffiliatedRiskTypes")]
             [Validation(Required=false)]
             public List<string> AffiliatedRiskTypes { get; set; }
 
             /// <summary>
-            /// <para>The baselines to which the check item belongs.</para>
+            /// <para>The list of affiliated baselines.</para>
             /// </summary>
             [NameInMap("AffiliatedRisks")]
             [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The alias of the baseline type.</para>
+            /// <para>The baseline category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>week_pa****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The ID of the check item.</para>
+            /// <para>The check item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>696</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>The description of the check item.</para>
+            /// <para>The check item description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Config the Event Audit policys</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: High.</description></item>
+            /// <item><description><b>medium</b>: Medium.</description></item>
+            /// <item><description><b>low</b>: Low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the check item.</para>
+            /// <para>The check item category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security audit</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the check item belongs to the container runtime type. Valid values:</para>
+            /// <para>Indicates whether the check item belongs to the container runtime category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? ContainerCheckItem { get; set; }
 
             /// <summary>
-            /// <para>The description of the check item.</para>
+            /// <para>The detailed description of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Config the Event Audit policys</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The baselines in which the check item is enabled.</para>
+            /// <para>The list of baselines enabled for the check item.</para>
             /// </summary>
             [NameInMap("EnableRisks")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The type of the baseline.</para>
+            /// <para>The baseline category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>weak_password</para>
@@ -143,12 +143,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskType { get; set; }
 
             /// <summary>
-            /// <para>Risk status of check items. Valid values:</para>
+            /// <para>The risk status of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: failed</description></item>
-            /// <item><description><b>3</b>: passed</description></item>
-            /// <item><description><b>6</b>: whitelisted</description></item>
-            /// <item><description><b>8</b>: fixed</description></item>
+            /// <item><description><b>1</b>: Failed.</description></item>
+            /// <item><description><b>3</b>: Passed.</description></item>
+            /// <item><description><b>6</b>: Whitelisted.</description></item>
+            /// <item><description><b>8</b>: Fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The number of servers that are affected by the check item.</para>
+            /// <para>The number of machines affected by the check item risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListCheckItemWarningSummaryResponseBodyPageInfo PageInfo { get; set; }
         public class ListCheckItemWarningSummaryResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of check items displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of check items returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>149</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC97C9EC-4B7D-5EFF-8A5E-A5CCC9ED****</para>

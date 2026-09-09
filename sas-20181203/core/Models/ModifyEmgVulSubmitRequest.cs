@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyEmgVulSubmitRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
         /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
+        /// <item><description><para><b>en</b>: English.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
+        /// <para>The ID of the member account in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventQuaraFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of quarantined files on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number of the returned file list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of quarantined files displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the quarantined files.</para>
+        /// <para>The list of quarantined files.</para>
         /// </summary>
         [NameInMap("QuaraFiles")]
         [Validation(Required=false)]
         public List<DescribeSuspEventQuaraFilesResponseBodyQuaraFiles> QuaraFiles { get; set; }
         public class DescribeSuspEventQuaraFilesResponseBodyQuaraFiles : TeaModel {
             /// <summary>
-            /// <para>The name of the event.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEBSHELL</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The type of the event.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebshellQuaraEventType</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server on which the quarantined file is located.</para>
+            /// <para>The name of the server where the quarantined file is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iZwz98dkiw3vbrtqrt5v****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the server on which the quarantined file is located.</para>
+            /// <para>The public IP address of the server where the quarantined file is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.131</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the server on which the quarantined file is located.</para>
+            /// <para>The private IP address of the server where the quarantined file is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the server on which the quarantined file is located.</para>
+            /// <para>The public IP address of the server where the quarantined file is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.131</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Link { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the quarantined file.</para>
+            /// <para>The MD5 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5ddebe926acc7ed39a664409bfd0ec10</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The time when the quarantined file was last modified.</para>
+            /// <para>The update time. The value is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-11 20:37:08</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The path to the quarantined file on the server.</para>
+            /// <para>The storage path of the quarantined file on the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/var/www/html/webshell-sample-master/others/defc3e21bab59e2a2ab49f7eda99f65f83d4d349.jpg</para>
@@ -167,14 +167,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The status of the quarantined file. Valid values:</para>
+            /// <para>The quarantine status. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><b>quaraFailed</b>: The file fails to be quarantined.</description></item>
-            /// <item><description><b>quaraDone</b>: The file is quarantined.</description></item>
-            /// <item><description><b>quaraing</b>: The file is being quarantined.</description></item>
-            /// <item><description><b>rollbackFailed</b>: The system fails to cancel quarantining the file.</description></item>
-            /// <item><description><b>rollbackDone</b>: The system cancelled quarantining the file.</description></item>
-            /// <item><description><b>rollbacking</b>: The system is cancelling quarantining the file.</description></item>
+            /// <item><description><b>quaraFailed</b>: Quarantine failed.</description></item>
+            /// <item><description><b>quaraDone</b>: Quarantine succeeded.</description></item>
+            /// <item><description><b>quaraing</b>: Quarantine in progress.</description></item>
+            /// <item><description><b>rollbackFailed</b>: Quarantine rollback failed.</description></item>
+            /// <item><description><b>rollbackDone</b>: Quarantine rollback succeeded.</description></item>
+            /// <item><description><b>rollbacking</b>: Quarantine rollback in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the event.</para>
+            /// <para>The unique identifier of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>228f890e56eae9eec6a42c7ea801b538</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32A73759-4C0F-4801-BE98-901223ACEE9A</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of quarantined files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38</para>

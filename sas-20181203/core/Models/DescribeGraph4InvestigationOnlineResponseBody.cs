@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description><b>file</b>: file</description></item>
                 /// <item><description><b>alert</b>: alert</description></item>
                 /// <item><description><b>ip</b>: IP address</description></item>
-                /// <item><description><b>domain</b>: domain name.</description></item>
+                /// <item><description><b>domain</b>: domain name</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description><b>file</b>: file</description></item>
                 /// <item><description><b>alert</b>: alert</description></item>
                 /// <item><description><b>ip</b>: IP address</description></item>
-                /// <item><description><b>domain</b>: domain name.</description></item>
+                /// <item><description><b>domain</b>: domain name</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string StartType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the edge was created.</para>
+                /// <para>The time when the edge was established. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-07-01 15:25:46</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The direction of the edge. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: forward</description></item>
-                /// <item><description><b>0</b>: reverse.</description></item>
+                /// <item><description><b>0</b>: reverse</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Properties { get; set; }
 
                 /// <summary>
-                /// <para>The time.</para>
+                /// <para>The time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-07-02 16:14:01</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -352,10 +352,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: The API call was successful.</description></item>
+        /// <item><description><b>false</b>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

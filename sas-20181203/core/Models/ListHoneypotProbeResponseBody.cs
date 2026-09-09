@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotProbeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The deployment time.</para>
+            /// <para>The deployment time. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669363825000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The local IP address bound to the probe.</para>
+            /// <para>The local address bound to the probe.</para>
             /// 
             /// <b>Example:</b>
             /// <para>33.53.XX.XX</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The probe type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>host_probe</b>: host probe</description></item>
-            /// <item><description><b>vpc_black_hole_probe</b>: VPC blackhole probe.</description></item>
+            /// <item><description><b>vpc_black_hole_probe</b>: VPC blackhole probe</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset instance where the host probe is deployed.</para>
+            /// <para>The UUID of the asset instance where the host probe resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC-connected instance where the VPC probe is deployed.</para>
+            /// <para>The ID of the VPC-connected instance where the VPC probe resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-5gu8iu68w9b472jbb****</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListHoneypotProbeResponseBodyPageInfo PageInfo { get; set; }
         public class ListHoneypotProbeResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of honeypot probes displayed on the current page.</para>
+            /// <para>The number of honeypot probes on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The current page number returned in the paged query during paging.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of honeypot probes displayed per page in the paged query during paging. Default value: <b>20</b>.</para>
+            /// <para>The number of honeypot probes per page in a paged query. Default value: <b>20</b>, which indicates that 20 honeypot probes are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -269,8 +269,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

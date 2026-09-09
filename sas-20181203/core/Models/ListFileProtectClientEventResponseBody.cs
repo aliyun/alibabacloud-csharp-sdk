@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </description></item>
             /// <item><description><para>2: suspicious</para>
             /// </description></item>
-            /// <item><description><para>3: high-risk.</para>
+            /// <item><description><para>3: high-risk</para>
             /// </description></item>
             /// </list>
             /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was handled.</para>
+            /// <para>The time when the event was handled. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The most recent time the event occurred.</para>
+            /// <para>The most recent time when the event occurred. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -139,11 +139,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of operation performed on the file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DELETE</b>: deletes the file.</description></item>
-            /// <item><description><b>WRITE</b>: writes to the file.</description></item>
-            /// <item><description><b>READ</b>: reads the file.</description></item>
-            /// <item><description><b>RENAME</b>: renames the file.</description></item>
-            /// <item><description><b>CHOWN</b>: changes the file owner and associated group.</description></item>
+            /// <item><description><b>DELETE</b>: File deletion.</description></item>
+            /// <item><description><b>WRITE</b>: File write.</description></item>
+            /// <item><description><b>READ</b>: File read.</description></item>
+            /// <item><description><b>RENAME</b>: File rename.</description></item>
+            /// <item><description><b>CHOWN</b>: Setting the file owner and file group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
+            /// <item><description><b>windows</b>: Windows.</description></item>
             /// <item><description><b>linux</b>: Linux.</description></item>
             /// </list>
             /// 
@@ -236,9 +236,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The event status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled </description></item>
-            /// <item><description>1: handled</description></item>
-            /// <item><description>2: whitelisted.</description></item>
+            /// <item><description>0: Unhandled. </description></item>
+            /// <item><description>1: Handled.</description></item>
+            /// <item><description>2: Whitelisted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListFileProtectClientEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListFileProtectClientEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page when paging is used in a paged query.</para>
+            /// <para>The number of the page to return in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page when paging is used in a paged query.</para>
+            /// <para>The maximum number of entries to return on each page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

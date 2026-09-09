@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCreateVulWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The reason for adding the vulnerability to the whitelist.</para>
+        /// <para>The reason for adding the vulnerability whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This vulnerability is not harmful</para>
@@ -26,6 +26,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
+        /// <remarks>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -33,14 +39,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The scope in which the whitelist takes effect. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b>: The scope type. Valid values:<list type="bullet">
+        /// <item><description><b>type</b>: The type of the scope. Valid values:<list type="bullet">
         /// <item><description><b>GroupId</b>: server group</description></item>
         /// <item><description><b>Uuid</b>: host asset</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>uuids</b>: The collection of host asset UUIDs. The field type is String.</description></item>
         /// <item><description><b>groupIds</b>: The collection of server group IDs. The field type is Long.<remarks>
-        /// <para>If this parameter is left empty, the whitelist takes effect on all hosts. If <b>type</b> is set to <b>GroupId</b>, <b>groupIds</b> cannot be empty. If <b>type</b> is set to <b>Uuid</b>, <b>uuids</b> cannot be empty.</para>
+        /// <para>If this value is empty, the whitelist applies to all hosts. If <b>type</b> is set to <b>GroupId</b>, <b>groupIds</b> cannot be empty. If <b>type</b> is set to <b>Uuid</b>, <b>uuids</b> cannot be empty.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

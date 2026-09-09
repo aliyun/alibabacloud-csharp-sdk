@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyProcDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribePropertyProcDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyProcDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of process Asset Fingerprints entries displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The value of NextToken that is returned when the NextToken method is used.</para>
+            /// <para>The NextToken value returned when the NextToken method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 entries of process Asset Fingerprints information are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of process Asset Fingerprints entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the fingerprints of the processes.</para>
+        /// <para>The details of the process Asset Fingerprints information returned.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<DescribePropertyProcDetailResponseBodyPropertys> Propertys { get; set; }
         public class DescribePropertyProcDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>The startup parameter of the process.</para>
+            /// <para>The startup parameters of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>./8888</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of last data collection. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent data collection. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565686951000</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The permission that is required to run the process.</para>
+            /// <para>The running permission of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EuidName { get; set; }
 
             /// <summary>
-            /// <para>Process file hash information.</para>
+            /// <para>The file hash of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>935c1861df1f4018d698e8b65abfa02d7e9037d8f68ca3c2065b6ca165d4****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FileHash { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server that is associated with the process.</para>
+            /// <para>The instance ID of the server associated with the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-hp35tftuh52wbp1g****</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server that is associated with the process.</para>
+            /// <para>The name of the server associated with the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc-host-****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the server.</para>
+            /// <para>The private IP address of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -156,10 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the process is a package installation process. Valid values:</para>
+            /// <para>Indicates whether the process is an installation package process. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IsPackage { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the process file.</para>
+            /// <para>The MD5 hash of the process file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>842644ea3d88bd7f7e14c1c089ef****</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The ID of the process.</para>
+            /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12826</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>The name of the parent process to which the process belongs.</para>
+            /// <para>The name of the parent process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>start***.s</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pname { get; set; }
 
             /// <summary>
-            /// <para>The time when the process starts.</para>
+            /// <para>The time when the process started. The value is in the YYYY-MM-DD HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-08-07 10:09:05</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the process starts. Unit: milliseconds.</para>
+            /// <para>The timestamp when the process started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1648783107000</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTimeDt { get; set; }
 
             /// <summary>
-            /// <para>The status of the process.</para>
+            /// <para>The running state of the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sleeping</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The user who runs the process.</para>
+            /// <para>The user that runs the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string User { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server that is associated with the process.</para>
+            /// <para>The UUID of the server associated with the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>162eb349-c2d9-4f8b-805c-75b43d4c****</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AA47D46F-10DE-138C-BBB4-8A0003F75CD7</para>

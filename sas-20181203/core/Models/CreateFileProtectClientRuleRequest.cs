@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The alert notification level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: no alert</description></item>
-        /// <item><description>1: reminder</description></item>
-        /// <item><description>2: suspicious</description></item>
-        /// <item><description>3: high-risk.</description></item>
+        /// <item><description><para>0: No alert.</para>
+        /// </description></item>
+        /// <item><description><para>1: Reminder.</para>
+        /// </description></item>
+        /// <item><description><para>2: Suspicious.</para>
+        /// </description></item>
+        /// <item><description><para>3: High-risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,14 +112,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>规则****</para>
+        /// <para>Rule****</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The switch ID associated with the rule.</para>
+        /// <para>The switch ID that corresponds to the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FILE_PROTECT_RULE_SWITCH_TYPE_0000</para>

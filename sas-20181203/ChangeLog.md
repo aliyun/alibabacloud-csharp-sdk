@@ -1,3 +1,14 @@
+2026-09-09 Version: 10.1.3
+- Update API CreateAgentlessScanTask: add request parameters Targets.
+- Update API DescribeImageGroupedVulList: add request parameters AgentlessCanFix.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.AgentlessCanFix.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.CveScore.
+- Update API DescribeImageGroupedVulList: add response parameters Body.GroupedVulItems.$.Related.
+- Update API DescribeImageVulList: add request parameters GroupByAsset.
+- Update API DescribeImageVulList: add response parameters Body.VulRecords.$.AgentlessCanFix.
+- Update API ListAgentlessTask: add response parameters Body.List.$.Extension.
+
+
 2026-09-03 Version: 10.1.2
 - Update API CreateBackupPolicy: add request parameters ServerType.
 - Update API ModifyBackupPolicy: add request parameters ServerType.

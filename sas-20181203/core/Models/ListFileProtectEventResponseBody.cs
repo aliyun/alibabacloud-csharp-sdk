@@ -19,13 +19,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The alert notification level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: no alert</para>
+            /// <item><description><para>0: No alert.</para>
             /// </description></item>
-            /// <item><description><para>1: reminder</para>
+            /// <item><description><para>1: Reminder.</para>
             /// </description></item>
-            /// <item><description><para>2: suspicious</para>
+            /// <item><description><para>2: Suspicious.</para>
             /// </description></item>
-            /// <item><description><para>3: high-risk.</para>
+            /// <item><description><para>3: High-risk.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CmdLine { get; set; }
 
             /// <summary>
-            /// <para>The file path on which the process operates.</para>
+            /// <para>The file path on which the process operated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/etc/pam.d/su</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was handled.</para>
+            /// <para>The time when the event was handled. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when the event occurred.</para>
+            /// <para>The most recent time when the event occurred. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
+            /// <item><description><b>windows</b>: Windows.</description></item>
             /// <item><description><b>linux</b>: Linux.</description></item>
             /// </list>
             /// 
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListFileProtectEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListFileProtectEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page in a paging query.</para>
+            /// <para>The number of the page to return in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page in a paging query.</para>
+            /// <para>The maximum number of entries returned per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23AD0BD2-8771-5647-819E-6BA51E212F80</para>

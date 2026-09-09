@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCancelIgnoreSuspEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The handling result of an exception. Valid values:</para>
+        /// <para>The result of the alert event processing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful</description></item>
-        /// <item><description><b>false</b>: failed</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The time consumed for the request. Unit: seconds.</para>
+        /// <para>The time consumed by the task, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paged query. Paging starts from page 1.</para>
+        /// <para>The page number of the current page in a paged query. This parameter implements paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language type. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Paging is performed based on this value.</para>
+        /// <para>The maximum number of entries per page in a paged query. This parameter implements paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The scan object type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: snapshot </description></item>
-        /// <item><description><b>2</b>: image.</description></item>
+        /// <item><description><b>2</b>: image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

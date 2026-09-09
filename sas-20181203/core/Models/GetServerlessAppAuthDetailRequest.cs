@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The SAE application ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the ID.</para>
+        /// <para>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The server type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>RunD</b></description></item>
-        /// <item><description><b>ECI</b>.</description></item>
+        /// <item><description><b>ECI</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>ASK</b></description></item>
         /// <item><description><b>SAE</b></description></item>
-        /// <item><description><b>ACS</b>.</description></item>
+        /// <item><description><b>ACS</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

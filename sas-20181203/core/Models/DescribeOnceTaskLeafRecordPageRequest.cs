@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of statuses.</para>
+        /// <para>The status list.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE_SCAN</b>: image scanning</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scanning.</description></item>
         /// <item><description><b>IMAGE_REGISTRY_PULL</b>: image asset synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

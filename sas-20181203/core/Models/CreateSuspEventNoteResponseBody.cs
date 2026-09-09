@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of processing the alert event. Valid values:</para>
+        /// <para>The result of the alert event processing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The processing was successful.</description></item>
+        /// <item><description><b>false</b>: The processing failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

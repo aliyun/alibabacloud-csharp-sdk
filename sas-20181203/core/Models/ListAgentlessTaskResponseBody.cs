@@ -27,6 +27,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>The extended information of the task. For image security fix subtasks, this field returns the selected vulnerability identifiers and the name of the fixed image. The keys include vulnerabilityIds and outputImageName.</para>
+            /// </summary>
+            [NameInMap("Extension")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Extension { get; set; }
+
+            /// <summary>
             /// <para>The instance ID of the asset.</para>
             /// 
             /// <b>Example:</b>
@@ -67,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The amount of detected data, in MB.</para>
+            /// <para>The amount of data scanned, in MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>154.11</para>
@@ -124,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ReportStatus { get; set; }
 
             /// <summary>
-            /// <para>The detection result.</para>
+            /// <para>The check result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -173,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: snapshot</description></item>
-            /// <item><description><b>2</b>: image.</description></item>
+            /// <item><description><b>2</b>: image</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListAgentlessTaskResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page in a paged query. Paging starts from page 1.</para>
+            /// <para>The page number of the current page in a paged query. This parameter implements paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -233,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries per page in a paged query. Paging is performed based on this value.</para>
+            /// <para>The maximum number of entries per page in a paged query. This parameter implements paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

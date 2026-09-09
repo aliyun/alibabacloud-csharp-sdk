@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetInfoPublishResponseBody : TeaModel {
         /// <summary>
-        /// <para>The servers.</para>
+        /// <para>The server list information.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
         public List<ListAssetInfoPublishResponseBodyAssetList> AssetList { get; set; }
         public class ListAssetInfoPublishResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// <para>The version of the Security Center agent.</para>
+            /// <para>The current client version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.8</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CurVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the Security Center agent was last upgraded.</para>
+            /// <para>The time of the last upgrade. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724522400000</para>
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastUpgradeTime { get; set; }
 
             /// <summary>
-            /// <para>The publish status of the Security Center agent. Valid values:</para>
+            /// <para>The client release status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not started.</description></item>
-            /// <item><description><b>1</b>: publishing.</description></item>
-            /// <item><description><b>2</b>: published.</description></item>
-            /// <item><description><b>3</b>: publish suspended.</description></item>
-            /// <item><description><b>4</b>: forcibly upgrading.</description></item>
+            /// <item><description><b>0</b>: Not started.</description></item>
+            /// <item><description><b>1</b>: Publishing.</description></item>
+            /// <item><description><b>2</b>: Publishing completed.</description></item>
+            /// <item><description><b>3</b>: Publishing paused.</description></item>
+            /// <item><description><b>4</b>: Force upgrading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic upgrade is enabled. Valid values:</para>
+            /// <para>Indicates whether the upgrade is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? UpgradeEnable { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The UUID of the Security Center asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2a98f149-0256-414c-a29a-a69f8a75****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3956048F-9D73-5EDB-834B-4827BB483977</para>

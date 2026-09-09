@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetInfoPublishRequest : TeaModel {
         /// <summary>
-        /// <para>An extended parameter. This parameter is temporarily unavailable.</para>
+        /// <para>An extension field. This parameter is currently not used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers that you want to query.</para>
+        /// <para>The list of server UUIDs to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UuidList")]

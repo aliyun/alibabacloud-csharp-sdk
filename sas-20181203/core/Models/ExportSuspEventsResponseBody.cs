@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the export record of the anomalous event.</para>
+        /// <para>The export record ID of the anomaly event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EF145C20-6A19-529A-8BDD-0671DXXXXXX</para>

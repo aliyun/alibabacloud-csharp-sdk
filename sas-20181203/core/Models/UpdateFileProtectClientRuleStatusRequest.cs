@@ -12,13 +12,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The alert notification level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: no alert</para>
+        /// <item><description><para>0: No alert.</para>
         /// </description></item>
-        /// <item><description><para>1: reminder</para>
+        /// <item><description><para>1: Reminder.</para>
         /// </description></item>
-        /// <item><description><para>2: suspicious</para>
+        /// <item><description><para>2: Suspicious.</para>
         /// </description></item>
-        /// <item><description><para>3: high-risk.</para>
+        /// <item><description><para>3: High-risk.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>windows</b>: Windows</description></item>
+        /// <item><description><b>windows</b>: Windows.</description></item>
         /// <item><description><b>linux</b>: Linux.</description></item>
         /// </list>
         /// 
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The policy status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled.</description></item>
-        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

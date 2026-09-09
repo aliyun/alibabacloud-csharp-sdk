@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessMaliciousFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paging query.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>Specifies whether the alert has been handled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Y: handled</description></item>
-        /// <item><description>N: not handled.</description></item>
+        /// <item><description>N: not handled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description>serious: urgent</description></item>
         /// <item><description>suspicious: suspicious</description></item>
-        /// <item><description>remind: reminder.</description></item>
+        /// <item><description>remind: reminder</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MaliciousMd5 { get; set; }
 
         /// <summary>
-        /// <para>The Alarm Metric.</para>
+        /// <para>The alerting type.</para>
         /// <para>If Lang is set to zh, valid values:</para>
         /// <list type="bullet">
         /// <item><description>WebShell: WebShell</description></item>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description>WebShell: WebShell</description></item>
         /// <item><description>Malicious Software: malware</description></item>
-        /// <item><description>Malicious Script: malicious script.</description></item>
+        /// <item><description>Malicious Script: malicious script</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MaliciousType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page in a paging query.</para>
+        /// <para>The maximum number of entries to return per page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The file source.</para>
+        /// <para>The file sources.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

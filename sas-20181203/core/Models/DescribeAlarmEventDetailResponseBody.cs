@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The unique identifier of the alert event.</para>
             /// <remarks>
-            /// <para>To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the identifier.</para>
+            /// <para>To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this identifier.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the online handling of the alert event is supported. Valid values:</para>
+            /// <para>Indicates whether the alert can be handled online. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: The alert can be unmarked as a false positive.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The alert cannot be unmarked as a false positive.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,10 +76,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanBeDealOnLine { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</para>
+            /// <para>Indicates whether the alert can be canceled. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: The alert can be unmarked as a false positive.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The alert cannot be unmarked as a false positive.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,14 +92,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanCancelFault { get; set; }
 
             /// <summary>
-            /// <para>An array consisting of the cause of the alert event, which can be used to trace the alert event.</para>
+            /// <para>The cause of the alert event (tracing information).</para>
             /// </summary>
             [NameInMap("CauseDetails")]
             [Validation(Required=false)]
             public List<DescribeAlarmEventDetailResponseBodyDataCauseDetails> CauseDetails { get; set; }
             public class DescribeAlarmEventDetailResponseBodyDataCauseDetails : TeaModel {
                 /// <summary>
-                /// <para>The key that is used to trace the alert event.</para>
+                /// <para>The key of the alert event tracing information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>842e314e69b1a2c45d5c1a2f88a16***</para>
@@ -105,14 +109,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value that is used to trace the alert event.</para>
+                /// <para>The value of the alert event tracing information.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> Value { get; set; }
                 public class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue : TeaModel {
                     /// <summary>
-                    /// <para>The name of the field that displays the tracing information.</para>
+                    /// <para>The name of the tracing information field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sshd</para>
@@ -122,10 +126,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the field that displays the tracing information. Valid values:</para>
+                    /// <para>The display type of the tracing information field. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>text</b></description></item>
-                    /// <item><description><b>html</b></description></item>
+                    /// <item><description><b>text</b>: plain text.</description></item>
+                    /// <item><description><b>html</b>: rich text.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the field that displays the tracing information.</para>
+                    /// <para>The value of the tracing information field.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>under a certain small probability, yundun may mistakenly judge the repeated attempts caused by the administrator forgetting or entering the wrong password as successful blasting. Please check according to the account number and time shown in the alarm details. Once it is confirmed that it is not the initiative of the administrator, it is recommended to immediately block the IP, and you can open it at the same time<a href="https://yundun.console.aliyun.com/?p=pam">PAM</a>, hosting host login password, improving remote connection efficiency and security control ability, and according to<a href="https://click.aliyun.com/m/1000226086/">best practice of ECS account security protection</a>Modify login password and convergence asset.</para>↵
@@ -150,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the Safeguard Mode For Major Activities mode is enabled.</para>
+            /// <para>Indicates whether the important activity protection mode is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image to which the container belongs.</para>
+            /// <para>The ID of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cadb7a725641</para>
@@ -180,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the image to which the container belongs.</para>
+            /// <para>The name of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jenkins/jenkins:latest</para>
@@ -200,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event ends. Unit: milliseconds.</para>
+            /// <para>The timestamp when the alert event ended, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1542366542000</para>
@@ -260,7 +264,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sClusterName { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the Kubernetes cluster.</para>
+            /// <para>The Kubernetes namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sit-saic-trip</para>
@@ -270,7 +274,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sNamespace { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Kubernetes cluster node.</para>
+            /// <para>The ID of the Kubernetes node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp14a1ay8e0aa9t0l***</para>
@@ -280,7 +284,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sNodeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Kubernetes cluster node.</para>
+            /// <para>The name of the Kubernetes node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou.10.188.139.**</para>
@@ -300,11 +304,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sPodName { get; set; }
 
             /// <summary>
-            /// <para>The severity of the alert event. Valid values:</para>
+            /// <para>The severity level of the alert event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>serious</b></description></item>
-            /// <item><description><b>suspicious</b></description></item>
-            /// <item><description><b>remind</b></description></item>
+            /// <item><description><b>serious</b>: Critical.</description></item>
+            /// <item><description><b>suspicious</b>: Suspicious.</description></item>
+            /// <item><description><b>remind</b>: Reminder.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -315,7 +319,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The solution to the alert event.</para>
+            /// <para>The solution for the alert event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>An invalid logon source IP has been detected. If you recognize this logon attempt, we recommend that you add the current logon source IP to the valid logon source IP list to avoid future alerts. If you do not recognize this logon attempt, we recommend that you modify the password.</para>
@@ -325,7 +329,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Solution { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event starts. Unit: milliseconds.</para>
+            /// <para>The timestamp when the alert event started, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1542378601000</para>
@@ -335,30 +339,54 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The alert type of the alert event. Valid values:</para>
+            /// <para>The alerting type. Valid values:
+            /// &lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>Suspicious process</description></item>
-            /// <item><description>Webshell</description></item>
-            /// <item><description>Unusual logon</description></item>
-            /// <item><description>Exception</description></item>
-            /// <item><description>Sensitive file tampering</description></item>
-            /// <item><description>Malicious process (cloud threat detection)</description></item>
-            /// <item><description>Suspicious network connection</description></item>
+            /// <item><description>Suspicious Process</description></item>
+            /// <item><description>Web shell</description></item>
+            /// <item><description>Unusual Logon</description></item>
+            /// <item><description>Unusual Event</description></item>
+            /// <item><description>Sensitive File Tampering</description></item>
+            /// <item><description>Malicious Process (Cloud Scan)</description></item>
+            /// <item><description>Suspicious Network Connectivity</description></item>
             /// <item><description>Other</description></item>
-            /// <item><description>Abnormal account</description></item>
-            /// <item><description>Application intrusion event</description></item>
+            /// <item><description>Suspicious Account</description></item>
+            /// <item><description>Application Intrusion Event</description></item>
+            /// <item><description>Cloud Product Threat Detection</description></item>
+            /// <item><description>Precision Defense</description></item>
+            /// <item><description>Application Whitelist</description></item>
+            /// <item><description>Persistence Backdoor</description></item>
+            /// <item><description>Web Application Threat Detection</description></item>
+            /// <item><description>Malicious Scripts</description></item>
+            /// <item><description>Threat Intelligence</description></item>
+            /// <item><description>Malicious Network Behavior</description></item>
+            /// <item><description>Container Cluster Exception</description></item>
+            /// <item><description>Web shell (Local Scan)</description></item>
+            /// <item><description>Vulnerability Exploits</description></item>
+            /// <item><description>Malicious Process (Local Scan)</description></item>
+            /// <item><description>Trusted Exception</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description>Suspicious Process</description></item>
+            /// <item><description>Webshell</description></item>
+            /// <item><description>Unusual Logon</description></item>
+            /// <item><description>Malicious Software</description></item>
+            /// <item><description>Sensitive File Tampering</description></item>
+            /// <item><description>Unusual Network Connection</description></item>
+            /// <item><description>Other</description></item>
+            /// <item><description>Suspicious Account</description></item>
             /// <item><description>Cloud threat detection</description></item>
-            /// <item><description>Precise defense</description></item>
-            /// <item><description>Application whitelist</description></item>
-            /// <item><description>Persistent webshell</description></item>
-            /// <item><description>Web application threat detection</description></item>
-            /// <item><description>Malicious script</description></item>
-            /// <item><description>Threat intelligence</description></item>
-            /// <item><description>Malicious network activity</description></item>
-            /// <item><description>Cluster exception</description></item>
-            /// <item><description>Webshell (on-premises threat detection)</description></item>
-            /// <item><description>Vulnerability exploitation</description></item>
-            /// <item><description>Malicious process (on-premises threat detection)</description></item>
+            /// <item><description>Precision defense</description></item>
+            /// <item><description>Application Whitelist</description></item>
+            /// <item><description>Persistence</description></item>
+            /// <item><description>Web Application Threat Detection</description></item>
+            /// <item><description>Malicious scripts</description></item>
+            /// <item><description>Malicious Network Activity</description></item>
+            /// <item><description>K8s Abnormal Behavior</description></item>
+            /// <item><description>Website backdoor (local engine)</description></item>
+            /// <item><description>Exploit</description></item>
+            /// <item><description>Image Scan</description></item>
             /// <item><description>Trusted exception</description></item>
             /// </list>
             /// 
@@ -370,7 +398,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The instance UUID of the asset.</para>
+            /// <para>The UUID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
@@ -382,7 +410,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7EA50837-2F0B-5BCC-AB61-4968D88D75AD</para>

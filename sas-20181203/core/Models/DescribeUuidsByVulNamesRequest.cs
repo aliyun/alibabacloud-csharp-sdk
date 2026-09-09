@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidsByVulNamesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the vulnerability has been handled. Valid values:</para>
+        /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: handled</description></item>
-        /// <item><description><b>n</b>: not handled.</description></item>
+        /// <item><description><b>y</b>: Handled.</description></item>
+        /// <item><description><b>n</b>: Not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The container search field name.</para>
+        /// <para>The name of the container search field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namespace</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>The container search field value.</para>
+        /// <para>The value of the container search field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-adad-qeqwe</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The vulnerability level. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b>: high</description></item>
-        /// <item><description><b>medium</b>: medium</description></item>
-        /// <item><description><b>low</b>: low.</description></item>
+        /// <item><description><b>high</b>: High.</description></item>
+        /// <item><description><b>medium</b>: Medium.</description></item>
+        /// <item><description><b>low</b>: Low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The priority level of vulnerability fixing. Separate multiple levels with commas (,). Valid values:</para>
+        /// <para>The priority level of the vulnerability fix. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high</description></item>
-        /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low.</description></item>
+        /// <item><description><b>asap</b>: High.</description></item>
+        /// <item><description><b>later</b>: Medium.</description></item>
+        /// <item><description><b>nntf</b>: Low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,6 +107,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Remark { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -124,8 +130,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The fix status of the vulnerability. Separate multiple statuses with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: unfixed</description></item>
-        /// <item><description><b>2</b>: fix failed.</description></item>
+        /// <item><description><b>1</b>: Unfixed.</description></item>
+        /// <item><description><b>2</b>: Fix failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>containerId</b>: container ID</description></item>
-        /// <item><description><b>uuid</b>: asset ID.</description></item>
+        /// <item><description><b>uuid</b>: asset ID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

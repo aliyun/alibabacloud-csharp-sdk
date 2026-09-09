@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventQuaraFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the file list to view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The identifier of the request source. Set the value to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server group to which the server belongs. The quarantined file is located on the server.</para>
+        /// <para>The ID of the server group where the quarantined file is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11472451</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupingId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the quarantined file.</para>
+        /// <para>The unique identifier of the quarantined file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a31337789f64d39b2219733ec99f9af7</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string QuaraTag { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>59.82.XX.XX</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the quarantined file that you want to query. Valid values:</para>
+        /// <para>The status of the quarantined files to query. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><b>quaraFailed</b>: The file fails to be quarantined.</description></item>
-        /// <item><description><b>quaraDone</b>: The file is quarantined.</description></item>
-        /// <item><description><b>quaraing</b>: The file is being quarantined.</description></item>
-        /// <item><description><b>rollbackFailed</b>: The system fails to cancel quarantining the file.</description></item>
-        /// <item><description><b>rollbackDone</b>: The system cancelled quarantining the file.</description></item>
-        /// <item><description><b>rollbacking</b>: The system is cancelling quarantining the file.</description></item>
+        /// <item><description><b>quaraFailed</b>: Quarantine failed.</description></item>
+        /// <item><description><b>quaraDone</b>: Quarantine succeeded.</description></item>
+        /// <item><description><b>quaraing</b>: Quarantine in progress.</description></item>
+        /// <item><description><b>rollbackFailed</b>: Quarantine rollback failed.</description></item>
+        /// <item><description><b>rollbackDone</b>: Quarantine rollback succeeded.</description></item>
+        /// <item><description><b>rollbacking</b>: Quarantine rollback in progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

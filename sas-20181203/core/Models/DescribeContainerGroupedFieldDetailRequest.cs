@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerGroupedFieldDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions that are used to query assets. The value of this parameter is in the JSON format. Separate multiple search conditions with commas (,). Example: <c>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</c>.</para>
+        /// <para>The conditions for searching assets. This parameter is in JSON format. Separate multiple conditions with commas (,). Example: <c>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</c>.</para>
         /// <remarks>
-        /// <para> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by conditions such as instance ID, instance name, VPC ID, region, and public IP address. Call <a href="~~DescribeCriteria~~">DescribeCriteria</a> to query the supported search conditions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for a grouping and aggregation query. Valid values:</para>
+        /// <para>The search item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pod</b></description></item>
-        /// <item><description><b>appName</b></description></item>
-        /// <item><description><b>clusterId</b></description></item>
-        /// <item><description><b>namespace</b></description></item>
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>containerScan</b></description></item>
+        /// <item><description><b>pod</b>: pod.</description></item>
+        /// <item><description><b>appName</b>: application name.</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID.</description></item>
+        /// <item><description><b>namespace</b>: namespace.</description></item>
+        /// <item><description><b>image</b>: image.</description></item>
+        /// <item><description><b>containerScan</b>: container scan.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
