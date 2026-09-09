@@ -10,30 +10,44 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyTemplateResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the protected assets to attach. The value is in the [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>] format.</para>
+        /// <para>The IDs of the protected assets to associate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</para>
         /// </summary>
         [NameInMap("BindAssets")]
         [Validation(Required=false)]
         public List<string> BindAssets { get; set; }
 
         /// <summary>
-        /// <para>The protected object groups to attach. The value is in the [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>] format.</para>
+        /// <para>The protected object groups to associate, in the format of [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>].</para>
         /// </summary>
         [NameInMap("BindResourceGroups")]
         [Validation(Required=false)]
         public List<string> BindResourceGroups { get; set; }
 
         /// <summary>
-        /// <para>The protected objects to attach. The value is in the [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>] format.</para>
+        /// <para>The protected objects to associate, in the format of [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>].</para>
         /// </summary>
         [NameInMap("BindResources")]
         [Validation(Required=false)]
         public List<string> BindResources { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
+        /// <item><description><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,21 +96,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protected assets to detach. The value is in the [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>] format.</para>
+        /// <para>The IDs of the protected assets to disassociate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</para>
         /// </summary>
         [NameInMap("UnbindAssets")]
         [Validation(Required=false)]
         public List<string> UnbindAssets { get; set; }
 
         /// <summary>
-        /// <para>The protected object groups to detach. The value is in the [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>] format.</para>
+        /// <para>The protected object groups to disassociate, in the format of [<b>&quot;group1&quot;,&quot;group2&quot;,...</b>].</para>
         /// </summary>
         [NameInMap("UnbindResourceGroups")]
         [Validation(Required=false)]
         public List<string> UnbindResourceGroups { get; set; }
 
         /// <summary>
-        /// <para>The protected objects to detach. The value is in the [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>] format.</para>
+        /// <para>The protected objects to disassociate, in the format of [<b>&quot;XX1&quot;,&quot;XX2&quot;,...</b>].</para>
         /// </summary>
         [NameInMap("UnbindResources")]
         [Validation(Required=false)]

@@ -687,6 +687,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -741,6 +745,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -1926,7 +1934,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a web core protection rule.</para>
+        /// <para>Creates a Web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1950,6 +1958,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseType))
             {
                 query["DefenseType"] = request.DefenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -1998,7 +2010,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a web core protection rule.</para>
+        /// <para>Creates a Web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2022,6 +2034,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseType))
             {
                 query["DefenseType"] = request.DefenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2070,7 +2086,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a web core protection rule.</para>
+        /// <para>Creates a Web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2088,7 +2104,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a web core protection rule.</para>
+        /// <para>Creates a Web core protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2134,6 +2150,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
+            {
+                query["Detail"] = request.Detail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2220,6 +2244,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
+            {
+                query["Detail"] = request.Detail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5267,6 +5299,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["DefenseType"] = request.DefenseType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -5332,6 +5368,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseType))
             {
                 query["DefenseType"] = request.DefenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5566,7 +5606,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protection rule template.</para>
+        /// <para>Deletes a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,6 +5623,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -5620,7 +5664,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protection rule template.</para>
+        /// <para>Deletes a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5637,6 +5681,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -5674,7 +5722,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protection rule template.</para>
+        /// <para>Deletes a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5692,7 +5740,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protection rule template.</para>
+        /// <para>Deletes a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15022,7 +15070,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates of a protected object or a protected object group.</para>
+        /// <para>Queries the protection templates of a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15096,7 +15144,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates of a protected object or a protected object group.</para>
+        /// <para>Queries the protection templates of a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15170,7 +15218,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates of a protected object or a protected object group.</para>
+        /// <para>Queries the protection templates of a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15188,7 +15236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates of a protected object or a protected object group.</para>
+        /// <para>Queries the protection templates of a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16066,7 +16114,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a single protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16120,7 +16168,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a single protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16174,7 +16222,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a single protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16192,7 +16240,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a single protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34867,6 +34915,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["DefenseType"] = request.DefenseType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -34938,6 +34990,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseType))
             {
                 query["DefenseType"] = request.DefenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -35200,6 +35256,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             {
                 query["DefenseType"] = request.DefenseType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -35270,6 +35330,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefenseType))
             {
                 query["DefenseType"] = request.DefenseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -35522,7 +35586,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35542,6 +35606,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
+            {
+                query["Detail"] = request.Detail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -35584,7 +35656,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35604,6 +35676,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Detail))
+            {
+                query["Detail"] = request.Detail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -35646,7 +35726,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35664,7 +35744,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35682,7 +35762,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a protection rule template.</para>
+        /// <para>Modifies the status of a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35699,6 +35779,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -35740,7 +35824,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a protection rule template.</para>
+        /// <para>Modifies the status of a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35757,6 +35841,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -35798,7 +35886,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a protection rule template.</para>
+        /// <para>Modifies the status of a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35816,7 +35904,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the status of a protection rule template.</para>
+        /// <para>Modifies the status of a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38977,6 +39065,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 request.TraceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TraceConfig, "TraceConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -39049,6 +39141,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
                 request.TraceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TraceConfig, "TraceConfig", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -39134,7 +39230,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates protected resources with or from a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39162,6 +39258,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResources))
             {
                 query["BindResources"] = request.BindResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -39212,7 +39312,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates protected resources with or from a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39240,6 +39340,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindResources))
             {
                 query["BindResources"] = request.BindResources;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -39290,7 +39394,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates protected resources with or from a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39308,7 +39412,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates protected resources with or from a protection template.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the created protection rules. Multiple IDs are separated by commas (,).</para>
+        /// <para>The IDs of the created protection rules. Multiple protection rule IDs are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>22215,23354,462165</para>

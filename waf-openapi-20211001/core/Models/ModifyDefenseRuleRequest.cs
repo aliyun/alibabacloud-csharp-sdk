@@ -30,6 +30,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
+        /// <item><description><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
@@ -83,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, you must specify the rule ID and the protection rule configuration to modify. The following parameters are included:</para>
+        /// <para>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, specify the rule ID and the protection rule configuration to modify. The following parameters are included:</para>
         /// <list type="bullet">
         /// <item><description><para><b>id</b>: Long | Required | The rule ID.</para>
         /// </description></item>

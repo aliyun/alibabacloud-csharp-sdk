@@ -20,6 +20,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: A dry run request is sent. Only the request conditions are checked, and the specified operation is not performed. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
@@ -34,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -74,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The status that you want to set for the protection rule. Valid values: </para>
+        /// <para>The status of the protection rule that you want to modify. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: disabled.  </description></item>
         /// <item><description><b>1</b>: enabled.</description></item>

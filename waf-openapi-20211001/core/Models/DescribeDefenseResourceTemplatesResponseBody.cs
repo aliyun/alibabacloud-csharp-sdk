@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeDefenseResourceTemplatesResponseBodyTemplates> Templates { get; set; }
         public class DescribeDefenseResourceTemplatesResponseBodyTemplates : TeaModel {
             /// <summary>
-            /// <para>The protection scenario. For more information, refer to the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
+            /// <para>The protection scenario. For more information, see the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>whitelist</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The sub-scenario of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>web</b>: the bot management web protection scenario template.</description></item>
-            /// <item><description><b>app</b>: the bot management app protection scenario template.</description></item>
-            /// <item><description><b>basic</b>: the bot management basic protection template.</description></item>
+            /// <item><description><b>web</b>: bot management web protection scenario template.</description></item>
+            /// <item><description><b>app</b>: bot management app protection scenario template.</description></item>
+            /// <item><description><b>basic</b>: bot management basic protection template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,6 +60,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            /// <summary>
+            /// <para>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</para>
+            /// </summary>
+            [NameInMap("Detail")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Detail { get; set; }
 
             /// <summary>
             /// <para>The time when the protection template was created. The value is a UNIX timestamp. Unit: milliseconds.</para>

@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The sub-scenario of the protection template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>web</b>: BOT management web protection scenario template.</description></item>
-        /// <item><description><b>app</b>: BOT management app protection scenario template.</description></item>
-        /// <item><description><b>basic</b>: BOT management basic protection template.</description></item>
-        /// <item><description><b>bot_custom_acl</b>: BOT management advanced custom rule protection template.</description></item>
+        /// <item><description><b>web</b>: bot management web protection scenario template.</description></item>
+        /// <item><description><b>app</b>: bot management app protection scenario template.</description></item>
+        /// <item><description><b>basic</b>: bot management basic protection template.</description></item>
+        /// <item><description><b>bot_custom_acl</b>: bot management advanced custom rule protection template.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paging query request. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paging request. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page when paging. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object, protection group, or the ID of the protected asset.</para>
+        /// <para>The name of the protected object, the name of the protected object group, or the ID of the protected asset.</para>
         /// <remarks>
         /// <para>This parameter is used together with the ResourceType parameter. Both parameters must have values for filtering to take effect.</para>
         /// </remarks>
@@ -154,8 +154,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The templatetype of the protection template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>user_default</b>: user default protection.</description></item>
-        /// <item><description><b>user_custom</b>: user custom protection.</description></item>
+        /// <item><description><b>user_default</b>: default protection.</description></item>
+        /// <item><description><b>user_custom</b>: custom protection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

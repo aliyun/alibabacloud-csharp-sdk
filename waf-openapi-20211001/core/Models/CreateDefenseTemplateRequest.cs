@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// <para>The sub-scenario of the protection template. This parameter is supported only for advanced bot management scenarios.</para>
+        /// <para>The sub-scenario of the protection template. This parameter is supported only for the advanced bot management scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>web</para>
@@ -41,9 +41,38 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The detailed template information, which is a JSON-formatted string. Different key-value pairs represent different attributes of the protected object. For more information, see the Detail description.</para>
+        /// <remarks>
+        /// <para>This parameter applies only to the new version of basic protection (<b>waf_base</b>) and the new version of bot management (<b>bot_manager</b>) protection scenarios. This parameter is required for the new version of bot management (<b>bot_manager</b>) protection scenario.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</para>
+        /// </summary>
+        [NameInMap("Detail")]
+        [Validation(Required=false)]
+        public string Detail { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,7 +110,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the protection template to create. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
         /// <para>Template names must be unique within the same protection scenario (<b>DefenseScene</b>).</para>
         /// </remarks>
@@ -138,7 +167,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The protected object groups to unbind when creating a default protection template. Use the format [<b>&quot;group1&quot;,&quot;group2&quot;,……</b>].</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you create a <b>default template</b> (the value of <b>TemplateType</b> is <b>user_default</b>).</para>
+        /// <para>This parameter takes effect only when creating a <b>default template</b> (when <b>TemplateType</b> is set to <b>user_default</b>).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnbindResourceGroups")]
@@ -148,7 +177,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The protected objects to unbind when creating a default protection template. Use the format [<b>&quot;XX1&quot;,&quot;XX2&quot;,……</b>].</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when you create a <b>default template</b> (the value of <b>TemplateType</b> is <b>user_default</b>).</para>
+        /// <para>This parameter takes effect only when creating a <b>default template</b> (when <b>TemplateType</b> is set to <b>user_default</b>).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnbindResources")]

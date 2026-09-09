@@ -10,9 +10,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDefenseTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</description></item>
+        /// <item><description><b>false</b>: A normal request is sent. The specified operation is performed after the request passes the check.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,11 +38,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -40,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -50,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template to be deleted.</para>
+        /// <para>The ID of the protection template that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

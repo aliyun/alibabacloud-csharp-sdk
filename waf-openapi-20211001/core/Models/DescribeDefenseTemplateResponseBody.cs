@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the protection template.</para>
+        /// <para>The template information.</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public DescribeDefenseTemplateResponseBodyTemplate Template { get; set; }
         public class DescribeDefenseTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// <para>The scenario in which the protection template is used. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> operation.</para>
+            /// <para>The protection scenario. For more information, see the <b>DefenseScene</b> parameter in <a href="~~CreateDefenseRule~~">CreateDefenseRule</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_group</para>
@@ -37,16 +37,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// <para>The sub-scenario of the protection template. Valid values:</para>
+            /// <para>The protection template sub-scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>web</b>: the bot management template for website protection.</para>
-            /// </description></item>
-            /// <item><description><para><b>app</b>: the bot management template for app protection.</para>
-            /// </description></item>
-            /// <item><description><para><b>basic</b>: the basic bot management template.</para>
-            /// </description></item>
-            /// <item><description><para><b>bot_custom_acl</b>: the bot management template for custom protection rules.</para>
-            /// </description></item>
+            /// <item><description><b>web</b>: bot management web protection scenario template.</description></item>
+            /// <item><description><b>app</b>: bot management app protection scenario template.</description></item>
+            /// <item><description><b>basic</b>: bot management basic protection template.</description></item>
+            /// <item><description><b>bot_custom_acl</b>: bot management advanced custom rule protection template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +63,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The most recent time the protection template was modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</para>
+            /// </summary>
+            [NameInMap("Detail")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> Detail { get; set; }
+
+            /// <summary>
+            /// <para>The time when the protection template was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665283642000</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protection template.</para>
+            /// <para>The ID of the protection rule template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10097</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the protection template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test0621</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The origin of the protection template. A value of <b>custom</b> indicates that the template is user-defined.</para>
+            /// <para>The source of the protection template. The value custom indicates that the template is user-defined.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -109,10 +115,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: enabled.</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,12 +127,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? TemplateStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the protection template. Valid values:</para>
+            /// <para>The protection templatetype. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>user_default</b>: the default template.</para>
-            /// </description></item>
-            /// <item><description><para><b>user_custom</b>: a custom template.</para>
-            /// </description></item>
+            /// <item><description><b>user_default</b>: user default protection.</description></item>
+            /// <item><description><b>user_custom</b>: user custom protection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

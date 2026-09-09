@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template that you want to query.</para>
+        /// <para>The ID of the protection template to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

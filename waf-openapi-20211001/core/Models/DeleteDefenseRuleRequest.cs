@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string DefenseType { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
