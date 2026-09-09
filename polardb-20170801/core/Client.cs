@@ -7457,7 +7457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is attached to a PolarDB instance.</para>
+        /// <para>Creates an application associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7475,6 +7475,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgenticDBBranchSpec))
+            {
+                request.AgenticDBBranchSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgenticDBBranchSpec, "AgenticDBBranchSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
             {
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
@@ -7499,10 +7503,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Storages))
+            {
+                request.StoragesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Storages, "Storages", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIDBClusterId))
             {
                 query["AIDBClusterId"] = request.AIDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBBranchSpecShrink))
+            {
+                query["AgenticDBBranchSpec"] = request.AgenticDBBranchSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -7639,6 +7651,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillTemplateId))
             {
                 query["SkillTemplateId"] = request.SkillTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragesShrink))
+            {
+                query["Storages"] = request.StoragesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -7689,7 +7705,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is attached to a PolarDB instance.</para>
+        /// <para>Creates an application associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7707,6 +7723,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AgenticDBBranchSpec))
+            {
+                request.AgenticDBBranchSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AgenticDBBranchSpec, "AgenticDBBranchSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
             {
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
@@ -7731,10 +7751,18 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.ParametersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Parameters, "Parameters", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Storages))
+            {
+                request.StoragesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Storages, "Storages", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIDBClusterId))
             {
                 query["AIDBClusterId"] = request.AIDBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgenticDBBranchSpecShrink))
+            {
+                query["AgenticDBBranchSpec"] = request.AgenticDBBranchSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationType))
             {
@@ -7872,6 +7900,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SkillTemplateId"] = request.SkillTemplateId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragesShrink))
+            {
+                query["Storages"] = request.StoragesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -7921,7 +7953,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is attached to a PolarDB instance.</para>
+        /// <para>Creates an application associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7939,7 +7971,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application that is attached to a PolarDB instance.</para>
+        /// <para>Creates an application associated with a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42069,14 +42101,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the backup sets in a released PolarDB cluster.</para>
+        /// <para>Queries the details of backup sets in a released PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the PolarDB cluster is in the <b>Released</b> state. You must also confirm that the <b>Retain All Backups Permanently</b> or <b>Retain Last Automatic Backup Permanently</b> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</para>
+        /// <para>When you invoke this operation, the PolarDB cluster must be in the <b>Released</b> state, and one of the following backup retention options must have been selected when the cluster was released: <b>Long-term Retention (LTR) of All Backups</b> or <b>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</b>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42167,14 +42199,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the backup sets in a released PolarDB cluster.</para>
+        /// <para>Queries the details of backup sets in a released PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the PolarDB cluster is in the <b>Released</b> state. You must also confirm that the <b>Retain All Backups Permanently</b> or <b>Retain Last Automatic Backup Permanently</b> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</para>
+        /// <para>When you invoke this operation, the PolarDB cluster must be in the <b>Released</b> state, and one of the following backup retention options must have been selected when the cluster was released: <b>Long-term Retention (LTR) of All Backups</b> or <b>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</b>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42265,14 +42297,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the backup sets in a released PolarDB cluster.</para>
+        /// <para>Queries the details of backup sets in a released PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the PolarDB cluster is in the <b>Released</b> state. You must also confirm that the <b>Retain All Backups Permanently</b> or <b>Retain Last Automatic Backup Permanently</b> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</para>
+        /// <para>When you invoke this operation, the PolarDB cluster must be in the <b>Released</b> state, and one of the following backup retention options must have been selected when the cluster was released: <b>Long-term Retention (LTR) of All Backups</b> or <b>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</b>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42291,14 +42323,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the backup sets in a released PolarDB cluster.</para>
+        /// <para>Queries the details of backup sets in a released PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the PolarDB cluster is in the <b>Released</b> state. You must also confirm that the <b>Retain All Backups Permanently</b> or <b>Retain Last Automatic Backup Permanently</b> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</para>
+        /// <para>When you invoke this operation, the PolarDB cluster must be in the <b>Released</b> state, and one of the following backup retention options must have been selected when the cluster was released: <b>Long-term Retention (LTR) of All Backups</b> or <b>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</b>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -63029,13 +63061,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic backup policy for a PolarDB cluster.</para>
+        /// <para>Modifies the automatic backup policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</para>
+        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -63156,13 +63188,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic backup policy for a PolarDB cluster.</para>
+        /// <para>Modifies the automatic backup policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</para>
+        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -63283,13 +63315,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic backup policy for a PolarDB cluster.</para>
+        /// <para>Modifies the automatic backup policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</para>
+        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -63308,13 +63340,13 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic backup policy for a PolarDB cluster.</para>
+        /// <para>Modifies the automatic backup policy of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>You can also modify the automatic backup policy for a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">backup settings</a>.</para>
+        /// <para>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</para>
         /// </remarks>
         /// </description>
         /// 

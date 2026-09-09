@@ -1,3 +1,8 @@
+2026-09-09 Version: 8.2.5
+- Update API DescribeBackupPolicy: add response parameters Body.EnableCrossRegionImmutableBackup.
+- Update API DescribeBackupPolicy: add response parameters Body.EnableImmutableBackup.
+
+
 2026-09-03 Version: 8.2.3
 - Update API CreateApplication: add request parameters DnatEntries.
 - Update API CreateApplication: add request parameters DnatIpAddress.

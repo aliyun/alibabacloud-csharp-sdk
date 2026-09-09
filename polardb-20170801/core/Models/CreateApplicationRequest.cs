@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of an existing template operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The ID of an existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pm-xxxxxx</para>
@@ -18,6 +18,78 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("AIDBClusterId")]
         [Validation(Required=false)]
         public string AIDBClusterId { get; set; }
+
+        /// <summary>
+        /// <para>The AgenticDB branch specification.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</para>
+        /// </summary>
+        [NameInMap("AgenticDBBranchSpec")]
+        [Validation(Required=false)]
+        public CreateApplicationRequestAgenticDBBranchSpec AgenticDBBranchSpec { get; set; }
+        public class CreateApplicationRequestAgenticDBBranchSpec : TeaModel {
+            /// <summary>
+            /// <para>The AgenticDB branch ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>br-9054b3b7649e4c0d977bd0df37</para>
+            /// </summary>
+            [NameInMap("BranchId")]
+            [Validation(Required=false)]
+            public string BranchId { get; set; }
+
+            /// <summary>
+            /// <para>The AgenticDB cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pagc-2zea920mcvd5o87</para>
+            /// </summary>
+            [NameInMap("DBClusterId")]
+            [Validation(Required=false)]
+            public string DBClusterId { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the source application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pa-source</para>
+            /// </summary>
+            [NameInMap("ForkFromApplicationId")]
+            [Validation(Required=false)]
+            public string ForkFromApplicationId { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to create the application based on a specified AgenticDB branch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("ForkFromBranch")]
+            [Validation(Required=false)]
+            public bool? ForkFromBranch { get; set; }
+
+            /// <summary>
+            /// <para>The AgenticDB project ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>proj-d7849d0050664c758af795d468</para>
+            /// </summary>
+            [NameInMap("ProjectId")]
+            [Validation(Required=false)]
+            public string ProjectId { get; set; }
+
+            /// <summary>
+            /// <para>The AgenticDB tenant ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>t-cfc2d7df0e59439681f0087f51</para>
+            /// </summary>
+            [NameInMap("TenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The application type. Valid values:</para>
@@ -60,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthProvider { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the authentication provider.</para>
+        /// <para>The authentication provider configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -70,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthProviderConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically create and associate with an elastic IP address (EIP).</para>
+        /// <para>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-max</para>
@@ -125,7 +197,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<CreateApplicationRequestComponents> Components { get; set; }
         public class CreateApplicationRequestComponents : TeaModel {
             /// <summary>
-            /// <para>The specifications of the application subcomponent.</para>
+            /// <para>The specification of the application subcomponent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polar.app.g2.medium</para>
@@ -135,7 +207,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentClass { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of application subcomponents with the same specifications. Default value: the value of ComponentReplica.</para>
+            /// <para>The maximum number of replicas for the application subcomponent with the same specification. Default value: the value of ComponentReplica.</para>
             /// <list type="bullet">
             /// <item><description>Only raycluster supports this parameter.</description></item>
             /// </list>
@@ -199,7 +271,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScaleMin { get; set; }
 
             /// <summary>
-            /// <para>The list of security groups for the application subcomponent. Separate multiple security groups with commas (,).</para>
+            /// <para>The list of security groups for the application subcomponent, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-********************</para>
@@ -219,7 +291,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityIPArrayName { get; set; }
 
             /// <summary>
-            /// <para>The whitelist IP addresses of the application subcomponent. Separate multiple IP addresses with commas (,).</para>
+            /// <para>The whitelist IP addresses of the application subcomponent, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -268,7 +340,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<CreateApplicationRequestDnatEntries> DnatEntries { get; set; }
         public class CreateApplicationRequestDnatEntries : TeaModel {
             /// <summary>
-            /// <para>The frontend port. This parameter is optional. If not specified, the port is automatically assigned by the control plane to avoid conflicts with ports already in use on the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</para>
+            /// <para>The frontend port. This parameter is optional. If not specified, the system automatically assigns a port that does not conflict with ports already in use on the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10001</para>
@@ -290,7 +362,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The dedicated DNAT NAT IP address that is allocated by the customer (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in the available state. The vSwitch of the gateway must belong to the primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry is bound to the vSwitch where the application resides.</para>
+        /// <para>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.64.0.10</para>
@@ -300,7 +372,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DnatIpAddress { get; set; }
 
         /// <summary>
-        /// <para>Default value: <c>false</c>. If you set this parameter to <c>true</c>, only parameter and resource validation is performed without actually creating resources.</para>
+        /// <para>Default value: <c>false</c>. If you set this parameter to <c>true</c>, only parameter and resource validation is performed without actually creating the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -360,7 +432,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DbPassword { get; set; }
 
             /// <summary>
-            /// <para>Required for knowledge applications. The name of the LLM model, such as qwen3-max.</para>
+            /// <para>Required for knowledge applications. The LLM model name, such as qwen3-max.</para>
             /// </summary>
             [NameInMap("LlmModel")]
             [Validation(Required=false)]
@@ -406,7 +478,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DbUser { get; set; }
 
             /// <summary>
-            /// <para>Required for mem0 applications. The name of the embedder model, such as text-embedding-v4.</para>
+            /// <para>Required for mem0 applications. The embedder model name, such as text-embedding-v4.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text-embedding-v4</para>
@@ -436,7 +508,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GraphLlmModel { get; set; }
 
             /// <summary>
-            /// <para>Required for mem0 applications. The name of the LLM model, such as qwen3-max.</para>
+            /// <para>Required for mem0 applications. The LLM model name, such as qwen3-max.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-max</para>
@@ -456,7 +528,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>Required for mem0 applications. The name of the reranker model, such as qwen3-rerank.</para>
+            /// <para>Required for mem0 applications. The reranker model name, such as qwen3-rerank.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3-rerank</para>
@@ -478,7 +550,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The API of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The model API. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openai-completions</para>
@@ -488,7 +560,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApi { get; set; }
 
         /// <summary>
-        /// <para>The API key of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The model API key. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxx</para>
@@ -498,7 +570,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiKey { get; set; }
 
         /// <summary>
-        /// <para>The URL of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The model base URL. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
@@ -510,7 +582,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>bailian: Bailian model.</description></item>
+        /// <item><description>bailian: Alibaba Cloud Model Studio model.</description></item>
         /// <item><description>custom: Custom model.</description></item>
         /// <item><description>maas: PolarDB model operator.</description></item>
         /// </list>
@@ -523,7 +595,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelFrom { get; set; }
 
         /// <summary>
-        /// <para>The name of the model. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
+        /// <para>The model name. This parameter takes effect only when ApplicationType is set to polarclaw.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-max</para>
@@ -572,7 +644,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription type, such as yearly or monthly.</para>
+        /// <para>The subscription type (yearly or monthly).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -582,7 +654,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Polarlakebase cold storage or high-performance instance. Default value: empty. If specified, the corresponding storage is mounted to the application.</para>
+        /// <para>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If specified, the corresponding storage is mounted to the application.</para>
         /// <para>Currently, only the following applications support this parameter:</para>
         /// <list type="bullet">
         /// <item><description>supabase</description></item>
@@ -647,7 +719,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityIPArrayName { get; set; }
 
         /// <summary>
-        /// <para>The IP whitelist. If you do not specify this parameter, the default value <c>127.0.0.1</c> is used.</para>
+        /// <para>The IP whitelist. If you do not specify this parameter, the default value is <c>127.0.0.1</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1,172.17.0.0/24</para>
@@ -675,6 +747,98 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SkillTemplateId")]
         [Validation(Required=false)]
         public string SkillTemplateId { get; set; }
+
+        /// <summary>
+        /// <para>The list of application storages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</para>
+        /// </summary>
+        [NameInMap("Storages")]
+        [Validation(Required=false)]
+        public List<CreateApplicationRequestStorages> Storages { get; set; }
+        public class CreateApplicationRequestStorages : TeaModel {
+            /// <summary>
+            /// <para>The mount path inside the container.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/data/container</para>
+            /// </summary>
+            [NameInMap("ContainerMountPath")]
+            [Validation(Required=false)]
+            public string ContainerMountPath { get; set; }
+
+            /// <summary>
+            /// <para>The storage endpoint ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pe-xxxx</para>
+            /// </summary>
+            [NameInMap("EndpointId")]
+            [Validation(Required=false)]
+            public string EndpointId { get; set; }
+
+            /// <summary>
+            /// <para>The storage mount path.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/data/source</para>
+            /// </summary>
+            [NameInMap("MountPath")]
+            [Validation(Required=false)]
+            public string MountPath { get; set; }
+
+            /// <summary>
+            /// <para>The storage capacity.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("StorageCapacity")]
+            [Validation(Required=false)]
+            public string StorageCapacity { get; set; }
+
+            /// <summary>
+            /// <para>The storage access endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>polarfs.example.com</para>
+            /// </summary>
+            [NameInMap("StorageEndpoint")]
+            [Validation(Required=false)]
+            public string StorageEndpoint { get; set; }
+
+            /// <summary>
+            /// <para>The storage instance ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pfs-xxxx</para>
+            /// </summary>
+            [NameInMap("StorageInstanceId")]
+            [Validation(Required=false)]
+            public string StorageInstanceId { get; set; }
+
+            /// <summary>
+            /// <para>The storage performance level.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PL1</para>
+            /// </summary>
+            [NameInMap("StoragePerformanceLevel")]
+            [Validation(Required=false)]
+            public string StoragePerformanceLevel { get; set; }
+
+            /// <summary>
+            /// <para>The storage type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss</para>
+            /// </summary>
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The tags.</para>
@@ -726,7 +890,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch. Default value: the current vSwitch in the primary zone of the instance.</para>
+        /// <para>The vSwitch. Default value: the vSwitch in the primary zone of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>
@@ -746,7 +910,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in the active state.</para>
+        /// <para>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-xxx</para>

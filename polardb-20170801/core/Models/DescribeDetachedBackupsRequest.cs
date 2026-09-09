@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDetachedBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set.</para>
+        /// <para>The backup ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111111111</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup mode. Valid values:</para>
+        /// <para>The backup mode. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b></description></item>
-        /// <item><description><b>Manual</b></description></item>
+        /// <item><description><b>Automated</b>: automatic backup.</description></item>
+        /// <item><description><b>Manual</b>: manual backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The region where the cross-region data backup file of the instance is stored.</para>
+        /// <para>The destination region for cross-region backups.</para>
         /// <remarks>
-        /// <para>This parameter is valid only for PolarDB for MySQL clusters.</para>
+        /// <para>Only PolarDB for MySQL supports this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupRegion { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup set. Valid values:</para>
+        /// <para>The backup status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b></description></item>
-        /// <item><description><b>Failed</b></description></item>
+        /// <item><description><b>Success</b>: The backup is complete.</description></item>
+        /// <item><description><b>Failed</b>: The backup failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><b>30</b></description></item>
         /// <item><description><b>50</b></description></item>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

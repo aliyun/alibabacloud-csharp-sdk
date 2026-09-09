@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myapp</para>
