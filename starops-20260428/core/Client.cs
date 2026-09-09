@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.STAROps20260428
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "starops.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("starops", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1574,6 +1569,124 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a public schema reference from a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public DeleteDigitalEmployeeUmodelCommonSchemaRefResponse DeleteDigitalEmployeeUmodelCommonSchemaRefWithOptions(string name, string group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDigitalEmployeeUmodelCommonSchemaRef",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public schema reference from a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse> DeleteDigitalEmployeeUmodelCommonSchemaRefWithOptionsAsync(string name, string group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDigitalEmployeeUmodelCommonSchemaRef",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public schema reference from a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public DeleteDigitalEmployeeUmodelCommonSchemaRefResponse DeleteDigitalEmployeeUmodelCommonSchemaRef(string name, string group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDigitalEmployeeUmodelCommonSchemaRefWithOptions(name, group, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a public schema reference from a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse> DeleteDigitalEmployeeUmodelCommonSchemaRefAsync(string name, string group, DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDigitalEmployeeUmodelCommonSchemaRefWithOptionsAsync(name, group, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an MCP service.</para>
         /// </summary>
         /// 
@@ -2440,6 +2553,152 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the entity data of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeEntityDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeEntityDataResponse
+        /// </returns>
+        public GetDigitalEmployeeEntityDataResponse GetDigitalEmployeeEntityDataWithOptions(string name, GetDigitalEmployeeEntityDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeEntityData",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeEntityDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the entity data of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeEntityDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeEntityDataResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeEntityDataResponse> GetDigitalEmployeeEntityDataWithOptionsAsync(string name, GetDigitalEmployeeEntityDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeEntityData",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeEntityDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the entity data of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeEntityDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeEntityDataResponse
+        /// </returns>
+        public GetDigitalEmployeeEntityDataResponse GetDigitalEmployeeEntityData(string name, GetDigitalEmployeeEntityDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDigitalEmployeeEntityDataWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the entity data of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeEntityDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeEntityDataResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeEntityDataResponse> GetDigitalEmployeeEntityDataAsync(string name, GetDigitalEmployeeEntityDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDigitalEmployeeEntityDataWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a specific skill.</para>
         /// </summary>
         /// 
@@ -2586,6 +2845,124 @@ namespace AlibabaCloud.SDK.STAROps20260428
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDigitalEmployeeSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the UModel of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeUmodelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeUmodelResponse
+        /// </returns>
+        public GetDigitalEmployeeUmodelResponse GetDigitalEmployeeUmodelWithOptions(string name, GetDigitalEmployeeUmodelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeUmodel",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeUmodelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the UModel of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeUmodelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeUmodelResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeUmodelResponse> GetDigitalEmployeeUmodelWithOptionsAsync(string name, GetDigitalEmployeeUmodelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDigitalEmployeeUmodel",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDigitalEmployeeUmodelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the UModel of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeUmodelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeUmodelResponse
+        /// </returns>
+        public GetDigitalEmployeeUmodelResponse GetDigitalEmployeeUmodel(string name, GetDigitalEmployeeUmodelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDigitalEmployeeUmodelWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the UModel of a digital employee.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDigitalEmployeeUmodelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDigitalEmployeeUmodelResponse
+        /// </returns>
+        public async Task<GetDigitalEmployeeUmodelResponse> GetDigitalEmployeeUmodelAsync(string name, GetDigitalEmployeeUmodelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDigitalEmployeeUmodelWithOptionsAsync(name, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4412,6 +4789,136 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates the UModel of a digital human.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeUmodelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeUmodelResponse
+        /// </returns>
+        public UpdateDigitalEmployeeUmodelResponse UpdateDigitalEmployeeUmodelWithOptions(string name, UpdateDigitalEmployeeUmodelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDigitalEmployeeUmodel",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDigitalEmployeeUmodelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the UModel of a digital human.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeUmodelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeUmodelResponse
+        /// </returns>
+        public async Task<UpdateDigitalEmployeeUmodelResponse> UpdateDigitalEmployeeUmodelWithOptionsAsync(string name, UpdateDigitalEmployeeUmodelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDigitalEmployeeUmodel",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDigitalEmployeeUmodelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the UModel of a digital human.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeUmodelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeUmodelResponse
+        /// </returns>
+        public UpdateDigitalEmployeeUmodelResponse UpdateDigitalEmployeeUmodel(string name, UpdateDigitalEmployeeUmodelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDigitalEmployeeUmodelWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the UModel of a digital human.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDigitalEmployeeUmodelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDigitalEmployeeUmodelResponse
+        /// </returns>
+        public async Task<UpdateDigitalEmployeeUmodelResponse> UpdateDigitalEmployeeUmodelAsync(string name, UpdateDigitalEmployeeUmodelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDigitalEmployeeUmodelWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an MCP service.</para>
         /// </summary>
         /// 
@@ -4744,6 +5251,136 @@ namespace AlibabaCloud.SDK.STAROps20260428
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateThreadWithOptionsAsync(name, threadId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a public schema reference for a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public UpsertDigitalEmployeeUmodelCommonSchemaRefResponse UpsertDigitalEmployeeUmodelCommonSchemaRefWithOptions(string name, string group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertDigitalEmployeeUmodelCommonSchemaRef",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a public schema reference for a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse> UpsertDigitalEmployeeUmodelCommonSchemaRefWithOptionsAsync(string name, string group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertDigitalEmployeeUmodelCommonSchemaRef",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a public schema reference for a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public UpsertDigitalEmployeeUmodelCommonSchemaRefResponse UpsertDigitalEmployeeUmodelCommonSchemaRef(string name, string group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpsertDigitalEmployeeUmodelCommonSchemaRefWithOptions(name, group, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates or updates a public schema reference for a digital employee UModel.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+        /// </returns>
+        public async Task<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse> UpsertDigitalEmployeeUmodelCommonSchemaRefAsync(string name, string group, UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpsertDigitalEmployeeUmodelCommonSchemaRefWithOptionsAsync(name, group, request, headers, runtime);
         }
 
     }
