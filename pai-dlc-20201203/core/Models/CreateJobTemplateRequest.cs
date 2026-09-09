@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateJobTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The field constraint rules. The key is a JSONPath expression, and the value is a constraint type: <c>locked</c> (cannot be overridden), <c>overridable</c> (can be overridden), or <c>required</c> (must be specified).</para>
+        /// <para>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type: locked (locked and cannot be overridden), overridable (can be overridden), or required (required).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Constraints { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the job template, which must be a JSON string containing the job configuration parameters.</para>
+        /// <para>The configuration content of the task template, which contains job configuration parameters. Pass the value in JSON string format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The description of the job template.</para>
+        /// <para>The description of the task template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Template description</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>User-defined key-value metadata.</para>
+        /// <para>The custom key-value pair metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>The name of the job template.</para>
+        /// <para>The name of the task template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that contains the job template.</para>
+        /// <para>The ID of the workspace to which the template belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

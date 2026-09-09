@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListJobTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of job templates.</para>
+        /// <para>The list of templates.</para>
         /// </summary>
         [NameInMap("JobTemplates")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public int? DefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the job template.</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job description</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the template, in UTC and ISO 8601 format.</para>
+            /// <para>The time when the template was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the template, in UTC and ISO 8601 format.</para>
+            /// <para>The time when the template was last modified.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtModifyTime { get; set; }
 
             /// <summary>
-            /// <para>Custom metadata, represented as a collection of key-value pairs.</para>
+            /// <para>The most recent time when a task was successfully created by using this template.</para>
+            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-03T11:30:00Z</para>
+            /// </summary>
+            [NameInMap("LastUsedTime")]
+            [Validation(Required=false)]
+            public string LastUsedTime { get; set; }
+
+            /// <summary>
+            /// <para>The custom metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -69,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The ID of the modifier.</para>
+            /// <para>The ID of the user who last modified the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20**************26</para>
@@ -79,7 +90,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ModifiedBy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the job template.</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tpl1r5g9ait7****</para>
@@ -89,7 +100,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the job template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job-template-1772516653885</para>
@@ -99,7 +110,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>142388383837****</para>
@@ -109,7 +120,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the creator.</para>
+            /// <para>The ID of the user who created the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20**************26</para>
@@ -119,7 +130,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88****</para>
@@ -141,7 +152,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of results on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -151,7 +162,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. Use this ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0D*****</para>
@@ -161,7 +172,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of job templates that match the filter conditions.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

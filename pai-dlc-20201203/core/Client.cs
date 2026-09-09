@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job template.</para>
+        /// <para>Creates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -513,7 +513,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job template.</para>
+        /// <para>Creates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job template.</para>
+        /// <para>Creates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -598,7 +598,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job template.</para>
+        /// <para>Creates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2517,7 +2517,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a job template.</para>
+        /// <para>Retrieves the details of a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2563,7 +2563,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a job template.</para>
+        /// <para>Retrieves the details of a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2609,7 +2609,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a job template.</para>
+        /// <para>Retrieves the details of a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2628,7 +2628,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a job template.</para>
+        /// <para>Retrieves the details of a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4551,7 +4551,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
+        /// <para>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4571,6 +4571,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
                 query["Order"] = request.Order;
@@ -4625,7 +4629,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
+        /// <para>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4645,6 +4649,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
                 query["Order"] = request.Order;
@@ -4699,7 +4707,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
+        /// <para>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4718,7 +4726,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
+        /// <para>Lists task templates by workspace with support for pagination and sorting. You can filter results by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">

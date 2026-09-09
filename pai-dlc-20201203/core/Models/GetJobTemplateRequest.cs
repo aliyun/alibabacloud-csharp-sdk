@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The version to retrieve. If omitted, the default version is returned. Specify <c>all</c> to retrieve all versions.</para>
+        /// <para>If this parameter is not specified, the default version is returned. If a specific number is specified, the corresponding version is returned. If all is specified, all versions are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>

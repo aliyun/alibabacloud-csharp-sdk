@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The default version of the job template.</para>
+        /// <para>The default version number currently in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? DefaultVersion { get; set; }
 
         /// <summary>
-        /// <para>A description of the job template.</para>
+        /// <para>The description of the task template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job template description</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time the job template was created.</para>
+        /// <para>The time when the template was created.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time the job template was last modified.</para>
+        /// <para>The time when the template was last modified.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>A collection of user-defined key-value pairs.</para>
+        /// <para>The most recent time when a task was successfully created by using this template. This parameter is not returned if the template has not been used.</para>
+        /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-09-03T11:30:00Z</para>
+        /// </summary>
+        [NameInMap("LastUsedTime")]
+        [Validation(Required=false)]
+        public string LastUsedTime { get; set; }
+
+        /// <summary>
+        /// <para>The custom key-value pair metadata defined by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -62,7 +73,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who last modified the job template.</para>
+        /// <para>The ID of the user who last modified the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20**************26</para>
@@ -72,7 +83,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ModifiedBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the request. This ID is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
@@ -82,7 +93,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the job template.</para>
+        /// <para>The unique identifier of the task template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tplmceolmf2****</para>
@@ -92,7 +103,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the job template.</para>
+        /// <para>The name of the task template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-template-example-1778047****</para>
@@ -102,7 +113,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant that owns the job template.</para>
+        /// <para>The ID of the tenant to which the template belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>142388383837****</para>
@@ -112,7 +123,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The total number of versions returned. This value is 1 if a specific version is queried, or the total count if all versions are queried.</para>
+        /// <para>The total number of versions. If a single version is queried, the value 1 is returned. If all versions are queried, the actual total number is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -122,7 +133,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who created the job template.</para>
+        /// <para>The ID of the user who created the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20**************26</para>
@@ -132,14 +143,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>An array of template versions. This array contains only one version if a specific version is requested, or all versions if <c>all</c> is specified.</para>
+        /// <para>The list of template version details. If a single version is queried, one element is returned. If all versions are queried, all elements are returned.</para>
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]
         public List<GetJobTemplateResponseBodyVersions> Versions { get; set; }
         public class GetJobTemplateResponseBodyVersions : TeaModel {
             /// <summary>
-            /// <para>The field constraint rules. The key is a JSONPath expression and the value is a constraint type.</para>
+            /// <para>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</para>
@@ -149,7 +160,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public Dictionary<string, object> Constraints { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the version, in JSON format.</para>
+            /// <para>The template configuration content of this version in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</para>
@@ -169,7 +180,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
-            /// <para>The time the version was created.</para>
+            /// <para>The time when the version was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -192,7 +203,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the workspace that contains the job template.</para>
+        /// <para>The ID of the workspace to which the template belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4***9</para>
