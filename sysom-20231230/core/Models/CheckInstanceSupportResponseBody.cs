@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
-            /// <para>The reason why the instance cannot be managed. This field is not empty when success is false.</para>
+            /// <para>The reason why the instance cannot be managed. This value is not empty when success is false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instance not found in ecs</para>

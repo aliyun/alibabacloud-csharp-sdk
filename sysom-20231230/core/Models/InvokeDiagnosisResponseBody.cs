@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The status code.</para>
         /// <list type="bullet">
         /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate the authorization is failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public InvokeDiagnosisResponseBodyData Data { get; set; }
         public class InvokeDiagnosisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The diagnostic task ID. You can use this ID to call the <c>GetDiagnosisResult</c> operation to query the diagnosis result.</para>
+            /// <para>The diagnostic task ID. You can use this ID to call the <c>GetDiagnosisResult</c> operation to query the diagnostic result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ihqhAcrt</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

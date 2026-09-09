@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization was successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c>: The authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -341,10 +341,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             /// <para>The execution status of the diagnostic task.
             /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Ready</b>: ready</description></item>
-            /// <item><description><b>Running</b>: running</description></item>
-            /// <item><description><b>Success</b>: succeeded</description></item>
-            /// <item><description><b>Fail</b>: failed.</description></item>
+            /// <item><description><b>Ready</b>: Ready.</description></item>
+            /// <item><description><b>Running</b>: Running.</description></item>
+            /// <item><description><b>Success</b>: Succeeded.</description></item>
+            /// <item><description><b>Fail</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

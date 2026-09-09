@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string XDebugId { get; set; }
 
         /// <summary>
+        /// <para>The information type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>instance_tag</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InfoType { get; set; }
 
         /// <summary>
+        /// <para>The instance type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>The managed type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>managed</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xiF/wDgaeitjjhVJYYzLwJ4dD+2BRJj42DLT6GrZysw=</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The plugin ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01fc4a0b-f199-4885-9861-b4054a310fe7</para>
         /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

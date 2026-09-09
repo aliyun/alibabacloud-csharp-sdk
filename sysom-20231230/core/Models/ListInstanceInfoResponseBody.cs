@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstanceInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListInstanceInfoResponseBodyData> Data { get; set; }
         public class ListInstanceInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The information key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sysom</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InfoKey { get; set; }
 
             /// <summary>
+            /// <para>The information type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>instance_tag</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InfoType { get; set; }
 
             /// <summary>
+            /// <para>The information value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>diagnosis</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries returned per request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -56,6 +69,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -64,6 +83,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</para>
         /// </summary>

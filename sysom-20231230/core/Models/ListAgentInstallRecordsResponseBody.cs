@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentInstallRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is active for end-to-end diagnostics.</para>
+        /// <para>The request ID, which can be used for end-to-end diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8CDFBA1-0564-5897-B070-D3C85002AF2F</para>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate that the authorization has failed. Check the <c>message</c> field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message for the request.</description></item>
+        /// <item><description>Otherwise, this field contains the error information of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

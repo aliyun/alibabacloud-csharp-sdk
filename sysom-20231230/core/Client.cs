@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hangzhou", "sysom.cn-hangzhou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sysom", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -266,7 +262,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -331,7 +327,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -396,7 +392,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -420,7 +416,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2017,14 +2013,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the response result of the copilot service</para>
+        /// <para>Retrieves the response from the Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
-        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2081,14 +2077,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the response result of the copilot service</para>
+        /// <para>Retrieves the response from the Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
-        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2145,14 +2141,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the response result of the copilot service</para>
+        /// <para>Retrieves the response from the Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
-        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2172,14 +2168,14 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the response result of the copilot service</para>
+        /// <para>Retrieves the response from the Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Parameters need to be filled in according to the standard LLM service input parameters, converted to a string, and assigned to llmParamString</description></item>
-        /// <item><description>The returned data needs to be converted from string to dict before use. Refer to the standard LLM service response format</description></item>
+        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2199,7 +2195,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
+        /// <para>Provides a streaming SSE interface for the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2264,7 +2260,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
+        /// <para>Provides a streaming SSE interface for the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2329,7 +2325,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
+        /// <para>Provides a streaming SSE interface for the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2357,7 +2353,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
+        /// <para>Provides a streaming SSE interface for the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3654,7 +3650,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3713,7 +3709,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3772,7 +3768,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3796,7 +3792,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
+        /// <para>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <c>data.status</c> field in the response to determine the status. When <c>data.status == Success</c>, the diagnosis is complete and you can read the diagnostic result from <c>data.result</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7582,12 +7578,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
         /// <item><description>The target ECS instance status must be Running.</description></item>
         /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
-        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7607,15 +7603,6 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InvokeDiagnosisResponse InvokeDiagnosisWithOptions(InvokeDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
-            {
-                query["X-Debug-Id"] = request.XDebugId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
-            {
-                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
@@ -7632,7 +7619,6 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -7657,12 +7643,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
         /// <item><description>The target ECS instance status must be Running.</description></item>
         /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
-        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7682,15 +7668,6 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InvokeDiagnosisResponse> InvokeDiagnosisWithOptionsAsync(InvokeDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
-            {
-                query["X-Debug-Id"] = request.XDebugId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
-            {
-                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
-            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
@@ -7707,7 +7684,6 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -7732,12 +7708,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
         /// <item><description>The target ECS instance status must be Running.</description></item>
         /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
-        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7762,12 +7738,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
+        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
         /// <list type="bullet">
         /// <item><description>The target ECS instance status must be Running.</description></item>
         /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
-        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9789,7 +9765,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// <para>Retrieves all values of a specified type of instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9867,7 +9843,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// <para>Retrieves all values of a specified type of instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9945,7 +9921,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// <para>Retrieves all values of a specified type of instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9964,7 +9940,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// <para>Retrieves all values of a specified type of instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
