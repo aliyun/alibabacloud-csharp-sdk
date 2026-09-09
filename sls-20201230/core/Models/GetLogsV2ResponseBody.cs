@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetLogsV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query results.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Data { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the returned data.</para>
+        /// <para>The metadata of the response.</para>
         /// </summary>
         [NameInMap("meta")]
         [Validation(Required=false)]
         public GetLogsV2ResponseBodyMeta Meta { get; set; }
         public class GetLogsV2ResponseBodyMeta : TeaModel {
             /// <summary>
-            /// <para>The SQL part of the query statement that follows the pipe character (|).</para>
+            /// <para>The SQL part after the pipe (|) in the query statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select *</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<string> ColumnTypes { get; set; }
 
             /// <summary>
-            /// <para>The number of log entries returned in this query.</para>
+            /// <para>The number of log entries returned in this query request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The core-hours for the Exclusive SQL.</para>
+            /// <para>The core-hour consumed by Dedicated SQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.002</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public double? CpuSec { get; set; }
 
             /// <summary>
-            /// <para>The time consumed by the query, in milliseconds.</para>
+            /// <para>The time consumed by this query, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<Dictionary<string, object>> Highlights { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether nanosecond-level sorting is enabled.</para>
+            /// <para>Specifies whether to enable nanosecond-precision ordering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? IsAccurate { get; set; }
 
             /// <summary>
-            /// <para>All keys in the query result.</para>
+            /// <para>All keys in the query results.</para>
             /// </summary>
             [NameInMap("keys")]
             [Validation(Required=false)]
             public List<string> Keys { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned. This parameter is returned if the SQL statement does not contain a LIMIT clause.</para>
+            /// <para>The limit on the number of rows. Returned when the SQL statement does not contain a LIMIT clause.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -125,7 +125,13 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? Limited { get; set; }
 
             /// <summary>
-            /// <para>The query mode. Valid values: 0: Normal query, which includes SQL queries. 1: Phrase query. 2: SCAN query. 3: SCAN SQL query.</para>
+            /// <para>The query mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: standard query (including SQL)</description></item>
+            /// <item><description>1: phrase query</description></item>
+            /// <item><description>2: SCAN</description></item>
+            /// <item><description>3: SCAN SQL</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -135,14 +141,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The information about the phrase query.</para>
+            /// <para>The phrase query information.</para>
             /// </summary>
             [NameInMap("phraseQueryInfo")]
             [Validation(Required=false)]
             public GetLogsV2ResponseBodyMetaPhraseQueryInfo PhraseQueryInfo { get; set; }
             public class GetLogsV2ResponseBodyMetaPhraseQueryInfo : TeaModel {
                 /// <summary>
-                /// <para>The starting offset of the scan result after index filtering.</para>
+                /// <para>The start offset of the scan results after index filtering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -152,7 +158,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public long? BeginOffset { get; set; }
 
                 /// <summary>
-                /// <para>The end offset of the scan result after index filtering.</para>
+                /// <para>The end offset of the scan results after index filtering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public long? EndOffset { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the scan result after index filtering.</para>
+                /// <para>The end time of the scan results after index filtering.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -172,7 +178,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether all logs are scanned.</para>
+                /// <para>Indicates whether all logs have been scanned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -184,7 +190,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// <para>The volume of logs processed in the query, in bytes.</para>
+            /// <para>The volume of logs processed by the query, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -194,7 +200,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ProcessedBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of rows processed in the query.</para>
+            /// <para>The number of rows processed in this query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -204,12 +210,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ProcessedRows { get; set; }
 
             /// <summary>
-            /// <para>The progress of the query. Valid values:</para>
+            /// <para>Indicates whether the query results are complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Complete: The query is complete, and the returned result is complete.</para>
-            /// </description></item>
-            /// <item><description><para>Incomplete: The query is complete, but the returned result is incomplete. You must send the request again to obtain the complete result.</para>
-            /// </description></item>
+            /// <item><description>Complete: The query is complete and the results are complete.</description></item>
+            /// <item><description>Incomplete: The query is complete but the results are incomplete. Repeat the request to obtain complete results.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -220,7 +224,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The volume of data scanned in the scan query, in bytes.</para>
+            /// <para>The amount of data scanned during the scan, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -230,7 +234,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ScanBytes { get; set; }
 
             /// <summary>
-            /// <para>The type of observable data.</para>
+            /// <para>The observable data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -247,7 +251,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public List<Dictionary<string, object>> Terms { get; set; }
 
             /// <summary>
-            /// <para>The part of the query statement that precedes the pipe character (|).</para>
+            /// <para>The part before the pipe (|) in the query statement.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">

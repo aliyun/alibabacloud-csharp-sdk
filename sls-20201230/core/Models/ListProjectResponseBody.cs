@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of projects that meet the query criteria.</para>
+        /// <para>The list of projects that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not applicable</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<Project> Projects { get; set; }
 
         /// <summary>
-        /// <para>The total number of projects that meet the query criteria.</para>
+        /// <para>The total number of projects that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>

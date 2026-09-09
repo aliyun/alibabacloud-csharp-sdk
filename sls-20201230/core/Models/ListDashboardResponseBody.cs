@@ -26,12 +26,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string DashboardName { get; set; }
 
-            /// <summary>
-            /// <para>The description.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>tablet_ai</para>
-            /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }

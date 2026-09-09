@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogGroup : TeaModel {
         /// <summary>
-        /// <para>A list of logs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LogItems")]

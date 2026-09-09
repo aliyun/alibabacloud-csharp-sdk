@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The topic of the log. The default value is an empty string (&quot;&quot;).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>topic-test</para>
+        /// <para>topic</para>
         /// </summary>
         [NameInMap("topic")]
         [Validation(Required=false)]

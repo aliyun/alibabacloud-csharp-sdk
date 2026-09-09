@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<GetHistogramsResponseBody> Body { get; set; }
         public class GetHistogramsResponseBody : TeaModel {
             /// <summary>
-            /// <para>The beginning of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</para>
-            /// <para>The time range is a left-closed, right-open interval. This means that the subinterval includes the start time but not the end time. If the values of from and to are the same, the interval is invalid and an error is returned.</para>
+            /// <para>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time interval follows the left-closed, right-open principle. The interval includes the start time but excludes the end time. If the values of from and to are the same, the interval is invalid and the function returns an error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1409529600</para>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? From { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</para>
-            /// <para>The time range is a left-closed, right-open interval. This means that the subinterval includes the start time but not the end time. If the values of from and to are the same, the interval is invalid and an error is returned.</para>
+            /// <para>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time interval follows the left-closed, right-open principle. The interval includes the start time but excludes the end time. If the values of from and to are the same, the interval is invalid and the function returns an error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1409569200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? To { get; set; }
 
             /// <summary>
-            /// <para>The number of logs that are found in the subinterval.</para>
+            /// <para>The number of logs queried in the subinterval.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the query result in the subinterval is complete.</para>
-            /// <para>Complete: The query is complete and the result is complete.</para>
-            /// <para>Incomplete: The query is complete but the result is incomplete. Send the request again to obtain the complete result.</para>
+            /// <para>Indicates whether the query results in the subinterval are complete.</para>
+            /// <para>Complete: The query is complete and the returned results are complete.</para>
+            /// <para>Incomplete: The query is complete but the returned results are incomplete. Repeat the request to obtain complete results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Complete</para>

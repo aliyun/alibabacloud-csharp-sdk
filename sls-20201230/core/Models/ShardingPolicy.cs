@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ShardingPolicy : TeaModel {
+        [NameInMap("enabled")]
+        [Validation(Required=false)]
+        public bool? Enabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1764659409</para>
@@ -40,9 +44,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("shardHash")]
         [Validation(Required=false)]
         public ShardingPolicyShardHash ShardHash { get; set; }

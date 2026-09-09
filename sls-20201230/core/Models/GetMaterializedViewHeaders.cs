@@ -14,7 +14,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The content type of the request. The value must be <c>application/json</c>.</para>
+        /// <para>The content type of the response. Simple Log Service supports application/json and application/x-protobuf response types.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>application/json</para>
         /// </summary>
         [NameInMap("Content-Type")]
         [Validation(Required=false)]

@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>machineGroup-test</para>
+        /// <para>machineGroup-1</para>
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]

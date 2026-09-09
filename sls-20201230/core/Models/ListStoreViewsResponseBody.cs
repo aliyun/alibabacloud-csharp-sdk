@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListStoreViewsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of returned datasets.</para>
+        /// <para>The number of storeviews returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The dataset names.</para>
+        /// <para>The list of storeview names.</para>
         /// </summary>
         [NameInMap("storeviews")]
         [Validation(Required=false)]
         public List<string> Storeviews { get; set; }
 
         /// <summary>
-        /// <para>The total number of datasets in the project.</para>
+        /// <para>The total number of storeviews in the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

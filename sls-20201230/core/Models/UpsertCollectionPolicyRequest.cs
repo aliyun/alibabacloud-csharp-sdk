@@ -79,19 +79,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string DataCode { get; set; }
 
-        /// <summary>
-        /// <para>The data configurations. The configuration is returned only for global logs. For example, if productCode is set to sls, the configuration is returned.</para>
-        /// </summary>
         [NameInMap("dataConfig")]
         [Validation(Required=false)]
         public UpsertCollectionPolicyRequestDataConfig DataConfig { get; set; }
         public class UpsertCollectionPolicyRequestDataConfig : TeaModel {
-            /// <summary>
-            /// <para>The region for storing the global logs that are collected for the first time.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>cn-beijing</para>
-            /// </summary>
             [NameInMap("dataRegion")]
             [Validation(Required=false)]
             public string DataRegion { get; set; }
@@ -184,26 +175,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
-        /// <summary>
-        /// <para>The configurations of the resource directory. The account must have activated the resource directory and be a management account or a delegated administrator of the resource directory.</para>
-        /// </summary>
         [NameInMap("resourceDirectory")]
         [Validation(Required=false)]
         public UpsertCollectionPolicyRequestResourceDirectory ResourceDirectory { get; set; }
         public class UpsertCollectionPolicyRequestResourceDirectory : TeaModel {
-            /// <summary>
-            /// <para>The mode of the resource directory. Valid values: all and custom.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>all,custom</para>
-            /// </summary>
             [NameInMap("accountGroupType")]
             [Validation(Required=false)]
             public string AccountGroupType { get; set; }
 
-            /// <summary>
-            /// <para>The members. If accountGroupType is set to custom, the members are returned.</para>
-            /// </summary>
             [NameInMap("members")]
             [Validation(Required=false)]
             public List<string> Members { get; set; }

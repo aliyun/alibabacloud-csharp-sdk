@@ -10,12 +10,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MaxComputeExportConfigurationSink : TeaModel {
         /// <summary>
-        /// <para>Specifies the minimum time granularity between two data shipping jobs. Unit: seconds. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1800 (default)</description></item>
-        /// <item><description>3600</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>1800</para>
         /// </summary>
@@ -32,12 +26,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<string> Fields { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to filter the invalid content.</para>
-        /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -151,12 +139,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string PartitionTimeFormat { get; set; }
 
         /// <summary>
-        /// <para>The time partition type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>StrfTimeFormat (default)</description></item>
-        /// <item><description>JavaSimpleDateFormat</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>StrfTimeFormat</para>
         /// </summary>

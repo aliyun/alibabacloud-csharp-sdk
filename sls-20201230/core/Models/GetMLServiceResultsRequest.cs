@@ -31,12 +31,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public MLServiceAnalysisParam Body { get; set; }
 
-        /// <summary>
-        /// <para>The version number of the algorithm. Different versions correspond to different algorithms.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>v1</para>
-        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }

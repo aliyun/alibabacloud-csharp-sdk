@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>none,snappy,gzip</para>
         /// </summary>
         [NameInMap("compressionCodec")]
         [Validation(Required=false)]

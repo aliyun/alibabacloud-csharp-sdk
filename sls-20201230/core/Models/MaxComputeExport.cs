@@ -70,8 +70,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the MaxCompute data shipping job.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>c7f01719d9feb105fc9d8df92af62010</para>
         /// </summary>

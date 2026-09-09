@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The fixed interval.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>60s</para>
+        /// <para>1m/1h</para>
         /// </summary>
         [NameInMap("interval")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The time zone of the cron expression. If this parameter is left empty, the default time zone UTC+8 is used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>+0800</para>
+        /// <para>&quot;+0800&quot;</para>
         /// </summary>
         [NameInMap("timeZone")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FixedRate</para>
+        /// <para>Cron</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

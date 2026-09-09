@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CallAiToolsRequest : TeaModel {
         /// <summary>
-        /// <para>Tool parameters.</para>
+        /// <para>The tool parameters.</para>
         /// </summary>
         [NameInMap("params")]
         [Validation(Required=false)]

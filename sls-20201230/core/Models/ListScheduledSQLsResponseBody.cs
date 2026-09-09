@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListScheduledSQLsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of Scheduled SQL jobs returned.</para>
+        /// <para>The number of scheduled query jobs returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of Scheduled SQL jobs.</para>
+        /// <para>The list of scheduled query jobs.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ScheduledSQL> Results { get; set; }
 
         /// <summary>
-        /// <para>The total number of Scheduled SQL jobs in the project.</para>
+        /// <para>The total number of scheduled query jobs in the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

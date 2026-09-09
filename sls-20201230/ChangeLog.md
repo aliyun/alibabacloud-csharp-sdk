@@ -1,3 +1,31 @@
+2026-09-09 Version: 5.12.0
+- Support API CreateApiKey.
+- Support API CreateResourceRecord.
+- Support API DeleteApiKey.
+- Support API DeleteLogs.
+- Support API DeleteResourceRecord.
+- Support API DisableApiKey.
+- Support API EnableApiKey.
+- Support API GetApiKey.
+- Support API GetJobInstance.
+- Support API GetResourceRecord.
+- Support API ListApiKeys.
+- Support API ListJobInstances.
+- Support API ListNextResourceRecord.
+- Support API ListResourceRecord.
+- Support API UpdateApiKey.
+- Support API UpdateLogs.
+- Support API UpdateResourceRecord.
+- Support API UpsertResourceRecord.
+- Update API CreateMaterializedView: add request parameters body.shardCount.
+- Update API GetLogs: add request parameters Accept-Encoding.
+- Update API GetLogs: add request parameters body.
+- Update API GetMaterializedView: add response parameters Body.createTime.
+- Update API GetMaterializedView: add response parameters Body.shardCount.
+- Update API GetMaterializedView: add response parameters Body.status.
+- Update API GetProject: add request parameters crossRegion.
+
+
 2026-06-12 Version: 5.11.1
 - Update API CreateLogStore: add request parameters body.enableModify.
 - Update API GetMaterializedView: add request parameters returnStatus.

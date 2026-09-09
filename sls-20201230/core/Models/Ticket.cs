@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Ticket : TeaModel {
         /// <summary>
+        /// <para>The UID of the caller when the ticket was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CallerUid { get; set; }
 
         /// <summary>
+        /// <para>The time when the ticket was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-09-06 14:57:07</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CreateDate { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the ticket, in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? ExpirationTime { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the ticket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-09-06 14:58:07</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ExpireDate { get; set; }
 
         /// <summary>
+        /// <para>The extension field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;xx&quot;:&quot;yy&quot;}</para>
         /// </summary>
@@ -50,14 +60,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Extra { get; set; }
 
         /// <summary>
+        /// <para>The name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>测试</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of times the ticket can be used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Number { get; set; }
 
         /// <summary>
+        /// <para>The target to which the ticket is shared.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;aliyun&quot;,&quot;ids&quot;:[1,2]}</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string SharingTo { get; set; }
 
         /// <summary>
+        /// <para>ticket</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Ticket_ { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the ticket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TicketId { get; set; }
 
         /// <summary>
+        /// <para>The number of times the ticket has been used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? UsedNumber { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the ticket is disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public string AccessKeySecret { get; set; }
 
-        /// <summary>
-        /// <para>The datasets to write to the sink.</para>
-        /// </summary>
         [NameInMap("datasets")]
         [Validation(Required=false)]
         public List<string> Datasets { get; set; }

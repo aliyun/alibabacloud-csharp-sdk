@@ -22,6 +22,44 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.GatewaySls.Client gatewayClient = new AlibabaCloud.GatewaySls.Client();
             this._spi = gatewayClient;
             this._endpointRule = "central";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-8", "ap-southeast-8.log.aliyuncs.com"},
+                {"cn-qingdao", "cn-qingdao.log.aliyuncs.com"},
+                {"cn-beijing", "cn-beijing.log.aliyuncs.com"},
+                {"cn-zhangjiakou", "cn-zhangjiakou.log.aliyuncs.com"},
+                {"cn-huhehaote", "cn-huhehaote.log.aliyuncs.com"},
+                {"cn-wulanchabu", "cn-wulanchabu.log.aliyuncs.com"},
+                {"cn-hangzhou", "cn-hangzhou.log.aliyuncs.com"},
+                {"cn-shanghai", "cn-shanghai.log.aliyuncs.com"},
+                {"cn-nanjing", "cn-nanjing.log.aliyuncs.com"},
+                {"cn-fuzhou", "cn-fuzhou.log.aliyuncs.com"},
+                {"cn-shenzhen", "cn-shenzhen.log.aliyuncs.com"},
+                {"cn-heyuan", "cn-heyuan.log.aliyuncs.com"},
+                {"cn-guangzhou", "cn-guangzhou.log.aliyuncs.com"},
+                {"cn-chengdu", "cn-chengdu.log.aliyuncs.com"},
+                {"cn-hongkong", "cn-hongkong.log.aliyuncs.com"},
+                {"ap-northeast-1", "ap-northeast-1.log.aliyuncs.com"},
+                {"ap-northeast-2", "ap-northeast-2.log.aliyuncs.com"},
+                {"ap-southeast-1", "ap-southeast-1.log.aliyuncs.com"},
+                {"ap-southeast-3", "ap-southeast-3.log.aliyuncs.com"},
+                {"ap-southeast-5", "ap-southeast-5.log.aliyuncs.com"},
+                {"ap-southeast-6", "ap-southeast-6.log.aliyuncs.com"},
+                {"ap-southeast-7", "ap-southeast-7.log.aliyuncs.com"},
+                {"us-east-1", "us-east-1.log.aliyuncs.com"},
+                {"us-west-1", "us-west-1.log.aliyuncs.com"},
+                {"eu-west-1", "eu-west-1.log.aliyuncs.com"},
+                {"eu-central-1", "eu-central-1.log.aliyuncs.com"},
+                {"us-southeast-1", "us-southeast-1.log.aliyuncs.com"},
+                {"sa-east-1", "sa-east-1.log.aliyuncs.com"},
+                {"me-east-1", "me-east-1.log.aliyuncs.com"},
+                {"me-central-1", "me-central-1.log.aliyuncs.com"},
+                {"cn-hangzhou-finance", "cn-hangzhou-finance.log.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "cn-shanghai-finance-1.log.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "cn-shenzhen-finance-1.log.aliyuncs.com"},
+                {"cn-beijing-finance-1", "cn-beijing-finance-1.log.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "cn-heyuan-acdr-1-intranet.log.aliyuncs.com"},
+            };
         }
 
 
@@ -183,8 +221,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</para>
+        /// <para>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CallAiToolsRequest
@@ -237,8 +280,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</para>
+        /// <para>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CallAiToolsRequest
@@ -291,8 +339,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</para>
+        /// <para>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CallAiToolsRequest
@@ -310,8 +363,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls observable AI tools. The capabilities of these tools are continuously updated. You can call the tool list API to retrieve the currently supported capabilities.</para>
+        /// <para>Invokes an observability AI tool. Tool capabilities are continuously updated. You can call the tool list operation to retrieve the currently supported capabilities.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the endpoints in the China (Shanghai) and Singapore regions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CallAiToolsRequest
@@ -1260,6 +1318,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the China (Shanghai) and Singapore endpoints.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAnnotationDataSetRequest
         /// </param>
@@ -1306,6 +1369,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <summary>
         /// <para>Creates a dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the China (Shanghai) and Singapore endpoints.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAnnotationDataSetRequest
@@ -1354,6 +1422,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the China (Shanghai) and Singapore endpoints.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAnnotationDataSetRequest
         /// </param>
@@ -1372,6 +1445,11 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <summary>
         /// <para>Creates a dataset.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is available only at the China (Shanghai) and Singapore endpoints.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAnnotationDataSetRequest
@@ -1525,6 +1603,202 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateAnnotationLabelWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApiKey resource in a specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>Each Project can have a maximum of 10 ApiKeys.</description></item>
+        /// <item><description>The <c>apiKeyName</c> must be unique within the Project and cannot be modified after creation.</description></item>
+        /// <item><description>The <c>allowedStores</c> field cannot be empty and supports wildcard matching.</description></item>
+        /// <item><description>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiKeyResponse
+        /// </returns>
+        public CreateApiKeyResponse CreateApiKeyWithOptions(string project, CreateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStores))
+            {
+                body["allowedStores"] = request.AllowedStores;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyName))
+            {
+                body["apiKeyName"] = request.ApiKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApiKey resource in a specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>Each Project can have a maximum of 10 ApiKeys.</description></item>
+        /// <item><description>The <c>apiKeyName</c> must be unique within the Project and cannot be modified after creation.</description></item>
+        /// <item><description>The <c>allowedStores</c> field cannot be empty and supports wildcard matching.</description></item>
+        /// <item><description>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiKeyResponse
+        /// </returns>
+        public async Task<CreateApiKeyResponse> CreateApiKeyWithOptionsAsync(string project, CreateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStores))
+            {
+                body["allowedStores"] = request.AllowedStores;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKeyName))
+            {
+                body["apiKeyName"] = request.ApiKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<CreateApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApiKey resource in a specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>Each Project can have a maximum of 10 ApiKeys.</description></item>
+        /// <item><description>The <c>apiKeyName</c> must be unique within the Project and cannot be modified after creation.</description></item>
+        /// <item><description>The <c>allowedStores</c> field cannot be empty and supports wildcard matching.</description></item>
+        /// <item><description>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiKeyResponse
+        /// </returns>
+        public CreateApiKeyResponse CreateApiKey(string project, CreateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateApiKeyWithOptions(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApiKey resource in a specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>Each Project can have a maximum of 10 ApiKeys.</description></item>
+        /// <item><description>The <c>apiKeyName</c> must be unique within the Project and cannot be modified after creation.</description></item>
+        /// <item><description>The <c>allowedStores</c> field cannot be empty and supports wildcard matching.</description></item>
+        /// <item><description>The system automatically generates the ApiKey plaintext during creation. You cannot customize it.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateApiKeyResponse
+        /// </returns>
+        public async Task<CreateApiKeyResponse> CreateApiKeyAsync(string project, CreateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateApiKeyWithOptionsAsync(project, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4205,6 +4479,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             {
                 body["originalSql"] = request.OriginalSql;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                body["shardCount"] = request.ShardCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 body["startTime"] = request.StartTime;
@@ -4273,6 +4551,10 @@ namespace AlibabaCloud.SDK.Sls20201230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalSql))
             {
                 body["originalSql"] = request.OriginalSql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardCount))
+            {
+                body["shardCount"] = request.ShardCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -5565,7 +5847,127 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an S3 file import job.</para>
+        /// <para>Creates a resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceRecordResponse
+        /// </returns>
+        public CreateResourceRecordResponse CreateResourceRecordWithOptions(string resourceName, CreateResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceRecordResponse
+        /// </returns>
+        public async Task<CreateResourceRecordResponse> CreateResourceRecordWithOptionsAsync(string resourceName, CreateResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceRecordResponse
+        /// </returns>
+        public CreateResourceRecordResponse CreateResourceRecord(string resourceName, CreateResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateResourceRecordWithOptions(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateResourceRecordResponse
+        /// </returns>
+        public async Task<CreateResourceRecordResponse> CreateResourceRecordAsync(string resourceName, CreateResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateResourceRecordWithOptionsAsync(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an S3 file import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5630,7 +6032,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an S3 file import job.</para>
+        /// <para>Creates an S3 file import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5695,7 +6097,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an S3 file import job.</para>
+        /// <para>Creates an S3 file import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5714,7 +6116,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an S3 file import job.</para>
+        /// <para>Creates an S3 file import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6005,7 +6407,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled SQL job in a specified project.</para>
+        /// <para>Creates a scheduled query job in the specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6070,7 +6472,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled SQL job in a specified project.</para>
+        /// <para>Creates a scheduled query job in the specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6135,7 +6537,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled SQL job in a specified project.</para>
+        /// <para>Creates a scheduled query job in the specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6154,7 +6556,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scheduled SQL job in a specified project.</para>
+        /// <para>Creates a scheduled query job in the specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6337,7 +6739,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset.</para>
+        /// <para>Creates a storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6394,7 +6796,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset.</para>
+        /// <para>Creates a storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6451,7 +6853,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset.</para>
+        /// <para>Creates a storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6470,7 +6872,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dataset.</para>
+        /// <para>Creates a storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7239,6 +7641,170 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteAnnotationLabelWithOptionsAsync(labelId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ApiKey resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes an ApiKey with the specified name from a project.</description></item>
+        /// <item><description>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</description></item>
+        /// <item><description>This operation is idempotent. A <c>204 No Content</c> response is returned even if the ApiKey does not exist.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiKeyResponse
+        /// </returns>
+        public DeleteApiKeyResponse DeleteApiKeyWithOptions(string project, string apiKeyName, DeleteApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ApiKey resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes an ApiKey with the specified name from a project.</description></item>
+        /// <item><description>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</description></item>
+        /// <item><description>This operation is idempotent. A <c>204 No Content</c> response is returned even if the ApiKey does not exist.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiKeyResponse
+        /// </returns>
+        public async Task<DeleteApiKeyResponse> DeleteApiKeyWithOptionsAsync(string project, string apiKeyName, DeleteApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ApiKey resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes an ApiKey with the specified name from a project.</description></item>
+        /// <item><description>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</description></item>
+        /// <item><description>This operation is idempotent. A <c>204 No Content</c> response is returned even if the ApiKey does not exist.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiKeyResponse
+        /// </returns>
+        public DeleteApiKeyResponse DeleteApiKey(string project, string apiKeyName, DeleteApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified ApiKey resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation deletes an ApiKey with the specified name from a project.</description></item>
+        /// <item><description>After deletion, the ApiKey becomes invalid immediately and can no longer be used to write data.</description></item>
+        /// <item><description>This operation is idempotent. A <c>204 No Content</c> response is returned even if the ApiKey does not exist.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteApiKeyResponse
+        /// </returns>
+        public async Task<DeleteApiKeyResponse> DeleteApiKeyAsync(string project, string apiKeyName, DeleteApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteApiKeyWithOptionsAsync(project, apiKeyName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8269,7 +8835,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a download job.</para>
+        /// <para>Deletes a download task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8308,7 +8874,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a download job.</para>
+        /// <para>Deletes a download task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8347,7 +8913,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a download job.</para>
+        /// <para>Deletes a download task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8362,7 +8928,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a download job.</para>
+        /// <para>Deletes a download task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9089,6 +9655,186 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteLoggingWithOptionsAsync(project, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes log data from a Logstore under a specified project</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogsResponse
+        /// </returns>
+        public DeleteLogsResponse DeleteLogsWithOptions(string project, string logstore, DeleteLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowId))
+            {
+                body["rowId"] = request.RowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/deletelogs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLogsResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes log data from a Logstore under a specified project</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogsResponse
+        /// </returns>
+        public async Task<DeleteLogsResponse> DeleteLogsWithOptionsAsync(string project, string logstore, DeleteLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowId))
+            {
+                body["rowId"] = request.RowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/deletelogs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLogsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes log data from a Logstore under a specified project</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogsResponse
+        /// </returns>
+        public DeleteLogsResponse DeleteLogs(string project, string logstore, DeleteLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteLogsWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes log data from a Logstore under a specified project</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host is composed of the project name and the Log Service endpoint. You need to specify the project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLogsResponse
+        /// </returns>
+        public async Task<DeleteLogsResponse> DeleteLogsAsync(string project, string logstore, DeleteLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteLogsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10485,6 +11231,136 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceRecordResponse
+        /// </returns>
+        public DeleteResourceRecordResponse DeleteResourceRecordWithOptions(string resourceName, DeleteResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceRecordResponse
+        /// </returns>
+        public async Task<DeleteResourceRecordResponse> DeleteResourceRecordWithOptionsAsync(string resourceName, DeleteResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DeleteResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceRecordResponse
+        /// </returns>
+        public DeleteResourceRecordResponse DeleteResourceRecord(string resourceName, DeleteResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteResourceRecordWithOptions(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteResourceRecordResponse
+        /// </returns>
+        public async Task<DeleteResourceRecordResponse> DeleteResourceRecordAsync(string resourceName, DeleteResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteResourceRecordWithOptionsAsync(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an S3 ingestion task.</para>
         /// </summary>
         /// 
@@ -10913,7 +11789,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dataset by using the name of the dataset.</para>
+        /// <para>Deletes a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10952,7 +11828,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dataset by using the name of the dataset.</para>
+        /// <para>Deletes a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10991,7 +11867,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dataset by using the name of the dataset.</para>
+        /// <para>Deletes a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11006,7 +11882,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dataset by using the name of the dataset.</para>
+        /// <para>Deletes a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11259,6 +12135,130 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Disables a specified API key so that it can no longer be used to write data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApiKeyResponse
+        /// </returns>
+        public DisableApiKeyResponse DisableApiKeyWithOptions(string project, string apiKeyName, DisableApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName + "/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DisableApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified API key so that it can no longer be used to write data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApiKeyResponse
+        /// </returns>
+        public async Task<DisableApiKeyResponse> DisableApiKeyWithOptionsAsync(string project, string apiKeyName, DisableApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName + "/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<DisableApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified API key so that it can no longer be used to write data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApiKeyResponse
+        /// </returns>
+        public DisableApiKeyResponse DisableApiKey(string project, string apiKeyName, DisableApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified API key so that it can no longer be used to write data.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableApiKeyResponse
+        /// </returns>
+        public async Task<DisableApiKeyResponse> DisableApiKeyAsync(string project, string apiKeyName, DisableApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableApiKeyWithOptionsAsync(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables the Scheduled SQL feature.</para>
         /// </summary>
         /// 
@@ -11471,6 +12471,166 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await EnableAlertWithOptionsAsync(project, alertName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a specified API key so that it can continue to be used for writing data.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation starts a specified API key by changing its status from disabled to enabled.</description></item>
+        /// <item><description>After the API key is started, it can continue to be used for writing data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApiKeyResponse
+        /// </returns>
+        public EnableApiKeyResponse EnableApiKeyWithOptions(string project, string apiKeyName, EnableApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName + "/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<EnableApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a specified API key so that it can continue to be used for writing data.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation starts a specified API key by changing its status from disabled to enabled.</description></item>
+        /// <item><description>After the API key is started, it can continue to be used for writing data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApiKeyResponse
+        /// </returns>
+        public async Task<EnableApiKeyResponse> EnableApiKeyWithOptionsAsync(string project, string apiKeyName, EnableApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName + "/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<EnableApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a specified API key so that it can continue to be used for writing data.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation starts a specified API key by changing its status from disabled to enabled.</description></item>
+        /// <item><description>After the API key is started, it can continue to be used for writing data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApiKeyResponse
+        /// </returns>
+        public EnableApiKeyResponse EnableApiKey(string project, string apiKeyName, EnableApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts a specified API key so that it can continue to be used for writing data.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation starts a specified API key by changing its status from disabled to enabled.</description></item>
+        /// <item><description>After the API key is started, it can continue to be used for writing data.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableApiKeyResponse
+        /// </returns>
+        public async Task<EnableApiKeyResponse> EnableApiKeyAsync(string project, string apiKeyName, EnableApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableApiKeyWithOptionsAsync(project, apiKeyName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12195,6 +13355,170 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetAnnotationLabelWithOptionsAsync(labelId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified API key by API key name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified API key by <c>apiKeyName</c>.</description></item>
+        /// <item><description>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</description></item>
+        /// <item><description><c>log:GetApiKey</c> is considered a sensitive permission. Exercise caution when calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiKeyResponse
+        /// </returns>
+        public GetApiKeyResponse GetApiKeyWithOptions(string project, string apiKeyName, GetApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified API key by API key name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified API key by <c>apiKeyName</c>.</description></item>
+        /// <item><description>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</description></item>
+        /// <item><description><c>log:GetApiKey</c> is considered a sensitive permission. Exercise caution when calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiKeyResponse
+        /// </returns>
+        public async Task<GetApiKeyResponse> GetApiKeyWithOptionsAsync(string project, string apiKeyName, GetApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified API key by API key name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified API key by <c>apiKeyName</c>.</description></item>
+        /// <item><description>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</description></item>
+        /// <item><description><c>log:GetApiKey</c> is considered a sensitive permission. Exercise caution when calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiKeyResponse
+        /// </returns>
+        public GetApiKeyResponse GetApiKey(string project, string apiKeyName, GetApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified API key by API key name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified API key by <c>apiKeyName</c>.</description></item>
+        /// <item><description>The response includes the name, key, status, description, list of stores that allow writes, creation time, and update time of the API key.</description></item>
+        /// <item><description><c>log:GetApiKey</c> is considered a sensitive permission. Exercise caution when calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiKeyResponse
+        /// </returns>
+        public async Task<GetApiKeyResponse> GetApiKeyAsync(string project, string apiKeyName, GetApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetApiKeyWithOptionsAsync(project, apiKeyName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14157,7 +15481,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a download task.</para>
+        /// <para>Retrieves information about a log download task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -14196,7 +15520,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a download task.</para>
+        /// <para>Retrieves information about a log download task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -14235,7 +15559,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a download task.</para>
+        /// <para>Retrieves information about a log download task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -14250,7 +15574,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a download task.</para>
+        /// <para>Retrieves information about a log download task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -14589,25 +15913,26 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the GetHistograms operation to query the distribution of logs that meet the search criteria in a specified Logstore.</para>
+        /// <para>Queries the distribution of logs that meet the specified query conditions in a Logstore by calling the GetHistograms operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Interface description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service Endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>The subintervals in the response are divided consistently. If the requested time range is the same, the subinterval division in the response is also the same.</description></item>
-        /// <item><description>If the number of logs in a query varies greatly, the Simple Log Service application programming interface (API) cannot predict how many calls are needed to retrieve the full result. You must check the status of the progress member in each response. This status indicates whether to call the operation again to retrieve the final result. Each repeated call consumes the same number of query CUs.</description></item>
-        /// <item><description>The delay between when a log is written to a Logstore and when it can be queried using the GetHistograms and GetLogs operations varies by log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp is within the range of (-180 seconds, +900 seconds] relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:03:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The maximum latency for real-time data to become searchable is 3 seconds. In 99.9% of cases, the data is searchable within 1 second.</description></item>
-        /// <item><description>Historical data: The log timestamp is within the range of [-7 × 86400 seconds, -180 seconds) relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:00:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically happens during data backfill.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the time the server received the log (the <b>tag</b>:<b>receive_time</b> field). If the difference is in the range of (-180 seconds, 900 seconds], the data is real-time data. If the difference is in the range of [-7 × 86400 seconds, -180 seconds), the data is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>The subinterval division in the response is always stable. If the time range in your query request remains unchanged, the subinterval division in the response also remains unchanged.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation needs to be invoked to obtain complete results. Check the progress status value in the response of each request to determine whether to invoke this operation again to obtain the final complete results. Each repeated invocation consumes the same number of query CUs.</description></item>
+        /// <item><description>The latency between writing a log to a Logstore and querying the log by using LogSearch operations (GetHistograms and GetLogs) varies depending on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current server time. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The latency from writing real-time data to querying the data in the LogSearch interface is 3 seconds.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7x86400 seconds, -180 seconds) relative to the current server time. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically occurs in data backfill scenarios.
+        ///  The maximum latency from writing real-time data to querying the data is 3 seconds. In 99.9% of cases, the query is completed within 1 second.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7x86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides a Java software development kit (SDK) example for using the GetHistograms query. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
+        /// <item><description>Simple Log Service provides a usage example of GetHistograms queries in the Java SDK. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14669,25 +15994,26 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the GetHistograms operation to query the distribution of logs that meet the search criteria in a specified Logstore.</para>
+        /// <para>Queries the distribution of logs that meet the specified query conditions in a Logstore by calling the GetHistograms operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Interface description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service Endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>The subintervals in the response are divided consistently. If the requested time range is the same, the subinterval division in the response is also the same.</description></item>
-        /// <item><description>If the number of logs in a query varies greatly, the Simple Log Service application programming interface (API) cannot predict how many calls are needed to retrieve the full result. You must check the status of the progress member in each response. This status indicates whether to call the operation again to retrieve the final result. Each repeated call consumes the same number of query CUs.</description></item>
-        /// <item><description>The delay between when a log is written to a Logstore and when it can be queried using the GetHistograms and GetLogs operations varies by log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp is within the range of (-180 seconds, +900 seconds] relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:03:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The maximum latency for real-time data to become searchable is 3 seconds. In 99.9% of cases, the data is searchable within 1 second.</description></item>
-        /// <item><description>Historical data: The log timestamp is within the range of [-7 × 86400 seconds, -180 seconds) relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:00:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically happens during data backfill.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the time the server received the log (the <b>tag</b>:<b>receive_time</b> field). If the difference is in the range of (-180 seconds, 900 seconds], the data is real-time data. If the difference is in the range of [-7 × 86400 seconds, -180 seconds), the data is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>The subinterval division in the response is always stable. If the time range in your query request remains unchanged, the subinterval division in the response also remains unchanged.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation needs to be invoked to obtain complete results. Check the progress status value in the response of each request to determine whether to invoke this operation again to obtain the final complete results. Each repeated invocation consumes the same number of query CUs.</description></item>
+        /// <item><description>The latency between writing a log to a Logstore and querying the log by using LogSearch operations (GetHistograms and GetLogs) varies depending on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current server time. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The latency from writing real-time data to querying the data in the LogSearch interface is 3 seconds.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7x86400 seconds, -180 seconds) relative to the current server time. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically occurs in data backfill scenarios.
+        ///  The maximum latency from writing real-time data to querying the data is 3 seconds. In 99.9% of cases, the query is completed within 1 second.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7x86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides a Java software development kit (SDK) example for using the GetHistograms query. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
+        /// <item><description>Simple Log Service provides a usage example of GetHistograms queries in the Java SDK. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14749,25 +16075,26 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the GetHistograms operation to query the distribution of logs that meet the search criteria in a specified Logstore.</para>
+        /// <para>Queries the distribution of logs that meet the specified query conditions in a Logstore by calling the GetHistograms operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Interface description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service Endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>The subintervals in the response are divided consistently. If the requested time range is the same, the subinterval division in the response is also the same.</description></item>
-        /// <item><description>If the number of logs in a query varies greatly, the Simple Log Service application programming interface (API) cannot predict how many calls are needed to retrieve the full result. You must check the status of the progress member in each response. This status indicates whether to call the operation again to retrieve the final result. Each repeated call consumes the same number of query CUs.</description></item>
-        /// <item><description>The delay between when a log is written to a Logstore and when it can be queried using the GetHistograms and GetLogs operations varies by log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp is within the range of (-180 seconds, +900 seconds] relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:03:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The maximum latency for real-time data to become searchable is 3 seconds. In 99.9% of cases, the data is searchable within 1 second.</description></item>
-        /// <item><description>Historical data: The log timestamp is within the range of [-7 × 86400 seconds, -180 seconds) relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:00:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically happens during data backfill.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the time the server received the log (the <b>tag</b>:<b>receive_time</b> field). If the difference is in the range of (-180 seconds, 900 seconds], the data is real-time data. If the difference is in the range of [-7 × 86400 seconds, -180 seconds), the data is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>The subinterval division in the response is always stable. If the time range in your query request remains unchanged, the subinterval division in the response also remains unchanged.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation needs to be invoked to obtain complete results. Check the progress status value in the response of each request to determine whether to invoke this operation again to obtain the final complete results. Each repeated invocation consumes the same number of query CUs.</description></item>
+        /// <item><description>The latency between writing a log to a Logstore and querying the log by using LogSearch operations (GetHistograms and GetLogs) varies depending on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current server time. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The latency from writing real-time data to querying the data in the LogSearch interface is 3 seconds.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7x86400 seconds, -180 seconds) relative to the current server time. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically occurs in data backfill scenarios.
+        ///  The maximum latency from writing real-time data to querying the data is 3 seconds. In 99.9% of cases, the query is completed within 1 second.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7x86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides a Java software development kit (SDK) example for using the GetHistograms query. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
+        /// <item><description>Simple Log Service provides a usage example of GetHistograms queries in the Java SDK. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14787,25 +16114,26 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the GetHistograms operation to query the distribution of logs that meet the search criteria in a specified Logstore.</para>
+        /// <para>Queries the distribution of logs that meet the specified query conditions in a Logstore by calling the GetHistograms operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Interface description</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service Endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>The subintervals in the response are divided consistently. If the requested time range is the same, the subinterval division in the response is also the same.</description></item>
-        /// <item><description>If the number of logs in a query varies greatly, the Simple Log Service application programming interface (API) cannot predict how many calls are needed to retrieve the full result. You must check the status of the progress member in each response. This status indicates whether to call the operation again to retrieve the final result. Each repeated call consumes the same number of query CUs.</description></item>
-        /// <item><description>The delay between when a log is written to a Logstore and when it can be queried using the GetHistograms and GetLogs operations varies by log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp is within the range of (-180 seconds, +900 seconds] relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:03:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The maximum latency for real-time data to become searchable is 3 seconds. In 99.9% of cases, the data is searchable within 1 second.</description></item>
-        /// <item><description>Historical data: The log timestamp is within the range of [-7 × 86400 seconds, -180 seconds) relative to the server\&quot;s current time. For example, if a log\&quot;s timestamp is UTC 2014-09-25 12:00:00 and the server receives it at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically happens during data backfill.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the time the server received the log (the <b>tag</b>:<b>receive_time</b> field). If the difference is in the range of (-180 seconds, 900 seconds], the data is real-time data. If the difference is in the range of [-7 × 86400 seconds, -180 seconds), the data is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>The subinterval division in the response is always stable. If the time range in your query request remains unchanged, the subinterval division in the response also remains unchanged.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation needs to be invoked to obtain complete results. Check the progress status value in the response of each request to determine whether to invoke this operation again to obtain the final complete results. Each repeated invocation consumes the same number of query CUs.</description></item>
+        /// <item><description>The latency between writing a log to a Logstore and querying the log by using LogSearch operations (GetHistograms and GetLogs) varies depending on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current server time. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. The latency from writing real-time data to querying the data in the LogSearch interface is 3 seconds.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7x86400 seconds, -180 seconds) relative to the current server time. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This typically occurs in data backfill scenarios.
+        ///  The maximum latency from writing real-time data to querying the data is 3 seconds. In 99.9% of cases, the query is completed within 1 second.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7x86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides a Java software development kit (SDK) example for using the GetHistograms query. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
+        /// <item><description>Simple Log Service provides a usage example of GetHistograms queries in the Java SDK. For more information, see <a href="https://help.aliyun.com/document_detail/462234.html">Use GetHistograms to query log distribution</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15065,13 +16393,193 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Logstore.</para>
+        /// <para>Retrieves a job instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
-        /// <para>The host consists of the project name and the Log Service endpoint.</para>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the details of a specific node instance in a project.</description></item>
+        /// <item><description>The <c>callerOwner</c> parameter is an optional options parameter that identifies the owner information of the invoker.</description></item>
+        /// <item><description>Ensure that the <c>projectName</c>, <c>jobName</c>, and <c>instanceId</c> parameters are correct to obtain the expected response.</description></item>
+        /// <item><description>This operation supports HTTP and HTTPS protocols and requires a valid AccessKey pair to authenticate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobInstanceResponse
+        /// </returns>
+        public GetJobInstanceResponse GetJobInstanceWithOptions(string project, string jobName, string instanceId, GetJobInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerOwner))
+            {
+                query["callerOwner"] = request.CallerOwner;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobInstance",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/jobs/" + jobName + "/jobinstances/" + instanceId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobInstanceResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a job instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the details of a specific node instance in a project.</description></item>
+        /// <item><description>The <c>callerOwner</c> parameter is an optional options parameter that identifies the owner information of the invoker.</description></item>
+        /// <item><description>Ensure that the <c>projectName</c>, <c>jobName</c>, and <c>instanceId</c> parameters are correct to obtain the expected response.</description></item>
+        /// <item><description>This operation supports HTTP and HTTPS protocols and requires a valid AccessKey pair to authenticate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobInstanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobInstanceResponse
+        /// </returns>
+        public async Task<GetJobInstanceResponse> GetJobInstanceWithOptionsAsync(string project, string jobName, string instanceId, GetJobInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerOwner))
+            {
+                query["callerOwner"] = request.CallerOwner;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobInstance",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/jobs/" + jobName + "/jobinstances/" + instanceId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobInstanceResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a job instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the details of a specific node instance in a project.</description></item>
+        /// <item><description>The <c>callerOwner</c> parameter is an optional options parameter that identifies the owner information of the invoker.</description></item>
+        /// <item><description>Ensure that the <c>projectName</c>, <c>jobName</c>, and <c>instanceId</c> parameters are correct to obtain the expected response.</description></item>
+        /// <item><description>This operation supports HTTP and HTTPS protocols and requires a valid AccessKey pair to authenticate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobInstanceResponse
+        /// </returns>
+        public GetJobInstanceResponse GetJobInstance(string project, string jobName, string instanceId, GetJobInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetJobInstanceWithOptions(project, jobName, instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a job instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API operation is used to query the details of a specific node instance in a project.</description></item>
+        /// <item><description>The <c>callerOwner</c> parameter is an optional options parameter that identifies the owner information of the invoker.</description></item>
+        /// <item><description>Ensure that the <c>projectName</c>, <c>jobName</c>, and <c>instanceId</c> parameters are correct to obtain the expected response.</description></item>
+        /// <item><description>This operation supports HTTP and HTTPS protocols and requires a valid AccessKey pair to authenticate.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetJobInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobInstanceResponse
+        /// </returns>
+        public async Task<GetJobInstanceResponse> GetJobInstanceAsync(string project, string jobName, string instanceId, GetJobInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetJobInstanceWithOptionsAsync(project, jobName, instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Logstore.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -15110,13 +16618,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Logstore.</para>
+        /// <para>Queries the details of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
-        /// <para>The host consists of the project name and the Log Service endpoint.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -15155,13 +16663,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Logstore.</para>
+        /// <para>Queries the details of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
-        /// <para>The host consists of the project name and the Log Service endpoint.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <returns>
@@ -15176,13 +16684,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Logstore.</para>
+        /// <para>Queries the details of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Description</h3>
-        /// <para>The host consists of the project name and the Log Service endpoint.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <returns>
@@ -15637,35 +17145,36 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries log data from a Logstore in the specified project.</para>
+        /// <para>Queries log data in a specified Logstore of a specified Project. This operation is deprecated. Use the GetLogsV2 operation instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Operation description</h3>
         /// <remarks>
-        /// <para>Simple Log Service supports scheduled SQL jobs. For details, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL job</a>.</para>
+        /// <para>Simple Log Service allows you to create scheduled SQL nodes. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL node</a>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project name in the Host.</description></item>
-        /// <item><description>Create and obtain an AccessKey pair. For details, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
-        /// Create and use a RAM user to make API calls or perform routine O\&amp;M. Using an Alibaba Cloud account AccessKey pair grants access to all APIs and poses a high security risk. Ensure the RAM user has the required permissions for Simple Log Service resources. For details, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, region, and Logstore name for the logs to query. See <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
-        /// <item><description>Simple Log Service imposes limits on log queries. Design appropriate query and analytic statements and set a reasonable time range. See <a href="https://help.aliyun.com/document_detail/43772.html">Log query limits</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis limits</a>.</description></item>
-        /// <item><description>Configure indexes before querying logs. See <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
-        /// <item><description>When the number of matching logs varies significantly, the API cannot predict how many calls are needed to retrieve the complete result. Check the <c>x-log-progress</c> header in each response to determine whether to repeat the call. Each repeated call consumes the same number of query capacity units (CUs).</description></item>
-        /// <item><description>After a log is written to a Logstore, the latency before it becomes queryable through the GetHistograms and GetLogs operations depends on the log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp falls within (-180 seconds, 900 seconds] relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:03:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as real-time data. This is typical in normal scenarios. Real-time data becomes queryable in about 3 seconds.</description></item>
-        /// <item><description>Historical data: The log timestamp falls within [-7 x 86,400 seconds, -180 seconds) relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:00:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as historical data. This is typical in data backfill scenarios.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the server receipt time (the <b>tag</b>: <b>receive_time</b> field). If the difference falls within (-180 seconds, 900 seconds], the log is real-time data. If the difference falls within [-7 x 86,400 seconds, -180 seconds), the log is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the Project name and the Simple Log Service endpoint. You must specify the Project in the Host.</description></item>
+        /// <item><description>Create and obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The Resource Access Management (RAM) user must have access permissions to manage Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user</a>.</description></item>
+        /// <item><description>Determine the Project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>Simple Log Service has usage limits for querying logs. Design proper query and analytic statements and set proper query time ranges. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Limits on log queries</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Limits on log analysis</a>.</description></item>
+        /// <item><description>Before you query logs, configure indexes. For more information, see <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation must be invoked to obtain complete results. Check the x-log-progress status value in the response of each request to determine whether you need to invoke this operation again to obtain complete results. Each repeated invocation consumes the same number of query compute units (CUs).</description></item>
+        /// <item><description>After logs are written to a Logstore, the latency before the query operations (GetHistograms and GetLogs) can query the logs varies based on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. This generally occurs in normal scenarios.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7×86400 seconds, -180 seconds) relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This generally occurs in data backfill scenarios.
+        ///  The latency from writing real-time data to querying the data is approximately 3 seconds.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7×86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides Java and Python SDK examples for the GetLogs operation. See <a href="https://help.aliyun.com/document_detail/407683.html">GetLogs examples for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">GetLogs examples for Python</a>.</description></item>
+        /// <item><description>Simple Log Service provides examples of using the GetLogs operation with the Java SDK and Python SDK. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Java SDK example for GetLogs</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Python SDK example for GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization information required for this operation. Add this information to the Action element of a RAM access policy statement to grant RAM users or RAM roles the permission to call this operation.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information corresponding to this API operation. You can add this information to the Action element of a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the authorization to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -15684,7 +17193,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// GetLogsRequest
         /// </param>
         /// <param name="headers">
-        /// map
+        /// GetLogsHeaders
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -15693,96 +17202,122 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetLogsResponse
         /// </returns>
-        public GetLogsResponse GetLogsWithOptions(string project, string logstore, GetLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetLogsResponse GetLogsWithOptions(string project, string logstore, GetLogsRequest request, GetLogsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Forward))
+            {
+                body["forward"] = request.Forward;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["from"] = request.From;
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Highlight))
+            {
+                body["highlight"] = request.Highlight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAccurate))
+            {
+                body["isAccurate"] = request.IsAccurate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
             {
-                query["line"] = request.Line;
+                body["line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
-                query["offset"] = request.Offset;
+                body["offset"] = request.Offset;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PowerSql))
             {
-                query["powerSql"] = request.PowerSql;
+                body["powerSql"] = request.PowerSql;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
-                query["query"] = request.Query;
+                body["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
             {
-                query["reverse"] = request.Reverse;
+                body["reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Session))
+            {
+                body["session"] = request.Session;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {
-                query["to"] = request.To;
+                body["to"] = request.To;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
             {
-                query["topic"] = request.Topic;
+                body["topic"] = request.Topic;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AcceptEncoding))
+            {
+                realHeaders["Accept-Encoding"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AcceptEncoding);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetLogs",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "?type=log",
-                Method = "GET",
+                Pathname = "/logstores/" + logstore + "/logs",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "array",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetLogsResponse>(Execute(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries log data from a Logstore in the specified project.</para>
+        /// <para>Queries log data in a specified Logstore of a specified Project. This operation is deprecated. Use the GetLogsV2 operation instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Operation description</h3>
         /// <remarks>
-        /// <para>Simple Log Service supports scheduled SQL jobs. For details, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL job</a>.</para>
+        /// <para>Simple Log Service allows you to create scheduled SQL nodes. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL node</a>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project name in the Host.</description></item>
-        /// <item><description>Create and obtain an AccessKey pair. For details, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
-        /// Create and use a RAM user to make API calls or perform routine O\&amp;M. Using an Alibaba Cloud account AccessKey pair grants access to all APIs and poses a high security risk. Ensure the RAM user has the required permissions for Simple Log Service resources. For details, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, region, and Logstore name for the logs to query. See <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
-        /// <item><description>Simple Log Service imposes limits on log queries. Design appropriate query and analytic statements and set a reasonable time range. See <a href="https://help.aliyun.com/document_detail/43772.html">Log query limits</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis limits</a>.</description></item>
-        /// <item><description>Configure indexes before querying logs. See <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
-        /// <item><description>When the number of matching logs varies significantly, the API cannot predict how many calls are needed to retrieve the complete result. Check the <c>x-log-progress</c> header in each response to determine whether to repeat the call. Each repeated call consumes the same number of query capacity units (CUs).</description></item>
-        /// <item><description>After a log is written to a Logstore, the latency before it becomes queryable through the GetHistograms and GetLogs operations depends on the log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp falls within (-180 seconds, 900 seconds] relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:03:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as real-time data. This is typical in normal scenarios. Real-time data becomes queryable in about 3 seconds.</description></item>
-        /// <item><description>Historical data: The log timestamp falls within [-7 x 86,400 seconds, -180 seconds) relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:00:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as historical data. This is typical in data backfill scenarios.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the server receipt time (the <b>tag</b>: <b>receive_time</b> field). If the difference falls within (-180 seconds, 900 seconds], the log is real-time data. If the difference falls within [-7 x 86,400 seconds, -180 seconds), the log is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the Project name and the Simple Log Service endpoint. You must specify the Project in the Host.</description></item>
+        /// <item><description>Create and obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The Resource Access Management (RAM) user must have access permissions to manage Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user</a>.</description></item>
+        /// <item><description>Determine the Project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>Simple Log Service has usage limits for querying logs. Design proper query and analytic statements and set proper query time ranges. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Limits on log queries</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Limits on log analysis</a>.</description></item>
+        /// <item><description>Before you query logs, configure indexes. For more information, see <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation must be invoked to obtain complete results. Check the x-log-progress status value in the response of each request to determine whether you need to invoke this operation again to obtain complete results. Each repeated invocation consumes the same number of query compute units (CUs).</description></item>
+        /// <item><description>After logs are written to a Logstore, the latency before the query operations (GetHistograms and GetLogs) can query the logs varies based on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. This generally occurs in normal scenarios.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7×86400 seconds, -180 seconds) relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This generally occurs in data backfill scenarios.
+        ///  The latency from writing real-time data to querying the data is approximately 3 seconds.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7×86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides Java and Python SDK examples for the GetLogs operation. See <a href="https://help.aliyun.com/document_detail/407683.html">GetLogs examples for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">GetLogs examples for Python</a>.</description></item>
+        /// <item><description>Simple Log Service provides examples of using the GetLogs operation with the Java SDK and Python SDK. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Java SDK example for GetLogs</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Python SDK example for GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization information required for this operation. Add this information to the Action element of a RAM access policy statement to grant RAM users or RAM roles the permission to call this operation.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information corresponding to this API operation. You can add this information to the Action element of a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the authorization to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -15801,7 +17336,7 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// GetLogsRequest
         /// </param>
         /// <param name="headers">
-        /// map
+        /// GetLogsHeaders
         /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
@@ -15810,96 +17345,122 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetLogsResponse
         /// </returns>
-        public async Task<GetLogsResponse> GetLogsWithOptionsAsync(string project, string logstore, GetLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetLogsResponse> GetLogsWithOptionsAsync(string project, string logstore, GetLogsRequest request, GetLogsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Forward))
+            {
+                body["forward"] = request.Forward;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
-                query["from"] = request.From;
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Highlight))
+            {
+                body["highlight"] = request.Highlight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAccurate))
+            {
+                body["isAccurate"] = request.IsAccurate;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
             {
-                query["line"] = request.Line;
+                body["line"] = request.Line;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
-                query["offset"] = request.Offset;
+                body["offset"] = request.Offset;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PowerSql))
             {
-                query["powerSql"] = request.PowerSql;
+                body["powerSql"] = request.PowerSql;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
             {
-                query["query"] = request.Query;
+                body["query"] = request.Query;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
             {
-                query["reverse"] = request.Reverse;
+                body["reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Session))
+            {
+                body["session"] = request.Session;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
             {
-                query["to"] = request.To;
+                body["to"] = request.To;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topic))
             {
-                query["topic"] = request.Topic;
+                body["topic"] = request.Topic;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AcceptEncoding))
+            {
+                realHeaders["Accept-Encoding"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AcceptEncoding);
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetLogs",
                 Version = "2020-12-30",
                 Protocol = "HTTPS",
-                Pathname = "/logstores/" + logstore + "?type=log",
-                Method = "GET",
+                Pathname = "/logstores/" + logstore + "/logs",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "array",
+                BodyType = "json",
             };
             return TeaModel.ToObject<GetLogsResponse>(await ExecuteAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries log data from a Logstore in the specified project.</para>
+        /// <para>Queries log data in a specified Logstore of a specified Project. This operation is deprecated. Use the GetLogsV2 operation instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Operation description</h3>
         /// <remarks>
-        /// <para>Simple Log Service supports scheduled SQL jobs. For details, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL job</a>.</para>
+        /// <para>Simple Log Service allows you to create scheduled SQL nodes. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL node</a>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project name in the Host.</description></item>
-        /// <item><description>Create and obtain an AccessKey pair. For details, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
-        /// Create and use a RAM user to make API calls or perform routine O\&amp;M. Using an Alibaba Cloud account AccessKey pair grants access to all APIs and poses a high security risk. Ensure the RAM user has the required permissions for Simple Log Service resources. For details, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, region, and Logstore name for the logs to query. See <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
-        /// <item><description>Simple Log Service imposes limits on log queries. Design appropriate query and analytic statements and set a reasonable time range. See <a href="https://help.aliyun.com/document_detail/43772.html">Log query limits</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis limits</a>.</description></item>
-        /// <item><description>Configure indexes before querying logs. See <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
-        /// <item><description>When the number of matching logs varies significantly, the API cannot predict how many calls are needed to retrieve the complete result. Check the <c>x-log-progress</c> header in each response to determine whether to repeat the call. Each repeated call consumes the same number of query capacity units (CUs).</description></item>
-        /// <item><description>After a log is written to a Logstore, the latency before it becomes queryable through the GetHistograms and GetLogs operations depends on the log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp falls within (-180 seconds, 900 seconds] relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:03:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as real-time data. This is typical in normal scenarios. Real-time data becomes queryable in about 3 seconds.</description></item>
-        /// <item><description>Historical data: The log timestamp falls within [-7 x 86,400 seconds, -180 seconds) relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:00:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as historical data. This is typical in data backfill scenarios.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the server receipt time (the <b>tag</b>: <b>receive_time</b> field). If the difference falls within (-180 seconds, 900 seconds], the log is real-time data. If the difference falls within [-7 x 86,400 seconds, -180 seconds), the log is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the Project name and the Simple Log Service endpoint. You must specify the Project in the Host.</description></item>
+        /// <item><description>Create and obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The Resource Access Management (RAM) user must have access permissions to manage Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user</a>.</description></item>
+        /// <item><description>Determine the Project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>Simple Log Service has usage limits for querying logs. Design proper query and analytic statements and set proper query time ranges. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Limits on log queries</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Limits on log analysis</a>.</description></item>
+        /// <item><description>Before you query logs, configure indexes. For more information, see <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation must be invoked to obtain complete results. Check the x-log-progress status value in the response of each request to determine whether you need to invoke this operation again to obtain complete results. Each repeated invocation consumes the same number of query compute units (CUs).</description></item>
+        /// <item><description>After logs are written to a Logstore, the latency before the query operations (GetHistograms and GetLogs) can query the logs varies based on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. This generally occurs in normal scenarios.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7×86400 seconds, -180 seconds) relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This generally occurs in data backfill scenarios.
+        ///  The latency from writing real-time data to querying the data is approximately 3 seconds.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7×86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides Java and Python SDK examples for the GetLogs operation. See <a href="https://help.aliyun.com/document_detail/407683.html">GetLogs examples for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">GetLogs examples for Python</a>.</description></item>
+        /// <item><description>Simple Log Service provides examples of using the GetLogs operation with the Java SDK and Python SDK. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Java SDK example for GetLogs</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Python SDK example for GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization information required for this operation. Add this information to the Action element of a RAM access policy statement to grant RAM users or RAM roles the permission to call this operation.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information corresponding to this API operation. You can add this information to the Action element of a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the authorization to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -15924,41 +17485,42 @@ namespace AlibabaCloud.SDK.Sls20201230
         public GetLogsResponse GetLogs(string project, string logstore, GetLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            GetLogsHeaders headers = new GetLogsHeaders();
             return GetLogsWithOptions(project, logstore, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries log data from a Logstore in the specified project.</para>
+        /// <para>Queries log data in a specified Logstore of a specified Project. This operation is deprecated. Use the GetLogsV2 operation instead.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3></h3>
+        /// <h3>Operation description</h3>
         /// <remarks>
-        /// <para>Simple Log Service supports scheduled SQL jobs. For details, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL job</a>.</para>
+        /// <para>Simple Log Service allows you to create scheduled SQL nodes. For more information, see <a href="https://help.aliyun.com/document_detail/286457.html">Create a scheduled SQL node</a>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project name in the Host.</description></item>
-        /// <item><description>Create and obtain an AccessKey pair. For details, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
-        /// Create and use a RAM user to make API calls or perform routine O\&amp;M. Using an Alibaba Cloud account AccessKey pair grants access to all APIs and poses a high security risk. Ensure the RAM user has the required permissions for Simple Log Service resources. For details, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, region, and Logstore name for the logs to query. See <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
-        /// <item><description>Simple Log Service imposes limits on log queries. Design appropriate query and analytic statements and set a reasonable time range. See <a href="https://help.aliyun.com/document_detail/43772.html">Log query limits</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Log analysis limits</a>.</description></item>
-        /// <item><description>Configure indexes before querying logs. See <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
-        /// <item><description>When the number of matching logs varies significantly, the API cannot predict how many calls are needed to retrieve the complete result. Check the <c>x-log-progress</c> header in each response to determine whether to repeat the call. Each repeated call consumes the same number of query capacity units (CUs).</description></item>
-        /// <item><description>After a log is written to a Logstore, the latency before it becomes queryable through the GetHistograms and GetLogs operations depends on the log type. Simple Log Service classifies logs into two types based on their timestamps:<list type="bullet">
-        /// <item><description>Real-time data: The log timestamp falls within (-180 seconds, 900 seconds] relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:03:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as real-time data. This is typical in normal scenarios. Real-time data becomes queryable in about 3 seconds.</description></item>
-        /// <item><description>Historical data: The log timestamp falls within [-7 x 86,400 seconds, -180 seconds) relative to the current server time. For example, if a log is generated at UTC 2014-09-25 12:00:00 and is received by the server at UTC 2014-09-25 12:05:00, the log is classified as historical data. This is typical in data backfill scenarios.<remarks>
-        /// <para>Simple Log Service calculates the difference between the log time (the <b>time</b> field) and the server receipt time (the <b>tag</b>: <b>receive_time</b> field). If the difference falls within (-180 seconds, 900 seconds], the log is real-time data. If the difference falls within [-7 x 86,400 seconds, -180 seconds), the log is historical data.</para>
+        /// <item><description>The Host in the request syntax consists of the Project name and the Simple Log Service endpoint. You must specify the Project in the Host.</description></item>
+        /// <item><description>Create and obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/2766629.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The Resource Access Management (RAM) user must have access permissions to manage Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user</a>.</description></item>
+        /// <item><description>Determine the Project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a Project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</description></item>
+        /// <item><description>Simple Log Service has usage limits for querying logs. Design proper query and analytic statements and set proper query time ranges. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Limits on log queries</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Limits on log analysis</a>.</description></item>
+        /// <item><description>Before you query logs, configure indexes. For more information, see <a href="https://help.aliyun.com/document_detail/90732.html">Create indexes</a>.</description></item>
+        /// <item><description>When the number of logs involved in a query changes significantly, the Simple Log Service API cannot predict how many times this operation must be invoked to obtain complete results. Check the x-log-progress status value in the response of each request to determine whether you need to invoke this operation again to obtain complete results. Each repeated invocation consumes the same number of query compute units (CUs).</description></item>
+        /// <item><description>After logs are written to a Logstore, the latency before the query operations (GetHistograms and GetLogs) can query the logs varies based on the log type. Simple Log Service classifies logs into the following two types based on log UNIX timestamps:<list type="bullet">
+        /// <item><description>Real-time data: The time point in the log is within the range of (-180 seconds, 900 seconds] relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:03:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as real-time data. This generally occurs in normal scenarios.</description></item>
+        /// <item><description>Historical data: The time point in the log is within the range of [-7×86400 seconds, -180 seconds) relative to the current time on the server. For example, if the log time is UTC 2014-09-25 12:00:00 and the server receives the log at UTC 2014-09-25 12:05:00, the log is processed as historical data. This generally occurs in data backfill scenarios.
+        ///  The latency from writing real-time data to querying the data is approximately 3 seconds.<remarks>
+        /// <para>Simple Log Service calculates the difference between the log time (field name: <b>time</b>) and the server receive time (field name: <b>tag</b>:<b>receive_time</b>). If the difference is within the range of \(-180 seconds, 900 seconds], the log is real-time data. If the difference is within the range of [-7×86400 seconds, -180 seconds), the log is historical data.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Simple Log Service provides Java and Python SDK examples for the GetLogs operation. See <a href="https://help.aliyun.com/document_detail/407683.html">GetLogs examples for Java</a> and <a href="https://help.aliyun.com/document_detail/407684.html">GetLogs examples for Python</a>.</description></item>
+        /// <item><description>Simple Log Service provides examples of using the GetLogs operation with the Java SDK and Python SDK. For more information, see <a href="https://help.aliyun.com/document_detail/407683.html">Java SDK example for GetLogs</a> and <a href="https://help.aliyun.com/document_detail/407684.html">Python SDK example for GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization information required for this operation. Add this information to the Action element of a RAM access policy statement to grant RAM users or RAM roles the permission to call this operation.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information corresponding to this API operation. You can add this information to the Action element of a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the authorization to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
@@ -15983,34 +17545,37 @@ namespace AlibabaCloud.SDK.Sls20201230
         public async Task<GetLogsResponse> GetLogsAsync(string project, string logstore, GetLogsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            GetLogsHeaders headers = new GetLogsHeaders();
             return await GetLogsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</para>
+        /// <para>Queries raw log data from a specified Logstore in a project and returns raw logs within a specified time range. The results are compressed before transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</description></item>
-        /// <item><description>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</description></item>
+        /// <item><description>Specify the compression method during use. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</description></item>
         /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Permissions</h3>
-        /// <para>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</para>
+        /// <h3>Authentication</h3>
+        /// <para>The following table describes the authorization information required by this API. You can add this information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permission to invoke this API.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td align="left"><c>log:GetLogStoreLogs</c></td>
-        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</c></td>
+        /// </tr>
+        /// <tr>
+        /// <td align="left">The following procedure describes how to use this API:</td>
+        /// <td align="left"></td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -16114,28 +17679,31 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</para>
+        /// <para>Queries raw log data from a specified Logstore in a project and returns raw logs within a specified time range. The results are compressed before transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</description></item>
-        /// <item><description>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</description></item>
+        /// <item><description>Specify the compression method during use. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</description></item>
         /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Permissions</h3>
-        /// <para>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</para>
+        /// <h3>Authentication</h3>
+        /// <para>The following table describes the authorization information required by this API. You can add this information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permission to invoke this API.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td align="left"><c>log:GetLogStoreLogs</c></td>
-        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</c></td>
+        /// </tr>
+        /// <tr>
+        /// <td align="left">The following procedure describes how to use this API:</td>
+        /// <td align="left"></td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -16239,28 +17807,31 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</para>
+        /// <para>Queries raw log data from a specified Logstore in a project and returns raw logs within a specified time range. The results are compressed before transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</description></item>
-        /// <item><description>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</description></item>
+        /// <item><description>Specify the compression method during use. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</description></item>
         /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Permissions</h3>
-        /// <para>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</para>
+        /// <h3>Authentication</h3>
+        /// <para>The following table describes the authorization information required by this API. You can add this information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permission to invoke this API.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td align="left"><c>log:GetLogStoreLogs</c></td>
-        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</c></td>
+        /// </tr>
+        /// <tr>
+        /// <td align="left">The following procedure describes how to use this API:</td>
+        /// <td align="left"></td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -16281,28 +17852,31 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries raw logs from a specified Logstore in a project. The response contains raw logs within a specified time range and is compressed for transmission.</para>
+        /// <para>Queries raw log data from a specified Logstore in a project and returns raw logs within a specified time range. The results are compressed before transmission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The Simple Log Service software development kit (SDK) is available for Go, Java, and Python. You can also call all OpenAPI operations directly.</description></item>
-        /// <item><description>Specify a compression method when you call this operation. Available compression algorithms depend on your programming language. For more information, see the Accept-Encoding request parameter.</description></item>
+        /// <item><description>Specify the compression method during use. Different programming languages implement different compression algorithms. For details, see the Accept-Encoding request parameter.</description></item>
         /// <item><description>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</description></item>
         /// </list>
-        /// <h3>Permissions</h3>
-        /// <para>The following table lists the permissions required to call this API operation. Add the action to a RAM policy statement to grant a RAM user or RAM role permission to call this operation.</para>
+        /// <h3>Authentication</h3>
+        /// <para>The following table describes the authorization information required by this API. You can add this information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permission to invoke this API.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td align="left"><c>log:GetLogStoreLogs</c></td>
-        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</c></td>
+        /// <td align="left"><c>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}/logstore/{#LogstoreName}</c></td>
+        /// </tr>
+        /// <tr>
+        /// <td align="left">The following procedure describes how to use this API:</td>
+        /// <td align="left"></td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -16799,7 +18373,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a materialized view.</para>
+        /// <para>Retrieves a materialized view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16857,7 +18431,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a materialized view.</para>
+        /// <para>Retrieves a materialized view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16915,7 +18489,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a materialized view.</para>
+        /// <para>Retrieves a materialized view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16934,7 +18508,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a materialized view.</para>
+        /// <para>Retrieves a materialized view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17106,15 +18680,16 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">metrics</a>. This operation queries only the configuration of a Metricstore. To query the metric data, see <a href="https://help.aliyun.com/document_detail/174968.html">Query and analyze data</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
+        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">time series data</a>.
+        /// This operation is used only to query the configurations of a Metricstore. To query time series data in a Metricstore, refer to <a href="https://help.aliyun.com/document_detail/174968.html">Query and analysis</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You must specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>You must have an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has full access permissions to all API operations. This poses a high security threat. For security, we recommend that you use a RAM user for API access or routine O\&amp;M. Grant the RAM user the required permissions to operate Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project that contains the Metricstore. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
-        /// <item><description>You can create a maximum of 200 Logstores or Metricstores in a project.</description></item>
-        /// <item><description>Metrics are deleted after their retention period expires.</description></item>
+        /// <item><description>This operation requires an existing Metricstore.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, refer to <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  The AccessKey pair of an Alibaba Cloud account has access permissions on all API operations and poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the permissions to manage Simple Log Service EPS resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have obtained the name and region of the project to which the logs belong. For more information on how to query this information, refer to <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>. Operation logs are available for tracking changes.</description></item>
+        /// <item><description>A maximum of 200 Logstores or Metricstores can be created in a project.</description></item>
+        /// <item><description>After the data retention period that you specified expires, the data is deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17159,15 +18734,16 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">metrics</a>. This operation queries only the configuration of a Metricstore. To query the metric data, see <a href="https://help.aliyun.com/document_detail/174968.html">Query and analyze data</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
+        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">time series data</a>.
+        /// This operation is used only to query the configurations of a Metricstore. To query time series data in a Metricstore, refer to <a href="https://help.aliyun.com/document_detail/174968.html">Query and analysis</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You must specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>You must have an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has full access permissions to all API operations. This poses a high security threat. For security, we recommend that you use a RAM user for API access or routine O\&amp;M. Grant the RAM user the required permissions to operate Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project that contains the Metricstore. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
-        /// <item><description>You can create a maximum of 200 Logstores or Metricstores in a project.</description></item>
-        /// <item><description>Metrics are deleted after their retention period expires.</description></item>
+        /// <item><description>This operation requires an existing Metricstore.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, refer to <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  The AccessKey pair of an Alibaba Cloud account has access permissions on all API operations and poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the permissions to manage Simple Log Service EPS resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have obtained the name and region of the project to which the logs belong. For more information on how to query this information, refer to <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>. Operation logs are available for tracking changes.</description></item>
+        /// <item><description>A maximum of 200 Logstores or Metricstores can be created in a project.</description></item>
+        /// <item><description>After the data retention period that you specified expires, the data is deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17212,15 +18788,16 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">metrics</a>. This operation queries only the configuration of a Metricstore. To query the metric data, see <a href="https://help.aliyun.com/document_detail/174968.html">Query and analyze data</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
+        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">time series data</a>.
+        /// This operation is used only to query the configurations of a Metricstore. To query time series data in a Metricstore, refer to <a href="https://help.aliyun.com/document_detail/174968.html">Query and analysis</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You must specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>You must have an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has full access permissions to all API operations. This poses a high security threat. For security, we recommend that you use a RAM user for API access or routine O\&amp;M. Grant the RAM user the required permissions to operate Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project that contains the Metricstore. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
-        /// <item><description>You can create a maximum of 200 Logstores or Metricstores in a project.</description></item>
-        /// <item><description>Metrics are deleted after their retention period expires.</description></item>
+        /// <item><description>This operation requires an existing Metricstore.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, refer to <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  The AccessKey pair of an Alibaba Cloud account has access permissions on all API operations and poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the permissions to manage Simple Log Service EPS resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have obtained the name and region of the project to which the logs belong. For more information on how to query this information, refer to <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>. Operation logs are available for tracking changes.</description></item>
+        /// <item><description>A maximum of 200 Logstores or Metricstores can be created in a project.</description></item>
+        /// <item><description>After the data retention period that you specified expires, the data is deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17241,15 +18818,16 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">metrics</a>. This operation queries only the configuration of a Metricstore. To query the metric data, see <a href="https://help.aliyun.com/document_detail/174968.html">Query and analyze data</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
+        /// <para>A <a href="https://help.aliyun.com/document_detail/171723.html">Metricstore</a> is used to store <a href="https://help.aliyun.com/document_detail/174965.html">time series data</a>.
+        /// This operation is used only to query the configurations of a Metricstore. To query time series data in a Metricstore, refer to <a href="https://help.aliyun.com/document_detail/174968.html">Query and analysis</a> and <a href="https://help.aliyun.com/document_detail/2771318.html">GetLogsV2</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You must specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>You must have an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has full access permissions to all API operations. This poses a high security threat. For security, we recommend that you use a RAM user for API access or routine O\&amp;M. Grant the RAM user the required permissions to operate Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project that contains the Metricstore. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
-        /// <item><description>You can create a maximum of 200 Logstores or Metricstores in a project.</description></item>
-        /// <item><description>Metrics are deleted after their retention period expires.</description></item>
+        /// <item><description>This operation requires an existing Metricstore.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, refer to <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  The AccessKey pair of an Alibaba Cloud account has access permissions on all API operations and poses high security risks. We strongly recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the permissions to manage Simple Log Service EPS resources. For more information, refer to <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have obtained the name and region of the project to which the logs belong. For more information on how to query this information, refer to <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>. Operation logs are available for tracking changes.</description></item>
+        /// <item><description>A maximum of 200 Logstores or Metricstores can be created in a project.</description></item>
+        /// <item><description>After the data retention period that you specified expires, the data is deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17753,15 +19331,18 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a project.</para>
+        /// <para>Queries the details of a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
-        /// <para>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -17772,14 +19353,21 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public GetProjectResponse GetProjectWithOptions(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetProjectResponse GetProjectWithOptions(string project, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegion))
+            {
+                query["crossRegion"] = request.CrossRegion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -17798,15 +19386,18 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a project.</para>
+        /// <para>Queries the details of a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
-        /// <para>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -17817,14 +19408,21 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string project, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string project, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
             hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegion))
+            {
+                query["crossRegion"] = request.CrossRegion;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 HostMap = hostMap,
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -17843,44 +19441,52 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a project.</para>
+        /// <para>Queries the details of a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
-        /// <para>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public GetProjectResponse GetProject(string project)
+        public GetProjectResponse GetProject(string project, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProjectWithOptions(project, headers, runtime);
+            return GetProjectWithOptions(project, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a project.</para>
+        /// <para>Queries the details of a specified project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
-        /// <para>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
+        /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// 
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public async Task<GetProjectResponse> GetProjectAsync(string project)
+        public async Task<GetProjectResponse> GetProjectAsync(string project, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProjectWithOptionsAsync(project, headers, runtime);
+            return await GetProjectWithOptionsAsync(project, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18301,6 +19907,136 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceRecordResponse
+        /// </returns>
+        public GetResourceRecordResponse GetResourceRecordWithOptions(string resourceName, string recordId, GetResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records/" + recordId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceRecordResponse
+        /// </returns>
+        public async Task<GetResourceRecordResponse> GetResourceRecordWithOptionsAsync(string resourceName, string recordId, GetResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records/" + recordId,
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceRecordResponse
+        /// </returns>
+        public GetResourceRecordResponse GetResourceRecord(string resourceName, string recordId, GetResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetResourceRecordWithOptions(resourceName, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetResourceRecordResponse
+        /// </returns>
+        public async Task<GetResourceRecordResponse> GetResourceRecordAsync(string resourceName, string recordId, GetResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetResourceRecordWithOptionsAsync(resourceName, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves information about an S3 import task.</para>
         /// </summary>
         /// 
@@ -18621,7 +20357,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the specified Scheduled SQL job.</para>
+        /// <para>Retrieves a specified scheduled query job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -18660,7 +20396,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the specified Scheduled SQL job.</para>
+        /// <para>Retrieves a specified scheduled query job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -18699,7 +20435,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the specified Scheduled SQL job.</para>
+        /// <para>Retrieves a specified scheduled query job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -18714,7 +20450,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the specified Scheduled SQL job.</para>
+        /// <para>Retrieves a specified scheduled query job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -18963,7 +20699,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a dataset by using the name of the dataset.</para>
+        /// <para>Queries the configuration of a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -19002,7 +20738,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a dataset by using the name of the dataset.</para>
+        /// <para>Queries the configuration of a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -19041,7 +20777,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a dataset by using the name of the dataset.</para>
+        /// <para>Queries the configuration of a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19056,7 +20792,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a dataset by using the name of the dataset.</para>
+        /// <para>Queries the configuration of a specified storeview by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19071,7 +20807,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the indexes of a dataset by using the name of the dataset. Only datasets of the logstore type are supported.</para>
+        /// <para>Queries the index configuration of a storeview by name. Only storeviews of the Logstore type are supported.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -19110,7 +20846,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the indexes of a dataset by using the name of the dataset. Only datasets of the logstore type are supported.</para>
+        /// <para>Queries the index configuration of a storeview by name. Only storeviews of the Logstore type are supported.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -19149,7 +20885,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the indexes of a dataset by using the name of the dataset. Only datasets of the logstore type are supported.</para>
+        /// <para>Queries the index configuration of a storeview by name. Only storeviews of the Logstore type are supported.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19164,7 +20900,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the indexes of a dataset by using the name of the dataset. Only datasets of the logstore type are supported.</para>
+        /// <para>Queries the index configuration of a storeview by name. Only storeviews of the Logstore type are supported.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19179,13 +20915,8 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists process-level configurations.</para>
+        /// <para>Lists process-level configurations.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Retrieves a list of process-level configurations.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentInstanceConfigsRequest
@@ -19238,13 +20969,8 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists process-level configurations.</para>
+        /// <para>Lists process-level configurations.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Retrieves a list of process-level configurations.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentInstanceConfigsRequest
@@ -19297,13 +21023,8 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists process-level configurations.</para>
+        /// <para>Lists process-level configurations.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Retrieves a list of process-level configurations.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentInstanceConfigsRequest
@@ -19321,13 +21042,8 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists process-level configurations.</para>
+        /// <para>Lists process-level configurations.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Retrieves a list of process-level configurations.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentInstanceConfigsRequest
@@ -20089,6 +21805,198 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListAnnotationLabelsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys and their details in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use the <c>allowedStore</c> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</description></item>
+        /// <item><description>If you do not specify the <c>allowedStore</c> parameter, all API keys in the project are returned.</description></item>
+        /// <item><description>The <c>log:ListApiKeys</c> permission is considered a sensitive permission and should be granted with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiKeysResponse
+        /// </returns>
+        public ListApiKeysResponse ListApiKeysWithOptions(string project, ListApiKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStore))
+            {
+                query["allowedStore"] = request.AllowedStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiKeys",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiKeysResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys and their details in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use the <c>allowedStore</c> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</description></item>
+        /// <item><description>If you do not specify the <c>allowedStore</c> parameter, all API keys in the project are returned.</description></item>
+        /// <item><description>The <c>log:ListApiKeys</c> permission is considered a sensitive permission and should be granted with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiKeysResponse
+        /// </returns>
+        public async Task<ListApiKeysResponse> ListApiKeysWithOptionsAsync(string project, ListApiKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStore))
+            {
+                query["allowedStore"] = request.AllowedStore;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiKeys",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiKeysResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys and their details in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use the <c>allowedStore</c> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</description></item>
+        /// <item><description>If you do not specify the <c>allowedStore</c> parameter, all API keys in the project are returned.</description></item>
+        /// <item><description>The <c>log:ListApiKeys</c> permission is considered a sensitive permission and should be granted with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiKeysResponse
+        /// </returns>
+        public ListApiKeysResponse ListApiKeys(string project, ListApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListApiKeysWithOptions(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys and their details in a specified project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Use the <c>allowedStore</c> parameter to filter the returned API keys. Only API keys that are allowed to write to the specified Logstore or Metricstore are returned.</description></item>
+        /// <item><description>If you do not specify the <c>allowedStore</c> parameter, all API keys in the project are returned.</description></item>
+        /// <item><description>The <c>log:ListApiKeys</c> permission is considered a sensitive permission and should be granted with caution.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiKeysResponse
+        /// </returns>
+        public async Task<ListApiKeysResponse> ListApiKeysAsync(string project, ListApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListApiKeysWithOptionsAsync(project, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21423,7 +23331,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the log download jobs in a specified project.</para>
+        /// <para>Lists log download tasks in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21480,7 +23388,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the log download jobs in a specified project.</para>
+        /// <para>Lists log download tasks in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21537,7 +23445,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the log download jobs in a specified project.</para>
+        /// <para>Lists log download tasks in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21556,7 +23464,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the log download jobs in a specified project.</para>
+        /// <para>Lists log download tasks in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22187,6 +24095,230 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListIngestProcessorsWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of job instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口支持通过<c>projectName</c>和<c>jobName</c>路径参数来定位具体的项目与作业。</description></item>
+        /// <item><description>可选查询参数包括：<c>callerOwner</c>, <c>state</c>, <c>offset</c>, <c>size</c>, <c>start</c>, <c>end</c>，用于进一步过滤或分页结果集。</description></item>
+        /// <item><description><c>offset</c> 和 <c>size</c> 参数用于控制返回结果的数量及起始位置，实现分页功能。</description></item>
+        /// <item><description><c>start</c> 和 <c>end</c> 参数允许用户按时间范围筛选实例记录。</description></item>
+        /// <item><description>调用者可以通过设置<c>state</c>参数来过滤特定状态下的作业实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListJobInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobInstancesResponse
+        /// </returns>
+        public ListJobInstancesResponse ListJobInstancesWithOptions(string project, string jobName, ListJobInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerOwner))
+            {
+                query["callerOwner"] = request.CallerOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobInstances",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/jobs/" + jobName + "/jobinstances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobInstancesResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of job instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口支持通过<c>projectName</c>和<c>jobName</c>路径参数来定位具体的项目与作业。</description></item>
+        /// <item><description>可选查询参数包括：<c>callerOwner</c>, <c>state</c>, <c>offset</c>, <c>size</c>, <c>start</c>, <c>end</c>，用于进一步过滤或分页结果集。</description></item>
+        /// <item><description><c>offset</c> 和 <c>size</c> 参数用于控制返回结果的数量及起始位置，实现分页功能。</description></item>
+        /// <item><description><c>start</c> 和 <c>end</c> 参数允许用户按时间范围筛选实例记录。</description></item>
+        /// <item><description>调用者可以通过设置<c>state</c>参数来过滤特定状态下的作业实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListJobInstancesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobInstancesResponse
+        /// </returns>
+        public async Task<ListJobInstancesResponse> ListJobInstancesWithOptionsAsync(string project, string jobName, ListJobInstancesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerOwner))
+            {
+                query["callerOwner"] = request.CallerOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.State))
+            {
+                query["state"] = request.State;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobInstances",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/jobs/" + jobName + "/jobinstances",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobInstancesResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of job instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口支持通过<c>projectName</c>和<c>jobName</c>路径参数来定位具体的项目与作业。</description></item>
+        /// <item><description>可选查询参数包括：<c>callerOwner</c>, <c>state</c>, <c>offset</c>, <c>size</c>, <c>start</c>, <c>end</c>，用于进一步过滤或分页结果集。</description></item>
+        /// <item><description><c>offset</c> 和 <c>size</c> 参数用于控制返回结果的数量及起始位置，实现分页功能。</description></item>
+        /// <item><description><c>start</c> 和 <c>end</c> 参数允许用户按时间范围筛选实例记录。</description></item>
+        /// <item><description>调用者可以通过设置<c>state</c>参数来过滤特定状态下的作业实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListJobInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobInstancesResponse
+        /// </returns>
+        public ListJobInstancesResponse ListJobInstances(string project, string jobName, ListJobInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListJobInstancesWithOptions(project, jobName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of job instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口支持通过<c>projectName</c>和<c>jobName</c>路径参数来定位具体的项目与作业。</description></item>
+        /// <item><description>可选查询参数包括：<c>callerOwner</c>, <c>state</c>, <c>offset</c>, <c>size</c>, <c>start</c>, <c>end</c>，用于进一步过滤或分页结果集。</description></item>
+        /// <item><description><c>offset</c> 和 <c>size</c> 参数用于控制返回结果的数量及起始位置，实现分页功能。</description></item>
+        /// <item><description><c>start</c> 和 <c>end</c> 参数允许用户按时间范围筛选实例记录。</description></item>
+        /// <item><description>调用者可以通过设置<c>state</c>参数来过滤特定状态下的作业实例。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListJobInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobInstancesResponse
+        /// </returns>
+        public async Task<ListJobInstancesResponse> ListJobInstancesAsync(string project, string jobName, ListJobInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListJobInstancesWithOptionsAsync(project, jobName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22963,158 +25095,6 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the materialized views in a project.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListMaterializedViewRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListMaterializedViewResponse
-        /// </returns>
-        public ListMaterializedViewResponse ListMaterializedViewWithOptions(string project, ListMaterializedViewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
-            {
-                query["size"] = request.Size;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListMaterializedView",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/materializedviews",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListMaterializedViewResponse>(Execute(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Lists the materialized views in a project.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListMaterializedViewRequest
-        /// </param>
-        /// <param name="headers">
-        /// map
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListMaterializedViewResponse
-        /// </returns>
-        public async Task<ListMaterializedViewResponse> ListMaterializedViewWithOptionsAsync(string project, ListMaterializedViewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
-            hostMap["project"] = project;
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                query["name"] = request.Name;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
-            {
-                query["offset"] = request.Offset;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
-            {
-                query["size"] = request.Size;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                HostMap = hostMap,
-                Headers = headers,
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ListMaterializedView",
-                Version = "2020-12-30",
-                Protocol = "HTTPS",
-                Pathname = "/materializedviews",
-                Method = "GET",
-                AuthType = "AK",
-                Style = "ROA",
-                ReqBodyType = "json",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ListMaterializedViewResponse>(await ExecuteAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Lists the materialized views in a project.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListMaterializedViewRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListMaterializedViewResponse
-        /// </returns>
-        public ListMaterializedViewResponse ListMaterializedView(string project, ListMaterializedViewRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListMaterializedViewWithOptions(project, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Lists the materialized views in a project.</para>
-        /// </summary>
-        /// 
-        /// <param name="request">
-        /// ListMaterializedViewRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ListMaterializedViewResponse
-        /// </returns>
-        public async Task<ListMaterializedViewResponse> ListMaterializedViewAsync(string project, ListMaterializedViewRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListMaterializedViewWithOptionsAsync(project, request, headers, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>Lists materialized views.</para>
         /// </summary>
         /// 
@@ -23659,6 +25639,216 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Lists resource records using nextToken.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNextResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNextResourceRecordResponse
+        /// </returns>
+        public ListNextResourceRecordResponse ListNextResourceRecordWithOptions(string resourceName, ListNextResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonFilterAcc))
+            {
+                query["jsonFilterAcc"] = request.JsonFilterAcc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPath))
+            {
+                query["jsonPath"] = request.JsonPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPathValue))
+            {
+                query["jsonPathValue"] = request.JsonPathValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sjson))
+            {
+                query["sjson"] = request.Sjson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNextResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/next_records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNextResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records using nextToken.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNextResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNextResourceRecordResponse
+        /// </returns>
+        public async Task<ListNextResourceRecordResponse> ListNextResourceRecordWithOptionsAsync(string resourceName, ListNextResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonFilterAcc))
+            {
+                query["jsonFilterAcc"] = request.JsonFilterAcc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPath))
+            {
+                query["jsonPath"] = request.JsonPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPathValue))
+            {
+                query["jsonPathValue"] = request.JsonPathValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sjson))
+            {
+                query["sjson"] = request.Sjson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNextResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/next_records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNextResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records using nextToken.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNextResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNextResourceRecordResponse
+        /// </returns>
+        public ListNextResourceRecordResponse ListNextResourceRecord(string resourceName, ListNextResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListNextResourceRecordWithOptions(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records using nextToken.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNextResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNextResourceRecordResponse
+        /// </returns>
+        public async Task<ListNextResourceRecordResponse> ListNextResourceRecordAsync(string resourceName, ListNextResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListNextResourceRecordWithOptionsAsync(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the OSS shipping jobs in a specified project.</para>
         /// </summary>
         /// 
@@ -24115,13 +26305,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects that meet the specified criteria.</para>
+        /// <para>Lists project information that meets the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>API description</h3>
-        /// <para>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24187,13 +26377,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects that meet the specified criteria.</para>
+        /// <para>Lists project information that meets the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>API description</h3>
-        /// <para>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24259,13 +26449,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects that meet the specified criteria.</para>
+        /// <para>Lists project information that meets the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>API description</h3>
-        /// <para>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24284,13 +26474,13 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects that meet the specified criteria.</para>
+        /// <para>Lists project information that meets the specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>API description</h3>
-        /// <para>The host consists of a project name and a Simple Log Service endpoint. Specify the project in the host.</para>
+        /// <h3>Operation description</h3>
+        /// <para>The Host consists of the project name and the Simple Log Service endpoint. You must specify the project in the Host.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24305,6 +26495,208 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListProjectWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records by offset and size.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceRecordResponse
+        /// </returns>
+        public ListResourceRecordResponse ListResourceRecordWithOptions(string resourceName, ListResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonFilterAcc))
+            {
+                query["jsonFilterAcc"] = request.JsonFilterAcc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPath))
+            {
+                query["jsonPath"] = request.JsonPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPathValue))
+            {
+                query["jsonPathValue"] = request.JsonPathValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sjson))
+            {
+                query["sjson"] = request.Sjson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records by offset and size.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceRecordResponse
+        /// </returns>
+        public async Task<ListResourceRecordResponse> ListResourceRecordWithOptionsAsync(string resourceName, ListResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
+            {
+                query["ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeSystemRecords))
+            {
+                query["includeSystemRecords"] = request.IncludeSystemRecords;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonFilterAcc))
+            {
+                query["jsonFilterAcc"] = request.JsonFilterAcc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPath))
+            {
+                query["jsonPath"] = request.JsonPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JsonPathValue))
+            {
+                query["jsonPathValue"] = request.JsonPathValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sjson))
+            {
+                query["sjson"] = request.Sjson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records by offset and size.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceRecordResponse
+        /// </returns>
+        public ListResourceRecordResponse ListResourceRecord(string resourceName, ListResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListResourceRecordWithOptions(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists resource records by offset and size.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceRecordResponse
+        /// </returns>
+        public async Task<ListResourceRecordResponse> ListResourceRecordAsync(string resourceName, ListResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListResourceRecordWithOptionsAsync(resourceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24629,7 +27021,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Scheduled SQLs in a specified project.</para>
+        /// <para>Lists the scheduled query jobs in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24686,7 +27078,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Scheduled SQLs in a specified project.</para>
+        /// <para>Lists the scheduled query jobs in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24743,7 +27135,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Scheduled SQLs in a specified project.</para>
+        /// <para>Lists the scheduled query jobs in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24762,7 +27154,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Scheduled SQLs in a specified project.</para>
+        /// <para>Lists the scheduled query jobs in a specified project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24889,7 +27281,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries datasets in a project.</para>
+        /// <para>Queries the list of storeviews in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24950,7 +27342,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries datasets in a project.</para>
+        /// <para>Queries the list of storeviews in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25011,7 +27403,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries datasets in a project.</para>
+        /// <para>Queries the list of storeviews in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25030,7 +27422,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries datasets in a project.</para>
+        /// <para>Queries the list of storeviews in a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28397,7 +30789,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data transformation task.</para>
+        /// <para>Starts a specified data transformation job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -28436,7 +30828,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data transformation task.</para>
+        /// <para>Starts a specified data transformation job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -28475,7 +30867,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data transformation task.</para>
+        /// <para>Starts a specified data transformation job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -28490,7 +30882,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a data transformation task.</para>
+        /// <para>Starts a specified data transformation job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -29085,7 +31477,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a specified OSS import task.</para>
+        /// <para>Starts a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -29124,7 +31516,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a specified OSS import task.</para>
+        /// <para>Starts a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -29163,7 +31555,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a specified OSS import task.</para>
+        /// <para>Starts a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -29178,7 +31570,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a specified OSS import task.</para>
+        /// <para>Starts a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -29989,7 +32381,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the specified OSS import task.</para>
+        /// <para>Stops a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -30028,7 +32420,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the specified OSS import task.</para>
+        /// <para>Stops a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -30067,7 +32459,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the specified OSS import task.</para>
+        /// <para>Stops a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -30082,7 +32474,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops the specified OSS import task.</para>
+        /// <para>Stops a specified OSS import job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -31355,6 +33747,198 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates the resource whitelist and description of a specified API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The apiKeyName parameter cannot be modified.</description></item>
+        /// <item><description>The allowedStores parameter cannot be empty.</description></item>
+        /// <item><description>The update takes effect immediately.</description></item>
+        /// <item><description>You can update the resources of an API key even if the API key is in the Disabled state.</description></item>
+        /// <item><description>This operation is not used to rotate the API key plaintext.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public UpdateApiKeyResponse UpdateApiKeyWithOptions(string project, string apiKeyName, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStores))
+            {
+                body["allowedStores"] = request.AllowedStores;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateApiKeyResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the resource whitelist and description of a specified API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The apiKeyName parameter cannot be modified.</description></item>
+        /// <item><description>The allowedStores parameter cannot be empty.</description></item>
+        /// <item><description>The update takes effect immediately.</description></item>
+        /// <item><description>You can update the resources of an API key even if the API key is in the Disabled state.</description></item>
+        /// <item><description>This operation is not used to rotate the API key plaintext.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyWithOptionsAsync(string project, string apiKeyName, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowedStores))
+            {
+                body["allowedStores"] = request.AllowedStores;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiKey",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/apikeys/" + apiKeyName,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateApiKeyResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the resource whitelist and description of a specified API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The apiKeyName parameter cannot be modified.</description></item>
+        /// <item><description>The allowedStores parameter cannot be empty.</description></item>
+        /// <item><description>The update takes effect immediately.</description></item>
+        /// <item><description>You can update the resources of an API key even if the API key is in the Disabled state.</description></item>
+        /// <item><description>This operation is not used to rotate the API key plaintext.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public UpdateApiKeyResponse UpdateApiKey(string project, string apiKeyName, UpdateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateApiKeyWithOptions(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the resource whitelist and description of a specified API key.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The apiKeyName parameter cannot be modified.</description></item>
+        /// <item><description>The allowedStores parameter cannot be empty.</description></item>
+        /// <item><description>The update takes effect immediately.</description></item>
+        /// <item><description>You can update the resources of an API key even if the API key is in the Disabled state.</description></item>
+        /// <item><description>This operation is not used to rotate the API key plaintext.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyAsync(string project, string apiKeyName, UpdateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateApiKeyWithOptionsAsync(project, apiKeyName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates an Azure Blob ingestion.</para>
         /// </summary>
         /// 
@@ -32129,7 +34713,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data transformation task and restarts it.</para>
+        /// <para>Updates the configuration of a specified data transformation job and restarts it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32186,7 +34770,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data transformation task and restarts it.</para>
+        /// <para>Updates the configuration of a specified data transformation job and restarts it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32243,7 +34827,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data transformation task and restarts it.</para>
+        /// <para>Updates the configuration of a specified data transformation job and restarts it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32262,7 +34846,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified data transformation task and restarts it.</para>
+        /// <para>Updates the configuration of a specified data transformation job and restarts it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32743,26 +35327,27 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a Logstore.</para>
+        /// <para>Updates the attributes of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Before you update a Logstore, call the GetLogStore operation to retrieve the configuration of the Logstore. Then, modify the configuration and pass it to the UpdateLogStore operation.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service (SLS) endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to make API calls or perform routine O\&amp;M. The RAM user must be granted the required permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, the Logstore name, and the region where the project resides. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstores</a>.</description></item>
+        /// <item><description>Before updating a Logstore, call the GetLogStore operation to obtain the current Logstore configuration. Modify the configuration as needed and pass it as parameters to the UpdateLogStore operation.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the required permissions on Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have determined the project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.
+        /// Operation logs are generated when you call this operation.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization required for this operation. To grant a RAM user or RAM role permission to call this operation, add the required action to the Action element of a RAM policy.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information for this API operation. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource description in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -32866,26 +35451,27 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a Logstore.</para>
+        /// <para>Updates the attributes of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Before you update a Logstore, call the GetLogStore operation to retrieve the configuration of the Logstore. Then, modify the configuration and pass it to the UpdateLogStore operation.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service (SLS) endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to make API calls or perform routine O\&amp;M. The RAM user must be granted the required permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, the Logstore name, and the region where the project resides. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstores</a>.</description></item>
+        /// <item><description>Before updating a Logstore, call the GetLogStore operation to obtain the current Logstore configuration. Modify the configuration as needed and pass it as parameters to the UpdateLogStore operation.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the required permissions on Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have determined the project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.
+        /// Operation logs are generated when you call this operation.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization required for this operation. To grant a RAM user or RAM role permission to call this operation, add the required action to the Action element of a RAM policy.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information for this API operation. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource description in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -32989,26 +35575,27 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a Logstore.</para>
+        /// <para>Updates the attributes of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Before you update a Logstore, call the GetLogStore operation to retrieve the configuration of the Logstore. Then, modify the configuration and pass it to the UpdateLogStore operation.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service (SLS) endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to make API calls or perform routine O\&amp;M. The RAM user must be granted the required permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, the Logstore name, and the region where the project resides. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstores</a>.</description></item>
+        /// <item><description>Before updating a Logstore, call the GetLogStore operation to obtain the current Logstore configuration. Modify the configuration as needed and pass it as parameters to the UpdateLogStore operation.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the required permissions on Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have determined the project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.
+        /// Operation logs are generated when you call this operation.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization required for this operation. To grant a RAM user or RAM role permission to call this operation, add the required action to the Action element of a RAM policy.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information for this API operation. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource description in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -33034,26 +35621,27 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the properties of a Logstore.</para>
+        /// <para>Updates the attributes of a Logstore.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Usage notes</h3>
+        /// <h3>Operation description</h3>
         /// <list type="bullet">
-        /// <item><description>Before you update a Logstore, call the GetLogStore operation to retrieve the configuration of the Logstore. Then, modify the configuration and pass it to the UpdateLogStore operation.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service (SLS) endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair for an Alibaba Cloud account has permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to make API calls or perform routine O\&amp;M. The RAM user must be granted the required permissions to operate SLS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create and authorize a RAM user</a>.</description></item>
-        /// <item><description>Obtain the project name, the Logstore name, and the region where the project resides. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstores</a>.</description></item>
+        /// <item><description>Before updating a Logstore, call the GetLogStore operation to obtain the current Logstore configuration. Modify the configuration as needed and pass it as parameters to the UpdateLogStore operation.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations. This poses a high security risk. We recommend that you create and use a Resource Access Management (RAM) user to call API operations or perform routine O&amp;M. The RAM user must have the required permissions on Simple Log Service EPS resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorization</a>.</description></item>
+        /// <item><description>You have determined the project name, region, and Logstore name for the logs you want to query. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a> and <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.
+        /// Operation logs are generated when you call this operation.</description></item>
         /// </list>
-        /// <h3>Authorization</h3>
-        /// <para>The following table describes the authorization required for this operation. To grant a RAM user or RAM role permission to call this operation, add the required action to the Action element of a RAM policy.</para>
+        /// <h3>Authentication resources</h3>
+        /// <para>The following table lists the authorization information for this API operation. You can add the information to the Action element in a RAM access policy statement to grant a Resource Access Management (RAM) user or RAM role the permissions to invoke this API operation.</para>
         /// <table>
         /// <thead>
         /// <tr>
         /// <th align="left">Action</th>
-        /// <th align="left">Resource description in an authorization policy</th>
+        /// <th align="left">Resource</th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
@@ -33715,6 +36303,202 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateLoggingWithOptionsAsync(project, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates log data in a specified Logstore under the specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogsResponse
+        /// </returns>
+        public UpdateLogsResponse UpdateLogsWithOptions(string project, string logstore, UpdateLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowId))
+            {
+                body["rowId"] = request.RowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["updateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/updatelogs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLogsResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates log data in a specified Logstore under the specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogsResponse
+        /// </returns>
+        public async Task<UpdateLogsResponse> UpdateLogsWithOptionsAsync(string project, string logstore, UpdateLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> hostMap = new Dictionary<string, string>(){};
+            hostMap["project"] = project;
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Data))
+            {
+                body["data"] = request.Data;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
+            {
+                body["from"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RowId))
+            {
+                body["rowId"] = request.RowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                body["to"] = request.To;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["updateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                HostMap = hostMap,
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLogs",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/logstores/" + logstore + "/updatelogs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLogsResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates log data in a specified Logstore under the specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogsResponse
+        /// </returns>
+        public UpdateLogsResponse UpdateLogs(string project, string logstore, UpdateLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateLogsWithOptions(project, logstore, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates log data in a specified Logstore under the specified Project.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The Host consists of the Project name and the Log Service endpoint. You need to specify the Project in the Host.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLogsResponse
+        /// </returns>
+        public async Task<UpdateLogsResponse> UpdateLogsAsync(string project, string logstore, UpdateLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateLogsWithOptionsAsync(project, logstore, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -34862,13 +37646,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">Pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">Pay-by-ingested-data</a>.</para>
+        /// <para>Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair that belongs to an Alibaba Cloud account has permissions for all API operations, which poses a high security threat. We recommend that you use a RAM user to call API operations or perform routine operations and maintenance (O\&amp;M). The RAM user must be granted the required permissions to manage Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
+        /// <item><description>This operation requires a Metricstore that already exists.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. Create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The RAM user must have permissions to perform operations on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant authorization</a>.</description></item>
+        /// <item><description>You have determined the name and region of the project to which the logs belong. To query this information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34923,13 +37707,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">Pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">Pay-by-ingested-data</a>.</para>
+        /// <para>Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair that belongs to an Alibaba Cloud account has permissions for all API operations, which poses a high security threat. We recommend that you use a RAM user to call API operations or perform routine operations and maintenance (O\&amp;M). The RAM user must be granted the required permissions to manage Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
+        /// <item><description>This operation requires a Metricstore that already exists.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. Create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The RAM user must have permissions to perform operations on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant authorization</a>.</description></item>
+        /// <item><description>You have determined the name and region of the project to which the logs belong. To query this information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -34984,13 +37768,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">Pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">Pay-by-ingested-data</a>.</para>
+        /// <para>Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair that belongs to an Alibaba Cloud account has permissions for all API operations, which poses a high security threat. We recommend that you use a RAM user to call API operations or perform routine operations and maintenance (O\&amp;M). The RAM user must be granted the required permissions to manage Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
+        /// <item><description>This operation requires a Metricstore that already exists.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. Create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The RAM user must have permissions to perform operations on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant authorization</a>.</description></item>
+        /// <item><description>You have determined the name and region of the project to which the logs belong. To query this information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35015,13 +37799,13 @@ namespace AlibabaCloud.SDK.Sls20201230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">Pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">Pay-by-ingested-data</a>.</para>
+        /// <para>Metricstore supports two billing modes: <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> and <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Specify an existing Metricstore.</description></item>
-        /// <item><description>The Host in the request syntax consists of a project name and a Simple Log Service endpoint. You must specify the project in the Host.</description></item>
-        /// <item><description>Obtain an AccessKey pair. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
-        /// An AccessKey pair that belongs to an Alibaba Cloud account has permissions for all API operations, which poses a high security threat. We recommend that you use a RAM user to call API operations or perform routine operations and maintenance (O\&amp;M). The RAM user must be granted the required permissions to manage Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant permissions</a>.</description></item>
-        /// <item><description>Obtain the name and region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage projects</a>.</description></item>
+        /// <item><description>This operation requires a Metricstore that already exists.</description></item>
+        /// <item><description>The Host in the request syntax consists of the project name and the Simple Log Service endpoint. Specify the project in the Host.</description></item>
+        /// <item><description>An AccessKey pair has been created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+        ///  An Alibaba Cloud account AccessKey pair has access permissions on all API operations, which poses high security risks. Create and use a Resource Access Management (RAM) user for API access or routine O&amp;M. The RAM user must have permissions to perform operations on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and grant authorization</a>.</description></item>
+        /// <item><description>You have determined the name and region of the project to which the logs belong. To query this information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -35881,6 +38665,126 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceRecordResponse
+        /// </returns>
+        public UpdateResourceRecordResponse UpdateResourceRecordWithOptions(string resourceName, string recordId, UpdateResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records/" + recordId,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceRecordResponse
+        /// </returns>
+        public async Task<UpdateResourceRecordResponse> UpdateResourceRecordWithOptionsAsync(string resourceName, string recordId, UpdateResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records/" + recordId,
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpdateResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceRecordResponse
+        /// </returns>
+        public UpdateResourceRecordResponse UpdateResourceRecord(string resourceName, string recordId, UpdateResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateResourceRecordWithOptions(resourceName, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a specified resource record.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateResourceRecordResponse
+        /// </returns>
+        public async Task<UpdateResourceRecordResponse> UpdateResourceRecordAsync(string resourceName, string recordId, UpdateResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateResourceRecordWithOptionsAsync(resourceName, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a saved search.</para>
         /// </summary>
         /// 
@@ -36153,7 +39057,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified scheduled SQL task.</para>
+        /// <para>Updates a specified scheduled query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36214,7 +39118,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified scheduled SQL task.</para>
+        /// <para>Updates a specified scheduled query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36275,7 +39179,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified scheduled SQL task.</para>
+        /// <para>Updates a specified scheduled query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36294,7 +39198,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified scheduled SQL task.</para>
+        /// <para>Updates a specified scheduled query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36477,7 +39381,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a dataset.</para>
+        /// <para>Updates the configuration of a specified storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36530,7 +39434,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a dataset.</para>
+        /// <para>Updates the configuration of a specified storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36583,7 +39487,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a dataset.</para>
+        /// <para>Updates the configuration of a specified storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36602,7 +39506,7 @@ namespace AlibabaCloud.SDK.Sls20201230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configurations of a dataset.</para>
+        /// <para>Updates the configuration of a specified storeview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36831,6 +39735,136 @@ namespace AlibabaCloud.SDK.Sls20201230
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpsertCollectionPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes or updates resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertResourceRecordResponse
+        /// </returns>
+        public UpsertResourceRecordResponse UpsertResourceRecordWithOptions(string resourceName, UpsertResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpsertResourceRecordResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes or updates resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertResourceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertResourceRecordResponse
+        /// </returns>
+        public async Task<UpsertResourceRecordResponse> UpsertResourceRecordWithOptionsAsync(string resourceName, UpsertResourceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpsertResourceRecord",
+                Version = "2020-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/resources/" + resourceName + "/records",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "none",
+            };
+            return TeaModel.ToObject<UpsertResourceRecordResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes or updates resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertResourceRecordResponse
+        /// </returns>
+        public UpsertResourceRecordResponse UpsertResourceRecord(string resourceName, UpsertResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpsertResourceRecordWithOptions(resourceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Writes or updates resource records in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpsertResourceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpsertResourceRecordResponse
+        /// </returns>
+        public async Task<UpsertResourceRecordResponse> UpsertResourceRecordAsync(string resourceName, UpsertResourceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpsertResourceRecordWithOptionsAsync(resourceName, request, headers, runtime);
         }
 
     }

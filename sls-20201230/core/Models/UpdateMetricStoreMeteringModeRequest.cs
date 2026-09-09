@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateMetricStoreMeteringModeRequest : TeaModel {
         /// <summary>
-        /// <para>The billing mode to which you want to switch. Valid values: ChargeByFunction and ChargeByDataIngest. ChargeByFunction specifies the <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a> mode. ChargeByDataIngest specifies the <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a> mode.</para>
+        /// <para>The billing mode to switch to. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ChargeByFunction: <a href="https://help.aliyun.com/document_detail/48220.html">pay-by-feature</a>.</description></item>
+        /// <item><description>ChargeByDataIngest: <a href="https://help.aliyun.com/document_detail/2365756.html">pay-by-ingested-data</a>.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

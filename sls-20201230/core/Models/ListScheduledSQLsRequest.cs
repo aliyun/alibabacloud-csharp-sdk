@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The line from which to start the query. The default value is 0.</para>
+        /// <para>The start row of the query. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. The default value is 10.</para>
+        /// <para>The number of entries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

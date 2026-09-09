@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class S3Ingestion : TeaModel {
         /// <summary>
-        /// <para>S3 import configuration</para>
+        /// <para>The S3 import configuration.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public S3IngestionConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// <para>Creation Time</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Job description</para>
+        /// <para>job description</para>
         /// 
         /// <b>Example:</b>
         /// <para>s3 ingestion</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Job display name</para>
+        /// <para>job displayName</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Updated At</para>
+        /// <para>The last modified time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>Task Name</para>
+        /// <para>The import task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Scan Configuration</para>
+        /// <para>The scheduling configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schedule")]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Schedule Schedule { get; set; }
 
         /// <summary>
-        /// <para>Job ID</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c7f01719d9feb105fc9d8df92af62010</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
-        /// <para>Import Status</para>
+        /// <para>The import status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>

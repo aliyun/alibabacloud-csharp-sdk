@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Machine : TeaModel {
         /// <summary>
-        /// <para>The host ID of the machine.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The unique identifier of the machine.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3B70F4F1-80F7-46C4-A6C1-100****EE647</para>
+        /// <para>3B70F4F1-80F7-46C4-A6C1-100***CEE647</para>
         /// </summary>
         [NameInMap("machine-uniqueid")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetStoreViewIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>The index configurations.</para>
+        /// <para>The list of index configurations.</para>
         /// </summary>
         [NameInMap("indexes")]
         [Validation(Required=false)]
         public List<GetStoreViewIndexResponseBodyIndexes> Indexes { get; set; }
         public class GetStoreViewIndexResponseBodyIndexes : TeaModel {
             /// <summary>
-            /// <para>The index configurations of the Logstore.</para>
+            /// <para>The index configuration of the Logstore.</para>
             /// </summary>
             [NameInMap("index")]
             [Validation(Required=false)]

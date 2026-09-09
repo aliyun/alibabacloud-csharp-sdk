@@ -8,23 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class ListMaterializedViewRequest : TeaModel {
+    public class ListApiKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the materialized view. Use this to query for a specific materialized view.</para>
+        /// <para>The Logstore that the API key is allowed to write to.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
-        [NameInMap("name")]
+        [NameInMap("allowedStore")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string AllowedStore { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to skip before returning results. This parameter is used for pagination. Default value: 0.</para>
+        /// <para>The number of the page to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of materialized views to return per page. Default value: 100. Maximum value: 500.</para>
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

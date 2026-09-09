@@ -95,29 +95,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string DataCode { get; set; }
 
-            /// <summary>
-            /// <para>Configurations for global log types, such as sls. This parameter is empty for other log types.</para>
-            /// </summary>
             [NameInMap("dataConfig")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataDataConfig DataConfig { get; set; }
             public class ListCollectionPoliciesResponseBodyDataDataConfig : TeaModel {
-                /// <summary>
-                /// <para>The project for global logs. This parameter is used only for global log types, such as sls. If this parameter is empty, logs are collected to the default project of the account in the region specified by dataRegion.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>&quot;&quot;</para>
-                /// </summary>
                 [NameInMap("dataProject")]
                 [Validation(Required=false)]
                 public string DataProject { get; set; }
 
-                /// <summary>
-                /// <para>The region where global logs are first collected. This parameter is used only for global log types, such as sls.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("dataRegion")]
                 [Validation(Required=false)]
                 public string DataRegion { get; set; }
@@ -134,12 +119,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
-            /// <summary>
-            /// <para>Indicates whether the policy is a built-in policy. Built-in policies cannot be modified or deleted.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("internalPolicy")]
             [Validation(Required=false)]
             public bool? InternalPolicy { get; set; }
@@ -197,12 +176,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string PolicyName { get; set; }
 
-            /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>148***********50</para>
-            /// </summary>
             [NameInMap("policyUid")]
             [Validation(Required=false)]
             public string PolicyUid { get; set; }
@@ -217,26 +190,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
-            /// <summary>
-            /// <para>The configuration of the resource directory. This parameter is empty if no configuration is available.</para>
-            /// </summary>
             [NameInMap("resourceDirectory")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataResourceDirectory ResourceDirectory { get; set; }
             public class ListCollectionPoliciesResponseBodyDataResourceDirectory : TeaModel {
-                /// <summary>
-                /// <para>The mode for selecting accounts in the resource directory. Valid values: all and custom.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>all,custom</para>
-                /// </summary>
                 [NameInMap("accountGroupType")]
                 [Validation(Required=false)]
                 public string AccountGroupType { get; set; }
 
-                /// <summary>
-                /// <para>The list of member accounts. This parameter is returned only if accountGroupType is set to custom.</para>
-                /// </summary>
                 [NameInMap("members")]
                 [Validation(Required=false)]
                 public List<string> Members { get; set; }
@@ -245,48 +206,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
-        /// <summary>
-        /// <para>Statistics returned based on the query conditions.</para>
-        /// </summary>
         [NameInMap("statistics")]
         [Validation(Required=false)]
         public List<ListCollectionPoliciesResponseBodyStatistics> Statistics { get; set; }
         public class ListCollectionPoliciesResponseBodyStatistics : TeaModel {
-            /// <summary>
-            /// <para>The list of collection rule sources.</para>
-            /// </summary>
             [NameInMap("policySourceList")]
             [Validation(Required=false)]
             public List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> PolicySourceList { get; set; }
             public class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList : TeaModel {
-                /// <summary>
-                /// <para>The name of the collection rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>policy_name1_from148</para>
-                /// </summary>
                 [NameInMap("policyName")]
                 [Validation(Required=false)]
                 public string PolicyName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>148***********50</para>
-                /// </summary>
                 [NameInMap("policyUid")]
                 [Validation(Required=false)]
                 public string PolicyUid { get; set; }
 
             }
 
-            /// <summary>
-            /// <para>The code of the Alibaba Cloud service.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>oss</para>
-            /// </summary>
             [NameInMap("productCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }

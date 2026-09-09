@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? AllowInComplete { get; set; }
 
             /// <summary>
-            /// <para>The start time of the download task. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The start timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722409860</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable PowerSQL.</para>
+            /// <para>Indicates whether PowerSQL is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? PowerSql { get; set; }
 
             /// <summary>
-            /// <para>The search statement.</para>
+            /// <para>The query statement.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public GetDownloadJobResponseBodyConfigurationSink Sink { get; set; }
             public class GetDownloadJobResponseBodyConfigurationSink : TeaModel {
                 /// <summary>
-                /// <para>The Object Storage Service (OSS) bucket.</para>
+                /// <para>The OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ali-test-oss-bucket</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string CompressionType { get; set; }
 
                 /// <summary>
-                /// <para>The file format.</para>
+                /// <para>The format of the downloaded file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>csv</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
-                /// <para>The prefix of the file that is saved to the bucket.</para>
+                /// <para>The file prefix used when downloading logs to the user\&quot;s OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>download/</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used for the download.</para>
+                /// <para>The ARN of the RAM role used for the download.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:ram::0123456789:role/aliyunlogdefaultrole</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
-                /// <para>The value is fixed to AliyunOSS.</para>
+                /// <para>Fixed value: AliyunOSS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AliyunOSS</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// <para>The end time of the download task. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The end timestamp, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722411060</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// <para>The time when the task was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1722411060</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the task.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a download job</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string CheckSum { get; set; }
 
             /// <summary>
-            /// <para>The error message if the download fails.</para>
+            /// <para>The error message of the download.</para>
             /// 
             /// <b>Example:</b>
             /// <para>timeout</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The duration of the download task in seconds.</para>
+            /// <para>The execution time of the download.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>The URL of the download result.</para>
+            /// <para>The download result link.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.csv.zst?xxx">https://xxx.csv.zst?xxx</a></para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The size of the downloaded file in bytes.</para>
+            /// <para>The size of the downloaded file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? LogCount { get; set; }
 
             /// <summary>
-            /// <para>Notification text.</para>
+            /// <para>The notification text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

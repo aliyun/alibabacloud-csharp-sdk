@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The start time for the export, specified as a Unix timestamp. Set to 1 to export from the earliest available data in the Logstore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1718380800</para>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("fromTime")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The name of the source Logstore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>my-logstore</para>
+        /// <para>logstore-demo</para>
         /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The ARN of the Resource Access Management (RAM) role that Log Service assumes to read data from the Logstore. You must specify the ARN of your role.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1234567890:role/aliyunlogdefaultrole</para>
+        /// <para>acs:ram::123456789:role/aliyunlogdefaultrole</para>
         /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>my-bucket</para>
+            /// <para>test-bucket</para>
             /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>The compression type for the exported files. Valid values: <c>snappy</c>, <c>gzip</c>, <c>zstd</c>, and <c>none</c> (no compression).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>snappy</para>
+            /// <para>snappy/gizp/zstd/none</para>
             /// </summary>
             [NameInMap("compressionType")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>The format of the files stored in OSS. Valid values: <c>json</c>, <c>parquet</c>, <c>csv</c>, and <c>orc</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>csv</para>
+            /// <para>json/parquet/csv/orc</para>
             /// </summary>
             [NameInMap("contentType")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></para>
+            /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>%Y/%m/%d/%H/%M</para>
+            /// <para>%Y_%m_%d/good/bad</para>
             /// </summary>
             [NameInMap("pathFormat")]
             [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>time</para>
+            /// <para>only support time</para>
             /// </summary>
             [NameInMap("pathFormatType")]
             [Validation(Required=false)]
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>The prefix for files exported to the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>prefix-demo/</para>
+            /// <para>prefixxxx/</para>
             /// </summary>
             [NameInMap("prefix")]
             [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:ram::1234567890:role/aliyunlogdefaultrole</para>
+            /// <para>acs:ram::xxxxxxx</para>
             /// </summary>
             [NameInMap("roleArn")]
             [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The end time for the export, specified as a Unix timestamp. Set to 0 to run the task continuously until it is stopped.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1718380800</para>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("toTime")]
         [Validation(Required=false)]

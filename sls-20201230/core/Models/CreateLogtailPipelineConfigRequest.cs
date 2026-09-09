@@ -100,9 +100,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Processors { get; set; }
 
-        /// <summary>
-        /// <para>The task configuration.</para>
-        /// </summary>
         [NameInMap("task")]
         [Validation(Required=false)]
         public Dictionary<string, object> Task { get; set; }

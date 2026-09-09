@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// <para>The number of data entries.</para>
+        /// <para>The number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The total number of data entries that meet the query conditions.</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

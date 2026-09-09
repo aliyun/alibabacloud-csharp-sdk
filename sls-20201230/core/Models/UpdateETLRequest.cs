@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateETLRequest : TeaModel {
         /// <summary>
-        /// <para>The detailed configuration of the data transformation task.</para>
+        /// <para>The detailed configuration of the data transformation job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ETLConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// <para>The description of the data transformation task.</para>
+        /// <para>The description of the data transformation job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is description</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the data transformation task.</para>
+        /// <para>The display name of the data transformation job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

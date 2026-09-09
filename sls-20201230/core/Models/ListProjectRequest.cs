@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListProjectRequest : TeaModel {
+        /// <summary>
+        /// <para>The project description, used for filtering.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve the quota information for the project.</para>
+        /// <para>Specifies whether to retrieve the project quota information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? FetchQuota { get; set; }
 
         /// <summary>
-        /// <para>The line from which the query starts. The default value is 0.</para>
+        /// <para>The line from which the query starts. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. Fuzzy queries are supported.</para>
+        /// <para>The name of the project. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali-test-project</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzf******sxby</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of rows to return on each page for a paged query. The default value is 100. A maximum of 500 projects can be returned.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 100. A maximum of 500 project entries can be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

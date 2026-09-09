@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListETLsRequest : TeaModel {
-        /// <summary>
-        /// <para>The Logstore name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ali-test-logstore</para>
-        /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }

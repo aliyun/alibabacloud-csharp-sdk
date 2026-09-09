@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ScheduledSQLConfiguration : TeaModel {
         /// <summary>
-        /// <para>The data format. Valid values: log2log, log2metric, and metric2metric.</para>
+        /// <para>The write mode. Three configurations are supported: log2log, log2metric, and metric2metric.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DataFormat { get; set; }
 
         /// <summary>
-        /// <para>The endpoint.</para>
+        /// <para>The destination endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DestEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The destination Logstore.</para>
+        /// <para>The destination logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DestProject { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the RAM role that is assumed to write data to the destination Logstore.</para>
+        /// <para>The ARN of the role used to write data to the destination.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,6 +65,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DestRoleArn { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to ensure accurate computation results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? ForceComplete { get; set; }
 
         /// <summary>
-        /// <para>The start time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</para>
+        /// <para>The start time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the SQL time window.</para>
+        /// <para>The start of the SQL time window.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,6 +97,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string FromTimeExpr { get; set; }
 
         /// <summary>
+        /// <para>The concurrency.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? MaxConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of SQL timeouts allowed. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of retries upon SQL timeout. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? MaxRetries { get; set; }
 
         /// <summary>
-        /// <para>The maximum timeout period of SQL analysis. Unit: seconds. Valid values: 60 to 1800.</para>
+        /// <para>The maximum timeout period for SQL execution. Unit: seconds. Valid values: 60 to 1800.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? MaxRunTimeInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The SQL configurations. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</para>
+        /// <para>The SQL configuration. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource pool. The value enhanced specifies an enhanced resource pool.</para>
+        /// <para>The resource pool type. A value of enhanced indicates the enhanced resource pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourcePool { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is assigned to the Scheduled SQL job.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the role used to execute the SQL statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -165,7 +169,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The query statement of the Scheduled SQL job.</para>
+        /// <para>The analytic statement of the scheduled query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -178,7 +182,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Script { get; set; }
 
         /// <summary>
-        /// <para>The source Logstore.</para>
+        /// <para>The source logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -189,7 +193,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string SourceLogstore { get; set; }
 
         /// <summary>
-        /// <para>The type of the query statement.</para>
+        /// <para>The SQL type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -200,7 +204,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string SqlType { get; set; }
 
         /// <summary>
-        /// <para>The end time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">Process and store data from a Logstore to a Metricstore</a>.</para>
+        /// <para>The end time. For more information, see <a href="https://help.aliyun.com/document_detail/286459.html">From Logstore to MetricStore</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? ToTime { get; set; }
 
         /// <summary>
-        /// <para>The end time of the SQL time window.</para>
+        /// <para>The end of the SQL time window.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -220,6 +224,13 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("toTimeExpr")]
         [Validation(Required=false)]
         public string ToTimeExpr { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to use the Exactly-Once write protocol.</para>
+        /// </summary>
+        [NameInMap("usingExactlyOnce")]
+        [Validation(Required=false)]
+        public bool? UsingExactlyOnce { get; set; }
 
     }
 

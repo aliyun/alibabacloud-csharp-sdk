@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListCollectionPoliciesRequest : TeaModel {
-        /// <summary>
-        /// <para>The destination project for centralized data shipping. Specify this parameter to query the number of rules that are configured to ship data to this project.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>your-central-project1</para>
-        /// </summary>
         [NameInMap("centralProject")]
         [Validation(Required=false)]
         public string CentralProject { get; set; }
@@ -39,12 +33,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The row from which the query starts. Default value: 0.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("offset")]
         [Validation(Required=false)]
         public int? Offset { get; set; }
@@ -69,12 +57,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
-        /// <summary>
-        /// <para>The number of collection rules to return on each page. Default value: 50. Maximum value: 100.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>50</para>
-        /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]
         public int? Size { get; set; }

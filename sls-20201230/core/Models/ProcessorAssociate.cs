@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ProcessorAssociate : TeaModel {
         /// <summary>
+        /// <para>Processor ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

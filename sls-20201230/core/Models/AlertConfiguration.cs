@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The ID of the dashboard to which the alert is attached.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DasnboardExample</para>
+        /// <para>dasnboardExample</para>
         /// </summary>
         [NameInMap("dashboard")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ESIngestion : TeaModel {
         /// <summary>
+        /// <para>The ES import configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ESIngestionConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>job description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>es ingestion</para>
         /// </summary>
@@ -33,6 +38,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>job displayName</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The last modified time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -51,6 +59,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The import task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +70,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The scheduling configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schedule")]
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Schedule Schedule { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c7f01719d9feb105fc9d8df92af62010</para>
         /// </summary>
@@ -76,6 +88,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
+        /// <para>The import status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>

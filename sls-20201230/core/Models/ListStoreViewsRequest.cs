@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListStoreViewsRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset name that is used for fuzzy match.</para>
+        /// <para>The storeview name used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_storeview</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The offset of the datasets to return. Default value: 0.</para>
+        /// <para>The offset of the returned results in the total list of storeviews. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of datasets to return. Default value: 100.</para>
+        /// <para>The number of storeviews to return. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,23 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The type of the datasets to return. By default, datasets are not filtered by type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>metricstore</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>logstore</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The storeview type. By default, results are not filtered by type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logstore</para>

@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public List<Dictionary<string, object>> Body { get; set; }
+        public GetLogsResponseBody Body { get; set; }
 
     }
 

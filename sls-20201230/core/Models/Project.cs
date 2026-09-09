@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("internalEndpoint")]
+        [Validation(Required=false)]
+        public string InternalEndpoint { get; set; }
+
+        [NameInMap("internetEndpoint")]
+        [Validation(Required=false)]
+        public string InternetEndpoint { get; set; }
+
         /// <summary>
         /// <para>The time when the project was last modified.</para>
         /// 
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LastModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account that owns the project.</para>
+        /// <para>The Alibaba Cloud account to which the project belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -61,7 +69,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. The name is a part of the endpoint. The project name must be unique in a region of Alibaba Cloud. After a project is created, its name cannot be changed.</para>
+        /// <para>The name of the project, which is used as part of the host. The project name is globally unique within an Alibaba Cloud region and cannot be modified after creation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The quota of the project.</para>
+        /// <para>The project quota.</para>
         /// </summary>
         [NameInMap("quota")]
         [Validation(Required=false)]
@@ -89,7 +97,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? RecycleBinEnabled { get; set; }
 
         /// <summary>
-        /// <para>The region where the project resides.</para>
+        /// <para>The region to which the project belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -109,12 +117,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the project.</para>
+        /// <para>The status of the project. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Normal: The project is in the normal state.</para>
-        /// </description></item>
-        /// <item><description><para>Disable: The project is disabled.</para>
-        /// </description></item>
+        /// <item><description>Normal: Normal.</description></item>
+        /// <item><description>Disable: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

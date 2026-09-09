@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public S3IngestionConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// <para>The description of the job.</para>
+        /// <para>The task description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -38,15 +38,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the job. Follow these naming rules:</para>
-        /// <para>Each job in the same project must have a unique name.</para>
+        /// <para>The job name. The naming rules are as follows:</para>
+        /// <para>Job names must be unique within the same project.</para>
         /// <list type="bullet">
-        /// <item><description><para>Use only lowercase letters, digits, hyphens (-), and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>Start and end with a lowercase letter or digit.</para>
-        /// </description></item>
-        /// <item><description><para>Be 2 to 64 characters long.</para>
-        /// </description></item>
+        /// <item><description>Can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>Must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>Must be 2 to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,6 +54,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The scheduling structure.</para>
+        /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
         public Schedule Schedule { get; set; }

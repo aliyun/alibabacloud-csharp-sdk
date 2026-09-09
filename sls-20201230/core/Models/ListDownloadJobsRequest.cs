@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListDownloadJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The Logstore name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali-test-logstore</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The line from which to start the query. The default value is 0.</para>
+        /// <para>The start row of the query. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of log download jobs to return in a single request.</para>
+        /// <para>The number of log download tasks to retrieve in a single query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

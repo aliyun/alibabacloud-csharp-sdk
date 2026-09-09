@@ -41,8 +41,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the data transformation script.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>SPL</para>
         /// </summary>
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>Advanced parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</para>
+        /// <para>config.vpc.vpc_id.test1:vpc-uf6mskb0b****n9yj</para>
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
@@ -87,9 +85,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description>| extend key=\&quot;value\&quot;</description></item>
-        /// </list>
+        /// <para>e_set(&quot;key&quot;,&quot;value&quot;)</para>
         /// </summary>
         [NameInMap("script")]
         [Validation(Required=false)]

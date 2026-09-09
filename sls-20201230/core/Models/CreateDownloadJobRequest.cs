@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public CreateDownloadJobRequestConfiguration Configuration { get; set; }
         public class CreateDownloadJobRequestConfiguration : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to allow the download of incomplete results. Valid values: \<c>true\\</c> and \<c>false\\</c>.</para>
+            /// <para>Specifies whether to allow downloading inexact results. Valid values: true, false.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? AllowInComplete { get; set; }
 
             /// <summary>
-            /// <para>The start time. This is a UNIX timestamp that is accurate to the second.</para>
+            /// <para>The start timestamp, in seconds.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable PowerSQL. Valid values: \<c>true\\</c> and \<c>false\\</c>.</para>
+            /// <para>Specifies whether to enable PowerSQL. Valid values: true, false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? PowerSql { get; set; }
 
             /// <summary>
-            /// <para>The search statement.</para>
+            /// <para>The query statement.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public CreateDownloadJobRequestConfigurationSink Sink { get; set; }
             public class CreateDownloadJobRequestConfigurationSink : TeaModel {
                 /// <summary>
-                /// <para>The destination Object Storage Service (OSS) bucket.</para>
+                /// <para>The OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss-test-bucket</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// <para>The compression format of the file. Valid values: \<c>zstd\\</c>, \<c>lz4\\</c>, \<c>gzip\\</c>, and \<c>none\\</c>.</para>
+                /// <para>The compression format. Valid values: zstd, lz4, gzip, none.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string CompressionType { get; set; }
 
                 /// <summary>
-                /// <para>The format of the downloaded file. Valid values: \<c>csv\\</c> and \<c>json\\</c>.</para>
+                /// <para>The download file format. Valid values: csv, json.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
-                /// <para>The prefix of the path in the destination OSS bucket.</para>
+                /// <para>The path prefix in the OSS bucket to which data is downloaded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>download/</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role to use for the download.</para>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role used for the download.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:ram::0123456789:role/aliyunlogdefaultrole</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
-                /// <para>The type of the destination. Set the value to \<c>AliyunOSS\\</c>.</para>
+                /// <para>Fixed value: AliyunOSS.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// <para>The end time. This is a UNIX timestamp that is accurate to the second.</para>
+            /// <para>The end timestamp, in seconds.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -181,15 +181,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the job. The name must meet the following requirements:</para>
-        /// <para>The job name must be unique within a project.</para>
+        /// <para>The job name. The following naming rules apply:</para>
+        /// <para>Job names must be unique within the same project.</para>
         /// <list type="bullet">
-        /// <item><description><para>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</para>
-        /// </description></item>
-        /// <item><description><para>It must start and end with a lowercase letter or a digit.</para>
-        /// </description></item>
-        /// <item><description><para>The name must be 2 to 64 characters in length.</para>
-        /// </description></item>
+        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
+        /// <item><description>The name must be 2 to 64 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

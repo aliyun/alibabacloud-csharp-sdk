@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateScheduledSQLRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the task.</para>
+        /// <para>The task configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]

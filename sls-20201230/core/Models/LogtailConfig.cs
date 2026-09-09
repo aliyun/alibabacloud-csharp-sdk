@@ -122,8 +122,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The type of observable data in the Logstore.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>logs</para>
             /// </summary>
