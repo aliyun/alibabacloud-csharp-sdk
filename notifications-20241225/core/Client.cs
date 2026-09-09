@@ -3447,6 +3447,11 @@ namespace AlibabaCloud.SDK.Notifications20241225
         /// <para>Retrieves the metadata service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves page metadata.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReadMetaConfigRequest
         /// </param>
@@ -3520,6 +3525,11 @@ namespace AlibabaCloud.SDK.Notifications20241225
         /// <summary>
         /// <para>Retrieves the metadata service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves page metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReadMetaConfigRequest
@@ -3595,6 +3605,11 @@ namespace AlibabaCloud.SDK.Notifications20241225
         /// <para>Retrieves the metadata service.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves page metadata.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ReadMetaConfigRequest
         /// </param>
@@ -3612,6 +3627,11 @@ namespace AlibabaCloud.SDK.Notifications20241225
         /// <summary>
         /// <para>Retrieves the metadata service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves page metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReadMetaConfigRequest
@@ -5648,6 +5668,318 @@ namespace AlibabaCloud.SDK.Notifications20241225
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateMessageLanguageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a user subscription.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSubscriptionResponse
+        /// </returns>
+        public UpdateUserSubscriptionResponse UpdateUserSubscriptionWithOptions(UpdateUserSubscriptionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserSubscriptionShrinkRequest request = new UpdateUserSubscriptionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CategoryCodes))
+            {
+                request.CategoryCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryCodes, "CategoryCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelConfigs))
+            {
+                request.ChannelConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelConfigs, "ChannelConfigs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CommonContacts))
+            {
+                request.CommonContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommonContacts, "CommonContacts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReceiveTimeList))
+            {
+                request.ReceiveTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReceiveTimeList, "ReceiveTimeList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WebhookContacts))
+            {
+                request.WebhookContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WebhookContacts, "WebhookContacts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerProtocol))
+            {
+                body["CallerProtocol"] = request.CallerProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryCodesShrink))
+            {
+                body["CategoryCodes"] = request.CategoryCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelConfigsShrink))
+            {
+                body["ChannelConfigs"] = request.ChannelConfigsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelGroupCode))
+            {
+                body["ChannelGroupCode"] = request.ChannelGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSource))
+            {
+                body["ClientSource"] = request.ClientSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonContactsShrink))
+            {
+                body["CommonContacts"] = request.CommonContactsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
+            {
+                body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationItemCode))
+            {
+                body["OperationItemCode"] = request.OperationItemCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiveTimeListShrink))
+            {
+                body["ReceiveTimeList"] = request.ReceiveTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remarks))
+            {
+                body["Remarks"] = request.Remarks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
+            {
+                body["SrcUrl"] = request.SrcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                body["TenantCode"] = request.TenantCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
+            {
+                body["UidType"] = request.UidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebhookContactsShrink))
+            {
+                body["WebhookContacts"] = request.WebhookContactsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserSubscription",
+                Version = "2024-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a user subscription.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateUserSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSubscriptionResponse
+        /// </returns>
+        public async Task<UpdateUserSubscriptionResponse> UpdateUserSubscriptionWithOptionsAsync(UpdateUserSubscriptionRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateUserSubscriptionShrinkRequest request = new UpdateUserSubscriptionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CategoryCodes))
+            {
+                request.CategoryCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CategoryCodes, "CategoryCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ChannelConfigs))
+            {
+                request.ChannelConfigsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ChannelConfigs, "ChannelConfigs", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CommonContacts))
+            {
+                request.CommonContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CommonContacts, "CommonContacts", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ReceiveTimeList))
+            {
+                request.ReceiveTimeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ReceiveTimeList, "ReceiveTimeList", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WebhookContacts))
+            {
+                request.WebhookContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WebhookContacts, "WebhookContacts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                body["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                body["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerProtocol))
+            {
+                body["CallerProtocol"] = request.CallerProtocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryCodesShrink))
+            {
+                body["CategoryCodes"] = request.CategoryCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelConfigsShrink))
+            {
+                body["ChannelConfigs"] = request.ChannelConfigsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelGroupCode))
+            {
+                body["ChannelGroupCode"] = request.ChannelGroupCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientSource))
+            {
+                body["ClientSource"] = request.ClientSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonContactsShrink))
+            {
+                body["CommonContacts"] = request.CommonContactsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cookies))
+            {
+                body["Cookies"] = request.Cookies;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationItemCode))
+            {
+                body["OperationItemCode"] = request.OperationItemCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReceiveTimeListShrink))
+            {
+                body["ReceiveTimeList"] = request.ReceiveTimeListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remarks))
+            {
+                body["Remarks"] = request.Remarks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcUrl))
+            {
+                body["SrcUrl"] = request.SrcUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantCode))
+            {
+                body["TenantCode"] = request.TenantCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UidType))
+            {
+                body["UidType"] = request.UidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebhookContactsShrink))
+            {
+                body["WebhookContacts"] = request.WebhookContactsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserSubscription",
+                Version = "2024-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a user subscription.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSubscriptionResponse
+        /// </returns>
+        public UpdateUserSubscriptionResponse UpdateUserSubscription(UpdateUserSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateUserSubscriptionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user subscription.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a user subscription.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserSubscriptionResponse
+        /// </returns>
+        public async Task<UpdateUserSubscriptionResponse> UpdateUserSubscriptionAsync(UpdateUserSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateUserSubscriptionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

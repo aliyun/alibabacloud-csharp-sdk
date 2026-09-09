@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
-    public class ReadMetaConfigResponseBody : TeaModel {
+    public class UpdateUserSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned when the call fails. For more information, see error codes.</para>
+        /// <para>The error code returned by the system. For more information about error codes, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -18,26 +18,6 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        /// <summary>
-        /// <para>The execution result.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{
-        ///     &quot;isSubNextUser&quot;: &quot;YES&quot;,
-        ///     &quot;IS_INNER_USER&quot;: &quot;NO&quot;,
-        ///     &quot;isXsWhite&quot;: &quot;NO&quot;,
-        ///     &quot;isXs&quot;: &quot;NO&quot;,
-        ///     &quot;SITEID&quot;: &quot;cn&quot;,
-        ///     &quot;webhookSignatures&quot;: [
-        ///         &quot;Alibaba&quot;,
-        ///         &quot;阿里云&quot;
-        ///     ]
-        /// }</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public object Data { get; set; }
 
         /// <summary>
         /// <para>The message returned when the call fails.</para>
@@ -60,7 +40,11 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call fails.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
