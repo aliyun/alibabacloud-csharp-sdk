@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100.</para>
+        /// <para>The number of rows per page in a paged query. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -33,12 +33,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The status of the network access endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pending: Pending initialization.</description></item>
-        /// <item><description>creating: Being created.</description></item>
-        /// <item><description>running: Running.</description></item>
-        /// <item><description>deleting: Being deleted.</description></item>
+        /// <item><description>pending: pending initialization.</description></item>
+        /// <item><description>creating: being created.</description></item>
+        /// <item><description>running: running.</description></item>
+        /// <item><description>deleting: being deleted.</description></item>
         /// </list>
-        /// <para>This parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
+        /// <para>This filter parameter does not take effect when NetworkAccessEndpointType is set to shared.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>

@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationResourcesRequestFilter> Filter { get; set; }
         public class ListAuthorizationResourcesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter field name. Valid values:</para>
+            /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AuthorizationResourceEntityType: the resource entity type associated with the authorization resource</para>
+            /// <item><description><para>AuthorizationResourceEntityType: the type of the resource entity associated with the authorized resource.</para>
             /// </description></item>
-            /// <item><description><para>AuthorizationResourceEntityId: the resource entity ID associated with the authorization resource</para>
+            /// <item><description><para>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorized resource.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
+        /// <item><description><para>If you do not specify this parameter, the default value is 20.</para>
         /// </description></item>
         /// <item><description><para>The maximum value is 100.</para>
         /// </description></item>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The pagination token that marks the starting position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
+        /// <item><description>If you do not specify this parameter, the query starts from the first page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

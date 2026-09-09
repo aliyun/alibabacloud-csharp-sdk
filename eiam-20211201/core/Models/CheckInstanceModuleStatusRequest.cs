@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckInstanceModuleStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The secondary module identifier.</para>
+        /// <para>The level-2 module identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:license:module:ud:customField</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The primary module identifier.</para>
+        /// <para>The level-1 module identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,16 +41,28 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ModuleKey { get; set; }
 
+        /// <summary>
+        /// <para>The resource label URN key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>urn:alibaba:idaas:license:label:template:app</para>
+        /// </summary>
         [NameInMap("ResourceLabelKey")]
         [Validation(Required=false)]
         public string ResourceLabelKey { get; set; }
 
+        /// <summary>
+        /// <para>The resource label name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>apt_ram_user_sso</para>
+        /// </summary>
         [NameInMap("ResourceLabelValue")]
         [Validation(Required=false)]
         public string ResourceLabelValue { get; set; }
 
         /// <summary>
-        /// <para>The tertiary module identifier.</para>
+        /// <para>The level-3 module identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</para>

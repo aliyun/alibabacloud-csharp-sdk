@@ -57,6 +57,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The SMS gateway ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>smsgw_01l9f0kunrrjhxxx</para>
+            /// </summary>
+            [NameInMap("SmsGatewayId")]
+            [Validation(Required=false)]
+            public string SmsGatewayId { get; set; }
+
+            /// <summary>
             /// <para>The brand status.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +75,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The enabling status of system notifications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("SystemNotificationStatus")]
+            [Validation(Required=false)]
+            public string SystemNotificationStatus { get; set; }
 
         }
 

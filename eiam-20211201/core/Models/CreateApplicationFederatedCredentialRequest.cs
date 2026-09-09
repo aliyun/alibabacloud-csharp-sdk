@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationFederatedCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application federated identity credential.</para>
+        /// <para>The application federated credential name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationFederatedCredentialName { get; set; }
 
         /// <summary>
-        /// <para>The type of the application federated identity credential.</para>
+        /// <para>The application federated credential type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The OIDC structured configuration. This parameter applies when the verification mode is structured and the credential type is oidc.</para>
+        /// <para>The OIDC structured configuration.</para>
         /// </summary>
         [NameInMap("OidcVerificationConfig")]
         [Validation(Required=false)]
@@ -117,18 +117,39 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public CreateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig AzureVmConfig { get; set; }
             public class CreateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig : TeaModel {
+                /// <summary>
+                /// <para>The principal ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5dee234a-1b4c-4ad7-a19f-fxxxxx</para>
+                /// </summary>
                 [NameInMap("PrincipalId")]
                 [Validation(Required=false)]
                 public string PrincipalId { get; set; }
 
+                /// <summary>
+                /// <para>The Azure resource group name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user_default</para>
+                /// </summary>
                 [NameInMap("ResourceGroupName")]
                 [Validation(Required=false)]
                 public string ResourceGroupName { get; set; }
 
+                /// <summary>
+                /// <para>The subscription ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</para>
+                /// </summary>
                 [NameInMap("SubscriptionId")]
                 [Validation(Required=false)]
                 public string SubscriptionId { get; set; }
 
+                /// <summary>
+                /// <para>The list of virtual machine names.</para>
+                /// </summary>
                 [NameInMap("VmNames")]
                 [Validation(Required=false)]
                 public List<string> VmNames { get; set; }
@@ -142,16 +163,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public CreateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig GcpVmConfig { get; set; }
             public class CreateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig : TeaModel {
+                /// <summary>
+                /// <para>The list of GCP virtual machine instance IDs.</para>
+                /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
                 public List<string> InstanceIds { get; set; }
 
+                /// <summary>
+                /// <para>The GCP project ID to which the resource belongs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>turnkey-axiom-475109-xx</para>
+                /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The sub claim that corresponds to the service account.</para>
+                /// <para>The sub claim corresponding to the service account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -162,10 +192,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             }
 
+            /// <summary>
+            /// <para>The generic scenario configuration.</para>
+            /// </summary>
             [NameInMap("GenericConfig")]
             [Validation(Required=false)]
             public CreateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig GenericConfig { get; set; }
             public class CreateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig : TeaModel {
+                /// <summary>
+                /// <para>The subject.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_subject</para>
+                /// </summary>
                 [NameInMap("Subject")]
                 [Validation(Required=false)]
                 public string Subject { get; set; }
@@ -180,7 +219,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
             public class CreateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig : TeaModel {
                 /// <summary>
-                /// <para>The Kubernetes namespace.</para>
+                /// <para>The K8s namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -200,7 +239,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PodNamePrefix { get; set; }
 
                 /// <summary>
-                /// <para>The Kubernetes service account name.</para>
+                /// <para>The K8s service account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sa</para>
@@ -212,7 +251,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The OIDC scenario profile. Valid values:</para>
+            /// <para>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>generic</description></item>
             /// <item><description>kubernetes</description></item>
@@ -230,12 +269,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The PKCS#7 structured configuration. This parameter applies when the verification mode is structured and the credential type is pkcs7.</para>
+        /// <para>The PKCS#7 structured configuration.</para>
         /// </summary>
         [NameInMap("Pkcs7VerificationConfig")]
         [Validation(Required=false)]
         public CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig Pkcs7VerificationConfig { get; set; }
         public class CreateApplicationFederatedCredentialRequestPkcs7VerificationConfig : TeaModel {
+            /// <summary>
+            /// <para>The list of instance IDs.</para>
+            /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
@@ -255,8 +297,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The verification mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>freedom (default)</description></item>
-        /// <item><description>structured</description></item>
+        /// <item><description>freedom: free mode</description></item>
+        /// <item><description>structured: structured mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

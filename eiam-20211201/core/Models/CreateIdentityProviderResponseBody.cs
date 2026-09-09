@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateIdentityProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>Identity provider ID.</para>
+        /// <para>The identity provider ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idp_mwpcwnhrimlr2horxXXXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

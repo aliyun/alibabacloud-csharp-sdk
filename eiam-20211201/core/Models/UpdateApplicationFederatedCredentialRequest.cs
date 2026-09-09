@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The OIDC structured configuration (structured mode + oidc type).</para>
+        /// <para>The OIDC structured configuration.</para>
         /// </summary>
         [NameInMap("OidcVerificationConfig")]
         [Validation(Required=false)]
@@ -85,18 +85,39 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig AzureVmConfig { get; set; }
             public class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigAzureVmConfig : TeaModel {
+                /// <summary>
+                /// <para>The principal ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5dee234a-1b4c-4ad7-a19f-fxxxxx</para>
+                /// </summary>
                 [NameInMap("PrincipalId")]
                 [Validation(Required=false)]
                 public string PrincipalId { get; set; }
 
+                /// <summary>
+                /// <para>The Azure resource group name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user_default</para>
+                /// </summary>
                 [NameInMap("ResourceGroupName")]
                 [Validation(Required=false)]
                 public string ResourceGroupName { get; set; }
 
+                /// <summary>
+                /// <para>The subscription ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</para>
+                /// </summary>
                 [NameInMap("SubscriptionId")]
                 [Validation(Required=false)]
                 public string SubscriptionId { get; set; }
 
+                /// <summary>
+                /// <para>The list of virtual machine names.</para>
+                /// </summary>
                 [NameInMap("VmNames")]
                 [Validation(Required=false)]
                 public List<string> VmNames { get; set; }
@@ -110,16 +131,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig GcpVmConfig { get; set; }
             public class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGcpVmConfig : TeaModel {
+                /// <summary>
+                /// <para>The list of VM instance IDs.</para>
+                /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
                 public List<string> InstanceIds { get; set; }
 
+                /// <summary>
+                /// <para>The GCP project ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>turnkey-axiom-475109-xx</para>
+                /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
                 public string ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The sub value corresponding to the service account.</para>
+                /// <para>The sub claim corresponding to the service account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456789</para>
@@ -130,10 +160,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             }
 
+            /// <summary>
+            /// <para>The generic scenario configuration.</para>
+            /// </summary>
             [NameInMap("GenericConfig")]
             [Validation(Required=false)]
             public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig GenericConfig { get; set; }
             public class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigGenericConfig : TeaModel {
+                /// <summary>
+                /// <para>The subject identifier.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_subject</para>
+                /// </summary>
                 [NameInMap("Subject")]
                 [Validation(Required=false)]
                 public string Subject { get; set; }
@@ -148,7 +187,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
             public class UpdateApplicationFederatedCredentialRequestOidcVerificationConfigKubernetesConfig : TeaModel {
                 /// <summary>
-                /// <para>The Kubernetes namespace.</para>
+                /// <para>The K8s namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -168,7 +207,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PodNamePrefix { get; set; }
 
                 /// <summary>
-                /// <para>The Kubernetes service account name.</para>
+                /// <para>The K8s service account name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my-sa</para>
@@ -180,7 +219,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The OIDC scenario profile. Valid values: generic, kubernetes, gcp_vm, and azure_vm.</para>
+            /// <para>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>generic</description></item>
+            /// <item><description>kubernetes</description></item>
+            /// <item><description>gcp_vm</description></item>
+            /// <item><description>azure_vm</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>kubernetes</para>
@@ -192,12 +237,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The PKCS#7 structured configuration (structured mode + pkcs7 type).</para>
+        /// <para>The PKCS#7 structured configuration.</para>
         /// </summary>
         [NameInMap("Pkcs7VerificationConfig")]
         [Validation(Required=false)]
         public UpdateApplicationFederatedCredentialRequestPkcs7VerificationConfig Pkcs7VerificationConfig { get; set; }
         public class UpdateApplicationFederatedCredentialRequestPkcs7VerificationConfig : TeaModel {
+            /// <summary>
+            /// <para>The list of VM instance IDs.</para>
+            /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }

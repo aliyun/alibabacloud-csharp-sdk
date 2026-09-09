@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
         /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
         /// </description></item>

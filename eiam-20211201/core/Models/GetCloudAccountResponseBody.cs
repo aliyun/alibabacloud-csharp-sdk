@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult CloudAccountHealthCheckResult { get; set; }
             public class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult : TeaModel {
                 /// <summary>
-                /// <para>The error reason. This field is returned when the health check status is unhealthy.</para>
+                /// <para>The error reason. This field returns a value when the health check status is unhealthy.</para>
                 /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
-                    /// <para>The error description.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountName { get; set; }
 
             /// <summary>
-            /// <para>The identity provider configuration.</para>
+            /// <para>The identity provider configuration information.</para>
             /// </summary>
             [NameInMap("CloudAccountProviderConfig")]
             [Validation(Required=false)]
@@ -182,12 +182,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountProviderName { get; set; }
 
+            /// <summary>
+            /// <para>The cloud account role creation type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("CloudAccountRoleCreationType")]
             [Validation(Required=false)]
             public string CloudAccountRoleCreationType { get; set; }
 
             /// <summary>
-            /// <para>The cloud account site.</para>
+            /// <para>The cloud account site. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>china_mainland: The Chinese mainland.</description></item>
+            /// <item><description>global: Global.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>china_mainland</para>
             /// </summary>
             [NameInMap("CloudAccountSite")]
             [Validation(Required=false)]
@@ -252,6 +265,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public class GetCloudAccountResponseBodyCloudAccountPrivilegeHostingError : TeaModel {
                 /// <summary>
                 /// <para>The failure error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Error</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
@@ -259,6 +275,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
                 /// <summary>
                 /// <para>The failure message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test message</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -267,14 +286,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The privilege hosting state, which indicates whether the privilege capability is available.</para>
+            /// <para>The hosting state of the cloud account. The default value is hosting_unmanaged. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</description></item>
+            /// <item><description>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</description></item>
+            /// <item><description>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully. The related permission templates and hosting bindings have taken effect.</description></item>
+            /// <item><description>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</description></item>
+            /// <item><description>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</description></item>
+            /// <item><description>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hosting_unmanaged</para>
             /// </summary>
             [NameInMap("PrivilegeHostingState")]
             [Validation(Required=false)]
             public string PrivilegeHostingState { get; set; }
 
             /// <summary>
-            /// <para>The privilege switch status, which indicates whether the privilege capability is enabled.</para>
+            /// <para>The privilege switch status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled: Enabled. The resource is active and can be used normally.</description></item>
+            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("PrivilegeStatus")]
             [Validation(Required=false)]

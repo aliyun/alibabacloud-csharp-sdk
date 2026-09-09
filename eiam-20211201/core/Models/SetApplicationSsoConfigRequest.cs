@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-examplexxx</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The initialization single sign-on (SSO) method. Valid values:</para>
+        /// <para>The initial single sign-on (SSO) logon method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>only_app_init_sso: Only application-initiated SSO. This is the default value for OIDC protocol applications. When a SAML application specifies this method, InitLoginUrl must be specified.</description></item>
-        /// <item><description>idaas_or_app_init_sso: SSO initiated from the IDaaS portal or the application. This is the default value for SAML protocol applications. When an OIDC protocol application specifies this method, InitLoginUrl must be specified.</description></item>
+        /// <item><description>only_app_init_sso: Only application-initiated SSO is supported. This is the default value for OIDC protocol applications. When a SAML application uses this method, InitLoginUrl must be specified.</description></item>
+        /// <item><description>idaas_or_app_init_sso: Both IDaaS portal-initiated and application-initiated SSO are supported. This is the default value for SAML protocol applications. When an OIDC protocol application uses this method, InitLoginUrl must be specified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InitLoginType { get; set; }
 
         /// <summary>
-        /// <para>The URL that triggers the initialization single sign-on (SSO).
-        /// When an OIDC protocol application sets InitLoginType to idaas_or_app_init_sso, this parameter is required.
-        /// When a SAML protocol application sets InitLoginType to only_app_init_sso, this parameter is required.</para>
+        /// <para>The initial single sign-on (SSO) logon trigger URL.
+        /// This parameter is required when an OIDC protocol application sets InitLoginType to idaas_or_app_init_sso.
+        /// This parameter is required when a SAML protocol application sets InitLoginType to only_app_init_sso.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF">http://127.0.0.1:8000/start_login?enterprise_code=ABCDEF</a></para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The SSO configuration parameters for an OIDC protocol-based application.</para>
+        /// <para>The SSO configuration parameters for an OIDC-based application.</para>
         /// </summary>
         [NameInMap("OidcSsoConfig")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? AccessTokenEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the application is allowed to act as a public client to request the IDaaS EIAM authorization server. Only the authorization code mode and device mode support this feature. Default value: false.</para>
+            /// <para>Specifies whether the application is allowed to act as a public client to request the IDaaS EIAM authorization server. This parameter can be enabled only in authorization code mode and device mode. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CodeEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The custom user information included in the ID token response.</para>
+            /// <para>The custom user information included in the returned ID token.</para>
             /// </summary>
             [NameInMap("CustomClaims")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The OIDC standard parameter scope, which specifies the scope of user attributes that can be returned by the userinfo endpoint or the ID token.</para>
+            /// <para>The OIDC standard parameter scope, which specifies the range of user attributes that can be returned by the userinfo endpoint or the id_token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>profile，email</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> GrantScopes { get; set; }
 
             /// <summary>
-            /// <para>The list of supported OIDC protocol grant types.</para>
+            /// <para>The list of supported OIDC grant types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>authorization_code</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? IdTokenEffectiveTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the identity authentication source used for the password mode. This parameter takes effect only when the GrantTypes of the OIDC application includes the password mode.</para>
+            /// <para>The ID of the authentication source used in password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application include the password mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ia_password</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordAuthenticationSourceId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether TOTP-based secondary authentication is required for the password mode. This parameter takes effect only when the GrantTypes of the OIDC application includes the password mode.</para>
+            /// <para>Specifies whether TOTP-based secondary authentication is required for password mode. This parameter takes effect only when the GrantTypes specified for the OIDC application include the password mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> PkceChallengeMethods { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the application SSO requires PKCE (RFC 7636).</para>
+            /// <para>Specifies whether Proof Key for Code Exchange (PKCE) (RFC 7636) is required for application SSO.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -204,14 +204,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? PkceRequired { get; set; }
 
             /// <summary>
-            /// <para>The list of logout callback addresses supported by the application.</para>
+            /// <para>The list of logout callback URIs supported by the application.</para>
             /// </summary>
             [NameInMap("PostLogoutRedirectUris")]
             [Validation(Required=false)]
             public List<string> PostLogoutRedirectUris { get; set; }
 
             /// <summary>
-            /// <para>The list of RedirectUris supported by the application.</para>
+            /// <para>The list of redirect URIs supported by the application.</para>
             /// </summary>
             [NameInMap("RedirectUris")]
             [Validation(Required=false)]
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? RefreshTokenEffective { get; set; }
 
             /// <summary>
-            /// <para>The response types supported by the application when OidcSsoConfig.GrantTypes includes the implicit mode.</para>
+            /// <para>The response types supported by the application when OidcSsoConfig.GrantTypes includes the implicit grant type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token id_token</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> ResponseTypes { get; set; }
 
             /// <summary>
-            /// <para>The custom expression for the sub value returned in the ID token.</para>
+            /// <para>The custom expression for the sub claim value returned in the ID token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user.userid</para>
@@ -250,17 +250,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The SSO configuration parameters for a SAML protocol-based application.</para>
+        /// <para>The SSO configuration parameters for a SAML-based application.</para>
         /// </summary>
         [NameInMap("SamlSsoConfig")]
         [Validation(Required=false)]
         public SetApplicationSsoConfigRequestSamlSsoConfig SamlSsoConfig { get; set; }
         public class SetApplicationSsoConfigRequestSamlSsoConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether the Assertion needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</para>
+            /// <para>Specifies whether the assertion needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</para>
             /// <list type="bullet">
-            /// <item><description>true: The Assertion is signed.</description></item>
-            /// <item><description>false: The Assertion is not signed.</description></item>
+            /// <item><description>true: The assertion is signed.</description></item>
+            /// <item><description>false: The assertion is not signed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements> AttributeStatements { get; set; }
             public class SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements : TeaModel {
                 /// <summary>
-                /// <para>The Name of the attribute in the SAML assertion.</para>
+                /// <para>The name of the attribute in the SAML assertion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The default RelayState value. When the single sign-on (SSO) request is initiated by EIAM, the SAML Response provided by EIAM specifies the RelayState as this value.</para>
+            /// <para>The default RelayState value. When a single sign-on (SSO) logon request is initiated by EIAM, the SAML Response provided by EIAM specifies the RelayState as this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://home.console.aliyun.com">https://home.console.aliyun.com</a></para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NameIdFormat { get; set; }
 
             /// <summary>
-            /// <para>The expression used to generate the actual NameID value for the SAML protocol.</para>
+            /// <para>The expression used to generate the actual NameID value in the SAML protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user.email</para>
@@ -375,10 +375,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the Response needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</para>
+            /// <para>Specifies whether SSO AuthnRequest signature verification is enabled. Default value: false. If set to true, spSigningCertificates must be configured (the array must not be empty).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("RequireAuthnRequestSigned")]
+            [Validation(Required=false)]
+            public bool? RequireAuthnRequestSigned { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether the response needs to be signed. ResponseSigned and AssertionSigned cannot both be set to false.</para>
             /// <list type="bullet">
-            /// <item><description>true: The Response is signed.</description></item>
-            /// <item><description>false: The Response is not signed.</description></item>
+            /// <item><description>true: The response is signed.</description></item>
+            /// <item><description>false: The response is not signed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -389,7 +399,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ResponseSigned { get; set; }
 
             /// <summary>
-            /// <para>The SAML assertion signature algorithm.</para>
+            /// <para>The signature algorithm for the SAML assertion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA-SHA256</para>
@@ -409,7 +419,27 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SpEntityId { get; set; }
 
             /// <summary>
-            /// <para>The SAML assertion consumer service (ACS) URL of the application (SP).</para>
+            /// <para>The array of SP signature verification certificates in PEM format. A maximum of two certificates are allowed and are shared by SSO and SLO. Each certificate is validated for format and validity upon write. Requests with more than two certificates are rejected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----</para>
+            /// </summary>
+            [NameInMap("SpSigningCertificates")]
+            [Validation(Required=false)]
+            public List<string> SpSigningCertificates { get; set; }
+
+            /// <summary>
+            /// <para>The URL on the SP side that receives the LogoutResponse. This parameter is optional.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://example.com/api/slo/response">https://example.com/api/slo/response</a></para>
+            /// </summary>
+            [NameInMap("SpSloResponseUrl")]
+            [Validation(Required=false)]
+            public string SpSloResponseUrl { get; set; }
+
+            /// <summary>
+            /// <para>The SAML assertion consumer service URL of the application (SP).</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://signin.aliyun.com/saml-role/sso">https://signin.aliyun.com/saml-role/sso</a></para>

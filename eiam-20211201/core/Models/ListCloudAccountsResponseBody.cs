@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The last check time, in UNIX timestamp format. Unit: milliseconds.</para>
+                /// <para>The last check time, in UNIX timestamp format, measured in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
@@ -134,7 +134,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountProviderName { get; set; }
 
             /// <summary>
-            /// <para>The cloud account site.</para>
+            /// <para>The cloud account site. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>china_mainland: The Chinese mainland.</description></item>
+            /// <item><description>global: Global.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>china_mainland</para>
             /// </summary>
             [NameInMap("CloudAccountSite")]
             [Validation(Required=false)]
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The creation time, in UNIX timestamp format, measured in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
@@ -184,7 +191,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The list of associated privileged access application IDs.</para>
+            /// <para>The list of associated privilege application IDs.</para>
             /// </summary>
             [NameInMap("PrivilegeApplicationIds")]
             [Validation(Required=false)]
@@ -198,14 +205,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError PrivilegeHostingError { get; set; }
             public class ListCloudAccountsResponseBodyCloudAccountsPrivilegeHostingError : TeaModel {
                 /// <summary>
-                /// <para>The failure error code.</para>
+                /// <para>The error code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Error</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The failure message.</para>
+                /// <para>The error message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test message</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -214,21 +227,39 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The privilege hosting state, which indicates whether the account has privileged access capabilities.</para>
+            /// <para>The hosting state of the cloud account. The default value is unmanaged. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</description></item>
+            /// <item><description>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</description></item>
+            /// <item><description>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully, and the related permission templates and hosting bindings have taken effect.</description></item>
+            /// <item><description>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</description></item>
+            /// <item><description>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</description></item>
+            /// <item><description>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>hosting_unmanaged</para>
             /// </summary>
             [NameInMap("PrivilegeHostingState")]
             [Validation(Required=false)]
             public string PrivilegeHostingState { get; set; }
 
             /// <summary>
-            /// <para>The privilege switch status, which indicates whether the privileged access capability is available.</para>
+            /// <para>The privilege switch status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>enabled: Enabled. The resource is active and can be used normally.</description></item>
+            /// <item><description>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enabled</para>
             /// </summary>
             [NameInMap("PrivilegeStatus")]
             [Validation(Required=false)]
             public string PrivilegeStatus { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// <para>The last update time, in UNIX timestamp format, measured in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>
@@ -240,7 +271,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging.</para>
+        /// <para>The number of rows per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -250,7 +281,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the current call.</para>
+        /// <para>The token returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

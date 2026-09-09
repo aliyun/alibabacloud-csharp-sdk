@@ -1,3 +1,13 @@
+2026-09-09 Version: 1.27.2
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.ProtocolEndpointDomain.SamlSloEndpoint.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.RequireAuthnRequestSigned.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.SpSigningCertificates.
+- Update API GetApplicationSsoConfig: add response parameters Body.ApplicationSsoConfig.SamlSsoConfig.SpSloResponseUrl.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.RequireAuthnRequestSigned.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.SpSigningCertificates.
+- Update API SetApplicationSsoConfig: add request parameters SamlSsoConfig.SpSloResponseUrl.
+
+
 2026-08-26 Version: 1.27.0
 - Support API CreateTrustedOrigin.
 - Support API DeleteTrustedOrigin.

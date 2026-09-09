@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba_cloud(Alibaba Cloud)</para>
+        /// <para>alibaba_cloud(Alibaba Cloud)</para>
         /// </summary>
         [NameInMap("CloudAccountVendorType")]
         [Validation(Required=false)]

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region to which the instances belong.</para>
+        /// <para>The region to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -28,12 +28,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListCloudAccountRolesRequestFilter> Filter { get; set; }
         public class ListCloudAccountRolesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The name of the filter field. Valid values:</para>
+            /// <para>The filter field name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CloudAccountRoleId: the cloud role ID.</description></item>
             /// <item><description>CloudAccountRoleName: the cloud role name.</description></item>
-            /// <item><description>CloudAccountRoleExternalId: the external identifier of the cloud role.</description></item>
-            /// <item><description>CloudAccountRoleUsageType: the usage type of the cloud role.</description></item>
+            /// <item><description>CloudAccountRoleExternalId: the cloud role external identifier.</description></item>
+            /// <item><description>CloudAccountRoleUsageType: the cloud role usage type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The values of the filter field.</para>
+            /// <para>The list of filter field values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that identifies the start position of the next page.</para>
+        /// <para>The token that specifies the start position of the next page.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>

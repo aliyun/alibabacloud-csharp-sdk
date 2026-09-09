@@ -65,7 +65,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleName { get; set; }
 
             /// <summary>
-            /// <para>The scenario label of the authorization rule.</para>
+            /// <para>The scenario label of the authorization rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>privileged_cloud_account: Privileged cloud account scenario.</description></item>
+            /// <item><description>asset: Asset scenario.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asset</para>
             /// </summary>
             [NameInMap("AuthorizationRuleScenarioLabel")]
             [Validation(Required=false)]
@@ -110,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleSubjectType { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The creation time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -164,7 +171,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last update time, in UNIX timestamp format, measured in milliseconds.</para>
+            /// <para>The last update time, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>

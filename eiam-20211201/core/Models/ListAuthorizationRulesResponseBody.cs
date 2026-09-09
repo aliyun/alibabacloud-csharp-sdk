@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The authorization resource scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: all resources under the project</description></item>
-            /// <item><description>custom: specified resources under the project</description></item>
+            /// <item><description>global: all resources under the project.</description></item>
+            /// <item><description>custom: specified resources under the project.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The creation type of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system_init: created by the system</description></item>
-            /// <item><description>user_custom: created by the user</description></item>
+            /// <item><description>system_init: created by the system.</description></item>
+            /// <item><description>user_custom: created by the user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleName { get; set; }
 
             /// <summary>
-            /// <para>The scenario label of the authorization rule.</para>
+            /// <para>The scenario label of the authorization rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>privileged_cloud_account: privileged cloud account scenario.</description></item>
+            /// <item><description>asset: asset scenario.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asset</para>
             /// </summary>
             [NameInMap("AuthorizationRuleScenarioLabel")]
             [Validation(Required=false)]
@@ -84,8 +91,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The subject scope of the authorization rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>shared: supports all subjects, including accounts and applications</description></item>
-            /// <item><description>exclusive: exclusive type</description></item>
+            /// <item><description>shared: supports all subjects, including accounts and applications.</description></item>
+            /// <item><description>exclusive: exclusive type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,8 +105,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The subject type associated with the authorization rule. This parameter takes effect only when the subject scope is exclusive. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>application: application</description></item>
-            /// <item><description>user: account</description></item>
+            /// <item><description>application: application.</description></item>
+            /// <item><description>user: account.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,8 +159,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The authorization rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: enabled</description></item>
-            /// <item><description>disabled: disabled</description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +183,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in the paging query.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

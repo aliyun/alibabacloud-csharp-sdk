@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>AuthorizationRuleId: the authorization rule ID.</description></item>
-            /// <item><description>AuthorizationRuleNameStartWith: the prefix of the authorization rule name for fuzzy match.</description></item>
+            /// <item><description>AuthorizationRuleNameStartWith: the left-match value of the authorization rule name.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the starting position of the next page.</para>
+        /// <para>The token that identifies the start position of the next page.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>
