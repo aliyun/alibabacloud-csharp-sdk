@@ -37,6 +37,174 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报论坛议程汇总数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddAgendaSumRecordFlowPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgendaSumRecordFlowPopResponse
+        /// </returns>
+        public AddAgendaSumRecordFlowPopResponse AddAgendaSumRecordFlowPopWithOptions(AddAgendaSumRecordFlowPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveNum))
+            {
+                query["ActiveNum"] = request.ActiveNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgendaId))
+            {
+                query["AgendaId"] = request.AgendaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttendancePercent))
+            {
+                query["AttendancePercent"] = request.AttendancePercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTime))
+            {
+                query["FlowTime"] = request.FlowTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionName))
+            {
+                query["SessionName"] = request.SessionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalPv))
+            {
+                query["TotalPv"] = request.TotalPv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalUv))
+            {
+                query["TotalUv"] = request.TotalUv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAgendaSumRecordFlowPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAgendaSumRecordFlowPopResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报论坛议程汇总数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddAgendaSumRecordFlowPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgendaSumRecordFlowPopResponse
+        /// </returns>
+        public async Task<AddAgendaSumRecordFlowPopResponse> AddAgendaSumRecordFlowPopWithOptionsAsync(AddAgendaSumRecordFlowPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveNum))
+            {
+                query["ActiveNum"] = request.ActiveNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgendaId))
+            {
+                query["AgendaId"] = request.AgendaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttendancePercent))
+            {
+                query["AttendancePercent"] = request.AttendancePercent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowTime))
+            {
+                query["FlowTime"] = request.FlowTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionName))
+            {
+                query["SessionName"] = request.SessionName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalPv))
+            {
+                query["TotalPv"] = request.TotalPv;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalUv))
+            {
+                query["TotalUv"] = request.TotalUv;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddAgendaSumRecordFlowPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddAgendaSumRecordFlowPopResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报论坛议程汇总数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddAgendaSumRecordFlowPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgendaSumRecordFlowPopResponse
+        /// </returns>
+        public AddAgendaSumRecordFlowPopResponse AddAgendaSumRecordFlowPop(AddAgendaSumRecordFlowPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddAgendaSumRecordFlowPopWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上报论坛议程汇总数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddAgendaSumRecordFlowPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddAgendaSumRecordFlowPopResponse
+        /// </returns>
+        public async Task<AddAgendaSumRecordFlowPopResponse> AddAgendaSumRecordFlowPopAsync(AddAgendaSumRecordFlowPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddAgendaSumRecordFlowPopWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// AddSumRecordFlowPopRequest
         /// </param>
