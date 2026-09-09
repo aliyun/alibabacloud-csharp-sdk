@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateTeamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The information about the created team.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateTeamResponseBodyData Data { get; set; }
         public class CreateTeamResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of agent members for the team.</para>
+            /// </summary>
             [NameInMap("agents")]
             [Validation(Required=false)]
             public List<CreateTeamResponseBodyDataAgents> Agents { get; set; }
             public class CreateTeamResponseBodyDataAgents : TeaModel {
                 /// <summary>
+                /// <para>The agent ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>agent-123456</para>
                 /// </summary>
@@ -34,6 +44,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
+                /// <para>The role of the agent in the team. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LEADER</description></item>
+                /// <item><description>WORKER</description></item>
+                /// </list>
+                /// <para>Each team must have exactly one LEADER.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
                 /// </summary>
@@ -44,6 +61,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The time when the team was created, in UTC in RFC 3339 format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -52,14 +71,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>The team description.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>负责智能客服业务的团队</para>
+            /// <para>A team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>team-01</para>
             /// </summary>
@@ -68,6 +91,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The team status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating</description></item>
+            /// <item><description>Active</description></item>
+            /// <item><description>Updating</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>Failed</description></item>
+            /// <item><description>Deleted</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -76,6 +109,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The team ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tm-123456</para>
             /// </summary>
@@ -84,6 +119,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
+            /// <para>The time when the team was last modified, in UTC in RFC 3339 format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -91,11 +128,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
 
+            /// <summary>
+            /// <para>The list of user members for the team.</para>
+            /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<CreateTeamResponseBodyDataUsers> Users { get; set; }
             public class CreateTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
+                /// <para>The role of the user in the team. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ADMIN</description></item>
+                /// <item><description>MEMBER</description></item>
+                /// </list>
+                /// <para>Each team must have exactly one ADMIN.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
                 /// </summary>
@@ -104,6 +151,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamRole { get; set; }
 
                 /// <summary>
+                /// <para>The user ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>usr-123456</para>
                 /// </summary>
@@ -114,6 +163,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-123456</para>
             /// </summary>
@@ -124,6 +175,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -132,6 +185,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -140,6 +195,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
         /// </summary>
@@ -147,6 +204,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

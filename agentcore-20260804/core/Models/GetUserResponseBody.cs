@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The user details.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetUserResponseBodyData Data { get; set; }
         public class GetUserResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>usr-123456</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
+            /// <para>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>password</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
+            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -46,14 +57,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>The display name of the user. The display name must be 1 to 32 characters in length.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John Smith</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
+            /// <para>The email address of the user. The email address can be up to 256 characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <para>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The username must be 1 to 32 characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user-01</para>
             /// </summary>
@@ -70,14 +87,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The remarks of the user. The remarks can be up to 1024 characters in length.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>智能体运营组成员</para>
+            /// <para>Agent operations team member</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]
             public string Note { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, DeleteFailed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-123456</para>
             /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
         /// </summary>
@@ -135,6 +168,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

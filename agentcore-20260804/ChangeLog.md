@@ -1,3 +1,7 @@
+2026-09-09 Version: 1.2.2
+- Update API ListCredentials: add request parameters name.
+
+
 2026-08-29 Version: 1.2.1
 - Update API ListMcps: add request parameters name.
 - Update API ListMcps: add request parameters searchType.

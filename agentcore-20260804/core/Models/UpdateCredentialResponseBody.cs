@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The updated credential information.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateCredentialResponseBodyData Data { get; set; }
         public class UpdateCredentialResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>The credential ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cred-123456</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
+            /// <para>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialMetadata { get; set; }
 
             /// <summary>
+            /// <para>The credential type. Currently, only apiKey is supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>apiKey</para>
             /// </summary>
@@ -54,14 +67,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
+            /// <para>The credential description. The description can be up to 256 characters in length.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>线上环境调用模型服务使用的 API Key</para>
+            /// <para>API Key used for calling model services in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>model-api-key</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The region ID where the resource resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The time of the most recent modification in UTC, formatted according to RFC 3339.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-123456</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-123456</para>
         /// </summary>
@@ -119,6 +148,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

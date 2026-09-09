@@ -9,13 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateTeamShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body for creating a team.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
+        /// <para>Not supported.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>暂不支持</para>
+        /// <para>Not supported</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]

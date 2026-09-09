@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DebugModelResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The model debugging result.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public DebugModelResponseBodyData Data { get; set; }
         public class DebugModelResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The model connection ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mc-1</para>
             /// </summary>
@@ -29,12 +36,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [Validation(Required=false)]
             public string ConnectionId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the model debugging was successful.</para>
+            /// </summary>
             [NameInMap("debugSuccess")]
             [Validation(Required=false)]
             public bool? DebugSuccess { get; set; }
 
             /// <summary>
-            /// <para>调试失败时的错误码。取值：MODEL_CONNECTION_NOT_READY（模型连接尚未发布就绪）、MODEL_CONNECTION_TEST_FAILED（平台调用网关失败）、UPSTREAM_MODEL_NOT_FOUND（模型服务商侧不存在该模型）、UPSTREAM_UNAUTHORIZED（模型服务商拒绝所配置的凭证）、UPSTREAM_RATE_LIMITED（模型服务商限流）、UPSTREAM_SERVER_ERROR（模型服务商服务端错误）、UPSTREAM_HTTP_ERROR（模型服务商返回其它非成功状态）、UPSTREAM_EMPTY_RESPONSE（模型服务商返回空响应）、UPSTREAM_INVALID_RESPONSE（模型服务商响应格式非法）、UPSTREAM_MODEL_ERROR（模型服务商拒绝本次请求）、MODEL_RESPONSE_INVALID（响应解析失败）。</para>
+            /// <para>The error code returned when debugging fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPSTREAM_MODEL_ERROR</para>
@@ -44,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>调试失败时的错误描述，为固定脱敏文案，不透传模型服务商的原始错误详情。</para>
+            /// <para>The error message returned when debugging fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The model endpoint rejected the debug request.</para>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The number of input tokens consumed by this model debugging request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? InputTokens { get; set; }
 
             /// <summary>
+            /// <para>The time consumed by this model debugging call, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatencyMs { get; set; }
 
             /// <summary>
+            /// <para>The model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>model-1</para>
             /// </summary>
@@ -78,6 +94,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelId { get; set; }
 
             /// <summary>
+            /// <para>The number of output tokens consumed by this model debugging response.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -86,6 +104,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? OutputTokens { get; set; }
 
             /// <summary>
+            /// <para>The text response returned by the model when debugging succeeds. This value is empty when debugging fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -94,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Response { get; set; }
 
             /// <summary>
-            /// <para>调试结果状态。取值：NORMAL（正常）、ABNORMAL（异常）。</para>
+            /// <para>The debug result status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -106,6 +126,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -114,6 +136,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request processing result message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -122,6 +146,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-1</para>
         /// </summary>
@@ -129,6 +155,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

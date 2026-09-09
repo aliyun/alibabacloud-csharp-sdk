@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMcpsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The MCP service name. Used together with SearchType.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-mcp-server</para>
         /// </summary>
@@ -38,6 +40,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The name matching method. Takes effect only when Name is specified. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>accurate: exact match.</description></item>
+        /// <item><description>blur: fuzzy match.</description></item>
+        /// </list>
+        /// <para>Default value: blur.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>blur</para>
         /// </summary>

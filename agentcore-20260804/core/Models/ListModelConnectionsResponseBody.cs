@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListModelConnectionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The list of model connections.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListModelConnectionsResponseBodyItems> Items { get; set; }
         public class ListModelConnectionsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The number of API keys configured for the model connection.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public int? ApiKeyCount { get; set; }
 
             /// <summary>
+            /// <para>The model connection ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mc-1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
+            /// <para>The time when the resource was created, in RFC 3339 UTC format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether access credentials have been configured for the model connection.</para>
+            /// </summary>
             [NameInMap("credentialConfigured")]
             [Validation(Required=false)]
             public bool? CredentialConfigured { get; set; }
 
             /// <summary>
+            /// <para>The description of the model connection. Maximum length: 255 characters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>description</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The absolute HTTP or HTTPS address of the upstream model service. Maximum length: 1024 characters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
             /// </summary>
@@ -73,11 +93,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// <para>The list of model summaries associated with the model connection.</para>
+            /// </summary>
             [NameInMap("models")]
             [Validation(Required=false)]
             public List<ListModelConnectionsResponseBodyItemsModels> Models { get; set; }
             public class ListModelConnectionsResponseBodyItemsModels : TeaModel {
                 /// <summary>
+                /// <para>The model ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>model-1</para>
                 /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelId { get; set; }
 
                 /// <summary>
+                /// <para>The upstream model name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwen-max</para>
                 /// </summary>
@@ -96,6 +123,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
+            /// <para>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>
@@ -104,6 +133,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The model invocation protocol. Currently only OpenAI/v1 is supported. If not configured in Settings when the model connection is created, this default value is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OpenAI/v1</para>
             /// </summary>
@@ -112,6 +143,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The model provider type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen</para>
             /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ProviderType { get; set; }
 
             /// <summary>
+            /// <para>The resource status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Active</para>
             /// </summary>
@@ -128,6 +163,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other states.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GatewayOperationException</para>
             /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string StatusReason { get; set; }
 
             /// <summary>
+            /// <para>The time when the resource was last updated, in RFC 3339 UTC format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-09T00:00:00Z</para>
             /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-1</para>
             /// </summary>
@@ -154,6 +195,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The number of records per page. Valid values: 0 to 100. If this parameter is not set or is set to 0, the default value 10 is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -162,6 +205,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The request processing result message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -170,6 +215,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. Pass the token returned in the previous query. An empty response indicates that no more pages are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</para>
         /// </summary>
@@ -178,6 +225,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-1</para>
         /// </summary>
@@ -185,11 +234,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of resources that match the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

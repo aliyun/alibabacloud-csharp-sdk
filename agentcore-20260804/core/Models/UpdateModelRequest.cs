@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateModelRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The request body for updating the model. At least one non-null parameter must be provided among description, contextSize, maxTokens, and capabilities.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateModelRequestBody Body { get; set; }
         public class UpdateModelRequestBody : TeaModel {
             /// <summary>
-            /// <para>The model description. Maximum length: 255 characters.</para>
+            /// <para>The model description. The maximum length is 255 characters after leading and trailing whitespace is removed. Pass an empty string to clear the description. If this parameter is not provided or set to null, the original value is retained. Modifying only the description does not refresh the model configuration of associated agents.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The client token for idempotence. Not currently supported.</para>
+        /// <para>The client token for idempotence. Not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

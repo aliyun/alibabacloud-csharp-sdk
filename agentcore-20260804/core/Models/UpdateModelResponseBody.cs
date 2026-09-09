@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateModelResponseBodyData Data { get; set; }
         public class UpdateModelResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The model capability configurations.</para>
+            /// <para>The model capability configuration.</para>
             /// </summary>
             [NameInMap("capabilities")]
             [Validation(Required=false)]
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</para>
+                /// <para>Indicates whether the model is able to invoke multiple tool calls in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
                 public bool? MultiToolCall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports reasoning capabilities.</para>
+                /// <para>Indicates whether the model supports reasoning.</para>
                 /// </summary>
                 [NameInMap("reasoning")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The model context window size, in tokens. Must be a positive integer.</para>
+            /// <para>The context window size of the model, in tokens. The value must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The model description. Maximum length: 255 characters.</para>
+            /// <para>The model description. The maximum length is 255 characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>description</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported per model generation.</para>
+            /// <para>The maximum number of output tokens supported per generation by the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message of the request processing result.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

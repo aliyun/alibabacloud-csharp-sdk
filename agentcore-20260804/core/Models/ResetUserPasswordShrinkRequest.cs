@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ResetUserPasswordShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body for resetting the user password.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class BatchDeleteModelsRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public BatchDeleteModelsRequestBody Body { get; set; }
         public class BatchDeleteModelsRequestBody : TeaModel {
             /// <summary>
+            /// <para>The list of model IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("modelIds")]
@@ -23,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
+        /// <para>The client token used for idempotence. Not supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>
         /// </summary>

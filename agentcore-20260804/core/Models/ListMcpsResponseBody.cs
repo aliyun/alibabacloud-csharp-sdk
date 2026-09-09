@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

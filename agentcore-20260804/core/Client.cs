@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除模型</para>
+        /// <para>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除模型</para>
+        /// <para>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除模型</para>
+        /// <para>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除模型</para>
+        /// <para>Deletes models in a specified workspace in batches. If any model is in use, the entire batch request fails.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -865,7 +865,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -923,7 +923,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -981,7 +981,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1000,7 +1000,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1971,7 +1971,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型连接</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2029,7 +2029,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型连接</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2087,7 +2087,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型连接</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2106,7 +2106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型连接</para>
+        /// <para>Creates a model connection in a specified workspace and configures the upstream model service address, invoke protocol, and access credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2291,7 +2291,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2349,7 +2349,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2407,7 +2407,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2426,7 +2426,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team in a specified workspace and sets user members and agent members at the same time. The user members must include exactly one member with the ADMIN role. Agent members can only have the LEADER or WORKER role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2445,7 +2445,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2503,7 +2503,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2561,7 +2561,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2580,7 +2580,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user in a specified workspace. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens. Reserved names such as manager, admin, or names starting with worker- cannot be used. If password is not specified, the server generates an initial password and returns it in the initialPassword field of the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2773,7 +2773,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Calls a specified model through a published model connection to verify whether the model call chain is available.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2825,7 +2825,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Calls a specified model through a published model connection to verify whether the model call chain is available.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2877,7 +2877,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Calls a specified model through a published model connection to verify whether the model call chain is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2896,7 +2896,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调试模型</para>
+        /// <para>Calls a specified model through a published model connection to verify whether the model call chain is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3349,7 +3349,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3395,7 +3395,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3441,7 +3441,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3460,7 +3460,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4007,7 +4007,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4053,7 +4053,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4099,7 +4099,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4118,7 +4118,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model from a specified workspace. Models that are currently in use cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4137,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型连接</para>
+        /// <para>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4183,7 +4183,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型连接</para>
+        /// <para>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4229,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型连接</para>
+        /// <para>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4248,7 +4248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型连接</para>
+        /// <para>Submits an asynchronous deletion task for a specified model connection. The connection cannot be deleted if it has associated models or runtime references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4551,7 +4551,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4597,7 +4597,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4643,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4662,7 +4662,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4681,7 +4681,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4727,7 +4727,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4773,7 +4773,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4792,7 +4792,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a user from a specified workspace. A user cannot be deleted while the user is still a member of any team. Remove the user from all teams before deleting the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6129,7 +6129,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6169,7 +6169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6209,7 +6209,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6228,7 +6228,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7019,7 +7019,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接</para>
+        /// <para>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7059,7 +7059,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接</para>
+        /// <para>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7099,7 +7099,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接</para>
+        /// <para>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7118,7 +7118,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接</para>
+        /// <para>Queries the detailed configuration, credential configuration status, publish status, and region of a specified model connection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7851,7 +7851,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队</para>
+        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7891,7 +7891,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队</para>
+        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7931,7 +7931,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队</para>
+        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7950,7 +7950,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队</para>
+        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7969,7 +7969,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户</para>
+        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8009,7 +8009,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户</para>
+        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8049,7 +8049,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户</para>
+        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8068,7 +8068,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户</para>
+        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9071,7 +9071,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9098,6 +9098,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
@@ -9129,7 +9133,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9156,6 +9160,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
             {
@@ -9187,7 +9195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9206,7 +9214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9841,13 +9849,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9905,13 +9913,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9969,13 +9977,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9994,13 +10002,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10019,12 +10027,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接列表</para>
+        /// <para>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// <para>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <c>Name</c> and selecting exact match or fuzzy match through <c>SearchType</c>. Also supports filtering by model provider type and invoke protocol, and supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10094,12 +10102,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接列表</para>
+        /// <para>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// <para>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <c>Name</c> and selecting exact match or fuzzy match through <c>SearchType</c>. Also supports filtering by model provider type and invoke protocol, and supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10169,12 +10177,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接列表</para>
+        /// <para>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// <para>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <c>Name</c> and selecting exact match or fuzzy match through <c>SearchType</c>. Also supports filtering by model provider type and invoke protocol, and supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10193,12 +10201,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型连接列表</para>
+        /// <para>Queries model connections in a specified workspace with paging. Supports filtering by name, provider type, and invoke protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// <para>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <c>Name</c> and selecting exact match or fuzzy match through <c>SearchType</c>. Also supports filtering by model provider type and invoke protocol, and supports paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11031,7 +11039,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11085,7 +11093,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11139,7 +11147,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11158,7 +11166,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12327,7 +12335,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12379,7 +12387,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12431,7 +12439,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12450,7 +12458,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the logon password of a specified user. Specify the user by agentCoreUserId or username. At least one of the two parameters must be specified. Only users who use workspace local password authentication can be reset. If password is not specified, the server generates a random password and returns it in the response.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13315,7 +13323,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证</para>
+        /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13373,7 +13381,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证</para>
+        /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13431,7 +13439,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证</para>
+        /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13450,7 +13458,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证</para>
+        /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14117,8 +14125,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</para>
+        /// <para>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateModelRequest
@@ -14175,8 +14190,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</para>
+        /// <para>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateModelRequest
@@ -14233,8 +14255,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</para>
+        /// <para>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelRequest
@@ -14252,8 +14281,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the description of a specified model. Other model configurations cannot be modified through this operation.</para>
+        /// <para>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelRequest
@@ -14923,7 +14959,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14981,7 +15017,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15039,7 +15075,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15058,7 +15094,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and members of a specified team. When users or agents are passed in, the corresponding member list is replaced using full overwrite semantics. Member lists that are not passed in remain unchanged. The team name cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15077,7 +15113,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户</para>
+        /// <para>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15135,7 +15171,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户</para>
+        /// <para>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15193,7 +15229,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户</para>
+        /// <para>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15212,7 +15248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户</para>
+        /// <para>Updates the display name, email address, or note of a specified user. At least one of displayName, email, and note must be specified. Unspecified properties remain unchanged. The username cannot be modified after creation.</para>
         /// </summary>
         /// 
         /// <param name="request">
