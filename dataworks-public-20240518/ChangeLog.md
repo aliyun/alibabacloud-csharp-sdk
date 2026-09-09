@@ -1,3 +1,18 @@
+2026-09-09 Version: 6.7.0
+- Support API AbolishCrossProjectPipelineRun.
+- Support API CreateCrossProjectPipelineRun.
+- Support API ExecCrossProjectPipelineRun.
+- Support API GetCrossProjectPipelineRun.
+- Support API GetUpdateTaskResult.
+- Support API ListCrossProjectDeploymentCandidates.
+- Support API ListCrossProjectDeploymentEnvironments.
+- Support API ListCrossProjectPipelineRunItems.
+- Support API ListCrossProjectPipelineRuns.
+- Support API UpdateTaskAsync.
+- Update API GetTaskInstance: add response parameters Body.TaskInstance.OperationType.
+- Update API ListTaskInstances: add response parameters Body.PagingInfo.TaskInstances.$.OperationType.
+
+
 2026-09-02 Version: 6.6.0
 - Support API GetBatchChangeTableOwnerStatus.
 - Support API SubmitBatchChangeTableOwner.

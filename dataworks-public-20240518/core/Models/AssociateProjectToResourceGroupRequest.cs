@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class AssociateProjectToResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the workspace to associate.</para>
+        /// <para>The ID of the workspace to associate with the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

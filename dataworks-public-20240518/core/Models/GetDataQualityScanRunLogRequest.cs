@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRunLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data quality monitor run record.</para>
+        /// <para>The ID of the data quality monitoring run record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The starting position of the log, in bytes, relative to the beginning of the file. Each query returns a maximum of 512 KB of content.</para>
+        /// <para>The start position of the log, which is the offset relative to the beginning of the file. Unit: bytes. Each query returns a maximum of 512 KB of content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

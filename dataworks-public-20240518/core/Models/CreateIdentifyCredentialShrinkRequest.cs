@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateIdentifyCredentialShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The user credential object.</para>
+        /// <para>The user identity credential object.</para>
         /// </summary>
         [NameInMap("IdentifyCredential")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The owner ID.</para>
+        /// <para>The ID of the owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Detailed configuration Spec code of the rule template. For more information, see <a href="~2963394~">Data quality Spec configuration description</a>.</para>
+        /// <para>The Spec code for the detailed configuration of the rule template. For more information, see <a href="https://help.aliyun.com/document_detail/2963394.html">Data quality Spec configuration</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

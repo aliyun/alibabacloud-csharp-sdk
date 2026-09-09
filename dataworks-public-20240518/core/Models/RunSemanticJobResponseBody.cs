@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<int?> ExecTypes { get; set; }
 
             /// <summary>
-            /// <para>The executor job identifier. Pass this value to the ExecutorJobId parameter of GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</para>
+            /// <para>The executor task identifier. Pass this value to the ExecutorJobId parameter of GetSemanticJobDetail, GetSemanticJobLog, or KillSemanticJob.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exec-job-demo</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string JobRunId { get; set; }
 
             /// <summary>
-            /// <para>The list of status codes returned by the executor in the submission response. The status at the submission stage does not indicate that results are complete.</para>
+            /// <para>The list of status codes returned by the executor in the submission response. The status at the submission stage does not indicate that the results are complete.</para>
             /// </summary>
             [NameInMap("Statuses")]
             [Validation(Required=false)]

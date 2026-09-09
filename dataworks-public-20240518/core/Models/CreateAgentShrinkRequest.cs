@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The display name of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyAssistant.</para>
+        /// <para>MyAssistant</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The visibility level.<br>
         /// <c>TENANT</c>: Visible within the account.<br>
-        /// <c>PROJECT</c>: Visible to specified projects.<br>
+        /// <c>PROJECT</c>: Visible to a specified project.<br>
         /// <c>USER</c>: Visible to specified users.</para>
         /// 
         /// <b>Example:</b>

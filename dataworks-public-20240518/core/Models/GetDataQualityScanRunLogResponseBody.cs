@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityScanRunLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task log information.</para>
+        /// <para>The node task logs information.</para>
         /// </summary>
         [NameInMap("LogSegment")]
         [Validation(Required=false)]
         public GetDataQualityScanRunLogResponseBodyLogSegment LogSegment { get; set; }
         public class GetDataQualityScanRunLogResponseBodyLogSegment : TeaModel {
             /// <summary>
-            /// <para>The task log.</para>
+            /// <para>The node task logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running on Serverless_resource_group_xxxxx
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Log { get; set; }
 
             /// <summary>
-            /// <para>The starting offset of the next log segment. A value of -1 indicates that all logs have been read.</para>
+            /// <para>The start offset of the next log segment. A value of -1 indicates that all logs have been read.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512000</para>

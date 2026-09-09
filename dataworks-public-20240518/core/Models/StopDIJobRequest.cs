@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated and is replaced by the Id parameter.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. Use the Id parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11668</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task.</para>
+        /// <para>The ID of the sync task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11668</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

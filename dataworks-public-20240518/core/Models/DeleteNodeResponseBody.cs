@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1E54497-5122-505E-91C6-BAC14980XXXX</para>
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true<br>
-        /// false</para>
+        /// <para>true: The request was successful.<br>false: The request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

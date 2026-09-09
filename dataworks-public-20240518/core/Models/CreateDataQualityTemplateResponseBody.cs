@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the newly created rule template.</para>
+        /// <para>The unique identifier of the created rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER-DEFINED:2001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The API request ID, which is generated as a UUID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc14115***159376359</para>

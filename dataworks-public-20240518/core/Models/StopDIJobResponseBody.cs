@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopDIJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92F778C7-8F00-53B1-AE1A-B3B17101247D</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>True: The request was successful.</description></item>
+        /// <item><description>False: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

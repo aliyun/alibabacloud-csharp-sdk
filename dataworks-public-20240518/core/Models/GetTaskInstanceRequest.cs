@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetTaskInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The unique identifier of the task instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

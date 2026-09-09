@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The display name of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyAssistant.</para>
+        /// <para>MyAssistant</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The visibility level.<br>
         /// <c>TENANT</c>: Visible within the account.<br>
-        /// <c>PROJECT</c>: Visible to specified projects.<br>
+        /// <c>PROJECT</c>: Visible to a specified project.<br>
         /// <c>USER</c>: Visible to specified users.</para>
         /// 
         /// <b>Example:</b>
@@ -165,14 +165,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public CreateAgentRequestVisibilityScope VisibilityScope { get; set; }
         public class CreateAgentRequestVisibilityScope : TeaModel {
             /// <summary>
-            /// <para>The list of project IDs that have visibility. This parameter takes effect when Visibility is set to <c>PROJECT</c>.</para>
+            /// <para>The list of project IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <c>PROJECT</c>.</para>
             /// </summary>
             [NameInMap("ProjectIds")]
             [Validation(Required=false)]
             public List<string> ProjectIds { get; set; }
 
             /// <summary>
-            /// <para>The list of user IDs that have visibility. This parameter takes effect when Visibility is set to <c>USER</c>.</para>
+            /// <para>The list of user IDs to which the Agent is visible. This parameter takes effect only when Visibility is set to <c>USER</c>.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataAssetTagShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the tag.</para>
+        /// <para>The label description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The tag key.</para>
+        /// <para>The label key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,23 +31,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The tag administrators.</para>
+        /// <para>The list of label administrators.</para>
         /// </summary>
         [NameInMap("Managers")]
         [Validation(Required=false)]
         public string ManagersShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the tag value. Valid values:</para>
+        /// <para>The label value type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Boolean</para>
-        /// </description></item>
-        /// <item><description><para>Int</para>
-        /// </description></item>
-        /// <item><description><para>String</para>
-        /// </description></item>
-        /// <item><description><para>Double</para>
-        /// </description></item>
+        /// <item><description>Boolean</description></item>
+        /// <item><description>Int</description></item>
+        /// <item><description>String</description></item>
+        /// <item><description>Double</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ValueType { get; set; }
 
         /// <summary>
-        /// <para>The tag values.</para>
+        /// <para>The list of label values.</para>
         /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]

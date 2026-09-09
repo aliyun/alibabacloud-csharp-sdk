@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateIDEEventResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. Used for troubleshooting errors.</para>
+        /// <para>The unique ID of the request, which is used for subsequent error troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>

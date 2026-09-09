@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListAgentSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID provided by the caller. The value is returned as-is.</para>
+        /// <para>The ID passed in by the requester. The value is returned as-is.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676303114031776</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The JSON-RPC version. The value must be <c>2.0</c>.</para>
+        /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Jsonrpc { get; set; }
 
         /// <summary>
-        /// <para>Business parameters.</para>
+        /// <para>The business parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public ListAgentSessionsRequestParams Params { get; set; }
         public class ListAgentSessionsRequestParams : TeaModel {
             /// <summary>
-            /// <para>Filters sessions by the <b>agent name</b>. You must specify at least one of this parameter and <c>SessionSourceList</c>.</para>
+            /// <para><b>Agent name</b> for exact filtering. At least one of this parameter and <c>SessionSourceList</c> must be specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>chat_cli_chatbi</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AgentName { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of results to return per page. Default value: 50.</para>
+            /// <para>The number of entries per page. Default value: 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page of results. Set this parameter to <c>1</c> to retrieve the first page of results.</para>
+            /// <para>The token for the next page. Set this parameter to 1 for the first page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>Filters sessions by session ID.</para>
+            /// <para>The session ID for exact matching.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sess_0f12abc34</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>Filters sessions by the <b>list of session sources</b>. You must specify at least one of this parameter and <c>AgentName</c>.</para>
+            /// <para><b>Session source list</b> for filtering. At least one of this parameter and <c>AgentName</c> must be specified.</para>
             /// </summary>
             [NameInMap("SessionSourceList")]
             [Validation(Required=false)]
             public List<string> SessionSourceList { get; set; }
 
             /// <summary>
-            /// <para>Filters sessions by session title using a fuzzy match.</para>
+            /// <para>The session title for fuzzy match filtering.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sales in the last 30 days</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SessionTitle { get; set; }
 
             /// <summary>
-            /// <para>Filters sessions by a list of session tag codes.</para>
+            /// <para>The list of session tag codes for filtering.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]

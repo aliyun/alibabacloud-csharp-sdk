@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ApplyResourceAccessPermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The list of resource permission application contents.</para>
+        /// <para>The list of resource permission request entries.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyContents")]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<ApplyResourceAccessPermissionRequestApplyContents> ApplyContents { get; set; }
         public class ApplyResourceAccessPermissionRequestApplyContents : TeaModel {
             /// <summary>
-            /// <para>The list of permissions to apply for.</para>
-            /// <para><b>Note</b>: Different resource levels support different permission types. They are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
-            /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+            /// <para>The list of requested access types.</para>
+            /// <para><b>Note</b>: Different resource levels support different access types. All access types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
+            /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("AccessTypes")]
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<string> AccessTypes { get; set; }
 
             /// <summary>
-            /// <para>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying the authorization method: ranger or starrocksManager.</para>
-            /// <para><b>Note</b>: Different resources support different authorization methods, which are uniformly constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</para>
-            /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+            /// <para>The authorization method. Currently, only SEVERLESS_STARROCKS supports specifying an authorization method: ranger or starrocksManager.</para>
+            /// <para><b>Note</b>: Different resources support different authorization methods. All authorization methods are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authMethods.</para>
+            /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>ranger</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string AuthMethod { get; set; }
 
             /// <summary>
-            /// <para>The permission expiration time, in milliseconds timestamp.</para>
+            /// <para>The permission expiration time, in millisecond-level timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1785835708000</para>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The grantee description.</para>
-            /// <para><b>Note</b>: The supported grantee types are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
-            /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+            /// <para><b>Note</b>: The supported principal types are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
+            /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Grantee")]
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public ApplyResourceAccessPermissionRequestApplyContentsGrantee Grantee { get; set; }
             public class ApplyResourceAccessPermissionRequestApplyContentsGrantee : TeaModel {
                 /// <summary>
-                /// <para>The grantee ID. The ID has different semantics depending on the grantee type:</para>
+                /// <para>The principal ID. The ID has different meanings depending on the principal type:</para>
                 /// <list type="bullet">
-                /// <item><description><para>RamUser: Dataworks UserId</para>
+                /// <item><description><para>RamUser: DataWorks UserId</para>
                 /// </description></item>
-                /// <item><description><para>RamRole: Dataworks UserId prefixed with &quot;ROLE_&quot;</para>
+                /// <item><description><para>RamRole: DataWorks UserId prefixed with &quot;ROLE_&quot;</para>
                 /// </description></item>
                 /// <item><description><para>DlfRole: DlfNext role name</para>
                 /// </description></item>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PrincipalId { get; set; }
 
                 /// <summary>
-                /// <para>The grantee type. Valid values:</para>
+                /// <para>The principal type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>RamRole</description></item>
                 /// <item><description>RamUser</description></item>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public class ApplyResourceAccessPermissionRequestApplyContentsResource : TeaModel {
                 /// <summary>
                 /// <para>The resource type.</para>
-                /// <para><b>Note</b>: The resource types supported for application are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
-                /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+                /// <para><b>Note</b>: The resource types that can be requested are constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+                /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -117,8 +117,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DefSchema { get; set; }
 
                 /// <summary>
-                /// <para>The resource parsing version, which is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</para>
-                /// <para><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+                /// <para>The resource parsing version, constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</para>
+                /// <para><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1.0.0</para>
@@ -129,8 +129,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The resource metadata declaration.</para>
-                /// <para><b>Note</b>: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include full-path metadata declarations from level 0 to validLeaf.</para>
-                /// <para>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for international site</a></para>
+                /// <para><b>Note</b>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</para>
+                /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation (Chinese)</a></para>
                 /// </summary>
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The idempotency parameter. Used to prevent duplicate operations caused by multiple calls.</para>
+        /// <para>The idempotency token. Used to prevent duplicate operations caused by multiple calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
@@ -151,11 +151,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The reason for the application.</para>
+        /// <para>The reason for the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>业务发展需要</para>
+        /// <para>Business development needs</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

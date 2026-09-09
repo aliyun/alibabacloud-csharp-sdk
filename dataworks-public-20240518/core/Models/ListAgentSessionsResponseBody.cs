@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListAgentSessionsResponseBodyJsonRpcResponse JsonRpcResponse { get; set; }
         public class ListAgentSessionsResponseBodyJsonRpcResponse : TeaModel {
             /// <summary>
-            /// <para>The ID provided in the request. This value is returned unmodified.</para>
+            /// <para>The ID passed in by the requester. The value is returned as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29d9a29c-a284-48c1-9eaa-4a42c7c616d5</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The JSON-RPC version. The value is always <c>2.0</c>.</para>
+            /// <para>The JSON-RPC version. Fixed value: 2.0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0</para>
@@ -37,28 +37,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Jsonrpc { get; set; }
 
             /// <summary>
-            /// <para>The paginated results of the session query.</para>
+            /// <para>The paginated result set of the session query.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public ListAgentSessionsResponseBodyJsonRpcResponseResult Result { get; set; }
             public class ListAgentSessionsResponseBodyJsonRpcResponseResult : TeaModel {
                 /// <summary>
-                /// <para>A list of sessions.</para>
+                /// <para>The session list.</para>
                 /// </summary>
                 [NameInMap("AgentSessions")]
                 [Validation(Required=false)]
                 public List<ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessions> AgentSessions { get; set; }
                 public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessions : TeaModel {
                     /// <summary>
-                    /// <para>DataWorks-specific session metadata. This field is not part of the standard ACP protocol.</para>
+                    /// <para>The extended session information from DataWorks, which is not part of the ACP standard protocol.</para>
                     /// </summary>
                     [NameInMap("Meta")]
                     [Validation(Required=false)]
                     public ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta Meta { get; set; }
                     public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMeta : TeaModel {
                         /// <summary>
-                        /// <para>The source of the session.</para>
+                        /// <para>The session source.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>openapi_sdk</para>
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string SessionSource { get; set; }
 
                         /// <summary>
-                        /// <para>The session status.</para>
+                        /// <para>The session connection status.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <list type="bullet">
-                        /// <item><description>NORMAL: 无状态的session</description></item>
-                        /// <item><description>INIT: 初始化状态</description></item>
-                        /// <item><description>RUNNING: 运行中</description></item>
-                        /// <item><description>RELEASED: 释放状态</description></item>
+                        /// <item><description>NORMAL: Stateless session</description></item>
+                        /// <item><description>INIT: Initialization state</description></item>
+                        /// <item><description>RUNNING: Running</description></item>
+                        /// <item><description>RELEASED: Released state</description></item>
                         /// </list>
                         /// </summary>
                         [NameInMap("SessionStatus")]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string SessionStatus { get; set; }
 
                         /// <summary>
-                        /// <para>A list of session tags.</para>
+                        /// <para>The list of session tags.</para>
                         /// </summary>
                         [NameInMap("SessionTagList")]
                         [Validation(Required=false)]
                         public List<ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList> SessionTagList { get; set; }
                         public class ListAgentSessionsResponseBodyJsonRpcResponseResultAgentSessionsMetaSessionTagList : TeaModel {
                             /// <summary>
-                            /// <para>A tag for the session, which can be used for filtering. For example, if your application has its own user accounts but calls the API through a single service account, you can pass your application\&quot;s user ID as a tag. This allows you to filter sessions by your internal users.</para>
+                            /// <para>The session tag. You can filter sessions based on session tags. For example, if you use a fixed RAM user to call OpenAPI but the calling system has its own account system, you can filter the session list based on an account ID. In this case, set this parameter to the account ID of the calling system.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>user_123456</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The time the session was created.</para>
+                    /// <para>The time when the session was created.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string SessionDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The unique session ID.</para>
+                    /// <para>The unique ID of the session.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sess_0f12abc34</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string SessionTitle { get; set; }
 
                     /// <summary>
-                    /// <para>The time the session was last modified.</para>
+                    /// <para>The time when the session was last modified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456789</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The number of entries returned on the current page.</para>
+                /// <para>The actual number of entries per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public int? MaxResults { get; set; }
 
                 /// <summary>
-                /// <para>The token to retrieve the next page of results. To retrieve the first page, use the value <c>1</c>.</para>
+                /// <para>The token for the next page. Set this parameter to 1 for the first page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string NextToken { get; set; }
 
                 /// <summary>
-                /// <para>The total number of sessions that match the query.</para>
+                /// <para>The total number of matched sessions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>50C5A9F7-B5BD-58B2-9EB8-ADFFA9E6A56F</para>
