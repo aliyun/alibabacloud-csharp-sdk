@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListEdgeWorkersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The workload list.</para>
+        /// <para>The list of loads.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
-            /// <para>The workload ID.</para>
+            /// <para>The load ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>as-d135ca4425c24b99b79cd0b6c552cac9</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the query list. The value starts from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paginated query. Maximum value: 100. Default value: 100.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of workloads.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

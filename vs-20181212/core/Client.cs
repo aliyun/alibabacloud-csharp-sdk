@@ -19,13 +19,6 @@ namespace AlibabaCloud.SDK.Vs20181212
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "vs.cn-shenzhen.aliyuncs.com"},
-                {"cn-qingdao", "vs.cn-qingdao.aliyuncs.com"},
-                {"cn-beijing", "vs.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "vs.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -7295,7 +7288,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the cluster to operate on.</description></item>
         /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</description></item>
-        /// <item><description>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</description></item>
+        /// <item><description>After the unbind operation is complete, the response returns lists of successful and failed workload instances along with related information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7357,7 +7350,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the cluster to operate on.</description></item>
         /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</description></item>
-        /// <item><description>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</description></item>
+        /// <item><description>After the unbind operation is complete, the response returns lists of successful and failed workload instances along with related information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7419,7 +7412,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the cluster to operate on.</description></item>
         /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</description></item>
-        /// <item><description>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</description></item>
+        /// <item><description>After the unbind operation is complete, the response returns lists of successful and failed workload instances along with related information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7447,7 +7440,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the cluster to operate on.</description></item>
         /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of workload IDs to unbind from the cluster.</description></item>
-        /// <item><description>After the unbind operation succeeds, the response returns lists of successful and failed workload instances along with related information.</description></item>
+        /// <item><description>After the unbind operation is complete, the response returns lists of successful and failed workload instances along with related information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8541,8 +8534,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to be deleted.</description></item>
+        /// <item><description>Ensure that all workloads in the cluster have been cleared. Otherwise, the delete operation cannot be performed.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8592,8 +8585,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to be deleted.</description></item>
+        /// <item><description>Ensure that all workloads in the cluster have been cleared. Otherwise, the delete operation cannot be performed.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8643,8 +8636,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to be deleted.</description></item>
+        /// <item><description>Ensure that all workloads in the cluster have been cleared. Otherwise, the delete operation cannot be performed.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8670,8 +8663,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Ensure that all application services in the cluster have been removed. Otherwise, the delete operation cannot be performed.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to be deleted.</description></item>
+        /// <item><description>Ensure that all workloads in the cluster have been cleared. Otherwise, the delete operation cannot be performed.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to be deleted.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10494,13 +10487,133 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the waiting queue information of Comfy tasks. The maximum length of a single Hive waiting queue is 100 by default.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTaskWaitingQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTaskWaitingQueueResponse
+        /// </returns>
+        public DescribeComfyTaskWaitingQueueResponse DescribeComfyTaskWaitingQueueWithOptions(DescribeComfyTaskWaitingQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyTaskWaitingQueue",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyTaskWaitingQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the waiting queue information of Comfy tasks. The maximum length of a single Hive waiting queue is 100 by default.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTaskWaitingQueueRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTaskWaitingQueueResponse
+        /// </returns>
+        public async Task<DescribeComfyTaskWaitingQueueResponse> DescribeComfyTaskWaitingQueueWithOptionsAsync(DescribeComfyTaskWaitingQueueRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyTaskWaitingQueue",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyTaskWaitingQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the waiting queue information of Comfy tasks. The maximum length of a single Hive waiting queue is 100 by default.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTaskWaitingQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTaskWaitingQueueResponse
+        /// </returns>
+        public DescribeComfyTaskWaitingQueueResponse DescribeComfyTaskWaitingQueue(DescribeComfyTaskWaitingQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyTaskWaitingQueueWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the waiting queue information of Comfy tasks. The maximum length of a single Hive waiting queue is 100 by default.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTaskWaitingQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTaskWaitingQueueResponse
+        /// </returns>
+        public async Task<DescribeComfyTaskWaitingQueueResponse> DescribeComfyTaskWaitingQueueAsync(DescribeComfyTaskWaitingQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyTaskWaitingQueueWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of Comfy tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
+        /// <para>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10518,6 +10631,10 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -10565,7 +10682,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
+        /// <para>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10583,6 +10700,10 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -10630,7 +10751,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
+        /// <para>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10655,7 +10776,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
+        /// <para>Screenshot queries do not support pagination. Only iteration-based queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20642,17 +20763,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workload information with pagination.</para>
+        /// <para>Queries load information with paged query and paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</description></item>
+        /// <item><description>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</description></item>
         /// <item><description>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</description></item>
-        /// <item><description>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</description></item>
-        /// <item><description>Use the StartTime and EndTime parameters to specify the time range for queries.</description></item>
+        /// <item><description>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</description></item>
+        /// <item><description>To query by time range, specify the StartTime and EndTime parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20745,17 +20866,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workload information with pagination.</para>
+        /// <para>Queries load information with paged query and paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</description></item>
+        /// <item><description>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</description></item>
         /// <item><description>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</description></item>
-        /// <item><description>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</description></item>
-        /// <item><description>Use the StartTime and EndTime parameters to specify the time range for queries.</description></item>
+        /// <item><description>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</description></item>
+        /// <item><description>To query by time range, specify the StartTime and EndTime parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20848,17 +20969,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workload information with pagination.</para>
+        /// <para>Queries load information with paged query and paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</description></item>
+        /// <item><description>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</description></item>
         /// <item><description>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</description></item>
-        /// <item><description>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</description></item>
-        /// <item><description>Use the StartTime and EndTime parameters to specify the time range for queries.</description></item>
+        /// <item><description>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</description></item>
+        /// <item><description>To query by time range, specify the StartTime and EndTime parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20877,17 +20998,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workload information with pagination.</para>
+        /// <para>Queries load information with paged query and paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation queries workload information and supports filtering and pagination by using multiple parameters.</description></item>
+        /// <item><description>This API operation queries load information. You can filter results by using various parameters and perform paged query operations.</description></item>
         /// <item><description>Optional parameters include Spec (specification), Statuses (status list), InstanceIds (instance ID list), PlanIds (plan ID list), and HiveIds (cluster ID list).</description></item>
-        /// <item><description>For pagination, use the PageNumber and PageSize parameters to control the amount of returned data. By default, 10 records are returned per page and a maximum of 100 records are supported per page.</description></item>
-        /// <item><description>Use the StartTime and EndTime parameters to specify the time range for queries.</description></item>
+        /// <item><description>For paged query operations, use the PageNumber and PageSize parameters to control the data volume of returned results. The default page size is 10 records, and the maximum is 100 records. Paging is supported.</description></item>
+        /// <item><description>To query by time range, specify the StartTime and EndTime parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21130,7 +21251,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cluster information by using paging and supports filtering by conditions.</para>
+        /// <para>Queries all cluster information by paging and supports filtering by conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21139,8 +21260,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description>This API operation queries information about all clusters created by the user.</description></item>
         /// <item><description>You can use the <c>HiveId</c> and <c>Name</c> parameters to filter query results.</description></item>
-        /// <item><description>The pagination parameters <c>PageNumber</c> and <c>PageSize</c> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
-        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information, but they are optional.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
+        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information. These parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21203,7 +21324,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cluster information by using paging and supports filtering by conditions.</para>
+        /// <para>Queries all cluster information by paging and supports filtering by conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21212,8 +21333,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description>This API operation queries information about all clusters created by the user.</description></item>
         /// <item><description>You can use the <c>HiveId</c> and <c>Name</c> parameters to filter query results.</description></item>
-        /// <item><description>The pagination parameters <c>PageNumber</c> and <c>PageSize</c> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
-        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information, but they are optional.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
+        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information. These parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21276,7 +21397,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cluster information by using paging and supports filtering by conditions.</para>
+        /// <para>Queries all cluster information by paging and supports filtering by conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21285,8 +21406,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description>This API operation queries information about all clusters created by the user.</description></item>
         /// <item><description>You can use the <c>HiveId</c> and <c>Name</c> parameters to filter query results.</description></item>
-        /// <item><description>The pagination parameters <c>PageNumber</c> and <c>PageSize</c> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
-        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information, but they are optional.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
+        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information. These parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21305,7 +21426,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cluster information by using paging and supports filtering by conditions.</para>
+        /// <para>Queries all cluster information by paging and supports filtering by conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21314,8 +21435,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <list type="bullet">
         /// <item><description>This API operation queries information about all clusters created by the user.</description></item>
         /// <item><description>You can use the <c>HiveId</c> and <c>Name</c> parameters to filter query results.</description></item>
-        /// <item><description>The pagination parameters <c>PageNumber</c> and <c>PageSize</c> control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
-        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information, but they are optional.</description></item>
+        /// <item><description>The <c>PageNumber</c> and <c>PageSize</c> pagination parameters control the number of results and page number. By default, 10 records are displayed per page, with a maximum of 100.</description></item>
+        /// <item><description>The <c>StartTime</c> and <c>EndTime</c> parameters specify a time range for querying cluster information. These parameters are optional.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24131,11 +24252,11 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
-        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
+        /// <item><description>This API operation modifies the basic attributes of an existing cluster, including the name and description.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The Name and Description parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24191,11 +24312,11 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
-        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
+        /// <item><description>This API operation modifies the basic attributes of an existing cluster, including the name and description.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The Name and Description parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24251,11 +24372,11 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
-        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
+        /// <item><description>This API operation modifies the basic attributes of an existing cluster, including the name and description.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The Name and Description parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24279,11 +24400,11 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
-        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
-        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
+        /// <item><description>This API operation modifies the basic attributes of an existing cluster, including the name and description.</description></item>
+        /// <item><description>HiveId is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The Name and Description parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25339,12 +25460,12 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b>: The target cluster ID. Required.</description></item>
-        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. Required.</description></item>
+        /// <item><description><b>HiveId</b>: The ID of the target cluster. This parameter is required.</description></item>
+        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. This parameter is required.</description></item>
         /// <item><description>This operation moves the specified workloads from the current cluster to the target cluster.</description></item>
-        /// <item><description>Ensure that the target cluster exists to accept the new workloads.</description></item>
+        /// <item><description>Make sure the target cluster exists to accept the new workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25402,12 +25523,12 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b>: The target cluster ID. Required.</description></item>
-        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. Required.</description></item>
+        /// <item><description><b>HiveId</b>: The ID of the target cluster. This parameter is required.</description></item>
+        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. This parameter is required.</description></item>
         /// <item><description>This operation moves the specified workloads from the current cluster to the target cluster.</description></item>
-        /// <item><description>Ensure that the target cluster exists to accept the new workloads.</description></item>
+        /// <item><description>Make sure the target cluster exists to accept the new workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25465,12 +25586,12 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b>: The target cluster ID. Required.</description></item>
-        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. Required.</description></item>
+        /// <item><description><b>HiveId</b>: The ID of the target cluster. This parameter is required.</description></item>
+        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. This parameter is required.</description></item>
         /// <item><description>This operation moves the specified workloads from the current cluster to the target cluster.</description></item>
-        /// <item><description>Ensure that the target cluster exists to accept the new workloads.</description></item>
+        /// <item><description>Make sure the target cluster exists to accept the new workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25494,12 +25615,12 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>HiveId</b>: The target cluster ID. Required.</description></item>
-        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. Required.</description></item>
+        /// <item><description><b>HiveId</b>: The ID of the target cluster. This parameter is required.</description></item>
+        /// <item><description><b>InstanceIds</b>: The list of workload IDs to move. This parameter is required.</description></item>
         /// <item><description>This operation moves the specified workloads from the current cluster to the target cluster.</description></item>
-        /// <item><description>Ensure that the target cluster exists to accept the new workloads.</description></item>
+        /// <item><description>Make sure the target cluster exists to accept the new workloads.</description></item>
         /// </list>
         /// </description>
         /// 

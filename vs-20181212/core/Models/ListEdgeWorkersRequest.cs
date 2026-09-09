@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID list.</para>
+        /// <para>The list of cluster IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> HiveIds { get; set; }
 
         /// <summary>
-        /// <para>The workload ID list.</para>
+        /// <para>The list of load IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ew-xxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query list. Minimum value: 1. Default value: 1.</para>
+        /// <para>The page number of the query list. The value starts from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for a paginated query. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plan ID list.</para>
+        /// <para>The list of plan IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The time range filter parameter. The value is in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-05-25T06:35:26+08:00</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status list.</para>
+        /// <para>The list of statuses.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

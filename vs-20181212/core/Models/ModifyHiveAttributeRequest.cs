@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyHiveAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The new description of the cluster.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gb-test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string HiveId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the cluster.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yy-test2</para>

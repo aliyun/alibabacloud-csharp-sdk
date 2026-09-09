@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <summary>
         /// <para>The page size.</para>
         /// <remarks>
-        /// <para>Only applicable to recording queries.</para>
+        /// <para>Only available for recording queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The number of tasks.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

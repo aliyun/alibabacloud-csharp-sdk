@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class MoveHiveEdgeWorkersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of failed operations.</para>
+        /// <para>The number of workloads that failed to be moved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of successful operations.</para>
+        /// <para>The number of workloads that were successfully moved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

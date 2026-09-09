@@ -8,13 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class DeleteHiveRequest : TeaModel {
+    public class DescribeComfyTaskWaitingQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The waiting queue information of a specified Hive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hive-xxxx</para>
+        /// <para>hive-26cd567b35c04a0a90f0xxxxx</para>
         /// </summary>
         [NameInMap("HiveId")]
         [Validation(Required=false)]

@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The HiveId used as a filter condition to query tasks executed under the specified HiveId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>hive-26cd567b35c04a0a90f0xxxxx</para>
+        /// </summary>
+        [NameInMap("HiveId")]
+        [Validation(Required=false)]
+        public string HiveId { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to display per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
