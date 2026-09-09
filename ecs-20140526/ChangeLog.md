@@ -1,3 +1,8 @@
+2026-09-09 Version: 7.11.3
+- Update API DescribePrice: add request parameters SystemDisk.StorageClusterId.
+- Update API DescribePrice: add request parameters DataDisk.$.StorageClusterId.
+
+
 2026-09-08 Version: 7.11.2
 - Update API DescribeDedicatedHosts: add request parameters NeedHostDetail.
 

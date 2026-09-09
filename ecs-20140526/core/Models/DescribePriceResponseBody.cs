@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public float? ReservedInstanceHourPrice { get; set; }
 
                 /// <summary>
-                /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                /// <para>The final price, which is the original price minus the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3712.8</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
-                    /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                    /// <para>The final price, which is the original price minus the discount.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
