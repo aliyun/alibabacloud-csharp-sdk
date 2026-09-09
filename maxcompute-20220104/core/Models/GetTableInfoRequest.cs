@@ -22,10 +22,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The type of the table or view that you want to view. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internal</b>: internal table</description></item>
-        /// <item><description><b>external</b>: external table</description></item>
-        /// <item><description><b>view</b>: view</description></item>
-        /// <item><description><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></description></item>
+        /// <item><description><para><b>internal</b>: internal table</para>
+        /// </description></item>
+        /// <item><description><para><b>external</b>: external table</para>
+        /// </description></item>
+        /// <item><description><para><b>view</b>: view</para>
+        /// </description></item>
+        /// <item><description><para><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<UpdateComputeQuotaScheduleRequestBody> Body { get; set; }
         public class UpdateComputeQuotaScheduleRequestBody : TeaModel {
             /// <summary>
-            /// <para>The value of effective condition.</para>
+            /// <para>The condition for the plan to take effect.</para>
             /// </summary>
             [NameInMap("condition")]
             [Validation(Required=false)]
             public UpdateComputeQuotaScheduleRequestBodyCondition Condition { get; set; }
             public class UpdateComputeQuotaScheduleRequestBodyCondition : TeaModel {
                 /// <summary>
-                /// <para>The start time when the quota plan takes effect.</para>
+                /// <para>The time when the plan takes effect.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -48,10 +48,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Plan { get; set; }
 
             /// <summary>
-            /// <para>The type of the quota plan.</para>
+            /// <para>The type.</para>
             /// <remarks>
-            /// <para>Notice: Currently, only daily is supported.</notice></para>
+            /// <para>Notice: </para>
             /// </remarks>
+            /// <para>Only daily is supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -63,6 +64,15 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
+        /// <summary>
+        /// <para>The time zone.</para>
+        /// <remarks>
+        /// <para>The default value is UTC+8.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>UTC+8</para>
+        /// </summary>
         [NameInMap("scheduleTimezone")]
         [Validation(Required=false)]
         public string ScheduleTimezone { get; set; }

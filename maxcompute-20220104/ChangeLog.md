@@ -1,3 +1,11 @@
+2026-09-09 Version: 5.1.1
+- Update API GetProject: add response parameters Body.data.properties.enableDataMasking.
+- Update API ListJobInfos: add response parameters Body.data.jobInfoList.$.roleSessionName.
+- Update API ListProjects: add request parameters sortBy.
+- Update API ListProjects: add request parameters sortOrder.
+- Update API UpdateProjectBasicMeta: add request parameters body.properties.enableDataMasking.
+
+
 2026-05-29 Version: 5.1.0
 - Support API DeleteRole.
 

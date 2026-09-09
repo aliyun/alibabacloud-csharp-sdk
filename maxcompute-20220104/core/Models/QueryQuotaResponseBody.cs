@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>subscription: the subscription quota.</description></item>
-                /// <item><description>payasyougo: the pay-as-you-go quota.</description></item>
+                /// <item><description><para>subscription: the subscription quota.</para>
+                /// </description></item>
+                /// <item><description><para>payasyougo: the pay-as-you-go quota.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -315,8 +317,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     /// <summary>
                     /// <para>The billing method. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>subscription: the subscription quota.</description></item>
-                    /// <item><description>payasyougo: the pay-as-you-go quota.</description></item>
+                    /// <item><description><para>subscription: the subscription quota.</para>
+                    /// </description></item>
+                    /// <item><description><para>payasyougo: the pay-as-you-go quota.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

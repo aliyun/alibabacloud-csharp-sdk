@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetStorageSummaryComparedRequest : TeaModel {
         /// <summary>
+        /// <para>The start date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string BeginDate { get; set; }
 
         /// <summary>
+        /// <para>The end date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <para>The list of projects.</para>
+        /// </summary>
         [NameInMap("projects")]
         [Validation(Required=false)]
         public List<string> Projects { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID. You can log on to the MaxCompute console and choose <b>Tenant Property</b> in the navigation pane on the left to view the tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>483212237127906</para>
         /// </summary>

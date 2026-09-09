@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The end time of the time range for cost analysis.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// <para>The start time of the time range for cost analysis.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

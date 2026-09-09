@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class RetryMmsTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a06dd4516687375802853481ec9fd</para>
         /// </summary>

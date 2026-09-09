@@ -9,81 +9,85 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class SumDailyBillsByItemResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SumDailyBillsByItemResponseBodyData Data { get; set; }
         public class SumDailyBillsByItemResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>An array of item-level cost summaries.</para>
+            /// </summary>
             [NameInMap("itemSummaryBills")]
             [Validation(Required=false)]
             public List<SumDailyBillsByItemResponseBodyDataItemSummaryBills> ItemSummaryBills { get; set; }
             public class SumDailyBillsByItemResponseBodyDataItemSummaryBills : TeaModel {
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>RMB</para>
+                /// <para>The currency of the cost.</para>
                 /// </summary>
                 [NameInMap("currency")]
                 [Validation(Required=false)]
                 public string Currency { get; set; }
 
+                /// <summary>
+                /// <para>An array of daily cost summaries for the item.</para>
+                /// </summary>
                 [NameInMap("dailySumBills")]
                 [Validation(Required=false)]
                 public List<SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBills> DailySumBills { get; set; }
                 public class SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBills : TeaModel {
                     /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>31</para>
+                    /// <para>The cost for the day.</para>
                     /// </summary>
                     [NameInMap("cost")]
                     [Validation(Required=false)]
                     public string Cost { get; set; }
 
                     /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>RMB</para>
+                    /// <para>The currency of the cost.</para>
                     /// </summary>
                     [NameInMap("currency")]
                     [Validation(Required=false)]
                     public string Currency { get; set; }
 
                     /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>20260409</para>
+                    /// <para>The date. Format: YYYYMMDD.</para>
                     /// </summary>
                     [NameInMap("dateTime")]
                     [Validation(Required=false)]
                     public string DateTime { get; set; }
 
+                    /// <summary>
+                    /// <para>An array of detailed bills for the item on the specified day.</para>
+                    /// </summary>
                     [NameInMap("itemBills")]
                     [Validation(Required=false)]
                     public List<SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBillsItemBills> ItemBills { get; set; }
                     public class SumDailyBillsByItemResponseBodyDataItemSummaryBillsDailySumBillsItemBills : TeaModel {
                         /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>433</para>
+                        /// <para>The cost of the item.</para>
                         /// </summary>
                         [NameInMap("cost")]
                         [Validation(Required=false)]
                         public string Cost { get; set; }
 
                         /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>RMB</para>
+                        /// <para>The currency of the cost.</para>
                         /// </summary>
                         [NameInMap("currency")]
                         [Validation(Required=false)]
                         public string Currency { get; set; }
 
                         /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>empty</para>
+                        /// <para>The name of the billable item.</para>
                         /// </summary>
                         [NameInMap("itemName")]
                         [Validation(Required=false)]
                         public string ItemName { get; set; }
 
                         /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>60</para>
+                        /// <para>The item\&quot;s percentage of the daily total cost.</para>
                         /// </summary>
                         [NameInMap("percentage")]
                         [Validation(Required=false)]
@@ -94,32 +98,28 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>DRStorage</para>
+                /// <para>The name of the billable item.</para>
                 /// </summary>
                 [NameInMap("itemName")]
                 [Validation(Required=false)]
                 public string ItemName { get; set; }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>50</para>
+                /// <para>The item\&quot;s percentage of the total cost.</para>
                 /// </summary>
                 [NameInMap("percentage")]
                 [Validation(Required=false)]
                 public double? Percentage { get; set; }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>OdpsStandard</para>
+                /// <para>The specification code of the item.</para>
                 /// </summary>
                 [NameInMap("specCode")]
                 [Validation(Required=false)]
                 public string SpecCode { get; set; }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>10000</para>
+                /// <para>The total cost of the item.</para>
                 /// </summary>
                 [NameInMap("totalCost")]
                 [Validation(Required=false)]
@@ -128,24 +128,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>The current page number.</para>
             /// </summary>
             [NameInMap("pageNumber")]
             [Validation(Required=false)]
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>The number of entries per page.</para>
             /// </summary>
             [NameInMap("pageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>60</para>
+            /// <para>The total number of entries returned.</para>
             /// </summary>
             [NameInMap("totalCount")]
             [Validation(Required=false)]
@@ -154,16 +151,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>The HTTP status code.</para>
         /// </summary>
         [NameInMap("httpCode")]
         [Validation(Required=false)]
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>0bc3b4ab17217876841756121e1349</para>
+        /// <para>The unique identifier for the request.</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

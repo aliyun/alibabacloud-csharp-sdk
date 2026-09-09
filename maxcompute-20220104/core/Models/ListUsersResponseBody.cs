@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The ID of the Alibaba Cloud account.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>167835629082</para>
+                /// <para>16783562****</para>
                 /// </summary>
                 [NameInMap("accountId")]
                 [Validation(Required=false)]

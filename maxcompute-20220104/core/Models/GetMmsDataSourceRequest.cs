@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetMmsDataSourceRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the description for the configuration items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en_US</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to obtain the specific configuration items of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

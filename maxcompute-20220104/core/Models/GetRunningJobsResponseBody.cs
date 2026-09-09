@@ -149,8 +149,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If the value of success was false, an error code was returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of success was true, a null value was returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

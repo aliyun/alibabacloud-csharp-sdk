@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsDataSourceRequest : TeaModel {
+        /// <summary>
+        /// <para>The configurations of the data source.</para>
+        /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public Dictionary<string, object> Config { get; set; }
 
         /// <summary>
+        /// <para>The name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the MaxCompute network connectivity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6pc2vordian33gobzfr:cn-shanghai</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Networklink { get; set; }
 
         /// <summary>
+        /// <para>The type of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BIGQUERY</para>
         /// </summary>

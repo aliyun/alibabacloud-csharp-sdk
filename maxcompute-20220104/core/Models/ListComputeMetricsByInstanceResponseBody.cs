@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListComputeMetricsByInstanceResponseBodyData Data { get; set; }
         public class ListComputeMetricsByInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of pay-as-you-go job compute usage.</para>
+            /// <para>Usage metrics for pay-as-you-go jobs.</para>
             /// </summary>
             [NameInMap("instanceComputeMetrics")]
             [Validation(Required=false)]
             public List<ListComputeMetricsByInstanceResponseBodyDataInstanceComputeMetrics> InstanceComputeMetrics { get; set; }
             public class ListComputeMetricsByInstanceResponseBodyDataInstanceComputeMetrics : TeaModel {
                 /// <summary>
-                /// <para>The end time of the job execution.</para>
+                /// <para>The job completion time, as a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710432000000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The job(instance) ID.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20240730****ddlr</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Signature { get; set; }
 
                 /// <summary>
-                /// <para>Specifications Type, specifies the resource package that you select when you purchase the MaxCompute service.</para>
+                /// <para>The specification type.</para>
                 /// <list type="bullet">
-                /// <item><description><para>OdpsStandard: the pay-as-you-go resource package.</para>
+                /// <item><description><para><c>OdpsStandard</c>: Standard pay-as-you-go specification.</para>
                 /// </description></item>
-                /// <item><description><para>OdpsSpot: the pay-as-you-go spot resource package.</para>
+                /// <item><description><para><c>OdpsSpot</c>: Spot pay-as-you-go specification.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SpecCode { get; set; }
 
                 /// <summary>
-                /// <para>The submission time of the job.</para>
+                /// <para>The job submission time, as a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1610432000000</para>
@@ -100,19 +100,19 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? SubmitTime { get; set; }
 
                 /// <summary>
-                /// <para>Metering types.</para>
+                /// <para>The metering type.</para>
                 /// <list type="bullet">
-                /// <item><description><para>ComputationSql: the metering data of SQL jobs that involve internal tables.</para>
+                /// <item><description><para><c>ComputationSql</c>: Metrics for SQL jobs on internal tables.</para>
                 /// </description></item>
-                /// <item><description><para>ComputationSqlOTS: the metering data of SQL jobs that involve Tablestore external tables.</para>
+                /// <item><description><para><c>ComputationSqlOTS</c>: Metrics for SQL jobs on Tablestore external tables.</para>
                 /// </description></item>
-                /// <item><description><para>ComputationSqlOSS: the metering data of SQL jobs that involve OSS external tables.</para>
+                /// <item><description><para><c>ComputationSqlOSS</c>: Metrics for SQL jobs on OSS external tables.</para>
                 /// </description></item>
-                /// <item><description><para>MapReduce: the metering data of MapReduce jobs.</para>
+                /// <item><description><para><c>MapReduce</c>: Metrics for MapReduce jobs.</para>
                 /// </description></item>
-                /// <item><description><para>spark: the metering data of Spark jobs.</para>
+                /// <item><description><para><c>spark</c>: Metrics for Spark jobs.</para>
                 /// </description></item>
-                /// <item><description><para>mars: the metering data of Mars jobs.</para>
+                /// <item><description><para><c>mars</c>: Metrics for Mars jobs.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The unit of computing resource usage</para>
+                /// <para>The unit of compute usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -134,11 +134,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Unit { get; set; }
 
                 /// <summary>
-                /// <para>The computing resource usage is calculated based on the following items:</para>
+                /// <para>The compute usage.</para>
                 /// <list type="bullet">
-                /// <item><description><para>Amount of scanned data in the unit of GB. For the jobs whose metering types are ComputationSql, ComputationSqlOTS, or ComputationSqlOSS, they are billed based on the amount of scanned data. The computing resource usage of such a job is calculated by using the following formula: Amount of scanned data × Complexity. The complexity is fixed at 1 for the jobs whose metering types are ComputationSqlOTS or ComputationSqlOSS.</para>
+                /// <item><description><para>For jobs billed by the amount of data scanned, such as <c>ComputationSql</c>, <c>ComputationSqlOTS</c>, and <c>ComputationSqlOSS</c> jobs, the unit is GB. The usage is calculated as: Amount of scanned data × Complexity. The complexity factor for <c>ComputationSqlOTS</c> and <c>ComputationSqlOSS</c> jobs is 1.</para>
                 /// </description></item>
-                /// <item><description><para>CU-hours. For the jobs whose metering types are MapReduce, spark, or mars, they are billed based on CU-hours.</para>
+                /// <item><description><para>For jobs billed by CU-hours (such as <c>MapReduce</c>, <c>spark</c>, and <c>mars</c> jobs), the unit is CU-hour.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The returned page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of results returned.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -186,11 +186,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: Informational - The request has been received and is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: Success - The request was successfully received, understood, and accepted.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: Redirection - Further action is required to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: Client Error - The request contains invalid syntax or cannot be fulfilled.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: Server Error - The server failed to fulfill a valid request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -201,7 +206,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc059b717363029839908920ea631</para>

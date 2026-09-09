@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateMmsDbRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the destination schema in MaxCompute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstName { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination MaxCompute project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dst_project_name</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DstProjectName { get; set; }
 
         /// <summary>
+        /// <para>The migration status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>INIT</para>
         /// </summary>

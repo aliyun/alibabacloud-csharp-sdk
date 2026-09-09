@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>file</para>
+                /// <para>Filr type resource</para>
                 /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]

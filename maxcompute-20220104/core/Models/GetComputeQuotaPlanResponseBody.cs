@@ -432,11 +432,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: informational response. The request is received and is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: success. The request is successfully received, understood, and accepted by the server.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: redirection. The request is redirected, and further actions are required to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: server error. The server cannot meet requirements due to other reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

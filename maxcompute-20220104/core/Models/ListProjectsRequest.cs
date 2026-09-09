@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to list the built-in <b>SYSTEM_CATALOG</b> projects that are used to provide data such as project metadata and historical usage data. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Tenant-level Information Schema</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The built-in SYSTEM_CATALOG projects are listed.</description></item>
-        /// <item><description>false: The built-in SYSTEM_CATALOG projects are not listed.</description></item>
-        /// </list>
+        /// <para>Specifies whether to list the built-in <b>SYSTEM_CATALOG</b> project. This project provides information such as project metadata and usage history. For more information, see &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tenant-level-information-schema">Information Schema</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -25,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? ListSystemCatalog { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The token that specifies the starting point of the query. The results are returned in alphabetical order, starting from the entry that immediately follows the marker.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Default value: 10.</para>
+        /// <para>The maximum number of entries to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -45,7 +40,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? MaxItem { get; set; }
 
         /// <summary>
-        /// <para>Specifies the marker after which the returned list begins.</para>
+        /// <para>The prefix of the resource names to query. For example, if you specify <c>a</c> for this parameter, only resources whose names start with &quot;a&quot; are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a</para>
@@ -55,20 +50,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The quota name that is automatically generated. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <b>Workspace</b> &gt; <b>Quotas</b> from the left-side navigation pane, and then view the quota name on the <b>Quotas</b> page.</para>
+        /// <para>The quota name. The system automatically generates this name. To obtain the quota name, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <b>Workspace</b> &gt; <b>Quota</b> <b>Management</b> from the navigation pane on the left.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;hsajkdgbkaubh&quot;</para>
+        /// <para>aliyun_5495***3697</para>
         /// </summary>
         [NameInMap("quotaName")]
         [Validation(Required=false)]
         public string QuotaName { get; set; }
 
         /// <summary>
-        /// <para>The quota nickname. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, choose <b>Workspace</b> &gt; <b>Quotas</b> from the left-side navigation pane, and then view the quota nickname on the <b>Quotas</b> page.</para>
+        /// <para>The quota nickname. To obtain the quota nickname, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <b>Workspace</b> &gt; <b>Quota</b> <b>Management</b> from the navigation pane on the left.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>quotaA</para>
+        /// <para>os_PayAsYouGoQuota</para>
         /// </summary>
         [NameInMap("quotaNickName")]
         [Validation(Required=false)]
@@ -85,20 +80,43 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The instance ID and billing method of the default computing quota.</para>
+        /// <para>The instance ID and billing method of the default compute quota.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;aaaa-bbbb&quot;</para>
+        /// <para>{
+        ///       &quot;resourceId&quot;: &quot;b7afb7d1-<b><b>-</b></b>-****-c393669c307b&quot;,
+        ///       &quot;resourceType&quot;: &quot;PayAsYouGo&quot;
+        ///     }</para>
         /// </summary>
         [NameInMap("saleTags")]
         [Validation(Required=false)]
         public string SaleTags { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. You can log on to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a>, and choose <b>Tenants</b> &gt; <b>Tenant Property</b> from the left-side navigation pane to view the tenant ID.</para>
+        /// <para>The sort field. The only supported value is <c>createdTime</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>549532154333697</para>
+        /// <para>createdTime</para>
+        /// </summary>
+        [NameInMap("sortBy")]
+        [Validation(Required=false)]
+        public string SortBy { get; set; }
+
+        /// <summary>
+        /// <para>The sort order. This parameter takes effect only when <c>sortBy</c> is specified. Valid values are <c>ASC</c> and <c>DESC</c>. The values are case-insensitive.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DESC</para>
+        /// </summary>
+        [NameInMap("sortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
+        /// <summary>
+        /// <para>The tenant ID. To obtain the ID, log in to the <a href="https://maxcompute.console.aliyun.com">MaxCompute console</a> and select <b>Tenant Management</b> &gt; <b>Tenant Properties</b> from the navigation pane on the left.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5495****3697</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]
@@ -107,12 +125,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The project type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>managed</b>: internal project</description></item>
-        /// <item><description><b>external</b>: external project</description></item>
+        /// <item><description><para><b>managed</b>: a managed project.</para>
+        /// </description></item>
+        /// <item><description><para><b>external</b>: an external project.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;managed&quot;</para>
+        /// <para>managed</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

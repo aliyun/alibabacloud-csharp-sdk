@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>error message</para>
+        /// <para>Exception information</para>
         /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]

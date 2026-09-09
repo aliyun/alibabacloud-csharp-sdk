@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0b87b7a316654730544735643e9200</para>

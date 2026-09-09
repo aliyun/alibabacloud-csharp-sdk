@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</para>
+        /// <para>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</para>
+        /// <para>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -500,7 +500,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</para>
+        /// <para>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +519,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a data source and uses MaxCompute Migration Assist (MMA) to migrate data from the data source to MaxCompute.</para>
+        /// <para>Creates a data source to migrate data to MaxCompute using MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -538,7 +538,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</para>
+        /// <para>Creates a job to pull metadata from a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -588,7 +588,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</para>
+        /// <para>Creates a job to pull metadata from a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -638,7 +638,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</para>
+        /// <para>Creates a job to pull metadata from a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -657,7 +657,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a MaxCompute Migration Assist (MMA) job to pull the metadata from a data source.</para>
+        /// <para>Creates a job to pull metadata from a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -977,6 +977,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <para>CreateMmsTimer</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMmsTimerRequest
         /// </param>
@@ -1082,6 +1087,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <summary>
         /// <para>CreateMmsTimer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMmsTimerRequest
@@ -1189,6 +1199,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <para>CreateMmsTimer</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMmsTimerRequest
         /// </param>
@@ -1207,6 +1222,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <summary>
         /// <para>CreateMmsTimer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMmsTimerRequest
@@ -1476,8 +1496,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQuota</para>
+        /// <para>Creates a quota. When you activate MaxCompute for the first time, you must first create a pay-as-you-go quota. If you create a subscription quota, automatic payment is deducted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a> of MaxCompute.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateQuotaRequest
@@ -1534,8 +1559,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQuota</para>
+        /// <para>Creates a quota. When you activate MaxCompute for the first time, you must first create a pay-as-you-go quota. If you create a subscription quota, automatic payment is deducted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a> of MaxCompute.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateQuotaRequest
@@ -1592,8 +1622,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQuota</para>
+        /// <para>Creates a quota. When you activate MaxCompute for the first time, you must first create a pay-as-you-go quota. If you create a subscription quota, automatic payment is deducted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a> of MaxCompute.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateQuotaRequest
@@ -1611,8 +1646,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateQuota</para>
+        /// <para>Creates a quota. When you activate MaxCompute for the first time, you must first create a pay-as-you-go quota. If you create a subscription quota, automatic payment is deducted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a> of MaxCompute.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateQuotaRequest
@@ -1992,7 +2032,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2028,7 +2068,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2064,7 +2104,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2079,7 +2119,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source. For example, you can call this operation to delete the migration plan or metadata of a data source.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data source and its associated migration plans and metadata.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2094,7 +2134,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2130,7 +2170,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2166,7 +2206,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2181,7 +2221,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Deletes a MaxCompute Migration Assist (MMA) data migration plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2196,8 +2236,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteMmsTimer</para>
+        /// <para>Deletes a timer from a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources of the Data Transfer Service.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -2232,8 +2278,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteMmsTimer</para>
+        /// <para>Deletes a timer from a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources of the Data Transfer Service.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -2268,8 +2320,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteMmsTimer</para>
+        /// <para>Deletes a timer from a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources of the Data Transfer Service.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteMmsTimerResponse
@@ -2283,8 +2341,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteMmsTimer</para>
+        /// <para>Deletes a timer from a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources of the Data Transfer Service.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteMmsTimerResponse
@@ -2298,7 +2362,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute project.</para>
+        /// <para>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2344,7 +2408,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute project.</para>
+        /// <para>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2390,7 +2454,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute project.</para>
+        /// <para>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2409,7 +2473,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a MaxCompute project.</para>
+        /// <para>Deletes a MaxCompute project. This operation is irreversible. Use this API with caution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2564,6 +2628,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await DeleteQuotaPlanWithOptionsAsync(nickname, planName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project-level role in MaxCompute.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2599,6 +2668,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteRoleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project-level role in MaxCompute.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2634,6 +2708,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<DeleteRoleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project-level role in MaxCompute.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2648,6 +2727,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return DeleteRoleWithOptions(projectName, roleName, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a project-level role in MaxCompute.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteRoleRequest
         /// </param>
@@ -2998,7 +3082,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a job.</para>
+        /// <para>Queries basic information about a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3034,7 +3118,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a job.</para>
+        /// <para>Queries basic information about a job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3070,7 +3154,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a job.</para>
+        /// <para>Queries basic information about a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3085,7 +3169,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about a job.</para>
+        /// <para>Queries basic information about a job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3282,7 +3366,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</para>
+        /// <para>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3318,7 +3402,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</para>
+        /// <para>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3354,7 +3438,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</para>
+        /// <para>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3369,7 +3453,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a MaxCompute Migration Assist (MMA) asynchronous task.</para>
+        /// <para>Retrieves a single asynchronous task from MaxCompute Migration Assist (MMA).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3384,7 +3468,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3434,7 +3518,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3484,7 +3568,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,7 +3587,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3522,7 +3606,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a database in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3558,7 +3642,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a database in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3594,7 +3678,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a database in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3609,7 +3693,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a database in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a database from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3624,7 +3708,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</para>
+        /// <para>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3660,7 +3744,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</para>
+        /// <para>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3696,7 +3780,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</para>
+        /// <para>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3711,7 +3795,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) job that is used to query the metadata of a data source.</para>
+        /// <para>Retrieves the details of a MaxCompute Migration Assist (MMA) job that fetches metadata.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3726,7 +3810,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3762,7 +3846,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3798,7 +3882,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3813,7 +3897,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a MaxCompute Migration Assist (MMA) migration job.</para>
+        /// <para>Retrieves the details of a single MaxCompute Migration Assist (MMA) migration plan.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3828,7 +3912,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3864,7 +3948,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3900,7 +3984,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3915,7 +3999,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a partition from a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a partition from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3930,7 +4014,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a table in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3966,7 +4050,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a table in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4002,7 +4086,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a table in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4017,7 +4101,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a table in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Retrieves a table from a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4032,7 +4116,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a migration task.</para>
+        /// <para>Retrieves the details of a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4068,7 +4152,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a migration task.</para>
+        /// <para>Retrieves the details of a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4104,7 +4188,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a migration task.</para>
+        /// <para>Retrieves the details of a specific migration task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4119,7 +4203,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a migration task.</para>
+        /// <para>Retrieves the details of a specific migration task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4136,6 +4220,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <summary>
         /// <para>GetMmsTimer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources used for data transfer.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4173,6 +4262,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <para>GetMmsTimer</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources used for data transfer.</para>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -4209,6 +4303,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <para>GetMmsTimer</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources used for data transfer.</para>
+        /// </description>
+        /// 
         /// <returns>
         /// GetMmsTimerResponse
         /// </returns>
@@ -4223,6 +4322,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
         /// <summary>
         /// <para>GetMmsTimer</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources used for data transfer.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetMmsTimerResponse
@@ -4366,7 +4470,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute project.</para>
+        /// <para>Queries the basic information of a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4420,7 +4524,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute project.</para>
+        /// <para>Queries the basic information of a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4474,7 +4578,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute project.</para>
+        /// <para>Queries the basic information of a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4493,7 +4597,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a MaxCompute project.</para>
+        /// <para>Queries the basic information of a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4512,7 +4616,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a specified level-1 quota.</para>
+        /// <para>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <c>QueryQuota</c> operation. The request parameters, response parameters, and features of the two operations are the same.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4570,7 +4674,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a specified level-1 quota.</para>
+        /// <para>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <c>QueryQuota</c> operation. The request parameters, response parameters, and features of the two operations are the same.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4628,7 +4732,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a specified level-1 quota.</para>
+        /// <para>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <c>QueryQuota</c> operation. The request parameters, response parameters, and features of the two operations are the same.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4647,7 +4751,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information about a specified level-1 quota.</para>
+        /// <para>Retrieve information for the specified level-1 quota group. Warning: This operation will be decommissioned on July 31, 2024. It will be replaced by the <c>QueryQuota</c> operation. The request parameters, response parameters, and features of the two operations are the same.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5694,6 +5798,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetRunningJobsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of the total storage amount.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageAmountSummaryRequest
         /// </param>
@@ -5743,6 +5852,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageAmountSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of the total storage amount.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageAmountSummaryRequest
         /// </param>
@@ -5792,6 +5906,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageAmountSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of the total storage amount.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageAmountSummaryRequest
         /// </param>
@@ -5806,6 +5925,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetStorageAmountSummaryWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of the total storage amount.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageAmountSummaryRequest
         /// </param>
@@ -5820,6 +5944,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetStorageAmountSummaryWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSizeSummaryRequest
         /// </param>
@@ -5869,6 +5998,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageSizeSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSizeSummaryRequest
         /// </param>
@@ -5918,6 +6052,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageSizeSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSizeSummaryRequest
         /// </param>
@@ -5932,6 +6071,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetStorageSizeSummaryWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a summary of storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSizeSummaryRequest
         /// </param>
@@ -5946,6 +6090,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await GetStorageSizeSummaryWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the year-on-year (YoY) change in storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// GetStorageSummaryComparedRequest
         /// </param>
@@ -6009,6 +6158,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageSummaryComparedResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the year-on-year (YoY) change in storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// GetStorageSummaryComparedRequest
         /// </param>
@@ -6072,6 +6226,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<GetStorageSummaryComparedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the year-on-year (YoY) change in storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSummaryComparedRequest
         /// </param>
@@ -6086,6 +6245,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return GetStorageSummaryComparedWithOptions(type, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the year-on-year (YoY) change in storage usage.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetStorageSummaryComparedRequest
         /// </param>
@@ -6482,7 +6646,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of computing resources used by a pay-as-you-go job.</para>
+        /// <para>Lists the compute usage for jobs per instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6564,7 +6728,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of computing resources used by a pay-as-you-go job.</para>
+        /// <para>Lists the compute usage for jobs per instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6646,7 +6810,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of computing resources used by a pay-as-you-go job.</para>
+        /// <para>Lists the compute usage for jobs per instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6665,7 +6829,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of computing resources used by a pay-as-you-go job.</para>
+        /// <para>Lists the compute usage for jobs per instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6684,8 +6848,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按Signature查看作业计算使用量明细</para>
+        /// <para>View detailed compute usage for jobs by Signature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets job details by signature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComputeMetricsBySignatureRequest
@@ -6762,8 +6931,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按Signature查看作业计算使用量明细</para>
+        /// <para>View detailed compute usage for jobs by Signature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets job details by signature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComputeMetricsBySignatureRequest
@@ -6840,8 +7014,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按Signature查看作业计算使用量明细</para>
+        /// <para>View detailed compute usage for jobs by Signature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets job details by signature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComputeMetricsBySignatureRequest
@@ -6859,8 +7038,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按Signature查看作业计算使用量明细</para>
+        /// <para>View detailed compute usage for jobs by Signature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Gets job details by signature.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListComputeMetricsBySignatureRequest
@@ -6878,7 +7062,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get computeQuotaPlan list.</para>
+        /// <para>Lists compute quota plans.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6914,7 +7098,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get computeQuotaPlan list.</para>
+        /// <para>Lists compute quota plans.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6950,7 +7134,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get computeQuotaPlan list.</para>
+        /// <para>Lists compute quota plans.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6965,7 +7149,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get computeQuotaPlan list.</para>
+        /// <para>Lists compute quota plans.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7134,8 +7318,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取需要进行成本分析的项目或者实例</para>
+        /// <para>Retrieves a list of projects for cost analysis over a specified time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the projects for which cost analysis is required.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -7184,8 +7373,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取需要进行成本分析的项目或者实例</para>
+        /// <para>Retrieves a list of projects for cost analysis over a specified time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the projects for which cost analysis is required.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -7234,8 +7428,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取需要进行成本分析的项目或者实例</para>
+        /// <para>Retrieves a list of projects for cost analysis over a specified time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the projects for which cost analysis is required.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -7253,8 +7452,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取需要进行成本分析的项目或者实例</para>
+        /// <para>Retrieves a list of projects for cost analysis over a specified time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the projects for which cost analysis is required.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListInstancesRequest
@@ -7272,7 +7476,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of jobs.</para>
+        /// <para>Queries the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7404,7 +7608,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of jobs.</para>
+        /// <para>Queries the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7536,7 +7740,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of jobs.</para>
+        /// <para>Queries the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7555,7 +7759,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of jobs.</para>
+        /// <para>Queries the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7764,7 +7968,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of job snapshot data at a specific point in time.</para>
+        /// <para>Retrieves job snapshot data at a specific point in time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7884,7 +8088,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of job snapshot data at a specific point in time.</para>
+        /// <para>Retrieves job snapshot data at a specific point in time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8004,7 +8208,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of job snapshot data at a specific point in time.</para>
+        /// <para>Retrieves job snapshot data at a specific point in time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8023,7 +8227,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views a list of job snapshot data at a specific point in time.</para>
+        /// <para>Retrieves job snapshot data at a specific point in time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8042,8 +8246,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsDataSourceConfigItems</para>
+        /// <para>Lists the configuration items for a specified data source type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and price</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and price</a> for MaxCompute Reserved CUs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsDataSourceConfigItemsRequest
@@ -8092,8 +8302,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsDataSourceConfigItems</para>
+        /// <para>Lists the configuration items for a specified data source type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and price</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and price</a> for MaxCompute Reserved CUs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsDataSourceConfigItemsRequest
@@ -8142,8 +8358,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsDataSourceConfigItems</para>
+        /// <para>Lists the configuration items for a specified data source type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and price</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and price</a> for MaxCompute Reserved CUs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsDataSourceConfigItemsRequest
@@ -8161,8 +8383,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsDataSourceConfigItems</para>
+        /// <para>Lists the configuration items for a specified data source type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and price</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and price</a> for MaxCompute Reserved CUs.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsDataSourceConfigItemsRequest
@@ -8180,7 +8408,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute Migration Assist (MMA) data sources.</para>
+        /// <para>MaxCompute Migration Assist (MMA) data sources</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8242,7 +8470,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute Migration Assist (MMA) data sources.</para>
+        /// <para>MaxCompute Migration Assist (MMA) data sources</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8304,7 +8532,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute Migration Assist (MMA) data sources.</para>
+        /// <para>MaxCompute Migration Assist (MMA) data sources</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8323,7 +8551,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute Migration Assist (MMA) data sources.</para>
+        /// <para>MaxCompute Migration Assist (MMA) data sources</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8342,7 +8570,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>List databases in the MMA data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8410,7 +8638,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>List databases in the MMA data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8478,7 +8706,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>List databases in the MMA data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8497,7 +8725,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>List databases in the MMA data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8516,7 +8744,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration jobs.</para>
+        /// <para>Lists migration jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8602,7 +8830,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration jobs.</para>
+        /// <para>Lists migration jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8688,7 +8916,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration jobs.</para>
+        /// <para>Lists migration jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8707,7 +8935,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration jobs.</para>
+        /// <para>Lists migration jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8726,7 +8954,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8822,7 +9050,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8918,7 +9146,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8937,7 +9165,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of partitions in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the partitions in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8956,7 +9184,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9064,7 +9292,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9172,7 +9400,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9191,7 +9419,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tables in a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Lists the tables in a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9210,7 +9438,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the execution logs of a single migration task.</para>
+        /// <para>Lists the execution logs for a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9246,7 +9474,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the execution logs of a single migration task.</para>
+        /// <para>Lists the execution logs for a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9282,7 +9510,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the execution logs of a single migration task.</para>
+        /// <para>Lists the execution logs for a specific migration task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9297,7 +9525,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the execution logs of a single migration task.</para>
+        /// <para>Lists the execution logs for a specific migration task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9312,7 +9540,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration tasks.</para>
+        /// <para>Retrieves a list of data migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9398,7 +9626,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration tasks.</para>
+        /// <para>Retrieves a list of data migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9484,7 +9712,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration tasks.</para>
+        /// <para>Retrieves a list of data migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9503,7 +9731,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of migration tasks.</para>
+        /// <para>Retrieves a list of data migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9522,8 +9750,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimerLogs</para>
+        /// <para>Lists the logs of a scheduled task for a specific data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimerLogsRequest
@@ -9572,8 +9806,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimerLogs</para>
+        /// <para>Lists the logs of a scheduled task for a specific data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimerLogsRequest
@@ -9622,8 +9862,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimerLogs</para>
+        /// <para>Lists the logs of a scheduled task for a specific data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimerLogsRequest
@@ -9641,8 +9887,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimerLogs</para>
+        /// <para>Lists the logs of a scheduled task for a specific data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimerLogsRequest
@@ -9660,8 +9912,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimers</para>
+        /// <para>Lists the timers for a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimersRequest
@@ -9726,8 +9984,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimers</para>
+        /// <para>Lists the timers for a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimersRequest
@@ -9792,8 +10056,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimers</para>
+        /// <para>Lists the timers for a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimersRequest
@@ -9811,8 +10081,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListMmsTimers</para>
+        /// <para>Lists the timers for a specified data source.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListMmsTimersRequest
@@ -10034,7 +10310,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute projects.</para>
+        /// <para>Retrieves a list of MaxCompute projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10086,6 +10362,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["saleTags"] = request.SaleTags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10116,7 +10400,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute projects.</para>
+        /// <para>Retrieves a list of MaxCompute projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10168,6 +10452,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             {
                 query["saleTags"] = request.SaleTags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
@@ -10198,7 +10490,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute projects.</para>
+        /// <para>Retrieves a list of MaxCompute projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10217,7 +10509,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of MaxCompute projects.</para>
+        /// <para>Retrieves a list of MaxCompute projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10236,7 +10528,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quotas.</para>
+        /// <para>Retrieves a list of quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10306,7 +10598,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quotas.</para>
+        /// <para>Retrieves a list of quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10376,7 +10668,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quotas.</para>
+        /// <para>Retrieves a list of quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10395,7 +10687,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries quotas.</para>
+        /// <para>Retrieves a list of quotas.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10808,7 +11100,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</para>
+        /// <para>Retrieves storage details for the partitions of a partitioned table in a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10896,7 +11188,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</para>
+        /// <para>Retrieves storage details for the partitions of a partitioned table in a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10984,7 +11276,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</para>
+        /// <para>Retrieves storage details for the partitions of a partitioned table in a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11003,7 +11295,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage details of a specific partition in a partitioned table in a MaxCompute project.</para>
+        /// <para>Retrieves storage details for the partitions of a partitioned table in a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11020,6 +11312,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return await ListStoragePartitionsInfoWithOptionsAsync(project, table, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details of projects.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListStorageProjectsInfoRequest
         /// </param>
@@ -11093,6 +11390,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListStorageProjectsInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details of projects.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListStorageProjectsInfoRequest
         /// </param>
@@ -11166,6 +11468,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return TeaModel.ToObject<ListStorageProjectsInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details of projects.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListStorageProjectsInfoRequest
         /// </param>
@@ -11180,6 +11487,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             return ListStorageProjectsInfoWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the storage details of projects.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListStorageProjectsInfoRequest
         /// </param>
@@ -12076,7 +12388,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询quota的资源使用信息</para>
+        /// <para>Queries the time series data of resource consumption for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12148,7 +12460,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询quota的资源使用信息</para>
+        /// <para>Queries the time series data of resource consumption for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12220,7 +12532,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询quota的资源使用信息</para>
+        /// <para>Queries the time series data of resource consumption for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12239,7 +12551,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询quota的资源使用信息</para>
+        /// <para>Queries the time series data of resource consumption for a quota.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12258,7 +12570,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries time series metrics of stored data.</para>
+        /// <para>Queries time-series metrics of data storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12318,7 +12630,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries time series metrics of stored data.</para>
+        /// <para>Queries time-series metrics of data storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12378,7 +12690,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries time series metrics of stored data.</para>
+        /// <para>Queries time-series metrics of data storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12397,7 +12709,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries time series metrics of stored data.</para>
+        /// <para>Queries time-series metrics of data storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12416,8 +12728,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query various Tunnel metrics, such as slot usage (<c>slot_usage</c>), slot usage limit (<c>slot_max</c>), throughput (<c>throughput</c>), throughput rate (<c>throughput_speed</c>), and number of requests (<c>request</c>).</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</description></item>
+        /// <item><description>The <c>metric</c> parameter is also required. It specifies the type of metric to query.</description></item>
+        /// <item><description>Depending on the value of <c>metric</c>, you may need to specify additional parameters for filtering to refine your query. These parameters include <c>quotaNickname</c>, <c>project</c>, <c>tableList</c>, <c>operationList</c>, <c>codeList</c>, <c>groupList</c>, and <c>topN</c>.</description></item>
+        /// <item><description>For some <c>metric</c> values, you must specify other parameters. For example, if <c>groupList</c> contains <c>table</c> or <c>ip</c>, you must specify the <c>project</c> parameter and other required parameters. In this case, the system returns only the top N results.</description></item>
+        /// <item><description>The <c>strategy</c> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <c>max</c>.</description></item>
+        /// <item><description>Ensure all parameters meet the requirements in this document to prevent request failures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricRequest
@@ -12500,8 +12825,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query various Tunnel metrics, such as slot usage (<c>slot_usage</c>), slot usage limit (<c>slot_max</c>), throughput (<c>throughput</c>), throughput rate (<c>throughput_speed</c>), and number of requests (<c>request</c>).</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</description></item>
+        /// <item><description>The <c>metric</c> parameter is also required. It specifies the type of metric to query.</description></item>
+        /// <item><description>Depending on the value of <c>metric</c>, you may need to specify additional parameters for filtering to refine your query. These parameters include <c>quotaNickname</c>, <c>project</c>, <c>tableList</c>, <c>operationList</c>, <c>codeList</c>, <c>groupList</c>, and <c>topN</c>.</description></item>
+        /// <item><description>For some <c>metric</c> values, you must specify other parameters. For example, if <c>groupList</c> contains <c>table</c> or <c>ip</c>, you must specify the <c>project</c> parameter and other required parameters. In this case, the system returns only the top N results.</description></item>
+        /// <item><description>The <c>strategy</c> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <c>max</c>.</description></item>
+        /// <item><description>Ensure all parameters meet the requirements in this document to prevent request failures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricRequest
@@ -12584,8 +12922,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query various Tunnel metrics, such as slot usage (<c>slot_usage</c>), slot usage limit (<c>slot_max</c>), throughput (<c>throughput</c>), throughput rate (<c>throughput_speed</c>), and number of requests (<c>request</c>).</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</description></item>
+        /// <item><description>The <c>metric</c> parameter is also required. It specifies the type of metric to query.</description></item>
+        /// <item><description>Depending on the value of <c>metric</c>, you may need to specify additional parameters for filtering to refine your query. These parameters include <c>quotaNickname</c>, <c>project</c>, <c>tableList</c>, <c>operationList</c>, <c>codeList</c>, <c>groupList</c>, and <c>topN</c>.</description></item>
+        /// <item><description>For some <c>metric</c> values, you must specify other parameters. For example, if <c>groupList</c> contains <c>table</c> or <c>ip</c>, you must specify the <c>project</c> parameter and other required parameters. In this case, the system returns only the top N results.</description></item>
+        /// <item><description>The <c>strategy</c> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <c>max</c>.</description></item>
+        /// <item><description>Ensure all parameters meet the requirements in this document to prevent request failures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricRequest
@@ -12603,8 +12954,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries metric data for the Tunnel Data Transmission Service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query various Tunnel metrics, such as slot usage (<c>slot_usage</c>), slot usage limit (<c>slot_max</c>), throughput (<c>throughput</c>), throughput rate (<c>throughput_speed</c>), and number of requests (<c>request</c>).</description></item>
+        /// <item><description>The <c>startTime</c> and <c>endTime</c> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</description></item>
+        /// <item><description>The <c>metric</c> parameter is also required. It specifies the type of metric to query.</description></item>
+        /// <item><description>Depending on the value of <c>metric</c>, you may need to specify additional parameters for filtering to refine your query. These parameters include <c>quotaNickname</c>, <c>project</c>, <c>tableList</c>, <c>operationList</c>, <c>codeList</c>, <c>groupList</c>, and <c>topN</c>.</description></item>
+        /// <item><description>For some <c>metric</c> values, you must specify other parameters. For example, if <c>groupList</c> contains <c>table</c> or <c>ip</c>, you must specify the <c>project</c> parameter and other required parameters. In this case, the system returns only the top N results.</description></item>
+        /// <item><description>The <c>strategy</c> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <c>max</c>.</description></item>
+        /// <item><description>Ensure all parameters meet the requirements in this document to prevent request failures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricRequest
@@ -12622,8 +12986,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries details about the Tunnel Data Transmission Service for a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query Tunnel metrics, including slot usage details (<c>slot_usage_detail</c>), throughput details (<c>throughput_detail</c>), and a throughput summary (<c>throughput_summary</c>).</description></item>
+        /// <item><description>The <c>quotaNickname</c> and <c>project</c> parameters cannot both be empty.</description></item>
+        /// <item><description>If the <c>groupList</c> parameter includes <c>table</c> or <c>ip</c>, the <c>project</c> parameter is required. If groupList includes <c>ip</c>, the <c>tableList</c> parameter is also required.</description></item>
+        /// <item><description>The <c>orderColumn</c> parameter supports <c>maxValue</c>, <c>minValue</c>, <c>avgValue</c>, and <c>sumValue</c> (only for <c>throughput_summary</c>). If this parameter is omitted, the results are not sorted.</description></item>
+        /// <item><description>The <c>ascOrder</c> parameter defaults to <c>false</c> (descending order).</description></item>
+        /// <item><description>The <c>limit</c> parameter specifies the number of results to return, with a default of 10 and a maximum of 100.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricDetailRequest
@@ -12710,8 +13087,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries details about the Tunnel Data Transmission Service for a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query Tunnel metrics, including slot usage details (<c>slot_usage_detail</c>), throughput details (<c>throughput_detail</c>), and a throughput summary (<c>throughput_summary</c>).</description></item>
+        /// <item><description>The <c>quotaNickname</c> and <c>project</c> parameters cannot both be empty.</description></item>
+        /// <item><description>If the <c>groupList</c> parameter includes <c>table</c> or <c>ip</c>, the <c>project</c> parameter is required. If groupList includes <c>ip</c>, the <c>tableList</c> parameter is also required.</description></item>
+        /// <item><description>The <c>orderColumn</c> parameter supports <c>maxValue</c>, <c>minValue</c>, <c>avgValue</c>, and <c>sumValue</c> (only for <c>throughput_summary</c>). If this parameter is omitted, the results are not sorted.</description></item>
+        /// <item><description>The <c>ascOrder</c> parameter defaults to <c>false</c> (descending order).</description></item>
+        /// <item><description>The <c>limit</c> parameter specifies the number of results to return, with a default of 10 and a maximum of 100.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricDetailRequest
@@ -12798,8 +13188,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries details about the Tunnel Data Transmission Service for a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query Tunnel metrics, including slot usage details (<c>slot_usage_detail</c>), throughput details (<c>throughput_detail</c>), and a throughput summary (<c>throughput_summary</c>).</description></item>
+        /// <item><description>The <c>quotaNickname</c> and <c>project</c> parameters cannot both be empty.</description></item>
+        /// <item><description>If the <c>groupList</c> parameter includes <c>table</c> or <c>ip</c>, the <c>project</c> parameter is required. If groupList includes <c>ip</c>, the <c>tableList</c> parameter is also required.</description></item>
+        /// <item><description>The <c>orderColumn</c> parameter supports <c>maxValue</c>, <c>minValue</c>, <c>avgValue</c>, and <c>sumValue</c> (only for <c>throughput_summary</c>). If this parameter is omitted, the results are not sorted.</description></item>
+        /// <item><description>The <c>ascOrder</c> parameter defaults to <c>false</c> (descending order).</description></item>
+        /// <item><description>The <c>limit</c> parameter specifies the number of results to return, with a default of 10 and a maximum of 100.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricDetailRequest
@@ -12817,8 +13220,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of the Tunnel service within a specified time range.</para>
+        /// <para>Queries details about the Tunnel Data Transmission Service for a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to query Tunnel metrics, including slot usage details (<c>slot_usage_detail</c>), throughput details (<c>throughput_detail</c>), and a throughput summary (<c>throughput_summary</c>).</description></item>
+        /// <item><description>The <c>quotaNickname</c> and <c>project</c> parameters cannot both be empty.</description></item>
+        /// <item><description>If the <c>groupList</c> parameter includes <c>table</c> or <c>ip</c>, the <c>project</c> parameter is required. If groupList includes <c>ip</c>, the <c>tableList</c> parameter is also required.</description></item>
+        /// <item><description>The <c>orderColumn</c> parameter supports <c>maxValue</c>, <c>minValue</c>, <c>avgValue</c>, and <c>sumValue</c> (only for <c>throughput_summary</c>). If this parameter is omitted, the results are not sorted.</description></item>
+        /// <item><description>The <c>ascOrder</c> parameter defaults to <c>false</c> (descending order).</description></item>
+        /// <item><description>The <c>limit</c> parameter specifies the number of results to return, with a default of 10 and a maximum of 100.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryTunnelMetricDetailRequest
@@ -12836,7 +13252,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a migration job.</para>
+        /// <para>Retries a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -12872,7 +13288,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a migration job.</para>
+        /// <para>Retries a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -12908,7 +13324,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a migration job.</para>
+        /// <para>Retries a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12923,7 +13339,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a migration job.</para>
+        /// <para>Retries a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12938,8 +13354,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RetryMmsTask</para>
+        /// <para>Retries a migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, dedicated resource groups, and elastic reserved compute resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RetryMmsTaskRequest
@@ -12978,8 +13400,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RetryMmsTask</para>
+        /// <para>Retries a migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, dedicated resource groups, and elastic reserved compute resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RetryMmsTaskRequest
@@ -13018,8 +13446,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RetryMmsTask</para>
+        /// <para>Retries a migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, dedicated resource groups, and elastic reserved compute resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RetryMmsTaskRequest
@@ -13037,8 +13471,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>RetryMmsTask</para>
+        /// <para>Retries a migration task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, dedicated resource groups, and elastic reserved compute resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RetryMmsTaskRequest
@@ -13056,7 +13496,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a migration job.</para>
+        /// <para>Starts a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13092,7 +13532,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a migration job.</para>
+        /// <para>Starts a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13128,7 +13568,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a migration job.</para>
+        /// <para>Starts a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13143,7 +13583,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a migration job.</para>
+        /// <para>Starts a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13158,7 +13598,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a migration job.</para>
+        /// <para>Stops a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13194,7 +13634,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a migration job.</para>
+        /// <para>Stops a data migration job.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13230,7 +13670,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a migration job.</para>
+        /// <para>Stops a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13245,7 +13685,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a migration job.</para>
+        /// <para>Stops a data migration job.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13260,8 +13700,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项统计费用信息</para>
+        /// <para>Summarizes cost information by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Summarizes cost information by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsRequest
@@ -13322,8 +13767,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项统计费用信息</para>
+        /// <para>Summarizes cost information by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Summarizes cost information by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsRequest
@@ -13384,8 +13834,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项统计费用信息</para>
+        /// <para>Summarizes cost information by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Summarizes cost information by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsRequest
@@ -13403,8 +13858,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项统计费用信息</para>
+        /// <para>Summarizes cost information by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Summarizes cost information by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsRequest
@@ -13422,8 +13882,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项逐日进行费用统计</para>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsByDateRequest
@@ -13484,8 +13949,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项逐日进行费用统计</para>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsByDateRequest
@@ -13546,8 +14016,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项逐日进行费用统计</para>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsByDateRequest
@@ -13565,8 +14040,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统计或者按计费项逐日进行费用统计</para>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a daily summary of costs, grouped by instance or billable item.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumBillsByDateRequest
@@ -13584,8 +14064,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目或者实例统计计算用量</para>
+        /// <para>Calculates the total number of usage records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calculates the total number of usage records over a specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByRecordRequest
@@ -13638,8 +14123,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目或者实例统计计算用量</para>
+        /// <para>Calculates the total number of usage records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calculates the total number of usage records over a specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByRecordRequest
@@ -13692,8 +14182,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目或者实例统计计算用量</para>
+        /// <para>Calculates the total number of usage records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calculates the total number of usage records over a specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByRecordRequest
@@ -13711,8 +14206,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目或者实例统计计算用量</para>
+        /// <para>Calculates the total number of usage records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calculates the total number of usage records over a specified time range.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByRecordRequest
@@ -13730,8 +14230,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计扫描量计算类的使用量或者CU时计算类使用量</para>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByUsageRequest
@@ -13788,8 +14293,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计扫描量计算类的使用量或者CU时计算类使用量</para>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByUsageRequest
@@ -13846,8 +14356,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计扫描量计算类的使用量或者CU时计算类使用量</para>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByUsageRequest
@@ -13865,8 +14380,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>统计扫描量计算类的使用量或者CU时计算类使用量</para>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates compute usage by scanned data volume or CU usage.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumComputeMetricsByUsageRequest
@@ -13884,7 +14404,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统或者按计费项统计的明细信息</para>
+        /// <para>View a daily breakdown of costs by instance or billable item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13954,7 +14474,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统或者按计费项统计的明细信息</para>
+        /// <para>View a daily breakdown of costs by instance or billable item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14024,7 +14544,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统或者按计费项统计的明细信息</para>
+        /// <para>View a daily breakdown of costs by instance or billable item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14043,7 +14563,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按实例统或者按计费项统计的明细信息</para>
+        /// <para>View a daily breakdown of costs by instance or billable item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14062,7 +14582,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照project或者存储类型按天统计存储用量</para>
+        /// <para>Retrieves aggregated storage metrics over a specified date range, grouped by project or storage class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14120,7 +14640,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照project或者存储类型按天统计存储用量</para>
+        /// <para>Retrieves aggregated storage metrics over a specified date range, grouped by project or storage class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14178,7 +14698,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照project或者存储类型按天统计存储用量</para>
+        /// <para>Retrieves aggregated storage metrics over a specified date range, grouped by project or storage class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14197,7 +14717,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按照project或者存储类型按天统计存储用量</para>
+        /// <para>Retrieves aggregated storage metrics over a specified date range, grouped by project or storage class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14216,8 +14736,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目统计各种类型存储使用量统计</para>
+        /// <para>Aggregates storage usage by storage type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates storage usage by storage type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumStorageMetricsByTypeRequest
@@ -14274,8 +14799,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目统计各种类型存储使用量统计</para>
+        /// <para>Aggregates storage usage by storage type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates storage usage by storage type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumStorageMetricsByTypeRequest
@@ -14332,8 +14862,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目统计各种类型存储使用量统计</para>
+        /// <para>Aggregates storage usage by storage type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates storage usage by storage type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumStorageMetricsByTypeRequest
@@ -14351,8 +14886,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按项目统计各种类型存储使用量统计</para>
+        /// <para>Aggregates storage usage by storage type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Aggregates storage usage by storage type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SumStorageMetricsByTypeRequest
@@ -14370,7 +14910,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TriggerMmsTimer</para>
+        /// <para>Triggers a timer for a specific datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14410,7 +14950,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TriggerMmsTimer</para>
+        /// <para>Triggers a timer for a specific datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14450,7 +14990,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TriggerMmsTimer</para>
+        /// <para>Triggers a timer for a specific datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14469,7 +15009,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TriggerMmsTimer</para>
+        /// <para>Triggers a timer for a specific datasource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14650,13 +15190,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the time-based plan for computing quota.</para>
+        /// <para>Updates the time-based schedule for a computing quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</para>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14703,13 +15242,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the time-based plan for computing quota.</para>
+        /// <para>Updates the time-based schedule for a computing quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</para>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14756,13 +15294,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the time-based plan for computing quota.</para>
+        /// <para>Updates the time-based schedule for a computing quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</para>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14781,13 +15318,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the time-based plan for computing quota.</para>
+        /// <para>Updates the time-based schedule for a computing quota.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</para>
+        /// <para>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14806,7 +15342,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</para>
+        /// <para>Updates the basic configuration of a MaxCompute quota, including adding or deleting level-2 quotas, defining the basic attributes of a level-2 quota, and configuring compute units (CUs) for a quota plan that is in effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14852,7 +15388,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</para>
+        /// <para>Updates the basic configuration of a MaxCompute quota, including adding or deleting level-2 quotas, defining the basic attributes of a level-2 quota, and configuring compute units (CUs) for a quota plan that is in effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14898,7 +15434,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</para>
+        /// <para>Updates the basic configuration of a MaxCompute quota, including adding or deleting level-2 quotas, defining the basic attributes of a level-2 quota, and configuring compute units (CUs) for a quota plan that is in effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14917,7 +15453,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the basic configuration of a MaxCompute quota. For example, you can call this operation to add or delete a level-2 quota, define the basic attributes of a level-2 quota, and define the configuration of compute units (CUs) for a quota plan that is in effect.</para>
+        /// <para>Updates the basic configuration of a MaxCompute quota, including adding or deleting level-2 quotas, defining the basic attributes of a level-2 quota, and configuring compute units (CUs) for a quota plan that is in effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14936,7 +15472,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14994,7 +15530,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15052,7 +15588,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15071,7 +15607,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
+        /// <para>Refreshes the metadata of a MaxCompute Migration Assist (MMA) data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15090,8 +15626,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>功能：</para>
+        /// <para>Updates the metadata of a specified database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of Data Transmission Service dedicated resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsDbRequest
@@ -15144,8 +15685,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>功能：</para>
+        /// <para>Updates the metadata of a specified database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of Data Transmission Service dedicated resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsDbRequest
@@ -15198,8 +15744,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>功能：</para>
+        /// <para>Updates the metadata of a specified database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of Data Transmission Service dedicated resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsDbRequest
@@ -15217,8 +15768,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>功能：</para>
+        /// <para>Updates the metadata of a specified database.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of Data Transmission Service dedicated resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsDbRequest
@@ -15236,8 +15792,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups for data transmission and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTableRequest
@@ -15294,8 +15856,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups for data transmission and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTableRequest
@@ -15352,8 +15920,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups for data transmission and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTableRequest
@@ -15371,8 +15945,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups for data transmission and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTableRequest
@@ -15390,8 +15970,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for Data Transmission Service exclusive resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTablesRequest
@@ -15456,8 +16042,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for Data Transmission Service exclusive resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTablesRequest
@@ -15522,8 +16114,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for Data Transmission Service exclusive resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTablesRequest
@@ -15541,8 +16139,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新表元数据</para>
+        /// <para>Updates table metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for Data Transmission Service exclusive resource groups and elastic reserved computing resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTablesRequest
@@ -15560,8 +16164,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMmsTimer</para>
+        /// <para>Updates the settings of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a> of exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTimerRequest
@@ -15614,8 +16224,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMmsTimer</para>
+        /// <para>Updates the settings of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a> of exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTimerRequest
@@ -15668,8 +16284,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMmsTimer</para>
+        /// <para>Updates the settings of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a> of exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTimerRequest
@@ -15687,8 +16309,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateMmsTimer</para>
+        /// <para>Updates the settings of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a> of exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMmsTimerRequest
@@ -15826,7 +16454,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Project Basic Information</para>
+        /// <para>Modifies the basic information of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15876,7 +16504,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Project Basic Information</para>
+        /// <para>Modifies the basic information of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15926,7 +16554,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Project Basic Information</para>
+        /// <para>Modifies the basic information of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15945,7 +16573,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Project Basic Information</para>
+        /// <para>Modifies the basic information of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16214,7 +16842,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将project的二层模型升级为三层模型</para>
+        /// <para>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16250,7 +16878,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将project的二层模型升级为三层模型</para>
+        /// <para>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -16286,7 +16914,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将project的二层模型升级为三层模型</para>
+        /// <para>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16301,7 +16929,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将project的二层模型升级为三层模型</para>
+        /// <para>Upgrades a project\&quot;s Layer 2 model to a Layer 3 model.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -16596,12 +17224,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</para>
+        /// <para>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</para>
+        /// <para>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16648,12 +17276,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</para>
+        /// <para>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</para>
+        /// <para>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16700,12 +17328,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</para>
+        /// <para>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</para>
+        /// <para>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16724,12 +17352,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the time-specific configuration of an exclusive resource group for Tunnel (referred to as Tunnel quota).</para>
+        /// <para>Updates the time-based auto-scaling configuration for an exclusive resource group for Data Transmission Service (Tunnel Quota).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</para>
+        /// <para>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16748,7 +17376,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove users from a project role.</para>
+        /// <para>Adds or removes users from a project role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16798,7 +17426,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove users from a project role.</para>
+        /// <para>Adds or removes users from a project role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16848,7 +17476,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove users from a project role.</para>
+        /// <para>Adds or removes users from a project role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16867,7 +17495,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add or remove users from a project role.</para>
+        /// <para>Adds or removes users from a project role.</para>
         /// </summary>
         /// 
         /// <param name="request">

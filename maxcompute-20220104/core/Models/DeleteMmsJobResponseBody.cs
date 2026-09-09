@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class DeleteMmsJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the deleted job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>88</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31BE216F-AEF7-581E-B9C9-DECEB5424AC4</para>
         /// </summary>

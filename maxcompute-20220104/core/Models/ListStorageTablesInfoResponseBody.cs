@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The time when the table was last accessed. This value is returned when the table is a non-partitioned table.</para>
                 /// <remarks>
-                /// <para> The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</para>
+                /// <para>The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -209,10 +209,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The table storage type.</para>
                 /// <list type="bullet">
-                /// <item><description>standard</description></item>
-                /// <item><description>lowfrequency</description></item>
-                /// <item><description>longterm</description></item>
-                /// <item><description>unknown: This value is returned when the table is a partitioned table. You can call the ListStoragePartitionsInfo operation to query the storage type of each partition.</description></item>
+                /// <item><description><para>standard</para>
+                /// </description></item>
+                /// <item><description><para>lowfrequency</para>
+                /// </description></item>
+                /// <item><description><para>longterm</para>
+                /// </description></item>
+                /// <item><description><para>unknown: This value is returned when the table is a partitioned table. You can call the ListStoragePartitionsInfo operation to query the storage type of each partition.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -259,7 +263,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The total amount of accessed data.</para>
                 /// <remarks>
-                /// <para> The amount of data that is read by all access behaviors.</para>
+                /// <para>The amount of data that is read by all access behaviors.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -346,11 +350,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: informational response. The request is received and is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: success. The request is successfully received, understood, and accepted by the server.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: redirection. The request is redirected, and further actions are required to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: server error. The server cannot meet requirements due to other reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

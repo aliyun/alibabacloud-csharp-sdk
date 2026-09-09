@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The time when the query starts. The value is the log time that is specified when log data is written.</para>
         /// <list type="bullet">
-        /// <item><description>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <b>from</b> parameter, but does not include the end time specified by the <b>to</b> parameter. If you set the <b>from</b> and <b>to</b> parameters to the same value, the time range is invalid and an error message is returned.</description></item>
-        /// <item><description>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
+        /// <item><description><para>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <b>from</b> parameter, but does not include the end time specified by the <b>to</b> parameter. If you set the <b>from</b> and <b>to</b> parameters to the same value, the time range is invalid and an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,8 +46,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The quota type. Default value: ODPS.</para>
         /// <list type="bullet">
-        /// <item><description>ODPS: computing quota</description></item>
-        /// <item><description>TUNNEL: Tunnel quota</description></item>
+        /// <item><description><para>ODPS: computing quota</para>
+        /// </description></item>
+        /// <item><description><para>TUNNEL: Tunnel quota</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,8 +92,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The time when the query ends. The value is the log time that is specified when log data is written.</para>
         /// <list type="bullet">
-        /// <item><description>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <b>from</b> parameter, but does not include the end time specified by the <b>to</b> parameter. If you set the <b>from</b> and <b>to</b> parameters to the same value, the time range is invalid and an error message is returned.</description></item>
-        /// <item><description>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</description></item>
+        /// <item><description><para>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the <b>from</b> parameter, but does not include the end time specified by the <b>to</b> parameter. If you set the <b>from</b> and <b>to</b> parameters to the same value, the time range is invalid and an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

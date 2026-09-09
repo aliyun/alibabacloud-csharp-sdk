@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class DeleteRoleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data. A value of <c>success</c> indicates that the operation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0adb901117579891946416405d0409</para>
         /// </summary>

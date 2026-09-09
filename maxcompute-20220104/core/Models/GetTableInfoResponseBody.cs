@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>project_name.schema_name.table_name</para>
+            /// <para>odps_project.default.sale_detail</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The column comments.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The name of shop.</para>
+                /// <para>Store name</para>
                 /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The account information of the table or view owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>188785396123****</para>
+            /// <para>ALIYUN$odps****@aliyunid.com</para>
             /// </summary>
             [NameInMap("owner")]
             [Validation(Required=false)]
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The comments of the partition key column.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Sale date.</para>
+                /// <para>Sales date</para>
                 /// </summary>
                 [NameInMap("comment")]
                 [Validation(Required=false)]
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The partition name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sale_date</para>
+                /// <para>ds=\&quot;20190130\&quot;</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The name of the project to which the table or view belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>projectA</para>
+            /// <para>odps_project</para>
             /// </summary>
             [NameInMap("projectName")]
             [Validation(Required=false)]
@@ -454,7 +454,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The columns of the Tablestore table to be accessed, including the primary key column and attribute column. This response parameter is returned when type is set to external.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>:o_orderkey,:o_orderdate,o_custkey,o_orderstatus,o_totalprice</para>
+            /// <para>o_orderkey,o_orderdate,o_custkey,o_orderstatus,o_totalprice</para>
             /// </summary>
             [NameInMap("tablestoreColumnsMapping")]
             [Validation(Required=false)]
@@ -463,10 +463,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <summary>
             /// <para>The type of the table or view. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>internal</b>: internal table</description></item>
-            /// <item><description><b>external</b>: external table</description></item>
-            /// <item><description><b>view</b>: view</description></item>
-            /// <item><description><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></description></item>
+            /// <item><description><para><b>internal</b>: internal table</para>
+            /// </description></item>
+            /// <item><description><para><b>external</b>: external table</para>
+            /// </description></item>
+            /// <item><description><para><b>view</b>: view</para>
+            /// </description></item>
+            /// <item><description><para><b>materializedView</b>: <a href="https://www.alibabacloud.com/help/maxcompute/user-guide/materialized-view-operations">materialize view</a></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

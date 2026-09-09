@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateMmsTimerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The result of the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EA1320AB-7766-5EC7-B0F6-8B20E2298567</para>
         /// </summary>

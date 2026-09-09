@@ -94,11 +94,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: Informational response - Request received, processing continues.</description></item>
-        /// <item><description>2xx: Success - The request has been successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: Redirection - Further action must be taken to complete the request.</description></item>
-        /// <item><description>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</description></item>
-        /// <item><description>5xx: Server error - The server failed to fulfill an apparently valid request.</description></item>
+        /// <item><description><para>1xx: Informational response - Request received, processing continues.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: Success - The request has been successfully received, understood, and accepted by the server.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: Redirection - Further action must be taken to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: Client error - The request contains bad syntax or cannot be fulfilled.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: Server error - The server failed to fulfill an apparently valid request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetJobInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetJobInfoResponseBodyData Data { get; set; }
         public class GetJobInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</para>
+            /// <para>The resources consumed by the job. Returned only for completed jobs. Unit: 100\*Core\*s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The owner of the job.</para>
+            /// <para>The job owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN$7632***@aliyun.com</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string JobOwner { get; set; }
 
             /// <summary>
-            /// <para>The substatuses of the job lifecycle.</para>
+            /// <para>The job lifecycle substatuses.</para>
             /// </summary>
             [NameInMap("jobSubStatusList")]
             [Validation(Required=false)]
             public List<GetJobInfoResponseBodyDataJobSubStatusList> JobSubStatusList { get; set; }
             public class GetJobInfoResponseBodyDataJobSubStatusList : TeaModel {
                 /// <summary>
-                /// <para>The encoding of the substatus.</para>
+                /// <para>The substatus code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1010</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The type of the job.</para>
+            /// <para>The job type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</para>
+            /// <para>The memory consumed by the job. Returned only for completed jobs. Unit: MB\*s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? MemoryUsage { get; set; }
 
             /// <summary>
-            /// <para>The priority of the job.</para>
+            /// <para>The job priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The nickname of the computing quota that is used by the job.</para>
+            /// <para>The nickname of the computing quota used by the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>os_bigdata</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The start time, which is the time when the job received the first batch of computing resources. For jobs that run for a short period of time or do not consume computing resources, such as the jobs that involve DDL statements, the job submission time is used instead.</para>
+            /// <para>The time when the job received its first computing resources. For short-lived or resource-free jobs (such as DDL jobs), the submission time is used instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672112113</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? RunningAtTime { get; set; }
 
             /// <summary>
-            /// <para>The execution duration, which is the duration from the start time to the end time of the job.</para>
+            /// <para>The duration from job start to job end.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? RunningTime { get; set; }
 
             /// <summary>
-            /// <para>The intelligent diagnostics result.</para>
+            /// <para>The intelligent diagnostics results.</para>
             /// </summary>
             [NameInMap("sceneResults")]
             [Validation(Required=false)]
@@ -243,14 +243,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Information about the nodes where data skew or data expansion is detected. This parameter is returned only when the diagnostics scenario is data skew or data expansion.</para>
+                /// <para>Node information for data skew or data expansion diagnostics. Returned only when the scenario is data skew or data expansion.</para>
                 /// </summary>
                 [NameInMap("params")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Params { get; set; }
 
                 /// <summary>
-                /// <para>The intelligent diagnostics result scenario.</para>
+                /// <para>The intelligent diagnostics scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LackResource</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The signature of the SQL job. You can use the signature to find the instances on which each time an SQL statement is executed.</para>
+            /// <para>The SQL job signature. Use this value to locate all instances where an SQL statement was executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20c1efb4a7caca1865f4aa784bb500efae74af04</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The total duration from the time a job is submitted to the time the job is terminated.</para>
+            /// <para>The total duration from job submission to termination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? TotalTime { get; set; }
 
             /// <summary>
-            /// <para>The wait time, which is the duration from the time the job is submitted to the time the job starts to run.</para>
+            /// <para>The duration from job submission to execution start.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -376,11 +376,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: informational. The request is received and being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: success. The request was received, understood, and accepted.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: redirection. Further action is required to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: client error. The request contains invalid parameters or syntax, or a precondition cannot be met.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: server error. The server failed to fulfill the request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

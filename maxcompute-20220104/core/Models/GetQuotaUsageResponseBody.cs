@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public class GetQuotaUsageResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The metric results.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;timestamps&quot;: [1668046140000, 1668065220000], //milliseconds</para>
+            /// <para>    &quot;project1#upload#request&quot;: [10, 20],
+            ///     &quot;project1#download#request&quot;: [20, 30],</para>
+            /// <para>    &quot;project1#upload#throughput&quot;: [50, 50],
+            ///     &quot;project1#download#throughput&quot;: [60, 70],</para>
+            /// <para>    &quot;pro2#errorNum&quot;: [5, 10]</para>
             /// </summary>
             [NameInMap("metrics")]
             [Validation(Required=false)]
@@ -34,7 +42,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The title of the chart.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>request</para>
+                /// <para>Project request concurrency</para>
                 /// </summary>
                 [NameInMap("title")]
                 [Validation(Required=false)]
@@ -84,11 +92,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: informational response. The request is received and is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: success. The request is successfully received, understood, and accepted by the server.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: redirection. The request is redirected, and further actions are required to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: server error. The server cannot meet requirements due to other reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

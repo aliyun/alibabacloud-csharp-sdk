@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class TriggerMmsTimerResponseBody : TeaModel {
         /// <summary>
-        /// <para>timer id</para>
+        /// <para>The ID of the timer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0be3e0b716671885050924814e3623</para>
         /// </summary>

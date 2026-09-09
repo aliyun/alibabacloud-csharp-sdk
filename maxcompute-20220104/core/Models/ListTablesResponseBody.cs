@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The name of the table.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dim_odps</para>
+                /// <para>sale_detail</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The owner of the table.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1887853961230110</para>
+                /// <para>188785396123****</para>
                 /// </summary>
                 [NameInMap("owner")]
                 [Validation(Required=false)]

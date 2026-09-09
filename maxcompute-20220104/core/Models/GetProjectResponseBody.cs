@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -20,14 +20,15 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The project description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>maxcompute project</para>
+            /// <para>BI_Analysis</para>
             /// </summary>
             [NameInMap("comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The total storage usage. The storage space that is occupied by your project, which is the logical storage space after your project data is collected and compressed.</para>
+            /// <para>The total storage size.
+            /// Views the current storage size of the project. This storage size is consistent with the metering caliber, which is the logical storage size after compression at the Project level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16489027</para>
@@ -47,26 +48,28 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The default computing quota that is used to allocate computing resources. If you do not specify a computing quota for your project, the jobs that are initiated by your project consume the computing resources in the default quota. For more information about how to use computing resources, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Use quota groups for computing resources</a>.</para>
+            /// <para>The default computing quota.
+            /// Used to allocate computing resources. If no computing quota is specified, jobs initiated by this project will consume resources from the default quota. For more information about computing resource usage, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/use-of-computing-resources">Computing Resources - Quota Usage</a>
+            /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/use-of-computing-resources">Computing Resources - Quota Usage</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>quota_a</para>
+            /// <para>os_PayAsYouGoQuota</para>
             /// </summary>
             [NameInMap("defaultQuota")]
             [Validation(Required=false)]
             public string DefaultQuota { get; set; }
 
             /// <summary>
-            /// <para>The information about the IP address whitelist.</para>
+            /// <para>The IP whitelist.</para>
             /// </summary>
             [NameInMap("ipWhiteList")]
             [Validation(Required=false)]
             public GetProjectResponseBodyDataIpWhiteList IpWhiteList { get; set; }
             public class GetProjectResponseBodyDataIpWhiteList : TeaModel {
                 /// <summary>
-                /// <para>The IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services.</para>
+                /// <para>The IP whitelist for public network and cloud product interconnection network.</para>
                 /// <remarks>
-                /// <para> If you configure only the IP address whitelist for access over the Internet or the network for interconnecting with other Alibaba Cloud services, the access over the Internet or the network for interconnecting with other Alibaba Cloud services is subject to configurations, and access over a virtual private cloud (VPC) is not allowed.</para>
+                /// <para>If only the public network and cloud product interconnection network IP whitelist is configured, access through the public network and cloud product interconnection network is restricted by the configuration, and all VPC network access is prohibited.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -77,9 +80,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string IpList { get; set; }
 
                 /// <summary>
-                /// <para>The IP address whitelist for access over a VPC.</para>
+                /// <para>The VPC network IP whitelist.</para>
                 /// <remarks>
-                /// <para> If you configure only the IP address whitelist for access over a VPC, the access over a VPC is subject to configurations, and the access over the Internet or the network for interconnecting with other Alibaba Cloud services is not allowed.</para>
+                /// <para>If only the VPC network IP whitelist is configured, VPC network access is restricted by the configuration, and all public network and cloud product interconnection network access is prohibited.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -105,14 +108,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <para>The account information of the project owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1565950907343451</para>
+            /// <para>ALIYUN$odps****@aliyunid.com</para>
             /// </summary>
             [NameInMap("owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the default computing quota.</para>
+            /// <para>The billing mode of the default computing quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PayAsYouGo</para>
@@ -129,7 +132,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public GetProjectResponseBodyDataProperties Properties { get; set; }
             public class GetProjectResponseBodyDataProperties : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</para>
+                /// <para>Whether full table scans are allowed in the project. Full table scans consume significant resources, so this feature is disabled by default to improve processing efficiency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -143,10 +146,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? AutoMvQuotaGb { get; set; }
 
                 /// <summary>
-                /// <para>The Tunnel parent resource group that is bound to the project. You do not need to pay attention to this group.</para>
+                /// <para>The parent group of the Data Transfer Service resource group bound to the project (can be ignored).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>No value</para>
+                /// <para>Default_p</para>
                 /// </summary>
                 [NameInMap("elderTunnelQuota")]
                 [Validation(Required=false)]
@@ -156,8 +159,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public bool? EnableAutoMv { get; set; }
 
+                [NameInMap("enableDataMasking")]
+                [Validation(Required=false)]
+                public bool? EnableDataMasking { get; set; }
+
                 /// <summary>
-                /// <para>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</para>
+                /// <para>Whether the MaxCompute 2.0 Decimal data type is enabled for the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -171,7 +178,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? EnableDr { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether external table caching is forcefully enabled.</para>
+                /// <para>Whether to force enable external table caching.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -181,7 +188,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? EnableFdcCacheForce { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> is enabled.</para>
+                /// <para>Whether &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -191,10 +199,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? EnableTieredStorage { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the routing of the Tunnel resource group is enabled.</para>
+                /// <para>Whether the Data Transfer Service resource group routing is enabled.</para>
                 /// <list type="bullet">
-                /// <item><description>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</description></item>
-                /// <item><description>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</description></item>
+                /// <item><description>true: Data Transfer Service tasks submitted by this project will use the bound Data Transfer Service resource group by default.</description></item>
+                /// <item><description>false: Data Transfer Service tasks submitted by this project will use the Data Transfer Service shared resource group by default.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,18 +220,19 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public GetProjectResponseBodyDataPropertiesEncryption Encryption { get; set; }
                 public class GetProjectResponseBodyDataPropertiesEncryption : TeaModel {
                     /// <summary>
-                    /// <para>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</para>
+                    /// <para>The data encryption algorithm. Supported encryption algorithms include AES256, AESCTR, and RC4.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>SHA1</para>
+                    /// <para>AES256</para>
                     /// </summary>
                     [NameInMap("algorithm")]
                     [Validation(Required=false)]
                     public string Algorithm { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see</para>
-                    /// <para><a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage encryption</a>.</para>
+                    /// <para>Whether data encryption is enabled for the project. For more information about data encryption, see
+                    /// &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -233,7 +242,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</para>
+                    /// <para>The key type used for data encryption, including the default key (MaxCompute Default Key) and Bring Your Own Key (BYOK). The default key (MaxCompute Default Key) is created internally by MaxCompute.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dafault</para>
@@ -245,7 +254,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The properties of the external project.</para>
+                /// <para>The external project properties.</para>
                 /// </summary>
                 [NameInMap("externalProjectProperties")]
                 [Validation(Required=false)]
@@ -264,7 +273,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string ForeignServerType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</para>
+                    /// <para>Whether this is a &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Lakehouse 2.0</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">Lakehouse 2.0</a> external project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -284,7 +294,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The quota for external table caching.</para>
+                /// <para>The external table cache quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fdc_quota</para>
@@ -294,7 +304,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string FdcQuota { get; set; }
 
                 /// <summary>
-                /// <para>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</para>
+                /// <para>The number of days to retain backup data. During this period, you can restore the current version to any backed-up data version.
+                /// Valid values: [0, 30]. Default value: 1. A value of 0 indicates that the backup feature is disabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -304,7 +315,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RetentionDays { get; set; }
 
                 /// <summary>
-                /// <para>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</para>
+                /// <para>The maximum threshold for single SQL consumption.
+                /// Unit: scan volume (GB) × complexity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1500</para>
@@ -314,14 +326,15 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SqlMeteringMax { get; set; }
 
                 /// <summary>
-                /// <para>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">storage tier</a> information.</para>
+                /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> information.</para>
                 /// </summary>
                 [NameInMap("storageTierInfo")]
                 [Validation(Required=false)]
                 public GetProjectResponseBodyDataPropertiesStorageTierInfo StorageTierInfo { get; set; }
                 public class GetProjectResponseBodyDataPropertiesStorageTierInfo : TeaModel {
                     /// <summary>
-                    /// <para>The backup storage usage.</para>
+                    /// <para>The backup storage size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>86672917</para>
@@ -341,14 +354,15 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public long? ProjectTotalSize { get; set; }
 
                     /// <summary>
-                    /// <para>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">storage tier</a> information.</para>
+                    /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage">tiered storage</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage">tiered storage</a> information.</para>
                     /// </summary>
                     [NameInMap("storageTierSize")]
                     [Validation(Required=false)]
                     public GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize StorageTierSize { get; set; }
                     public class GetProjectResponseBodyDataPropertiesStorageTierInfoStorageTierSize : TeaModel {
                         /// <summary>
-                        /// <para>The storage usage at the long-term storage tier.</para>
+                        /// <para>The long-term storage usage.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>21764917</para>
@@ -358,7 +372,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? LongTermSize { get; set; }
 
                         /// <summary>
-                        /// <para>The storage usage at the Infrequent Access (IA) layer.</para>
+                        /// <para>The infrequent access storage usage.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>767693</para>
@@ -368,7 +382,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? LowFrequencySize { get; set; }
 
                         /// <summary>
-                        /// <para>The storage usage at the standard storage tier.</para>
+                        /// <para>The standard storage usage.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>27649172</para>
@@ -382,7 +396,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The table lifecycle properties.</para>
+                /// <para>The lifecycle properties of tables.</para>
                 /// </summary>
                 [NameInMap("tableLifecycle")]
                 [Validation(Required=false)]
@@ -391,9 +405,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     /// <summary>
                     /// <para>The lifecycle type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>mandatory</b>: The lifecycle clause is required in a table creation statement.</description></item>
-                    /// <item><description><b>optional</b>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</description></item>
-                    /// <item><description><b>inherit</b>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</description></item>
+                    /// <item><description><b>mandatory</b>: The Lifecycle clause is mandatory. Users must set the table lifecycle.</description></item>
+                    /// <item><description><b>optional</b>: The Lifecycle clause is optional when creating a table. If the table lifecycle is not set, the table is permanently valid.</description></item>
+                    /// <item><description><b>inherit</b>: If the table lifecycle is not set when creating a table, the table lifecycle defaults to the value of odps.table.lifecycle.value.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -404,7 +418,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</para>
+                    /// <para>The table lifecycle in days. Valid values: 1 to 37231. Default value: 37231.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>37231</para>
@@ -416,30 +430,29 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">properties of tiered storage lifecycle rules</a>. After you configure the properties, the system triggers automatic switching of storage tiers based on the rules.</para>
+                /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/tiered-storage#f61fc9db76nna">tiered storage lifecycle rules</a> properties. After configuration, the system will trigger automatic storage tier conversion based on these rules.</para>
                 /// </summary>
                 [NameInMap("tableLifecycleConfig")]
                 [Validation(Required=false)]
                 public GetProjectResponseBodyDataPropertiesTableLifecycleConfig TableLifecycleConfig { get; set; }
                 public class GetProjectResponseBodyDataPropertiesTableLifecycleConfig : TeaModel {
                     /// <summary>
-                    /// <para>The information about the long-term storage tier.</para>
+                    /// <para>The long-term storage identifier.</para>
                     /// </summary>
                     [NameInMap("TierToLongterm")]
                     [Validation(Required=false)]
                     public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongterm TierToLongterm { get; set; }
                     public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLongterm : TeaModel {
                         /// <summary>
-                        /// <para>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <c>LastAccessTime</c> that is configured for the table or partition.</para>
+                        /// <para>The number of days after the last data access before automatic conversion, corresponding to the <c>LastAccessTime</c> of the table or partition.</para>
                         /// <remarks>
-                        /// <para> If LastAccessTime of a table or partition is left empty, the following rules are applied:</para>
-                        /// </remarks>
+                        /// <para>If the LastAccessTime of the table or partition is empty:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>For tables or partitions that you created before October 1, 2023, 2023.10.01 00:00:00 in UTC+0 is considered as the last access time.</para>
-                        /// </description></item>
-                        /// <item><description><para>For tables or partitions that you created on or after October 1, 2023, if no data is accessed, the table or partition creation time is considered as the last access time.</para>
-                        /// </description></item>
+                        /// <item><description>For tables or partitions created before October 1, 2023, the default time is 2023.10.01 00:00:00 in the UTC+0 timezone.</description></item>
+                        /// <item><description>For tables or partitions created after October 1, 2023, if the data has not been accessed, the CreateTime is used for calculation.</description></item>
                         /// </list>
+                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>180</para>
@@ -449,7 +462,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? DaysAfterLastAccessGreaterThan { get; set; }
 
                         /// <summary>
-                        /// <para>The system triggers an automatic storage tier change N days after the last modification time of data. N is specified by this parameter and corresponds to <c>LastModifiedTime</c> that is configured for the table or partition.</para>
+                        /// <para>The number of days after the last data modification before automatic conversion, corresponding to the <c>LastModifiedTime</c> of the table or partition.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>180</para>
@@ -459,7 +472,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? DaysAfterLastModificationGreaterThan { get; set; }
 
                         /// <summary>
-                        /// <para>The period after the previous storage tier change time.</para>
+                        /// <para>The number of days since the last storage tier conversion.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -471,23 +484,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>The information about the IA storage tier.</para>
+                    /// <para>The infrequent access storage identifier.</para>
                     /// </summary>
                     [NameInMap("TierToLowFrequency")]
                     [Validation(Required=false)]
                     public GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequency TierToLowFrequency { get; set; }
                     public class GetProjectResponseBodyDataPropertiesTableLifecycleConfigTierToLowFrequency : TeaModel {
                         /// <summary>
-                        /// <para>The system triggers an automatic storage tier change N days after the last access time of data. N is specified by this parameter and corresponds to <c>LastAccessTime</c> that is configured for the table or partition.</para>
+                        /// <para>The number of days after the last data access before automatic conversion, corresponding to the <c>LastAccessTime</c> of the table or partition.</para>
                         /// <remarks>
-                        /// <para> If LastAccessTime of a table or partition is left empty, the following rules are applied:</para>
-                        /// </remarks>
+                        /// <para>If the LastAccessTime of the table or partition is empty:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>For tables or partitions that you created before October 1, 2023, 2023.10.01 00:00:00 in UTC+0 is considered as the last access time.</para>
-                        /// </description></item>
-                        /// <item><description><para>For tables or partitions that you created on or after October 1, 2023, if no data is accessed, the table or partition creation time is considered as the last access time.</para>
-                        /// </description></item>
+                        /// <item><description>For tables or partitions created before October 1, 2023, the default time is 2023.10.01 00:00:00 in the UTC+0 timezone.</description></item>
+                        /// <item><description>For tables or partitions created after October 1, 2023, if the data has not been accessed, the CreateTime is used for calculation.</description></item>
                         /// </list>
+                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>30</para>
@@ -497,7 +508,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? DaysAfterLastAccessGreaterThan { get; set; }
 
                         /// <summary>
-                        /// <para>The system triggers an automatic storage tier change N days after the last modification time of data. N is specified by this parameter and corresponds to <c>LastModifiedTime</c> that is configured for the table or partition.</para>
+                        /// <para>The number of days after the last data modification before automatic conversion, corresponding to the <c>LastModifiedTime</c> of the table or partition.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>30</para>
@@ -507,7 +518,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? DaysAfterLastModificationGreaterThan { get; set; }
 
                         /// <summary>
-                        /// <para>The period after the previous storage tier change time.</para>
+                        /// <para>The number of days since the last storage tier conversion.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -521,7 +532,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The time zone that is used by your project. The time zone is the same as the time zone specified by <c>odps.sql.timezone</c>.</para>
+                /// <para>The project timezone, which is the <c>odps.sql.timezone</c> property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Asia/Shanghai</para>
@@ -531,14 +542,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Tunnel</a> resource group that is bound to the project.</para>
+                /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a> resource group bound to the project.</para>
                 /// <list type="bullet">
-                /// <item><description>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</description></item>
-                /// <item><description>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</description></item>
+                /// <item><description><para>Default (Data Transfer Service shared resource group): This project is not allowed to use the Data Transfer Service (subscription) resource group. Regardless of the default Data Transfer Service resource group setting, Data Transfer Service tasks submitted by this project will automatically use the Default resource group.</para>
+                /// </description></item>
+                /// <item><description><para>Data Transfer Service (subscription) resource group: This project is allowed to use the Data Transfer Service (subscription) resource group.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Quota</para>
+                /// <para>Default</para>
                 /// </summary>
                 [NameInMap("tunnelQuota")]
                 [Validation(Required=false)]
@@ -547,11 +561,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The data type edition. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: MaxCompute V1.0 data type edition</description></item>
-                /// <item><description><b>2</b>: MaxCompute V2.0 data type edition</description></item>
-                /// <item><description><b>hive</b>: Hive-compatible data type edition</description></item>
+                /// <item><description><b>1</b>: Edition 1.0.</description></item>
+                /// <item><description><b>2</b>: Edition 2.0.</description></item>
+                /// <item><description><b>hive</b>: Hive-compatible type.</description></item>
                 /// </list>
-                /// <para>For more information about the differences among the three data type editions, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data type editions</a>.</para>
+                /// <para>For differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0</para>
@@ -573,7 +588,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The instance ID and billing method of the default computing quota.</para>
+            /// <para>The instance ID and billing type of the default computing quota.</para>
             /// </summary>
             [NameInMap("saleTag")]
             [Validation(Required=false)]
@@ -583,17 +598,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <para>The instance ID of the default computing quota.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>project_name</para>
+                /// <para>b7afb7d1-<b><b>-</b></b>-****-c393669c307b</para>
                 /// </summary>
                 [NameInMap("resourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the default computing quota.</para>
+                /// <para>The billing type of the default computing quota.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>project</para>
+                /// <para>PayAsYouGo</para>
                 /// </summary>
                 [NameInMap("resourceType")]
                 [Validation(Required=false)]
@@ -609,7 +624,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public GetProjectResponseBodyDataSecurityProperties SecurityProperties { get; set; }
             public class GetProjectResponseBodyDataSecurityProperties : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. By default, this feature is disabled.</para>
+                /// <para>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/download-control">download control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">download control</a> feature is enabled. It is disabled by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -619,7 +635,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? EnableDownloadPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. By default, this feature is disabled.</para>
+                /// <para>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/label-based-access-control">label-based access control</a> feature is enabled. It is disabled by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -629,7 +646,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? LabelSecurity { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to allow the object creator to have the access permissions on the object. The default value is true, which indicates that the object creator has the access permissions on the object.</para>
+                /// <para>Whether the object creator is allowed to have access permissions on the object. This is allowed by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -639,7 +656,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? ObjectCreatorHasAccessPermission { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the object creator has the authorization permissions on the object. The default value is true, which indicates that the object creator has the authorization permissions on the object.</para>
+                /// <para>Whether the object creator is allowed to have grant permissions on the object. This is allowed by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -649,38 +666,45 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? ObjectCreatorHasGrantPermission { get; set; }
 
                 /// <summary>
-                /// <para>The properties of the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>.</para>
+                /// <para>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/project-data-protection">data protection</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection</a> properties.</para>
                 /// </summary>
                 [NameInMap("projectProtection")]
                 [Validation(Required=false)]
                 public GetProjectResponseBodyDataSecurityPropertiesProjectProtection ProjectProtection { get; set; }
                 public class GetProjectResponseBodyDataSecurityPropertiesProjectProtection : TeaModel {
                     /// <summary>
-                    /// <para>If you enable the project data protection mechanism, you can configure exception or trusted projects. This allows specified users to transfer data of a specified object to a specified project. The project data protection mechanism does not take effect in all the situations that are specified in the exception policy.</para>
+                    /// <para>If project data protection is enabled, you can set exceptions or trusted projects to allow specified users to export data of specified objects to specified projects. All scenarios described in the Exception Policy can override the data protection mechanism.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{
-                    ///     &quot;Version&quot;: &quot;1&quot;,
-                    ///     &quot;Statement&quot;:
-                    ///     [{
-                    ///         &quot;Effect&quot;:&quot;Allow&quot;,
-                    ///         &quot;Principal&quot;:&quot;<Principal>&quot;,
-                    ///         &quot;Action&quot;:[&quot;odps:<Action1>[, <Action2>, ...]&quot;],
-                    ///         &quot;Resource&quot;:&quot;acs:odps:*:<Resource>&quot;,
-                    ///         &quot;Condition&quot;:{
-                    ///             &quot;StringEquals&quot;: {
-                    ///                 &quot;odps:TaskType&quot;:[&quot;<Tasktype>&quot;]
+                    ///       &quot;Version&quot;: &quot;1&quot;,
+                    ///       &quot;Statement&quot;: [
+                    ///             {
+                    ///                   &quot;Effect&quot;: &quot;Allow&quot;,
+                    ///                   &quot;Principal&quot;: &quot;&quot;,
+                    ///                   &quot;Action&quot;: [
+                    ///                         &quot;odps:[, , ...]&quot;
+                    ///                   ],
+                    ///                   &quot;Resource&quot;: &quot;acs:odps:*:&quot;,
+                    ///                   &quot;Condition&quot;: {
+                    ///                         &quot;StringEquals&quot;: {
+                    ///                               &quot;odps:TaskType&quot;: [
+                    ///                                     &quot;&quot;
+                    ///                               ]
+                    ///                         }
+                    ///                   }
                     ///             }
-                    ///         }
-                    ///     }]
-                    ///     }</para>
+                    ///       ]
+                    /// }</para>
                     /// </summary>
                     [NameInMap("exceptionPolicy")]
                     [Validation(Required=false)]
                     public string ExceptionPolicy { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled for the project. This allows or denies data transfer across projects. By default, the data protection mechanism is disabled.</para>
+                    /// <para>Whether the project &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a>
+                    /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/project-data-protection">data protection mechanism</a> is enabled to prohibit or allow data to flow out of the project. It is disabled by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -692,7 +716,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. By default, this feature is enabled.</para>
+                /// <para>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/acl-based-access-control">ACL-based access control</a> feature is enabled. It is enabled by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -702,7 +727,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? UsingAcl { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. By default, this feature is enabled.</para>
+                /// <para>Whether the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a>
+                /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/policy-based-access-control-1">policy-based access control</a> feature is enabled. It is enabled by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -716,10 +742,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <summary>
             /// <para>The project status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AVAILABLE</b></description></item>
-            /// <item><description><b>READONLY</b></description></item>
-            /// <item><description><b>FROZEN</b></description></item>
-            /// <item><description><b>DELETING</b></description></item>
+            /// <item><description><b>AVAILABLE</b>: normal.</description></item>
+            /// <item><description><b>READONLY</b>: read-only.</description></item>
+            /// <item><description><b>FROZEN</b>: frozen.</description></item>
+            /// <item><description><b>DELETING</b>: being deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -730,14 +756,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of <c>Super_Administrator</c> role members of the project.</para>
+            /// <para>The list of members with the <c>Super_Administrator</c> role in the project.</para>
             /// </summary>
             [NameInMap("superAdmins")]
             [Validation(Required=false)]
             public List<string> SuperAdmins { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data storage by schema is supported. MaxCompute supports the schema feature. This feature allows you to classify objects such as tables, resources, and user-defined functions (UDFs) in a project by schema. You can create multiple schemas in a project. For more information, see <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema-related operations</a>.</para>
+            /// <para>Whether schema-based storage is supported.
+            /// MaxCompute supports Schema, which is an object between Project and Table/Resource/UDF for categorizing Tables, Resources, and UDFs. A Project can contain multiple Schemas. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/schema-related-operations">Schema Operations</a>
+            /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/schema-related-operations">Schema Operations</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -749,8 +777,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// <summary>
             /// <para>The project type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>managed</b>: internal project</description></item>
-            /// <item><description><b>external</b>: external project</description></item>
+            /// <item><description><b>managed</b>: internal project.</description></item>
+            /// <item><description><b>external</b>: external project.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -766,7 +794,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>040002</para>
+        /// <para>OBJECT_NOT_EXIST</para>
         /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
@@ -776,7 +804,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>error message.</para>
+        /// <para>This object does not exist.</para>
         /// </summary>
         [NameInMap("errorMsg")]
         [Validation(Required=false)]
@@ -785,11 +813,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description>1xx: Informational response - The request has been received and is being processed.</description></item>
+        /// <item><description>2xx: Success - The request has been successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection - The request has been redirected. Further action is required to complete the request.</description></item>
+        /// <item><description>4xx: Client error - The request contains incorrect parameters, syntax errors, or specific request conditions cannot be met.</description></item>
+        /// <item><description>5xx: Server error - The server is unable to fulfill the request due to other reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

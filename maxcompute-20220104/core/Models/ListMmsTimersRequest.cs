@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsTimersRequest : TeaModel {
         /// <summary>
+        /// <para>The timer name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The source database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_db_1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcDbName { get; set; }
 
         /// <summary>
+        /// <para>The source table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_table_1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string SrcTableName { get; set; }
 
         /// <summary>
+        /// <para>Filters timers by their stopped state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateMmsTablesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>88</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5CA6292A-E301-5CD8-B4E2-AF060F99147B</para>
         /// </summary>

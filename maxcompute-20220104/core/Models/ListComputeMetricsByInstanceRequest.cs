@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListComputeMetricsByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for the period.</para>
+        /// <para>The end of the query time range, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1718590596556</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>The job(instance) ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20240730****ddlr</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account that is used to run the MaxCompute job.</para>
+        /// <para>The job owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN$7632***@aliyun.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of MaxCompute project.</para>
+        /// <para>The names of the projects.</para>
         /// </summary>
         [NameInMap("projectNames")]
         [Validation(Required=false)]
         public List<string> ProjectNames { get; set; }
 
         /// <summary>
-        /// <para>The signature of the SQL job.</para>
+        /// <para>The SQL job signature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ghijkl789012</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Signature { get; set; }
 
         /// <summary>
-        /// <para>Specification types.</para>
+        /// <para>The specification types.</para>
         /// </summary>
         [NameInMap("specCodes")]
         [Validation(Required=false)]
         public List<string> SpecCodes { get; set; }
 
         /// <summary>
-        /// <para>The start time for the period.</para>
+        /// <para>The start of the query time range, specified as a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1715393576201</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? StartDate { get; set; }
 
         /// <summary>
-        /// <para>Metering types.</para>
+        /// <para>The metering types.</para>
         /// </summary>
         [NameInMap("types")]
         [Validation(Required=false)]

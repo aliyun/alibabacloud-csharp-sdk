@@ -107,8 +107,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     /// <para>The value of minCU in Reserved CUs.</para>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>The total value of minCU in all the level-2 quotas is equal to the value of minCU in the level-1 quota.</description></item>
-                    /// <item><description>The value of minCU must be less than or equal to the value of maxCU in the level-2 quota and less than or equal to the value of minCU in the level-1 quota that you purchased.</description></item>
+                    /// <item><description><para>The total value of minCU in all the level-2 quotas is equal to the value of minCU in the level-1 quota.</para>
+                    /// </description></item>
+                    /// <item><description><para>The value of minCU must be less than or equal to the value of maxCU in the level-2 quota and less than or equal to the value of minCU in the level-1 quota that you purchased.</para>
+                    /// </description></item>
                     /// </list>
                     /// </remarks>
                     /// <para>This parameter is required.</para>

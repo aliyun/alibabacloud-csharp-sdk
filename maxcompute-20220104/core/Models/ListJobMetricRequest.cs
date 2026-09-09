@@ -14,10 +14,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <remarks>
         /// <para>Available values: project, quota, type, status. Meanings:</para>
         /// <list type="bullet">
-        /// <item><description>project: Group and aggregate by project;</description></item>
-        /// <item><description>quota: Group and aggregate by quota;</description></item>
-        /// <item><description>type: Group and aggregate by job type;</description></item>
-        /// <item><description>status: Group and aggregate by job status.</description></item>
+        /// <item><description><para>project: Group and aggregate by project;</para>
+        /// </description></item>
+        /// <item><description><para>quota: Group and aggregate by quota;</para>
+        /// </description></item>
+        /// <item><description><para>type: Group and aggregate by job type;</para>
+        /// </description></item>
+        /// <item><description><para>status: Group and aggregate by job status.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

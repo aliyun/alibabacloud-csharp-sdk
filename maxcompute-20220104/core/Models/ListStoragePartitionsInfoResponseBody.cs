@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListStoragePartitionsInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListStoragePartitionsInfoResponseBodyData Data { get; set; }
         public class ListStoragePartitionsInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The date on which the statistics are collected.</para>
+            /// <para>The date to which the statistics apply.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20241205</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Date { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The partition storage information.</para>
+            /// <para>The storage information for the partitions.</para>
             /// </summary>
             [NameInMap("storagePartitionInfoList")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string FileSizeUnit { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the table is a partitioned table. This operation returns the partition information. You do not need to take note of this parameter.</para>
+                /// <para>Indicates whether the table is a partitioned table. You can ignore this parameter because this operation returns data only for partitions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? IsPartitioned { get; set; }
 
                 /// <summary>
-                /// <para>The time when the partition data was last accessed.</para>
+                /// <para>The last access time of the partition.</para>
                 /// <remarks>
-                /// <para> The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the last access time cannot be collected.</para>
+                /// <para>Data collection for this metric began a gradual rollout in July 2023. Consequently, the lastAccessTime may not be recorded for a partition that has not been accessed since then or is accessed only by ALGO jobs or direct reads from Hologres.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The change rate of the total storage usage compared with that of the recent {$recentDays} days. No value is returned.</para>
+                /// <para>The period-over-period change in the total storage usage over the last {$recentDays} days. This API operation does not return this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1%</para>
@@ -147,11 +147,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SchemaName { get; set; }
 
                 /// <summary>
-                /// <para>The storage type.</para>
+                /// <para>The storage type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>standard</description></item>
-                /// <item><description>lowfrequency</description></item>
-                /// <item><description>longterm</description></item>
+                /// <item><description><para><c>standard</c>: Standard storage</para>
+                /// </description></item>
+                /// <item><description><para><c>lowfrequency</c>: Infrequent-access storage</para>
+                /// </description></item>
+                /// <item><description><para><c>longterm</c>: Archive storage</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -174,19 +177,23 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The access frequency.</para>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>Access behaviors include:</para>
+                /// <item><description>Access activities include:</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description><para>The table is used as input in a SQL compute task.</para>
                 /// </description></item>
-                /// <item><description><para>The table is used as the input table of an SQL task.</para>
+                /// <item><description><para>The table is downloaded via Tunnel.</para>
                 /// </description></item>
-                /// <item><description><para>The table is downloaded by Tunnel.</para>
-                /// </description></item>
-                /// <item><description><para>The table is read by calling the Storage API. The partition granularity of the partitioned table is not available. Each time an access operation is performed, the access frequency is incremented by 1.</para>
-                /// </description></item>
-                /// <item><description><para>The data collection method is upgraded from July 2023. If the data is not accessed after the upgrade or is accessed by using ALGO jobs or the direct read method of Hologres, the access frequency cannot be collected.</para>
+                /// <item><description><para>The table data is read by calling the <c>Read</c> operation of the StorageAPI. Partition-level data for partitioned tables is not available. Each access activity increases the access frequency by 1.</para>
                 /// </description></item>
                 /// </list>
+                /// </remarks>
+                /// <list type="bullet">
+                /// <item><description>Data collection for this metric began a gradual rollout in July 2023. Consequently, the access frequency may not be recorded for tables that have not been accessed since then or are accessed only by ALGO jobs or direct reads from Hologres.</description></item>
+                /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -196,9 +203,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? TotalFrequency { get; set; }
 
                 /// <summary>
-                /// <para>The total amount of accessed data.</para>
+                /// <para>The total data accessed.</para>
                 /// <remarks>
-                /// <para> The amount of data that is read by all access behaviors.</para>
+                /// <para>The cumulative amount of data read from all access operations.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -209,7 +216,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public double? TotalInputAmount { get; set; }
 
                 /// <summary>
-                /// <para>The unit of the total amount of accessed data.</para>
+                /// <para>The unit of the total data accessed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GB</para>
@@ -219,7 +226,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TotalInputAmountUnit { get; set; }
 
                 /// <summary>
-                /// <para>The type.</para>
+                /// <para>The type of the object. The value is always PARTITION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PARTITION</para>
@@ -231,7 +238,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>57</para>
@@ -265,11 +272,16 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
-        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
-        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
-        /// <item><description>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</description></item>
-        /// <item><description>5xx: server error. The server cannot meet requirements due to other reasons.</description></item>
+        /// <item><description><para>1xx: Informational response - The request has been received and is being processed.</para>
+        /// </description></item>
+        /// <item><description><para>2xx: Success - The request was successfully received, understood, and accepted.</para>
+        /// </description></item>
+        /// <item><description><para>3xx: Redirection - Further action must be taken to complete the request.</para>
+        /// </description></item>
+        /// <item><description><para>4xx: Client error - The request contains invalid parameters or syntax, or cannot be fulfilled.</para>
+        /// </description></item>
+        /// <item><description><para>5xx: Server error - The server failed to fulfill a valid request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

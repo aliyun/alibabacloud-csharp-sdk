@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListStoragePartitionsInfoShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort data in ascending order.</para>
+        /// <para>Specifies whether to sort the results in ascending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The date on which the statistics are collected, in days. Set this parameter to a value in the YYYYMMdd format.</para>
+        /// <para>The date for which to retrieve statistics. The date must be in <c>YYYYMMdd</c> format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The sorting column.</para>
+        /// <para>The column to sort by.</para>
         /// 
         /// <b>Example:</b>
         /// <para>totalFrequency</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the partition that you want to use for fuzzy match.</para>
+        /// <para>The partition name. This parameter supports fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ds=20241201</para>
+        /// <para>20241201</para>
         /// </summary>
         [NameInMap("partitionPrefix")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The name of the schema.</para>
+        /// <para>The schema that contains the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schema</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Schema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tenant. You can log on to the MaxCompute console, and choose <b>Tenants</b> &gt; <b>Tenant Property</b> from the left-side navigation pane to view the tenant ID.</para>
+        /// <para>The tenant ID. You can find this ID in the MaxCompute console by navigating to <b>Tenant Management</b> &gt; <b>Tenant Properties</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40713753659****</para>
