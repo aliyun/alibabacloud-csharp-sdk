@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
     public class ListDataSourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the property. RegionId is supported.</para>
+        /// <para>The name of the attribute. Only <c>RegionId</c> is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public string AttributeName { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. JSON format:{&quot;key1&quot;:&quot;value1&quot;}.</para>
+        /// <para>The filter condition. The value must be a JSON string in the {&quot;key1&quot;:&quot;value1&quot;} format.</para>
         /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]

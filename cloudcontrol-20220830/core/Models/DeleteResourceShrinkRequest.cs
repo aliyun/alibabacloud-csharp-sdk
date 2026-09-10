@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
     public class DeleteResourceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. If a cloud service supports idempotence, the parameter takes effect.</para>
+        /// <para>A client token to ensure idempotence. This parameter works only if the cloud product supports idempotence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1e810dfe1468721d0664a49b9d9f74f4</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The region. This parameter is required if a cloud service is a regionalized.</para>
+        /// <para>The region ID. This parameter is required if the cloud product is region-specific.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

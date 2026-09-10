@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
     public class GetResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned. Return result of the List operation.</para>
+        /// <para>The maximum number of records returned for the current request. This parameter is returned by the List operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. Return result of the List operation.</para>
+        /// <para>The position where the current call finished reading. An empty value indicates that all data has been read. This parameter is returned by the List operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The specified resource. Return result of the Get operation.</para>
+        /// <para>The specified resource. This parameter is returned by the Get operation.</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public GetResourcesResponseBodyResource Resource { get; set; }
         public class GetResourcesResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The resource properties in the JSON format.</para>
+            /// <para>The resource properties in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</para>
+            /// <para>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-2ze8v41uei31lo****&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</para>
             /// </summary>
             [NameInMap("resourceAttributes")]
             [Validation(Required=false)]
             public Dictionary<string, object> ResourceAttributes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cctest</para>
@@ -69,24 +69,24 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         }
 
         /// <summary>
-        /// <para>The resource list. Return result of the List operation.</para>
+        /// <para>A list of resources. This parameter is returned by the List operation.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]
         public List<GetResourcesResponseBodyResources> Resources { get; set; }
         public class GetResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The resource properties in the JSON format.</para>
+            /// <para>The resource properties in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</para>
+            /// <para>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-2ze8v41uei31lo****&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</para>
             /// </summary>
             [NameInMap("resourceAttributes")]
             [Validation(Required=false)]
             public Dictionary<string, object> ResourceAttributes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cctest</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned. Return result of the List operation.</para>
+        /// <para>The total number of entries that match the query conditions. This parameter is returned by the List operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

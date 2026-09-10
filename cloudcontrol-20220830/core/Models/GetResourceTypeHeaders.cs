@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The language selected for the returned product.</para>
+        /// <para>The language in which the product information is returned. Valid values:</para>
         /// <para>zh_CH: Chinese (default)</para>
-        /// <para>en_US: English</para>
+        /// <para>en_US: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh_CH</para>

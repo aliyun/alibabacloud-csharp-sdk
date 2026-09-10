@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 {
     public class ListDataSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried data.</para>
+        /// <para>The list of data.</para>
         /// </summary>
         [NameInMap("dataSources")]
         [Validation(Required=false)]
         public List<ListDataSourcesResponseBodyDataSources> DataSources { get; set; }
         public class ListDataSourcesResponseBodyDataSources : TeaModel {
             /// <summary>
-            /// <para>The ID of the data.</para>
+            /// <para>The data ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

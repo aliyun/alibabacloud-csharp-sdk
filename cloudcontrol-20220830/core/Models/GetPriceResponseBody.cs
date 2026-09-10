@@ -134,6 +134,9 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 
                 /// <summary>
                 /// <para>The ID of the promotion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>数据盘享8.5折</para>
                 /// </summary>
                 [NameInMap("promotionId")]
                 [Validation(Required=false)]
@@ -141,6 +144,9 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
 
                 /// <summary>
                 /// <para>The name of the promotion.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>数据盘享8.5折</para>
                 /// </summary>
                 [NameInMap("promotionName")]
                 [Validation(Required=false)]

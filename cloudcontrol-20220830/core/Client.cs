@@ -18,7 +18,38 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-northeast-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-5", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-6", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-7", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"cn-beijing", "cloudcontrol.aliyuncs.com"},
+                {"cn-chengdu", "cloudcontrol.aliyuncs.com"},
+                {"cn-fuzhou", "cloudcontrol.aliyuncs.com"},
+                {"cn-guangzhou", "cloudcontrol.aliyuncs.com"},
+                {"cn-hangzhou", "cloudcontrol.aliyuncs.com"},
+                {"cn-heyuan", "cloudcontrol.aliyuncs.com"},
+                {"cn-hongkong", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"cn-huhehaote", "cloudcontrol.aliyuncs.com"},
+                {"cn-nanjing", "cloudcontrol.aliyuncs.com"},
+                {"cn-qingdao", "cloudcontrol.aliyuncs.com"},
+                {"cn-shanghai", "cloudcontrol.aliyuncs.com"},
+                {"cn-shenzhen", "cloudcontrol.aliyuncs.com"},
+                {"cn-wulanchabu", "cloudcontrol.aliyuncs.com"},
+                {"cn-zhangjiakou", "cloudcontrol.aliyuncs.com"},
+                {"us-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"us-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"eu-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"eu-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"me-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"me-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudcontrol", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -337,12 +368,12 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls this operation to delete resources.</para>
+        /// <para>Deletes a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -405,12 +436,12 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls this operation to delete resources.</para>
+        /// <para>Deletes a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -473,12 +504,12 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls this operation to delete resources.</para>
+        /// <para>Deletes a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -500,12 +531,12 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls this operation to delete resources.</para>
+        /// <para>Deletes a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</para>
+        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -523,6 +554,126 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteResourceWithOptionsAsync(requestPath, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPriceResponse
+        /// </returns>
+        public GetApiPriceResponse GetApiPriceWithOptions(GetApiPriceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPrice",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/quote",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPriceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPriceResponse
+        /// </returns>
+        public async Task<GetApiPriceResponse> GetApiPriceWithOptionsAsync(GetApiPriceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetApiPrice",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/quote",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetApiPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPriceResponse
+        /// </returns>
+        public GetApiPriceResponse GetApiPrice(GetApiPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetApiPriceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pricing based on an OpenAPI triplet and input parameters.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetApiPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetApiPriceResponse
+        /// </returns>
+        public async Task<GetApiPriceResponse> GetApiPriceAsync(GetApiPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetApiPriceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -689,7 +840,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// <para>Retrieves resource metadata.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -737,7 +888,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// <para>Retrieves resource metadata.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -785,7 +936,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// <para>Retrieves resource metadata.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -804,7 +955,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to obtain resource metadata.</para>
+        /// <para>Retrieves resource metadata.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -823,13 +974,13 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query resources.</para>
+        /// <para>Query resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// <para>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+        /// This API provides Get and List operations for resources that you can invoke using different request URIs.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -896,13 +1047,13 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query resources.</para>
+        /// <para>Query resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// <para>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+        /// This API provides Get and List operations for resources that you can invoke using different request URIs.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -969,13 +1120,13 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query resources.</para>
+        /// <para>Query resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// <para>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+        /// This API provides Get and List operations for resources that you can invoke using different request URIs.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -997,13 +1148,13 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query resources.</para>
+        /// <para>Query resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-        /// You can call this operation to query resources List and Get based on different request paths.</para>
+        /// <para>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+        /// This API provides Get and List operations for resources that you can invoke using different request URIs.</para>
         /// </description>
         /// 
         /// <param name="requestPath">
@@ -1147,7 +1298,147 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// <para>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTerraformPricingMappingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformPricingMappingsResponse
+        /// </returns>
+        public GetTerraformPricingMappingsResponse GetTerraformPricingMappingsWithOptions(GetTerraformPricingMappingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerraformPricingMappings",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/terraform-mappings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerraformPricingMappingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTerraformPricingMappingsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformPricingMappingsResponse
+        /// </returns>
+        public async Task<GetTerraformPricingMappingsResponse> GetTerraformPricingMappingsWithOptionsAsync(GetTerraformPricingMappingsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerraformPricingMappings",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/terraform-mappings",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerraformPricingMappingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTerraformPricingMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformPricingMappingsResponse
+        /// </returns>
+        public GetTerraformPricingMappingsResponse GetTerraformPricingMappings(GetTerraformPricingMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTerraformPricingMappingsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pricing mapping catalogs in batches by Terraform resource type for cost estimation during the RunIaC plan phase.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTerraformPricingMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformPricingMappingsResponse
+        /// </returns>
+        public async Task<GetTerraformPricingMappingsResponse> GetTerraformPricingMappingsAsync(GetTerraformPricingMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTerraformPricingMappingsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the valid values of resource attributes, such as RegionID and ZoneId.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -1206,7 +1497,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// <para>Queries the valid values of resource attributes, such as RegionID and ZoneId.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -1265,7 +1556,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// <para>Queries the valid values of resource attributes, such as RegionID and ZoneId.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -1287,7 +1578,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the operation to query the valid values of resource attributes, such as RegionID and ZoneId.</para>
+        /// <para>Queries the valid values of resource attributes, such as RegionID and ZoneId.</para>
         /// </summary>
         /// 
         /// <param name="requestPath">
@@ -1677,6 +1968,144 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ListResourceTypesHeaders headers = new ListResourceTypesHeaders();
             return await ListResourceTypesWithOptionsAsync(provider, product, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the OpenAPI triplets that currently support price inquiry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSupportedPricingApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportedPricingApisResponse
+        /// </returns>
+        public ListSupportedPricingApisResponse ListSupportedPricingApisWithOptions(ListSupportedPricingApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSupportedPricingApis",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/supported-apis",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSupportedPricingApisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the OpenAPI triplets that currently support price inquiry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSupportedPricingApisRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportedPricingApisResponse
+        /// </returns>
+        public async Task<ListSupportedPricingApisResponse> ListSupportedPricingApisWithOptionsAsync(ListSupportedPricingApisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSupportedPricingApis",
+                Version = "2022-08-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/price/supported-apis",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSupportedPricingApisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the OpenAPI triplets that currently support price inquiry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSupportedPricingApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportedPricingApisResponse
+        /// </returns>
+        public ListSupportedPricingApisResponse ListSupportedPricingApis(ListSupportedPricingApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSupportedPricingApisWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the OpenAPI triplets that currently support price inquiry.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSupportedPricingApisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSupportedPricingApisResponse
+        /// </returns>
+        public async Task<ListSupportedPricingApisResponse> ListSupportedPricingApisAsync(ListSupportedPricingApisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSupportedPricingApisWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

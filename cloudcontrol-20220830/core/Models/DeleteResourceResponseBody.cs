@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudcontrol20220830.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task. If the operation is asynchronous, this field is returned. In this case, the HTTP status code 202 is returned.</para>
+        /// <para>The ID of the asynchronous task. The system returns this parameter for asynchronous operations. For these operations, the HTTP status code is 202.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-433aead756057fff8189a7ce5****</para>
