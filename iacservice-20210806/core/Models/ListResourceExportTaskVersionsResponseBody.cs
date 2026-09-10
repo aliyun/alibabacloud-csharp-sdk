@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListResourceExportTaskVersionsResponseBodyExportTasks> ExportTasks { get; set; }
         public class ListResourceExportTaskVersionsResponseBodyExportTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
+            /// <para>The creation time in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-11T02:18:50Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExportTaskId { get; set; }
 
             /// <summary>
-            /// <para>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</para>
+            /// <para>The module to which the exported template is saved. If this parameter is not specified, the template is automatically saved in the Registry.</para>
             /// </summary>
             [NameInMap("exportToModule")]
             [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The path of the State file corresponding to the module.</para>
+                /// <para>The path of the State file that corresponds to the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <item><description>ResourceGroupId: the resource group ID. Example: rg-1234.</description></item>
                 /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</description></item>
                 /// </list>
-                /// <para>Multiple filter conditions have an AND relationship by default. A resource must meet all filter conditions to be considered a match.</para>
+                /// <para>By default, multiple filter conditions are evaluated with an AND operator. A resource must match all filter conditions to be considered a match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RegionId</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ManagedTaskId { get; set; }
 
             /// <summary>
-            /// <para>The module configuration of the exported resources.</para>
+            /// <para>The module configurations of the exported resources.</para>
             /// </summary>
             [NameInMap("modules")]
             [Validation(Required=false)]
@@ -181,11 +181,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The download address of the exported template within the module.</para>
+                /// <para>The download address of the exported template in the module.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If Source is CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
+                /// <item><description><para>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
                 /// </description></item>
-                /// <item><description><para>If Source is OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
+                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -236,6 +236,16 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The Terraform Provider version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1.206.0</para>
+            /// </summary>
+            [NameInMap("terraformProviderVersion")]
+            [Validation(Required=false)]
+            public string TerraformProviderVersion { get; set; }
+
+            /// <summary>
             /// <para>The list of variables. Parameters of exported resources are set as variables.</para>
             /// </summary>
             [NameInMap("variables")]
@@ -243,7 +253,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<ListResourceExportTaskVersionsResponseBodyExportTasksVariables> Variables { get; set; }
             public class ListResourceExportTaskVersionsResponseBodyExportTasksVariables : TeaModel {
                 /// <summary>
-                /// <para>The list of Terraform resource properties corresponding to the resource type.</para>
+                /// <para>The list of Terraform resource properties that correspond to the resource type.</para>
                 /// </summary>
                 [NameInMap("properties")]
                 [Validation(Required=false)]

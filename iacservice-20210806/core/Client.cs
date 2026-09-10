@@ -12524,7 +12524,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of versions for a resource export task.</para>
+        /// <para>Retrieves the list of resource export task versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12591,7 +12591,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of versions for a resource export task.</para>
+        /// <para>Retrieves the list of resource export task versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12658,7 +12658,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of versions for a resource export task.</para>
+        /// <para>Retrieves the list of resource export task versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12682,7 +12682,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of versions for a resource export task.</para>
+        /// <para>Retrieves the list of resource export task versions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public GetResourceExportTaskResponseBodyTask Task { get; set; }
         public class GetResourceExportTaskResponseBodyTask : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The time when the task was created, in UTC in ISO 8601 format (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-06-15T02:44:37Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExportTaskId { get; set; }
 
             /// <summary>
-            /// <para>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the registry.</para>
+            /// <para>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the Registry.</para>
             /// </summary>
             [NameInMap("exportToModule")]
             [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <summary>
                 /// <para>The module type in which the exported template is saved. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: OSS</description></item>
+                /// <item><description>OSS: OSS.</description></item>
                 /// <item><description>Registry: Terraform Registry.</description></item>
                 /// </list>
                 /// 
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <list type="bullet">
                 /// <item><description><para>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
                 /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
+                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -146,12 +146,12 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <para>The name of the include rule for resource export. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</description></item>
-                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: ap-southeast-1.</description></item>
+                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</description></item>
                 /// <item><description>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</description></item>
                 /// <item><description>ResourceGroupId: the resource group ID. Example: rg-1234.</description></item>
-                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: ap-southeast-1a.</description></item>
+                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</description></item>
                 /// </list>
-                /// <para>By default, the relationship between multiple filter conditions is AND. A resource is considered matched only if all filter conditions are met.</para>
+                /// <para>By default, the relationship between multiple filter conditions is AND, which means a resource must match all filter conditions to be considered a match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RegionId</para>
@@ -170,14 +170,25 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             }
 
             /// <summary>
-            /// <para>The module configuration for the exported resources.</para>
+            /// <para>The modification time.</para>
+            /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-06-07T09:19:11Z</para>
+            /// </summary>
+            [NameInMap("modifyTime")]
+            [Validation(Required=false)]
+            public string ModifyTime { get; set; }
+
+            /// <summary>
+            /// <para>The module configurations after resource export.</para>
             /// </summary>
             [NameInMap("modules")]
             [Validation(Required=false)]
             public List<GetResourceExportTaskResponseBodyTaskModules> Modules { get; set; }
             public class GetResourceExportTaskResponseBodyTaskModules : TeaModel {
                 /// <summary>
-                /// <para>The module type where the exported template is stored. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</para>
+                /// <para>The module type where the exported template is located. Two formats are supported: CloudRegistry and OSS. If you specify the ExportToModule parameter, both formats are returned. Otherwise, only CloudRegistry is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OSS</para>
@@ -187,11 +198,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The download URL of the module where the exported template is stored.</para>
+                /// <para>The download address of the exported template in the module.</para>
                 /// <list type="bullet">
                 /// <item><description><para>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
                 /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
+                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -203,7 +214,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The version of the module where the exported template is stored.</para>
+                /// <para>The version of the module where the exported template is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v3</para>
@@ -291,8 +302,8 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <summary>
             /// <para>The trigger strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Auto: triggered automatically when rules are modified or the trigger strategy is changed to Auto.</description></item>
-            /// <item><description>Manual: triggered manually.</description></item>
+            /// <item><description>Auto: triggered when rules are modified or the trigger strategy is changed to Auto.</description></item>
+            /// <item><description>Manual: manually triggered.</description></item>
             /// </list>
             /// <para>Default value: Manual.</para>
             /// 
@@ -304,7 +315,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string TriggerStrategy { get; set; }
 
             /// <summary>
-            /// <para>The list of variables. Parameters in the exported resources are set as variables.</para>
+            /// <para>The list of variables. The parameters of the exported resources are set as variables.</para>
             /// </summary>
             [NameInMap("variables")]
             [Validation(Required=false)]
