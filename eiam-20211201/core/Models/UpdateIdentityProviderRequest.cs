@@ -546,6 +546,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizeCallbackDomain { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxx</para>
+            /// </summary>
+            [NameInMap("ContactSecret")]
+            [Validation(Required=false)]
+            public string ContactSecret { get; set; }
+
+            /// <summary>
             /// <para>The CorpSecret of the WeCom self-built application.</para>
             /// 
             /// <b>Example:</b>

@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ExpressionMappingType { get; set; }
 
                 /// <summary>
-                /// <para>The expression for the mapped attribute value.</para>
+                /// <para>The expression for the mapping attribute value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>idpUser.phoneNumber</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SourceValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>The name of the target attribute for mapping.</para>
+                /// <para>The name of the mapping target attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user.username</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TargetField { get; set; }
 
                 /// <summary>
-                /// <para>The name of the target attribute for mapping.</para>
+                /// <para>The name of the mapping target attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>username</para>
@@ -243,9 +243,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The DingTalk version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>public_dingtalk: Standard DingTalk.</para>
+            /// <item><description><para>public_dingtalk: standard DingTalk</para>
             /// </description></item>
-            /// <item><description><para>private_dingtalk: Exclusive DingTalk.</para>
+            /// <item><description><para>private_dingtalk: exclusive DingTalk</para>
             /// </description></item>
             /// </list>
             /// 
@@ -511,7 +511,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitRdn { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether password synchronization is enabled.</para>
+            /// <para>The password synchronization switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -775,7 +775,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BindingMethod { get; set; }
 
             /// <summary>
-            /// <para>The certificate list of the IdP.</para>
+            /// <para>The list of IdP certificates.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
@@ -834,14 +834,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? RequireRequestSigned { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the external IdP must sign the Assertion.</para>
+            /// <para>Specifies whether the external IdP must sign assertions.</para>
             /// </summary>
             [NameInMap("WantAssertionsSigned")]
             [Validation(Required=false)]
             public bool? WantAssertionsSigned { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the external IdP must sign the Response.</para>
+            /// <para>Specifies whether the external IdP must sign responses.</para>
             /// </summary>
             [NameInMap("WantResponseSigned")]
             [Validation(Required=false)]
@@ -871,10 +871,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>The incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</para>
+            /// <para>Specifies whether to process incremental callback data from the IdP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>disabled</description></item>
-            /// <item><description>enabled</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>enabled: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -970,7 +970,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CreateIdentityProviderRequestUdPushConfig UdPushConfig { get; set; }
         public class CreateIdentityProviderRequestUdPushConfig : TeaModel {
             /// <summary>
-            /// <para>The incremental callback status. This field is not yet enabled. Ignore this field.</para>
+            /// <para>The incremental callback status. This field is not yet available. Ignore this field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -1016,7 +1016,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The periodic verification status. This field is not yet enabled. Ignore this field.</para>
+            /// <para>The periodic verification status. This field is not yet available. Ignore this field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -1079,6 +1079,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("AuthorizeCallbackDomain")]
             [Validation(Required=false)]
             public string AuthorizeCallbackDomain { get; set; }
+
+            /// <summary>
+            /// <para>The WeCom address book secret.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mPLLiWv-_9wittxxxEJCpk1xkF5hOgBzpRt4kBkxxx</para>
+            /// </summary>
+            [NameInMap("ContactSecret")]
+            [Validation(Required=false)]
+            public string ContactSecret { get; set; }
 
             /// <summary>
             /// <para>The corpId of the WeCom self-built application.</para>
