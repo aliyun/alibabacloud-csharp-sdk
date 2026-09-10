@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
         /// <summary>
         /// <para>The event name code.</para>
+        /// <remarks>
+        /// <para>This parameter does not take effect when the CaseCodes parameter is not empty.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>RISKCONTROL_IMS_IMS_BAN_SUBUSER</para>
@@ -59,6 +62,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
         /// <summary>
         /// <para>The event ID.</para>
+        /// <remarks>
+        /// <para>This parameter does not take effect when the EventIds parameter is not empty.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</para>
@@ -67,6 +73,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string EventId { get; set; }
 
+        /// <summary>
+        /// <para>The list of event IDs.</para>
+        /// </summary>
         [NameInMap("EventIds")]
         [Validation(Required=false)]
         public List<string> EventIds { get; set; }
@@ -82,7 +91,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The control end time.</para>
+        /// <para>The end time of the control action.</para>
         /// <remarks>
         /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
         /// </remarks>
@@ -95,7 +104,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string PunishEndTime { get; set; }
 
         /// <summary>
-        /// <para>The control start time.</para>
+        /// <para>The start time of the control action.</para>
         /// <remarks>
         /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
         /// </remarks>
@@ -125,6 +134,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <item><description><b>Alerting</b>: Alerting.</description></item>
         /// <item><description><b>Ended</b>: Ended.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter does not take effect when the Statuses parameter is not empty.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Executing</para>
@@ -133,6 +145,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The list of event statuses.</para>
+        /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>200: success. Other values (such as 500 or 400): error codes.</para>
+        /// <para> 200: The request was successful. Other codes (500, 400, etc.): An error occurred.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             public List<QueryAccountSafetyIncidentResponseBodyDataList> List { get; set; }
             public class QueryAccountSafetyIncidentResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The control action name code.</para>
+                /// <para>The control action code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success_service</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 /// <para>The control action name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>处罚直接成功</para>
+                /// <para>Penalty directly succeeded</para>
                 /// </summary>
                 [NameInMap("ActionName")]
                 [Validation(Required=false)]
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// <para>The control removal time.</para>
+                /// <para>The time when the control action was removed.</para>
                 /// <remarks>
                 /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                 /// </remarks>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public QueryAccountSafetyIncidentResponseBodyDataListDateExtras DateExtras { get; set; }
                 public class QueryAccountSafetyIncidentResponseBodyDataListDateExtras : TeaModel {
                     /// <summary>
-                    /// <para>The alert end time.</para>
+                    /// <para>The time when the alert ended.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertEndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The first alert time.</para>
+                    /// <para>The time when the first alert was triggered.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                     public string AlertStartTime { get; set; }
 
                     /// <summary>
-                    /// <para>The latest detection time.</para>
+                    /// <para>The time of the latest detection.</para>
                     /// <remarks>
                     /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                     /// </remarks>
@@ -171,14 +171,14 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 /// <para>The event subtype name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>可疑身份调用敏感</para>
+                /// <para>Suspicious identity calling sensitive API</para>
                 /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The exception call time.</para>
+                /// <para>The time of the abnormal call.</para>
                 /// <remarks>
                 /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                 /// </remarks>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ExceptionCallTime { get; set; }
 
                 /// <summary>
-                /// <para>The exception IP address.</para>
+                /// <para>The abnormal IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>39.1X4.63.XX9</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ExceptionIp { get; set; }
 
                 /// <summary>
-                /// <para>The control start time.</para>
+                /// <para>The start time of the control action.</para>
                 /// <remarks>
                 /// <para>Format: yyyy-MM-dd HH:mm:ss</para>
                 /// </remarks>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The control object type.</para>
+                /// <para>The controlled object type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>customer</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
             }
 
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The total number of records.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
                 public string Current { get; set; }
 
                 /// <summary>
-                /// <para>The number of assets displayed on each page in a paging query.</para>
+                /// <para>The number of assets displayed on each page in a paged query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>

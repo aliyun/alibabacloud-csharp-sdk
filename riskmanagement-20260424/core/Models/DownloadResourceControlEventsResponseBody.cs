@@ -8,13 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
-    public class GetServiceLinkedRoleStatusResponseBody : TeaModel {
+    public class DownloadResourceControlEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>200</b>: Succeeded.</description></item>
-        /// <item><description><b>Other values (400, 500)</b>: Failed.</description></item>
-        /// </list>
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>200 indicates success. Other values (such as 500 or 400) indicate error codes.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -24,30 +23,17 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The query result.</para>
+        /// <para>The metadata response information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetServiceLinkedRoleStatusResponseBodyData Data { get; set; }
-        public class GetServiceLinkedRoleStatusResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The authorization status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Authorized.</description></item>
-            /// <item><description><b>false</b>: Not authorized.</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public bool? Status { get; set; }
-
-        }
+        public string Data { get; set; }
 
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -57,17 +43,17 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2FBDD713-00A5-5C98-B661-3FD31A349B6E</para>
+        /// <para>855FCC89-0B13-5FC0-AAD2-120878081C1C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The call was successful.                                </description></item>
         /// <item><description><b>false</b>: The call failed.</description></item>

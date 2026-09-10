@@ -1159,6 +1159,386 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Downloads cloud resource control events.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DownloadResourceControlEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadResourceControlEventsResponse
+        /// </returns>
+        public DownloadResourceControlEventsResponse DownloadResourceControlEventsWithOptions(DownloadResourceControlEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DownloadResourceControlEventsShrinkRequest request = new DownloadResourceControlEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
+            {
+                request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodesPrefix))
+            {
+                request.CaseCodesPrefixShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodesPrefix, "CaseCodesPrefix", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventCodes))
+            {
+                request.EventCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventCodes, "EventCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeActionCodes))
+            {
+                request.ExcludeActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeActionCodes, "ExcludeActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeEventCodes))
+            {
+                request.ExcludeEventCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeEventCodes, "ExcludeEventCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeReasons))
+            {
+                request.ExcludeReasonsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeReasons, "ExcludeReasons", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IncludeReasons))
+            {
+                request.IncludeReasonsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IncludeReasons, "IncludeReasons", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceCodes))
+            {
+                request.SourceCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceCodes, "SourceCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCode))
+            {
+                query["ActionCode"] = request.ActionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCodesShrink))
+            {
+                query["ActionCodes"] = request.ActionCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCode))
+            {
+                query["BusinessCode"] = request.BusinessCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesPrefixShrink))
+            {
+                query["CaseCodesPrefix"] = request.CaseCodesPrefixShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
+            {
+                query["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCode))
+            {
+                query["EventCode"] = request.EventCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCodesShrink))
+            {
+                query["EventCodes"] = request.EventCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeActionCodesShrink))
+            {
+                query["ExcludeActionCodes"] = request.ExcludeActionCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeEventCodesShrink))
+            {
+                query["ExcludeEventCodes"] = request.ExcludeEventCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeReasonsShrink))
+            {
+                query["ExcludeReasons"] = request.ExcludeReasonsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeReasonsShrink))
+            {
+                query["IncludeReasons"] = request.IncludeReasonsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishEndTime))
+            {
+                query["PunishEndTime"] = request.PunishEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishStartTime))
+            {
+                query["PunishStartTime"] = request.PunishStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodesShrink))
+            {
+                query["SourceCodes"] = request.SourceCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadResourceControlEvents",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadResourceControlEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads cloud resource control events.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DownloadResourceControlEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadResourceControlEventsResponse
+        /// </returns>
+        public async Task<DownloadResourceControlEventsResponse> DownloadResourceControlEventsWithOptionsAsync(DownloadResourceControlEventsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DownloadResourceControlEventsShrinkRequest request = new DownloadResourceControlEventsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
+            {
+                request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodesPrefix))
+            {
+                request.CaseCodesPrefixShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodesPrefix, "CaseCodesPrefix", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventCodes))
+            {
+                request.EventCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventCodes, "EventCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeActionCodes))
+            {
+                request.ExcludeActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeActionCodes, "ExcludeActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeEventCodes))
+            {
+                request.ExcludeEventCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeEventCodes, "ExcludeEventCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ExcludeReasons))
+            {
+                request.ExcludeReasonsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ExcludeReasons, "ExcludeReasons", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.IncludeReasons))
+            {
+                request.IncludeReasonsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.IncludeReasons, "IncludeReasons", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceCodes))
+            {
+                request.SourceCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceCodes, "SourceCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
+            {
+                request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCode))
+            {
+                query["ActionCode"] = request.ActionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCodesShrink))
+            {
+                query["ActionCodes"] = request.ActionCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
+            {
+                query["AliyunLang"] = request.AliyunLang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessCode))
+            {
+                query["BusinessCode"] = request.BusinessCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesPrefixShrink))
+            {
+                query["CaseCodesPrefix"] = request.CaseCodesPrefixShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
+            {
+                query["Current"] = request.Current;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCode))
+            {
+                query["EventCode"] = request.EventCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventCodesShrink))
+            {
+                query["EventCodes"] = request.EventCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
+            {
+                query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeActionCodesShrink))
+            {
+                query["ExcludeActionCodes"] = request.ExcludeActionCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeEventCodesShrink))
+            {
+                query["ExcludeEventCodes"] = request.ExcludeEventCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeReasonsShrink))
+            {
+                query["ExcludeReasons"] = request.ExcludeReasonsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeReasonsShrink))
+            {
+                query["IncludeReasons"] = request.IncludeReasonsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ip))
+            {
+                query["Ip"] = request.Ip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishEndTime))
+            {
+                query["PunishEndTime"] = request.PunishEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishStartTime))
+            {
+                query["PunishStartTime"] = request.PunishStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
+            {
+                query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceCodesShrink))
+            {
+                query["SourceCodes"] = request.SourceCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListShrink))
+            {
+                query["StatusList"] = request.StatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadResourceControlEvents",
+                Version = "2026-04-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadResourceControlEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads cloud resource control events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadResourceControlEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadResourceControlEventsResponse
+        /// </returns>
+        public DownloadResourceControlEventsResponse DownloadResourceControlEvents(DownloadResourceControlEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DownloadResourceControlEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads cloud resource control events.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DownloadResourceControlEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadResourceControlEventsResponse
+        /// </returns>
+        public async Task<DownloadResourceControlEventsResponse> DownloadResourceControlEventsAsync(DownloadResourceControlEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DownloadResourceControlEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the analysis results of alert records.</para>
         /// </summary>
         /// 

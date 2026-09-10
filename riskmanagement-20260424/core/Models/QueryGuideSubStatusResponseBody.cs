@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// <para>The subscription status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>SUBSCRIBED</b>: Subscribed.</description></item>
-        /// <item><description><b>UNSUBSCRIBED</b>: Unsubscribed.</description></item>
+        /// <item><description><b>UNSUBSCRIBED</b>: Not subscribed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
