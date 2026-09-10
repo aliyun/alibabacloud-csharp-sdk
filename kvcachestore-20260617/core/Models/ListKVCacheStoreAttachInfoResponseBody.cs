@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public List<ListKVCacheStoreAttachInfoResponseBodyAttachInfos> AttachInfos { get; set; }
         public class ListKVCacheStoreAttachInfoResponseBodyAttachInfos : TeaModel {
             /// <summary>
-            /// <para>The time of the most recent attach operation, in ISO 8601 format. The value is null if the instance has not been attached.</para>
+            /// <para>The time of the most recent attach operation, in ISO 8601 format. This value is null if the instance has not been attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-20T08:30:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string KvcsId { get; set; }
 
             /// <summary>
-            /// <para>The mount point ID at the file system level.</para>
+            /// <para>The file system-level mount point ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mp-xxxxx</para>
@@ -83,10 +83,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>kvcs: KVCacheStore (CPFS).</description></item>
-            /// </list>
+            /// <para>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>preview</para>
@@ -118,7 +115,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The pagination token used to query the next batch of data.</para>
+        /// <para>The pagination token. Used to query the next batch of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</para>

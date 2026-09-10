@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class ListKVCacheStoreAttachInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The list of KVCacheStore KvcsId values to query. A maximum of 100 values can be specified.</para>
+        /// <para>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KvcsIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public List<string> KvcsIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a single request. Valid values: 1 to 500.</para>
+        /// <para>The maximum number of entries to return per query. Valid values: 1 to 500.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If you set NextToken, the PageSize and PageNumber request parameters become ineffective, and the TotalCount value in the response is invalid.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>your-client-token</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query. Used together with PageSize. If the value exceeds the total number of pages, the last page of data is returned.</para>
+        /// <para>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

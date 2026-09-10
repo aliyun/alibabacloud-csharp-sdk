@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
 {
     public class GetKVCacheStoreRequest : TeaModel {
         /// <summary>
+        /// <para>The KvCacheStore instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         public string KvcsId { get; set; }
 
         /// <summary>
+        /// <para>The region ID, such as cn-hangzhou.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

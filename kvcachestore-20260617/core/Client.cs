@@ -19,12 +19,6 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "kvcachestore.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "kvcachestore.cn-shanghai.aliyuncs.com"},
-                {"ap-southeast-1", "kvcachestore.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("kvcachestore", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -45,7 +39,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -107,7 +101,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -169,7 +163,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -195,7 +189,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mounts KVCacheInstance resources to the virtualization side in batches.</para>
+        /// <para>Mounts KVCacheInstance resources to the virtualization stack in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1013,7 +1007,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 KvCacheStore 实例详情</para>
+        /// <para>Queries the details of a KvCacheStore instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1059,7 +1053,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 KvCacheStore 实例详情</para>
+        /// <para>Queries the details of a KvCacheStore instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1099,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 KvCacheStore 实例详情</para>
+        /// <para>Queries the details of a KvCacheStore instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1123,7 +1117,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 KvCacheStore 实例详情</para>
+        /// <para>Queries the details of a KvCacheStore instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1141,8 +1135,18 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mount information of KVCacheInstance resources in batches.</para>
+        /// <para>Queries mount information of KVCacheInstances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAttachInfoRequest
@@ -1203,8 +1207,18 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mount information of KVCacheInstance resources in batches.</para>
+        /// <para>Queries mount information of KVCacheInstances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAttachInfoRequest
@@ -1265,8 +1279,18 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mount information of KVCacheInstance resources in batches.</para>
+        /// <para>Queries mount information of KVCacheInstances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAttachInfoRequest
@@ -1283,8 +1307,18 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mount information of KVCacheInstance resources in batches.</para>
+        /// <para>Queries mount information of KVCacheInstances in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation has no KVCacheStore status restrictions. If a KVCacheStore is in the Creating state, an empty list is returned.</para>
+        /// <list type="bullet">
+        /// <item><description>A KVCacheStore can be mounted to multiple VSCs, so each KVCacheStore may return multiple mount records.</description></item>
+        /// <item><description>This operation supports batch queries. You can query up to 100 KVCacheStores in a single request.</description></item>
+        /// <item><description>This operation supports page number-based pagination (PageNumber and PageSize) and cursor-based pagination (NextToken and MaxResults). If both sets of pagination parameters are specified, cursor-based pagination takes precedence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAttachInfoRequest
@@ -1301,8 +1335,13 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定 KVCacheStore 实例可用的 HpnZone 列表</para>
+        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAvailableHpnZonesRequest
@@ -1347,8 +1386,13 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定 KVCacheStore 实例可用的 HpnZone 列表</para>
+        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAvailableHpnZonesRequest
@@ -1393,8 +1437,13 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定 KVCacheStore 实例可用的 HpnZone 列表</para>
+        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAvailableHpnZonesRequest
@@ -1411,8 +1460,13 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定 KVCacheStore 实例可用的 HpnZone 列表</para>
+        /// <para>Queries the list of available HpnZones for a specified KVCacheStore instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries available HpnZones by KVCacheStore. Use this operation to query available HPN cluster IDs before scaling or migrating a KVCacheStore.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListKVCacheStoreAvailableHpnZonesRequest
@@ -1425,6 +1479,158 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListKVCacheStoreAvailableHpnZonesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKVCacheStoreAvailableVscsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKVCacheStoreAvailableVscsResponse
+        /// </returns>
+        public ListKVCacheStoreAvailableVscsResponse ListKVCacheStoreAvailableVscsWithOptions(ListKVCacheStoreAvailableVscsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arns))
+            {
+                query["Arns"] = request.Arns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvcsId))
+            {
+                query["KvcsId"] = request.KvcsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKVCacheStoreAvailableVscs",
+                Version = "2026-06-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKVCacheStoreAvailableVscsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKVCacheStoreAvailableVscsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKVCacheStoreAvailableVscsResponse
+        /// </returns>
+        public async Task<ListKVCacheStoreAvailableVscsResponse> ListKVCacheStoreAvailableVscsWithOptionsAsync(ListKVCacheStoreAvailableVscsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Arns))
+            {
+                query["Arns"] = request.Arns;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KvcsId))
+            {
+                query["KvcsId"] = request.KvcsId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKVCacheStoreAvailableVscs",
+                Version = "2026-06-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKVCacheStoreAvailableVscsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKVCacheStoreAvailableVscsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKVCacheStoreAvailableVscsResponse
+        /// </returns>
+        public ListKVCacheStoreAvailableVscsResponse ListKVCacheStoreAvailableVscs(ListKVCacheStoreAvailableVscsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKVCacheStoreAvailableVscsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available VSC resources associated with a specified KVCacheStore instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKVCacheStoreAvailableVscsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKVCacheStoreAvailableVscsResponse
+        /// </returns>
+        public async Task<ListKVCacheStoreAvailableVscsResponse> ListKVCacheStoreAvailableVscsAsync(ListKVCacheStoreAvailableVscsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKVCacheStoreAvailableVscsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

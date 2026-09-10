@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Kvcachestore20260617.Models
         }
 
         /// <summary>
-        /// <para>The request ID. A request ID is returned regardless of whether the operation is successful.</para>
+        /// <para>The request ID. A request ID is returned regardless of whether the API call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</para>
