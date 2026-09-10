@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Team.</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Team.</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Team.</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Team.</para>
+        /// <para>Creates a team.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Team information.</para>
+        /// <para>The team information.</para>
         /// </summary>
         [NameInMap("team")]
         [Validation(Required=false)]

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateVolumeInput : TeaModel {
+        [NameInMap("agenticBucketVolumeConfig")]
+        [Validation(Required=false)]
+        public AgenticBucketVolumeConfig AgenticBucketVolumeConfig { get; set; }
+
         /// <summary>
         /// <para>The AgenticFS configuration.</para>
         /// </summary>
