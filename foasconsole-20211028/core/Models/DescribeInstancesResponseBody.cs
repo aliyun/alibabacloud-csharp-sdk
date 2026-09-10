@@ -20,10 +20,22 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public bool? Ansm { get; set; }
 
+            /// <summary>
+            /// <para>The processor architecture.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>X86</para>
+            /// </summary>
             [NameInMap("ArchitectureType")]
             [Validation(Required=false)]
             public string ArchitectureType { get; set; }
 
+            /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>c20c******404</para>
+            /// </summary>
             [NameInMap("AskClusterId")]
             [Validation(Required=false)]
             public string AskClusterId { get; set; }
@@ -42,10 +54,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
+            /// <summary>
+            /// <para>The cluster state.</para>
+            /// </summary>
             [NameInMap("ClusterState")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesClusterState ClusterState { get; set; }
             public class DescribeInstancesResponseBodyInstancesClusterState : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>a6f35c0ff73448</para>
+                /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
@@ -54,6 +73,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public DescribeInstancesResponseBodyInstancesClusterStateClusterStage ClusterStage { get; set; }
                 public class DescribeInstancesResponseBodyInstancesClusterStateClusterStage : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>f0957e82de6e47</para>
+                    /// </summary>
                     [NameInMap("ClusterId")]
                     [Validation(Required=false)]
                     public string ClusterId { get; set; }
@@ -62,10 +85,23 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                     [Validation(Required=false)]
                     public int? CurrentStage { get; set; }
 
+                    /// <summary>
+                    /// <para>The error message.</para>
+                    /// </summary>
                     [NameInMap("Message")]
                     [Validation(Required=false)]
                     public string Message { get; set; }
 
+                    /// <summary>
+                    /// <para>The status of the project space. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>CREATING: Being created.</description></item>
+                    /// <item><description>DELETING: Being deleted.</description></item>
+                    /// <item><description>MODIFYING: Resource specifications are being modified.</description></item>
+                    /// <item><description>SUCCESS: The previous operation was successful.</description></item>
+                    /// <item><description>FAILED: The previous operation failed.</description></item>
+                    /// </list>
+                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -94,10 +130,43 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public bool? CreateTimeout { get; set; }
 
+                /// <summary>
+                /// <para>The cluster status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>CREATING: Being created.</para>
+                /// </description></item>
+                /// <item><description><para>RUNNING: Running.</para>
+                /// </description></item>
+                /// <item><description><para>DISABLE: Invalid.</para>
+                /// </description></item>
+                /// <item><description><para>DELETING: Being deleted.</para>
+                /// </description></item>
+                /// <item><description><para>DELETED: Deleted.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RUNNING</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The cluster status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>CREATING: Being created.</para>
+                /// </description></item>
+                /// <item><description><para>RUNNING: Running.</para>
+                /// </description></item>
+                /// <item><description><para>DISABLE: Invalid.</para>
+                /// </description></item>
+                /// <item><description><para>DELETING: Being deleted.</para>
+                /// </description></item>
+                /// <item><description><para>DELETED: Deleted.</para>
+                /// </description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("SubStatus")]
                 [Validation(Required=false)]
                 public string SubStatus { get; set; }
@@ -165,10 +234,17 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string ClusterStatus { get; set; }
 
+            /// <summary>
+            /// <para>The overall resource usage of the Flink service.</para>
+            /// </summary>
             [NameInMap("ClusterUsedResources")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesClusterUsedResources ClusterUsedResources { get; set; }
             public class DescribeInstancesResponseBodyInstancesClusterUsedResources : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ea2e9545fdc942</para>
+                /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
@@ -197,6 +273,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public float? GuaranteedUsedResource { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether zone-disaster recovery resources are selected.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("Ha")]
                 [Validation(Required=false)]
                 public bool? Ha { get; set; }
@@ -231,6 +313,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesClusterUsedStorage ClusterUsedStorage { get; set; }
             public class DescribeInstancesResponseBodyInstancesClusterUsedStorage : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>f0957e82de6e47</para>
+                /// </summary>
                 [NameInMap("ClusterId")]
                 [Validation(Required=false)]
                 public string ClusterId { get; set; }
@@ -240,6 +326,16 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public float? UsedStorage { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>Indicates whether deletion protection is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
+            [NameInMap("DeletionProtection")]
+            [Validation(Required=false)]
+            public bool? DeletionProtection { get; set; }
 
             [NameInMap("Elastic")]
             [Validation(Required=false)]
@@ -263,81 +359,175 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesElasticResourceSpec ElasticResourceSpec { get; set; }
             public class DescribeInstancesResponseBodyInstancesElasticResourceSpec : TeaModel {
+                /// <summary>
+                /// <para>The number of CPUs.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>5</para>
+                /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>The amount of memory used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>280</para>
+                /// </summary>
                 [NameInMap("MemoryGB")]
                 [Validation(Required=false)]
                 public int? MemoryGB { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether zone-disaster recovery resources are selected.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Ha")]
             [Validation(Required=false)]
             public bool? Ha { get; set; }
 
+            /// <summary>
+            /// <para>The zone-disaster recovery resource description.</para>
+            /// </summary>
             [NameInMap("HaResourceSpec")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesHaResourceSpec HaResourceSpec { get; set; }
             public class DescribeInstancesResponseBodyInstancesHaResourceSpec : TeaModel {
+                /// <summary>
+                /// <para>The number of CPUs for zone-disaster recovery.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
+                /// </summary>
                 [NameInMap("Cpu")]
                 [Validation(Required=false)]
                 public int? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>The memory size of zone-disaster recovery resources.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>48</para>
+                /// </summary>
                 [NameInMap("MemoryGB")]
                 [Validation(Required=false)]
                 public int? MemoryGB { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The vSwitch group in the secondary zone for zone-disaster recovery.</para>
+            /// </summary>
             [NameInMap("HaVSwitchIds")]
             [Validation(Required=false)]
             public List<string> HaVSwitchIds { get; set; }
 
+            /// <summary>
+            /// <para>The vSwitch group information for the secondary zone of zone-disaster recovery.</para>
+            /// </summary>
             [NameInMap("HaVSwitchInfo")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesHaVSwitchInfo> HaVSwitchInfo { get; set; }
             public class DescribeInstancesResponseBodyInstancesHaVSwitchInfo : TeaModel {
+                /// <summary>
+                /// <para>The number of available IP addresses in the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>64</para>
+                /// </summary>
                 [NameInMap("AvailableIpAddressCount")]
                 [Validation(Required=false)]
                 public long? AvailableIpAddressCount { get; set; }
 
+                /// <summary>
+                /// <para>The description of the VPC.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>“”</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The region.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch CIDR block information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.16.0/24</para>
+                /// </summary>
                 [NameInMap("VSwitchCidr")]
                 [Validation(Required=false)]
                 public string VSwitchCidr { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-wz9e9zt38b9f3l6*****</para>
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test vSwitch</para>
+                /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]
                 public string VSwitchName { get; set; }
 
+                /// <summary>
+                /// <para>The VPC ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-uf6d0akr6lzd75v****</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>The zone ID of the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The secondary zone ID for zone-disaster recovery.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hongkong-b</para>
+            /// </summary>
             [NameInMap("HaZoneId")]
             [Validation(Required=false)]
             public string HaZoneId { get; set; }
 
             /// <summary>
+            /// <para>The domain name information added by the user.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("HostAliases")]
@@ -380,14 +570,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TAIHAO</para>
+            /// </summary>
             [NameInMap("MonitorType")]
             [Validation(Required=false)]
             public string MonitorType { get; set; }
 
             /// <summary>
-            /// <para>The order status. Valid values:</para>
+            /// <para>The order status of the Flink compute service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NOT_INIT: The order is placed but components are not deployed.</description></item>
+            /// <item><description>NOT_INIT: The order is placed but components are not yet deployed.</description></item>
             /// <item><description>NORMAL: Normal.</description></item>
             /// <item><description>CEASE: Expired.</description></item>
             /// <item><description>RELEASE: Overdue.</description></item>
@@ -412,6 +608,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 [Validation(Required=false)]
                 public string AccessKey { get; set; }
 
+                /// <summary>
+                /// <para>The name of the bound OSS bucket.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flink-log-john</para>
+                /// </summary>
                 [NameInMap("Bucket")]
                 [Validation(Required=false)]
                 public string Bucket { get; set; }
@@ -427,7 +629,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             }
 
             /// <summary>
-            /// <para>The region of the instance.</para>
+            /// <para>The region to which the instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -447,7 +649,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public long? ResourceCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The overdue time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637337600000</para>
@@ -456,6 +658,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public long? ResourceExpiredTime { get; set; }
 
+            /// <summary>
+            /// <para>The resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-***</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
@@ -506,10 +714,36 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesStorage Storage { get; set; }
             public class DescribeInstancesResponseBodyInstancesStorage : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether fully managed storage is selected. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Used.</description></item>
+                /// <item><description>false: Not used.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("FullyManaged")]
                 [Validation(Required=false)]
                 public bool? FullyManaged { get; set; }
 
+                /// <summary>
+                /// <para>The order status of fully managed storage. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>NOT_INIT: The order is placed but components are not yet deployed.</para>
+                /// </description></item>
+                /// <item><description><para>NORMAL: Normal.</para>
+                /// </description></item>
+                /// <item><description><para>CEASE: Expired.</para>
+                /// </description></item>
+                /// <item><description><para>RELEASE: Overdue.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
+                /// </summary>
                 [NameInMap("OrderState")]
                 [Validation(Required=false)]
                 public string OrderState { get; set; }
@@ -522,7 +756,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
                 public DescribeInstancesResponseBodyInstancesStorageOss Oss { get; set; }
                 public class DescribeInstancesResponseBodyInstancesStorageOss : TeaModel {
                     /// <summary>
-                    /// <para>The name of the OSS bucket.</para>
+                    /// <para>The name of the bound OSS bucket.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>oss_flink</para>
@@ -548,7 +782,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public bool? SupportDisasterRecoveryDrill { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -587,44 +821,95 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch IDs.</para>
+            /// <para>The vSwitch ID group.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
+            /// <summary>
+            /// <para>The information about the primary vSwitch group.</para>
+            /// </summary>
             [NameInMap("VSwitchInfo")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyInstancesVSwitchInfo> VSwitchInfo { get; set; }
             public class DescribeInstancesResponseBodyInstancesVSwitchInfo : TeaModel {
+                /// <summary>
+                /// <para>The number of available IP addresses in the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>256</para>
+                /// </summary>
                 [NameInMap("AvailableIpAddressCount")]
                 [Validation(Required=false)]
                 public string AvailableIpAddressCount { get; set; }
 
+                /// <summary>
+                /// <para>The description of the vSwitch group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>“”</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-shanghai</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch CIDR block.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>192.168.16.0/24</para>
+                /// </summary>
                 [NameInMap("VSwitchCidr")]
                 [Validation(Required=false)]
                 public string VSwitchCidr { get; set; }
 
+                /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vsw-8vb6jk75wfcwnuq****</para>
+                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the vSwitch.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>“”</para>
+                /// </summary>
                 [NameInMap("VSwitchName")]
                 [Validation(Required=false)]
                 public string VSwitchName { get; set; }
 
+                /// <summary>
+                /// <para>VPC ID。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-bp16h9ru9gvz2tygo*****</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>The zone ID of the workspace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-h</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -641,30 +926,75 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            /// <summary>
+            /// <para>The VPC information.</para>
+            /// </summary>
             [NameInMap("VpcInfo")]
             [Validation(Required=false)]
             public DescribeInstancesResponseBodyInstancesVpcInfo VpcInfo { get; set; }
             public class DescribeInstancesResponseBodyInstancesVpcInfo : TeaModel {
+                /// <summary>
+                /// <para>The VPC CIDR block.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.16.5.0/24</para>
+                /// </summary>
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
                 public string CidrBlock { get; set; }
 
+                /// <summary>
+                /// <para>The VPC description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>“”</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The region ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                /// <summary>
+                /// <para>The VPC status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Pending: Being configured.</para>
+                /// </description></item>
+                /// <item><description><para>Available: Available.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Available</para>
+                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The VPC ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-gw8c6nhjta3eq12y****</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>The VPC name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>flink集群vpc</para>
+                /// </summary>
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
                 public string VpcName { get; set; }
@@ -716,8 +1046,8 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

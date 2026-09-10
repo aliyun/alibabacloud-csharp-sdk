@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public CreateInstanceResponseBodyOrderInfo OrderInfo { get; set; }
         public class CreateInstanceResponseBodyOrderInfo : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the order.</para>
+            /// <para>The order instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-cn-zvp2q0zik06</para>

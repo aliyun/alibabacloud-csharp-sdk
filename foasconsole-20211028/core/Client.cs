@@ -18,12 +18,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "regional";
+            this._endpointRule = "central";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"},
                 {"cn-wulanchabu", "foasconsole.cn-wulanchabu.aliyuncs.com"},
                 {"cn-beijing", "foasconsole.cn-beijing.aliyuncs.com"},
+                {"cn-qingdao", "foasconsole.cn-qingdao.aliyuncs.com"},
                 {"cn-shanghai", "foasconsole.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "foasconsole.cn-hongkong.aliyuncs.com"},
                 {"cn-zhangjiakou", "foasconsole.cn-zhangjiakou.aliyuncs.com"},
@@ -39,7 +39,6 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
                 {"eu-central-1", "foasconsole.eu-central-1.aliyuncs.com"},
                 {"cn-shenzhen-finance-1", "foasconsole.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "foasconsole.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-north-2-gov-1", "foasconsole.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("foasconsole", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -710,7 +709,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -728,6 +727,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultHaNamespaceResourceSpec))
+            {
+                request.DefaultHaNamespaceResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultHaNamespaceResourceSpec, "DefaultHaNamespaceResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultNamespaceResourceSpec))
+            {
+                request.DefaultNamespaceResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultNamespaceResourceSpec, "DefaultNamespaceResourceSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
             {
                 request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
@@ -764,6 +771,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultHaNamespaceResourceSpecShrink))
+            {
+                body["DefaultHaNamespaceResourceSpec"] = request.DefaultHaNamespaceResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultNamespaceResourceSpecShrink))
+            {
+                body["DefaultNamespaceResourceSpec"] = request.DefaultNamespaceResourceSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -859,7 +874,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -877,6 +892,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateInstanceShrinkRequest request = new CreateInstanceShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultHaNamespaceResourceSpec))
+            {
+                request.DefaultHaNamespaceResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultHaNamespaceResourceSpec, "DefaultHaNamespaceResourceSpec", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DefaultNamespaceResourceSpec))
+            {
+                request.DefaultNamespaceResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DefaultNamespaceResourceSpec, "DefaultNamespaceResourceSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HaResourceSpec))
             {
                 request.HaResourceSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HaResourceSpec, "HaResourceSpec", "json");
@@ -913,6 +936,14 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
                 body["ChargeType"] = request.ChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultHaNamespaceResourceSpecShrink))
+            {
+                body["DefaultHaNamespaceResourceSpec"] = request.DefaultHaNamespaceResourceSpecShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultNamespaceResourceSpecShrink))
+            {
+                body["DefaultNamespaceResourceSpec"] = request.DefaultNamespaceResourceSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -1008,7 +1039,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1031,7 +1062,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink before you call this operation.</em>*</para>
+        /// <para><em>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/billing-overview">pricing</a> of fully managed Flink.</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1500,6 +1531,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DescribeInstancesRequest
         /// </param>
@@ -1543,6 +1581,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeInstancesRequest
@@ -1588,6 +1633,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -1605,6 +1657,13 @@ namespace AlibabaCloud.SDK.Foasconsole20211028
         /// <summary>
         /// <para>Queries the details of one or more fully managed Flink workspaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>In the following cases, you cannot release a workspace:- In pay-as-you-go mode, the workspace is in the Creating, Releasing, or Creation Timed Out state.- If the billing method is subscription, unsubscribe from the resource on the Unsubscription Management page in User Center.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstancesRequest

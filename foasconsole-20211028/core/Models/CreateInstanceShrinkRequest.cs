@@ -52,6 +52,20 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>The default high-availability namespace resource configuration.</para>
+        /// </summary>
+        [NameInMap("DefaultHaNamespaceResourceSpec")]
+        [Validation(Required=false)]
+        public string DefaultHaNamespaceResourceSpecShrink { get; set; }
+
+        /// <summary>
+        /// <para>The default namespace resource configuration.</para>
+        /// </summary>
+        [NameInMap("DefaultNamespaceResourceSpec")]
+        [Validation(Required=false)]
+        public string DefaultNamespaceResourceSpecShrink { get; set; }
+
+        /// <summary>
         /// <para>The subscription duration.</para>
         /// <remarks>
         /// <para>This parameter is required when ChargeType is set to PRE.</para>
@@ -75,7 +89,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Extra { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use zone-disaster recovery resources.</para>
+        /// <para>Specifies whether to enable zone-disaster recovery resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -119,7 +133,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of monitoring and alerting service. You can select ARMS or CloudMonitor.</para>
+        /// <para>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TAIHAO</para>
@@ -129,10 +143,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string MonitorType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The billing cycle of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>year</b>: year.</description></item>
-        /// <item><description><b>month</b>: month.</description></item>
+        /// <item><description><b>year</b>: yearly.</description></item>
+        /// <item><description><b>month</b>: monthly.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required when ChargeType is set to PRE.</para>
@@ -156,7 +170,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

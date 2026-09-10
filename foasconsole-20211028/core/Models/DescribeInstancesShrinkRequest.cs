@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
 {
     public class DescribeInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The architecture type.</para>
+        /// <para>The processor architecture. Valid values: X86 and ARM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>X86</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether mixed billing is used.</para>
+        /// <para>Specifies whether hybrid billing is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,6 +100,12 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aek2e55emewbqgy</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

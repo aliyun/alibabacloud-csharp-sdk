@@ -52,6 +52,70 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>The default high-availability namespace resource configuration.</para>
+        /// </summary>
+        [NameInMap("DefaultHaNamespaceResourceSpec")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestDefaultHaNamespaceResourceSpec DefaultHaNamespaceResourceSpec { get; set; }
+        public class CreateInstanceRequestDefaultHaNamespaceResourceSpec : TeaModel {
+            /// <summary>
+            /// <para>The number of CPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("Cpu")]
+            [Validation(Required=false)]
+            public int? Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The memory size. Unit: GB.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
+            [NameInMap("MemoryGB")]
+            [Validation(Required=false)]
+            public int? MemoryGB { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The default namespace resource configuration.</para>
+        /// </summary>
+        [NameInMap("DefaultNamespaceResourceSpec")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestDefaultNamespaceResourceSpec DefaultNamespaceResourceSpec { get; set; }
+        public class CreateInstanceRequestDefaultNamespaceResourceSpec : TeaModel {
+            /// <summary>
+            /// <para>The number of CPUs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("Cpu")]
+            [Validation(Required=false)]
+            public int? Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The memory size. Unit: GB.</para>
+            /// <remarks>
+            /// <para>The memory size must be 4 times the number of CPUs.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>16</para>
+            /// </summary>
+            [NameInMap("MemoryGB")]
+            [Validation(Required=false)]
+            public int? MemoryGB { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The subscription duration.</para>
         /// <remarks>
         /// <para>This parameter is required when ChargeType is set to PRE.</para>
@@ -75,7 +139,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string Extra { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use zone-disaster recovery resources.</para>
+        /// <para>Specifies whether to enable zone-disaster recovery resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,7 +172,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The memory size for zone-disaster recovery.</para>
+            /// <para>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -141,7 +205,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of monitoring and alerting service. You can select ARMS or CloudMonitor.</para>
+        /// <para>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TAIHAO</para>
@@ -151,10 +215,10 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string MonitorType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The billing cycle of the subscription instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>year</b>: year.</description></item>
-        /// <item><description><b>month</b>: month.</description></item>
+        /// <item><description><b>year</b>: yearly.</description></item>
+        /// <item><description><b>month</b>: monthly.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required when ChargeType is set to PRE.</para>
@@ -178,7 +242,7 @@ namespace AlibabaCloud.SDK.Foasconsole20211028.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
