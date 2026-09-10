@@ -1,0 +1,25 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.LHM20250116.Models
+{
+    public class DeleteDataCheckConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration ID. You can obtain this ID by calling the GetDataCheckConfig operation.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10001</para>
+        /// </summary>
+        [NameInMap("id")]
+        [Validation(Required=false)]
+        public long? Id { get; set; }
+
+    }
+
+}
