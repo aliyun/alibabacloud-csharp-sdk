@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ListVoiceEnginesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Pages start from 1. The default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

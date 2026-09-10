@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class DeleteVoiceAccessProfileRequest : TeaModel {
         /// <summary>
+        /// <para>The third-party voice configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66b</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string AccessProfileId { get; set; }
 
         /// <summary>
+        /// <para>The Bailian business workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-c11iig67g863rih8</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class DeleteVoiceAccessProfileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The third-party voice configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66b</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance llm-zzu528i29ecnprcl does not exist.</para>
         /// </summary>
@@ -41,6 +49,9 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of dynamic error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class GetApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Model Studio business workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

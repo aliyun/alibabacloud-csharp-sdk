@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class UpdateVoiceAccessProfileRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>af81a389-91f0-4157-8d82-720edd02b66b</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string AccessProfileId { get; set; }
 
         /// <summary>
+        /// <para>The Bailian business workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xdne77rxe14ziszr</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The speech engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BAILIAN</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string NlsEngine { get; set; }
 
+        /// <summary>
+        /// <para>The parameter settings.</para>
+        /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public UpdateVoiceAccessProfileRequestProfile Profile { get; set; }
         public class UpdateVoiceAccessProfileRequestProfile : TeaModel {
             /// <summary>
+            /// <para>Required when using Doubao.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string AccessKey { get; set; }
 
             /// <summary>
+            /// <para>Required when using Bailian or iFLYTEK.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sk-12341e259b1049e8872b47981e545f78</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string ApiKey { get; set; }
 
             /// <summary>
+            /// <para>Required when using iFLYTEK.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>c0358c6e51c1013b446fdeb21a3a1234</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string ApiSecret { get; set; }
 
             /// <summary>
+            /// <para>Required when using iFLYTEK.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5b123bfb</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>Required when using Doubao.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2541370123</para>
             /// </summary>
@@ -77,10 +96,22 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             [Validation(Required=false)]
             public string AppKey { get; set; }
 
+            /// <summary>
+            /// <para>Not currently in use.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Not currently in use</para>
+            /// </summary>
             [NameInMap("AsrAppKey")]
             [Validation(Required=false)]
             public string AsrAppKey { get; set; }
 
+            /// <summary>
+            /// <para>Not currently in use.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Not currently in use</para>
+            /// </summary>
             [NameInMap("TtsApiKey")]
             [Validation(Required=false)]
             public string TtsApiKey { get; set; }

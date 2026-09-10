@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class CreateCloneVoiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The cloned voice object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateCloneVoiceResponseBodyData Data { get; set; }
         public class CreateCloneVoiceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The cloned voice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8ee1160a-6999-478f-8df6-f33ef21f27d5</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string CloneVoiceId { get; set; }
 
             /// <summary>
+            /// <para>The voice speaker.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance llm-xdne77rxe14ziszr
         ///  does not exist.</para>
@@ -56,11 +69,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The list of dynamic error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CF6D3484-19A1-5C77-863B-AC8B5754D37C</para>
         /// </summary>

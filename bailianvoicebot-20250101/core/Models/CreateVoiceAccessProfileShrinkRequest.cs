@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class CreateVoiceAccessProfileShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The Bailian workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-xdne77rxe14ziszr</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The speech engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VOLC</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string NlsEngine { get; set; }
 
+        /// <summary>
+        /// <para>The parameter settings.</para>
+        /// </summary>
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public string ProfileShrink { get; set; }

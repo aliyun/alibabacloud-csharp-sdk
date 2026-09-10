@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class DeleteVariableRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Bailian business workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-rj6aqmctjcit4acy</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The variable ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82ea16d1-425c-4c03-9be5-cc91de9779ed</para>
         /// </summary>

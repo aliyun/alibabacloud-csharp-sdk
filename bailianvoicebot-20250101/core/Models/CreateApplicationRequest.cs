@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Bailian business workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The number of concurrent connections.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -27,18 +30,33 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public int? Concurrency { get; set; }
 
+        /// <summary>
+        /// <para>The application description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Describe this application</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test001</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The NLU access method.</para>
+        /// <list type="bullet">
+        /// <item><description>Managed</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>
         /// </summary>

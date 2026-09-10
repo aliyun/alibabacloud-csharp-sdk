@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ListCloneVoiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The paginated data of the clone voice list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCloneVoiceResponseBodyData Data { get; set; }
         public class ListCloneVoiceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of clone voices.</para>
+            /// </summary>
             [NameInMap("CloneVoices")]
             [Validation(Required=false)]
             public List<ListCloneVoiceResponseBodyDataCloneVoices> CloneVoices { get; set; }
             public class ListCloneVoiceResponseBodyDataCloneVoices : TeaModel {
                 /// <summary>
+                /// <para>The clone voice ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8ee1160a-6999-478f-8df6-f33ef21f27d5</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public string CloneVoiceId { get; set; }
 
                 /// <summary>
+                /// <para>The creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1760494691000</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public long? CreatedTime { get; set; }
 
                 /// <summary>
+                /// <para>The business workspace ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>llm-xdne77rxe14ziszr</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The clone model.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CosyVoice</para>
                 /// </summary>
@@ -57,11 +73,19 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public string Model { get; set; }
 
+                /// <summary>
+                /// <para>The clone voice name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestCloneVoice</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The TTS engine.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>BAILIAN</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public string NlsEngine { get; set; }
 
                 /// <summary>
+                /// <para>The status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Published</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The tenant ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1655449505171</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
+                /// <para>The update time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1760494691000</para>
                 /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 public long? UpdatedTime { get; set; }
 
                 /// <summary>
+                /// <para>The voice speaker.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</para>
                 /// </summary>
@@ -104,6 +136,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -112,6 +146,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -120,6 +156,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -130,6 +168,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -138,6 +178,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance llm-xdne77rxe14ziszr
         ///  does not exist.</para>
@@ -147,6 +189,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D771A1B6-3D5F-174A-BEE1-98CE1000D337</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class UpdateVocabularyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vocabulary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82ea16d1-425c-4c03-9be5-cc91de9779ed</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The result message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance llm-zzu528i29ecnprcl does not exist.</para>
         /// </summary>
@@ -41,12 +49,15 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>A list of dynamic error parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D771A1B6-3D5F-174A-BEE1-98CE1000D337</para>

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
     public class UpdateApplicationVersionShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a395011f-a247-400f-bc69-28796749fd52</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm-c11iig67g863rih8</para>
         /// </summary>
         [NameInMap("BusinessUnitId")]
         [Validation(Required=false)]
@@ -32,6 +26,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [NameInMap("InteractionConfig")]
         [Validation(Required=false)]
         public string InteractionConfigShrink { get; set; }
+
+        [NameInMap("LabelConfig")]
+        [Validation(Required=false)]
+        public string LabelConfigShrink { get; set; }
 
         [NameInMap("RagConfig")]
         [Validation(Required=false)]
@@ -66,9 +64,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20904943-f711-494f-9f1f-e7f340f37707</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

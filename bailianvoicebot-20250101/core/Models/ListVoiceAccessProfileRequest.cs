@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ListVoiceAccessProfileRequest : TeaModel {
         /// <summary>
+        /// <para>The Bailian business unit ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-c11iig67g863rih8</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

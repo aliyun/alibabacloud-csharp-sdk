@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class UpdateApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The Model Studio workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The concurrency setting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -37,12 +41,22 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public int? Concurrency { get; set; }
 
+        /// <summary>
+        /// <para>The application\&quot;s new description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>描述一下这个应用</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The new name for the application.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试001</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

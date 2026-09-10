@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class GenerateFileUploadParamsRequest : TeaModel {
         /// <summary>
+        /// <para>The file type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CloneVoice</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Bailian business workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-c11iig67g863rih8</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The file name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.wav</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class DeleteApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The Bailian business workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

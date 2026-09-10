@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ListVoicesRequest : TeaModel {
         /// <summary>
+        /// <para>The Bailian workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-c11iig67g863rih8</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The TTS call method.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string NlsAccessType { get; set; }
 
         /// <summary>
+        /// <para>The TTS engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BAILIAN</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string NlsEngine { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,8 +50,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The value is fixed at 1000 and cannot be modified.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

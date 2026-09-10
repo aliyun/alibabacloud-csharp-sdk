@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
     public class UpdateApplicationVersionRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>a395011f-a247-400f-bc69-28796749fd52</para>
         /// </summary>
         [NameInMap("ApplicationId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm-c11iig67g863rih8</para>
         /// </summary>
         [NameInMap("BusinessUnitId")]
         [Validation(Required=false)]
@@ -33,19 +27,81 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public UpdateApplicationVersionRequestInteractionConfig InteractionConfig { get; set; }
         public class UpdateApplicationVersionRequestInteractionConfig : TeaModel {
+            [NameInMap("BackgroundMusicId")]
+            [Validation(Required=false)]
+            public string BackgroundMusicId { get; set; }
+
+            [NameInMap("EndConversationConfig")]
+            [Validation(Required=false)]
+            public UpdateApplicationVersionRequestInteractionConfigEndConversationConfig EndConversationConfig { get; set; }
+            public class UpdateApplicationVersionRequestInteractionConfigEndConversationConfig : TeaModel {
+                [NameInMap("Delay")]
+                [Validation(Required=false)]
+                public int? Delay { get; set; }
+
+                [NameInMap("Triggers")]
+                [Validation(Required=false)]
+                public List<UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers> Triggers { get; set; }
+                public class UpdateApplicationVersionRequestInteractionConfigEndConversationConfigTriggers : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>感谢您的接听，祝您生活愉快，再见!</para>
+                    /// </summary>
+                    [NameInMap("ClosingStatement")]
+                    [Validation(Required=false)]
+                    public string ClosingStatement { get; set; }
+
+                    [NameInMap("KeyWords")]
+                    [Validation(Required=false)]
+                    public List<string> KeyWords { get; set; }
+
+                    [NameInMap("TriggerType")]
+                    [Validation(Required=false)]
+                    public string TriggerType { get; set; }
+
+                    [NameInMap("TurnLimit")]
+                    [Validation(Required=false)]
+                    public int? TurnLimit { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("InitialGreetingDelayMilliseconds")]
+            [Validation(Required=false)]
+            public int? InitialGreetingDelayMilliseconds { get; set; }
+
             [NameInMap("SilenceDetectionConfig")]
             [Validation(Required=false)]
             public UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig SilenceDetectionConfig { get; set; }
             public class UpdateApplicationVersionRequestInteractionConfigSilenceDetectionConfig : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
+                [NameInMap("MaxRepeats")]
+                [Validation(Required=false)]
+                public int? MaxRepeats { get; set; }
+
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
                 public int? Timeout { get; set; }
 
             }
+
+        }
+
+        [NameInMap("LabelConfig")]
+        [Validation(Required=false)]
+        public List<UpdateApplicationVersionRequestLabelConfig> LabelConfig { get; set; }
+        public class UpdateApplicationVersionRequestLabelConfig : TeaModel {
+            [NameInMap("CandidateValues")]
+            [Validation(Required=false)]
+            public List<string> CandidateValues { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
 
         }
 
@@ -82,6 +138,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public UpdateApplicationVersionRequestScriptProfile ScriptProfile { get; set; }
         public class UpdateApplicationVersionRequestScriptProfile : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>6f444ecf21d94238b516735916c98666</para>
+            /// </summary>
+            [NameInMap("AgentKey")]
+            [Validation(Required=false)]
+            public string AgentKey { get; set; }
+
             [NameInMap("AgentProfile")]
             [Validation(Required=false)]
             public UpdateApplicationVersionRequestScriptProfileAgentProfile AgentProfile { get; set; }
@@ -98,10 +162,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public string PromptsJson { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SFM_PROMPTS_DEFAULT</para>
-                /// </summary>
                 [NameInMap("ScriptProfileTemplateId")]
                 [Validation(Required=false)]
                 public string ScriptProfileTemplateId { get; set; }
@@ -110,11 +170,71 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>qwen-plus</para>
+            /// <para>chatbot-cn-MQuyjjb666</para>
             /// </summary>
+            [NameInMap("ChatbotId")]
+            [Validation(Required=false)]
+            public string ChatbotId { get; set; }
+
+            [NameInMap("FunctionMeta")]
+            [Validation(Required=false)]
+            public UpdateApplicationVersionRequestScriptProfileFunctionMeta FunctionMeta { get; set; }
+            public class UpdateApplicationVersionRequestScriptProfileFunctionMeta : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>9b752bbb-805a-4d3e-9013-eab5555c3fef</para>
+                /// </summary>
+                [NameInMap("FunctionId")]
+                [Validation(Required=false)]
+                public string FunctionId { get; set; }
+
+                [NameInMap("FunctionName")]
+                [Validation(Required=false)]
+                public string FunctionName { get; set; }
+
+                [NameInMap("HttpTriggerName")]
+                [Validation(Required=false)]
+                public string HttpTriggerName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></para>
+                /// </summary>
+                [NameInMap("HttpTriggerUrl")]
+                [Validation(Required=false)]
+                public string HttpTriggerUrl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
+                [NameInMap("RegionId")]
+                [Validation(Required=false)]
+                public string RegionId { get; set; }
+
+            }
+
             [NameInMap("Model")]
             [Validation(Required=false)]
             public string Model { get; set; }
+
+            [NameInMap("NluAccessProfile")]
+            [Validation(Required=false)]
+            public UpdateApplicationVersionRequestScriptProfileNluAccessProfile NluAccessProfile { get; set; }
+            public class UpdateApplicationVersionRequestScriptProfileNluAccessProfile : TeaModel {
+                [NameInMap("AccessProfileId")]
+                [Validation(Required=false)]
+                public string AccessProfileId { get; set; }
+
+            }
+
+            [NameInMap("NluAccessType")]
+            [Validation(Required=false)]
+            public string NluAccessType { get; set; }
+
+            [NameInMap("OmniModel")]
+            [Validation(Required=false)]
+            public bool? OmniModel { get; set; }
 
         }
 
@@ -140,26 +260,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>MANAGED</para>
-            /// </summary>
             [NameInMap("NlsAccessType")]
             [Validation(Required=false)]
             public string NlsAccessType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ALIYUN</para>
-            /// </summary>
             [NameInMap("NlsEngine")]
             [Validation(Required=false)]
             public string NlsEngine { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("PitchRate")]
             [Validation(Required=false)]
             public int? PitchRate { get; set; }
@@ -178,26 +286,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>3</para>
-            /// </summary>
             [NameInMap("SpeechRate")]
             [Validation(Required=false)]
             public int? SpeechRate { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>aixia</para>
-            /// </summary>
             [NameInMap("Voice")]
             [Validation(Required=false)]
             public string Voice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>50</para>
-            /// </summary>
             [NameInMap("Volume")]
             [Validation(Required=false)]
             public int? Volume { get; set; }
@@ -272,18 +368,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>MANAGED</para>
-            /// </summary>
             [NameInMap("NlsAccessType")]
             [Validation(Required=false)]
             public string NlsAccessType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>ALIYUN</para>
-            /// </summary>
             [NameInMap("NlsEngine")]
             [Validation(Required=false)]
             public string NlsEngine { get; set; }
@@ -300,9 +388,6 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20904943-f711-494f-9f1f-e7f340f37707</para>
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]

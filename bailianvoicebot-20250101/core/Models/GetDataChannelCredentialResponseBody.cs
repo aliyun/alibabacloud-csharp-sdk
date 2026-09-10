@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class GetDataChannelCredentialResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API status or POP error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataChannelCredentialResponseBodyData Data { get; set; }
         public class GetDataChannelCredentialResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The client ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>26c2f022-b6c0-4ab0-9019-6e1a42dc5582</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string ClientId { get; set; }
 
             /// <summary>
+            /// <para>The device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>device-3i5x4234f2j4w55e</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>The endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mqtt-cn-ux146hgtt04.mqtt.aliyuncs.com</para>
             /// </summary>
@@ -46,6 +57,11 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string Endpoint { get; set; }
 
             /// <summary>
+            /// <para>The validity period of the connection.</para>
+            /// <remarks>
+            /// <para>The value is in timestamp format.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1745004535507</para>
             /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The password.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -72,6 +90,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string Topic { get; set; }
 
             /// <summary>
+            /// <para>The username.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Token|LTAI5tRYzHUYYi4XstgMCsL4|mqtt-cn-ux146hgtt04</para>
             /// </summary>
@@ -82,6 +102,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -90,6 +112,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -97,11 +121,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The response parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public List<string> Params { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D771A1B6-3D5F-174A-BEE1-98CE1000D337</para>
         /// </summary>

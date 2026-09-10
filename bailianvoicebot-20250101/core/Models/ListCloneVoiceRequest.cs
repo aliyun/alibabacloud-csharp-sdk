@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ListCloneVoiceRequest : TeaModel {
         /// <summary>
+        /// <para>The Bailian business workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-3pptowd2olrctsvc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string BusinessUnitId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Published</para>
         /// </summary>

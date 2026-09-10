@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class GetSubscriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The Bailian business workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-3pptowd2olrctsvc</para>
         /// </summary>

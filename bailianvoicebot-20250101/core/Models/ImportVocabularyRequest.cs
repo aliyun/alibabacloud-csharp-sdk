@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class ImportVocabularyRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Bailian business workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-zop7ukgtksltamo4</para>
         /// </summary>
@@ -17,6 +19,12 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string BusinessUnitId { get; set; }
 
+        /// <summary>
+        /// <para>The path of the uploaded file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vocabulary/热词导入单元测试.zip</para>
+        /// </summary>
         [NameInMap("FileKey")]
         [Validation(Required=false)]
         public string FileKey { get; set; }

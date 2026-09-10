@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 {
     public class BridgeWebCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public BridgeWebCallResponseBodyData Data { get; set; }
         public class BridgeWebCallResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The channel ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>894526715106764802</para>
             /// </summary>
@@ -30,6 +37,11 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string ChannelId { get; set; }
 
             /// <summary>
+            /// <para>The token expiration time.</para>
+            /// <remarks>
+            /// <para>The value is in timestamp format.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>1744964682422</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-uf6abxo1tuuwarrtffpp</para>
             /// </summary>
@@ -46,14 +60,18 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The server URL.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>wss://pre-cab-wss.aliyuncs.com:443/audio</para>
+            /// <para>wss://sh-voicebot.aliyuncs.com:443/audio</para>
             /// </summary>
             [NameInMap("ServerUrl")]
             [Validation(Required=false)]
             public string ServerUrl { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-4b7c263f-9b4c-4b28-baae-a65e9155e380</para>
             /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             public string SessionId { get; set; }
 
             /// <summary>
+            /// <para>The authentication signature.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>83480f806b48f022313de37b691e167e</para>
             /// </summary>
@@ -72,6 +92,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>connect timed out</para>
         /// </summary>
@@ -80,6 +102,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +112,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CF6D3484-19A1-5C77-863B-AC8B5754D37C</para>
         /// </summary>
@@ -96,6 +122,8 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("bailianvoicebot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建软电话测试通话</para>
+        /// <para>Creates a softphone test call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建软电话测试通话</para>
+        /// <para>Creates a softphone test call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建软电话测试通话</para>
+        /// <para>Creates a softphone test call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建软电话测试通话</para>
+        /// <para>Creates a softphone test call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -397,6 +397,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfig))
+            {
+                request.LabelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfig, "LabelConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RagConfig))
             {
                 request.RagConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RagConfig, "RagConfig", "json");
@@ -429,6 +433,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
             {
                 query["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigShrink))
+            {
+                query["LabelConfig"] = request.LabelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagConfigShrink))
             {
@@ -497,6 +505,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfig))
+            {
+                request.LabelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfig, "LabelConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RagConfig))
             {
                 request.RagConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RagConfig, "RagConfig", "json");
@@ -529,6 +541,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
             {
                 query["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigShrink))
+            {
+                query["LabelConfig"] = request.LabelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagConfigShrink))
             {
@@ -611,7 +627,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音</para>
+        /// <para>Creates a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -661,7 +677,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音</para>
+        /// <para>Creates a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -711,7 +727,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音</para>
+        /// <para>Creates a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -729,7 +745,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建克隆音</para>
+        /// <para>Creates a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -747,7 +763,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -801,7 +817,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +871,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -873,7 +889,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建变量</para>
+        /// <para>Creates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -891,7 +907,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -951,7 +967,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1011,7 +1027,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1029,7 +1045,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1047,7 +1063,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1103,7 +1119,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1159,7 +1175,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1177,7 +1193,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1195,7 +1211,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1241,7 +1257,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1303,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1305,7 +1321,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用</para>
+        /// <para>Deletes an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1323,7 +1339,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1369,7 +1385,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1415,7 +1431,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1433,7 +1449,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a cloned voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1451,7 +1467,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +1513,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1543,7 +1559,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1577,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除变量</para>
+        /// <para>Deletes a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1579,7 +1595,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1625,7 +1641,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1671,7 +1687,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1705,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除场景</para>
+        /// <para>Deletes a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1707,7 +1723,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1753,7 +1769,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1799,7 +1815,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1817,7 +1833,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除三方语音配置</para>
+        /// <para>Deletes a third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1835,7 +1851,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1877,7 +1893,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1919,7 +1935,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1937,7 +1953,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用消息订阅</para>
+        /// <para>Disables message subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +1971,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports hot words.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2007,7 +2023,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports hot words.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2059,7 +2075,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2077,7 +2093,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出热词</para>
+        /// <para>Exports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2095,7 +2111,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传信息</para>
+        /// <para>Retrieves file upload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2145,7 +2161,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传信息</para>
+        /// <para>Retrieves file upload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2195,7 +2211,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传信息</para>
+        /// <para>Retrieves file upload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2213,7 +2229,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文件上传信息</para>
+        /// <para>Retrieves file upload information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2231,7 +2247,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get应用</para>
+        /// <para>Retrieves a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2277,7 +2293,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get应用</para>
+        /// <para>Retrieves a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2323,7 +2339,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get应用</para>
+        /// <para>Retrieves a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2341,7 +2357,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get应用</para>
+        /// <para>Retrieves a voice chatbot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2359,7 +2375,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据通道凭证</para>
+        /// <para>Retrieves data channel credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2405,7 +2421,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据通道凭证</para>
+        /// <para>Retrieves data channel credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2467,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据通道凭证</para>
+        /// <para>Retrieves data channel credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2469,7 +2485,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据通道凭证</para>
+        /// <para>Retrieves data channel credentials.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2503,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2529,7 +2545,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2571,7 +2587,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2605,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取MQ配置</para>
+        /// <para>Retrieves the MQ configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2607,7 +2623,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of a hot word vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2653,7 +2669,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of a hot word vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2699,7 +2715,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of a hot word vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2717,7 +2733,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of a hot word vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2735,7 +2751,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2781,7 +2797,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2827,7 +2843,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2861,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入热词</para>
+        /// <para>Imports hot words.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2863,7 +2879,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用</para>
+        /// <para>Queries the list of voice robot applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2917,7 +2933,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用</para>
+        /// <para>Queries the list of voice robot applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2971,7 +2987,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用</para>
+        /// <para>Queries the list of voice robot applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2989,7 +3005,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用</para>
+        /// <para>Queries the list of voice robot applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3007,7 +3023,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves the list of background music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3057,7 +3073,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves the list of background music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3123,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves the list of background music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3125,7 +3141,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取背景音列表</para>
+        /// <para>Retrieves the list of background music.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3143,7 +3159,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3197,7 +3213,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3251,7 +3267,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3269,7 +3285,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3287,7 +3303,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3333,7 +3349,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3379,7 +3395,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3397,7 +3413,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取克隆音色可用模型列表</para>
+        /// <para>Retrieves the list of available models for voice cloning.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3415,7 +3431,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Retrieves the list of conversation models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3457,7 +3473,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Retrieves the list of conversation models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3499,7 +3515,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Retrieves the list of conversation models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3517,7 +3533,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取对话模型列表</para>
+        /// <para>Retrieves the list of conversation models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3535,7 +3551,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3589,7 +3605,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3643,7 +3659,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3661,7 +3677,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取变量列表</para>
+        /// <para>Retrieves a list of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3679,7 +3695,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3733,7 +3749,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3787,7 +3803,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3805,7 +3821,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3823,7 +3839,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方语音配置列表</para>
+        /// <para>Retrieves the list of third-party voice configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3873,7 +3889,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方语音配置列表</para>
+        /// <para>Retrieves the list of third-party voice configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3923,7 +3939,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方语音配置列表</para>
+        /// <para>Retrieves the list of third-party voice configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3941,7 +3957,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取三方语音配置列表</para>
+        /// <para>Retrieves the list of third-party voice configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3959,7 +3975,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a paginated list of available voice engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4005,7 +4021,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a paginated list of available voice engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4051,7 +4067,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a paginated list of available voice engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4069,7 +4085,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取引擎列表</para>
+        /// <para>Retrieves a paginated list of available voice engines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4087,7 +4103,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音色列表</para>
+        /// <para>Retrieves the list of voice timbres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4145,7 +4161,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音色列表</para>
+        /// <para>Retrieves the list of voice timbres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4203,7 +4219,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音色列表</para>
+        /// <para>Retrieves the list of voice timbres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4221,7 +4237,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取音色列表</para>
+        /// <para>Retrieves the list of voice timbres.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4239,7 +4255,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Generates a preview of a synthesized voice.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4311,7 +4327,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Generates a preview of a synthesized voice.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4383,7 +4399,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Generates a preview of a synthesized voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4401,7 +4417,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试听</para>
+        /// <para>Generates a preview of a synthesized voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4419,7 +4435,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a voice robot version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4469,7 +4485,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a voice robot version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4519,7 +4535,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a voice robot version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4537,7 +4553,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布版本</para>
+        /// <para>Publishes a voice robot version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4555,7 +4571,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用</para>
+        /// <para>Updates a voice bot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4613,7 +4629,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用</para>
+        /// <para>Updates a voice bot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4671,7 +4687,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用</para>
+        /// <para>Updates a voice bot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4689,7 +4705,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改应用</para>
+        /// <para>Updates a voice bot application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4729,6 +4745,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfig))
+            {
+                request.LabelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfig, "LabelConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RagConfig))
             {
                 request.RagConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RagConfig, "RagConfig", "json");
@@ -4761,6 +4781,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
             {
                 query["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigShrink))
+            {
+                query["LabelConfig"] = request.LabelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagConfigShrink))
             {
@@ -4829,6 +4853,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.InteractionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InteractionConfig, "InteractionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelConfig))
+            {
+                request.LabelConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelConfig, "LabelConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RagConfig))
             {
                 request.RagConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RagConfig, "RagConfig", "json");
@@ -4861,6 +4889,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InteractionConfigShrink))
             {
                 query["InteractionConfig"] = request.InteractionConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelConfigShrink))
+            {
+                query["LabelConfig"] = request.LabelConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagConfigShrink))
             {
@@ -4943,7 +4975,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4993,7 +5025,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5043,7 +5075,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5061,7 +5093,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5079,7 +5111,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5159,7 +5191,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5239,7 +5271,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5257,7 +5289,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新MQ配置</para>
+        /// <para>Creates or updates a message queue (MQ) subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5275,7 +5307,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5329,7 +5361,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5383,7 +5415,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5401,7 +5433,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新变量</para>
+        /// <para>Updates a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5419,7 +5451,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5483,7 +5515,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5547,7 +5579,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5565,7 +5597,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例</para>
+        /// <para>Updates a vocabulary.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,7 +5615,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新三方语音配置</para>
+        /// <para>Updates the third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5643,7 +5675,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新三方语音配置</para>
+        /// <para>Updates the third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5703,7 +5735,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新三方语音配置</para>
+        /// <para>Updates the third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5721,7 +5753,7 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新三方语音配置</para>
+        /// <para>Updates the third-party voice configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
