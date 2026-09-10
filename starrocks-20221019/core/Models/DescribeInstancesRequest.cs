@@ -30,52 +30,30 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance status to filter by. You can specify multiple statuses, separated by commas. Valid values:</para>
+        /// <para>Retrieves instances by instance status. Separate multiple instance statuses with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>unpaid</para>
-        /// </description></item>
-        /// <item><description><para>paid</para>
-        /// </description></item>
-        /// <item><description><para>creating</para>
-        /// </description></item>
-        /// <item><description><para>running</para>
-        /// </description></item>
-        /// <item><description><para>updating</para>
-        /// </description></item>
-        /// <item><description><para>disable</para>
-        /// </description></item>
-        /// <item><description><para>deleting</para>
-        /// </description></item>
-        /// <item><description><para>scaling_out</para>
-        /// </description></item>
-        /// <item><description><para>scaling_in</para>
-        /// </description></item>
-        /// <item><description><para>scaling_up</para>
-        /// </description></item>
-        /// <item><description><para>scaling_down</para>
-        /// </description></item>
-        /// <item><description><para>upgrading</para>
-        /// </description></item>
-        /// <item><description><para>modifying_config</para>
-        /// </description></item>
-        /// <item><description><para>enable_public_network</para>
-        /// </description></item>
-        /// <item><description><para>disable_public_network</para>
-        /// </description></item>
-        /// <item><description><para>convert_from_trial_to_official</para>
-        /// </description></item>
-        /// <item><description><para>restarting</para>
-        /// </description></item>
-        /// <item><description><para>migration_cluster_to_serverless</para>
-        /// </description></item>
-        /// <item><description><para>actively_disabled</para>
-        /// </description></item>
-        /// <item><description><para>enabling</para>
-        /// </description></item>
-        /// <item><description><para>agent_creating</para>
-        /// </description></item>
-        /// <item><description><para>agent_scaling_up</para>
-        /// </description></item>
+        /// <item><description>unpaid: Pending payment.</description></item>
+        /// <item><description>paid: Paid.</description></item>
+        /// <item><description>creating: Being created.</description></item>
+        /// <item><description>running: Running.</description></item>
+        /// <item><description>updating: Being upgraded.</description></item>
+        /// <item><description>disable: Unavailable.</description></item>
+        /// <item><description>deleting: Being deleted.</description></item>
+        /// <item><description>scaling_out: Scaling out.</description></item>
+        /// <item><description>scaling_in: Scaling in.</description></item>
+        /// <item><description>scaling_up: Specifications are being upgraded.</description></item>
+        /// <item><description>scaling_down: Specifications are being used to decrease the quota.</description></item>
+        /// <item><description>upgrading: Version is being upgraded.</description></item>
+        /// <item><description>modifying_config: Configuration is being updated.</description></item>
+        /// <item><description>enable_public_network: Public network access is being enabled.</description></item>
+        /// <item><description>disable_public_network: Public network access is being shutdown.</description></item>
+        /// <item><description>convert_from_trial_to_official: The instance edition is being upgraded.</description></item>
+        /// <item><description>restarting: The cluster is restarting.</description></item>
+        /// <item><description>migration_cluster_to_serverless: The cluster is being migrated.</description></item>
+        /// <item><description>actively_disabled: The instance is stopped.</description></item>
+        /// <item><description>enabling: The instance is being recovered.</description></item>
+        /// <item><description>agent_creating: The agent is being created.</description></item>
+        /// <item><description>agent_scaling_up: The agent specifications are being upgraded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +74,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -126,7 +104,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

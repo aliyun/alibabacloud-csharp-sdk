@@ -20,16 +20,36 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string AdminPassword { get; set; }
 
+        /// <summary>
+        /// <para>The agent compute group.</para>
+        /// </summary>
         [NameInMap("AgentNodeGroup")]
         [Validation(Required=false)]
         public CreateInstanceV1RequestAgentNodeGroup AgentNodeGroup { get; set; }
         public class CreateInstanceV1RequestAgentNodeGroup : TeaModel {
+            /// <summary>
+            /// <para>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("cu")]
             [Validation(Required=false)]
             public int? Cu { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatic payment.</description></item>
+        /// <item><description>false: No automatic payment.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
@@ -105,13 +125,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the cloud disk. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>pl0: A single disk delivers up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>pl1: A single disk delivers up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>pl2: A single disk delivers up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>pl3: A single disk delivers up to 1,000,000 random read/write IOPS.</description></item>
-            /// </list>
+            /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl1</para>
@@ -182,6 +196,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the AI Center. Default value: false.</para>
+        /// </summary>
         [NameInMap("EnableAiFunction")]
         [Validation(Required=false)]
         public bool? EnableAiFunction { get; set; }
@@ -292,6 +309,12 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
         }
 
+        /// <summary>
+        /// <para>The gateway type. Valid values: Slb and Privatezone.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Traditional\&quot;\&quot;</para>
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }
@@ -328,7 +351,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string LinkedRamUserName { get; set; }
 
         /// <summary>
-        /// <para>The Observer node group information. Specify this parameter only when you need to enable cross-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</para>
+        /// <para>The Observer node group information. Specify this parameter only when you need to enable multi-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</para>
         /// </summary>
         [NameInMap("ObserverNodeGroups")]
         [Validation(Required=false)]
@@ -417,7 +440,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         }
 
         /// <summary>
-        /// <para>The name of the role used for password-free access to Object Storage Service (OSS).</para>
+        /// <para>The name of the role used for password-free access to OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunEMRStarRocksAccessingOSSRole</para>
@@ -427,10 +450,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string OssAccessingRoleName { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values:</para>
+        /// <para>The instance edition:</para>
         /// <list type="bullet">
-        /// <item><description>trial: Trial Edition.</description></item>
-        /// <item><description>official: Standard Edition.</description></item>
+        /// <item><description>  Entry edition (trial).</description></item>
+        /// <item><description> Standard edition (official).</description></item>
         /// </list>
         /// 
         /// <para>This parameter is required.</para>
@@ -532,7 +555,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         /// <para>The running mode of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>shared_nothing: compute-storage coupled.</description></item>
-        /// <item><description>shared_data: storage-compute disaggregation.</description></item>
+        /// <item><description>shared_data: compute-storage decoupled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

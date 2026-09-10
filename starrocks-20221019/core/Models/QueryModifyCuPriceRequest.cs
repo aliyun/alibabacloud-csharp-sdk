@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class QueryModifyCuPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the compute group.</para>
+        /// <para>The compute group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the coupon.</para>
+        /// <para>The coupon ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_12378dfj6</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The target number of CUs.</para>
+        /// <para>The target CU count.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

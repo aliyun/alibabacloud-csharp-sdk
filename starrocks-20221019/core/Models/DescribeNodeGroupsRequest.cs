@@ -98,8 +98,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         /// <item><description>SCALING_OUT: Scale-out in progress.</description></item>
         /// <item><description>RESTARTING: Restarting.</description></item>
         /// <item><description>SCALING_IN: Scale-in in progress.</description></item>
-        /// <item><description>SCALING_UP: Upgrading specifications.</description></item>
-        /// <item><description>SCALING_DOWN: Downgrading specifications.</description></item>
+        /// <item><description>SCALING_UP: Scaling up.</description></item>
+        /// <item><description>SCALING_DOWN: Scaling down.</description></item>
         /// <item><description>UPGRADING: Upgrading.</description></item>
         /// <item><description>ENABLE_PUBLIC_NETWORK: Enabling public network access.</description></item>
         /// <item><description>DISABLE_PUBLIC_NETWORK: Disabling public network access.</description></item>
@@ -116,14 +116,29 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<DescribeNodeGroupsRequestTags> Tags { get; set; }
         public class DescribeNodeGroupsRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
+            /// </summary>
             [NameInMap("key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
             public string Value { get; set; }

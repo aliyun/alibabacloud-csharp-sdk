@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The compute group architecture. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>onEci: Deployed on Elastic Container Instance (ECI).</description></item>
-            /// <item><description>onECS: Deployed on Elastic Compute Service (ECS).</description></item>
+            /// <item><description>onEci: Deployed on ECI.</description></item>
+            /// <item><description>onECS: Deployed on ECS.</description></item>
             /// <item><description>onBareMetal: Deployed on a bare metal resource pool.</description></item>
             /// </list>
             /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public long? BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID associated with the bill. For default compute groups (FE compute group and default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</para>
+            /// <para>The instance ID associated with the bill. For default compute groups (FE compute group and the default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-96f3bc7f04b2****</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public int? ResidentNodeNumber { get; set; }
 
             /// <summary>
-            /// <para>The duration that the compute group has been running. Unit: seconds.</para>
+            /// <para>The running time of the compute group. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -347,8 +347,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <item><description>SCALING_OUT: Scale-out in progress.</description></item>
             /// <item><description>RESTARTING: Restarting.</description></item>
             /// <item><description>SCALING_IN: Scale-in in progress.</description></item>
-            /// <item><description>SCALING_UP: Upgrading specifications.</description></item>
-            /// <item><description>SCALING_DOWN: Downgrading specifications.</description></item>
+            /// <item><description>SCALING_UP: Scaling up.</description></item>
+            /// <item><description>SCALING_DOWN: Scaling down.</description></item>
             /// <item><description>UPGRADING: Upgrading.</description></item>
             /// <item><description>ENABLE_PUBLIC_NETWORK: Enabling public network access.</description></item>
             /// <item><description>DISABLE_PUBLIC_NETWORK: Disabling public network access.</description></item>
@@ -391,14 +391,29 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public int? StorageSize { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeNodeGroupsResponseBodyDataTags> Tags { get; set; }
             public class DescribeNodeGroupsResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>k1</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>v1</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

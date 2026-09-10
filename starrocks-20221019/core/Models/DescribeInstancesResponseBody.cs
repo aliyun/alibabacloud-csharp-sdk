@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public List<DescribeInstancesResponseBodyData> Data { get; set; }
         public class DescribeInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the network access control list (ACL).</para>
+            /// <para>The network access control list (ACL) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acl-bp1xc6b9vs013jjtp****</para>
@@ -26,6 +26,29 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string AclId { get; set; }
 
+            /// <summary>
+            /// <para>The AI dedicated cluster ID, prefixed with af-. This value is returned if an unreleased dedicated cluster exists (including clusters being created). This value is empty if no dedicated cluster has been created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>af-498ae4af</para>
+            /// </summary>
+            [NameInMap("AiFunctionClusterId")]
+            [Validation(Required=false)]
+            public string AiFunctionClusterId { get; set; }
+
+            /// <summary>
+            /// <para>The internal network connection endpoint of the AI dedicated cluster, in the format fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This value is returned only after the dedicated cluster is created. This value is empty if no dedicated cluster has been created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fe-af-498ae4af-internal.starrocks.aliyuncs.com</para>
+            /// </summary>
+            [NameInMap("AiFunctionEndpoint")]
+            [Validation(Required=false)]
+            public string AiFunctionEndpoint { get; set; }
+
+            /// <summary>
+            /// <para>The billing instance ID for the AI function.</para>
+            /// </summary>
             [NameInMap("AiFunctionInstanceId")]
             [Validation(Required=false)]
             public string AiFunctionInstanceId { get; set; }
@@ -33,12 +56,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The instance architecture. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>onEci: deployed on ECI.</para>
-            /// </description></item>
-            /// <item><description><para>onECS: deployed on ECS.</para>
-            /// </description></item>
-            /// <item><description><para>onBareMetal: deployed on a bare metal resource pool.</para>
-            /// </description></item>
+            /// <item><description>onEci: deployed on Elastic Container Instance (ECI).</description></item>
+            /// <item><description>onECS: deployed on Elastic Compute Service (ECS).</description></item>
+            /// <item><description>onBareMetal: deployed on a bare metal resource pool.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,6 +78,9 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public long? BeginTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the AI center is enabled. Default value: false.</para>
+            /// </summary>
             [NameInMap("EnableAiFunction")]
             [Validation(Required=false)]
             public bool? EnableAiFunction { get; set; }
@@ -87,7 +110,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? EnableSSL { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the audit plugin is enabled.</para>
+            /// <para>Indicates whether the audit plug-in is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -139,66 +162,36 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>not_init: The instance is not initialized.</para>
-            /// </description></item>
-            /// <item><description><para>unpaid: The instance is pending payment.</para>
-            /// </description></item>
-            /// <item><description><para>paid: The payment is made.</para>
-            /// </description></item>
-            /// <item><description><para>creating: The instance is being created.</para>
-            /// </description></item>
-            /// <item><description><para>creating_failed: The instance failed to be created.</para>
-            /// </description></item>
-            /// <item><description><para>created: The instance is created.</para>
-            /// </description></item>
-            /// <item><description><para>running: The instance is running.</para>
-            /// </description></item>
-            /// <item><description><para>updating: The instance is being upgraded.</para>
-            /// </description></item>
-            /// <item><description><para>agent_creating: The agent is being created.</para>
-            /// </description></item>
-            /// <item><description><para>agent_scaling_up: The agent is being upgraded.</para>
-            /// </description></item>
-            /// <item><description><para>modifying_config: The configurations are being updated.</para>
-            /// </description></item>
-            /// <item><description><para>scaling_out: The instance is being scaled out.</para>
-            /// </description></item>
-            /// <item><description><para>restarting: The instance is restarting.</para>
-            /// </description></item>
-            /// <item><description><para>scaling_in: The instance is being scaled in.</para>
-            /// </description></item>
-            /// <item><description><para>scaling_up: The instance is being upgraded.</para>
-            /// </description></item>
-            /// <item><description><para>scaling_down: The instance is being downgraded.</para>
-            /// </description></item>
-            /// <item><description><para>upgrading: The instance is being upgraded.</para>
-            /// </description></item>
-            /// <item><description><para>enable_public_network: The public endpoint is being enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disable_public_network: The public endpoint is being disabled.</para>
-            /// </description></item>
-            /// <item><description><para>convert_from_trial_to_official: The instance edition is being changed.</para>
-            /// </description></item>
-            /// <item><description><para>migration_cluster_to_serverless: The cluster is being migrated.</para>
-            /// </description></item>
-            /// <item><description><para>modifying_timezone: The time zone is being modified.</para>
-            /// </description></item>
-            /// <item><description><para>switch_az: The primary and secondary zones are being switched.</para>
-            /// </description></item>
-            /// <item><description><para>enabling: The instance is being resumed.</para>
-            /// </description></item>
-            /// <item><description><para>disable: The instance is unavailable.</para>
-            /// </description></item>
-            /// <item><description><para>actively_disabled: The instance is unavailable.</para>
-            /// </description></item>
-            /// <item><description><para>deleting: The instance is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para>deleting_failed: The instance failed to be deleted.</para>
-            /// </description></item>
-            /// <item><description><para>deleted_with_error: The instance is deleted due to a creation failure.</para>
-            /// </description></item>
-            /// <item><description><para>deleted: The instance is deleted.</para>
-            /// </description></item>
+            /// <item><description>not_init: Not initialized.</description></item>
+            /// <item><description>unpaid: Pending payment.</description></item>
+            /// <item><description>paid: Paid.</description></item>
+            /// <item><description>creating: Being created.</description></item>
+            /// <item><description>creating_failed: Creation failed.</description></item>
+            /// <item><description>created: Created.</description></item>
+            /// <item><description>running: Running.</description></item>
+            /// <item><description>updating: Being upgraded.</description></item>
+            /// <item><description>agent_creating: Agent is being created.</description></item>
+            /// <item><description>agent_scaling_up: Agent specifications are being upgraded.</description></item>
+            /// <item><description>modifying_config: Configuration is being updated.</description></item>
+            /// <item><description>scaling_out: Scaling out.</description></item>
+            /// <item><description>restarting: Restarting.</description></item>
+            /// <item><description>scaling_in: Scaling in.</description></item>
+            /// <item><description>scaling_up: Specifications are being upgraded.</description></item>
+            /// <item><description>scaling_down: Specifications are being downgraded.</description></item>
+            /// <item><description>upgrading: Version is being upgraded.</description></item>
+            /// <item><description>enable_public_network: Public network access is being enabled.</description></item>
+            /// <item><description>disable_public_network: Public network access is being disabled.</description></item>
+            /// <item><description>convert_from_trial_to_official: Edition is being converted.</description></item>
+            /// <item><description>migration_cluster_to_serverless: Cluster is being migrated.</description></item>
+            /// <item><description>modifying_timezone: Time zone is being modified.</description></item>
+            /// <item><description>switch_az: Primary/secondary zone switchover is in progress.</description></item>
+            /// <item><description>enabling: Being resumed.</description></item>
+            /// <item><description>disable: Unavailable.</description></item>
+            /// <item><description>actively_disabled: Unavailable.</description></item>
+            /// <item><description>deleting: Being deleted.</description></item>
+            /// <item><description>deleting_failed: Deletion failed.</description></item>
+            /// <item><description>deleted_with_error: Creation failed and terminated.</description></item>
+            /// <item><description>deleted: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +202,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether read/write splitting is enabled. If this parameter is set to true, the leader FE node processes write requests, and the other FE nodes process read requests.</para>
+            /// <para>Indicates whether read/write splitting is enabled. When enabled, the Leader FE node handles write requests and other nodes handle read requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -219,7 +212,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public bool? IsolateLeader { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key.</para>
+            /// <para>The KMS key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rewqfds****</para>
@@ -231,44 +224,25 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The maintenance window of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>00:00-06:00</para>
-            /// </description></item>
-            /// <item><description><para>06:00-07:00</para>
-            /// </description></item>
-            /// <item><description><para>07:00-08:00</para>
-            /// </description></item>
-            /// <item><description><para>08:00-09:00</para>
-            /// </description></item>
-            /// <item><description><para>09:00-10:00</para>
-            /// </description></item>
-            /// <item><description><para>10:00-11:00</para>
-            /// </description></item>
-            /// <item><description><para>11:00-12:00</para>
-            /// </description></item>
-            /// <item><description><para>12:00-13:00</para>
-            /// </description></item>
-            /// <item><description><para>13:00-14:00</para>
-            /// </description></item>
-            /// <item><description><para>14:00-15:00</para>
-            /// </description></item>
-            /// <item><description><para>15:00-16:00</para>
-            /// </description></item>
-            /// <item><description><para>16:00-17:00</para>
-            /// </description></item>
-            /// <item><description><para>17:00-18:00</para>
-            /// </description></item>
-            /// <item><description><para>18:00-19:00</para>
-            /// </description></item>
-            /// <item><description><para>19:00-20:00</para>
-            /// </description></item>
-            /// <item><description><para>20:00-21:00</para>
-            /// </description></item>
-            /// <item><description><para>21:00-22:00</para>
-            /// </description></item>
-            /// <item><description><para>22:00-23:00</para>
-            /// </description></item>
-            /// <item><description><para>23:00-24:00</para>
-            /// </description></item>
+            /// <item><description>00:00-06:00</description></item>
+            /// <item><description>06:00-07:00</description></item>
+            /// <item><description>07:00-08:00</description></item>
+            /// <item><description>08:00-09:00</description></item>
+            /// <item><description>09:00-10:00</description></item>
+            /// <item><description>10:00-11:00</description></item>
+            /// <item><description>11:00-12:00</description></item>
+            /// <item><description>12:00-13:00</description></item>
+            /// <item><description>13:00-14:00</description></item>
+            /// <item><description>14:00-15:00</description></item>
+            /// <item><description>15:00-16:00</description></item>
+            /// <item><description>16:00-17:00</description></item>
+            /// <item><description>17:00-18:00</description></item>
+            /// <item><description>18:00-19:00</description></item>
+            /// <item><description>19:00-20:00</description></item>
+            /// <item><description>20:00-21:00</description></item>
+            /// <item><description>21:00-22:00</description></item>
+            /// <item><description>22:00-23:00</description></item>
+            /// <item><description>23:00-24:00</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -289,7 +263,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The type of the monitoring service.</para>
+            /// <para>The monitoring service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms</para>
@@ -299,7 +273,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string MonitorType { get; set; }
 
             /// <summary>
-            /// <para>The OSS URL.</para>
+            /// <para>The OSS path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://sr-c-****</para>
@@ -311,10 +285,8 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             /// <summary>
             /// <para>The instance edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>trial: Trial Edition.</para>
-            /// </description></item>
-            /// <item><description><para>official: Standard Edition.</para>
-            /// </description></item>
+            /// <item><description>trial: Trial Edition.</description></item>
+            /// <item><description>official: Standard Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -325,12 +297,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The billing method:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>prePaid: subscription.</para>
-            /// </description></item>
-            /// <item><description><para>postPaid: pay-as-you-go.</para>
-            /// </description></item>
+            /// <item><description>prePaid: subscription.</description></item>
+            /// <item><description>postPaid: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -361,14 +331,11 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The running mode of the cluster:</para>
+            /// <para>The running mode of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>shared_nothing: all-in-one.</para>
-            /// </description></item>
-            /// <item><description><para>shared_data: storage-compute separation.</para>
-            /// </description></item>
-            /// <item><description><para>lakehouse: data lake analytics.</para>
-            /// </description></item>
+            /// <item><description>shared_nothing: Shared-nothing architecture.</description></item>
+            /// <item><description>shared_data: Storage-compute disaggregation.</description></item>
+            /// <item><description>lakehouse: Data lakehouse analytics.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -379,7 +346,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string RunMode { get; set; }
 
             /// <summary>
-            /// <para>The duration for which the cluster has been running. Unit: seconds.</para>
+            /// <para>The duration that the cluster has been running. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3645445</para>
@@ -409,7 +376,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string SgId { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the instance.</para>
+            /// <para>The tags that are bound to the instance.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -438,14 +405,14 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             }
 
             /// <summary>
-            /// <para>The list of vSwitches.</para>
+            /// <para>The vSwitches.</para>
             /// </summary>
             [NameInMap("VSwitches")]
             [Validation(Required=false)]
             public List<DescribeInstancesResponseBodyDataVSwitches> VSwitches { get; set; }
             public class DescribeInstancesResponseBodyDataVSwitches : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the vSwitch is the primary vSwitch.</para>
+                /// <para>Indicates whether this is the primary vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -487,7 +454,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>VPC ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1rbvag1cafkj4prwXXX</para>

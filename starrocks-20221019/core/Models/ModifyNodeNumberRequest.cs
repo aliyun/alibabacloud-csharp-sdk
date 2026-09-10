@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyNodeNumberRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatic payment.</description></item>
+        /// <item><description>false: No automatic payment.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,7 +49,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The decommission concurrency for BE scale-in scenarios in compute-storage decoupled architecture. Default value: 1.</para>
+        /// <para>The decommission concurrency for BE scale-in scenarios in compute-storage coupled mode. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +80,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         public int? Target { get; set; }
 
         /// <summary>
-        /// <para>The duration to wait for running tasks to complete before dropping nodes during CN scale-in scenarios in storage-compute disaggregation architecture.</para>
+        /// <para>The wait time for running tasks to complete before dropping nodes during CN scale-in scenarios in compute-storage decoupled mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

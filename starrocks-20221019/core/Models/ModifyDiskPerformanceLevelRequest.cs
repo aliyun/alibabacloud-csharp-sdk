@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 {
     public class ModifyDiskPerformanceLevelRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatic payment.</description></item>
+        /// <item><description>false: No automatic payment.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("AutoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,12 +48,18 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The coupon ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// </summary>
         [NameInMap("PromotionOptionNo")]
         [Validation(Required=false)]
         public string PromotionOptionNo { get; set; }
 
         /// <summary>
-        /// <para>The target disk performance level.</para>
+        /// <para>The target disk performance level (PL).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
