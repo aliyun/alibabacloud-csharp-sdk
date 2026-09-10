@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeKBSyncLinksResponseBodyItems> Items { get; set; }
         public class DescribeKBSyncLinksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The client identifier.</para>
+            /// <para>The client ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cli_xxxxxxbe8</para>
@@ -115,6 +115,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The page number of the current results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The number of records per page in the current results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
@@ -123,6 +143,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The total number of synchronization links that match the query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public int? TotalRecordCount { get; set; }
 
     }
 

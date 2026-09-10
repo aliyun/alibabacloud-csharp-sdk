@@ -45137,7 +45137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization list of a knowledge base.</para>
+        /// <para>Queries the list of knowledge base synchronization links.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45161,6 +45161,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -45187,7 +45195,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization list of a knowledge base.</para>
+        /// <para>Queries the list of knowledge base synchronization links.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45211,6 +45219,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
             {
                 query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -45237,7 +45253,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization list of a knowledge base.</para>
+        /// <para>Queries the list of knowledge base synchronization links.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45255,7 +45271,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the synchronization list of a knowledge base.</para>
+        /// <para>Queries the list of knowledge base synchronization links.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -75017,6 +75033,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Registers an OSS file in a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterKnowledgeBaseFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterKnowledgeBaseFileResponse
+        /// </returns>
+        public RegisterKnowledgeBaseFileResponse RegisterKnowledgeBaseFileWithOptions(RegisterKnowledgeBaseFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterKnowledgeBaseFile",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterKnowledgeBaseFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers an OSS file in a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterKnowledgeBaseFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterKnowledgeBaseFileResponse
+        /// </returns>
+        public async Task<RegisterKnowledgeBaseFileResponse> RegisterKnowledgeBaseFileWithOptionsAsync(RegisterKnowledgeBaseFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterKnowledgeBaseFile",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterKnowledgeBaseFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers an OSS file in a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterKnowledgeBaseFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterKnowledgeBaseFileResponse
+        /// </returns>
+        public RegisterKnowledgeBaseFileResponse RegisterKnowledgeBaseFile(RegisterKnowledgeBaseFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RegisterKnowledgeBaseFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers an OSS file in a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterKnowledgeBaseFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterKnowledgeBaseFileResponse
+        /// </returns>
+        public async Task<RegisterKnowledgeBaseFileResponse> RegisterKnowledgeBaseFileAsync(RegisterKnowledgeBaseFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RegisterKnowledgeBaseFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Rejects a PolarClaw device pairing request.</para>
         /// </summary>
         /// 
@@ -77721,7 +77873,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Retrieves knowledge base search results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77783,7 +77935,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Retrieves knowledge base search results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77845,7 +77997,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Retrieves knowledge base search results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77863,7 +78015,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information from a knowledge base.</para>
+        /// <para>Retrieves knowledge base search results.</para>
         /// </summary>
         /// 
         /// <param name="request">

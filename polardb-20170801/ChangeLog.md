@@ -1,3 +1,15 @@
+2026-09-10 Version: 8.3.0
+- Support API RegisterKnowledgeBaseFile.
+- Update API DescribeKBSyncLinks: add request parameters PageNumber.
+- Update API DescribeKBSyncLinks: add request parameters PageSize.
+- Update API DescribeKBSyncLinks: add response parameters Body.PageNumber.
+- Update API DescribeKBSyncLinks: add response parameters Body.PageSize.
+- Update API DescribeKBSyncLinks: add response parameters Body.TotalRecordCount.
+- Update API RetrievalKnowledgeBase: add response parameters Body.Results.$.Captions.
+- Update API RetrievalKnowledgeBase: add response parameters Body.Results.$.DocItems.
+- Update API RetrievalKnowledgeBase: add response parameters Body.Results.$.ImageResources.
+
+
 2026-09-09 Version: 8.2.5
 - Update API DescribeBackupPolicy: add response parameters Body.EnableCrossRegionImmutableBackup.
 - Update API DescribeBackupPolicy: add response parameters Body.EnableImmutableBackup.
