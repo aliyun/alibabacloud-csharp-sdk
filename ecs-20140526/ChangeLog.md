@@ -1,3 +1,9 @@
+2026-09-10 Version: 7.11.4
+- Update API CreateInstance: add request parameters ManagedHostId.
+- Update API DescribeInstances: add response parameters Body.Instances.$.AdditionalInfo.ManagedHostId.
+- Update API RunInstances: add request parameters ManagedHostId.
+
+
 2026-09-09 Version: 7.11.3
 - Update API DescribePrice: add request parameters SystemDisk.StorageClusterId.
 - Update API DescribePrice: add request parameters DataDisk.$.StorageClusterId.

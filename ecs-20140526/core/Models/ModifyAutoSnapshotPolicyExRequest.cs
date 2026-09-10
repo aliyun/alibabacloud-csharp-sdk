@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Encryption is enabled. </description></item>
-            /// <item><description>false: Encryption is not enabled.</description></item>
+            /// <item><description>true: enabled. </description></item>
+            /// <item><description>false: disabled.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -134,26 +134,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetCopyRegions { get; set; }
 
         /// <summary>
-        /// <para>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-        /// This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</para>
+        /// <para>The list of target resource tags. The automatic snapshot policy matches target resources by tag.</para>
         /// </summary>
         [NameInMap("TargetTags")]
         [Validation(Required=false)]
         public List<ModifyAutoSnapshotPolicyExRequestTargetTags> TargetTags { get; set; }
         public class ModifyAutoSnapshotPolicyExRequestTargetTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.
-            /// Valid values of N: 1 to 10.
-            /// The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
+            /// <para>The tag key.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.
-            /// Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
-            /// Note: If you pass in an empty value or an empty string, it indicates any value.</para>
+            /// <para>The tag value.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <remarks>
+            /// <para>If you pass in an empty value or an empty string, the tag value matches any value.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

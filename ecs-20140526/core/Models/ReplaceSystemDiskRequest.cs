@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The capacity of the new system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Basic disk: Max{20, size of the image specified by the ImageId parameter} to 500.</description></item>
-            /// <item><description>Enterprise SSD (ESSD):<list type="bullet">
+            /// <item><description>Enterprise SSD:<list type="bullet">
             /// <item><description>PL0: Max{1, size of the image specified by the ImageId parameter} to 2048.</description></item>
             /// <item><description>PL1: Max{20, size of the image specified by the ImageId parameter} to 2048.</description></item>
             /// <item><description>PL2: Max{461, size of the image specified by the ImageId parameter} to 2048.</description></item>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the key pair. </para>
         /// <remarks>
-        /// <para>This parameter takes effect only for Linux instances. You can bind an SSH key pair to the ECS instance as a logon credential. After you bind an SSH key pair, the username and password logon method is disabled.</para>
+        /// <para>This parameter takes effect only for Linux instances. You can bind an SSH key pair to the ECS instance as a logon credential. After an SSH key pair is used, the username and password logon method is disabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -225,10 +225,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the preset password of the image.</para>
+        /// <para>Specifies whether to use the password preset in the image.</para>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>If you use this parameter, the Password parameter must be empty. Make sure that the image has a preset password.</para>
+        /// <para>If you use this parameter, the Password parameter must be empty. Make sure that the image you use has a password preset.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -261,9 +261,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Active: The Security Center service is used. This value is supported only for public images.</para>
+        /// <item><description><para>Active: Security Center is used. This value is applicable only to public images.</para>
         /// </description></item>
-        /// <item><description><para>Deactive: The Security Center service is not used. This value is supported for all images.</para>
+        /// <item><description><para>Deactive: Security Center is not used. This value is applicable to all images.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>

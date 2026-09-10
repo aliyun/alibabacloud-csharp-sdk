@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public bool? EnableHighDensityMode { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>mh-f2d3647ca21****</para>
+                    /// </summary>
+                    [NameInMap("ManagedHostId")]
+                    [Validation(Required=false)]
+                    public string ManagedHostId { get; set; }
+
                     [NameInMap("NodeSerialNumber")]
                     [Validation(Required=false)]
                     public string NodeSerialNumber { get; set; }
@@ -654,7 +662,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The query token returned in this call.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -674,7 +682,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page as specified in the request.</para>
+        /// <para>The number of entries per page that was specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

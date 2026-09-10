@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The association type between the automatic snapshot policy and target resources. Valid values:
-        /// ● AssociatedWithDisk: associated with disks.
-        /// ● AssociatedWithInstanceTag: associated with instance tags.
-        /// Default value: AssociatedWithDisk.</para>
+        /// <para>The association type between the automatic snapshot policy and the target resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>AssociatedWithDisk: associated with disks</description></item>
+        /// <item><description>AssociatedWithInstanceTag: associated with instance tags</description></item>
+        /// </list>
+        /// <para>Default value: AssociatedWithDisk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AssociatedWithDisk</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The backup encryption parameters for snapshot geo-redundancy.</para>
+        /// <para>The backup encryption parameter object for snapshot geo-redundancy.</para>
         /// </summary>
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
@@ -94,8 +96,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot backup. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables encryption.</description></item>
-            /// <item><description>false: disables encryption.</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The key ID of the Key Management Service (KMS) key used for cross-region encrypted snapshot backup.</para>
+            /// <para>The key ID of the KMS key used for cross-region encrypted snapshot backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -119,10 +121,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic cross-region replication.</para>
+        /// <para>Specifies whether to allow automatic cross-region replication.</para>
         /// <list type="bullet">
-        /// <item><description>true: enables automatic cross-region replication.</description></item>
-        /// <item><description>false: disables automatic cross-region replication.</description></item>
+        /// <item><description>true: Allowed.</description></item>
+        /// <item><description>false: Not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -207,25 +209,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-        /// This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</para>
+        /// This parameter is required when <c>AssociationType=AssociatedWithInstanceTag</c>.</para>
         /// </summary>
         [NameInMap("TargetTags")]
         [Validation(Required=false)]
         public List<CreateAutoSnapshotPolicyRequestTargetTags> TargetTags { get; set; }
         public class CreateAutoSnapshotPolicyRequestTargetTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.
-            /// Valid values of N: 1 to 10.
-            /// The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
+            /// <para>The tag key.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.
-            /// Valid values of N: 1 to 10. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
-            /// Note: If you pass in an empty or empty string value, it indicates any value.</para>
+            /// <para>The tag value.</para>
+            /// <para>Valid values of N: 1 to 5.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <remarks>
+            /// <para>If you pass in an empty value or an empty string, the tag value matches any value.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -287,13 +292,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The points in time at which automatic snapshots are created. The time is in UTC+8. Unit: hours. Valid values: 0 to 23, which represent 00:00 to 23:00 (a total of 24 points in time). For example, 1 indicates 01:00. Format description:</para>
+        /// <para>The points in time at which automatic snapshots are created. The time is in UTC+8. Unit: hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</para>
         /// <list type="bullet">
         /// <item><description>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</description></item>
         /// <item><description>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify up to 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. The snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</para>
+        /// <para>If a disk contains a large amount of data and the time required to create a single automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is automatically skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. Because the disk contains a large amount of data, the snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
