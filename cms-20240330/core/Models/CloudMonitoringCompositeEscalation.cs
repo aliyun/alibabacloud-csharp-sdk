@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The logical relationship between conditions (AND/OR).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AND</para>
         /// </summary>
         [NameInMap("relation")]
         [Validation(Required=false)]
@@ -25,13 +28,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The severity level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CRITICAL</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times the conditions are met before the alert is triggered.</para>
+        /// <para>The number of consecutive times the condition is triggered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

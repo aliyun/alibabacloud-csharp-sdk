@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyRouteForSubscription : TeaModel {
         /// <summary>
-        /// <para>An array of objects, each defining a notification channel.</para>
+        /// <para>The list of notification channels.</para>
         /// </summary>
         [NameInMap("channels")]
         [Validation(Required=false)]
         public List<NotifyRouteForSubscriptionChannels> Channels { get; set; }
         public class NotifyRouteForSubscriptionChannels : TeaModel {
             /// <summary>
-            /// <para>The channel type. For example, <c>Email</c>, <c>SMS</c>, or <c>Webhook</c>.</para>
+            /// <para>The channel type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("channelType")]
             [Validation(Required=false)]
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>A list of enabled sub-channels. Applicable to channels that support finer-grained topics or categories.</para>
+            /// <para>The list of enabled sub-channels.</para>
             /// </summary>
             [NameInMap("enabledSubChannels")]
             [Validation(Required=false)]
             public List<string> EnabledSubChannels { get; set; }
 
             /// <summary>
-            /// <para>A list of notification receivers. The receiver format depends on the <c>channelType</c>.</para>
+            /// <para>The list of receivers.</para>
             /// </summary>
             [NameInMap("receivers")]
             [Validation(Required=false)]
@@ -40,35 +43,44 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The active period for the notification rule.</para>
+        /// <para>The effective period configuration.</para>
         /// </summary>
         [NameInMap("effectTimeRange")]
         [Validation(Required=false)]
         public NotifyRouteForSubscriptionEffectTimeRange EffectTimeRange { get; set; }
         public class NotifyRouteForSubscriptionEffectTimeRange : TeaModel {
             /// <summary>
-            /// <para>The active days of the week, specified as an array of integers.</para>
+            /// <para>The effective days of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday).</para>
             /// </summary>
             [NameInMap("dayInWeek")]
             [Validation(Required=false)]
             public List<int?> DayInWeek { get; set; }
 
             /// <summary>
-            /// <para>The end of the active period, in minutes from 00:00. The value ranges from 0 to 1439.</para>
+            /// <para>The end time of the day, in minutes from 0:00.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("endTimeInMinute")]
             [Validation(Required=false)]
             public int? EndTimeInMinute { get; set; }
 
             /// <summary>
-            /// <para>The start of the active period, in minutes from 00:00. The value ranges from 0 to 1439.</para>
+            /// <para>The start time of the day, in minutes from 0:00.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("startTimeInMinute")]
             [Validation(Required=false)]
             public int? StartTimeInMinute { get; set; }
 
             /// <summary>
-            /// <para>The time zone for the effect time range, specified in the IANA Time Zone Database format. For example, <c>UTC</c> or <c>Asia/Shanghai</c>.</para>
+            /// <para>The time zone.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1700000000</para>
             /// </summary>
             [NameInMap("timeZone")]
             [Validation(Required=false)]

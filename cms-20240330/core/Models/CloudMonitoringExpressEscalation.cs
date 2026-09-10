@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class CloudMonitoringExpressEscalation : TeaModel {
         /// <summary>
         /// <para>The raw expression.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpu_usage &gt; 90</para>
         /// </summary>
         [NameInMap("rawExpression")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The severity level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CRITICAL</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The number of consecutive times the alert is triggered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LEFT</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

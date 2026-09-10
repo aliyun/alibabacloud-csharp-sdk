@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<FilterSettingConditions> Conditions { get; set; }
         public class FilterSettingConditions : TeaModel {
             /// <summary>
-            /// <para>The field.</para>
+            /// <para>The JSON path of the event field. Dot-notation nesting is supported.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>severity</para>
+            /// <para>labels.alertname</para>
             /// </summary>
             [NameInMap("field")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Op { get; set; }
 
             /// <summary>
-            /// <para>The value.</para>
+            /// <para>The matching value. Separate multiple values with commas when using IN or NOT_IN.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CRITICAL</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The expression.</para>
+        /// <para>Use either expression or relation. If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-notation nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the matching value).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1 and 2 or 3</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Expression { get; set; }
 
         /// <summary>
-        /// <para>The relationship between conditions.</para>
+        /// <para>The logical relationship between conditions. This parameter takes effect when expression is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AND</para>

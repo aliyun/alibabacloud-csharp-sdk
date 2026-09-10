@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContactGroupIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the contact group.</para>
+        /// <para>The contact name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. The default is 100.</para>
+        /// <para>The number of entries per page. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The workspace name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default-cms-xxxxxx-cn-beijing</para>
+        /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]
         public string Workspace { get; set; }

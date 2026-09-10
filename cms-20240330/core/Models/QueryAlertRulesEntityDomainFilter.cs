@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesEntityDomainFilter : TeaModel {
+        /// <summary>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cloud_monitor</para>
+        /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]
         public string Eq { get; set; }

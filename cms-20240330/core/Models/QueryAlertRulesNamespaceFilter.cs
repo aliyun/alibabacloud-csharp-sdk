@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class QueryAlertRulesNamespaceFilter : TeaModel {
         /// <summary>
         /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs_ecs_dashboard</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

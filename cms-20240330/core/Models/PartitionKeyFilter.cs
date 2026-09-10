@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PartitionKeyFilter : TeaModel {
         /// <summary>
-        /// <para>Returns only items whose partition key value equals this string.</para>
+        /// <para>The exact match value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>workspace</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

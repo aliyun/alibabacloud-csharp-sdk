@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DatasourceTypeFilter : TeaModel {
         /// <summary>
-        /// <para>Specifies the data source type for an exact match.</para>
+        /// <para>The exact match value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APM_DS</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

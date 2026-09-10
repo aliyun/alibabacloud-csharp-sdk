@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SubscriptionForModify : TeaModel {
+        /// <summary>
+        /// <para>The agent configuration information.</para>
+        /// </summary>
         [NameInMap("agentConfig")]
         [Validation(Required=false)]
         public SubscriptionForModifyAgentConfig AgentConfig { get; set; }
         public class SubscriptionForModifyAgentConfig : TeaModel {
+            /// <summary>
+            /// <para>The unique identifier of the agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent-uuid-001</para>
+            /// </summary>
             [NameInMap("agentUuid")]
             [Validation(Required=false)]
             public string AgentUuid { get; set; }
 
+            /// <summary>
+            /// <para>The list of agent routing configurations.</para>
+            /// </summary>
             [NameInMap("routes")]
             [Validation(Required=false)]
             public List<NotifyRouteForSubscription> Routes { get; set; }
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public SubscriptionForModifyPushingSetting PushingSetting { get; set; }
         public class SubscriptionForModifyPushingSetting : TeaModel {
             /// <summary>
-            /// <para>The list of action plan IDs for alert pushing.</para>
+            /// <para>The list of action plan IDs for alert push.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
@@ -75,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>The list of action integration plan IDs for recovery pushing.</para>
+            /// <para>The list of action integration plan IDs for recovery push.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
@@ -99,6 +111,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <item><description>true: Subscribe.</description></item>
         /// <item><description>false or null: Do not subscribe.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("subscribeLegacyEvent")]
         [Validation(Required=false)]
@@ -109,12 +124,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test subscription.</para>
+        /// <para>TestSubscription</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
+        /// <summary>
+        /// <para>The workspace filter settings.</para>
+        /// </summary>
         [NameInMap("workspaceFilterSetting")]
         [Validation(Required=false)]
         public WorkspaceFilterSetting WorkspaceFilterSetting { get; set; }

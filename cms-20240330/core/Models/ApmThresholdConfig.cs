@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class ApmThresholdConfig : TeaModel {
         /// <summary>
         /// <para>The upper bound of the range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("max")]
         [Validation(Required=false)]
@@ -18,21 +21,30 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The lower bound of the range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("min")]
         [Validation(Required=false)]
         public double? Min { get; set; }
 
         /// <summary>
-        /// <para>The alert level.</para>
+        /// <para>The warning level.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INFO</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The threshold. This parameter is required for APM_SIMPLE_CONDITION.</para>
+        /// <para>The threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]

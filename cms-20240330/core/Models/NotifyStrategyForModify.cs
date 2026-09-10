@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyStrategyForModify : TeaModel {
         /// <summary>
-        /// <para>The auto-recovery time in seconds.</para>
+        /// <para>The automatic recovery time in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AutoRecoverSeconds { get; set; }
 
         /// <summary>
-        /// <para>The notification channel template.</para>
+        /// <para>The notification channel templates.</para>
         /// </summary>
         [NameInMap("customTemplateEntries")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable incident management.</para>
+        /// <para>Indicates whether incident management is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyStrategyForModifyGroupingSetting GroupingSetting { get; set; }
         public class NotifyStrategyForModifyGroupingSetting : TeaModel {
             /// <summary>
-            /// <para>The keys used for merging.</para>
+            /// <para>The grouping keys.</para>
             /// </summary>
             [NameInMap("groupingKeys")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? PeriodMin { get; set; }
 
             /// <summary>
-            /// <para>The silence period in seconds.</para>
+            /// <para>The silence duration in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? SilenceSec { get; set; }
 
             /// <summary>
-            /// <para>The number of triggers.</para>
+            /// <para>The number of times the alert is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to send a notification upon recovery.</para>
+        /// <para>Indicates whether to send a notification when the alert is restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -142,11 +142,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? IgnoreRestoredNotification { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the notification policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Policy name.</para>
+        /// <para>Policy Name</para>
         /// </summary>
         [NameInMap("notifyStrategyName")]
         [Validation(Required=false)]
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<string> AlertActionIds { get; set; }
 
             /// <summary>
-            /// <para>The list of restore action IDs.</para>
+            /// <para>The list of recovery action IDs.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The message template UUID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>模板 UUID</para>
+            /// <para>Template UUID</para>
             /// </summary>
             [NameInMap("templateUuid")]
             [Validation(Required=false)]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The settings for repeated notifications.</para>
+        /// <para>The repeat notification settings.</para>
         /// </summary>
         [NameInMap("repeatNotifySetting")]
         [Validation(Required=false)]
         public NotifyStrategyForModifyRepeatNotifySetting RepeatNotifySetting { get; set; }
         public class NotifyStrategyForModifyRepeatNotifySetting : TeaModel {
             /// <summary>
-            /// <para>The incident state that stops the repeated notifications.</para>
+            /// <para>The end incident state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;Resolved&quot;</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EndIncidentState { get; set; }
 
             /// <summary>
-            /// <para>The interval for repeated notifications.</para>
+            /// <para>The time interval for repeat notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The routing settings for the notification channel.</para>
+        /// <para>The notification channel route settings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("routes")]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<NotifyStrategyForModifyRoutes> Routes { get; set; }
         public class NotifyStrategyForModifyRoutes : TeaModel {
             /// <summary>
-            /// <para>The notification channel.</para>
+            /// <para>The notification channels.</para>
             /// </summary>
             [NameInMap("channels")]
             [Validation(Required=false)]
@@ -257,6 +257,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             }
 
+            /// <summary>
+            /// <para>The name of the digital employee.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>On-call Assistant</para>
+            /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
             public string DigitalEmployeeName { get; set; }
@@ -269,7 +275,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public NotifyStrategyForModifyRoutesEffectTimeRange EffectTimeRange { get; set; }
             public class NotifyStrategyForModifyRoutesEffectTimeRange : TeaModel {
                 /// <summary>
-                /// <para>The days of the week when the policy is active. Monday to Sunday.</para>
+                /// <para>The effective days (Monday to Sunday).</para>
                 /// </summary>
                 [NameInMap("dayInWeek")]
                 [Validation(Required=false)]
@@ -307,12 +313,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether root cause analysis is enabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enableRca")]
             [Validation(Required=false)]
             public bool? EnableRca { get; set; }
 
             /// <summary>
-            /// <para>The routing conditions.</para>
+            /// <para>The route condition.</para>
             /// </summary>
             [NameInMap("filterSetting")]
             [Validation(Required=false)]

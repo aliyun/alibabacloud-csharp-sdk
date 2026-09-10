@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EntityDiscoverRule : TeaModel {
         /// <summary>
-        /// <para>A collection of annotation matching rules.</para>
+        /// <para>The collection of annotation matching rules.</para>
         /// </summary>
         [NameInMap("annotations")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>A collection of annotation values.</para>
+            /// <para>The collection of annotation values.</para>
             /// </summary>
             [NameInMap("tagValues")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>A collection of entity types.</para>
+        /// <para>The collection of entity types.</para>
         /// </summary>
         [NameInMap("entityTypes")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string FieldKey { get; set; }
 
             /// <summary>
-            /// <para>A collection of property values.</para>
+            /// <para>The collection of property values.</para>
             /// </summary>
             [NameInMap("fieldValues")]
             [Validation(Required=false)]
@@ -89,23 +89,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>A collection of instance IDs.</para>
+        /// <para>The collection of instance IDs.</para>
         /// </summary>
         [NameInMap("instanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>A collection of IP address matching rules.</para>
+        /// <para>The collection of IP matching rules.</para>
         /// </summary>
         [NameInMap("ipMatchRule")]
         [Validation(Required=false)]
         public EntityDiscoverRuleIpMatchRule IpMatchRule { get; set; }
         public class EntityDiscoverRuleIpMatchRule : TeaModel {
+            /// <summary>
+            /// <para>The CIDR block of the IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.168.0.0/16</para>
+            /// </summary>
             [NameInMap("ipCIDR")]
             [Validation(Required=false)]
             public string IpCIDR { get; set; }
 
+            /// <summary>
+            /// <para>The property key of the IP address.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ecs_ip</para>
+            /// </summary>
             [NameInMap("ipFieldKey")]
             [Validation(Required=false)]
             public string IpFieldKey { get; set; }
@@ -113,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>A collection of label matching rules.</para>
+        /// <para>The collection of label matching rules.</para>
         /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
@@ -140,7 +152,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>A collection of label values.</para>
+            /// <para>The collection of label values.</para>
             /// </summary>
             [NameInMap("tagValues")]
             [Validation(Required=false)]
@@ -149,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>A collection of region IDs.</para>
+        /// <para>The collection of region IDs.</para>
         /// </summary>
         [NameInMap("regionIds")]
         [Validation(Required=false)]
@@ -166,7 +178,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag-based service discovery rules.</para>
+        /// <para>The tag-based service discovery settings.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
@@ -193,7 +205,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>A collection of tag values.</para>
+            /// <para>The collection of tag values.</para>
             /// </summary>
             [NameInMap("tagValues")]
             [Validation(Required=false)]

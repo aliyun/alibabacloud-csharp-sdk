@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyStrategyIdFilter : TeaModel {
         /// <summary>
-        /// <para>The exact ID of the notification strategy to retrieve.</para>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ns_1234567890</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

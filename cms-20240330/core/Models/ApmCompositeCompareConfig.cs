@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ApmCompositeCompareConfig : TeaModel {
         /// <summary>
-        /// <para>The aggregate functions used for aggregation.</para>
+        /// <para>The aggregate functions.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>AVG</para>
         /// </summary>
         [NameInMap("aggregate")]
         [Validation(Required=false)]
         public string Aggregate { get; set; }
 
         /// <summary>
-        /// <para>The comparison operator. GTE/LTE indicates greater than or equal to/less than or equal to. YOY_UP/YOY_DOWN indicates year-over-year increase/decrease, which requires yoyTimeUnit and yoyTimeValue to be specified.</para>
+        /// <para>The comparison operator.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GT</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -28,6 +34,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The threshold.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]
@@ -35,6 +44,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The year-over-year time unit. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>day</para>
         /// </summary>
         [NameInMap("yoyTimeUnit")]
         [Validation(Required=false)]
@@ -42,6 +54,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The year-over-year time value. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("yoyTimeValue")]
         [Validation(Required=false)]

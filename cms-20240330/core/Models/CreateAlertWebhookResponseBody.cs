@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertWebhookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the webhook.</para>
+        /// <para>The unique identifier of the webhook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveResourceGlobalScopeFilter : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to retrieve only resources that are exclusive to the global scope.</para>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

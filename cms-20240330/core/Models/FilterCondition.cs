@@ -10,21 +10,30 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class FilterCondition : TeaModel {
         /// <summary>
-        /// <para>The name of the field to filter on.</para>
+        /// <para>The field name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>region</para>
         /// </summary>
         [NameInMap("field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The comparison operator, such as <c>equals</c> or <c>startsWith</c>.</para>
+        /// <para>The operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EQ</para>
         /// </summary>
         [NameInMap("op")]
         [Validation(Required=false)]
         public string Op { get; set; }
 
         /// <summary>
-        /// <para>The value to match for the specified field and operator.</para>
+        /// <para>The comparison value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

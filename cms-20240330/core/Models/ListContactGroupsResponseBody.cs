@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of contact groups.</para>
+        /// <para>The contact groups.</para>
         /// </summary>
         [NameInMap("contactGroups")]
         [Validation(Required=false)]
         public List<ListContactGroupsResponseBodyContactGroups> ContactGroups { get; set; }
         public class ListContactGroupsResponseBodyContactGroups : TeaModel {
             /// <summary>
-            /// <para>The contact group ID.</para>
+            /// <para>The unique identifier of the contact group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,17 +27,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactGroupId { get; set; }
 
             /// <summary>
-            /// <para>The contact IDs in the group.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>[&quot;Demo meeting&quot;]</para>
+            /// <para>The contact IDs.</para>
             /// </summary>
             [NameInMap("contactIds")]
             [Validation(Required=false)]
             public List<string> ContactIds { get; set; }
 
             /// <summary>
-            /// <para>The name of the contact group.</para>
+            /// <para>The contact name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -46,6 +43,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default-cms-1641973317055299-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]
             public string Workspace { get; set; }
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The returned page number.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

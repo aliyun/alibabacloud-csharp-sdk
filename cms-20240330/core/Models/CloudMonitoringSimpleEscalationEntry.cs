@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class CloudMonitoringSimpleEscalationEntry : TeaModel {
         /// <summary>
         /// <para>The comparison operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GT</para>
         /// </summary>
         [NameInMap("comparisonOperator")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The precondition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3 consecutive times</para>
         /// </summary>
         [NameInMap("preCondition")]
         [Validation(Required=false)]
@@ -25,13 +31,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The severity level.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CRITICAL</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The statistics method.</para>
+        /// <para>The statistical method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Average</para>
         /// </summary>
         [NameInMap("statistics")]
         [Validation(Required=false)]
@@ -39,13 +51,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]
         public string Threshold { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive times the condition is triggered.</para>
+        /// <para>The number of consecutive times the condition must be met to trigger an alert.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("times")]
         [Validation(Required=false)]

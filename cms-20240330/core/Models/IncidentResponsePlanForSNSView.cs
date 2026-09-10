@@ -10,70 +10,88 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentResponsePlanForSNSView : TeaModel {
         /// <summary>
-        /// <para>The duration, in seconds, after which an incident without new alerts is automatically resolved.</para>
+        /// <para>The auto-recovery time when no incidents occur, in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>600</para>
         /// </summary>
         [NameInMap("autoRecoverSeconds")]
         [Validation(Required=false)]
         public long? AutoRecoverSeconds { get; set; }
 
         /// <summary>
-        /// <para>The time when the incident response plan was created, in UTC and in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+        /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1700000000000</para>
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the incident response plan is enabled. Valid values: <c>true</c> and <c>false</c>.</para>
+        /// <para>Indicates whether the response plan is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the escalation policies.</para>
+        /// <para>The list of escalation plan IDs.</para>
         /// </summary>
         [NameInMap("escalationId")]
         [Validation(Required=false)]
         public List<string> EscalationId { get; set; }
 
         /// <summary>
-        /// <para>The mode of the incident response plan. Valid values: <c>AUTO</c> and <c>MANUAL</c>.</para>
+        /// <para>The lifecycle mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NOTIFY_STRATEGY_DEFINED</para>
         /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The name of the incident response plan.</para>
+        /// <para>The name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample response plan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The settings for sending notifications.</para>
+        /// <para>The push settings.</para>
         /// </summary>
         [NameInMap("pushingSetting")]
         [Validation(Required=false)]
         public IncidentResponsePlanForSNSViewPushingSetting PushingSetting { get; set; }
         public class IncidentResponsePlanForSNSViewPushingSetting : TeaModel {
             /// <summary>
-            /// <para>The IDs of actions to run when an alert is triggered.</para>
+            /// <para>The list of response action IDs triggered by alerts.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
             public List<string> AlertActionIds { get; set; }
 
             /// <summary>
-            /// <para>The IDs of actions to run when the incident is resolved.</para>
+            /// <para>The list of response action IDs triggered by alert recovery.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
             public List<string> RestoreActionIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the notification template.</para>
+            /// <para>The UUID of the template used for pushing.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tpl-001</para>
             /// </summary>
             [NameInMap("templateUuid")]
             [Validation(Required=false)]
@@ -82,21 +100,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The settings for repeated notifications.</para>
+        /// <para>The repeat notification configuration.</para>
         /// </summary>
         [NameInMap("repeatNotifySetting")]
         [Validation(Required=false)]
         public IncidentResponsePlanForSNSViewRepeatNotifySetting RepeatNotifySetting { get; set; }
         public class IncidentResponsePlanForSNSViewRepeatNotifySetting : TeaModel {
             /// <summary>
-            /// <para>The incident state at which repeated notifications stop. For example, <c>resolved</c>.</para>
+            /// <para>The setting that specifies whether to send repeat notifications when an incident ends.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("endIncidentState")]
             [Validation(Required=false)]
             public string EndIncidentState { get; set; }
 
             /// <summary>
-            /// <para>The interval, in seconds, for repeated notifications.</para>
+            /// <para>The repeat notification interval, in seconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>300</para>
             /// </summary>
             [NameInMap("repeatInterval")]
             [Validation(Required=false)]
@@ -105,7 +129,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The source of the incident.</para>
+        /// <para>The source. The value must be CUSTOM within SNS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CUSTOM</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
@@ -113,27 +140,39 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The synchronization source type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CUSTOM</para>
         /// </summary>
         [NameInMap("syncFromType")]
         [Validation(Required=false)]
         public string SyncFromType { get; set; }
 
         /// <summary>
-        /// <para>The type of the incident response plan.</para>
+        /// <para>The response plan type. The value must be NOTIFY_STRATEGY_DEFINED within SNS.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NOTIFY_STRATEGY_DEFINED</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The time when the incident response plan was last updated, in UTC and in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
+        /// <para>The update time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1700000000000</para>
         /// </summary>
         [NameInMap("updateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the incident response plan.</para>
+        /// <para>The unique identifier of the response plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc-def-12345</para>
         /// </summary>
         [NameInMap("uuid")]
         [Validation(Required=false)]

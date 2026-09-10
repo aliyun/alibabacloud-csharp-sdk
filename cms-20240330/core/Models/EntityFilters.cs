@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EntityFilters : TeaModel {
+        /// <summary>
+        /// <para>The name of the filter field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>region</para>
+        /// </summary>
         [NameInMap("field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
+        /// <summary>
+        /// <para>The filter operator. Only = or != is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>=</para>
+        /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
+        /// <summary>
+        /// <para>The filter value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]
         public string Value { get; set; }

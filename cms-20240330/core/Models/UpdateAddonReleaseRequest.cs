@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the add-on.</para>
+        /// <para>The version of the addon.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.2</para>
@@ -19,14 +19,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AddonVersion { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for the request.</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Performs a dry run.</description></item>
+        /// <item><description>false: Does not perform a dry run.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
+        [Obsolete]
         public bool? DryRun { get; set; }
 
         /// <summary>

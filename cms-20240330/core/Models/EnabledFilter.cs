@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EnabledFilter : TeaModel {
         /// <summary>
-        /// <para>The value to filter by. Set to <c>true</c> to return only enabled resources. Set to <c>false</c> to return only disabled resources.</para>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

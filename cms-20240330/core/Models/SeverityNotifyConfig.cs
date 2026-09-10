@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SeverityNotifyConfig : TeaModel {
         /// <summary>
-        /// <para>The list of notification recipients. Each recipient specifies a type, an identifier, and the enabled channels.</para>
+        /// <para>The list of Notification Recipients. Each recipient specifies the type, identifier, and enabled channels.</para>
         /// </summary>
         [NameInMap("receivers")]
         [Validation(Required=false)]
         public List<DirectNotifyReceiver> Receivers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to send recovery notifications for this severity level. If this parameter is left empty, the value falls back to the top-level sendRecoverNotification parameter.</para>
+        /// <para>Specifies whether to send recovery notifications for this severity level. If this parameter is empty, the value falls back to the top-level sendRecoverNotification parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("sendRecoverNotification")]
         [Validation(Required=false)]

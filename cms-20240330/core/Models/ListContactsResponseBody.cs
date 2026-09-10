@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListContactsResponseBodyContacts> Contacts { get; set; }
         public class ListContactsResponseBodyContacts : TeaModel {
             /// <summary>
-            /// <para>The ID of the contact.</para>
+            /// <para>The contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,21 +47,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EmailVerify { get; set; }
 
             /// <summary>
-            /// <para>A list of contact group IDs to which the contact belongs.</para>
+            /// <para>The contact groups to which the contact belongs.</para>
             /// </summary>
             [NameInMap("groupList")]
             [Validation(Required=false)]
             public List<string> GroupList { get; set; }
 
             /// <summary>
-            /// <para>A map of user IDs for various instant messaging (IM) tools.</para>
+            /// <para>The instant messaging user ID mappings. Multiple instant messaging tools are supported.</para>
             /// </summary>
             [NameInMap("imUserIds")]
             [Validation(Required=false)]
             public Dictionary<string, string> ImUserIds { get; set; }
 
             /// <summary>
-            /// <para>The language preference for notifications. Valid values: zh-CN and en-US.</para>
+            /// <para>The language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh_CN</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The name of the contact.</para>
+            /// <para>The contact name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the phone number is verified.</para>
+            /// <para>Indicates whether the phone number of the contact is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? PhoneVerify { get; set; }
 
             /// <summary>
-            /// <para>The last time the contact was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-22 02:21:51</para>
@@ -110,6 +110,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default-cms-5884500827389836-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]
             public string Workspace { get; set; }
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -147,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>56</para>

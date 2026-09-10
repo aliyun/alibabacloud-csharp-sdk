@@ -10,15 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class PrometheusSimpleExpression : TeaModel {
         /// <summary>
-        /// <para>The comparison operator. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>GT: greater than</description></item>
-        /// <item><description>GE: greater than or equal to</description></item>
-        /// <item><description>LT: less than</description></item>
-        /// <item><description>LE: less than or equal to</description></item>
-        /// <item><description>EQ: equal to</description></item>
-        /// <item><description>NE: not equal to</description></item>
-        /// </list>
+        /// <para>The comparison operator. Valid values: GT (greater than), GE (greater than or equal to), LT (less than), LE (less than or equal to), EQ (equal to), and NE (not equal to).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GT</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -26,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpuQuery</para>
         /// </summary>
         [NameInMap("queryName")]
         [Validation(Required=false)]
@@ -33,6 +31,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The comparison threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]

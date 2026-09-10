@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,12 +40,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The chatbot ID.</para>
+        /// <para>The robot IDs.</para>
         /// </summary>
         [NameInMap("robots")]
         [Validation(Required=false)]
         public List<ListAlertRobotsResponseBodyRobots> Robots { get; set; }
         public class ListAlertRobotsResponseBodyRobots : TeaModel {
+            /// <summary>
+            /// <para>The digital employee name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>apsara-ops</para>
+            /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
             public string DigitalEmployeeName { get; set; }
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The chatbot name.</para>
+            /// <para>The robot name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the chatbot.</para>
+            /// <para>The unique ID of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RobotSignKey { get; set; }
 
             /// <summary>
-            /// <para>The chatbot type.</para>
+            /// <para>The robot type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL of the chatbot.</para>
+            /// <para>The webhook URL of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</para>
@@ -104,6 +110,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Url { get; set; }
 
+            /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default-cms-5551847274244273-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]
             public string Workspace { get; set; }

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class AlertRuleRcaConfig : TeaModel {
         /// <summary>
         /// <para>The digital employee name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>O&amp;M Assistant</para>
         /// </summary>
         [NameInMap("digitalEmployeeName")]
         [Validation(Required=false)]

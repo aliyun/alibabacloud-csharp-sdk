@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class WorkspaceFilterSetting : TeaModel {
         /// <summary>
-        /// <para>The tag filter.</para>
+        /// <para>The label filter. This parameter is not supported and does not take effect if specified.</para>
         /// </summary>
         [NameInMap("tagSelector")]
         [Validation(Required=false)]
         public FilterSetting TagSelector { get; set; }
 
         /// <summary>
-        /// <para>A list of workspace UUIDs.</para>
+        /// <para>The list of workspace UUIDs.</para>
         /// </summary>
         [NameInMap("workspaceUuids")]
         [Validation(Required=false)]

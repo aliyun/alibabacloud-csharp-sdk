@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAlertWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The content type. Valid values:</para>
+        /// <para>The content type of the data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>JSON (default)</para>
-        /// </description></item>
-        /// <item><description><para>FORM</para>
-        /// </description></item>
+        /// <item><description>JSON (default)</description></item>
+        /// <item><description>FORM</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The headers.</para>
+        /// <para>The collection of HTTP request headers.</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]
@@ -35,10 +33,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>zh_CN</para>
-        /// </description></item>
-        /// <item><description><para>en_US</para>
-        /// </description></item>
+        /// <item><description>zh_CN</description></item>
+        /// <item><description>en_US</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,10 +47,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <summary>
         /// <para>The request method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GET</para>
-        /// </description></item>
-        /// <item><description><para>POST</para>
-        /// </description></item>
+        /// <item><description>GET</description></item>
+        /// <item><description>POST</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>The name of the webhook.</para>
+        /// <para>The webhook name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +70,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The URL for the alert callback.</para>
+        /// <para>The alert callback URL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Url { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the webhook.</para>
+        /// <para>The unique identifier of the webhook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -97,6 +91,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string WebhookId { get; set; }
 
         /// <summary>
+        /// <para>The workspace identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-workspace</para>
         /// </summary>

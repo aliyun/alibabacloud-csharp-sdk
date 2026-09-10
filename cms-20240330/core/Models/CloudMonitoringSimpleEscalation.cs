@@ -10,21 +10,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringSimpleEscalation : TeaModel {
         /// <summary>
-        /// <para>An object that defines a single escalation rule.</para>
+        /// <para>The multi-level trigger list.</para>
         /// </summary>
         [NameInMap("escalations")]
         [Validation(Required=false)]
         public List<CloudMonitoringSimpleEscalationEntry> Escalations { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The metric name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpuUsage</para>
         /// </summary>
         [NameInMap("metricName")]
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The evaluation period for the metric, in seconds.</para>
+        /// <para>The collection period, in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("period")]
         [Validation(Required=false)]

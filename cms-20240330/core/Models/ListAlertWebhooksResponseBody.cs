@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertWebhooksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Total { get; set; }
 
         /// <summary>
-        /// <para>The webhooks.</para>
+        /// <para>The list of webhooks.</para>
         /// </summary>
         [NameInMap("webhooks")]
         [Validation(Required=false)]
@@ -59,10 +59,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The content type of the data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>JSON</para>
-            /// </description></item>
-            /// <item><description><para>FORM</para>
-            /// </description></item>
+            /// <item><description>JSON</description></item>
+            /// <item><description>FORM</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The headers.</para>
+            /// <para>The collection of HTTP request headers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -85,10 +83,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The language. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>zh_CN</para>
-            /// </description></item>
-            /// <item><description><para>en_US</para>
-            /// </description></item>
+            /// <item><description>zh_CN</description></item>
+            /// <item><description>en_US</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +97,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The request method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>GET</para>
-            /// </description></item>
-            /// <item><description><para>POST</para>
-            /// </description></item>
+            /// <item><description>GET</description></item>
+            /// <item><description>POST</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

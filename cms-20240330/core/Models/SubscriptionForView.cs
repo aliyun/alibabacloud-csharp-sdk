@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SubscriptionForView : TeaModel {
+        /// <summary>
+        /// <para>The Agent configuration information.</para>
+        /// </summary>
         [NameInMap("agentConfig")]
         [Validation(Required=false)]
         public SubscriptionForViewAgentConfig AgentConfig { get; set; }
         public class SubscriptionForViewAgentConfig : TeaModel {
+            /// <summary>
+            /// <para>The unique identifier of the Agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent-uuid-001</para>
+            /// </summary>
             [NameInMap("agentUuid")]
             [Validation(Required=false)]
             public string AgentUuid { get; set; }
 
+            /// <summary>
+            /// <para>The list of Agent routing configurations.</para>
+            /// </summary>
             [NameInMap("routes")]
             [Validation(Required=false)]
             public List<NotifyRouteForSubscription> Routes { get; set; }
@@ -114,18 +126,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Subscribe.</description></item>
-        /// <item><description>false or null: Do not subscribe.</description></item>
-        /// </list>
+        /// <para>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: Subscribed. false or null: Not subscribed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("subscribeLegacyEvent")]
         [Validation(Required=false)]
         public bool? SubscribeLegacyEvent { get; set; }
 
         /// <summary>
-        /// <para>UUID</para>
+        /// <para>The unique identifier of the subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123123</para>
@@ -139,13 +150,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Subscription test.</para>
+        /// <para>SubscriptionTest</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
 
         /// <summary>
+        /// <para>The subscription type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// </summary>
@@ -184,7 +197,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>workspace</para>
+        /// <para>The workspace identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
@@ -193,6 +206,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Workspace { get; set; }
 
+        /// <summary>
+        /// <para>The workspace filter settings.</para>
+        /// </summary>
         [NameInMap("workspaceFilterSetting")]
         [Validation(Required=false)]
         public WorkspaceFilterSetting WorkspaceFilterSetting { get; set; }

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class TriggerConditions : TeaModel {
         /// <summary>
-        /// <para>The expression type, fixed as SIMPLE (used by MetricSet multi-threshold triggers).</para>
+        /// <para>The expression type. Fixed as SIMPLE (used for MetricSet multi-threshold triggers).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SIMPLE</para>
         /// </summary>
         [NameInMap("expressionType")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The upper bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE. Must be greater than or equal to min.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("max")]
         [Validation(Required=false)]
@@ -25,13 +31,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The lower bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("min")]
         [Validation(Required=false)]
         public double? Min { get; set; }
 
         /// <summary>
-        /// <para>The comparison operator. Valid values: GT / GE / LT / LE / EQ / NE / IN_RANGE (requires both min and max) / OUT_OF_RANGE (requires both min and max) / PRESENT / NOT_PRESENT.</para>
+        /// <para>The comparison operator. Valid values: GT, GE, LT, LE, EQ, NE, IN_RANGE (requires both min and max), OUT_OF_RANGE (requires both min and max), PRESENT, and NOT_PRESENT.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GT</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -39,13 +51,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpuQuery</para>
         /// </summary>
         [NameInMap("queryName")]
         [Validation(Required=false)]
         public string QueryName { get; set; }
 
         /// <summary>
-        /// <para>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. Use min and max for IN_RANGE or OUT_OF_RANGE. Leave empty for PRESENT or NOT_PRESENT.</para>
+        /// <para>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. For IN_RANGE or OUT_OF_RANGE, use min and max instead. Not required for PRESENT or NOT_PRESENT.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
         /// </summary>
         [NameInMap("threshold")]
         [Validation(Required=false)]

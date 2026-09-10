@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class SlsMultiConditionCaseConfig : TeaModel {
         /// <summary>
         /// <para>The match expression (corresponds to V1 condition, preserved as-is without structured parsing).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("condition")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The count match expression (corresponds to V1 countCondition, preserved as-is without structured parsing).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("countCondition")]
         [Validation(Required=false)]
@@ -27,6 +33,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use countCondition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GTE</para>
         /// </summary>
         [NameInMap("countOperator")]
         [Validation(Required=false)]
@@ -37,6 +46,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use countCondition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("countThreshold")]
         [Validation(Required=false)]
@@ -47,6 +59,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use condition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("matchField")]
         [Validation(Required=false)]
@@ -57,6 +72,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use condition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PRESENT</para>
         /// </summary>
         [NameInMap("matchOperator")]
         [Validation(Required=false)]
@@ -67,6 +85,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use condition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("matchValue")]
         [Validation(Required=false)]
@@ -75,6 +96,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The detection operator (aligned with V1 caseList.type): HAS_DATA / HAS_DATA_COUNT / HAS_DATA_MATCH / HAS_DATA_MATCH_COUNT.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HAS_DATA</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
@@ -84,6 +108,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// 
         /// <summary>
         /// <para><b>[Deprecated]</b> The write path is disabled. Use condition instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("rawCondition")]
         [Validation(Required=false)]
@@ -92,6 +119,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The severity level (corresponds to V1 level).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>INFO</para>
         /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]

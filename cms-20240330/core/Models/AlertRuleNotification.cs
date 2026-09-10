@@ -52,26 +52,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> Groups { get; set; }
 
         /// <summary>
-        /// <para>The notification time period. Notifications are sent only during this time period.</para>
+        /// <para>The notification time window. Notifications are sent only within this time window.</para>
         /// </summary>
         [NameInMap("notifyTime")]
         [Validation(Required=false)]
         public AlertRuleTimeSpan NotifyTime { get; set; }
 
+        /// <summary>
+        /// <para>The Qwen (Qwencloud) Notification Recipient configuration. Both the outer key and inner key are custom identity values. The inner Boolean value specifies whether the Notification Recipient is enabled.</para>
+        /// </summary>
         [NameInMap("qwencloudContacts")]
         [Validation(Required=false)]
         public Dictionary<string, Dictionary<string, object>> QwencloudContacts { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to send recovery notifications. Each severity level in severityNotifications can independently override this setting.</para>
+        /// </summary>
         [NameInMap("sendOk")]
         [Validation(Required=false)]
         public bool? SendOk { get; set; }
 
+        /// <summary>
+        /// <para>The Notification Recipients and channels configured by severity level. This parameter is mutually exclusive with the top-level contacts, groups, and similar parameters. The key is the severity level: CRITICAL, ERROR, WARNING, or INFO.</para>
+        /// </summary>
         [NameInMap("severityNotifications")]
         [Validation(Required=false)]
         public Dictionary<string, SeverityNotifyConfig> SeverityNotifications { get; set; }
 
         /// <summary>
-        /// <para>The notification mute duration, in seconds.</para>
+        /// <para>The notification mute duration. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>

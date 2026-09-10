@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesProductCategoryFilter : TeaModel {
+        /// <summary>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs</para>
+        /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]
         public string Eq { get; set; }

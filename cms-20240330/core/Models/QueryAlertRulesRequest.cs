@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the position from which you want to start reading. If this parameter is left empty, data is read from the beginning.</para>
+        /// <para>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveResourceTypeFilter : TeaModel {
         /// <summary>
-        /// <para>The exact resource type to query. Returns only resources of this type.</para>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ACS::ECS::Instance</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]

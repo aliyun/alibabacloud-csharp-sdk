@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class BizSourceFilter : TeaModel {
         /// <summary>
-        /// <para>The exact match value.</para>
+        /// <para>The exact match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>managed_service_for_prometheus</para>
         /// </summary>
         [NameInMap("eq")]
         [Validation(Required=false)]
