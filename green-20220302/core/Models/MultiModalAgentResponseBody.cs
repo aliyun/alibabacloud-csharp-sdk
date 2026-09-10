@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <list type="bullet">
                 /// <item><description><b>SESSION_KILLED</b>: The session is terminated.</description></item>
                 /// <item><description><b>SESSION_EXPIRED</b>: The session has expired.</description></item>
-                /// <item><description><b>SESSION_NO_PERMISSION</b>: Operations account used to terminate the session has insufficient permissions.</description></item>
-                /// <item><description><b>SESSION_ACCOUNT_ERROR</b>: Operations account or password used to terminate the session is incorrect.</description></item>
-                /// <item><description><b>SESSION_IGNORED_USER</b>: The session of an account that does not need to be terminated.</description></item>
-                /// <item><description><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session or command of an Alibaba Cloud O&amp;M account.</description></item>
+                /// <item><description><b>SESSION_NO_PERMISSION</b>: The account used to terminate the session has insufficient permissions.</description></item>
+                /// <item><description><b>SESSION_ACCOUNT_ERROR</b>: The account or password used to terminate the session is incorrect.</description></item>
+                /// <item><description><b>SESSION_IGNORED_USER</b>: The session belongs to an account that does not need to be terminated.</description></item>
+                /// <item><description><b>SESSION_INTERNAL_USER_OR_COMMAND</b>: The session or command belongs to an Alibaba Cloud operations account.</description></item>
                 /// <item><description><b>SESSION_KILL_TASK_TIMEOUT</b>: The session termination timed out.</description></item>
                 /// <item><description><b>SESSION_OTHER_ERROR</b>: Other errors.</description></item>
                 /// </list>
@@ -129,6 +129,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public long? ContentLength { get; set; }
 
+                /// <summary>
+                /// <para>The credits consumed.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.23</para>
+                /// </summary>
                 [NameInMap("Credits")]
                 [Validation(Required=false)]
                 public double? Credits { get; set; }

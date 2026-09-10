@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         /// <summary>
         /// <para>The set of parameters required by the service, in JSON string format.</para>
         /// <list type="bullet">
-        /// <item><description>TaskId: The task ID returned when the task was submitted.</description></item>
+        /// <item><description>taskId: The task ID returned when the task was submitted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;TaskId\&quot;:\&quot;e5f2d886-4c23-440d-999c-bd98acde11b6\&quot;}</para>
+        /// <para>\&quot;taskId\&quot;:\&quot;m_tx_8oaprwnGUKuuLYNwV21JRf-VQjzQX3\&quot;</para>
         /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]

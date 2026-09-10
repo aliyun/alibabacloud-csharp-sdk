@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Green20220302
                 {"cn-shanghai-finance-1", "green.aliyuncs.com"},
                 {"cn-north-2-gov-1", "green.aliyuncs.com"},
                 {"cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"},
-                {"cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"},
                 {"cn-beijing", "green-cip.cn-beijing.aliyuncs.com"},
+                {"cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"},
                 {"ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("green", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -2017,7 +2017,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
+        /// <para>Synchronously detects content by calling the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2068,7 +2068,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
+        /// <para>Synchronously detects content by calling the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2119,7 +2119,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
+        /// <para>Synchronously detects content by calling the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2142,7 +2142,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects content by using the multimodal Agent API.</para>
+        /// <para>Synchronously detects content by calling the multimodal Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2165,7 +2165,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// <para>Synchronously moderates multimodal content through the Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2220,7 +2220,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// <para>Synchronously moderates multimodal content through the Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2275,7 +2275,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// <para>Synchronously moderates multimodal content through the Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2298,7 +2298,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// <para>Synchronously moderates multimodal content through the Agent API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3777,8 +3777,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live content moderation node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationCancelRequest
@@ -3823,8 +3828,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live content moderation node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationCancelRequest
@@ -3869,8 +3879,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live content moderation node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationCancelRequest
@@ -3887,8 +3902,13 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an ApsaraVideo Live moderation task.</para>
+        /// <para>Cancels an ApsaraVideo Live content moderation node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// VideoModerationCancelRequest
@@ -3910,7 +3930,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3961,7 +3981,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4012,7 +4032,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4035,7 +4055,7 @@ namespace AlibabaCloud.SDK.Green20220302
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous moderation task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
+        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">

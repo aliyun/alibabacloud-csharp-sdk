@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>No risk detected.</para>
+                /// <para>No risk detected</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

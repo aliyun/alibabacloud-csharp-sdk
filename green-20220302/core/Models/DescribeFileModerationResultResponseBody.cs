@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public DescribeFileModerationResultResponseBodyData Data { get; set; }
         public class DescribeFileModerationResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccountId specified in the request.</para>
+            /// <para>The AccountId specified by the caller.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountIdtest123</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>This is a title.</para>
+                    /// <para>This is a title</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <para>The description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>This is a title.</para>
+                        /// <para>This is a title</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>This is a title.</para>
+                    /// <para>This is a title</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The label descriptions.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Suspected advertising content.</para>
+                    /// <para>Suspected advertising content</para>
                     /// </summary>
                     [NameInMap("Descriptions")]
                     [Validation(Required=false)]
@@ -248,6 +248,133 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Labels { get; set; }
 
                     /// <summary>
+                    /// <para>The text plus version result.</para>
+                    /// </summary>
+                    [NameInMap("Result")]
+                    [Validation(Required=false)]
+                    public List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResult> Result { get; set; }
+                    public class DescribeFileModerationResultResponseBodyDataPageResultTextResultResult : TeaModel {
+                        /// <summary>
+                        /// <para>The label confidence score.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>90.50</para>
+                        /// </summary>
+                        [NameInMap("Confidence")]
+                        [Validation(Required=false)]
+                        public float? Confidence { get; set; }
+
+                        /// <summary>
+                        /// <para>The custom vocabulary hit results.</para>
+                        /// </summary>
+                        [NameInMap("CustomizedHit")]
+                        [Validation(Required=false)]
+                        public List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit> CustomizedHit { get; set; }
+                        public class DescribeFileModerationResultResponseBodyDataPageResultTextResultResultCustomizedHit : TeaModel {
+                            /// <summary>
+                            /// <para>The hit keyword.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Popular among everyone</para>
+                            /// </summary>
+                            [NameInMap("KeyWords")]
+                            [Validation(Required=false)]
+                            public string KeyWords { get; set; }
+
+                            /// <summary>
+                            /// <para>The vocabulary name.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>TestVocabulary22</para>
+                            /// </summary>
+                            [NameInMap("LibName")]
+                            [Validation(Required=false)]
+                            public string LibName { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The description corresponding to the label.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Pornography</para>
+                        /// </summary>
+                        [NameInMap("Description")]
+                        [Validation(Required=false)]
+                        public string Description { get; set; }
+
+                        /// <summary>
+                        /// <para>The text label in page results.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Political sensitivity</para>
+                        /// </summary>
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        /// <summary>
+                        /// <para>The risk level.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>high</para>
+                        /// </summary>
+                        [NameInMap("RiskLevel")]
+                        [Validation(Required=false)]
+                        public string RiskLevel { get; set; }
+
+                        /// <summary>
+                        /// <para>The positions of the violation words.</para>
+                        /// </summary>
+                        [NameInMap("RiskPositions")]
+                        [Validation(Required=false)]
+                        public List<DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions> RiskPositions { get; set; }
+                        public class DescribeFileModerationResultResponseBodyDataPageResultTextResultResultRiskPositions : TeaModel {
+                            /// <summary>
+                            /// <para>The end position.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>21</para>
+                            /// </summary>
+                            [NameInMap("EndPos")]
+                            [Validation(Required=false)]
+                            public long? EndPos { get; set; }
+
+                            /// <summary>
+                            /// <para>The violation word.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>Visit pornographic website</para>
+                            /// </summary>
+                            [NameInMap("RiskWord")]
+                            [Validation(Required=false)]
+                            public string RiskWord { get; set; }
+
+                            /// <summary>
+                            /// <para>The start position.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>17</para>
+                            /// </summary>
+                            [NameInMap("StartPos")]
+                            [Validation(Required=false)]
+                            public long? StartPos { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The hit violation words.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>Popular among everyone</para>
+                        /// </summary>
+                        [NameInMap("RiskWords")]
+                        [Validation(Required=false)]
+                        public string RiskWords { get; set; }
+
+                    }
+
+                    /// <summary>
                     /// <para>The risk level.</para>
                     /// 
                     /// <b>Example:</b>
@@ -258,7 +385,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the hit risk.</para>
+                    /// <para>The hit risk details.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -268,7 +395,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string RiskTips { get; set; }
 
                     /// <summary>
-                    /// <para>The risk keywords that are hit.</para>
+                    /// <para>The hit risk keywords.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
@@ -291,7 +418,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     /// <para>The text content.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>blah blah.</para>
+                    /// <para>blah blah</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -397,7 +524,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public int? PageSum { get; set; }
 
                 /// <summary>
-                /// <para>The document authenticity verification risk summary.</para>
+                /// <para>The document forgery detection risk summary.</para>
                 /// </summary>
                 [NameInMap("RiskSummary")]
                 [Validation(Required=false)]
@@ -411,14 +538,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt Ext { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExt : TeaModel {
                         /// <summary>
-                        /// <para>The detection details of AI-generated content.</para>
+                        /// <para>The details of AI-generated or synthetic content detection.</para>
                         /// </summary>
                         [NameInMap("AigcData")]
                         [Validation(Required=false)]
                         public DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData AigcData { get; set; }
                         public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryExtAigcData : TeaModel {
                             /// <summary>
-                            /// <para>The implicit identifier information of AI-generated content.</para>
+                            /// <para>The implicit label information of AI-generated or synthetic content.</para>
                             /// </summary>
                             [NameInMap("AIGC")]
                             [Validation(Required=false)]
@@ -445,10 +572,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 public string ContentPropagator { get; set; }
 
                                 /// <summary>
-                                /// <para>The content attribute declared by the implicit identifier.</para>
+                                /// <para>The content attribute declared by the implicit label.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>Belongs to AI-generated synthetic content.</para>
+                                /// <para>AI-generated or synthetic content</para>
                                 /// </summary>
                                 [NameInMap("Label")]
                                 [Validation(Required=false)]
@@ -478,7 +605,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 /// <para>Reserved field 1.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>None.</para>
+                                /// <para>None</para>
                                 /// </summary>
                                 [NameInMap("ReservedCode1")]
                                 [Validation(Required=false)]
@@ -488,7 +615,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                                 /// <para>Reserved field 2.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>None.</para>
+                                /// <para>None</para>
                                 /// </summary>
                                 [NameInMap("ReservedCode2")]
                                 [Validation(Required=false)]
@@ -497,10 +624,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                             }
 
                             /// <summary>
-                            /// <para>The comprehensive analysis report of large model authenticity verification.</para>
+                            /// <para>The comprehensive analysis report for forgery detection by the large language model.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <h3>Comprehensive report for users.</h3>
+                            /// <h3>Comprehensive Report for Users</h3>
+                            /// <h4>Quick Image Overview</h4>
+                            /// <list type="bullet">
+                            /// <item><description><b>Image Subject</b>: A scanned document titled &quot;Letter of Authorization&quot;, containing the names of the authorizing and authorized companies and red official seals</description></item>
+                            /// </list>
                             /// </summary>
                             [NameInMap("Explain")]
                             [Validation(Required=false)]
@@ -511,14 +642,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of hit authenticity verification risk labels.</para>
+                    /// <para>The list of matched forgery detection risk labels.</para>
                     /// </summary>
                     [NameInMap("RiskLabels")]
                     [Validation(Required=false)]
                     public List<DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels> RiskLabels { get; set; }
                     public class DescribeFileModerationResultResponseBodyDataPageSummaryRiskSummaryRiskLabels : TeaModel {
                         /// <summary>
-                        /// <para>The label confidence score.</para>
+                        /// <para>The confidence score of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>95.96</para>
@@ -528,10 +659,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         public float? Confidence { get; set; }
 
                         /// <summary>
-                        /// <para>The Chinese description of the risk label.</para>
+                        /// <para>The description of the risk label in Chinese.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Suspected AI-generated synthetic content.</para>
+                        /// <para>疑似AI生成合成内容</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -550,7 +681,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     }
 
                     /// <summary>
-                    /// <para>The overall risk level of the document, which is the highest level among all hit labels.</para>
+                    /// <para>The overall risk level of the document, which is the highest level among all matched labels.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>high</para>
@@ -589,7 +720,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         /// <para>The label descriptions.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>No risk detected.</para>
+                        /// <para>No risk detected</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -632,7 +763,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The file download URL.</para>
+            /// <para>The URL for downloading the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></para>

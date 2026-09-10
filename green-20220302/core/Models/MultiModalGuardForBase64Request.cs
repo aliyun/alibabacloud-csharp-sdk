@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalGuardForBase64Request : TeaModel {
+        /// <summary>
+        /// <para>The base64-encoded string of the document.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{base64}</para>
+        /// </summary>
         [NameInMap("FileBase64Str")]
         [Validation(Required=false)]
         public string FileBase64Str { get; set; }

@@ -1,3 +1,7 @@
+2026-09-10 Version: 3.5.5
+- Update API DescribeFileModerationResult: add response parameters Body.Data.PageResult.$.TextResult.$.Result.
+
+
 2026-08-06 Version: 3.5.4
 - Update API MultiModalAgent: add response parameters Body.Data.Usage.Credits.
 

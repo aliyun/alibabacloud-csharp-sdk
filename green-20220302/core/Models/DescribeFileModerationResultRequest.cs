@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
-        /// <para>The set of parameters required by the moderation service, in JSON string format.</para>
+        /// <para>The set of parameters required by the moderation service, in JSON character string format.</para>
+        /// <list type="bullet">
+        /// <item><description>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible through public network access.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;taskId\&quot;:\&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v\&quot;}</para>

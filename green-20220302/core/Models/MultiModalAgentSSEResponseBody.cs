@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public long? Created { get; set; }
 
             /// <summary>
-            /// <para>The value of dataId passed in the API request. This field is not returned if dataId is not specified in the request.</para>
+            /// <para>The value of DataId passed in the API request. This field is not returned if DataId is not specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataId-XXX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             public string DataId { get; set; }
 
             /// <summary>
-            /// <para>If streaming output is used, this field is null during generation. When generation ends, this field is set to stop if the generation stopped due to a stop token.</para>
+            /// <para>For streaming output, this value is null during generation. When generation ends, the value is stop if the generation stopped due to a stop token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stop</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             /// <para>The output result.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;违规，原因XX&quot;</para>
+            /// <para>&quot;Violation, reason XX&quot;</para>
             /// </summary>
             [NameInMap("Output")]
             [Validation(Required=false)]
             public string Output { get; set; }
 
             /// <summary>
-            /// <para>The credits usage.</para>
+            /// <para>The credits usage information.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class VideoModerationCancelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6CF2815C-<b><b>-</b></b>-B52E-FF6E2****492</para>
