@@ -19,21 +19,6 @@ namespace AlibabaCloud.SDK.DlfNext20250310
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "dlfnext.us-west-1.aliyuncs.com"},
-                {"us-east-1", "dlfnext.us-east-1.aliyuncs.com"},
-                {"eu-central-1", "dlfnext.eu-central-1.aliyuncs.com"},
-                {"cn-wulanchabu", "dlfnext.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "dlfnext.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "dlfnext.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "dlfnext.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "dlfnext.cn-hangzhou.aliyuncs.com"},
-                {"cn-beijing", "dlfnext.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-5", "dlfnext.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-1", "dlfnext.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "dlfnext.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dlfnext", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1410,7 +1395,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a catalog.</para>
+        /// <para>Creates a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1465,14 +1450,14 @@ namespace AlibabaCloud.SDK.DlfNext20250310
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateCatalogResponse>(CallApi(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a catalog.</para>
+        /// <para>Creates a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1527,14 +1512,14 @@ namespace AlibabaCloud.SDK.DlfNext20250310
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "json",
-                BodyType = "none",
+                BodyType = "json",
             };
             return TeaModel.ToObject<CreateCatalogResponse>(await CallApiAsync(params_, req, runtime));
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a catalog.</para>
+        /// <para>Creates a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1553,7 +1538,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a catalog.</para>
+        /// <para>Creates a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">

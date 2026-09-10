@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         /// <para>The column ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]

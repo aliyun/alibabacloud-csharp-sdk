@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class CreateCatalogRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to share the catalog.</para>
+        /// <para>Specifies whether the catalog is a shared data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public bool? IsShared { get; set; }
 
         /// <summary>
-        /// <para>The catalog name.</para>
+        /// <para>The name of the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>catalog_demo</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configuration options for the catalog.</para>
+        /// <para>The configuration parameter struct.</para>
         /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string ShareId { get; set; }
 
         /// <summary>
-        /// <para>The catalog type.</para>
+        /// <para>The type of the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PAIMON</para>

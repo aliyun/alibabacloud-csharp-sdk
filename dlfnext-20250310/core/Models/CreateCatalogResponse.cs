@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public CreateCatalogResponseBody Body { get; set; }
+
     }
 
 }
