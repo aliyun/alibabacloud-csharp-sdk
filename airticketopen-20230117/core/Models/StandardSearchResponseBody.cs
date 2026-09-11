@@ -237,6 +237,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         [Validation(Required=false)]
                         public string EquipType { get; set; }
 
+                        [NameInMap("fare_basis")]
+                        [Validation(Required=false)]
+                        public string FareBasis { get; set; }
+
                         /// <summary>
                         /// <para>Flight duration, unit: minutes</para>
                         /// 

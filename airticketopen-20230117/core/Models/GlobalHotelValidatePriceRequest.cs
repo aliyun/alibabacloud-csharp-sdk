@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
-        /// <para>The number of adults per room.</para>
+        /// <para>The total number of adults.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Adults { get; set; }
 
         /// <summary>
-        /// <para>The number of children per room.</para>
+        /// <para>The total number of children.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Children { get; set; }
 
         /// <summary>
-        /// <para>The list of children ages.</para>
+        /// <para>The list of children\&quot;s ages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[8]</para>

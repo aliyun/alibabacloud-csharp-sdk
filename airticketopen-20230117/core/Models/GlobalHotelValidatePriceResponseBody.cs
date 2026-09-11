@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string End { get; set; }
 
                     /// <summary>
-                    /// <para>The penalty type (PERCENT/NIGHTS/NON_CANCELLABLE).</para>
+                    /// <para>The penalty type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PERCENTAGE</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyType { get; set; }
 
                     /// <summary>
-                    /// <para>The penalty value (percentage, amount, or number of nights). This field is not present when PenaltyType is NON_CANCELLABLE.</para>
+                    /// <para>The penalty value, which represents a percentage, amount, or number of nights.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>The cancellation policy type (FREE_CANCEL/CONDITIONAL/NON_REFUNDABLE).</para>
+                /// <para>The cancellation policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FREE_CANCELLATION</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<GlobalHotelValidatePriceResponseBodyDataDailyPrices> DailyPrices { get; set; }
             public class GlobalHotelValidatePriceResponseBodyDataDailyPrices : TeaModel {
                 /// <summary>
-                /// <para>The date in yyyy-MM-dd format, in the local time zone of the hotel.</para>
+                /// <para>The date in yyyy-MM-dd format, based on the hotel\&quot;s local time zone.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-16</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code (ISO 4217).</para>
+                    /// <para>The currency code in ISO 4217 format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>The price validation result ID, used for subsequent order creation.</para>
+            /// <para>The price validation result ID, which is used for subsequent order creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>itemOffer_123</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Amount { get; set; }
 
                 /// <summary>
-                /// <para>The currency code (ISO 4217).</para>
+                /// <para>The currency code in ISO 4217 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>USD</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
