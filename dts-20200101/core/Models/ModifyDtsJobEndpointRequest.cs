@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. If the dry run succeeds, the instance is not modified.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and then modifies the database instance of the DTS task if the dry run succeeds.</description></item>
+        /// <item><description><b>true</b>: Yes. After the dry run succeeds, the instance is not modified.</description></item>
+        /// <item><description><b>false</b> (default): No. After the dry run succeeds, the database instance of the DTS task is modified and the task runs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The DTS task ID. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
+        /// <para>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, you must specify <b>DtsInstanceId</b>.</para>
         /// </remarks>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string DtsJobId { get; set; }
 
         /// <summary>
-        /// <para>The database instance to modify. Valid values:</para>
+        /// <para>The database instance to be modified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>src</b>: source instance.</description></item>
         /// <item><description><b>dest</b>: destination instance.</description></item>
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <list type="bullet">
         /// <item><description><b>greenplum</b>: cloud-native data warehouse AnalyticDB for PostgreSQL.</description></item>
         /// <item><description><b>kafka</b>: ApsaraMQ for Kafka.</description></item>
-        /// <item><description><b>ecs</b>: a self-managed database hosted on an ECS instance (only supported database types).</description></item>
-        /// <item><description><b>express</b>: a database connected over Express Connect (only supported database types).</description></item>
-        /// <item><description><b>other</b>: a database connected over the Internet (only supported database types).</description></item>
+        /// <item><description><b>ecs</b>: self-managed database on an ECS instance (only supported database types).</description></item>
+        /// <item><description><b>express</b>: database connected over Express Connect (only supported database types).</description></item>
+        /// <item><description><b>other</b>: database connected over the Internet (only supported database types).</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>If the database is MongoDB (sharded cluster), the number of shards in the new database must be the same as that in the original MongoDB (sharded cluster).</description></item>
-        /// <item><description>If you want to modify the source instance and the database type is <b>PostgreSQL</b>, make sure that the latency of the DTS instance is less than 30 seconds and stop writing data to the source. Otherwise, data inconsistency may occur.</description></item>
+        /// <item><description>If the source instance is to be modified and the database type is <b>PostgreSQL</b>, make sure that the latency of the DTS instance is less than 30 seconds and stop writing data to the source. Otherwise, inconsistent data may occur.</description></item>
         /// <item><description>The parameter values are case-insensitive.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -158,6 +158,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointPort { get; set; }
 
         /// <summary>
+        /// <para>The primary vSwitch for Express Connect access.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp1w7gscw7pky*******</para>
+        /// </summary>
+        [NameInMap("EndpointPrimaryVswId")]
+        [Validation(Required=false)]
+        public string EndpointPrimaryVswId { get; set; }
+
+        /// <summary>
         /// <para>The region to which the database instance belongs.</para>
         /// 
         /// <b>Example:</b>
@@ -168,10 +178,30 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         public string EndpointRegionId { get; set; }
 
         /// <summary>
+        /// <para>The secondary vSwitch for Express Connect access.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-bp1ud8e2mhw*****</para>
+        /// </summary>
+        [NameInMap("EndpointSecondaryVswId")]
+        [Validation(Required=false)]
+        public string EndpointSecondaryVswId { get; set; }
+
+        /// <summary>
+        /// <para>The VPC ID for Express Connect access.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1q00qitocaem****</para>
+        /// </summary>
+        [NameInMap("EndpointVpcId")]
+        [Validation(Required=false)]
+        public string EndpointVpcId { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to modify the account and password. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes.</description></item>
-        /// <item><description><b>false</b> (default): no.</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b> (default): No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -217,7 +247,7 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         /// <summary>
         /// <para>The name of the RAM role for cross-account access.</para>
         /// <remarks>
-        /// <para>This parameter is required when you perform cross-account data synchronization. For the permissions required by this role and how to grant them, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</para>
+        /// <para>Specify this parameter when performing cross-account data synchronization. For the required permissions and authorization method of this role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -290,6 +320,16 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public string Username { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether this is a seamless integration (zero-ETL) node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ZeroEtlJob")]
         [Validation(Required=false)]
         public bool? ZeroEtlJob { get; set; }

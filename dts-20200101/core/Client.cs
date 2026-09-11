@@ -76,15 +76,6 @@ namespace AlibabaCloud.SDK.Dts20200101
                 {"cn-zhengzhou-nebula-1", "dts.aliyuncs.com"},
                 {"eu-west-1-oxs", "dts.aliyuncs.com"},
                 {"rus-west-1-pop", "dts.aliyuncs.com"},
-                {"ap-northeast-1", "dts.ap-northeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "dts.ap-northeast-2.aliyuncs.com"},
-                {"ap-southeast-6", "dts.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "dts.ap-southeast-7.aliyuncs.com"},
-                {"cn-guangzhou", "dts.cn-guangzhou.aliyuncs.com"},
-                {"cn-heyuan", "dts.cn-heyuan.aliyuncs.com"},
-                {"cn-wuhan-lr", "dts.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "dts.cn-zhengzhou-jva.aliyuncs.com"},
-                {"me-central-1", "dts.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dts", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -17611,7 +17602,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17669,9 +17660,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["EndpointPort"] = request.EndpointPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointPrimaryVswId))
+            {
+                query["EndpointPrimaryVswId"] = request.EndpointPrimaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointRegionId))
             {
                 query["EndpointRegionId"] = request.EndpointRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointSecondaryVswId))
+            {
+                query["EndpointSecondaryVswId"] = request.EndpointSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointVpcId))
+            {
+                query["EndpointVpcId"] = request.EndpointVpcId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyAccount))
             {
@@ -17740,7 +17743,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17798,9 +17801,21 @@ namespace AlibabaCloud.SDK.Dts20200101
             {
                 query["EndpointPort"] = request.EndpointPort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointPrimaryVswId))
+            {
+                query["EndpointPrimaryVswId"] = request.EndpointPrimaryVswId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointRegionId))
             {
                 query["EndpointRegionId"] = request.EndpointRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointSecondaryVswId))
+            {
+                query["EndpointSecondaryVswId"] = request.EndpointSecondaryVswId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointVpcId))
+            {
+                query["EndpointVpcId"] = request.EndpointVpcId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyAccount))
             {
@@ -17869,7 +17884,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -17894,7 +17909,7 @@ namespace AlibabaCloud.SDK.Dts20200101
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the synchronized or migrated data does not have a primary key, stop writing data to the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
+        /// <para>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</para>
         /// </remarks>
         /// </description>
         /// 
