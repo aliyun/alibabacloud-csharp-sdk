@@ -107,9 +107,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The current status of the root directory.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Unknown: The root path status is unknown.</description></item>
-                /// <item><description>NotExist: The root path does not exist. It may have been deleted by the user.</description></item>
-                /// <item><description>Ready: The root path status is normal.</description></item>
+                /// <item><description>Unknown: the root path status is unknown.</description></item>
+                /// <item><description>NotExist: the root path does not exist. It may have been deleted by the user.</description></item>
+                /// <item><description>Ready: the root path status is normal.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -125,13 +125,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The current status of the access point.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: available</description></item>
-            /// <item><description>Inactive: unavailable</description></item>
-            /// <item><description>Pending: being created</description></item>
-            /// <item><description>Deleting: being deleted</description></item>
+            /// <item><description>Active: available.</description></item>
+            /// <item><description>Inactive: unavailable.</description></item>
+            /// <item><description>Pending: being created.</description></item>
+            /// <item><description>Deleting: being deleted.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The file system can be mounted only when the status is Active.</para>
+            /// <para>You can mount the file system only when the status is Active.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -140,6 +140,35 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The list of CPFS access point tags.</para>
+            /// </summary>
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeCpfsAccessPointsResponseBodyAccessPointsTags> Tags { get; set; }
+            public class DescribeCpfsAccessPointsResponseBodyAccessPointsTags : TeaModel {
+                /// <summary>
+                /// <para>The key of the CPFS access point tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The value of the CPFS access point tag.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
         }
 

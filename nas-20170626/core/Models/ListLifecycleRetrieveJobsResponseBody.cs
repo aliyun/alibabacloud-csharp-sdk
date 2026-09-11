@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class ListLifecycleRetrieveJobsResponseBodyLifecycleRetrieveJobs : TeaModel {
             /// <summary>
             /// <para>The time when the task was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the format of <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-30T10:08:08Z</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The number of files successfully retrieved by the data retrieval task.</para>
+            /// <para>The number of files that are successfully retrieved by the data retrieval task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The status of the data retrieval task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: running.</description></item>
-            /// <item><description>canceled: canceled.</description></item>
-            /// <item><description>completed: completed.</description></item>
-            /// <item><description>failed: failed.</description></item>
+            /// <item><description>active: Running.</description></item>
+            /// <item><description>canceled: Canceled.</description></item>
+            /// <item><description>completed: Completed.</description></item>
+            /// <item><description>failed: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The storage class. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>InfrequentAccess: IA storage class.</description></item>
-            /// <item><description>Archive: Archive storage class.</description></item>
+            /// <item><description>Archive: Archive storage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The time when the task was last updated.</para>
-            /// <para>The time follows the ISO 8601 standard in the format of <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-30T11:08:08Z</para>

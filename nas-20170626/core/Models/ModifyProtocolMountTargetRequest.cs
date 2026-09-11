@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyProtocolMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client to ensure that different requests have unique ClientToken values.</para>
+        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,27 +24,36 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the export directory for the protocol service.</para>
+        /// <para>The description of the export directory of the protocol service.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>The description must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description>The description must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>此导出目录的描述信息</para>
+        /// <para>Description of this export directory</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not modify the specified export directory or incur fees.</para>
+        /// <para>Specifies whether to perform a dry run for this modification request.</para>
+        /// <para>A dry run checks parameter validity and dependency conditions without actually modifying the export directory or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request.</description></item>
+        /// <item><description><para><b>true</b>: Sends a dry run request without modifying the export directory. The check items include required parameters, request format, and business dependency conditions.</para>
+        /// <list type="bullet">
+        /// <item><description><b>DryRun=true also performs resource status checks</b> (including the requirement that the export directory is in the AVAILABLE state).</description></item>
+        /// <item><description>If the export directory status does not meet the requirements (such as CREATING), the corresponding error is returned.</description></item>
+        /// <item><description><b>DryRun does not bypass status checks</b>. It only validates request parameter validity and basic dependencies.</description></item>
+        /// <item><description>If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>false (default)</b>: Sends a normal request. After the check passes, the export directory parameters are directly modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +64,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the export directory for the protocol service.</para>
+        /// <para>The export directory ID of the protocol service. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolmounttarget-cpfs">DescribeProtocolMountTarget</a> to obtain the export directory information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +75,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ExportId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describefilesystems-cpfs">DescribeFileSystems</a> (with FileSystemType set to cpfs) to obtain the file system information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +86,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protocol service.</para>
+        /// <para>The protocol service ID. Call <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> to obtain the protocol service information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

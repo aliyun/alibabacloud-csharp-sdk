@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeFilesystemsVscAttachInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The number of results returned per query.</para>
         /// <para>Valid values: 10 to 100.
         /// Default value: 10.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set the value to the NextToken value returned in the previous API call.</para>
+        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<DescribeFilesystemsVscAttachInfoRequestRoleChain> RoleChain { get; set; }
         public class DescribeFilesystemsVscAttachInfoRequestRoleChain : TeaModel {
             /// <summary>
-            /// <para>The UID of the Alibaba Cloud account, which specifies the account on whose behalf the service assumes the role.</para>
+            /// <para>The UID of the Alibaba Cloud account (primary account), which specifies the account on whose behalf the service assumes the role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101522855006****</para>

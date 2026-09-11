@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</para>
+        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pUJaUwAAAABhdGUyNTk1MQ==</para>

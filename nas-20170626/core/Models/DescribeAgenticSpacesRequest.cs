@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The collection of filter key information.</para>
+        /// <para>The collection of filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter key. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter key. Wildcards are not supported.</para>
             /// <list type="bullet">
-            /// <item><description>AgenticSpaceIds: Only one ID can be specified.</description></item>
+            /// <item><description>AgenticSpaceIds: Only a single ID can be specified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTc3OTkzNTA0Mjg0NTc1MDI4OCM0MDQ0MzA****=</para>

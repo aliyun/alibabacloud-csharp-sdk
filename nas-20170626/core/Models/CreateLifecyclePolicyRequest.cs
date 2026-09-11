@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule attribute.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule threshold.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 1 to 365.</description></item>
+            /// <item><description>When Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The lifecycle management policy name. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
-        /// <para>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</para>
+        /// <para>Required for General-purpose NAS. Not required for CPFS for Lingjun.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>General-purpose NAS supports associating only a single directory. The path must start with a forward slash (/) and must be an existing path in the mount target.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N to associate multiple directories at the same time.</para>
+        /// <para>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N instead to associate multiple directories at the same time.</para>
         /// <list type="bullet">
         /// <item><description>Only one of Path and Paths can be specified.</description></item>
         /// </list>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The storage tiering type.</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
-        /// <item><description>Archive: Archive storage.</description></item>
+        /// <item><description>Archive: Archive storage class.</description></item>
         /// </list>
         /// <remarks>
         /// <para>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The file data transit rules. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
+        /// <para>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule attribute.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The rule threshold.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>When Attribute is set to Atime, this parameter specifies the number of days that the file has not been accessed. Valid values: 0 to 365.</description></item>
+            /// <item><description>When Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 0 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

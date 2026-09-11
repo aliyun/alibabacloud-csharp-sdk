@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTc2NTg1MTUyMzA1OTczNTc1OCM0NjQxMzQ****=</para>

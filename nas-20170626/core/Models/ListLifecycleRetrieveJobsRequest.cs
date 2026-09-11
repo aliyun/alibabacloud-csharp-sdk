@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The status of the data retrieval task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: running.</description></item>
-        /// <item><description>canceled: canceled.</description></item>
-        /// <item><description>completed: completed.</description></item>
-        /// <item><description>failed: failed.</description></item>
+        /// <item><description>active: Running.</description></item>
+        /// <item><description>canceled: Canceled.</description></item>
+        /// <item><description>completed: Completed.</description></item>
+        /// <item><description>failed: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InfrequentAccess: IA storage class.</description></item>
-        /// <item><description>Archive: Archive storage class.<remarks>
+        /// <item><description>Archive: Archive storage.<remarks>
         /// <para>If StorageType is not specified, data retrieval tasks of all storage classes are returned.</para>
         /// </remarks>
         /// </description></item>

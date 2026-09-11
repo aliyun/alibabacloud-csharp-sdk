@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetProtocolMountTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the content after the current truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>M18xMA==</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Information of the export directory for the protocol service</para>
+        /// <para>The export directory information of the protocol service.</para>
         /// </summary>
         [NameInMap("ProtocolMountTarget")]
         [Validation(Required=false)]
         public GetProtocolMountTargetResponseBodyProtocolMountTarget ProtocolMountTarget { get; set; }
         public class GetProtocolMountTargetResponseBodyProtocolMountTarget : TeaModel {
             /// <summary>
-            /// <para>The name of the permission group.</para>
-            /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME</para>
+            /// <para>The permission group name.</para>
+            /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -38,7 +38,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the export directory was created. Return format: yyyy-MM-dd HH:mm:ss</para>
+            /// <para>The creation time.
+            /// Format: yyyy-MM-dd HH:mm:ss</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-22 17:49:25</para>
@@ -48,17 +49,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the export directory.</para>
+            /// <para>The description of the protocol service export.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>此协议服务导出的描述。</para>
+            /// <para>Description of this protocol service export</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the export directory.</para>
+            /// <para>The export directory ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exp-19abf5beab8d****</para>
@@ -68,7 +69,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ExportId { get; set; }
 
             /// <summary>
-            /// <para>The fileset ID.</para>
+            /// <para>Fileset ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>fset-299b4ca04de8****</para>
@@ -78,12 +79,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FsetId { get; set; }
 
             /// <summary>
-            /// <para>The path of the CPFS directory that was queried.</para>
+            /// <para>The path of the queried CPFS directory.</para>
             /// <para>Format:</para>
             /// <list type="bullet">
-            /// <item><description>Must be 1 to 1,024 characters in length.</description></item>
-            /// <item><description>Must be encoded in UTF-8.</description></item>
-            /// <item><description>Must start and end with a forward slash (/). The root directory is <c>/</c>.</description></item>
+            /// <item><description>The path is 1 to 1,024 characters in length.</description></item>
+            /// <item><description>The path is encoded in UTF-8.</description></item>
+            /// <item><description>The path must start and end with a forward slash (/). The root directory is <c>/</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the export directory for the protocol service.</para>
+            /// <para>The domain name of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpfs-0229cb80bcc0****-x******.cn-*****.cpfs.aliyuncs.com</para>
@@ -107,9 +108,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The protocol type of the file system.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NFS: Network File System (NFS)</description></item>
-            /// <item><description>SMB: Server Message Block (SMB)</description></item>
-            /// <item><description>cpfs: The protocol type supported by the CPFS file system.</description></item>
+            /// <item><description>NFS: NFS protocol</description></item>
+            /// <item><description>SMB: SMB protocol</description></item>
+            /// <item><description>cpfs: the protocol type supported by CPFS file systems</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,13 +121,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The status of the export directory. Valid values:</para>
+            /// <para>The status of the protocol service export directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATING: The export directory is being created.</description></item>
-            /// <item><description>AVAILABLE : The export directory is available.</description></item>
-            /// <item><description>MODIFYING: The export directory is being modified.</description></item>
-            /// <item><description>DELETING: The export directory is being deleted.</description></item>
-            /// <item><description>STOPPING: The export directory is being stopped.</description></item>
+            /// <item><description>CREATING: Being created.</description></item>
+            /// <item><description>AVAILABLE: Available.</description></item>
+            /// <item><description>MODIFYING: Being modified.</description></item>
+            /// <item><description>DELETING: Being deleted.</description></item>
+            /// <item><description>STOPPING: Being stopped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,7 +138,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID of the export directory.</para>
+            /// <para>The vSwitch ID of the protocol service export.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-8vb2qjnxs6hiobzve****</para>
@@ -147,14 +148,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID list of the export directory.</para>
+            /// <para>The list of vSwitch IDs of the protocol service export.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the export directory.</para>
+            /// <para>The virtual private cloud (VPC) ID of the protocol service export.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1h5mxoqfuo3xurf****</para>

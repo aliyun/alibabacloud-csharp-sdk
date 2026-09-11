@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class UpdateLifecyclePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The file data expiration and deletion rules.</para>
+        /// <para>The expiration and deletion rules for file data.</para>
         /// </summary>
         [NameInMap("DeleteRules")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The file data retrieval rules. You can configure up to one rule.</para>
+        /// <para>The data retrieval rules. You can configure up to one rule.</para>
         /// <remarks>
         /// <para>Only CPFS for Lingjun file systems are supported.</para>
         /// </remarks>
@@ -107,8 +107,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<UpdateLifecyclePolicyRequestRetrieveRules> RetrieveRules { get; set; }
         public class UpdateLifecyclePolicyRequestRetrieveRules : TeaModel {
             /// <summary>
-            /// <para>The attribute of the rule.</para>
-            /// <para>Valid values:</para>
+            /// <para>The attribute of the rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RetrieveType: the retrieval method.</description></item>
             /// </list>
@@ -121,12 +120,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The threshold of the rule.</para>
-            /// <para>Valid values:</para>
+            /// <para>The threshold of the rule. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RetrieveType<list type="bullet">
             /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</description></item>
-            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieval of all data.</description></item>
+            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -142,10 +140,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The tiered storage type.</para>
-        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: IA storage class. This is the default value.</description></item>
-        /// <item><description>Archive: Archive storage.</description></item>
+        /// <item><description>InfrequentAccess: IA storage class (default).</description></item>
+        /// <item><description>Archive: Archive storage class.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,9 +153,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The file data transit rules. You can configure up to one rule.</para>
+        /// <para>The data transit rules. You can configure up to one rule.</para>
         /// <remarks>
-        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for a CPFS for Lingjun file system.</para>
+        /// <para>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -169,7 +166,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The attribute of the rule.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Atime: the access time of the file.</description></item>
+            /// <item><description>Atime: the last access time of the file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

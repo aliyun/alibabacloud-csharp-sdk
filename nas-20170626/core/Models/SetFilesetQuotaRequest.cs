@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class SetFilesetQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
         /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
@@ -24,11 +24,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this request.
-        /// A dry run checks parameter validity and dependencies without actually deleting the instance or incurring charges.</para>
+        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually deleting the instance or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Sends a check request without deleting the export directory. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</para>
+        /// <item><description><para>true: Sends a dry run request without deleting the export directory. The check items include required parameters, request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</para>
         /// </description></item>
         /// <item><description><para>false (default): Sends a normal request. After the check passes, the instance is directly deleted.</para>
         /// </description></item>
@@ -42,7 +41,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The file count limit of the quota. Valid values:</para>
+        /// <para>The file count limit for the quota. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Minimum value: 10,000.</para>
         /// </description></item>
@@ -62,6 +61,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the CPFS for Lingjun file system. The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> (FileSystemType=bmcpfs) to query existing file systems.</para>
+        /// <remarks>
+        /// <para>CPFS for Lingjun file systems with the bmcpfs- prefix cannot be created by calling the CreateFileSystem operation. You must create them in the console.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FsetId { get; set; }
 
         /// <summary>
-        /// <para>The total capacity limit of the quota. Unit: bytes.</para>
+        /// <para>The total capacity limit for the quota. Unit: bytes.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Minimum value: 10,737,418,240 (10 GiB).</para>

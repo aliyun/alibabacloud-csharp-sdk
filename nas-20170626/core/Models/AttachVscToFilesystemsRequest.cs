@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
         /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID information of file systems and Virtual Storage Channels. A maximum of 10 entries can be specified per batch.</para>
+        /// <para>The ID information of file systems and Virtual Storage Channels (VSCs). A maximum of 10 entries can be specified per batch.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The Virtual Storage Channel ID.</para>
+            /// <para>The Virtual Storage Channel (VSC) ID. You can call the ListVscs operation of Lingjun eflo-controller/2022-12-15 to query VSC IDs. If no VSC has been created, call the CreateVsc operation to create one.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-8vb864o3ppwfvh****</para>

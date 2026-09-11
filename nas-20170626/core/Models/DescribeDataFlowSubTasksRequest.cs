@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter key. Wildcards are not supported for this parameter.</para>
+            /// <para>The value of the filter key. Wildcards are not supported.</para>
             /// <list type="bullet">
             /// <item><description>If Key is set to DataFlowIds, Value is set to a data flow ID or part of a data flow ID. You can specify one or more data flow IDs. A maximum of 10 data flow IDs can be specified. Example: <c>df-194433a5be31****</c> or <c>df-194433a512a2****,df-234533a5be31****</c>.</description></item>
             /// <item><description>If Key is set to DataFlowTaskIds, Value is set to a data flow task ID or part of a data flow task ID. You can specify one or more data flow task IDs. A maximum of 10 data flow task IDs can be specified. Example: <c>task-29ee8e890f45****</c> or <c>task-29ee8e890f45****,task-38ae8e890f45****</c>.</description></item>
             /// <item><description>If Key is set to DataFlowSubTaskIds, Value is set to a data flow streaming task ID or part of a data flow streaming task ID. You can specify one or more data flow streaming task IDs. A maximum of 10 data flow streaming task IDs can be specified. Example: <c>subTaskId-370kyfmyknxcyzw****</c> or <c>subTaskId-247kyfmyknxcyzw****,subTaskId-256kyfmyknxcyzw****</c>.</description></item>
             /// <item><description>If Key is set to Status, Value is set to the status of the data flow task, including EXPIRED, CREATED, RUNNING, COMPLETE, CANCELING, FAILED, and CANCELED. Combined queries are supported.</description></item>
-            /// <item><description>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1023 characters.</description></item>
-            /// <item><description>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1023 characters.</description></item>
+            /// <item><description>If Key is set to SrcFilePath, Value is set to the source file path. The maximum length is 1,023 characters.</description></item>
+            /// <item><description>If Key is set to DstFilePath, Value is set to the destination file path. The maximum length is 1,023 characters.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the returned results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation point.</para>
+        /// <para>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iWk0AQAAAAAvY2FzZS8=</para>

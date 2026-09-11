@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroupName { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests.</para>
+        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,28 +35,28 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the protocol service export directory. This parameter is displayed as <b>Export Directory Name</b> in the console.</para>
+        /// <para>The description of the protocol service export directory. This is displayed as <b>Export Directory Name</b> in the console.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The description must be 2 to 128 characters in length and can contain letters and Chinese characters.</description></item>
-        /// <item><description>The description must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain digits, colons (:), underscores (_), and hyphens (-).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>此导出目录的描述</para>
+        /// <para>Description of this export directory</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity, dependencies, and other conditions without actually creating the instance or incurring charges.</para>
+        /// <para>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually creating the instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: sends a dry run request without creating the export directory. The dry run checks whether required parameters are specified, whether the request format is valid, and whether business limit dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but ExportId is empty.</para>
+        /// <item><description><para>true: Sends a dry run request without creating the export directory. The check items include whether required parameters are specified, request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but ExportId is empty.</para>
         /// </description></item>
-        /// <item><description><para>false (default): sends a normal request. After the check succeeds, the instance is created.</para>
+        /// <item><description><para>false (default): Sends a normal request. After the check passes, the instance is directly created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -69,6 +69,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the file system.</para>
+        /// <remarks>
+        /// <para>The target CPFS file system must be in the Running state before you call this operation. After creation, it takes approximately 20 to 40 minutes for the file system to reach the Running state. You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to poll the Status field (Running indicates ready).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Limits:</para>
         /// <list type="bullet">
         /// <item><description>The directory must already exist on the CPFS file system.</description></item>
-        /// <item><description>Only one export can be created for each directory.</description></item>
+        /// <item><description>Only one export can be created for the same directory.</description></item>
         /// <item><description>You must specify one and only one of FsetId and Path.</description></item>
         /// </list>
         /// <para>Format:</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the vSwitch for the protocol service export.</para>
         /// <para>If the storage redundancy type of the file system is not zone-redundant storage (ZRS), this parameter is required when VpcId is specified.</para>
         /// <remarks>
-        /// <para> The vSwitch must be in the same zone as the target CPFS file system.</para>
+        /// <para>The vSwitch must be in the same zone as the target CPFS file system (the ZoneId values must match). You can call <a href="https://www.alibabacloud.com/help/en/nas/developer-reference/api-nas-2017-06-26-describefilesystems">DescribeFileSystems</a> to query the ZoneId field of the file system, and then select a vSwitch in the same zone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -156,6 +159,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The ID of the VPC for the protocol service export.</para>
+        /// <remarks>
+        /// <para>The CIDR block of the selected VPC must not overlap with the VPC CIDR block of the target CPFS file system. You can call the DescribeVpcs operation of VPC to query the CidrBlock field of each VPC for comparison, and select a VPC that does not conflict and is in the same zone as the file system.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2vct297b8157bth9z****</para>

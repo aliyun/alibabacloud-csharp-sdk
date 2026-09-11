@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListRecycledDirectoriesAndFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about files or directories in the recycle bin.</para>
+        /// <para>The collection of files or directories in the recycle bin.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
             /// <summary>
             /// <para>The file size. Unit: bytes.</para>
-            /// <para>If Type is set to Directory, the value 0 is returned.</para>
+            /// <para>When Type is set to Directory, the value 0 is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The pagination token for the next page.</para>
-        /// <para>If a single query does not return all files and directories, a non-empty NextToken is returned. You can specify the correct NextToken in subsequent queries to continue listing.</para>
+        /// <para>If a single query does not return all files and directories, a non-empty NextToken is returned. You can pass the correct NextToken in subsequent queries to continue retrieving results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
