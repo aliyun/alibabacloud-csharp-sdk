@@ -31857,7 +31857,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31923,7 +31923,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31989,7 +31989,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32007,7 +32007,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of applications for all PolarDB instances in a specified region.</para>
+        /// <para>Retrieves the list of applications for all PolarDB instances in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65821,7 +65821,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -65915,7 +65915,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66009,7 +66009,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -66027,7 +66027,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies the properties of a PolarDB cluster endpoint. You can configure settings such as the read/write mode, automatic node addition, consistency level, transaction splitting, the connection pool, and whether the primary node accepts read requests.</para>
+        /// <para>Modifies the cluster endpoint attributes of a PolarDB cluster, including the read/write mode, whether new nodes are automatically added to the endpoint, the consistency level, transaction splitting, whether the primary node accepts read requests, and connection pooling.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77873,7 +77873,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge base search results.</para>
+        /// <para>Retrieves information from a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77935,7 +77935,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge base search results.</para>
+        /// <para>Retrieves information from a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77997,7 +77997,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge base search results.</para>
+        /// <para>Retrieves information from a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78015,7 +78015,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves knowledge base search results.</para>
+        /// <para>Retrieves information from a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">

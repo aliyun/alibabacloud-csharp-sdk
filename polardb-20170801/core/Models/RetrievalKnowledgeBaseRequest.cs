@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RetrievalKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the knowledge base.</para>
+        /// <para>The unique identifier of the knowledge base. You can specify multiple knowledge bases separated by commas. A maximum of 50 knowledge bases can be specified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pkb-xxxxx</para>
+        /// <para>pkb-1xxxxx,pkb-2xxxxx</para>
         /// </summary>
         [NameInMap("KnowledgeBaseId")]
         [Validation(Required=false)]

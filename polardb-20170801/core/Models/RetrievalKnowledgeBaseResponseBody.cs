@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<string> Captions { get; set; }
 
             /// <summary>
-            /// <para>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate original elements.</para>
+            /// <para>The list of Docling source document structured element references associated with the chunk. You can use these references to precisely locate elements in the original document.</para>
             /// </summary>
             [NameInMap("DocItems")]
             [Validation(Required=false)]
             public List<string> DocItems { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the file.</para>
+            /// <para>The unique identifier of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>91b97b71-xxxx-xxxx-xxxx-33c6a6341cdc</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The chain of section headings that the chunk belongs to.</para>
+            /// <para>The chain of section headings to which the chunk belongs.</para>
             /// </summary>
             [NameInMap("Headings")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> ImageResources { get; set; }
             public class RetrievalKnowledgeBaseResponseBodyResultsImageResources : TeaModel {
                 /// <summary>
-                /// <para>The index of the source document that the image belongs to, starting from 0.</para>
+                /// <para>The index of the source document to which the image belongs, starting from 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public int? DocumentIndex { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the image resource.</para>
+                /// <para>The unique identifier of the image resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>document-0/pictures/1</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The list of page numbers that the chunk belongs to.</para>
+            /// <para>The list of page numbers to which the chunk belongs.</para>
             /// </summary>
             [NameInMap("PageNumbers")]
             [Validation(Required=false)]

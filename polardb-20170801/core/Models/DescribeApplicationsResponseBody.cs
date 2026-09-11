@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Contains the returned applications.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeApplicationsResponseBodyItems Items { get; set; }
@@ -27,6 +24,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("ApplicationType")]
                 [Validation(Required=false)]
                 public string ApplicationType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>br-1db52a73dc8545f19a47a3f1d8</para>
+                /// </summary>
+                [NameInMap("BranchId")]
+                [Validation(Required=false)]
+                public string BranchId { get; set; }
 
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
@@ -133,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -143,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -163,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total record count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
