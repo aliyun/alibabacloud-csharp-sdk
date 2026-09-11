@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class UpdateDeviceGroupRequest : TeaModel {
+    public class UpdateDeviceGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the device label. Set this parameter to an empty string to clear the description. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-).</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         /// </summary>
         [NameInMap("DynamicRule")]
         [Validation(Required=false)]
-        public Rule DynamicRule { get; set; }
+        public string DynamicRuleShrink { get; set; }
 
         /// <summary>
         /// <para>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</para>

@@ -27411,7 +27411,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>Updates a device label.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateDeviceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -27421,9 +27421,15 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// UpdateDeviceGroupResponse
         /// </returns>
-        public UpdateDeviceGroupResponse UpdateDeviceGroupWithOptions(UpdateDeviceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateDeviceGroupResponse UpdateDeviceGroupWithOptions(UpdateDeviceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDeviceGroupShrinkRequest request = new UpdateDeviceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DynamicRule))
+            {
+                request.DynamicRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DynamicRule, "DynamicRule", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -27436,6 +27442,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicOperator))
             {
                 body["DynamicOperator"] = request.DynamicOperator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicRuleShrink))
+            {
+                body["DynamicRule"] = request.DynamicRuleShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -27465,7 +27475,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>Updates a device label.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateDeviceGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -27475,9 +27485,15 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <returns>
         /// UpdateDeviceGroupResponse
         /// </returns>
-        public async Task<UpdateDeviceGroupResponse> UpdateDeviceGroupWithOptionsAsync(UpdateDeviceGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateDeviceGroupResponse> UpdateDeviceGroupWithOptionsAsync(UpdateDeviceGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateDeviceGroupShrinkRequest request = new UpdateDeviceGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DynamicRule))
+            {
+                request.DynamicRuleShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DynamicRule, "DynamicRule", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -27490,6 +27506,10 @@ namespace AlibabaCloud.SDK.Csas20230120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicOperator))
             {
                 body["DynamicOperator"] = request.DynamicOperator;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DynamicRuleShrink))
+            {
+                body["DynamicRule"] = request.DynamicRuleShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
