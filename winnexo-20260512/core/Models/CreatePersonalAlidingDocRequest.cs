@@ -62,6 +62,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
+        /// <para>The list of resource tag JSON strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Key&quot;,&quot;Document&quot;]</para>
+        /// </summary>
+        [NameInMap("sourceTags")]
+        [Validation(Required=false)]
+        public string SourceTags { get; set; }
+
+        /// <summary>
         /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>

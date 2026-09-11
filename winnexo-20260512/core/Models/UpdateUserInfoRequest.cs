@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Avatar { get; set; }
 
         /// <summary>
-        /// <para>The language preference: zh-CN, en-US.</para>
+        /// <para>The language preference: zh-CN or en-US.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Offering { get; set; }
 
         /// <summary>
-        /// <para>The user role description (used when profileRole is set to Others). Maximum length: 100 characters.</para>
+        /// <para>The user role description. This parameter is used when profileRole is set to Others. Maximum length: 100 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SelfIntroduction { get; set; }
 
         /// <summary>
-        /// <para>The effective tenant ID.</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

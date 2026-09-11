@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the bill list.</para>
+        /// <para>The details of the bills.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EntryObjectType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is a shadow bill.</para>
+            /// <para>Indicates whether the bill is a shadow bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status. The status is returned as Running upon submission.</para>
+            /// <para>The node status. Running is returned upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of bills.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

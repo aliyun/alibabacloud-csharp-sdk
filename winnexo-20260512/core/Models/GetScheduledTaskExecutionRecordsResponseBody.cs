@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetScheduledTaskExecutionRecordsResponseBodyTasks> Tasks { get; set; }
         public class GetScheduledTaskExecutionRecordsResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The ID of the collaboration group to which the task belongs. If empty, the task is a personal task.</para>
+            /// <para>The ID of the collaboration group to which the task belongs. An empty value indicates a personal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleCollaborationGroupId</para>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The execution model tier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>flagship: flagship.</description></item>
-            /// <item><description>standard: standard.</description></item>
-            /// <item><description>quick: lightweight.</description></item>
+            /// <item><description>flagship: Flagship.</description></item>
+            /// <item><description>standard: Standard.</description></item>
+            /// <item><description>quick: Lightweight.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline> Timeline { get; set; }
             public class GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline : TeaModel {
                 /// <summary>
-                /// <para>The actual working hours, in hours.</para>
+                /// <para>The actual hours spent, in hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -256,8 +256,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Manual: manually executed.</description></item>
-            /// <item><description>Cron: triggered by a schedule.</description></item>
+            /// <item><description>Manual: Manual execution.</description></item>
+            /// <item><description>Cron: Timed scheduling.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

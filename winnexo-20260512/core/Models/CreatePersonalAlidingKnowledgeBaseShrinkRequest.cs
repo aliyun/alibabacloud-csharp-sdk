@@ -58,6 +58,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
+        /// <para>The list of resource tag JSON strings applied to all child sources created during knowledge base synchronization.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Key&quot;,&quot;KnowledgeBase&quot;]</para>
+        /// </summary>
+        [NameInMap("sourceTags")]
+        [Validation(Required=false)]
+        public string SourceTags { get; set; }
+
+        /// <summary>
         /// <para>The synchronization settings.</para>
         /// </summary>
         [NameInMap("syncConfig")]

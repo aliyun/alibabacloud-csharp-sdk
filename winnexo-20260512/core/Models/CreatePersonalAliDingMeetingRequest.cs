@@ -72,6 +72,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ShanjiUrl { get; set; }
 
         /// <summary>
+        /// <para>A list of resource tag JSON strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Important&quot;,&quot;Meeting&quot;]</para>
+        /// </summary>
+        [NameInMap("sourceTags")]
+        [Validation(Required=false)]
+        public string SourceTags { get; set; }
+
+        /// <summary>
         /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>

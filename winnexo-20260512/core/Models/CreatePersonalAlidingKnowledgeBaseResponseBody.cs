@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base URL (echoed from the request parameter for caller alignment).</para>
+        /// <para>The knowledge base URL. This echoes the input parameter for the caller to verify alignment.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -92,8 +92,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>200: Success.</description></item>
-        /// <item><description>500: Failure.</description></item>
+        /// <item><description>200: Succeeded.</description></item>
+        /// <item><description>500: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

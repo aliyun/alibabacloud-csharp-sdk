@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QueryPrimaryObjectDataRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for searching. The keyword is matched against the name field by default. If the schema defines a description field, the keyword is also matched against the description field.</para>
+        /// <para>The keyword for search. The keyword is matched against the name field. If the schema defines a description field, the keyword is also matched against the description field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleKeyword</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. You can explicitly pass it in winnexo-cli by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. You can explicitly pass this parameter by using --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

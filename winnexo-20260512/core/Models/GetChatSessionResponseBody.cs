@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The message data detail structure.</para>
+        /// <para>The message data details structure.</para>
         /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the LLM context has been cleared after this message.</para>
+            /// <para>Indicates whether the LLM context was cleared after this message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? ContextCleared { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the message is copied from a shared conversation.</para>
+            /// <para>Indicates whether the message was copied from a shared conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The username of the user who shared the message. This parameter has a value only when from_share is set to True.</para>
+            /// <para>The username of the sharing source. This field has a value only when from_share is set to True.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? UpdateAt { get; set; }
 
             /// <summary>
-            /// <para>The user feedback type: LIKE | DISLIKE | CANCEL.</para>
+            /// <para>The user feedback type. Valid values: LIKE, DISLIKE, and CANCEL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The session information.</para>
+        /// <para>The session ID.</para>
         /// </summary>
         [NameInMap("session")]
         [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the creation time is older than 30 days.</para>
+            /// <para>Indicates whether the creation time exceeds 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The abstract model name used by the session (quick/standard/flagship).</para>
+            /// <para>The abstract model name used by the session. Valid values: quick, standard, and flagship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

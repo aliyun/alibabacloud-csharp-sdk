@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The object ID. Pass the project task ID.</para>
+            /// <para>The object ID. Set this parameter to the project task ID.</para>
             /// <list type="bullet">
             /// <item><description><para>For internal enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</para>
             /// </description></item>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>The list of source IDs for related skills.</para>
+            /// <para>The list of related skill source IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task understanding description polished by the LLM.</para>
+        /// <para>The task understanding description refined by the LLM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

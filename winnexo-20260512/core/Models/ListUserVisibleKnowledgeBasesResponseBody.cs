@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListUserVisibleKnowledgeBasesResponseBodyItems> Items { get; set; }
         public class ListUserVisibleKnowledgeBasesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The user ID of the creator.</para>
+            /// <para>The user ID of the task creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -39,20 +39,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The name of the creator.</para>
+            /// <para>The creator name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John</para>
+            /// <para>John Doe</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The description of the knowledge base.</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product materials and usage instructions</para>
+            /// <para>Product materials and user guides</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Product Knowledge Base</para>
+            /// <para>ProductKnowledgeBase</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

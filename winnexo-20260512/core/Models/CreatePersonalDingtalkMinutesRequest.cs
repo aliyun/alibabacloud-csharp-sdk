@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalDingtalkMinutesRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the pipeline.</para>
+        /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample description</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The original Shanji link (required).</para>
+        /// <para>The original Shanji note link (required).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("shanjiUrl")]
         [Validation(Required=false)]
         public string ShanjiUrl { get; set; }
+
+        /// <summary>
+        /// <para>A list of resource tag JSON strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Important&quot;,&quot;Shanji&quot;]</para>
+        /// </summary>
+        [NameInMap("sourceTags")]
+        [Validation(Required=false)]
+        public string SourceTags { get; set; }
 
         /// <summary>
         /// <para>The tenant ID.</para>

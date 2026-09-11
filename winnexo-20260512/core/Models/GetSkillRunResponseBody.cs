@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The task end time in ISO 8601 format. This parameter has a value only in desired states (Succeeded, Failed, or Cancelled).</para>
+        /// <para>The task end time in ISO 8601 format. This parameter has a value only when the task is in a desired state (Succeeded, Failed, or Cancelled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<Dictionary<string, object>> Logs { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

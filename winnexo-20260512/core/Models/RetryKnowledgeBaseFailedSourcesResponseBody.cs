@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The enterprise knowledge base directory ID.</para>
+        /// <para>The ID of the enterprise knowledge base directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The number of resources successfully enqueued for retry.</para>
+        /// <para>The number of data sources successfully enqueued for retry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of resources skipped (not in FAILED status).</para>
+        /// <para>The number of data sources skipped because they are not in FAILED status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

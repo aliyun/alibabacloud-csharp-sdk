@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ObjectType { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the object type, such as &quot;Customer&quot;. This value is resolved from the graph schema. The value is null when the cache is missed.</para>
+                /// <para>The display name of the object type, such as &quot;Customer&quot;, resolved from the graph schema. The value is null when there is a cache miss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The number of resources in the FAILED state. This field is returned only when the top-level KB directory list is queried.</para>
+            /// <para>The number of resources with the FAILED status. This parameter is returned only when the top-level KB directory is listed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</para>
+            /// <para>The knowledge base (KB) ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceKind { get; set; }
 
             /// <summary>
-            /// <para>The number of resources in the READY state. This field is returned only when the top-level KB directory list is queried.</para>
+            /// <para>The number of resources with the READY status. This parameter is returned only when the top-level KB directory is listed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The resource status. This field has a value only when itemType is resource.</para>
+            /// <para>The resource status. This parameter has a value only when itemType is resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources under the directory and its subdirectories. This field is returned only when the top-level KB directory list is queried.</para>
+            /// <para>The total number of resources under the directory and its subdirectories. This parameter is returned only when the top-level KB directory is listed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

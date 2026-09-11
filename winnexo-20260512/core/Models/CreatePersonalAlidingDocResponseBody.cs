@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
+        /// <para>The unique ID on the business system side, which is the business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000413</para>
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The call status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PENDING</b>: Waiting for receipt.</description></item>
-        /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
+        /// <item><description><b>PENDING</b>: Waiting for a receipt.</description></item>
+        /// <item><description><b>SUCCESS</b>: Successful.</description></item>
         /// <item><description><b>FAILED</b>: Failed.</description></item>
         /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
         /// </list>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>The resource description.</para>
+        /// <para>The schedule description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>created by eventbridge</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MinuteToken { get; set; }
 
         /// <summary>
-        /// <para>The resource name.</para>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,6 +71,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("operatingObjectName")]
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
+
+        /// <summary>
+        /// <para>The list of resource tag JSON strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;Important&quot;,&quot;Minutes&quot;]</para>
+        /// </summary>
+        [NameInMap("sourceTags")]
+        [Validation(Required=false)]
+        public string SourceTags { get; set; }
 
         /// <summary>
         /// <para>The tenant ID.</para>

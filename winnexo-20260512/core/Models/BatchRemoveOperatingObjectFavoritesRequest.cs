@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

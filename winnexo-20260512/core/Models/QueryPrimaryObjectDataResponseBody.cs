@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The incremental information list.</para>
+        /// <para>The list of incremental information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<Dictionary<string, string>> Items { get; set; }
 
         /// <summary>
-        /// <para>The error description. This parameter is empty when the request succeeds.</para>
+        /// <para>The error description. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

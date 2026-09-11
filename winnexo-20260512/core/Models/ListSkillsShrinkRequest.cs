@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</para>
+        /// <para>The name of the digital employee. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111</para>

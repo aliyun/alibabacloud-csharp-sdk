@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The bound directory ID. This value echoes the directoryId provided in the request body. If no directoryId is specified, the value is null because the default root directory is used.</para>
+        /// <para>The bound directory ID. This value is echoed back if provided in the request body. The value is null if the default root directory is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
+        /// <para>The unique ID on the business system side, which is the business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

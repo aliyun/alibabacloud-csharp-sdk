@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>The number of remaining favorited objects within the specified scope.</para>
+        /// <para>The number of remaining subscribed objects within the precise scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? RemainingCount { get; set; }
 
         /// <summary>
-        /// <para>The number of physical favorite records that are actually deleted.</para>
+        /// <para>The number of physical subscription records that are actually deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<BatchRemoveOperatingObjectFavoritesResponseBodyResults> Results { get; set; }
         public class BatchRemoveOperatingObjectFavoritesResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the object is favorited after the operation.</para>
+            /// <para>Indicates whether the object is subscribed after the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request has been processed.</para>
+            /// <para>Indicates whether the request is processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

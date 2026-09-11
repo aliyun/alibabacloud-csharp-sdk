@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<ListAdminKnowledgeBasesResponseBodyItemsObjectBindings> ObjectBindings { get; set; }
             public class ListAdminKnowledgeBasesResponseBodyItemsObjectBindings : TeaModel {
                 /// <summary>
-                /// <para>The semantic graph name to which the object belongs. The object_id is unique within this graph.</para>
+                /// <para>The name of the semantic graph to which the object belongs. The object_id is unique within this graph.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GraphName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the recommended item, which can be a feedId or a micro-application ID.</para>
+                /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a micro-application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleObjectId</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The object type, such as customer. This field has a value only when type is mention.</para>
+                /// <para>The object type, such as customer. This field has a value when type is set to mention.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The number of resources with FAILED status. This field is returned only for the top-level knowledge base directory list.</para>
+            /// <para>The number of resources with the FAILED status. This field is returned only in the top-level knowledge base directory list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>The knowledge base ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
+            /// <para>The knowledge base source type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceKind { get; set; }
 
             /// <summary>
-            /// <para>The number of resources with READY status. This field is returned only for the top-level knowledge base directory list.</para>
+            /// <para>The number of resources with the READY status. This field is returned only in the top-level knowledge base directory list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>The resource status. This field has a value only when itemType is resource.</para>
+            /// <para>The resource status. This field has a value when itemType is set to resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources in the directory and its subdirectories. This field is returned only for the top-level knowledge base directory list.</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This field is returned only in the top-level knowledge base directory list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of entries returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

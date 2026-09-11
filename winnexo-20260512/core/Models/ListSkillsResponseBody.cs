@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The actual skill code for execution.</para>
+            /// <para>The skill code that is actually executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The key.</para>
+            /// <para>The keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

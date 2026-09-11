@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The resource name.</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>issue_research</para>

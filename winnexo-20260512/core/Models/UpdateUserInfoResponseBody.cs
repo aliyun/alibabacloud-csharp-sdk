@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public UpdateUserInfoResponseBodyUser User { get; set; }
         public class UpdateUserInfoResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The user profile picture URL.</para>
+            /// <para>The profile picture URL of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsSystemTenant { get; set; }
 
             /// <summary>
-            /// <para>The user language preference.</para>
+            /// <para>The language preference of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string LanguagePreference { get; set; }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>The name of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SampleName.pdf</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The user service description.</para>
+            /// <para>The service description of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Offering { get; set; }
 
             /// <summary>
-            /// <para>The parsed user service result in JSON format.</para>
+            /// <para>The parsed result of the user service in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ParsedOffering { get; set; }
 
             /// <summary>
-            /// <para>The user role.</para>
+            /// <para>The role of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ProfileRole { get; set; }
 
             /// <summary>
-            /// <para>The user role description.</para>
+            /// <para>The role description of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ProfileRoleInfo { get; set; }
 
             /// <summary>
-            /// <para>The user self-introduction.</para>
+            /// <para>The self-introduction of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SelfIntroduction { get; set; }
 
             /// <summary>
-            /// <para>The current tenant ID.</para>
+            /// <para>The ID of the current tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The current tenant name.</para>
+            /// <para>The name of the current tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

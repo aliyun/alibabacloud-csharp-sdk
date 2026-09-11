@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAvailableConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. Pass it explicitly through --tenant-id in winnexo-cli.</para>
+        /// <para>The tenant ID. This is a common parameter. The winnexo-cli passes this parameter explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

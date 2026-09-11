@@ -51,6 +51,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
+        /// <para>是否启用联网搜索，默认 False；任务执行场景（传 taskExecution）下以任务配置为准</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("enableWebSearch")]
+        [Validation(Required=false)]
+        public bool? EnableWebSearch { get; set; }
+
+        /// <summary>
         /// <para>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</para>
         /// </summary>
         [NameInMap("files")]

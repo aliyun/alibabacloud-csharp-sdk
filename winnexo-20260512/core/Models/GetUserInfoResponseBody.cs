@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsAdmin { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current logon tenant is the system tenant (tenantId=10000).</para>
+        /// <para>Indicates whether the current logon tenant is a system tenant (tenantId=10000).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The user service description. Maximum length: 1000 characters.</para>
+        /// <para>The user service description. The value can be up to 1000 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Offering { get; set; }
 
         /// <summary>
-        /// <para>The parsed result of the user service (JSON format).</para>
+        /// <para>The parsed result of the user service description in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The user self-introduction. Maximum length: 1000 characters.</para>
+        /// <para>The user self-introduction. The value can be up to 1000 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

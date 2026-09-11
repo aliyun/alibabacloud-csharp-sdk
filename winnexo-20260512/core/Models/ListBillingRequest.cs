@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListBillingRequest : TeaModel {
         /// <summary>
-        /// <para>The unique business identifier. When bizType is LibraryChat, bizId refers to the document library ID.</para>
+        /// <para>The unique business identifier. When bizType is set to LibraryChat, bizId specifies the document library ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleBizId</para>
@@ -52,10 +52,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>start: indicates task creation. This is the default value and does not need to be explicitly set in most cases.</description></item>
-        /// <item><description>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. After the meeting ends, set this to stop to trigger the call. This is used in real-time meeting scenarios.</description></item>
+        /// <item><description>start: indicates node creation. This is the default value. In most cases, you do not need to explicitly set this value.</description></item>
+        /// <item><description>stop: stops a real-time meeting node. This value corresponds to the creation of a real-time meeting. After the meeting ends, set this value to stop and trigger the call. This value is used in real-time meeting scenarios.</description></item>
         /// </list>
-        /// <para>Note: When ending a real-time recording, you must set this parameter to stop.</para>
+        /// <remarks>
+        /// <para>Note: When ending a real-time recording, make sure to set this parameter to stop.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task status. The status is returned as Running upon submission.</para>
+        /// <para>The node status. Running is returned upon submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

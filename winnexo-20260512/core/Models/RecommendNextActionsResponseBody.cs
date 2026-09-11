@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample skill</para>
+            /// <para>SampleSkill</para>
             /// </summary>
             [NameInMap("skillName")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The meeting reservation title.</para>
+        /// <para>The scheduled meeting title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample session title</para>

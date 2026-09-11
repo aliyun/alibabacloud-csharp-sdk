@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string PlatformType { get; set; }
 
             /// <summary>
-            /// <para>The SSO configuration ID. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</para>
+            /// <para>The SSO configuration ID. This parameter has a value only for SAML, OAuth2, and WeCom types. The value is null for the custom type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSsoSettingsId</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SsoSettingsId { get; set; }
 
             /// <summary>
-            /// <para>The SSO configuration name. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</para>
+            /// <para>The SSO configuration name. This parameter has a value only for SAML, OAuth2, and WeCom types. The value is null for the custom type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

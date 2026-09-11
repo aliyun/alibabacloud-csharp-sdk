@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OutputType { get; set; }
 
         /// <summary>
-        /// <para>The number of recent messages used to assemble contextual information.</para>
+        /// <para>The number of recent messages used to assemble the contextual information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

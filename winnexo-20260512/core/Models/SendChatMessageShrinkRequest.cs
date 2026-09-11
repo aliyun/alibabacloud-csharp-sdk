@@ -51,7 +51,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
-        /// <para>The list of file references. Each item is an object in which fileId is required and is returned by uploadChatFile.</para>
+        /// <para>Specifies whether to enable web search. Default value: False. In task execution scenarios (when taskExecution is passed), the task configuration takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("enableWebSearch")]
+        [Validation(Required=false)]
+        public bool? EnableWebSearch { get; set; }
+
+        /// <summary>
+        /// <para>The list of file references. Each item is an object, and fileId is required (returned by uploadChatFile).</para>
         /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
@@ -68,7 +78,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to reuse the most recent session of the digital employee when sessionId is not provided (CLI scenario). Default value: false, which creates a new session.</para>
+        /// <para>Specifies whether to reuse the most recent session of the digital employee when sessionId is not passed (CLI scenario). Default value: false, which creates a new session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use streaming output.</para>
+        /// <para>Specifies whether to enable streaming output.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
