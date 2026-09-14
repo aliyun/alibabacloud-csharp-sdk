@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StopInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is about to be deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</para>
+        /// <para>This parameter is being deprecated and is retained only for compatibility purposes. Ignore this parameter when you call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ConfirmStop { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The instance is not stopped. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and sends the request. The instance is stopped after the check succeeds.</description></item>
+        /// <item><description>true: Performs a dry run without stopping the instance. The system checks whether the required parameters are specified, the request format is valid, service limits are met, and ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description>false: Performs a normal request. After the check passes, the instance is stopped.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to forcefully stop the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully stops the instance. This is equivalent to a power-off operation. All cached data that is not written to storage devices is lost.</description></item>
-        /// <item><description>false: normally stops the instance.</description></item>
+        /// <item><description>true: Forcefully stops the instance. This is equivalent to a typical power-off operation. All cached data that is not written to the storage device is lost.</description></item>
+        /// <item><description>false: Normally stops the instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not available for general use.</para>
+        /// <para>This parameter is in invitational preview and is not available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The stop mode for the pay-as-you-go ECS instance. Valid values:</para>
+        /// <para>The stop mode for a pay-as-you-go ECS instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>StopCharging: economical mode. After the economical mode is enabled:</para>
+        /// <item><description><para>StopCharging: Economical mode. After economical mode is enabled:</para>
         /// <list type="bullet">
-        /// <item><description>Billing is suspended for compute resources (vCPUs, memory, and GPUs), image license fees, and fixed bandwidth of static public IP addresses.</description></item>
-        /// <item><description>Billing continues for system disks, data disks, and fixed bandwidth of Elastic IP Addresses (EIPs).</description></item>
-        /// <item><description>Because compute resources are released, the instance may fail to restart due to insufficient inventory. Try again later or change the instance type.</description></item>
-        /// <item><description>If the instance is associated with an EIP before it is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</description></item>
+        /// <item><description>Billing is suspended for compute resources (vCPUs, memory, and GPUs), image license fees, and the pay-by-bandwidth mode for static public IP addresses.</description></item>
+        /// <item><description>Billing continues for system disks, data disks, and the pay-by-bandwidth mode for elastic IP addresses (EIPs).</description></item>
+        /// <item><description>Because compute resources are reclaimed, the instance may fail to start due to insufficient inventory. In this case, try again later or change the instance type.</description></item>
+        /// <item><description>If an EIP is associated with the instance before the instance is stopped, the IP address remains unchanged after the instance is restarted. Otherwise, the static public IP address may change, but the private IP address remains unchanged.</description></item>
         /// </list>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</para>
         /// <remarks>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <para>If the instance does not support the economical mode, the API does not return an error. Stopping the instance takes priority. Instance types that do not support the economical mode include instances with local disks and subscription instances.</para>
+        /// <para>If the instance does not support economical mode, the API does not return an error. The instance is stopped as a priority. Instance types that do not support economical mode include instances with local disks and subscription instances.</para>
         /// <list type="bullet">
-        /// <item><description>KeepCharging: standard stop mode. The instance continues to be billed after it is stopped.</description></item>
+        /// <item><description>KeepCharging: Standard stop mode. Billing continues after the instance is stopped.</description></item>
         /// </list>
-        /// <para>Default value: If you enable the economical mode for VPC-connected instances in the ECS console (for more information, see <a href="~~63353#default~~">Enable the economical mode by default</a>) and the conditions are met, the default value is <c>StopCharging</c>. Otherwise, the default value is <c>KeepCharging</c>.</para>
+        /// <para>Default value: If you enable the economical mode for instances in a VPC in the ECS console (for more information, see <a href="~~63353#default~~">Enable economical mode by default</a>) and the conditions are met, the default value is <c>StopCharging</c>. Otherwise, the default value is <c>KeepCharging</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KeepCharging</para>

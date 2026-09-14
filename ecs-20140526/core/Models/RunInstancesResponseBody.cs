@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The order ID. This parameter is returned only when you create subscription ECS instances (request parameter <c>InstanceChargeType=PrePaid</c>).</para>
+        /// <para>The order ID. This parameter is returned only when a subscription ECS instance is created (the request parameter <c>InstanceChargeType=PrePaid</c>).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

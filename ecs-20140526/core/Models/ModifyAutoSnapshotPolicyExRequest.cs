@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyAutoSnapshotPolicyExRequest : TeaModel {
         /// <summary>
-        /// <para>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</para>
+        /// <para>The retention period of cross-region replicated snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: Snapshot replicas are permanently retained.</description></item>
-        /// <item><description>1 to 65535: the number of days for which snapshot replicas are retained.</description></item>
+        /// <item><description>-1: The snapshot is retained permanently.</description></item>
+        /// <item><description>1 to 65535: The snapshot is retained for the specified number of days.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -25,21 +25,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? CopiedSnapshotsRetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The encryption parameter object for cross-region snapshot replication.</para>
+        /// <para>The encryption configuration for cross-region snapshot replication.</para>
         /// </summary>
         [NameInMap("CopyEncryptionConfiguration")]
         [Validation(Required=false)]
         public ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration CopyEncryptionConfiguration { get; set; }
         public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfiguration : TeaModel {
             /// <summary>
-            /// <para>This parameter is not publicly available.</para>
+            /// <para>This parameter is not available for use.</para>
             /// </summary>
             [NameInMap("Arn")]
             [Validation(Required=false)]
             public List<ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn> Arn { get; set; }
             public class ModifyAutoSnapshotPolicyExRequestCopyEncryptionConfigurationArn : TeaModel {
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <para>This parameter is not available for use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000000</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public long? AssumeRoleFor { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <para>This parameter is not available for use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hide</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string RoleType { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is not publicly available.</para>
+                /// <para>This parameter is not available for use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hide</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled. </description></item>
-            /// <item><description>false: disabled.</description></item>
+            /// <item><description>true: Yes. </description></item>
+            /// <item><description>false: No.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The key ID of the KMS key used for encrypted cross-region snapshot replication.</para>
+            /// <para>The key ID of the KMS key used for cross-region encrypted snapshot replication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to allow automatic cross-region replication.</para>
+        /// <para>Specifies whether to allow automatic cross-region snapshot replication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: allowed.</description></item>
-        /// <item><description>false: not allowed.</description></item>
+        /// <item><description>true: Allowed.</description></item>
+        /// <item><description>false: Not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The destination region to which snapshots are replicated. Currently, you can set only one destination region.</para>
+        /// <para>The destination region for cross-region snapshot replication. You can specify only one destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;]</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetCopyRegions { get; set; }
 
         /// <summary>
-        /// <para>The list of target resource tags. The automatic snapshot policy matches target resources by tag.</para>
+        /// <para>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.</para>
         /// </summary>
         [NameInMap("TargetTags")]
         [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <para>Valid values of N: 1 to 5.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</para>
+            /// <para>The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Valid values of N: 1 to 5.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para>If you pass in an empty value or an empty string, the tag value matches any value.</para>
+            /// <para>If you pass an empty value or an empty string, the tag value matches any value.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Value")]
@@ -196,11 +196,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</para>
+        /// <para>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, where 1 represents Monday.</para>
         /// <para>To create multiple automatic snapshots within a week, specify multiple days:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 7 days.</description></item>
-        /// <item><description>Specify multiple days in a JSON array, such as <c>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</c>. Separate the days with commas (,).</description></item>
+        /// <item><description>Specify multiple days as a JSON array in the format of <c>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</c>. Separate multiple days with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,8 +213,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of automatic snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: Automatic snapshots are permanently retained.</description></item>
-        /// <item><description>1 to 65536: the number of days for which automatic snapshots are retained.</description></item>
+        /// <item><description>-1: The snapshot is retained permanently.</description></item>
+        /// <item><description>1 to 65536: The snapshot is retained for the specified number of days.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -226,11 +226,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00.</para>
-        /// <para>To create multiple automatic snapshots within a day, specify multiple points in time:</para>
+        /// <para>The time of day at which to create automatic snapshots. The time is in UTC+8 and in the format of hours. Valid values: 0 to 23, representing 24 points in time from 00:00 to 23:00. For example, 1 represents 01:00.</para>
+        /// <para>To create multiple automatic snapshots within a day, specify multiple time points:</para>
         /// <list type="bullet">
-        /// <item><description>You can specify up to 24 points in time.</description></item>
-        /// <item><description>Specify multiple points in time in a JSON array, such as <c>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</c>. Separate the points in time with commas (,).</description></item>
+        /// <item><description>You can specify up to 24 time points.</description></item>
+        /// <item><description>Specify multiple time points as a JSON array in the format of <c>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</c>. Separate multiple time points with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

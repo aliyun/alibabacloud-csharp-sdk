@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances to which you want to attach the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the instances to which you want to attach the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate the IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

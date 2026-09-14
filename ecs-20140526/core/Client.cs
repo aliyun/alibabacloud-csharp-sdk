@@ -3034,29 +3034,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When you attach a data disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
-        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
+        /// <item><description>When attaching a data disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
+        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you attach a system disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
-        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must specify the logon credential for the instance.</description></item>
+        /// <item><description>When attaching a system disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
+        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the instance logon credentials.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.
+        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3148,29 +3148,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When you attach a data disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
-        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
+        /// <item><description>When attaching a data disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
+        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you attach a system disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
-        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must specify the logon credential for the instance.</description></item>
+        /// <item><description>When attaching a system disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
+        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the instance logon credentials.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.
+        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3262,29 +3262,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When you attach a data disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
-        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
+        /// <item><description>When attaching a data disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
+        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you attach a system disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
-        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must specify the logon credential for the instance.</description></item>
+        /// <item><description>When attaching a system disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
+        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the instance logon credentials.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.
+        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3308,29 +3308,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>The instance and the disk must be in the same zone.</description></item>
         /// <item><description>The disk must be in the <b>Available</b> (<c>Available</c>) state. </description></item>
-        /// <item><description>When you attach a data disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>If the disk is separately purchased, the billing method must be pay-as-you-go.</description></item>
-        /// <item><description>A system disk that was uninstalled from an ECS instance can be attached as a data disk without billing method restrictions. </description></item>
-        /// <item><description>An elastic ephemeral disk that has been detached can only be re-attached to its original instance.</description></item>
+        /// <item><description>When attaching a data disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be in the <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>If you purchased the disk separately, the billing method must be pay-as-you-go.</description></item>
+        /// <item><description>If a system disk detached from an ECS instance is attached as a data disk, no billing restrictions apply. </description></item>
+        /// <item><description>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you attach a system disk:<list type="bullet">
-        /// <item><description>The destination ECS instance must be the original instance from which the system disk was detached.</description></item>
-        /// <item><description>The destination ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
-        /// <item><description>You must specify the logon credential for the instance.</description></item>
+        /// <item><description>When attaching a system disk:<list type="bullet">
+        /// <item><description>The target ECS instance must be the source instance from which the system disk was detached.</description></item>
+        /// <item><description>The target ECS instance must be in the <b>Stopped</b> (<c>Stopped</c>) state. </description></item>
+        /// <item><description>You must configure the instance logon credentials.</description></item>
         /// <item><description>Elastic ephemeral disks cannot be attached as system disks.</description></item>
         /// <item><description>For more information about attaching system disks, see <a href="https://help.aliyun.com/document_detail/146752.html">Detach or attach a system disk</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>When you query ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.
+        /// <item><description>When querying ECS instance information, if the response contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations on the instance are prohibited.
         /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// <item><description>A disk with the multi-attach attribute enabled can only be attached to instances that support the NVMe protocol. 
-        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">Standard SSDs that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        ///  For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">standard SSDs support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3554,13 +3554,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Windows instances do not support SSH key pairs. </description></item>
         /// <item><description>After you attach an SSH key pair, authentication by using a username and password is disabled. </description></item>
-        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance already has an SSH key pair attached, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance by calling <a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an SSH key pair is already attached to an instance, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>This is a batch operation that supports partial success. An HTTP 200 response indicates only that the request has been processed, not that all instances are successfully attached. Check the FailCount value and the Code and Success fields of each element in Results.Result[] to determine the result for each instance:<list type="bullet">
+        /// <item><description>Request-level errors: Errors such as invalid parameters, nonexistent key pair, or more than 50 instances are intercepted before batch execution. The error is returned at the top level of the response with a non-200 HTTP status code, and the entire batch request fails.</description></item>
+        /// <item><description>Instance-level errors: Errors such as a Windows instance, an unsupported instance state, or an unsupported instance type affect only the corresponding instance. The error code is recorded in the corresponding Results.Result[] element, and the overall request still returns HTTP 200.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3628,13 +3634,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Windows instances do not support SSH key pairs. </description></item>
         /// <item><description>After you attach an SSH key pair, authentication by using a username and password is disabled. </description></item>
-        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance already has an SSH key pair attached, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance by calling <a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an SSH key pair is already attached to an instance, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>This is a batch operation that supports partial success. An HTTP 200 response indicates only that the request has been processed, not that all instances are successfully attached. Check the FailCount value and the Code and Success fields of each element in Results.Result[] to determine the result for each instance:<list type="bullet">
+        /// <item><description>Request-level errors: Errors such as invalid parameters, nonexistent key pair, or more than 50 instances are intercepted before batch execution. The error is returned at the top level of the response with a non-200 HTTP status code, and the entire batch request fails.</description></item>
+        /// <item><description>Instance-level errors: Errors such as a Windows instance, an unsupported instance state, or an unsupported instance type affect only the corresponding instance. The error code is recorded in the corresponding Results.Result[] element, and the overall request still returns HTTP 200.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3702,13 +3714,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Windows instances do not support SSH key pairs. </description></item>
         /// <item><description>After you attach an SSH key pair, authentication by using a username and password is disabled. </description></item>
-        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance already has an SSH key pair attached, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance by calling <a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an SSH key pair is already attached to an instance, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>This is a batch operation that supports partial success. An HTTP 200 response indicates only that the request has been processed, not that all instances are successfully attached. Check the FailCount value and the Code and Success fields of each element in Results.Result[] to determine the result for each instance:<list type="bullet">
+        /// <item><description>Request-level errors: Errors such as invalid parameters, nonexistent key pair, or more than 50 instances are intercepted before batch execution. The error is returned at the top level of the response with a non-200 HTTP status code, and the entire batch request fails.</description></item>
+        /// <item><description>Instance-level errors: Errors such as a Windows instance, an unsupported instance state, or an unsupported instance type affect only the corresponding instance. The error code is recorded in the corresponding Results.Result[] element, and the overall request still returns HTTP 200.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -3732,13 +3750,19 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
+        /// <h2>Operation description</h2>
         /// <para>When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Windows instances do not support SSH key pairs. </description></item>
         /// <item><description>After you attach an SSH key pair, authentication by using a username and password is disabled. </description></item>
-        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance (<a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance (<a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a>) for the SSH key pair to take effect.  </description></item>
-        /// <item><description>If an instance already has an SSH key pair attached, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>If an instance is in the <b>Running</b> state, restart the instance by calling <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an instance is in the <b>Stopped</b> state, start the instance by calling <a href="https://help.aliyun.com/document_detail/25500.html">StartInstance</a> for the SSH key pair to take effect.  </description></item>
+        /// <item><description>If an SSH key pair is already attached to an instance, the new SSH key pair automatically replaces the original one.</description></item>
+        /// <item><description>This is a batch operation that supports partial success. An HTTP 200 response indicates only that the request has been processed, not that all instances are successfully attached. Check the FailCount value and the Code and Success fields of each element in Results.Result[] to determine the result for each instance:<list type="bullet">
+        /// <item><description>Request-level errors: Errors such as invalid parameters, nonexistent key pair, or more than 50 instances are intercepted before batch execution. The error is returned at the top level of the response with a non-200 HTTP status code, and the entire batch request fails.</description></item>
+        /// <item><description>Instance-level errors: Errors such as a Windows instance, an unsupported instance state, or an unsupported instance type affect only the corresponding instance. The error code is recorded in the corresponding Results.Result[] element, and the overall request still returns HTTP 200.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </description>
         /// 
@@ -7309,7 +7333,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a standard snapshot or encrypted snapshot from one region to another.</para>
+        /// <para>Copies a standard snapshot or an encrypted snapshot from one region to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7420,7 +7444,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a standard snapshot or encrypted snapshot from one region to another.</para>
+        /// <para>Copies a standard snapshot or an encrypted snapshot from one region to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7531,7 +7555,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a standard snapshot or encrypted snapshot from one region to another.</para>
+        /// <para>Copies a standard snapshot or an encrypted snapshot from one region to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7558,7 +7582,7 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a standard snapshot or encrypted snapshot from one region to another.</para>
+        /// <para>Copies a standard snapshot or an encrypted snapshot from one region to another.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8365,9 +8389,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
-        /// <item><description>The system does not execute an automatic snapshot policy when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
         /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
@@ -8483,9 +8507,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
-        /// <item><description>The system does not execute an automatic snapshot policy when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
         /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
@@ -8601,9 +8625,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
-        /// <item><description>The system does not execute an automatic snapshot policy when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
         /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
@@ -8631,9 +8655,9 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/127767.html">Create an automatic snapshot policy</a>.
         /// When you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota limit, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
-        /// <item><description>The system does not execute an automatic snapshot policy when an ECS instance has a pending stop or restart task.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
+        /// <item><description>You can create a maximum of 100 automatic snapshot policies per region for an Alibaba Cloud account. When the number of automatic snapshots for a disk reaches the quota, the system deletes the earliest automatic snapshot created by the automatic snapshot policy when a new snapshot task is created.</description></item>
+        /// <item><description>The system does not execute automatic snapshot policies when an ECS instance has a pending stop or restart task.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the default service key of the destination region. For more information about cross-region snapshot replication, see <a href="https://help.aliyun.com/document_detail/159441.html">Copy a snapshot</a>.
         /// After you create an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25531.html">ApplyAutoSnapshotPolicy</a> to apply the policy to the target disks. To modify an automatic snapshot policy, call <a href="https://help.aliyun.com/document_detail/25529.html">ModifyAutoSnapshotPolicyEx</a>.</description></item>
         /// </list>
         /// </description>
@@ -10099,14 +10123,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its usage limits before you proceed. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs (ESSDs), ESSD Entry disks, regional Enterprise SSDs (ESSDs), ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Premium Edition.</description></item>
-        /// <item><description>To create a disk, complete real-name registration. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name Registration</a> page in Account Center.</description></item>
-        /// <item><description>Creating a disk incurs fees. Familiarize yourself with the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>Default settings when you create a disk:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. In other words, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
-        /// <item><description>When you create an enterprise SSD, if you do not configure the performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the disk performance level.</description></item>
-        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
+        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
+        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
+        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
+        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
+        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10261,14 +10285,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its usage limits before you proceed. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs (ESSDs), ESSD Entry disks, regional Enterprise SSDs (ESSDs), ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Premium Edition.</description></item>
-        /// <item><description>To create a disk, complete real-name registration. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name Registration</a> page in Account Center.</description></item>
-        /// <item><description>Creating a disk incurs fees. Familiarize yourself with the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>Default settings when you create a disk:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. In other words, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
-        /// <item><description>When you create an enterprise SSD, if you do not configure the performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the disk performance level.</description></item>
-        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
+        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
+        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
+        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
+        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
+        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10423,14 +10447,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its usage limits before you proceed. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs (ESSDs), ESSD Entry disks, regional Enterprise SSDs (ESSDs), ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Premium Edition.</description></item>
-        /// <item><description>To create a disk, complete real-name registration. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name Registration</a> page in Account Center.</description></item>
-        /// <item><description>Creating a disk incurs fees. Familiarize yourself with the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>Default settings when you create a disk:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. In other words, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
-        /// <item><description>When you create an enterprise SSD, if you do not configure the performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the disk performance level.</description></item>
-        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
+        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
+        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
+        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
+        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
+        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10457,14 +10481,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>When you create a disk, you can enable the multi-attach attribute (<c>MultiAttach</c>). Learn about this attribute and its usage limits before you proceed. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks that support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
-        /// <item><description>The following disk types can be created: basic disks, ultra disks, standard SSDs, enterprise SSDs (ESSDs), ESSD Entry disks, regional Enterprise SSDs (ESSDs), ESSD AutoPL disks, elastic ephemeral disks - Standard Edition, and elastic ephemeral disks - Premium Edition.</description></item>
-        /// <item><description>To create a disk, complete real-name registration. Go to the <a href="https://account.console.aliyun.com/#/auth/home">Real-name Registration</a> page in Account Center.</description></item>
-        /// <item><description>Creating a disk incurs fees. Familiarize yourself with the billing methods of Elastic Compute Service (ECS) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
-        /// <item><description>Default settings when you create a disk:<list type="bullet">
-        /// <item><description>Automatic snapshots of the disk are deleted when the disk is deleted. In other words, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query the parameter settings, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify the property.</description></item>
-        /// <item><description>When you create an enterprise SSD, if you do not configure the performance level, the default performance level is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the disk performance level.</description></item>
-        /// <item><description>The billing method is pay-as-you-go, which means the default value of the <c>Portable</c> property is <c>true</c>.</description></item>
+        /// <item><description>You can enable the multi-attach attribute (MultiAttach) when creating a disk. Familiarize yourself with this attribute and its limits before use. For more information, see <a href="https://help.aliyun.com/document_detail/256487.html">ESSD disks support NVMe</a> and <a href="https://help.aliyun.com/document_detail/262105.html">Use the multi-attach feature</a>.</description></item>
+        /// <item><description>Supported disk categories: basic disk, ultra disk, standard SSD, enterprise SSD, ESSD Entry disk, regional Enterprise SSD (ESSD), ESSD AutoPL disk, elastic ephemeral disk - standard edition, and elastic ephemeral disk - premium edition.</description></item>
+        /// <item><description>Creating a disk requires real-name registration. Go to <a href="https://account.console.aliyun.com/#/auth/home">Real-name registration</a> in your account information.</description></item>
+        /// <item><description>Creating a disk involves resource billing. Familiarize yourself with the billable methods for Elastic Compute Service in advance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>.</description></item>
+        /// <item><description>When creating a disk, the following default settings apply:<list type="bullet">
+        /// <item><description>Automatic snapshots are deleted when the disk is deleted. That is, <c>DeleteAutoSnapshot</c> is set to <c>true</c>. You can call <a href="https://help.aliyun.com/document_detail/2679767.html">DescribeDisks</a> to query this parameter configuration, and call <a href="https://help.aliyun.com/document_detail/25517.html">ModifyDiskAttribute</a> to modify it.</description></item>
+        /// <item><description>When creating an enterprise SSD, if you do not specify a performance level, the default is PL1. You can call <a href="https://help.aliyun.com/document_detail/123780.html">ModifyDiskSpec</a> to change the performance level.</description></item>
+        /// <item><description>The billing method defaults to pay-as-you-go, meaning the <c>Portable</c> property defaults to <c>true</c>.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17622,13 +17646,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by calling an <a href="https://help.aliyun.com/document_detail/63962.html">ECS API operation</a>, or by using monitoring.
+        /// <h2>Operation description</h2>
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event undergoes automatic switchover to the Scheduled state.</description></item>
-        /// <item><description>Executed: Without manual intervention, the simulated system event automatically switches to the Executed state at the specified point in time (NotBefore).</description></item>
-        /// <item><description>Canceled: After you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event switches to the Canceled state.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified point in time to switch the event to the Avoided state.</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
+        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
+        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
+        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description><remarks>
+        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17682,6 +17714,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRealOps))
+            {
+                query["TriggerRealOps"] = request.TriggerRealOps;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17708,13 +17744,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by calling an <a href="https://help.aliyun.com/document_detail/63962.html">ECS API operation</a>, or by using monitoring.
+        /// <h2>Operation description</h2>
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event undergoes automatic switchover to the Scheduled state.</description></item>
-        /// <item><description>Executed: Without manual intervention, the simulated system event automatically switches to the Executed state at the specified point in time (NotBefore).</description></item>
-        /// <item><description>Canceled: After you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event switches to the Canceled state.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified point in time to switch the event to the Avoided state.</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
+        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
+        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
+        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description><remarks>
+        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17768,6 +17812,10 @@ namespace AlibabaCloud.SDK.Ecs20140526
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerRealOps))
+            {
+                query["TriggerRealOps"] = request.TriggerRealOps;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -17794,13 +17842,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by calling an <a href="https://help.aliyun.com/document_detail/63962.html">ECS API operation</a>, or by using monitoring.
+        /// <h2>Operation description</h2>
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event undergoes automatic switchover to the Scheduled state.</description></item>
-        /// <item><description>Executed: Without manual intervention, the simulated system event automatically switches to the Executed state at the specified point in time (NotBefore).</description></item>
-        /// <item><description>Canceled: After you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event switches to the Canceled state.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified point in time to switch the event to the Avoided state.</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
+        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
+        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
+        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description><remarks>
+        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17824,13 +17880,21 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by calling an <a href="https://help.aliyun.com/document_detail/63962.html">ECS API operation</a>, or by using monitoring.
+        /// <h2>Operation description</h2>
+        /// <para>After you schedule a simulated event, you can view the scheduled simulated system event in the ECS console, by invoking <a href="https://help.aliyun.com/document_detail/63962.html">ECS API</a> operations, or by using CloudMonitor monitoring.
         /// The following table describes the lifecycle of a simulated system event:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled: After you schedule a simulated system event, the event undergoes automatic switchover to the Scheduled state.</description></item>
-        /// <item><description>Executed: Without manual intervention, the simulated system event automatically switches to the Executed state at the specified point in time (NotBefore).</description></item>
-        /// <item><description>Canceled: After you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the simulated system event, the event switches to the Canceled state.         </description></item>
-        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, you can <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified point in time to switch the event to the Avoided state.</description></item>
+        /// <item><description>Scheduled: After you schedule a simulated system event, the event automatically switches to the Scheduled state via automatic switchover.</description></item>
+        /// <item><description>Executed: The simulated system event automatically enters the Executed state at the specified time (NotBefore) if no manual intervention is performed.</description></item>
+        /// <item><description>Canceled: The simulated system event enters the Canceled state after you call <a href="https://help.aliyun.com/document_detail/88808.html">CancelSimulatedSystemEvents</a> to cancel the event.         </description></item>
+        /// <item><description>Avoided: For a simulated system event of the SystemMaintenance.Reboot type, the event enters the Avoided state if you <a href="https://help.aliyun.com/document_detail/25502.html">restart the instance</a> before the specified time.
+        /// Take note of the following items when you set TriggerRealOps to true in Settings:</description></item>
+        /// <item><description><remarks>
+        /// <para>Warning: The system actually stops or releases the instance, which may cause data loss. Exercise caution when you perform this operation, or use instances that do not run workloads for testing.</para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>EventType supports only SystemMaintenance.Reboot, SystemMaintenance.Redeploy, SystemMaintenance.Stop, InstanceFailure.Reboot, SystemFailure.Reboot, and Instance:PreemptibleInstanceInterruption.</description></item>
+        /// <item><description>When EventType is set to SystemMaintenance.Redeploy, the NotBefore parameter is invalid. The system automatically generates the execution time of the event.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17854,30 +17918,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Take note of the following items for different states:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When you create a snapshot, take note of the following items:</description></item>
+        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When creating a snapshot, note the following:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be temporarily degraded.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will have failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
+        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
+        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -17983,30 +18047,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Take note of the following items for different states:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When you create a snapshot, take note of the following items:</description></item>
+        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When creating a snapshot, note the following:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be temporarily degraded.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will have failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
+        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
+        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18112,30 +18176,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Take note of the following items for different states:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When you create a snapshot, take note of the following items:</description></item>
+        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When creating a snapshot, note the following:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be temporarily degraded.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will have failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
+        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
+        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18161,30 +18225,30 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Local snapshots have been replaced by the snapshot instant access feature. The following describes the parameters:</para>
+        /// <para>The local snapshot feature has been replaced by the snapshot instant access feature. The metric descriptions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you used local snapshots before December 14, 2020, you can use the Category parameter as expected.</description></item>
-        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. New snapshots created for ESSD series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly available by default after creation, and both manual snapshots and automatic snapshots are supported. The three snapshot instant access-related parameters InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess in API operations no longer take effect. A new response parameter Available is added to the <a href="https://help.aliyun.com/document_detail/25524.html">DescribeSnapshots</a> and <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> API operations to describe the availability status of snapshots.
+        /// <item><description>If you used local snapshots before December 14, 2020, you can continue to use the <c>Category</c> parameter as Normal.</description></item>
+        /// <item><description>If you did not use local snapshots before December 14, 2020, no additional configuration is required. Snapshots created for ESSD-series disks (ESSD, ESSD AutoPL, ESSD Entry, and regional ESSD) are instantly active by default and support both manual snapshots and automatic snapshots. The InstantAccess, InstantAccessRetentionDays, and DisableInstantAccess parameters related to the snapshot instant access feature are no longer effective. The DescribeSnapshots and DescribeSnapshotGroups API operations will include a new response element Available to indicate the active status of a snapshot.
         /// Before you begin:</description></item>
-        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate snapshots</a>.</description></item>
-        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. Take note of the following items for different states:<list type="bullet">
+        /// <item><description>Activate the snapshot feature. For more information, see <a href="https://help.aliyun.com/document_detail/108381.html">Activate the snapshot feature</a>.</description></item>
+        /// <item><description>The disk must be in the <b>In Use</b> or <b>Unattached</b> state. The following precautions apply to each state:<list type="bullet">
         /// <item><description>If the disk is in the <b>In Use</b> state, the instance must be in the <b>Running</b> or <b>Stopped</b> state.</description></item>
         /// <item><description>If the disk is in the <b>Unattached</b> state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
-        /// <item><description>When a disk is used to create a dynamic extended volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures the write order consistency and crash consistency of data across multiple disks in a business system. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
-        /// When you create a snapshot, take note of the following items:</description></item>
+        /// <item><description>If the disk is used to create a dynamic volume or a RAID array, use a snapshot-consistent group and enable application-consistent snapshots to back up data. A snapshot-consistent group ensures write-order consistency across multiple disks in a business system and guarantees crash consistency. For more information, see <a href="https://help.aliyun.com/document_detail/199625.html">Create a snapshot-consistent group</a> and <a href="https://help.aliyun.com/document_detail/208589.html">Create an application-consistent snapshot</a>.
+        /// When creating a snapshot, note the following:</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Avoid creating snapshots during peak business hours. When a snapshot is being created, the I/O performance of the disk decreases by up to 10%, and read and write performance may be temporarily degraded.</description></item>
-        /// <item><description>If a snapshot has not been created, the snapshot cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
-        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup to the snapshot.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status, such as stopping or restarting the ECS instance, during snapshot creation. Otherwise, the snapshot creation will have failed.</description></item>
-        /// <item><description>A disk for which a snapshot is being created does not support scale-out. Wait until the snapshot is created before you execute the scale-out operation.</description></item>
-        /// <item><description>You can create snapshots for disks in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its scheduled release time during snapshot creation, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is also deleted.</description></item>
-        /// <item><description>After a snapshot is created, you are charged based on the snapshot size. Fees are calculated separately for each region. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
-        /// <item><description>In the following scenarios, you cannot create a snapshot for the specified disk:<list type="bullet">
+        /// <item><description>Avoid creating snapshots during peak business hours. Creating a snapshot reduces disk I/O performance by less than 10% and may cause a brief slowdown in read and write performance.</description></item>
+        /// <item><description>If a snapshot is not yet complete, it cannot be used to create a custom image (<a href="https://help.aliyun.com/document_detail/25535.html">CreateImage</a>).</description></item>
+        /// <item><description>Incremental data generated by disk operations during snapshot creation is not included in the backup of the snapshot.</description></item>
+        /// <item><description>If the disk is attached to an ECS instance, do not change the instance status (such as stopping or restarting the ECS instance) during snapshot creation. Otherwise, the snapshot creation will be failed.</description></item>
+        /// <item><description>A disk for which a snapshot is being created cannot be scaled out. Wait until the snapshot is complete before you execute the scale-out operation.</description></item>
+        /// <item><description>You can create a snapshot for a disk in the <b>Expired</b> (<c>Expired</c>) state. If the disk reaches its expiration time while a snapshot is being created, the disk is released and the snapshot in the <b>Creating</b> (<c>Creating</c>) state is deleted at the same time.</description></item>
+        /// <item><description>After a snapshot is created, fees are charged separately for each region based on the snapshot size. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</description></item>
+        /// <item><description>You cannot create a snapshot for a specified disk in the following scenarios:<list type="bullet">
         /// <item><description>The number of manual snapshots retained for the disk has reached the upper limit. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>Snapshot creation has concurrency limits. Exceeding the limits causes creation failures. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
-        /// <item><description>When you query ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
+        /// <item><description>Snapshot creation is subject to concurrency limits. Exceeding the limit causes the creation to fail. For more information, see <a href="~~25412#SnapshotQuota1~~">Snapshot limits</a>.</description></item>
+        /// <item><description>When querying ECS instance information, if the returned data contains <c>{&quot;OperationLocks&quot;: {&quot;LockReason&quot; : &quot;security&quot;}}</c>, all operations are prohibited.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18205,27 +18269,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
-        /// When you create a snapshot-consistent group, take note of the following items:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When creating a snapshot consistency group, note the following:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Disks that have never been attached to an ECS instance do not support snapshot creation.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
-        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
+        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
+        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
+        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
+        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18328,27 +18392,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
-        /// When you create a snapshot-consistent group, take note of the following items:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When creating a snapshot consistency group, note the following:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Disks that have never been attached to an ECS instance do not support snapshot creation.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
-        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
+        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
+        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
+        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
+        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18451,27 +18515,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
-        /// When you create a snapshot-consistent group, take note of the following items:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When creating a snapshot consistency group, note the following:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Disks that have never been attached to an ECS instance do not support snapshot creation.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
-        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
+        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
+        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
+        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
+        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18490,27 +18554,27 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a snapshot-consistent group for disks in a specified ECS instance. A snapshot-consistent group contains snapshots of one or more disks.</para>
+        /// <para>Creates a snapshot consistency group for the disks of a specified ECS instance. A snapshot consistency group contains snapshots of one or more disks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set <c>InstanceId</c> to create a snapshot-consistent group for specified disks in an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot-consistent group for multiple disks attached to multiple ECS instances in the same zone.</para>
+        /// <para>You can set <c>InstanceId</c> to create a snapshot consistency group for specified disks within an instance. Alternatively, you can use only <c>DiskId.N</c> to create a snapshot consistency group for multiple disks attached to multiple ECS instances in the same zone.</para>
         /// <remarks>
-        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be specified at the same time. If <c>InstanceId</c> is specified, <c>DiskId.N</c> can only be set to disks attached to the specified instance and no longer supports specifying disk IDs across multiple instances.
-        /// When you create a snapshot-consistent group, take note of the following items:</para>
+        /// <para><c>DiskId.N</c> and <c>ExcludeDiskId.N</c> cannot be set at the same time. If <c>InstanceId</c> is set, <c>DiskId.N</c> can only specify disks that are attached to the specified instance. Specifying disk IDs across multiple instances is not supported in this case.
+        /// When creating a snapshot consistency group, note the following:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The disks for which you want to create snapshots must be in the <b>In Use</b> (<c>In_use</c>) or <b>Unattached</b> (<c>Available</c>) state.<list type="bullet">
-        /// <item><description>If a disk is in the <b>In Use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
-        /// <item><description>If a disk is in the <b>Unattached</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Disks that have never been attached to an ECS instance do not support snapshot creation.</description></item>
+        /// <item><description>The disks for which you want to create snapshots must be in the <b>In use</b> (<c>In_use</c>) or <b>Available</b> (<c>Available</c>) state.<list type="bullet">
+        /// <item><description>If a disk is in the <b>In use</b> (<c>In_use</c>) state, the ECS instance status must be <b>Running</b> (<c>Running</c>) or <b>Stopped</b> (<c>Stopped</c>).</description></item>
+        /// <item><description>If a disk is in the <b>Available</b> (<c>Available</c>) state, the disk must have been previously attached to an ECS instance. Snapshots cannot be created for disks that have never been attached to an ECS instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Snapshot-consistent groups support only ESSD series disks (ESSD, ESSD AutoPL, and ESSD Entry).</description></item>
-        /// <item><description>A single snapshot-consistent group can contain up to 128 disks (including system disks and data disks) with a total snapshot size of no more than 256 TiB.</description></item>
-        /// <item><description>User-created snapshots are retained until you delete them. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
-        /// <item><description>Disks with the multi-attach attribute enabled do not support snapshot-consistent groups. If an instance has a disk with the multi-attach attribute enabled, set the <c>ExcludeDiskId.N</c> parameter to exclude the disk.
-        /// For more information about the features and billing of snapshot-consistent groups, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot-consistent groups</a>.</description></item>
+        /// <item><description>Snapshot consistency groups support only ESSD-series disks (enterprise SSD, ESSD AutoPL, and ESSD Entry).</description></item>
+        /// <item><description>A single snapshot consistency group can contain up to 128 disks (including system disks and data disks), with a total snapshot size not exceeding 256 TiB.</description></item>
+        /// <item><description>Snapshots that you manually create are retained indefinitely. Delete snapshots that are no longer needed on a regular basis to avoid ongoing snapshot storage fees.</description></item>
+        /// <item><description>Snapshot consistency groups are not supported for disks that have the multi-attach attribute enabled. If an instance has such a disk attached, use the <c>ExcludeDiskId.N</c> parameter to exclude that disk.
+        /// For information about snapshot consistency group features and billing, see <a href="https://help.aliyun.com/document_detail/199625.html">Snapshot consistency groups</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -57588,26 +57652,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// <para>The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
         /// &lt;props=&quot;intl&quot;&gt;
-        /// The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>Before you begin</b><list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For details about the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>Before enabling account-level default encryption for block storage, activate <a href="https://help.aliyun.com/document_detail/480156.html">Key Management Service (KMS)</a>.</description></item>
-        /// <item><description>After account-level default encryption for block storage is enabled, only encrypted cloud disks can be created. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disks - Limits</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before enabling account-level default encryption for block storage, <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a>.</description></item>
+        /// <item><description>After enabling account-level default encryption for block storage, only encrypted cloud disks can be purchased. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disk - limits</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Notes</b><list type="bullet">
-        /// <item><description>After account-level default encryption for block storage is enabled, all newly created pay-as-you-go or subscription cloud disks must be encrypted cloud disks. You can use the KMS key ID configured for account-level default encryption for block storage, or specify a different KMS key ID.</description></item>
-        /// <item><description>When account-level default encryption for block storage is enabled for the first time, the service key is used by default.</description></item>
+        /// <item><description><b>Precautions</b><list type="bullet">
+        /// <item><description>After you enable account-level default encryption for block storage, all newly purchased pay-as-you-go or subscription cloud disks must be encrypted. You can use the KMS key ID configured for account-level default encryption, or change it to any other KMS key ID.</description></item>
+        /// <item><description>When you enable account-level default encryption for the first time, the service key is used by default.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Recommendations</b><list type="bullet">
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and the KMS key ID in use.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key used for account-level default encryption for block storage.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
+        /// <item><description><b>Usage recommendations</b><list type="bullet">
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and to retrieve the KMS key ID in use.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key for account-level default encryption for block storage.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -57675,26 +57739,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// <para>The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
         /// &lt;props=&quot;intl&quot;&gt;
-        /// The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>Before you begin</b><list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For details about the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>Before enabling account-level default encryption for block storage, activate <a href="https://help.aliyun.com/document_detail/480156.html">Key Management Service (KMS)</a>.</description></item>
-        /// <item><description>After account-level default encryption for block storage is enabled, only encrypted cloud disks can be created. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disks - Limits</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before enabling account-level default encryption for block storage, <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a>.</description></item>
+        /// <item><description>After enabling account-level default encryption for block storage, only encrypted cloud disks can be purchased. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disk - limits</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Notes</b><list type="bullet">
-        /// <item><description>After account-level default encryption for block storage is enabled, all newly created pay-as-you-go or subscription cloud disks must be encrypted cloud disks. You can use the KMS key ID configured for account-level default encryption for block storage, or specify a different KMS key ID.</description></item>
-        /// <item><description>When account-level default encryption for block storage is enabled for the first time, the service key is used by default.</description></item>
+        /// <item><description><b>Precautions</b><list type="bullet">
+        /// <item><description>After you enable account-level default encryption for block storage, all newly purchased pay-as-you-go or subscription cloud disks must be encrypted. You can use the KMS key ID configured for account-level default encryption, or change it to any other KMS key ID.</description></item>
+        /// <item><description>When you enable account-level default encryption for the first time, the service key is used by default.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Recommendations</b><list type="bullet">
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and the KMS key ID in use.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key used for account-level default encryption for block storage.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
+        /// <item><description><b>Usage recommendations</b><list type="bullet">
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and to retrieve the KMS key ID in use.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key for account-level default encryption for block storage.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -57762,26 +57826,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// <para>The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
         /// &lt;props=&quot;intl&quot;&gt;
-        /// The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>Before you begin</b><list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For details about the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>Before enabling account-level default encryption for block storage, activate <a href="https://help.aliyun.com/document_detail/480156.html">Key Management Service (KMS)</a>.</description></item>
-        /// <item><description>After account-level default encryption for block storage is enabled, only encrypted cloud disks can be created. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disks - Limits</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before enabling account-level default encryption for block storage, <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a>.</description></item>
+        /// <item><description>After enabling account-level default encryption for block storage, only encrypted cloud disks can be purchased. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disk - limits</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Notes</b><list type="bullet">
-        /// <item><description>After account-level default encryption for block storage is enabled, all newly created pay-as-you-go or subscription cloud disks must be encrypted cloud disks. You can use the KMS key ID configured for account-level default encryption for block storage, or specify a different KMS key ID.</description></item>
-        /// <item><description>When account-level default encryption for block storage is enabled for the first time, the service key is used by default.</description></item>
+        /// <item><description><b>Precautions</b><list type="bullet">
+        /// <item><description>After you enable account-level default encryption for block storage, all newly purchased pay-as-you-go or subscription cloud disks must be encrypted. You can use the KMS key ID configured for account-level default encryption, or change it to any other KMS key ID.</description></item>
+        /// <item><description>When you enable account-level default encryption for the first time, the service key is used by default.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Recommendations</b><list type="bullet">
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and the KMS key ID in use.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key used for account-level default encryption for block storage.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
+        /// <item><description><b>Usage recommendations</b><list type="bullet">
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and to retrieve the KMS key ID in use.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key for account-level default encryption for block storage.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -57809,26 +57873,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para>The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
+        /// <para>The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.
         /// &lt;props=&quot;intl&quot;&gt;
-        /// The EBS account-level default encryption feature is available only in specific regions and for specific users. If you want to use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// The account-level default encryption feature for Elastic Block Storage (EBS) is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>Before you begin</b><list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For details about the authorization operation, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>Before enabling account-level default encryption for block storage, activate <a href="https://help.aliyun.com/document_detail/480156.html">Key Management Service (KMS)</a>.</description></item>
-        /// <item><description>After account-level default encryption for block storage is enabled, only encrypted cloud disks can be created. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disks - Limits</a>.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before enabling account-level default encryption for block storage, <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a>.</description></item>
+        /// <item><description>After enabling account-level default encryption for block storage, only encrypted cloud disks can be purchased. For details, see <a href="~~59643#50de175230erj~~">Encrypted cloud disk - limits</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Notes</b><list type="bullet">
-        /// <item><description>After account-level default encryption for block storage is enabled, all newly created pay-as-you-go or subscription cloud disks must be encrypted cloud disks. You can use the KMS key ID configured for account-level default encryption for block storage, or specify a different KMS key ID.</description></item>
-        /// <item><description>When account-level default encryption for block storage is enabled for the first time, the service key is used by default.</description></item>
+        /// <item><description><b>Precautions</b><list type="bullet">
+        /// <item><description>After you enable account-level default encryption for block storage, all newly purchased pay-as-you-go or subscription cloud disks must be encrypted. You can use the KMS key ID configured for account-level default encryption, or change it to any other KMS key ID.</description></item>
+        /// <item><description>When you enable account-level default encryption for the first time, the service key is used by default.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Recommendations</b><list type="bullet">
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and the KMS key ID in use.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key used for account-level default encryption for block storage.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
+        /// <item><description><b>Usage recommendations</b><list type="bullet">
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> and <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> to query whether account-level default encryption for block storage is enabled in a specified region and to retrieve the KMS key ID in use.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> to modify or reset the KMS key for account-level default encryption for block storage.</description></item>
+        /// <item><description>Use <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> to disable account-level default encryption for block storage in a specified region.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -62753,16 +62817,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62857,16 +62921,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62961,16 +63025,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -62989,16 +63053,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, repeat date, and retention period.</para>
+        /// <para>Modifies an automatic snapshot policy, such as the snapshot creation time, recurrence dates, and retention period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>Note the following when calling this operation:</para>
         /// <list type="bullet">
         /// <item><description>System policies cannot be modified.</description></item>
-        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy has been applied immediately execute the modified automatic snapshot policy.</description></item>
-        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are encrypted by using the service key of the destination region by default.</description></item>
+        /// <item><description>After you modify an automatic snapshot policy, the disks to which the policy is applied immediately use the modified policy.</description></item>
+        /// <item><description>If cross-region snapshot replication is enabled and no encryption parameters are configured, encrypted snapshots are copied using the service key of the destination region by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -65949,26 +66013,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or between different dedicated block storage clusters.</para>
+        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or migrates a disk between dedicated block storage clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
-        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
+        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// When you invoke this operation, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be consistent with the disk type supported by the destination cluster. When you migrate a disk between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
-        /// <item><description>Because the enterprise SSD performance level (PL) is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</description></item>
-        /// <item><description>A maximum of five disk migration tasks can run concurrently in the same region for a single account.</description></item>
-        /// <item><description>During the migration procedure, you cannot cancel the migration, create snapshots, perform specification changes, scale out, attach or detach the disk, or reinitialize the disk.<remarks>
-        /// <para>After the disk is migrated, the billing method, disk type, and capabilities of the destination cluster take effect immediately. Alibaba Cloud charges you based on the new disk type and performance level (PL) after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
+        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
+        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
+        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66045,26 +66109,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or between different dedicated block storage clusters.</para>
+        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or migrates a disk between dedicated block storage clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
-        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
+        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// When you invoke this operation, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be consistent with the disk type supported by the destination cluster. When you migrate a disk between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
-        /// <item><description>Because the enterprise SSD performance level (PL) is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</description></item>
-        /// <item><description>A maximum of five disk migration tasks can run concurrently in the same region for a single account.</description></item>
-        /// <item><description>During the migration procedure, you cannot cancel the migration, create snapshots, perform specification changes, scale out, attach or detach the disk, or reinitialize the disk.<remarks>
-        /// <para>After the disk is migrated, the billing method, disk type, and capabilities of the destination cluster take effect immediately. Alibaba Cloud charges you based on the new disk type and performance level (PL) after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
+        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
+        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
+        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66141,26 +66205,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or between different dedicated block storage clusters.</para>
+        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or migrates a disk between dedicated block storage clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
-        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
+        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// When you invoke this operation, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be consistent with the disk type supported by the destination cluster. When you migrate a disk between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
-        /// <item><description>Because the enterprise SSD performance level (PL) is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</description></item>
-        /// <item><description>A maximum of five disk migration tasks can run concurrently in the same region for a single account.</description></item>
-        /// <item><description>During the migration procedure, you cannot cancel the migration, create snapshots, perform specification changes, scale out, attach or detach the disk, or reinitialize the disk.<remarks>
-        /// <para>After the disk is migrated, the billing method, disk type, and capabilities of the destination cluster take effect immediately. Alibaba Cloud charges you based on the new disk type and performance level (PL) after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
+        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
+        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
+        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66181,26 +66245,26 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or between different dedicated block storage clusters.</para>
+        /// <para>Migrates a disk into or out of a dedicated block storage cluster, or migrates a disk between dedicated block storage clusters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>The dedicated block storage cluster feature is supported in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China South 1 Finance regions.
-        /// Before you call this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account does not have an overdue payment. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>The dedicated block storage cluster feature is available in the China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Ulanqab), China (Shenzhen), China (Heyuan), Indonesia (Jakarta), Germany (Frankfurt), and China (Shenzhen) Finance Cloud regions.
+        /// Before you invoke this operation, make sure that you fully understand the billing methods and pricing of disks and dedicated block storage clusters, and that the dedicated block storage cluster has not expired and your account has no overdue payments. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.
+        /// When you invoke this operation, take note of the following items:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>The disk and the dedicated block storage cluster must be in the same zone.</description></item>
-        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go disks first. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Change the billing method of a disk</a>.</description></item>
-        /// <item><description>The disk type must be consistent with the disk type supported by the destination cluster. When you migrate a disk between different dedicated block storage clusters, you can change the disk type to match the disk type supported by the destination cluster.</description></item>
+        /// <item><description>Only pay-as-you-go disks are supported. Subscription disks must be converted to pay-as-you-go before migration. For more information, see <a href="https://help.aliyun.com/document_detail/145018.html">Convert the billing method of a disk</a>.</description></item>
+        /// <item><description>The disk type must be compatible with the disk types supported by the destination cluster. When migrating between different dedicated block storage clusters, you can change the disk type to match the disk types supported by the destination cluster.</description></item>
         /// <item><description>The disk must be in the <b>In Use</b> (In_use) or <b>Active</b> (Available) state.</description></item>
-        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state. The ECS instance cannot be expired.</description></item>
-        /// <item><description>Because the enterprise SSD performance level (PL) is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</description></item>
-        /// <item><description>A maximum of five disk migration tasks can run concurrently in the same region for a single account.</description></item>
-        /// <item><description>During the migration procedure, you cannot cancel the migration, create snapshots, perform specification changes, scale out, attach or detach the disk, or reinitialize the disk.<remarks>
-        /// <para>After the disk is migrated, the billing method, disk type, and capabilities of the destination cluster take effect immediately. Alibaba Cloud charges you based on the new disk type and performance level (PL) after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage cluster billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
+        /// <item><description>If the disk is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state and must not be in the expired state.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to capacity limits, if you cannot upgrade the performance level, you can expand the disk capacity and try again. For more information, see <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
+        /// <item><description>An account can run a maximum of five concurrent disk migration tasks in the same region.</description></item>
+        /// <item><description>During the migration procedure, the following operations are not allowed: canceling the migration, creating snapshots, Upgrade/Downgrade, expanding capacity, attaching, detaching, or reinitializing the disk.<remarks>
+        /// <para>After migration, the disk follows the billing method, disk type, and capabilities of the destination cluster. The change takes effect immediately after you invoke this operation, and Alibaba Cloud charges you based on the new disk type and ESSD performance level. For more information, see <a href="https://help.aliyun.com/document_detail/208883.html">Dedicated block storage billing</a> and <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -66221,29 +66285,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSD (ESSD) disks, basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
+        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSDs (ESSDs), basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
-        /// To minimize the impact of specification changes on your business, perform specification changes during off-peak hours.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
+        /// To minimize the impact of specification changes on your workloads, perform the changes during off-peak hours.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>To modify the performance level (PL) of an enterprise SSD (ESSD) disk:<list type="bullet">
-        /// <item><description>Subscription ESSD disks support only performance level (PL) upgrades.</description></item>
-        /// <item><description>Pay-as-you-go ESSD disks support both upgrades and downgrades of performance levels (PLs), but you cannot downgrade to PL0.</description></item>
-        /// <item><description>The ESSD disk must be in the <b>In Use</b> (In_use) or <b>Pending Attach</b> (Available) state.</description></item>
-        /// <item><description>If the ESSD disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state and must not be expired or have an overdue payment.</description></item>
-        /// <item><description>Because the ESSD performance level is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk by calling <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>To modify the ESSD performance level (PL) of an enterprise SSD (ESSD):<list type="bullet">
+        /// <item><description>Subscription enterprise SSDs (ESSDs) support only performance level (PL) upgrades.</description></item>
+        /// <item><description>Pay-as-you-go enterprise SSDs (ESSDs) support both upgrades and decreases of the performance level (PL), but cannot be decreased to PL0.</description></item>
+        /// <item><description>The enterprise SSD (ESSD) must be in the <b>In Use</b> (In_use) or <b>Available</b> state.</description></item>
+        /// <item><description>If the enterprise SSD (ESSD) is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state. The instance cannot be in an expired state or have an overdue payment.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to disk capacity, if you cannot upgrade the performance level (PL), scale out the disk capacity (<a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a>) and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>For precautions about changing the type of a disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
-        /// <item><description>For information about the supported Upgrade/Downgrade scenarios for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported specification changes for disks</a>.
+        /// <item><description>For precautions about changing the disk type, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
+        /// <item><description>For information about supported specification change options for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported disk specification changes</a>.
         /// &lt;props=&quot;china&quot;&gt;* Disks with the multi-attach attribute enabled do not support disk specification changes.
-        /// After a disk specification change, the billing changes are as follows:</description></item>
+        /// After a disk specification change, billing changes as follows:</description></item>
         /// <item><description>Pay-as-you-go disks: billed based on the new disk type.</description></item>
-        /// <item><description>Subscription disks: within the billing cycle, the amount to be paid is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).
+        /// <item><description>Subscription disks: the fee to pay is calculated based on the price difference between the old and new configurations and the remaining days in the billing cycle (from 00:00:00 the next day to the end of the validity period).
         /// For billing information about disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</description></item>
         /// </list>
         /// </description>
@@ -66327,29 +66391,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSD (ESSD) disks, basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
+        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSDs (ESSDs), basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
-        /// To minimize the impact of specification changes on your business, perform specification changes during off-peak hours.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
+        /// To minimize the impact of specification changes on your workloads, perform the changes during off-peak hours.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>To modify the performance level (PL) of an enterprise SSD (ESSD) disk:<list type="bullet">
-        /// <item><description>Subscription ESSD disks support only performance level (PL) upgrades.</description></item>
-        /// <item><description>Pay-as-you-go ESSD disks support both upgrades and downgrades of performance levels (PLs), but you cannot downgrade to PL0.</description></item>
-        /// <item><description>The ESSD disk must be in the <b>In Use</b> (In_use) or <b>Pending Attach</b> (Available) state.</description></item>
-        /// <item><description>If the ESSD disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state and must not be expired or have an overdue payment.</description></item>
-        /// <item><description>Because the ESSD performance level is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk by calling <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>To modify the ESSD performance level (PL) of an enterprise SSD (ESSD):<list type="bullet">
+        /// <item><description>Subscription enterprise SSDs (ESSDs) support only performance level (PL) upgrades.</description></item>
+        /// <item><description>Pay-as-you-go enterprise SSDs (ESSDs) support both upgrades and decreases of the performance level (PL), but cannot be decreased to PL0.</description></item>
+        /// <item><description>The enterprise SSD (ESSD) must be in the <b>In Use</b> (In_use) or <b>Available</b> state.</description></item>
+        /// <item><description>If the enterprise SSD (ESSD) is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state. The instance cannot be in an expired state or have an overdue payment.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to disk capacity, if you cannot upgrade the performance level (PL), scale out the disk capacity (<a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a>) and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>For precautions about changing the type of a disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
-        /// <item><description>For information about the supported Upgrade/Downgrade scenarios for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported specification changes for disks</a>.
+        /// <item><description>For precautions about changing the disk type, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
+        /// <item><description>For information about supported specification change options for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported disk specification changes</a>.
         /// &lt;props=&quot;china&quot;&gt;* Disks with the multi-attach attribute enabled do not support disk specification changes.
-        /// After a disk specification change, the billing changes are as follows:</description></item>
+        /// After a disk specification change, billing changes as follows:</description></item>
         /// <item><description>Pay-as-you-go disks: billed based on the new disk type.</description></item>
-        /// <item><description>Subscription disks: within the billing cycle, the amount to be paid is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).
+        /// <item><description>Subscription disks: the fee to pay is calculated based on the price difference between the old and new configurations and the remaining days in the billing cycle (from 00:00:00 the next day to the end of the validity period).
         /// For billing information about disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</description></item>
         /// </list>
         /// </description>
@@ -66433,29 +66497,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSD (ESSD) disks, basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
+        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSDs (ESSDs), basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
-        /// To minimize the impact of specification changes on your business, perform specification changes during off-peak hours.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
+        /// To minimize the impact of specification changes on your workloads, perform the changes during off-peak hours.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>To modify the performance level (PL) of an enterprise SSD (ESSD) disk:<list type="bullet">
-        /// <item><description>Subscription ESSD disks support only performance level (PL) upgrades.</description></item>
-        /// <item><description>Pay-as-you-go ESSD disks support both upgrades and downgrades of performance levels (PLs), but you cannot downgrade to PL0.</description></item>
-        /// <item><description>The ESSD disk must be in the <b>In Use</b> (In_use) or <b>Pending Attach</b> (Available) state.</description></item>
-        /// <item><description>If the ESSD disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state and must not be expired or have an overdue payment.</description></item>
-        /// <item><description>Because the ESSD performance level is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk by calling <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>To modify the ESSD performance level (PL) of an enterprise SSD (ESSD):<list type="bullet">
+        /// <item><description>Subscription enterprise SSDs (ESSDs) support only performance level (PL) upgrades.</description></item>
+        /// <item><description>Pay-as-you-go enterprise SSDs (ESSDs) support both upgrades and decreases of the performance level (PL), but cannot be decreased to PL0.</description></item>
+        /// <item><description>The enterprise SSD (ESSD) must be in the <b>In Use</b> (In_use) or <b>Available</b> state.</description></item>
+        /// <item><description>If the enterprise SSD (ESSD) is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state. The instance cannot be in an expired state or have an overdue payment.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to disk capacity, if you cannot upgrade the performance level (PL), scale out the disk capacity (<a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a>) and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>For precautions about changing the type of a disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
-        /// <item><description>For information about the supported Upgrade/Downgrade scenarios for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported specification changes for disks</a>.
+        /// <item><description>For precautions about changing the disk type, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
+        /// <item><description>For information about supported specification change options for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported disk specification changes</a>.
         /// &lt;props=&quot;china&quot;&gt;* Disks with the multi-attach attribute enabled do not support disk specification changes.
-        /// After a disk specification change, the billing changes are as follows:</description></item>
+        /// After a disk specification change, billing changes as follows:</description></item>
         /// <item><description>Pay-as-you-go disks: billed based on the new disk type.</description></item>
-        /// <item><description>Subscription disks: within the billing cycle, the amount to be paid is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).
+        /// <item><description>Subscription disks: the fee to pay is calculated based on the price difference between the old and new configurations and the remaining days in the billing cycle (from 00:00:00 the next day to the end of the validity period).
         /// For billing information about disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</description></item>
         /// </list>
         /// </description>
@@ -66475,29 +66539,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSD (ESSD) disks, basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
+        /// <para>Changes the type of a disk or modifies the performance level (PL) of an enterprise SSD (ESSD). Regional Enterprise SSDs (ESSDs), basic disks, elastic ephemeral disks, and local disks do not support disk type changes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
-        /// To minimize the impact of specification changes on your business, perform specification changes during off-peak hours.
-        /// Take note of the following items when you call this operation:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/disk/detail">pricing</a> of disks.
+        /// To minimize the impact of specification changes on your workloads, perform the changes during off-peak hours.
+        /// When you call this operation, note the following:</para>
         /// <list type="bullet">
-        /// <item><description>To modify the performance level (PL) of an enterprise SSD (ESSD) disk:<list type="bullet">
-        /// <item><description>Subscription ESSD disks support only performance level (PL) upgrades.</description></item>
-        /// <item><description>Pay-as-you-go ESSD disks support both upgrades and downgrades of performance levels (PLs), but you cannot downgrade to PL0.</description></item>
-        /// <item><description>The ESSD disk must be in the <b>In Use</b> (In_use) or <b>Pending Attach</b> (Available) state.</description></item>
-        /// <item><description>If the ESSD disk is attached to an ECS instance, the instance must be in the <b>Running</b> (Running) or <b>Stopped</b> (Stopped) state and must not be expired or have an overdue payment.</description></item>
-        /// <item><description>Because the ESSD performance level is limited by its capacity, if you cannot upgrade the performance level (PL), scale out the disk by calling <a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a> and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</description></item>
+        /// <item><description>To modify the ESSD performance level (PL) of an enterprise SSD (ESSD):<list type="bullet">
+        /// <item><description>Subscription enterprise SSDs (ESSDs) support only performance level (PL) upgrades.</description></item>
+        /// <item><description>Pay-as-you-go enterprise SSDs (ESSDs) support both upgrades and decreases of the performance level (PL), but cannot be decreased to PL0.</description></item>
+        /// <item><description>The enterprise SSD (ESSD) must be in the <b>In Use</b> (In_use) or <b>Available</b> state.</description></item>
+        /// <item><description>If the enterprise SSD (ESSD) is attached to an ECS instance, the instance must be in the <b>Running</b> or <b>Stopped</b> state. The instance cannot be in an expired state or have an overdue payment.</description></item>
+        /// <item><description>Because the ESSD performance level is subject to disk capacity, if you cannot upgrade the performance level (PL), scale out the disk capacity (<a href="https://help.aliyun.com/document_detail/25522.html">ResizeDisk</a>) and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>For precautions about changing the type of a disk, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
-        /// <item><description>For information about the supported Upgrade/Downgrade scenarios for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported specification changes for disks</a>.
+        /// <item><description>For precautions about changing the disk type, see <a href="~~161980#section_s4a_to0_1jx~~">Change the disk type</a>.</description></item>
+        /// <item><description>For information about supported specification change options for different disk types, see <a href="~~161980#eb8bb54032nho~~">Supported disk specification changes</a>.
         /// &lt;props=&quot;china&quot;&gt;* Disks with the multi-attach attribute enabled do not support disk specification changes.
-        /// After a disk specification change, the billing changes are as follows:</description></item>
+        /// After a disk specification change, billing changes as follows:</description></item>
         /// <item><description>Pay-as-you-go disks: billed based on the new disk type.</description></item>
-        /// <item><description>Subscription disks: within the billing cycle, the amount to be paid is calculated based on the price difference between the old and new configurations and the remaining days (from 00:00 of the next day to the end of the validity period).
+        /// <item><description>Subscription disks: the fee to pay is calculated based on the price difference between the old and new configurations and the remaining days in the billing cycle (from 00:00:00 the next day to the end of the validity period).
         /// For billing information about disks, see <a href="https://help.aliyun.com/document_detail/179022.html">Block storage billing</a>.</description></item>
         /// </list>
         /// </description>
@@ -83405,29 +83469,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the operating system of an ECS instance by replacing the system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
+        /// <para>Replaces the operating system of an ECS instance by replacing its system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
-        /// When you replace the system disk, take note of the following items:</para>
+        /// <para>Before calling this operation, carefully read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// When replacing the system disk, note the following:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must have no unpaid orders. </para>
         /// </description></item>
-        /// <item><description><para>The instance must be in the Stopped (<c>Stopped</c>) state.</para>
+        /// <item><description><para>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk replacement due to insufficient inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to VPC-type instances. If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, set the instance to the standard stop mode when stopping it. This prevents the instance from failing to restart after the system disk is replaced due to insufficient ECS instance inventory in the region. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new system disk capacity. The new capacity cannot be smaller than the original system disk capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
-        /// <item><description><para>If the ECS instance is locked for security reasons, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// <item><description><para>If the ECS instance is security-locked, meaning the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, replacing the system disk is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
+        /// After replacing the system disk, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status and verify whether the replacement was successful. If the returned <c>OperationLocks</c> value is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83547,29 +83611,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the operating system of an ECS instance by replacing the system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
+        /// <para>Replaces the operating system of an ECS instance by replacing its system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
-        /// When you replace the system disk, take note of the following items:</para>
+        /// <para>Before calling this operation, carefully read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// When replacing the system disk, note the following:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must have no unpaid orders. </para>
         /// </description></item>
-        /// <item><description><para>The instance must be in the Stopped (<c>Stopped</c>) state.</para>
+        /// <item><description><para>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk replacement due to insufficient inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to VPC-type instances. If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, set the instance to the standard stop mode when stopping it. This prevents the instance from failing to restart after the system disk is replaced due to insufficient ECS instance inventory in the region. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new system disk capacity. The new capacity cannot be smaller than the original system disk capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
-        /// <item><description><para>If the ECS instance is locked for security reasons, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// <item><description><para>If the ECS instance is security-locked, meaning the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, replacing the system disk is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
+        /// After replacing the system disk, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status and verify whether the replacement was successful. If the returned <c>OperationLocks</c> value is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83689,29 +83753,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the operating system of an ECS instance by replacing the system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
+        /// <para>Replaces the operating system of an ECS instance by replacing its system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
-        /// When you replace the system disk, take note of the following items:</para>
+        /// <para>Before calling this operation, carefully read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// When replacing the system disk, note the following:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must have no unpaid orders. </para>
         /// </description></item>
-        /// <item><description><para>The instance must be in the Stopped (<c>Stopped</c>) state.</para>
+        /// <item><description><para>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk replacement due to insufficient inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to VPC-type instances. If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, set the instance to the standard stop mode when stopping it. This prevents the instance from failing to restart after the system disk is replaced due to insufficient ECS instance inventory in the region. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new system disk capacity. The new capacity cannot be smaller than the original system disk capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
-        /// <item><description><para>If the ECS instance is locked for security reasons, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// <item><description><para>If the ECS instance is security-locked, meaning the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, replacing the system disk is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
+        /// After replacing the system disk, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status and verify whether the replacement was successful. If the returned <c>OperationLocks</c> value is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -83731,29 +83795,29 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the operating system of an ECS instance by replacing the system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
+        /// <para>Replaces the operating system of an ECS instance by replacing its system disk. After the replacement, the disk ID of the system disk changes and the original disk is released.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
-        /// When you replace the system disk, take note of the following items:</para>
+        /// <para>Before calling this operation, carefully read <a href="https://help.aliyun.com/document_detail/50134.html">Replace the system disk (replace the operating system)</a>.
+        /// When replacing the system disk, note the following:</para>
         /// <list type="bullet">
         /// <item><description><para>You cannot change the billing method of the system disk.</para>
         /// </description></item>
         /// <item><description><para>You cannot change the disk type of the system disk.</para>
         /// </description></item>
-        /// <item><description><para>The ECS instance to which the system disk is attached must not have unpaid orders. </para>
+        /// <item><description><para>The ECS instance to which the system disk is attached must have no unpaid orders. </para>
         /// </description></item>
-        /// <item><description><para>The instance must be in the Stopped (<c>Stopped</c>) state.</para>
+        /// <item><description><para>The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
         /// <remarks>
-        /// <para>This applies only to instances in virtual private clouds (VPCs). If the ECS instance uses the pay-as-you-go billing method and has the economical mode enabled by default, to prevent the instance from failing to restart after the system disk replacement due to insufficient inventory in the region, stop the instance in standard stop mode. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
+        /// <para>This applies only to VPC-type instances. If the ECS instance uses the pay-as-you-go billing method and the economical mode is enabled by default, set the instance to the standard stop mode when stopping it. This prevents the instance from failing to restart after the system disk is replaced due to insufficient ECS instance inventory in the region. For more information, see <a href="https://help.aliyun.com/document_detail/25501.html">StopInstance</a>.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new system disk capacity. The new capacity cannot be smaller than the original system disk capacity.</para>
+        /// <item><description><para>You can use the <c>SystemDisk.Size</c> parameter to specify a new capacity for the system disk. The new capacity cannot be smaller than the original capacity.</para>
         /// </description></item>
-        /// <item><description><para>If the ECS instance is locked for security reasons, which means the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, the system disk cannot be replaced. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
-        /// After the system disk is replaced, you can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to check the status of the instance to verify whether the replacement is successful. If the <c>OperationLocks</c> response parameter is empty, the system disk replacement is complete.</para>
+        /// <item><description><para>If the ECS instance is security-locked, meaning the <c>OperationLocks</c> parameter of the instance contains <c>&quot;LockReason&quot;: &quot;security&quot;</c>, replacing the system disk is not supported. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.
+        /// After replacing the system disk, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> to query the instance status and verify whether the replacement was successful. If the returned <c>OperationLocks</c> value is empty, the system disk replacement is complete.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -84213,14 +84277,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84271,14 +84335,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84329,14 +84393,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -84355,14 +84419,14 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the KMS key ID used for account-level default encryption of block storage in a specified region to the service key.</para>
+        /// <para>Resets the KMS key ID used for block storage account-level default encryption in a specified region to the service key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
-        /// <item><description>The <b>account-level default encryption of block storage</b> feature must be enabled in the specified region.</description></item>
+        /// <item><description>Resource Access Management (RAM) users require the <c>AliyunECSFullAccess</c> permission. For more information about how to grant authorization, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>The <b>block storage account-level default encryption</b> feature must be enabled in the specified region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -86593,117 +86657,117 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates ECS instances in batches with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
+        /// <para>Creates multiple ECS instances in a batch, with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Creating instances incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
-        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
-        /// This is an asynchronous operation. After the instance creation request is sent, the instance IDs are returned. The instances are not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instances are created and started.</para>
+        /// Creating instances incurs charges. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure you understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This operation is asynchronous. After a successful request, the instance IDs are returned. The instances are not created and started immediately. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the status returned is <c>Running</c>, the instances are created and started successfully.</para>
         /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that your account has passed real-name registration. For more information, refer to <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
-        /// <item><description>When the resource inventory is insufficient to create the instances, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, refer to <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
-        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, visit <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
-        /// <item><description>Before creating VPC-type instances, create a VPC in the corresponding Alibaba Cloud region by calling <a href="https://help.aliyun.com/document_detail/65430.html">CreateVpc</a>.</description></item>
+        /// <item><description>Make sure your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration documentation</a>.</description></item>
+        /// <item><description>If resources are insufficient to complete the instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check for instance creation failure events. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
+        /// <item><description>Make sure the total number of instances you create or the total number of vCPUs across all instance types does not exceed your quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before creating a VPC-type ECS instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your available coupon is used by default during payment.</description></item>
-        /// <item><description>A single request can create up to 100 instances. To create more than 100 instances, submit requests in batches or invoke them concurrently.</description></item>
-        /// <item><description>If the value of the <c>InternetMaxBandwidthOut</c> parameter is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
-        /// <para>In a single region, the total peak public bandwidth billed on a pay-by-bandwidth basis for a single Alibaba Cloud account is subject to limits. For more information, refer to <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
+        /// <item><description>If the billing method is subscription (<c>PrePaid</c>), available coupons are applied by default during payment.</description></item>
+        /// <item><description>A single request can create up to 100 instances. If you need to create more than 100 instances, submit multiple requests in batches or concurrently.</description></item>
+        /// <item><description>If the value of <c>InternetMaxBandwidthOut</c> is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
+        /// <para>The total peak outbound public bandwidth for pay-by-bandwidth instances under a single Alibaba Cloud account in a single region is subject to limits. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Suggestions</h3>
+        /// <h3>Recommendations</h3>
         /// <list type="bullet">
-        /// <item><description><b>Test scenarios</b>: Send a dry run request by Settings <c>DryRun=true</c>.</description></item>
-        /// <item><description><b>Release instances</b>: Set the automatic release time by using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
-        /// <item><description><b>Management and retrieve</b>: Specify tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) for each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</description></item>
-        /// <item><description><b>Launch templates</b>: Use launch templates to avoid specifying a large number of configuration parameters each time you create instances. Create a launch template by invoking <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a>, and then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request.</description></item>
-        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive scenarios, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and increase the memory-to-vCPU ratio.</description></item>
-        /// <item><description><b>Enable jumbo frames</b>: Specify <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute when creating instances. For more information, refer to <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
+        /// <item><description><b>Test scenarios</b>: Send a dry run request by setting <c>DryRun=true</c>.</description></item>
+        /// <item><description><b>Release instances</b>: Set the automatic release time using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
+        /// <item><description><b>Management and retrieval</b>: Assign tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) to each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</description></item>
+        /// <item><description><b>Launch templates</b>: Use a launch template to avoid specifying a large number of configuration parameters each time you create an instance. Invoke <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> to create a launch template, then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request to use the template.</description></item>
+        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive workloads, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and improve the memory-to-CPU ratio.</description></item>
+        /// <item><description><b>Enable jumbo frames</b>: Set <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute at instance creation. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
         /// </list>
         /// <h2>Request examples</h2>
-        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, allocate public IP addresses, and set instance names and passwords. The relevant request parameters are as follows:</para>
-        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // Set the China (Hangzhou) region
-        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // Set the image ID
-        /// InstanceType:&quot;ecs.g7.large&quot;, // Set the instance type
-        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // Set the security group ID
-        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // Set the vSwitch ID
+        /// <para>Suppose you want to create ECS instances in the China (Hangzhou) region using a specific image, instance type, security group, and vSwitch, with a configured system disk and data disk, a public IP address, and a specified instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, // instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // vSwitch ID
         /// SystemDisk:{
-        ///   Category:&quot;cloud_essd&quot;, // Set the system disk category to enterprise SSD
-        ///   Size:40, // Set the system disk size to 40 GiB
+        ///   Category:&quot;cloud_essd&quot;, // system disk type: enterprise SSD
+        ///   Size:40, // system disk size: 40 GiB
         /// },
         /// DataDisk:[
         ///   {
-        ///     Category:&quot;cloud_essd&quot;, // Set the data disk category to enterprise SSD
-        ///     Size:100, // Set the data disk size to 100 GiB
+        ///     Category:&quot;cloud_essd&quot;, // data disk type: enterprise SSD
+        ///     Size:100, // data disk size: 100 GiB
         ///   }
         /// ],
-        /// HostName:&quot;ECS-test&quot;, // Set the instance hostname
-        /// Password:&quot;ECS@test1234&quot;, // Set the instance logon password
-        /// InternetMaxBandwidthOut:10 // Set the outbound public bandwidth to 10 Mbit/s
+        /// HostName:&quot;ECS-test&quot;, // instance hostname
+        /// Password:&quot;ECS@test1234&quot;, // instance logon password
+        /// InternetMaxBandwidthOut:10 // outbound public bandwidth: 10 Mbit/s
         /// </c></pre>
-        /// <para>Based on the preceding configurations, create different types of instances:</para>
+        /// <para>Based on the above configuration, create different types of instances:</para>
         /// <details>
-        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// <summary>Example: Create 5 subscription instances with auto-renewal</summary>
         /// ```
-        /// Amount:5, // Create 5 instances
-        /// InstanceChargeType:"PrePaid", // Subscription billing method
-        /// PeriodUnit:"Month", // Set the unit to month
-        /// Period:1, // Set the duration to 1 month
-        /// AutoRenew:true, // Enable auto-renewal
-        /// AutoRenewPeriod:1 // Set the auto-renewal period to 1 month
+        /// Amount:5, // number of instances: 5
+        /// InstanceChargeType:"PrePaid", // subscription billing method
+        /// PeriodUnit:"Month", // billing unit: month
+        /// Period:1, // billing period: 1 month
+        /// AutoRenew:true, // enable auto-renewal
+        /// AutoRenewPeriod:1 // renewal period: 1 month
         /// ```
         /// </details>
         /// <details>
         /// <summary>Example: Create 10 pay-as-you-go instances</summary>
         /// ```
-        /// Amount:10, // Create 10 instances
-        /// InstanceChargeType:"PostPaid", // Pay-as-you-go billing method
-        /// SpotStrategy:"NoSpot" // Default value, Normal pay-as-you-go
+        /// Amount:10, // number of instances: 10
+        /// InstanceChargeType:"PostPaid", // pay-as-you-go billing method
+        /// SpotStrategy:"NoSpot" // default value: normal pay-as-you-go
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example: Create 20 spot instances with a bidding policy and protection period</summary>
+        /// <summary>Example: Create 20 spot instances with a bidding policy and retention period</summary>
         /// ```
-        /// Amount:20, // Create 20 instances
+        /// Amount:20, // number of instances: 20
         /// InstanceChargeType:"PostPaid",
-        /// SpotStrategy:"SpotAsPriceGo", // Automatically bid based on the current marketplace price
-        /// SpotDuration:1 // Set the protection period to 1 hour
+        /// SpotStrategy:"SpotAsPriceGo", // bidding policy: automatically bid at the current marketplace price
+        /// SpotDuration:1 // spot instance retention period: 1 hour
         /// ```
         /// </details>
-        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use the template to create ECS instances in the China (Hangzhou) region. Example:
+        /// Suppose you have already created a launch template using [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use it to create ECS instances in the China (Hangzhou) region. The example is as follows:
         /// <details>
-        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// <summary>Example: Create 10 ECS instances from a launch template</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// Amount:10, // Create 10 instances
-        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // Set the launch template ID
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// Amount:10, // number of instances: 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // launch template ID
         /// ```
         /// </details>
-        /// >Notice: When both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, the created instances are pay-as-you-go instances.
+        /// >Notice: If both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the template uses subscription billing but `InstanceChargeType` is set to `PostPaid`, the created instances use the pay-as-you-go billing method.
         /// <details>
-        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains system and data disks)</summary>
+        /// <summary>Example: Create 1 instance using a full image (an ECS instance backup that includes both the system disk and data disks)</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// ImageId = m-bp13ohd32cvzpq9e****, // Custom image ID
-        /// InstanceType = ecs.u1-c1m1.large, // Instance type
-        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****, // Security group ID
-        /// VSwitchId = vsw-bp19wo63nleroq22g****, // vSwitch ID
-        /// SystemDisk.Size = 50, // Set the size of the system disk included in the full image
-        /// SystemDisk.Category = cloud_auto, // Set the category of the system disk included in the full image
-        /// DataDisk.1.Device = /dev/xvdb, // Set the attach point of the data disk included in the full image
-        /// DataDisk.1.Size = 50, // Set the size of the data disk included in the full image
-        /// DataDisk.1.Category = cloud_essd, // Set the category of the data disk included in the full image
-        /// DataDisk.2.Device = /dev/xvdc, // Attach point of the new data disk. To replace the data disk included in the full image with a new data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
-        /// DataDisk.2.Size = 70, // Size of the new data disk
-        /// DataDisk.2.Category = cloud_auto, // Category of the new data disk
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****,// custom image ID
+        /// InstanceType = ecs.u1-c1m1.large,// instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****,// security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****,// vSwitch ID
+        /// SystemDisk.Size = 50,// system disk size included in the full image
+        /// SystemDisk.Category = cloud_auto,// disk type of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb,// attach point of the data disk included in the full image
+        /// DataDisk.1.Size = 50,// size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd,// disk type of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc,// attach point of the additional data disk. To replace the data disk included in the full image with the additional data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
+        /// DataDisk.2.Size = 70,// size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto,// disk type of the additional data disk
         /// ```
         /// </details>
         /// </description>
@@ -87063,117 +87127,117 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates ECS instances in batches with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
+        /// <para>Creates multiple ECS instances in a batch, with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Creating instances incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
-        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
-        /// This is an asynchronous operation. After the instance creation request is sent, the instance IDs are returned. The instances are not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instances are created and started.</para>
+        /// Creating instances incurs charges. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure you understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This operation is asynchronous. After a successful request, the instance IDs are returned. The instances are not created and started immediately. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the status returned is <c>Running</c>, the instances are created and started successfully.</para>
         /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that your account has passed real-name registration. For more information, refer to <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
-        /// <item><description>When the resource inventory is insufficient to create the instances, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, refer to <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
-        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, visit <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
-        /// <item><description>Before creating VPC-type instances, create a VPC in the corresponding Alibaba Cloud region by calling <a href="https://help.aliyun.com/document_detail/65430.html">CreateVpc</a>.</description></item>
+        /// <item><description>Make sure your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration documentation</a>.</description></item>
+        /// <item><description>If resources are insufficient to complete the instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check for instance creation failure events. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
+        /// <item><description>Make sure the total number of instances you create or the total number of vCPUs across all instance types does not exceed your quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before creating a VPC-type ECS instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your available coupon is used by default during payment.</description></item>
-        /// <item><description>A single request can create up to 100 instances. To create more than 100 instances, submit requests in batches or invoke them concurrently.</description></item>
-        /// <item><description>If the value of the <c>InternetMaxBandwidthOut</c> parameter is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
-        /// <para>In a single region, the total peak public bandwidth billed on a pay-by-bandwidth basis for a single Alibaba Cloud account is subject to limits. For more information, refer to <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
+        /// <item><description>If the billing method is subscription (<c>PrePaid</c>), available coupons are applied by default during payment.</description></item>
+        /// <item><description>A single request can create up to 100 instances. If you need to create more than 100 instances, submit multiple requests in batches or concurrently.</description></item>
+        /// <item><description>If the value of <c>InternetMaxBandwidthOut</c> is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
+        /// <para>The total peak outbound public bandwidth for pay-by-bandwidth instances under a single Alibaba Cloud account in a single region is subject to limits. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Suggestions</h3>
+        /// <h3>Recommendations</h3>
         /// <list type="bullet">
-        /// <item><description><b>Test scenarios</b>: Send a dry run request by Settings <c>DryRun=true</c>.</description></item>
-        /// <item><description><b>Release instances</b>: Set the automatic release time by using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
-        /// <item><description><b>Management and retrieve</b>: Specify tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) for each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</description></item>
-        /// <item><description><b>Launch templates</b>: Use launch templates to avoid specifying a large number of configuration parameters each time you create instances. Create a launch template by invoking <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a>, and then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request.</description></item>
-        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive scenarios, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and increase the memory-to-vCPU ratio.</description></item>
-        /// <item><description><b>Enable jumbo frames</b>: Specify <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute when creating instances. For more information, refer to <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
+        /// <item><description><b>Test scenarios</b>: Send a dry run request by setting <c>DryRun=true</c>.</description></item>
+        /// <item><description><b>Release instances</b>: Set the automatic release time using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
+        /// <item><description><b>Management and retrieval</b>: Assign tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) to each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</description></item>
+        /// <item><description><b>Launch templates</b>: Use a launch template to avoid specifying a large number of configuration parameters each time you create an instance. Invoke <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> to create a launch template, then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request to use the template.</description></item>
+        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive workloads, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and improve the memory-to-CPU ratio.</description></item>
+        /// <item><description><b>Enable jumbo frames</b>: Set <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute at instance creation. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
         /// </list>
         /// <h2>Request examples</h2>
-        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, allocate public IP addresses, and set instance names and passwords. The relevant request parameters are as follows:</para>
-        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // Set the China (Hangzhou) region
-        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // Set the image ID
-        /// InstanceType:&quot;ecs.g7.large&quot;, // Set the instance type
-        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // Set the security group ID
-        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // Set the vSwitch ID
+        /// <para>Suppose you want to create ECS instances in the China (Hangzhou) region using a specific image, instance type, security group, and vSwitch, with a configured system disk and data disk, a public IP address, and a specified instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, // instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // vSwitch ID
         /// SystemDisk:{
-        ///   Category:&quot;cloud_essd&quot;, // Set the system disk category to enterprise SSD
-        ///   Size:40, // Set the system disk size to 40 GiB
+        ///   Category:&quot;cloud_essd&quot;, // system disk type: enterprise SSD
+        ///   Size:40, // system disk size: 40 GiB
         /// },
         /// DataDisk:[
         ///   {
-        ///     Category:&quot;cloud_essd&quot;, // Set the data disk category to enterprise SSD
-        ///     Size:100, // Set the data disk size to 100 GiB
+        ///     Category:&quot;cloud_essd&quot;, // data disk type: enterprise SSD
+        ///     Size:100, // data disk size: 100 GiB
         ///   }
         /// ],
-        /// HostName:&quot;ECS-test&quot;, // Set the instance hostname
-        /// Password:&quot;ECS@test1234&quot;, // Set the instance logon password
-        /// InternetMaxBandwidthOut:10 // Set the outbound public bandwidth to 10 Mbit/s
+        /// HostName:&quot;ECS-test&quot;, // instance hostname
+        /// Password:&quot;ECS@test1234&quot;, // instance logon password
+        /// InternetMaxBandwidthOut:10 // outbound public bandwidth: 10 Mbit/s
         /// </c></pre>
-        /// <para>Based on the preceding configurations, create different types of instances:</para>
+        /// <para>Based on the above configuration, create different types of instances:</para>
         /// <details>
-        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// <summary>Example: Create 5 subscription instances with auto-renewal</summary>
         /// ```
-        /// Amount:5, // Create 5 instances
-        /// InstanceChargeType:"PrePaid", // Subscription billing method
-        /// PeriodUnit:"Month", // Set the unit to month
-        /// Period:1, // Set the duration to 1 month
-        /// AutoRenew:true, // Enable auto-renewal
-        /// AutoRenewPeriod:1 // Set the auto-renewal period to 1 month
+        /// Amount:5, // number of instances: 5
+        /// InstanceChargeType:"PrePaid", // subscription billing method
+        /// PeriodUnit:"Month", // billing unit: month
+        /// Period:1, // billing period: 1 month
+        /// AutoRenew:true, // enable auto-renewal
+        /// AutoRenewPeriod:1 // renewal period: 1 month
         /// ```
         /// </details>
         /// <details>
         /// <summary>Example: Create 10 pay-as-you-go instances</summary>
         /// ```
-        /// Amount:10, // Create 10 instances
-        /// InstanceChargeType:"PostPaid", // Pay-as-you-go billing method
-        /// SpotStrategy:"NoSpot" // Default value, Normal pay-as-you-go
+        /// Amount:10, // number of instances: 10
+        /// InstanceChargeType:"PostPaid", // pay-as-you-go billing method
+        /// SpotStrategy:"NoSpot" // default value: normal pay-as-you-go
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example: Create 20 spot instances with a bidding policy and protection period</summary>
+        /// <summary>Example: Create 20 spot instances with a bidding policy and retention period</summary>
         /// ```
-        /// Amount:20, // Create 20 instances
+        /// Amount:20, // number of instances: 20
         /// InstanceChargeType:"PostPaid",
-        /// SpotStrategy:"SpotAsPriceGo", // Automatically bid based on the current marketplace price
-        /// SpotDuration:1 // Set the protection period to 1 hour
+        /// SpotStrategy:"SpotAsPriceGo", // bidding policy: automatically bid at the current marketplace price
+        /// SpotDuration:1 // spot instance retention period: 1 hour
         /// ```
         /// </details>
-        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use the template to create ECS instances in the China (Hangzhou) region. Example:
+        /// Suppose you have already created a launch template using [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use it to create ECS instances in the China (Hangzhou) region. The example is as follows:
         /// <details>
-        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// <summary>Example: Create 10 ECS instances from a launch template</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// Amount:10, // Create 10 instances
-        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // Set the launch template ID
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// Amount:10, // number of instances: 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // launch template ID
         /// ```
         /// </details>
-        /// >Notice: When both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, the created instances are pay-as-you-go instances.
+        /// >Notice: If both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the template uses subscription billing but `InstanceChargeType` is set to `PostPaid`, the created instances use the pay-as-you-go billing method.
         /// <details>
-        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains system and data disks)</summary>
+        /// <summary>Example: Create 1 instance using a full image (an ECS instance backup that includes both the system disk and data disks)</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// ImageId = m-bp13ohd32cvzpq9e****, // Custom image ID
-        /// InstanceType = ecs.u1-c1m1.large, // Instance type
-        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****, // Security group ID
-        /// VSwitchId = vsw-bp19wo63nleroq22g****, // vSwitch ID
-        /// SystemDisk.Size = 50, // Set the size of the system disk included in the full image
-        /// SystemDisk.Category = cloud_auto, // Set the category of the system disk included in the full image
-        /// DataDisk.1.Device = /dev/xvdb, // Set the attach point of the data disk included in the full image
-        /// DataDisk.1.Size = 50, // Set the size of the data disk included in the full image
-        /// DataDisk.1.Category = cloud_essd, // Set the category of the data disk included in the full image
-        /// DataDisk.2.Device = /dev/xvdc, // Attach point of the new data disk. To replace the data disk included in the full image with a new data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
-        /// DataDisk.2.Size = 70, // Size of the new data disk
-        /// DataDisk.2.Category = cloud_auto, // Category of the new data disk
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****,// custom image ID
+        /// InstanceType = ecs.u1-c1m1.large,// instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****,// security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****,// vSwitch ID
+        /// SystemDisk.Size = 50,// system disk size included in the full image
+        /// SystemDisk.Category = cloud_auto,// disk type of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb,// attach point of the data disk included in the full image
+        /// DataDisk.1.Size = 50,// size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd,// disk type of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc,// attach point of the additional data disk. To replace the data disk included in the full image with the additional data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
+        /// DataDisk.2.Size = 70,// size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto,// disk type of the additional data disk
         /// ```
         /// </details>
         /// </description>
@@ -87533,117 +87597,117 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates ECS instances in batches with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
+        /// <para>Creates multiple ECS instances in a batch, with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Creating instances incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
-        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
-        /// This is an asynchronous operation. After the instance creation request is sent, the instance IDs are returned. The instances are not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instances are created and started.</para>
+        /// Creating instances incurs charges. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure you understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This operation is asynchronous. After a successful request, the instance IDs are returned. The instances are not created and started immediately. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the status returned is <c>Running</c>, the instances are created and started successfully.</para>
         /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that your account has passed real-name registration. For more information, refer to <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
-        /// <item><description>When the resource inventory is insufficient to create the instances, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, refer to <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
-        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, visit <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
-        /// <item><description>Before creating VPC-type instances, create a VPC in the corresponding Alibaba Cloud region by calling <a href="https://help.aliyun.com/document_detail/65430.html">CreateVpc</a>.</description></item>
+        /// <item><description>Make sure your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration documentation</a>.</description></item>
+        /// <item><description>If resources are insufficient to complete the instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check for instance creation failure events. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
+        /// <item><description>Make sure the total number of instances you create or the total number of vCPUs across all instance types does not exceed your quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before creating a VPC-type ECS instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your available coupon is used by default during payment.</description></item>
-        /// <item><description>A single request can create up to 100 instances. To create more than 100 instances, submit requests in batches or invoke them concurrently.</description></item>
-        /// <item><description>If the value of the <c>InternetMaxBandwidthOut</c> parameter is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
-        /// <para>In a single region, the total peak public bandwidth billed on a pay-by-bandwidth basis for a single Alibaba Cloud account is subject to limits. For more information, refer to <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
+        /// <item><description>If the billing method is subscription (<c>PrePaid</c>), available coupons are applied by default during payment.</description></item>
+        /// <item><description>A single request can create up to 100 instances. If you need to create more than 100 instances, submit multiple requests in batches or concurrently.</description></item>
+        /// <item><description>If the value of <c>InternetMaxBandwidthOut</c> is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
+        /// <para>The total peak outbound public bandwidth for pay-by-bandwidth instances under a single Alibaba Cloud account in a single region is subject to limits. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Suggestions</h3>
+        /// <h3>Recommendations</h3>
         /// <list type="bullet">
-        /// <item><description><b>Test scenarios</b>: Send a dry run request by Settings <c>DryRun=true</c>.</description></item>
-        /// <item><description><b>Release instances</b>: Set the automatic release time by using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
-        /// <item><description><b>Management and retrieve</b>: Specify tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) for each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</description></item>
-        /// <item><description><b>Launch templates</b>: Use launch templates to avoid specifying a large number of configuration parameters each time you create instances. Create a launch template by invoking <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a>, and then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request.</description></item>
-        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive scenarios, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and increase the memory-to-vCPU ratio.</description></item>
-        /// <item><description><b>Enable jumbo frames</b>: Specify <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute when creating instances. For more information, refer to <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
+        /// <item><description><b>Test scenarios</b>: Send a dry run request by setting <c>DryRun=true</c>.</description></item>
+        /// <item><description><b>Release instances</b>: Set the automatic release time using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
+        /// <item><description><b>Management and retrieval</b>: Assign tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) to each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</description></item>
+        /// <item><description><b>Launch templates</b>: Use a launch template to avoid specifying a large number of configuration parameters each time you create an instance. Invoke <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> to create a launch template, then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request to use the template.</description></item>
+        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive workloads, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and improve the memory-to-CPU ratio.</description></item>
+        /// <item><description><b>Enable jumbo frames</b>: Set <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute at instance creation. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
         /// </list>
         /// <h2>Request examples</h2>
-        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, allocate public IP addresses, and set instance names and passwords. The relevant request parameters are as follows:</para>
-        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // Set the China (Hangzhou) region
-        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // Set the image ID
-        /// InstanceType:&quot;ecs.g7.large&quot;, // Set the instance type
-        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // Set the security group ID
-        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // Set the vSwitch ID
+        /// <para>Suppose you want to create ECS instances in the China (Hangzhou) region using a specific image, instance type, security group, and vSwitch, with a configured system disk and data disk, a public IP address, and a specified instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, // instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // vSwitch ID
         /// SystemDisk:{
-        ///   Category:&quot;cloud_essd&quot;, // Set the system disk category to enterprise SSD
-        ///   Size:40, // Set the system disk size to 40 GiB
+        ///   Category:&quot;cloud_essd&quot;, // system disk type: enterprise SSD
+        ///   Size:40, // system disk size: 40 GiB
         /// },
         /// DataDisk:[
         ///   {
-        ///     Category:&quot;cloud_essd&quot;, // Set the data disk category to enterprise SSD
-        ///     Size:100, // Set the data disk size to 100 GiB
+        ///     Category:&quot;cloud_essd&quot;, // data disk type: enterprise SSD
+        ///     Size:100, // data disk size: 100 GiB
         ///   }
         /// ],
-        /// HostName:&quot;ECS-test&quot;, // Set the instance hostname
-        /// Password:&quot;ECS@test1234&quot;, // Set the instance logon password
-        /// InternetMaxBandwidthOut:10 // Set the outbound public bandwidth to 10 Mbit/s
+        /// HostName:&quot;ECS-test&quot;, // instance hostname
+        /// Password:&quot;ECS@test1234&quot;, // instance logon password
+        /// InternetMaxBandwidthOut:10 // outbound public bandwidth: 10 Mbit/s
         /// </c></pre>
-        /// <para>Based on the preceding configurations, create different types of instances:</para>
+        /// <para>Based on the above configuration, create different types of instances:</para>
         /// <details>
-        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// <summary>Example: Create 5 subscription instances with auto-renewal</summary>
         /// ```
-        /// Amount:5, // Create 5 instances
-        /// InstanceChargeType:"PrePaid", // Subscription billing method
-        /// PeriodUnit:"Month", // Set the unit to month
-        /// Period:1, // Set the duration to 1 month
-        /// AutoRenew:true, // Enable auto-renewal
-        /// AutoRenewPeriod:1 // Set the auto-renewal period to 1 month
+        /// Amount:5, // number of instances: 5
+        /// InstanceChargeType:"PrePaid", // subscription billing method
+        /// PeriodUnit:"Month", // billing unit: month
+        /// Period:1, // billing period: 1 month
+        /// AutoRenew:true, // enable auto-renewal
+        /// AutoRenewPeriod:1 // renewal period: 1 month
         /// ```
         /// </details>
         /// <details>
         /// <summary>Example: Create 10 pay-as-you-go instances</summary>
         /// ```
-        /// Amount:10, // Create 10 instances
-        /// InstanceChargeType:"PostPaid", // Pay-as-you-go billing method
-        /// SpotStrategy:"NoSpot" // Default value, Normal pay-as-you-go
+        /// Amount:10, // number of instances: 10
+        /// InstanceChargeType:"PostPaid", // pay-as-you-go billing method
+        /// SpotStrategy:"NoSpot" // default value: normal pay-as-you-go
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example: Create 20 spot instances with a bidding policy and protection period</summary>
+        /// <summary>Example: Create 20 spot instances with a bidding policy and retention period</summary>
         /// ```
-        /// Amount:20, // Create 20 instances
+        /// Amount:20, // number of instances: 20
         /// InstanceChargeType:"PostPaid",
-        /// SpotStrategy:"SpotAsPriceGo", // Automatically bid based on the current marketplace price
-        /// SpotDuration:1 // Set the protection period to 1 hour
+        /// SpotStrategy:"SpotAsPriceGo", // bidding policy: automatically bid at the current marketplace price
+        /// SpotDuration:1 // spot instance retention period: 1 hour
         /// ```
         /// </details>
-        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use the template to create ECS instances in the China (Hangzhou) region. Example:
+        /// Suppose you have already created a launch template using [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use it to create ECS instances in the China (Hangzhou) region. The example is as follows:
         /// <details>
-        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// <summary>Example: Create 10 ECS instances from a launch template</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// Amount:10, // Create 10 instances
-        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // Set the launch template ID
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// Amount:10, // number of instances: 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // launch template ID
         /// ```
         /// </details>
-        /// >Notice: When both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, the created instances are pay-as-you-go instances.
+        /// >Notice: If both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the template uses subscription billing but `InstanceChargeType` is set to `PostPaid`, the created instances use the pay-as-you-go billing method.
         /// <details>
-        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains system and data disks)</summary>
+        /// <summary>Example: Create 1 instance using a full image (an ECS instance backup that includes both the system disk and data disks)</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// ImageId = m-bp13ohd32cvzpq9e****, // Custom image ID
-        /// InstanceType = ecs.u1-c1m1.large, // Instance type
-        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****, // Security group ID
-        /// VSwitchId = vsw-bp19wo63nleroq22g****, // vSwitch ID
-        /// SystemDisk.Size = 50, // Set the size of the system disk included in the full image
-        /// SystemDisk.Category = cloud_auto, // Set the category of the system disk included in the full image
-        /// DataDisk.1.Device = /dev/xvdb, // Set the attach point of the data disk included in the full image
-        /// DataDisk.1.Size = 50, // Set the size of the data disk included in the full image
-        /// DataDisk.1.Category = cloud_essd, // Set the category of the data disk included in the full image
-        /// DataDisk.2.Device = /dev/xvdc, // Attach point of the new data disk. To replace the data disk included in the full image with a new data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
-        /// DataDisk.2.Size = 70, // Size of the new data disk
-        /// DataDisk.2.Category = cloud_auto, // Category of the new data disk
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****,// custom image ID
+        /// InstanceType = ecs.u1-c1m1.large,// instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****,// security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****,// vSwitch ID
+        /// SystemDisk.Size = 50,// system disk size included in the full image
+        /// SystemDisk.Category = cloud_auto,// disk type of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb,// attach point of the data disk included in the full image
+        /// DataDisk.1.Size = 50,// size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd,// disk type of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc,// attach point of the additional data disk. To replace the data disk included in the full image with the additional data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
+        /// DataDisk.2.Size = 70,// size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto,// disk type of the additional data disk
         /// ```
         /// </details>
         /// </description>
@@ -87663,117 +87727,117 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates ECS instances in batches with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
+        /// <para>Creates multiple ECS instances in a batch, with support for automatic startup, public IP address assignment, and automatic release time configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Creating instances incurs fees. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
-        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
-        /// This is an asynchronous operation. After the instance creation request is sent, the instance IDs are returned. The instances are not immediately created and started. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query instance information. When the returned status is <c>Running</c>, the instances are created and started.</para>
+        /// Creating instances incurs charges. Billable items include <a href="https://help.aliyun.com/document_detail/25398.html">instance types</a>, <a href="https://help.aliyun.com/document_detail/179021.html">images</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before using this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of ECS.
+        /// &lt;props=&quot;intl&quot;&gt;Before using this operation, make sure you understand the billing methods and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS.
+        /// This operation is asynchronous. After a successful request, the instance IDs are returned. The instances are not created and started immediately. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the status returned is <c>Running</c>, the instances are created and started successfully.</para>
         /// <h3>Before you begin</h3>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Make sure that your account has passed real-name registration. For more information, refer to <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration</a>.</description></item>
-        /// <item><description>When the resource inventory is insufficient to create the instances, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check whether an instance creation failure event exists. For more information, refer to <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
-        /// <item><description>Make sure that the total number of instances you create or the total vCPUs across all instance types does not exceed the system quota. For more information, visit <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
-        /// <item><description>Before creating VPC-type instances, create a VPC in the corresponding Alibaba Cloud region by calling <a href="https://help.aliyun.com/document_detail/65430.html">CreateVpc</a>.</description></item>
+        /// <item><description>Make sure your account has completed real-name registration. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Real-name registration documentation</a>.</description></item>
+        /// <item><description>If resources are insufficient to complete the instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> to check for instance creation failure events. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">Instance creation failure events</a>.</description></item>
+        /// <item><description>Make sure the total number of instances you create or the total number of vCPUs across all instance types does not exceed your quota. For more information, see <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a>.</description></item>
+        /// <item><description>Before creating a VPC-type ECS instance, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the corresponding Alibaba Cloud region.</description></item>
         /// </list>
         /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description>If the billing method of the instance is subscription (<c>PrePaid</c>), your available coupon is used by default during payment.</description></item>
-        /// <item><description>A single request can create up to 100 instances. To create more than 100 instances, submit requests in batches or invoke them concurrently.</description></item>
-        /// <item><description>If the value of the <c>InternetMaxBandwidthOut</c> parameter is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
-        /// <para>In a single region, the total peak public bandwidth billed on a pay-by-bandwidth basis for a single Alibaba Cloud account is subject to limits. For more information, refer to <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
+        /// <item><description>If the billing method is subscription (<c>PrePaid</c>), available coupons are applied by default during payment.</description></item>
+        /// <item><description>A single request can create up to 100 instances. If you need to create more than 100 instances, submit multiple requests in batches or concurrently.</description></item>
+        /// <item><description>If the value of <c>InternetMaxBandwidthOut</c> is greater than 0, a public IP address is automatically allocated to the instance.<remarks>
+        /// <para>The total peak outbound public bandwidth for pay-by-bandwidth instances under a single Alibaba Cloud account in a single region is subject to limits. For more information, see <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Suggestions</h3>
+        /// <h3>Recommendations</h3>
         /// <list type="bullet">
-        /// <item><description><b>Test scenarios</b>: Send a dry run request by Settings <c>DryRun=true</c>.</description></item>
-        /// <item><description><b>Release instances</b>: Set the automatic release time by using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
-        /// <item><description><b>Management and retrieve</b>: Specify tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) for each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, refer to <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for instances</a>.</description></item>
-        /// <item><description><b>Launch templates</b>: Use launch templates to avoid specifying a large number of configuration parameters each time you create instances. Create a launch template by invoking <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a>, and then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request.</description></item>
-        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive scenarios, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and increase the memory-to-vCPU ratio.</description></item>
-        /// <item><description><b>Enable jumbo frames</b>: Specify <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute when creating instances. For more information, refer to <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
+        /// <item><description><b>Test scenarios</b>: Send a dry run request by setting <c>DryRun=true</c>.</description></item>
+        /// <item><description><b>Release instances</b>: Set the automatic release time using the <c>AutoReleaseTime</c> parameter, or invoke <a href="https://help.aliyun.com/document_detail/2679710.html">DeleteInstances</a> for manual release.</description></item>
+        /// <item><description><b>Management and retrieval</b>: Assign tags (<c>Tag.N.Key</c> and <c>Tag.N.Value</c>) to each batch of instances, and add sequential suffixes (<c>UniqueSuffix</c>) to hostnames (<c>HostName</c>) and instance names (<c>InstanceName</c>). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Set sequential instance names or hostnames in batch</a>.</description></item>
+        /// <item><description><b>Launch templates</b>: Use a launch template to avoid specifying a large number of configuration parameters each time you create an instance. Invoke <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> to create a launch template, then specify <c>LaunchTemplateId</c> and <c>LaunchTemplateVersion</c> in the <c>RunInstances</c> request to use the template.</description></item>
+        /// <item><description><b>Disable hyper-threading</b>: In memory-intensive workloads, set <c>CpuOptions.ThreadsPerCore=1</c> to disable hyper-threading and improve the memory-to-CPU ratio.</description></item>
+        /// <item><description><b>Enable jumbo frames</b>: Set <c>NetworkOptions.EnableJumboFrame=true</c> to enable the <c>Jumbo frame</c> attribute at instance creation. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">ECS instance MTU</a>.</description></item>
         /// </list>
         /// <h2>Request examples</h2>
-        /// <para>Assume that you want to create ECS instances in the China (Hangzhou) region. You want to use a specific image, instance type, security group, and vSwitch, configure system and data disks with specific capacities, allocate public IP addresses, and set instance names and passwords. The relevant request parameters are as follows:</para>
-        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // Set the China (Hangzhou) region
-        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // Set the image ID
-        /// InstanceType:&quot;ecs.g7.large&quot;, // Set the instance type
-        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // Set the security group ID
-        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // Set the vSwitch ID
+        /// <para>Suppose you want to create ECS instances in the China (Hangzhou) region using a specific image, instance type, security group, and vSwitch, with a configured system disk and data disk, a public IP address, and a specified instance name and password. The relevant request parameters are as follows:</para>
+        /// <pre><c>RegionId:&quot;cn-hangzhou&quot;, // China (Hangzhou) region
+        /// ImageId:&quot;aliyun_3_x64_20G_alibase_20221102.vhd&quot;, // image ID
+        /// InstanceType:&quot;ecs.g7.large&quot;, // instance type
+        /// SecurityGroupId:&quot;sg-bp150uqocpf9jj70****&quot;, // security group ID
+        /// VSwitchId:&quot;vsw-bp1qo7s91cbch5i4l****&quot;, // vSwitch ID
         /// SystemDisk:{
-        ///   Category:&quot;cloud_essd&quot;, // Set the system disk category to enterprise SSD
-        ///   Size:40, // Set the system disk size to 40 GiB
+        ///   Category:&quot;cloud_essd&quot;, // system disk type: enterprise SSD
+        ///   Size:40, // system disk size: 40 GiB
         /// },
         /// DataDisk:[
         ///   {
-        ///     Category:&quot;cloud_essd&quot;, // Set the data disk category to enterprise SSD
-        ///     Size:100, // Set the data disk size to 100 GiB
+        ///     Category:&quot;cloud_essd&quot;, // data disk type: enterprise SSD
+        ///     Size:100, // data disk size: 100 GiB
         ///   }
         /// ],
-        /// HostName:&quot;ECS-test&quot;, // Set the instance hostname
-        /// Password:&quot;ECS@test1234&quot;, // Set the instance logon password
-        /// InternetMaxBandwidthOut:10 // Set the outbound public bandwidth to 10 Mbit/s
+        /// HostName:&quot;ECS-test&quot;, // instance hostname
+        /// Password:&quot;ECS@test1234&quot;, // instance logon password
+        /// InternetMaxBandwidthOut:10 // outbound public bandwidth: 10 Mbit/s
         /// </c></pre>
-        /// <para>Based on the preceding configurations, create different types of instances:</para>
+        /// <para>Based on the above configuration, create different types of instances:</para>
         /// <details>
-        /// <summary>Example: Create five subscription instances with auto-renewal enabled</summary>
+        /// <summary>Example: Create 5 subscription instances with auto-renewal</summary>
         /// ```
-        /// Amount:5, // Create 5 instances
-        /// InstanceChargeType:"PrePaid", // Subscription billing method
-        /// PeriodUnit:"Month", // Set the unit to month
-        /// Period:1, // Set the duration to 1 month
-        /// AutoRenew:true, // Enable auto-renewal
-        /// AutoRenewPeriod:1 // Set the auto-renewal period to 1 month
+        /// Amount:5, // number of instances: 5
+        /// InstanceChargeType:"PrePaid", // subscription billing method
+        /// PeriodUnit:"Month", // billing unit: month
+        /// Period:1, // billing period: 1 month
+        /// AutoRenew:true, // enable auto-renewal
+        /// AutoRenewPeriod:1 // renewal period: 1 month
         /// ```
         /// </details>
         /// <details>
         /// <summary>Example: Create 10 pay-as-you-go instances</summary>
         /// ```
-        /// Amount:10, // Create 10 instances
-        /// InstanceChargeType:"PostPaid", // Pay-as-you-go billing method
-        /// SpotStrategy:"NoSpot" // Default value, Normal pay-as-you-go
+        /// Amount:10, // number of instances: 10
+        /// InstanceChargeType:"PostPaid", // pay-as-you-go billing method
+        /// SpotStrategy:"NoSpot" // default value: normal pay-as-you-go
         /// ```
         /// </details>
         /// <details>
-        /// <summary>Example: Create 20 spot instances with a bidding policy and protection period</summary>
+        /// <summary>Example: Create 20 spot instances with a bidding policy and retention period</summary>
         /// ```
-        /// Amount:20, // Create 20 instances
+        /// Amount:20, // number of instances: 20
         /// InstanceChargeType:"PostPaid",
-        /// SpotStrategy:"SpotAsPriceGo", // Automatically bid based on the current marketplace price
-        /// SpotDuration:1 // Set the protection period to 1 hour
+        /// SpotStrategy:"SpotAsPriceGo", // bidding policy: automatically bid at the current marketplace price
+        /// SpotDuration:1 // spot instance retention period: 1 hour
         /// ```
         /// </details>
-        /// Assume that you have created a launch template by calling [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use the template to create ECS instances in the China (Hangzhou) region. Example:
+        /// Suppose you have already created a launch template using [CreateLaunchTemplate](https://help.aliyun.com/document_detail/2679729.html) and want to use it to create ECS instances in the China (Hangzhou) region. The example is as follows:
         /// <details>
-        /// <summary>Example: Create 10 ECS instances based on a launch template</summary>
+        /// <summary>Example: Create 10 ECS instances from a launch template</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// Amount:10, // Create 10 instances
-        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // Set the launch template ID
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// Amount:10, // number of instances: 10
+        /// LaunchTemplateId:"lt-bp14xczpoxvb6rre****" // launch template ID
         /// ```
         /// </details>
-        /// >Notice: When both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the billing method in the template is subscription but `InstanceChargeType` is set to `PostPaid`, the created instances are pay-as-you-go instances.
+        /// >Notice: If both instance parameters and template parameters are specified, the instance parameters take precedence. For example, if the template uses subscription billing but `InstanceChargeType` is set to `PostPaid`, the created instances use the pay-as-you-go billing method.
         /// <details>
-        /// <summary>Example: Create one instance by using a full image (a whole-machine image that contains system and data disks)</summary>
+        /// <summary>Example: Create 1 instance using a full image (an ECS instance backup that includes both the system disk and data disks)</summary>
         /// ```
-        /// RegionId:"cn-hangzhou", // Set the China (Hangzhou) region
-        /// ImageId = m-bp13ohd32cvzpq9e****, // Custom image ID
-        /// InstanceType = ecs.u1-c1m1.large, // Instance type
-        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****, // Security group ID
-        /// VSwitchId = vsw-bp19wo63nleroq22g****, // vSwitch ID
-        /// SystemDisk.Size = 50, // Set the size of the system disk included in the full image
-        /// SystemDisk.Category = cloud_auto, // Set the category of the system disk included in the full image
-        /// DataDisk.1.Device = /dev/xvdb, // Set the attach point of the data disk included in the full image
-        /// DataDisk.1.Size = 50, // Set the size of the data disk included in the full image
-        /// DataDisk.1.Category = cloud_essd, // Set the category of the data disk included in the full image
-        /// DataDisk.2.Device = /dev/xvdc, // Attach point of the new data disk. To replace the data disk included in the full image with a new data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
-        /// DataDisk.2.Size = 70, // Size of the new data disk
-        /// DataDisk.2.Category = cloud_auto, // Category of the new data disk
+        /// RegionId:"cn-hangzhou", // China (Hangzhou) region
+        /// ImageId = m-bp13ohd32cvzpq9e****,// custom image ID
+        /// InstanceType = ecs.u1-c1m1.large,// instance type
+        /// SecurityGroupId = sg-bp10jztp6b0sdsyl****,// security group ID
+        /// VSwitchId = vsw-bp19wo63nleroq22g****,// vSwitch ID
+        /// SystemDisk.Size = 50,// system disk size included in the full image
+        /// SystemDisk.Category = cloud_auto,// disk type of the system disk included in the full image
+        /// DataDisk.1.Device = /dev/xvdb,// attach point of the data disk included in the full image
+        /// DataDisk.1.Size = 50,// size of the data disk included in the full image
+        /// DataDisk.1.Category = cloud_essd,// disk type of the data disk included in the full image
+        /// DataDisk.2.Device = /dev/xvdc,// attach point of the additional data disk. To replace the data disk included in the full image with the additional data disk, set DataDisk.1.Device = /dev/xvdb (the default attach point of the data disk in the full image).
+        /// DataDisk.2.Size = 70,// size of the additional data disk
+        /// DataDisk.2.Category = cloud_auto,// disk type of the additional data disk
         /// ```
         /// </details>
         /// </description>
@@ -89305,16 +89369,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an Elastic Compute Service (ECS) instance. You can specify the stop method, stop mode, and batch operation mode.</para>
+        /// <para>Stops an ECS instance. You can choose different shutdown methods, stop modes, and batch operation modes to stop the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The ECS instance is not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This operation is asynchronous. The instance is not stopped immediately. After a successful call, the instance first enters the Stopping state. You can invoke <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped successfully.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
-        /// <item><description>After you enable the economical mode for instances in a VPC, you can set <c>StoppedMode=KeepCharging</c> to enable the standard stop mode. The ECS instance continues billing after it is stopped, and the ECS instance type inventory and public IP address are retained.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by invoking this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Effects of resource security lock on API calls</a>.</description></item>
+        /// <item><description>After you enable the economical mode for instances in a VPC, you can configure <c>StoppedMode=KeepCharging</c> in Settings to enable the standard stop mode. After the ECS instance is stopped, billing continues, and the ECS instance type inventory and Internet IP address are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89393,16 +89457,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an Elastic Compute Service (ECS) instance. You can specify the stop method, stop mode, and batch operation mode.</para>
+        /// <para>Stops an ECS instance. You can choose different shutdown methods, stop modes, and batch operation modes to stop the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The ECS instance is not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This operation is asynchronous. The instance is not stopped immediately. After a successful call, the instance first enters the Stopping state. You can invoke <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped successfully.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
-        /// <item><description>After you enable the economical mode for instances in a VPC, you can set <c>StoppedMode=KeepCharging</c> to enable the standard stop mode. The ECS instance continues billing after it is stopped, and the ECS instance type inventory and public IP address are retained.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by invoking this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Effects of resource security lock on API calls</a>.</description></item>
+        /// <item><description>After you enable the economical mode for instances in a VPC, you can configure <c>StoppedMode=KeepCharging</c> in Settings to enable the standard stop mode. After the ECS instance is stopped, billing continues, and the ECS instance type inventory and Internet IP address are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89481,16 +89545,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an Elastic Compute Service (ECS) instance. You can specify the stop method, stop mode, and batch operation mode.</para>
+        /// <para>Stops an ECS instance. You can choose different shutdown methods, stop modes, and batch operation modes to stop the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The ECS instance is not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This operation is asynchronous. The instance is not stopped immediately. After a successful call, the instance first enters the Stopping state. You can invoke <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped successfully.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
-        /// <item><description>After you enable the economical mode for instances in a VPC, you can set <c>StoppedMode=KeepCharging</c> to enable the standard stop mode. The ECS instance continues billing after it is stopped, and the ECS instance type inventory and public IP address are retained.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by invoking this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Effects of resource security lock on API calls</a>.</description></item>
+        /// <item><description>After you enable the economical mode for instances in a VPC, you can configure <c>StoppedMode=KeepCharging</c> in Settings to enable the standard stop mode. After the ECS instance is stopped, billing continues, and the ECS instance type inventory and Internet IP address are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -89509,16 +89573,16 @@ namespace AlibabaCloud.SDK.Ecs20140526
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an Elastic Compute Service (ECS) instance. You can specify the stop method, stop mode, and batch operation mode.</para>
+        /// <para>Stops an ECS instance. You can choose different shutdown methods, stop modes, and batch operation modes to stop the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is an asynchronous operation. The ECS instance is not stopped immediately after a successful call. After the call succeeds, the instance enters the Stopping state. You can call <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped.</para>
+        /// <para>This operation is asynchronous. The instance is not stopped immediately. After a successful call, the instance first enters the Stopping state. You can invoke <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> to query the instance status. When the returned status is <c>Stopped</c>, the instance is stopped successfully.</para>
         /// <h3>Before you begin</h3>
         /// <list type="bullet">
-        /// <item><description>Instances that are locked for security reasons cannot be stopped by calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Impact of resource security locks on API calls</a>.</description></item>
-        /// <item><description>After you enable the economical mode for instances in a VPC, you can set <c>StoppedMode=KeepCharging</c> to enable the standard stop mode. The ECS instance continues billing after it is stopped, and the ECS instance type inventory and public IP address are retained.</description></item>
+        /// <item><description>Instances that are locked for security reasons cannot be stopped by invoking this operation. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">Effects of resource security lock on API calls</a>.</description></item>
+        /// <item><description>After you enable the economical mode for instances in a VPC, you can configure <c>StoppedMode=KeepCharging</c> in Settings to enable the standard stop mode. After the ECS instance is stopped, billing continues, and the ECS instance type inventory and Internet IP address are retained.</description></item>
         /// </list>
         /// </description>
         /// 

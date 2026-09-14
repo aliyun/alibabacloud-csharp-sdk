@@ -1,3 +1,7 @@
+2026-09-14 Version: 7.11.5
+- Update API CreateSimulatedSystemEvents: add request parameters TriggerRealOps.
+
+
 2026-09-10 Version: 7.11.4
 - Update API CreateInstance: add request parameters ManagedHostId.
 - Update API DescribeInstances: add response parameters Body.Instances.$.AdditionalInfo.ManagedHostId.
