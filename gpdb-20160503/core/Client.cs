@@ -57,30 +57,6 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 {"cn-zhengzhou-nebula-1", "gpdb.aliyuncs.com"},
                 {"eu-west-1-oxs", "gpdb.aliyuncs.com"},
                 {"rus-west-1-pop", "gpdb.aliyuncs.com"},
-                {"cn-wulanchabu", "gpdb.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "gpdb.cn-beijing.aliyuncs.com"},
-                {"cn-qingdao", "gpdb.cn-qingdao.aliyuncs.com"},
-                {"cn-shanghai", "gpdb.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "gpdb.cn-hongkong.aliyuncs.com"},
-                {"cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-shenzhen", "gpdb.cn-shenzhen.aliyuncs.com"},
-                {"ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"},
-                {"ap-southeast-1", "gpdb.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"},
-                {"cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"},
-                {"ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"},
-                {"us-east-1", "gpdb.us-east-1.aliyuncs.com"},
-                {"eu-west-1", "gpdb.eu-west-1.aliyuncs.com"},
-                {"us-west-1", "gpdb.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "gpdb.eu-central-1.aliyuncs.com"},
-                {"me-east-1", "gpdb.me-east-1.aliyuncs.com"},
-                {"me-central-1", "gpdb.me-central-1.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "gpdb.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "gpdb.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-north-2-gov-1", "gpdb.cn-north-2-gov-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -41221,6 +41197,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["AutoScale"] = request.AutoScale;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeHours))
+            {
+                query["IdleTimeHours"] = request.IdleTimeHours;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
                 query["ProjectId"] = request.ProjectId;
@@ -41277,6 +41257,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
             {
                 query["AutoScale"] = request.AutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleTimeHours))
+            {
+                query["IdleTimeHours"] = request.IdleTimeHours;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -44573,12 +44557,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a Supabase database</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44598,6 +44582,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
             {
                 query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardPassword))
+            {
+                query["DashboardPassword"] = request.DashboardPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -44628,12 +44616,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a Supabase database</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44653,6 +44641,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
             {
                 query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardPassword))
+            {
+                query["DashboardPassword"] = request.DashboardPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
             {
@@ -44683,12 +44675,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a Supabase database</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -44706,12 +44698,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reset the password of a Supabase database</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this API to reset the password of the Supabase database.</para>
+        /// <para>Resets the password of a Supabase database.</para>
         /// </description>
         /// 
         /// <param name="request">

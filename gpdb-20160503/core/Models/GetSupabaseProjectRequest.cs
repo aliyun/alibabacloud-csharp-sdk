@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The Supabase instance ID. You can obtain this value from the Supabase page in the console.</para>
+        /// <para>The Supabase instance ID. You can obtain the ID from the Supabase page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The password of the database account.</para>
         /// <list type="bullet">
         /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></description></item>
+        /// <item><description>The following special characters are supported: <c>!@#$%^&amp;*()_+-=</c></description></item>
         /// <item><description>The password must be 8 to 32 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -25,8 +25,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        [NameInMap("DashboardPassword")]
+        [Validation(Required=false)]
+        public string DashboardPassword { get; set; }
+
         /// <summary>
-        /// <para>Supabase Instance ID</para>
+        /// <para>The Supabase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

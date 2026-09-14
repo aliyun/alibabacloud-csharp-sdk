@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public bool? AutoScale { get; set; }
 
+        [NameInMap("IdleTimeHours")]
+        [Validation(Required=false)]
+        public string IdleTimeHours { get; set; }
+
         /// <summary>
         /// <para>The ID of the Supabase project. You can obtain the workspace ID from the Supabase page in the console.</para>
         /// <para>This parameter is required.</para>

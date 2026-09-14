@@ -10,10 +10,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether <b>auto start/stop</b> is enabled. Valid values:</para>
+        /// <b>Example:</b>
+        /// <para>0.5</para>
+        /// </summary>
+        [NameInMap("AppliedIdleTimeHours")]
+        [Validation(Required=false)]
+        public string AppliedIdleTimeHours { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether <b>auto start and stop</b> is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled. When enabled, Supabase automatically pauses and resumes based on traffic conditions.</description></item>
-        /// <item><description>false: Disabled. When disabled, the auto start/stop feature of Supabase is turned off.</description></item>
+        /// <item><description>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</description></item>
+        /// <item><description>false: Disabled. After this feature is disabled, the auto start and stop feature of Supabase is turned off.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBSecurityIpList { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard password (not currently in use).</para>
+        /// <para>The Supabase Dashboard password. This parameter is not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxpassword</para>
@@ -54,7 +62,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard username (not currently in use).</para>
+        /// <para>The Supabase Dashboard username. This parameter is not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>username</para>
@@ -64,7 +72,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardUserName { get; set; }
 
         /// <summary>
-        /// <para>The cloud disk performance level. Valid values:</para>
+        /// <para>The performance level of the cloud disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>
@@ -88,7 +96,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The DPI engine version.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -98,7 +106,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The elastic network interfaces (ENIs) ID, which identifies the network interface controller (NIC).</para>
+        /// <para>The elastic network interface (ENI) ID. The network interface controller (NIC) ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-xxxxxx</para>
@@ -117,6 +125,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the project is a lightweight edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Lightweight")]
         [Validation(Required=false)]
         public string Lightweight { get; set; }
@@ -124,9 +138,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>POSTPAY: Pay-as-you-go.</para>
+        /// <item><description><para>POSTPAY: pay-as-you-go.</para>
         /// </description></item>
-        /// <item><description><para>PREPAY: Subscription.</para>
+        /// <item><description><para>PREPAY: subscription.</para>
         /// </description></item>
         /// </list>
         /// 

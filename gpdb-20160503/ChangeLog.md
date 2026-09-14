@@ -1,3 +1,9 @@
+2026-09-14 Version: 3.13.1
+- Update API GetSupabaseProject: add response parameters Body.AppliedIdleTimeHours.
+- Update API ModifySupabaseAutoScalePolicy: add request parameters IdleTimeHours.
+- Update API ResetSupabaseProjectPassword: add request parameters DashboardPassword.
+
+
 2026-08-27 Version: 3.13.0
 - Support API DescribeDBVersion.
 
