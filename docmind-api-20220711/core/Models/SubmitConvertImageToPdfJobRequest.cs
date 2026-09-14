@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>JPG</para>
+        /// <para>jpg</para>
         /// </summary>
         [NameInMap("ImageNameExtension")]
         [Validation(Required=false)]

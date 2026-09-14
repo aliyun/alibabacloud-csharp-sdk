@@ -105,9 +105,43 @@ namespace AlibabaCloud.SDK.Docmind_api20220711.Models
         [Validation(Required=false)]
         public SubmitDocParserJobAdvanceRequestMultimediaParameters MultimediaParameters { get; set; }
         public class SubmitDocParserJobAdvanceRequestMultimediaParameters : TeaModel {
+            [NameInMap("EnableDiarization")]
+            [Validation(Required=false)]
+            public bool? EnableDiarization { get; set; }
+
             [NameInMap("EnableSynopsisParse")]
             [Validation(Required=false)]
             public bool? EnableSynopsisParse { get; set; }
+
+            [NameInMap("EnableSynopsisSegments")]
+            [Validation(Required=false)]
+            public bool? EnableSynopsisSegments { get; set; }
+
+            [NameInMap("EnableSynopsisSummary")]
+            [Validation(Required=false)]
+            public bool? EnableSynopsisSummary { get; set; }
+
+            [NameInMap("FrameExtraction")]
+            [Validation(Required=false)]
+            public SubmitDocParserJobAdvanceRequestMultimediaParametersFrameExtraction FrameExtraction { get; set; }
+            public class SubmitDocParserJobAdvanceRequestMultimediaParametersFrameExtraction : TeaModel {
+                [NameInMap("FrameRate")]
+                [Validation(Required=false)]
+                public float? FrameRate { get; set; }
+
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("OutputImageHeight")]
+                [Validation(Required=false)]
+                public long? OutputImageHeight { get; set; }
+
+                [NameInMap("OutputImageWidth")]
+                [Validation(Required=false)]
+                public long? OutputImageWidth { get; set; }
+
+            }
 
             [NameInMap("VlParsePrompt")]
             [Validation(Required=false)]
