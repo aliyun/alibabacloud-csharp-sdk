@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostEventDisposeAndWhiteruleListRequest : TeaModel {
         /// <summary>
-        /// <para>幂等令牌。</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426614174000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of response strategy IDs.</para>
+        /// <para>The list of handling policy IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12,13,14</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string DisposeStrategyIds { get; set; }
 
         /// <summary>
-        /// <para>A JSON object that defines the incident response configuration.</para>
+        /// <para>The incident handling configuration as a JSON object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>The UID of the incident owner.</para>
+        /// <para>The account UID of the incident owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890xxxxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>A JSON object that defines the alert recipient configuration.</para>
+        /// <para>The alert recipient configuration as a JSON object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -98,12 +98,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ReceiverInfo { get; set; }
 
         /// <summary>
-        /// <para>The region where the Data Management service for threat analysis is deployed. Select a region based on where your assets are located. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Specify the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets in the Chinese mainland or Hong Kong (China)</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets outside China</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets reside in regions in the Chinese mainland or China (Hong Kong).</description></item>
+        /// <item><description>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>A note about the incident.</para>
+        /// <para>The remarks for the incident.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dealed</para>
@@ -124,7 +122,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The source of the response policy.</para>
+        /// <para>The source of the handling policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system</para>
@@ -134,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string ResponseSource { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member whose perspective an administrator switches to.</para>
+        /// <para>The ID of the user for whom the administrator switches to a member view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -146,10 +144,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Current Alibaba Cloud account view</para>
-        /// </description></item>
-        /// <item><description><para>1: View for all accounts in your enterprise</para>
-        /// </description></item>
+        /// <item><description>0: the China account view.</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,14 +158,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>The incident status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: Not handled</para>
-        /// </description></item>
-        /// <item><description><para>1: Handling</para>
-        /// </description></item>
-        /// <item><description><para>5: Failed</para>
-        /// </description></item>
-        /// <item><description><para>10: Handled</para>
-        /// </description></item>
+        /// <item><description>0: unhandled  </description></item>
+        /// <item><description>1: handling </description></item>
+        /// <item><description>5: handling failed </description></item>
+        /// <item><description>10: handled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,14 +172,18 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restore associated handled alerts to unhandled status when reopening the incident.</para>
+        /// </summary>
+        [NameInMap("SyncAlertStatus")]
+        [Validation(Required=false)]
+        public bool? SyncAlertStatus { get; set; }
+
+        /// <summary>
         /// <para>The threat level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>serious: Important</para>
-        /// </description></item>
-        /// <item><description><para>suspicious: Medium</para>
-        /// </description></item>
-        /// <item><description><para>remind: Low</para>
-        /// </description></item>
+        /// <item><description>serious: high</description></item>
+        /// <item><description>suspicious: medium</description></item>
+        /// <item><description>remind: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

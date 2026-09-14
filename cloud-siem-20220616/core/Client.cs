@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "cloud-siem.cn-shanghai.aliyuncs.com"},
-                {"ap-southeast-1", "cloud-siem.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -3260,7 +3255,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves alerts associated with a specific event.</para>
+        /// <para>Retrieves the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3374,7 +3369,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves alerts associated with a specific event.</para>
+        /// <para>Retrieves the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3488,7 +3483,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves alerts associated with a specific event.</para>
+        /// <para>Retrieves the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3506,7 +3501,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves alerts associated with a specific event.</para>
+        /// <para>Retrieves the list of alerts associated with an incident.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5848,7 +5843,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the count for each event type.</para>
+        /// <para>Retrieves the count of events by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5906,7 +5901,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the count for each event type.</para>
+        /// <para>Retrieves the count of events by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5964,7 +5959,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the count for each event type.</para>
+        /// <para>Retrieves the count of events by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5982,7 +5977,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the count for each event type.</para>
+        /// <para>Retrieves the count of events by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7528,6 +7523,142 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSiemOrderStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSiemOrderStatusResponse
+        /// </returns>
+        public DescribeUserSiemOrderStatusResponse DescribeUserSiemOrderStatusWithOptions(DescribeUserSiemOrderStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserSiemOrderStatus",
+                Version = "2022-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserSiemOrderStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSiemOrderStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSiemOrderStatusResponse
+        /// </returns>
+        public async Task<DescribeUserSiemOrderStatusResponse> DescribeUserSiemOrderStatusWithOptionsAsync(DescribeUserSiemOrderStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserSiemOrderStatus",
+                Version = "2022-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserSiemOrderStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSiemOrderStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSiemOrderStatusResponse
+        /// </returns>
+        public DescribeUserSiemOrderStatusResponse DescribeUserSiemOrderStatus(DescribeUserSiemOrderStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserSiemOrderStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the purchase status of a user\&quot;s SIEM.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserSiemOrderStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserSiemOrderStatusResponse
+        /// </returns>
+        public async Task<DescribeUserSiemOrderStatusResponse> DescribeUserSiemOrderStatusAsync(DescribeUserSiemOrderStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserSiemOrderStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the list of domain names protected by Web Application Firewall (WAF) instances.</para>
         /// </summary>
         /// 
@@ -8261,7 +8392,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8316,7 +8447,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8371,7 +8502,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8394,7 +8525,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. A utility class is provided to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13096,7 +13227,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit incident response information to update the incident status and severity level.</para>
+        /// <para>Submits incident handling information, updates the incident status, and updates the incident severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13161,6 +13292,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlertStatus))
+            {
+                body["SyncAlertStatus"] = request.SyncAlertStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreatLevel))
             {
                 body["ThreatLevel"] = request.ThreatLevel;
@@ -13186,7 +13321,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit incident response information to update the incident status and severity level.</para>
+        /// <para>Submits incident handling information, updates the incident status, and updates the incident severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13251,6 +13386,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             {
                 body["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncAlertStatus))
+            {
+                body["SyncAlertStatus"] = request.SyncAlertStatus;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreatLevel))
             {
                 body["ThreatLevel"] = request.ThreatLevel;
@@ -13276,7 +13415,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit incident response information to update the incident status and severity level.</para>
+        /// <para>Submits incident handling information, updates the incident status, and updates the incident severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13294,7 +13433,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit incident response information to update the incident status and severity level.</para>
+        /// <para>Submits incident handling information, updates the incident status, and updates the incident severity level.</para>
         /// </summary>
         /// 
         /// <param name="request">

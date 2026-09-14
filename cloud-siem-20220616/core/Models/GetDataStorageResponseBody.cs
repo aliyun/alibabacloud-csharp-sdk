@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataStorageRegionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact your product manager to reset the region. The region can be reset only once. Valid values:</para>
+            /// <para>Indicates whether the storage region can be modified. By default, the storage region cannot be modified. Contact the product manager to reset the region. The region can be reset only once. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>allow: The storage region can be modified.</description></item>
             /// <item><description>deny: The storage region cannot be modified.</description></item>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string DataStorageRegionPermission { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity purchased in the upfront billing scenario.</para>
+            /// <para>The storage capacity purchased in the prepaid scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -229,8 +229,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 /// <summary>
                 /// <para>The group to which the log belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>host: host logs.</description></item>
-                /// <item><description>security: security logs.</description></item>
+                /// <item><description>host: Host logs.</description></item>
+                /// <item><description>security: Security logs.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogDeliveryGroup { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether log delivery is allowed. Log delivery is not available if the service is not purchased. Valid values:</para>
+                /// <para>Indicates whether log delivery can be toggled. Log delivery cannot be enabled if the service is not purchased. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>allow: Allowed.</description></item>
                 /// <item><description>deny: Not allowed.</description></item>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 public string LogDeliveryStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time of the most recent log delivery operation.</para>
+                /// <para>The time when the log delivery was last modified. The time is in the YYYY-MM-DDTHH:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-16T15:10:29</para>

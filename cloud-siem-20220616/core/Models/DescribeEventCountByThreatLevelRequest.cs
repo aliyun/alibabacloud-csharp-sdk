@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class DescribeEventCountByThreatLevelRequest : TeaModel {
         /// <summary>
-        /// <para>End time of the query, in milliseconds.</para>
+        /// <para>The end time of the query, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Region where the Data Management Center for threat analysis is located. Select a region based on the location of your assets. Valid values:</para>
+        /// <para>The region where the threat analysis data management center resides. Select the management center based on the region of your assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: Assets are in the Chinese mainland or Hong Kong (China).</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: Assets are outside China.</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: Your assets belong to the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: Your assets belong to regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource directory member account ID.</para>
+        /// <para>The ID of the member account in the resource directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -46,12 +44,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>View type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: View for the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: View for all accounts in your enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? RoleType { get; set; }
 
         /// <summary>
-        /// <para>Start time of the query, in milliseconds.</para>
+        /// <para>The start time of the query, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>
