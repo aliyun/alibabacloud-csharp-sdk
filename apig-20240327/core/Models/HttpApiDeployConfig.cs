@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiDeployConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically deploy.</para>
+        /// <para>Specifies whether to automatically deploy the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? AutoDeploy { get; set; }
 
         /// <summary>
-        /// <para>The deployment scenario.</para>
+        /// <para>The publishing scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SingleService</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> CustomDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of custom domain name details.</para>
+        /// <para>The list of custom domain name information.</para>
         /// </summary>
         [NameInMap("customDomainInfos")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable gateway system models. This parameter takes effect only when the deployment scenario is AiAutoRouter. Default value: false. If enabled, built-in Qwen candidates from the platform are merged with the user\&quot;s own candidates.</para>
+        /// <para>Specifies whether to enable gateway system models. This parameter takes effect only when the publishing scenario is AiAutoRouter. Default value: false. This field is used for backward compatibility with older clients. If systemModelTiers is not submitted, true indicates that all three tiers of system models are enabled, and false indicates that all are disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> EnvDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of environment domain name details.</para>
+        /// <para>The list of environment domain name information.</para>
         /// </summary>
         [NameInMap("envDomainInfos")]
         [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }
 
         /// <summary>
-        /// <para>The current online routing mode of the REST API. ordinary indicates per-Operation routing. compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</para>
+        /// <para>The current online routing mode of the REST API. ordinary indicates per-operation routing, and compressed indicates single-prefix routing for the API. This field is not returned for non-REST APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ordinary</para>
@@ -222,6 +222,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
+            /// <summary>
+            /// <para>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>standard</para>
+            /// </summary>
+            [NameInMap("capabilityTier")]
+            [Validation(Required=false)]
+            public string CapabilityTier { get; set; }
+
             /// <summary>
             /// <para>The gateway service ID.</para>
             /// 
@@ -280,7 +290,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string MultiServiceRouteStrategy { get; set; }
 
             /// <summary>
-            /// <para>The service display name.</para>
+            /// <para>The display name of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen-Max-Service</para>
@@ -290,7 +300,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The observability metric routing configuration.</para>
+            /// <para>The observability metric-based routing configuration.</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -384,7 +394,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of subdomain contents.</para>
+        /// <para>The list of subdomain content.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]
@@ -431,6 +441,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Protocol { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, premium. An explicit empty array indicates that no system model is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</para>
+        /// </summary>
+        [NameInMap("systemModelTiers")]
+        [Validation(Required=false)]
+        public List<string> SystemModelTiers { get; set; }
 
     }
 

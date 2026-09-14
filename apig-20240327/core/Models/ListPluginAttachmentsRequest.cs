@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The plugin mount point type. This parameter is not yet enabled.</para>
+        /// <para>The plug-in mount point type. Not enabled yet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The mount point types. Separate multiple types with commas.</para>
+        /// <para>The mount point types. Separate multiple values with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GatewayRoute</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plugin ID.</para>
+        /// <para>The plug-in ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct8181um1hkiqns9f6e0</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return parent resource mounts.</para>
+        /// <para>Specifies whether to return the parent resource mount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -88,11 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>The expiration mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>LongTerm</description></item>
-                /// <item><description>ShortTerm</description></item>
-                /// </list>
+                /// <para>The expiration mode. Valid values: LongTerm, ShortTerm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -112,7 +108,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireStatus { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>

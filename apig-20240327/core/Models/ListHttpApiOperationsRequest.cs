@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHttpApiOperationsRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer authorization rule ID used to filter the operation list. The response includes only operations that are authorized by the specified rule.</para>
+        /// <para>Filters the API operation list by a specific consumer authorization rule ID. Only authorized API operations are included in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerAuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>The authentication enablement filter.</para>
+        /// <para>The authentication enable filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Lists operations by HTTP method.</para>
+        /// <para>Filters API operations by HTTP method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GET</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Method { get; set; }
 
         /// <summary>
-        /// <para>Searches for operations by exact name match.</para>
+        /// <para>Filters API operations by exact name match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>getUserInfo</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Searches for operations by name prefix.</para>
+        /// <para>Filters API operations by name prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GetUser</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The page number. Starts from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Searches for operations by path prefix match.</para>
+        /// <para>Filters API operations by path prefix match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>The environment ID. When specified together with withConsumerInfoById, the response includes the authorization rule list of the specified consumer in the specified environment for each operation.</para>
+        /// <para>Includes the authorization rule list for the specified consumer in the specified environment ID in each API operation\&quot;s information in the response. You must also specify the withConsumerInfoById field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInEnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID. When specified together with withConsumerInEnvironmentId, the response includes the authorization rule list of the specified consumer in the specified environment for each operation.</para>
+        /// <para>Includes the authorization rule list for the specified consumer in the specified environment ID in each API operation\&quot;s information in the response. You must also specify the withConsumerInEnvironmentId field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>The plugin ID used to retrieve plugin deployment information.</para>
+        /// <para>The plug-in ID. Retrieves plug-in publish information based on this plug-in ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

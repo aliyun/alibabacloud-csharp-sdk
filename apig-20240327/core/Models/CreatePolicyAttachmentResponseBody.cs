@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreatePolicyAttachmentResponseBodyData Data { get; set; }
         public class CreatePolicyAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The policy attachment ID.</para>
+            /// <para>The policy mount ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pr-cqooju5lhtgquuj6***</para>

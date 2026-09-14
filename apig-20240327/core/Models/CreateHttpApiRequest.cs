@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>The list of protocols supported by the agent. Required when type is Agent. Not required for other types.</para>
+        /// <para>The list of protocols supported by the agent. Required when type is Agent. This field is not required for other types.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
         public List<string> AgentProtocols { get; set; }
 
         /// <summary>
-        /// <para>The list of AI API protocols. Required when type is LLM, and only one protocol can be specified. Required when type is Ai, and multiple protocols can be specified. Not required for other types. Example protocol entry: OpenAI/v1.</para>
+        /// <para>The list of AI API protocols. Required when type is LLM (only one protocol allowed) or Ai (multiple protocols allowed). Not required for other types. Example protocol: OpenAI/v1.</para>
         /// </summary>
         [NameInMap("aiProtocols")]
         [Validation(Required=false)]
         public List<string> AiProtocols { get; set; }
 
         /// <summary>
-        /// <para>The authentication configuration. Required when enableAuth=true.</para>
+        /// <para>The authentication configuration. Required when enableAuth is set to true.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The API base path. Must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. Required when type=Rest. Optional when type=LLM, Ai, or Agent. Default value: /</para>
+        /// <para>The base path of the API. Must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. Required when type is Rest. Optional when type is LLM, Ai, or Agent. Defaults to /.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BelongGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of deployment configurations for the HTTP API. Required when type is LLM or Ai, and only one deployment configuration can be specified. Not validated at the request level for other types.</para>
+        /// <para>The list of deployment configurations for the HTTP API. Required when type is LLM or Ai (only one deployment configuration allowed). Not validated at the request level for other types.</para>
         /// </summary>
         [NameInMap("deployConfigs")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run without executing the operation.</para>
+        /// <para>Specifies whether to preview only without executing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for waiting for the first byte from the backend.</para>
+        /// <para>The timeout period for waiting for the backend to return the first byte.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? FirstByteTimeout { get; set; }
 
         /// <summary>
-        /// <para>The HTTP Ingress API configuration. Required when type is HttpIngress and cannot be nil. Not required for other types.</para>
+        /// <para>The HTTP Ingress API configuration. Required when type is HttpIngress and cannot be null. Not required for other types.</para>
         /// </summary>
         [NameInMap("ingressConfig")]
         [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress Class to listen on.</para>
+            /// <para>The Ingress class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in the Ingress Status.</para>
+            /// <para>Specifies whether to update the address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -173,7 +173,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The AI model category. Optional when type is LLM or Ai. Not required for other types. Valid values: Text (text generation), Image (image generation), Audio (audio processing), Video (AI video generation), MultiModal (multi-modal), Embedding (text embedding), Rerank (reranking), Others (other).</para>
+        /// <para>The AI model category. Optional when type is LLM or Ai. Not required for other types. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Text: text generation.</description></item>
+        /// <item><description>Image: image generation.</description></item>
+        /// <item><description>Audio: audio processing.</description></item>
+        /// <item><description>Video: video generation.</description></item>
+        /// <item><description>MultiModal: multimodal.</description></item>
+        /// <item><description>Embedding: vector embedding.</description></item>
+        /// <item><description>Rerank: reranking.</description></item>
+        /// <item><description>Others: others.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Text</para>
@@ -183,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the HTTP API, used to identify the current API resource. Example: test-api.</para>
+        /// <para>The name of the HTTP API, used to identify the current API resource. For example, test-api.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -221,7 +231,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The conflict merge strategy for import.</para>
+        /// <para>The conflict resolution strategy for imports.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExistFirst</para>
@@ -231,7 +241,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Strategy { get; set; }
 
         /// <summary>
-        /// <para>The HTTP API type. Valid values: Http (standard HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), Agent (Agent proxy API).</para>
+        /// <para>The HTTP API type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Http: a standard HTTP API.</description></item>
+        /// <item><description>Rest: a RESTful API.</description></item>
+        /// <item><description>WebSocket: a WebSocket API.</description></item>
+        /// <item><description>HttpIngress: an HTTP API accessed through Ingress.</description></item>
+        /// <item><description>LLM: a large language model API.</description></item>
+        /// <item><description>Agent: an Agent proxy API.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

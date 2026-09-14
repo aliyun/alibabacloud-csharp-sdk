@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerAuthorizationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The fuzzy match parameter for the API name.</para>
+        /// <para>The API name used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3</para>

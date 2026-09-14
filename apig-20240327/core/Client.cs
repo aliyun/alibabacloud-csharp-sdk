@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -298,10 +298,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -345,10 +345,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description>Step 2: Submit the rule after confirmation.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -2150,6 +2150,15 @@ namespace AlibabaCloud.SDK.APIG20240327
         public CreateConsumerResponse CreateConsumerWithOptions(CreateConsumerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AkSkIdentityConfigs))
             {
@@ -2182,6 +2191,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2220,6 +2230,15 @@ namespace AlibabaCloud.SDK.APIG20240327
         public async Task<CreateConsumerResponse> CreateConsumerWithOptionsAsync(CreateConsumerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AkSkIdentityConfigs))
             {
@@ -2252,6 +2271,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3727,7 +3747,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates operations for an HTTP API.</para>
+        /// <para>Creates an operation for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3773,7 +3793,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates operations for an HTTP API.</para>
+        /// <para>Creates an operation for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3819,7 +3839,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates operations for an HTTP API.</para>
+        /// <para>Creates an operation for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3838,7 +3858,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates operations for an HTTP API.</para>
+        /// <para>Creates an operation for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5309,7 +5329,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment to a resource.</para>
+        /// <para>Creates a policy resource mount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5371,7 +5391,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment to a resource.</para>
+        /// <para>Creates a policy resource mount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5433,7 +5453,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment to a resource.</para>
+        /// <para>Creates a policy resource mount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5452,7 +5472,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment to a resource.</para>
+        /// <para>Creates a policy resource mount.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7133,12 +7153,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule from a gateway.</para>
+        /// <para>Deletes a quota throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7178,12 +7198,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule from a gateway.</para>
+        /// <para>Deletes a quota throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7223,12 +7243,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule from a gateway.</para>
+        /// <para>Deletes a quota throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7247,12 +7267,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quota throttling rule from a gateway.</para>
+        /// <para>Deletes a quota throttling rule for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a quota rule based on an API consumer or consumer group for an AI gateway. This operation only takes effect on AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11357,7 +11377,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves HTTP API information.</para>
+        /// <para>Retrieves the information of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11403,7 +11423,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves HTTP API information.</para>
+        /// <para>Retrieves the information of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11449,7 +11469,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves HTTP API information.</para>
+        /// <para>Retrieves the information of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11468,7 +11488,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves HTTP API information.</para>
+        /// <para>Retrieves the information of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11487,7 +11507,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11523,7 +11543,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11559,7 +11579,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11574,7 +11594,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves operation information.</para>
+        /// <para>Retrieves the API operation information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13429,7 +13449,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13527,7 +13547,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13625,7 +13645,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13644,7 +13664,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. Supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14457,7 +14477,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of consumer authorization rules.</para>
+        /// <para>Retrieves a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14511,7 +14531,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of consumer authorization rules.</para>
+        /// <para>Retrieves a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14565,7 +14585,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of consumer authorization rules.</para>
+        /// <para>Retrieves a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14584,7 +14604,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of consumer authorization rules.</para>
+        /// <para>Retrieves a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18723,7 +18743,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plugin mounts.</para>
+        /// <para>Retrieves the plug-in mount list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18801,7 +18821,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plugin mounts.</para>
+        /// <para>Retrieves the plug-in mount list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18879,7 +18899,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plugin mounts.</para>
+        /// <para>Retrieves the plug-in mount list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18898,7 +18918,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of plugin mounts.</para>
+        /// <para>Retrieves the plug-in mount list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24006,7 +24026,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</para>
+        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24065,7 +24085,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</para>
+        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24124,7 +24144,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</para>
+        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24148,7 +24168,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该 API 已被 UpdateAuthorizationRule 替代，新路径为 /v1/authorization-rules/{consumerAuthorizationRuleId}</para>
+        /// <para>This API has been replaced by UpdateAuthorizationRule. The new operation path is /v1/authorization-rules/{consumerAuthorizationRuleId}. When calling the new operation, you only need to provide consumerAuthorizationRuleId in the path and the resources array in the request body. The consumerId parameter is no longer required.</para>
         /// </description>
         /// 
         /// <param name="request">

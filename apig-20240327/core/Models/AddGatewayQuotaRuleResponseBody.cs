@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AddGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class AddGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict snapshot hash.</para>
+                /// <para>The conflict hash.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -64,12 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer subject. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>day: The existing conflicting rule has a daily period.</description></item>
-                    /// <item><description>week: The existing conflicting rule has a weekly period.</description></item>
-                    /// <item><description>month: The existing conflicting rule has a monthly period.</description></item>
-                    /// </list>
+                    /// <para>The period type of the existing conflicting rule on the consumer subject. A value of day, week, or month indicates that the period of the existing conflicting rule is day, week, or month respectively.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -79,11 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer subject. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
-                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
-                    /// </list>
+                    /// <para>The type of the existing conflicting rule on the consumer subject. A value of calendar indicates that the existing conflicting rule uses a calendar period. A value of epoch indicates that the existing conflicting rule uses a custom period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -93,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The conflicting consumer ID. You can use subjectId instead.</para>
+                    /// <para>The conflicting consumer ID. Use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-xxxxxx</para>
@@ -103,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The conflicting consumer name. You can use subjectName instead.</para>
+                    /// <para>The conflicting consumer name. Use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -179,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
