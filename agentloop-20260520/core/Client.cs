@@ -5591,8 +5591,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgentSpaces.</para>
+        /// <para>Queries a list of AgentSpaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentSpacesRequest
@@ -5649,8 +5654,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgentSpaces.</para>
+        /// <para>Queries a list of AgentSpaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentSpacesRequest
@@ -5707,8 +5717,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgentSpaces.</para>
+        /// <para>Queries a list of AgentSpaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentSpacesRequest
@@ -5726,8 +5741,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of AgentSpaces.</para>
+        /// <para>Queries a list of AgentSpaces.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Supports filtering by region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAgentSpacesRequest
@@ -7465,6 +7485,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 query["scheduleType"] = request.ScheduleType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkName))
+            {
+                query["sinkName"] = request.SinkName;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7526,6 +7550,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleType))
             {
                 query["scheduleType"] = request.ScheduleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SinkName))
+            {
+                query["sinkName"] = request.SinkName;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

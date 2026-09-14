@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string ScheduleType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-dataset</para>
+        /// </summary>
+        [NameInMap("sinkName")]
+        [Validation(Required=false)]
+        public string SinkName { get; set; }
+
     }
 
 }

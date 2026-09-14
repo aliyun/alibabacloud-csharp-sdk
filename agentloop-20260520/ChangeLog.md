@@ -1,3 +1,9 @@
+2026-09-14 Version: 2.3.5
+- Update API ListPipelines: add request parameters sinkName.
+- Update API ListPipelines: add response parameters Body.pipelines.$.sink.
+- Update API ListPipelines: add response parameters Body.pipelines.$.source.
+
+
 2026-09-02 Version: 2.3.4
 - Update API ExecuteQuery: add request parameters body.annotationFilter.
 
