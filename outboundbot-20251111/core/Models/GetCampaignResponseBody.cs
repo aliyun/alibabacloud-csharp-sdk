@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public int? MinAttemptInterval { get; set; }
 
             /// <summary>
-            /// <para>The campaign name.</para>
+            /// <para>The name of the campaign.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Satisfaction Survey</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public string ScriptId { get; set; }
 
             /// <summary>
-            /// <para>The campaign state.</para>
+            /// <para>The state of the campaign.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Completed</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
             public long? UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>The campaign weight.</para>
+            /// <para>The weight of the campaign.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

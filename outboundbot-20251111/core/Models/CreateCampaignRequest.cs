@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <summary>
         /// <para>The call execution order. Default value: MIN_ATTEMPT_FIRST. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIORITY_FIRST: priority first.</description></item>
-        /// <item><description>MIN_ATTEMPT_FIRST: minimum attempt count first.</description></item>
+        /// <item><description>PRIORITY_FIRST: prioritize by priority.</description></item>
+        /// <item><description>MIN_ATTEMPT_FIRST: prioritize by minimum attempt count.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public List<CreateCampaignRequestCases> Cases { get; set; }
         public class CreateCampaignRequestCases : TeaModel {
             /// <summary>
-            /// <para>The custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. The name and value of each property are defined by the customer.</para>
+            /// <para>The custom variables defined by the customer. The value is a JSON object that contains up to 10 properties. Both the property names and values are defined by the customer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;key1&quot;:&quot;value1&quot;}</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
 
         /// <summary>
         /// <para>The minimum concurrency for the task. A value of 0 indicates no guaranteed minimum, and resources are allocated by weight.</para>
-        /// <para>If multiple tasks have a minimum concurrency configured:</para>
+        /// <para>If multiple campaigns have a minimum concurrency configured:</para>
         /// <list type="bullet">
         /// <item><description><para>If the total concurrency is less than the instance total concurrency, the minimum concurrency of each task is satisfied first, and the remaining resources are allocated proportionally by weight.</para>
         /// </description></item>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string FlashSmsParameters { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to prohibit outbound calls on holidays.</para>
+        /// <para>Specifies whether to restrict outbound calls on holidays.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -189,21 +189,21 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Updated_task_group</para>
+        /// <para>Updated job group</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of caller numbers for the outbound task.</para>
+        /// <para>The list of caller numbers for the outbound call task.</para>
         /// </summary>
         [NameInMap("Numbers")]
         [Validation(Required=false)]
         public List<string> Numbers { get; set; }
 
         /// <summary>
-        /// <para>The list of redial restriction conditions. If this parameter is not specified, no restrictions are applied. Valid values:</para>
+        /// <para>The list of redial restriction conditions. If not specified, no restrictions are applied. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CALLEE_NOT_EXISTS: Do not call nonexistent numbers.</description></item>
         /// <item><description>OUT_OF_SERVICE: Do not call numbers that are out of service.</description></item>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string RedialRestrictions { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to keep the scheduling state until the task end time after all contacts are called. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to keep the scheduling state until the campaign end time after all contacts are called. Default value: false. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The task remains in the scheduling state, and you can continue to append contacts.</description></item>
         /// <item><description>false: The task changes to completed, and you cannot append contacts.</description></item>

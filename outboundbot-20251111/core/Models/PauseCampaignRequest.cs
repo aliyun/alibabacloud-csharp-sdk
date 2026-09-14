@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111.Models
         public string CampaignId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the outbound call instance.</para>
+        /// <para>The outbound robot instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

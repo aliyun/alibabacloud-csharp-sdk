@@ -1,3 +1,7 @@
+2026-09-14 Version: 1.6.0
+- Support API GetRecording.
+
+
 2026-08-18 Version: 1.5.0
 - Support API GetCallDetailRecord.
 - Support API GetCaseDetail.

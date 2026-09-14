@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "outboundbot.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("outboundbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call campaign.</para>
+        /// <para>Terminates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call campaign.</para>
+        /// <para>Terminates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -145,7 +141,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call campaign.</para>
+        /// <para>Terminates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -168,7 +164,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an outbound call campaign.</para>
+        /// <para>Terminates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -531,7 +527,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call task.</para>
+        /// <para>Creates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -662,7 +658,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call task.</para>
+        /// <para>Creates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -793,7 +789,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call task.</para>
+        /// <para>Creates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -816,7 +812,7 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an outbound call task.</para>
+        /// <para>Creates an outbound call campaign.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3375,6 +3371,134 @@ namespace AlibabaCloud.SDK.OutboundBot20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a call recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordingResponse
+        /// </returns>
+        public GetRecordingResponse GetRecordingWithOptions(GetRecordingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecording",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecordingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a call recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordingResponse
+        /// </returns>
+        public async Task<GetRecordingResponse> GetRecordingWithOptionsAsync(GetRecordingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRecording",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRecordingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a call recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordingResponse
+        /// </returns>
+        public GetRecordingResponse GetRecording(GetRecordingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRecordingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a call recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRecordingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRecordingResponse
+        /// </returns>
+        public async Task<GetRecordingResponse> GetRecordingAsync(GetRecordingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRecordingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
