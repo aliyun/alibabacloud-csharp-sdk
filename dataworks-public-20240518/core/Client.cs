@@ -22572,7 +22572,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行跨空间发布流程</para>
+        /// <para>Executes a cross-workspace publish flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22618,7 +22618,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行跨空间发布流程</para>
+        /// <para>Executes a cross-workspace publish flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22664,7 +22664,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行跨空间发布流程</para>
+        /// <para>Executes a cross-workspace publish flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22682,7 +22682,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行跨空间发布流程</para>
+        /// <para>Executes a cross-workspace publish flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25020,6 +25020,178 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public GetComputeResourceAuthUserMappingsResponse GetComputeResourceAuthUserMappingsWithOptions(GetComputeResourceAuthUserMappingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResourceId))
+            {
+                query["ComputeResourceId"] = request.ComputeResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeResourceAuthUserMappings",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeResourceAuthUserMappingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public async Task<GetComputeResourceAuthUserMappingsResponse> GetComputeResourceAuthUserMappingsWithOptionsAsync(GetComputeResourceAuthUserMappingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResourceId))
+            {
+                query["ComputeResourceId"] = request.ComputeResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetComputeResourceAuthUserMappings",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetComputeResourceAuthUserMappingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public GetComputeResourceAuthUserMappingsResponse GetComputeResourceAuthUserMappings(GetComputeResourceAuthUserMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetComputeResourceAuthUserMappingsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the user mappings of a compute resource. Supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>Tenant Owner, Storage Management Administrator, Deployment, Developer, Project Owner, or O&amp;M Engineer</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public async Task<GetComputeResourceAuthUserMappingsResponse> GetComputeResourceAuthUserMappingsAsync(GetComputeResourceAuthUserMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetComputeResourceAuthUserMappingsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the configuration, status, and latest run information of a specified metadata crawler.</para>
         /// </summary>
         /// 
@@ -25500,7 +25672,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询跨空间发布流程详情</para>
+        /// <para>Queries the details of a cross-workspace deployment flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25546,7 +25718,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询跨空间发布流程详情</para>
+        /// <para>Queries the details of a cross-workspace deployment flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25592,7 +25764,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询跨空间发布流程详情</para>
+        /// <para>Queries the details of a cross-workspace deployment flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25610,7 +25782,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询跨空间发布流程详情</para>
+        /// <para>Queries the details of a cross-workspace deployment flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58976,6 +59148,206 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateComputeResourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// <item><description>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public UpdateComputeResourceAuthUserMappingsResponse UpdateComputeResourceAuthUserMappingsWithOptions(UpdateComputeResourceAuthUserMappingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateComputeResourceAuthUserMappingsShrinkRequest request = new UpdateComputeResourceAuthUserMappingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveUserIds))
+            {
+                request.RemoveUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveUserIds, "RemoveUserIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Upserts))
+            {
+                request.UpsertsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Upserts, "Upserts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResourceId))
+            {
+                body["ComputeResourceId"] = request.ComputeResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveUserIdsShrink))
+            {
+                body["RemoveUserIds"] = request.RemoveUserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpsertsShrink))
+            {
+                body["Upserts"] = request.UpsertsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateComputeResourceAuthUserMappings",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateComputeResourceAuthUserMappingsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// <item><description>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public async Task<UpdateComputeResourceAuthUserMappingsResponse> UpdateComputeResourceAuthUserMappingsWithOptionsAsync(UpdateComputeResourceAuthUserMappingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateComputeResourceAuthUserMappingsShrinkRequest request = new UpdateComputeResourceAuthUserMappingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RemoveUserIds))
+            {
+                request.RemoveUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RemoveUserIds, "RemoveUserIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Upserts))
+            {
+                request.UpsertsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Upserts, "Upserts", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeResourceId))
+            {
+                body["ComputeResourceId"] = request.ComputeResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                body["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveUserIdsShrink))
+            {
+                body["RemoveUserIds"] = request.RemoveUserIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpsertsShrink))
+            {
+                body["Upserts"] = request.UpsertsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateComputeResourceAuthUserMappings",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateComputeResourceAuthUserMappingsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// <item><description>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public UpdateComputeResourceAuthUserMappingsResponse UpdateComputeResourceAuthUserMappings(UpdateComputeResourceAuthUserMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateComputeResourceAuthUserMappingsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the account mapping of a compute resource. Currently supports EMR and Serverless Spark resource types.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>DataWorks Basic Edition or a higher edition is required.</description></item>
+        /// <item><description>You must have at least one of the following roles in the DataWorks workspace:</description></item>
+        /// <item><description>Tenant owner, tenant administrator, storage management administrator, project owner, or O&amp;M engineer.</description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateComputeResourceAuthUserMappingsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateComputeResourceAuthUserMappingsResponse
+        /// </returns>
+        public async Task<UpdateComputeResourceAuthUserMappingsResponse> UpdateComputeResourceAuthUserMappingsAsync(UpdateComputeResourceAuthUserMappingsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateComputeResourceAuthUserMappingsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

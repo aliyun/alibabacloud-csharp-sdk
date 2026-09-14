@@ -1,3 +1,8 @@
+2026-09-14 Version: 6.8.0
+- Support API GetComputeResourceAuthUserMappings.
+- Support API UpdateComputeResourceAuthUserMappings.
+
+
 2026-09-09 Version: 6.7.0
 - Support API AbolishCrossProjectPipelineRun.
 - Support API CreateCrossProjectPipelineRun.

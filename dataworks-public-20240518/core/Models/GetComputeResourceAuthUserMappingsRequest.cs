@@ -8,24 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class ExecCrossProjectPipelineRunRequest : TeaModel {
+    public class GetComputeResourceAuthUserMappingsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cross-workspace publish flow.</para>
+        /// <para>The ID of the compute resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fcfd4160-e2ff-4603-9719-09128fe733df</para>
+        /// <para>100000</para>
         /// </summary>
-        [NameInMap("PipelineRunId")]
+        [NameInMap("ComputeResourceId")]
         [Validation(Required=false)]
-        public string PipelineRunId { get; set; }
+        public long? ComputeResourceId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The DataWorks workspace to which the data source belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
