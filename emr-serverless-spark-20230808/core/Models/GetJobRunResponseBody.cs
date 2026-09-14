@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetJobRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the job.</para>
+        /// <para>The job run details.</para>
         /// </summary>
         [NameInMap("jobRun")]
         [Validation(Required=false)]
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CodeType { get; set; }
 
             /// <summary>
-            /// <para>The Spark configurations of the job.</para>
+            /// <para>The Spark job configuration.</para>
             /// </summary>
             [NameInMap("configurationOverrides")]
             [Validation(Required=false)]
             public GetJobRunResponseBodyJobRunConfigurationOverrides ConfigurationOverrides { get; set; }
             public class GetJobRunResponseBodyJobRunConfigurationOverrides : TeaModel {
                 /// <summary>
-                /// <para>The configurations.</para>
+                /// <para>The list of configurations.</para>
                 /// </summary>
                 [NameInMap("configurations")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The version that is displayed in the console.</para>
+            /// <para>The version displayed in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for the job execution.</para>
+            /// <para>The execution timeout period, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? ExecutionTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable the Fusion engine to accelerate the job execution.</para>
+            /// <para>Indicates whether the Fusion engine acceleration is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// <para>The Spark driver information.</para>
+            /// <para>The Spark Driver information.</para>
             /// </summary>
             [NameInMap("jobDriver")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public RunLog Log { get; set; }
 
             /// <summary>
-            /// <para>The name of the job.</para>
+            /// <para>The job run name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jobName</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The access URL for the notebook of the job run.</para>
+            /// <para>The download URL of the NOTEBOOK file. This parameter is returned only when the job type is NOTEBOOK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx">http://workflow-ide-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/spark-notebook-output/w-xxxxxxxxx/xxxxxxx</a></para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string NotebookAccessUrl { get; set; }
 
             /// <summary>
-            /// <para>The priority of the job run.</para>
+            /// <para>The job priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Priority { get; set; }
 
             /// <summary>
-            /// <para>The Spark engine version.</para>
+            /// <para>The Spark DPI engine version used to run the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esr-3.3.1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The UID of the user who creates the job.</para>
+            /// <para>The UID of the user who created the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150978934701****</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue on which the job runs.</para>
+            /// <para>The name of the queue used to run the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root_queue</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceQueueId { get; set; }
 
             /// <summary>
-            /// <para>The state of the job.</para>
+            /// <para>The job run state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -234,11 +234,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? SubmitTime { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<Tag> Tags { get; set; }
+
+            /// <summary>
+            /// <para>The total number of tokens consumed.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("totalTokens")]
+            [Validation(Required=false)]
+            public long? TotalTokens { get; set; }
 
             /// <summary>
             /// <para>The web UI of the job.</para>

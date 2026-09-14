@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <para>The status of the corresponding Ray cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Deleted: Deleted.</description></item>
-        /// <item><description>Submitted: Submitted but not yet created.</description></item>
+        /// <item><description>Submitted: Submitted but creation has not started.</description></item>
         /// <item><description>Pending: Being created.</description></item>
         /// <item><description>Running: Running.</description></item>
         /// </list>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public double? CuHours { get; set; }
 
         /// <summary>
-        /// <para>The Ray cluster dashboard URL. When the Ray cluster is in Running state, this is the Runtime UI. After the cluster is deleted, this is the History UI. History UI is supported only in err-1.2.0 and later versions.</para>
+        /// <para>The dashboard URL of the Ray cluster. When the Ray cluster is in the Running state, this is the Runtime UI. After the cluster enters the Deleted state, this is the History UI. History UI is supported only in err-1.2.0 and later versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx">https://emr-ray-gateway-cn-hangzhou.aliyuncs.com/workspace/w-xxxxxxxx/raycluster/ray-xxxxxx/dashboard?token=xxxxxx</a></para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DashboardUrl { get; set; }
 
         /// <summary>
-        /// <para>The extra dashboard UI URLs. Currently empty.</para>
+        /// <para>The extra dashboard UI URLs. This field is currently empty.</para>
         /// </summary>
         [NameInMap("dashboardUrlExtra")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The job duration, in seconds.</para>
+        /// <para>The task duration, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2459764</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// <para>The job end time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The task end time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1762949372000</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The consumed GPU hours. Currently empty.</para>
+        /// <para>The consumed GPU hours. This field is currently empty.</para>
         /// </summary>
         [NameInMap("guHours")]
         [Validation(Required=false)]
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The Ray cluster head node parameters.</para>
+        /// <para>The parameters of the Ray cluster head node.</para>
         /// </summary>
         [NameInMap("headSpec")]
         [Validation(Required=false)]
@@ -219,7 +219,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto scaling is enabled for worker nodes.</para>
+            /// <para>The Ray DPI engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>err-1.3.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether automatic scaling is enabled for worker nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -239,7 +249,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout in seconds for worker nodes when auto scaling is enabled.</para>
+            /// <para>The idle timeout for worker nodes when automatic scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -301,7 +311,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LogPath { get; set; }
 
         /// <summary>
-        /// <para>The execution message.</para>
+        /// <para>The execution information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Job finished successfully.</para>
@@ -311,7 +321,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The job metadata JSON string.</para>
+        /// <para>The task metadata JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;owner&quot;: &quot;alice&quot;}</para>
@@ -321,7 +331,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string MetadataJson { get; set; }
 
         /// <summary>
-        /// <para>The Ray cluster name.</para>
+        /// <para>The name of the Ray cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myRayCluster</para>
@@ -361,7 +371,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RuntimeEnvJson { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically destroy the temporary cluster after the job finishes. Default value: true.</para>
+        /// <para>Specifies whether to automatically destroy the temporary cluster after the task is completed. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -381,16 +391,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The job status. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Submitted: Submitted.</description></item>
+        /// <item><description>Submitted: The task is submitted.</description></item>
         /// <item><description>Pending: The cluster is being created.</description></item>
-        /// <item><description>Running: The job is running.</description></item>
-        /// <item><description>Succeeded: The job succeeded.</description></item>
-        /// <item><description>Failed: The job failed.</description></item>
-        /// <item><description>Cancelling: Cancelling.</description></item>
-        /// <item><description>Cancelled: Cancelled.</description></item>
-        /// <item><description>Timeout: Timed out and cancelled.</description></item>
+        /// <item><description>Running: The task is running.</description></item>
+        /// <item><description>Succeeded: The task succeeded.</description></item>
+        /// <item><description>Failed: The task failed.</description></item>
+        /// <item><description>Cancelling: The task is being canceled.</description></item>
+        /// <item><description>Cancelled: The task is canceled.</description></item>
+        /// <item><description>Timeout: The task timed out and was canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -421,7 +431,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SubmissionMode { get; set; }
 
         /// <summary>
-        /// <para>The job submission time. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The task submission time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1750327082303</para>
@@ -438,7 +448,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<Tag> Tags { get; set; }
 
         /// <summary>
-        /// <para>The data development task ID.</para>
+        /// <para>The ID of the data development node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TSK-682e0112f6f24d9f9305b92174846985</para>
@@ -480,6 +490,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public string Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The DPI engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ray-1.2.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
             /// <para>The GPU type.</para>
@@ -554,7 +574,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The URL of the job code working directory.</para>
+        /// <para>The URL of the task code working directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://mybucket/hello.zip</para>

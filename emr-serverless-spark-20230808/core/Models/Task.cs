@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The folder business ID.</para>
+        /// <para>The business ID of the folder.</para>
         /// </summary>
         [NameInMap("categoryBizId")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? Creator { get; set; }
 
         /// <summary>
-        /// <para>The OSS direct upload credentials.</para>
+        /// <para>The credential for direct OSS upload.</para>
         /// </summary>
         [NameInMap("credential")]
         [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// <para>The default queue ID of the task.</para>
+        /// <para>The ID of the default task queue.</para>
         /// </summary>
         [NameInMap("defaultResourceQueueId")]
         [Validation(Required=false)]
@@ -161,14 +161,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of extra Spark resources.</para>
+        /// <para>The IDs of extra Spark artifacts.</para>
         /// </summary>
         [NameInMap("extraArtifactIds")]
         [Validation(Required=false)]
         public List<string> ExtraArtifactIds { get; set; }
 
         /// <summary>
-        /// <para>The custom Spark submit configuration parameters.</para>
+        /// <para>The custom spark-submit configuration parameters.</para>
         /// </summary>
         [NameInMap("extraSparkSubmitParams")]
         [Validation(Required=false)]
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> Files { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the fusion switch is enabled.</para>
+        /// <para>Indicates whether the fusion feature is enabled.</para>
         /// </summary>
         [NameInMap("fusion")]
         [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The last modification time.</para>
+        /// <para>The last modified time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("gmtModified")]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task has been changed since the last submission.</para>
+        /// <para>Indicates whether the task has been changed after the last commit.</para>
         /// </summary>
         [NameInMap("hasChanged")]
         [Validation(Required=false)]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public Dictionary<string, string> Params { get; set; }
 
         /// <summary>
-        /// <para>The Spark PySpark dependency pyfiles.</para>
+        /// <para>The PySpark dependency pyfiles for the Spark task.</para>
         /// </summary>
         [NameInMap("pyFiles")]
         [Validation(Required=false)]
@@ -315,6 +315,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public bool? EnableAutoScaling { get; set; }
 
+            /// <summary>
+            /// <para>The environment variables of the Ray node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MY_ENV=123456</para>
+            /// </summary>
+            [NameInMap("env")]
+            [Validation(Required=false)]
+            public string Env { get; set; }
+
             [NameInMap("gpuSpec")]
             [Validation(Required=false)]
             public string GpuSpec { get; set; }
@@ -330,6 +340,26 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("queueName")]
             [Validation(Required=false)]
             public string QueueName { get; set; }
+
+            /// <summary>
+            /// <para>The startup parameters of Ray.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>--num-cpus=0</para>
+            /// </summary>
+            [NameInMap("rayStartParams")]
+            [Validation(Required=false)]
+            public string RayStartParams { get; set; }
+
+            /// <summary>
+            /// <para>The DPI engine version of Ray.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>err-1.3.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("rayVersion")]
+            [Validation(Required=false)]
+            public string RayVersion { get; set; }
 
             [NameInMap("replica")]
             [Validation(Required=false)]
@@ -377,6 +407,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Cpu { get; set; }
 
+            /// <summary>
+            /// <para>The environment variables of Ray.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MY_ENV=123456</para>
+            /// </summary>
+            [NameInMap("env")]
+            [Validation(Required=false)]
+            public string Env { get; set; }
+
             [NameInMap("gpuSpec")]
             [Validation(Required=false)]
             public string GpuSpec { get; set; }
@@ -401,6 +441,26 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            /// <summary>
+            /// <para>The startup parameters of Ray.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>--num-cpus=0</para>
+            /// </summary>
+            [NameInMap("rayStartParams")]
+            [Validation(Required=false)]
+            public string RayStartParams { get; set; }
+
+            /// <summary>
+            /// <para>The DPI engine version of Ray.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>err-1.3.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("rayVersion")]
+            [Validation(Required=false)]
+            public string RayVersion { get; set; }
+
             [NameInMap("replica")]
             [Validation(Required=false)]
             public int? Replica { get; set; }
@@ -416,7 +476,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SessionClusterId { get; set; }
 
         /// <summary>
-        /// <para>The Spark parameters.</para>
+        /// <para>The Spark arguments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -449,7 +509,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? SparkDriverMemory { get; set; }
 
         /// <summary>
-        /// <para>The Spark main class entry point.</para>
+        /// <para>The Spark main class entrypoint.</para>
         /// </summary>
         [NameInMap("sparkEntrypoint")]
         [Validation(Required=false)]
@@ -488,7 +548,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkLogPath { get; set; }
 
         /// <summary>
-        /// <para>The Spark submit task submission statement.</para>
+        /// <para>The spark-submit task submission clause.</para>
         /// </summary>
         [NameInMap("sparkSubmitClause")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartProcessInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code from the backend.</para>
+        /// <para>The return code of the API request backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed description of the return code.</para>
+        /// <para>The detailed description corresponding to the request code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>

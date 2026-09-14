@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateRayClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ray Cluster for dev.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The version of the Ray engine.</para>
+        /// <para>The Ray DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ray-1.0.0 (Ray 2.47.1, Python 3.12)</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>Additional parameters. The value must be in JSON format.</para>
+        /// <para>The extra parameters. The value must be in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the head node of the Ray cluster.</para>
+        /// <para>The parameters of the Ray cluster head node.</para>
         /// </summary>
         [NameInMap("headSpec")]
         [Validation(Required=false)]
@@ -57,7 +57,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic scaling for worker nodes.</para>
+            /// <para>The Ray DPI engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ray-1.2.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to enable automatic scaling for workers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -67,6 +77,67 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? EnableAutoScaling { get; set; }
 
             /// <summary>
+            /// <para>The environment variables.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MY_ENV=hello\nMY_ENV2=hello2</para>
+            /// </summary>
+            [NameInMap("env")]
+            [Validation(Required=false)]
+            public string Env { get; set; }
+
+            /// <summary>
+            /// <para>The GCS Fault Tolerance configuration.</para>
+            /// </summary>
+            [NameInMap("gftConfig")]
+            [Validation(Required=false)]
+            public CreateRayClusterRequestHeadSpecGftConfig GftConfig { get; set; }
+            public class CreateRayClusterRequestHeadSpecGftConfig : TeaModel {
+                /// <summary>
+                /// <para>The Redis password.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>redispasswd</para>
+                /// </summary>
+                [NameInMap("redisPassword")]
+                [Validation(Required=false)]
+                public string RedisPassword { get; set; }
+
+                /// <summary>
+                /// <para>The Redis URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10.12.3.4:6379</para>
+                /// </summary>
+                [NameInMap("redisUrl")]
+                [Validation(Required=false)]
+                public string RedisUrl { get; set; }
+
+                /// <summary>
+                /// <para>The Redis username.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>default</para>
+                /// </summary>
+                [NameInMap("redisUsername")]
+                [Validation(Required=false)]
+                public string RedisUsername { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Specifies whether to enable GCS Fault Tolerance.</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("gftEnabled")]
+            [Validation(Required=false)]
+            public bool? GftEnabled { get; set; }
+
+            /// <summary>
+            /// <para>The GPU model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecs.gn6i-c4g1.xlarge</para>
             /// </summary>
@@ -75,7 +146,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The idle timeout period in seconds for worker nodes when automatic scaling is enabled.</para>
+            /// <para>The idle timeout period of workers after automatic scaling is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -85,7 +156,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? IdleTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>The memory size, in GiB.</para>
+            /// <para>The memory size. Unit: Gi.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8Gi</para>
@@ -104,6 +175,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string QueueName { get; set; }
 
+            /// <summary>
+            /// <para>The Ray node startup parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>--num-cpus=0 --num-gpus=0</para>
+            /// </summary>
+            [NameInMap("rayStartParams")]
+            [Validation(Required=false)]
+            public string RayStartParams { get; set; }
+
         }
 
         /// <summary>
@@ -117,7 +198,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the network connection.</para>
+        /// <para>The network connectivity name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
@@ -126,12 +207,15 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string NetworkServiceName { get; set; }
 
+        /// <summary>
+        /// <para>The list of managed directory IDs to mount.</para>
+        /// </summary>
         [NameInMap("volumeIds")]
         [Validation(Required=false)]
         public List<string> VolumeIds { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the worker nodes of the Ray cluster. You can specify up to 50 worker groups.</para>
+        /// <para>The parameters of the Ray cluster worker nodes. A maximum of 50 groups are supported.</para>
         /// </summary>
         [NameInMap("workerSpec")]
         [Validation(Required=false)]
@@ -148,6 +232,28 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
+            /// <para>The engine version. If this parameter is not specified, the value is the same as that of the head node.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ray-1.2.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
+            /// <summary>
+            /// <para>The environment variables.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>MY_ENV=hello\nMY_ENV2=hello2</para>
+            /// </summary>
+            [NameInMap("env")]
+            [Validation(Required=false)]
+            public string Env { get; set; }
+
+            /// <summary>
+            /// <para>The GPU model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecs.gn6i-c4g1.xlarge</para>
             /// </summary>
@@ -156,7 +262,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The name of the worker group.</para>
+            /// <para>The worker group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WorkerGroup1</para>
@@ -166,7 +272,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of worker nodes for automatic scaling. The minimum value is 1.</para>
+            /// <para>The maximum number of workers after automatic scaling is enabled. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -176,7 +282,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? MaxReplica { get; set; }
 
             /// <summary>
-            /// <para>The memory size, in GiB.</para>
+            /// <para>The memory size. Unit: Gi.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16Gi</para>
@@ -186,7 +292,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Memory { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of worker nodes for automatic scaling. The minimum value is 1. This value must be less than or equal to maxReplica.</para>
+            /// <para>The minimum number of workers after automatic scaling is enabled. Minimum value: 1. The value must be less than or equal to maxReplica.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -206,7 +312,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The number of worker nodes. The minimum value is 1.</para>
+            /// <para>The Ray node startup parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>--num-cpus=0 --num-gpus=0</para>
+            /// </summary>
+            [NameInMap("rayStartParams")]
+            [Validation(Required=false)]
+            public string RayStartParams { get; set; }
+
+            /// <summary>
+            /// <para>The number of workers. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

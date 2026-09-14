@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? ActiveDeadlineSeconds { get; set; }
 
         /// <summary>
+        /// <para>The ID of an existing Ray cluster to which the job is submitted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ray-xxxxxxxxx</para>
+        /// </summary>
+        [NameInMap("clusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
+        /// <summary>
         /// <para>The Ray DPI engine version number.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EntrypointResources { get; set; }
 
         /// <summary>
-        /// <para>The extra parameter JSON string.</para>
+        /// <para>The extra parameters in a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;userDefinedFiles&quot;: &quot;oss://mybucket/artifact/config.json,oss://mybucket/artifact/config2.json&quot;, &quot;userRequirementsFile&quot;: &quot;oss://mybucket/requirements.txt&quot;}</para>
@@ -107,7 +117,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable automatic worker scaling.</para>
+            /// <para>The Ray DPI engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>err-1.3.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
+
+            /// <summary>
+            /// <para>Specifies whether to enable automatic scaling for workers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -137,7 +157,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? IdleTimeoutSeconds { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: Gi.</para>
+            /// <para>The memory size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8Gi</para>
@@ -199,7 +219,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RuntimeEnvJson { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically destroy the temporary cluster after the job is completed. Default value: true.</para>
+        /// <para>Specifies whether to automatically destroy the temporary cluster after the job finishes. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -258,14 +278,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? TtlSecondsAfterFinished { get; set; }
 
         /// <summary>
-        /// <para>The list of mount volume IDs.</para>
+        /// <para>The list of mounted volume IDs.</para>
         /// </summary>
         [NameInMap("volumeIds")]
         [Validation(Required=false)]
         public List<string> VolumeIds { get; set; }
 
         /// <summary>
-        /// <para>The Ray cluster worker node parameters.</para>
+        /// <para>The parameters of the worker nodes in the Ray cluster.</para>
         /// </summary>
         [NameInMap("workerSpec")]
         [Validation(Required=false)]
@@ -280,6 +300,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [NameInMap("cpu")]
             [Validation(Required=false)]
             public string Cpu { get; set; }
+
+            /// <summary>
+            /// <para>The database engine version.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ray-1.2.0 (Ray 2.55.1, Python 3.12)</para>
+            /// </summary>
+            [NameInMap("displayReleaseVersion")]
+            [Validation(Required=false)]
+            public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
             /// <para>The GPU instance type.</para>
@@ -312,7 +342,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? MaxReplica { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: Gi.</para>
+            /// <para>The memory size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16Gi</para>

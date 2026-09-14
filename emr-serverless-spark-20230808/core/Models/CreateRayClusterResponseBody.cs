@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateRayClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Ray cluster.</para>
+        /// <para>The Ray cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ray-k7nm8ahl5te4tg91</para>

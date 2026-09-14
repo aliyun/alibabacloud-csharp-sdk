@@ -19,24 +19,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "emr-serverless-spark.cn-shenzhen.aliyuncs.com"},
-                {"cn-wulanchabu", "emr-serverless-spark.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "emr-serverless-spark.cn-beijing.aliyuncs.com"},
-                {"ap-northeast-1", "emr-serverless-spark.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "emr-serverless-spark.cn-chengdu.aliyuncs.com"},
-                {"cn-shanghai", "emr-serverless-spark.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "emr-serverless-spark.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "emr-serverless-spark.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-5", "emr-serverless-spark.ap-southeast-5.aliyuncs.com"},
-                {"cn-zhangjiakou", "emr-serverless-spark.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-hangzhou", "emr-serverless-spark.cn-hangzhou.aliyuncs.com"},
-                {"us-west-1", "emr-serverless-spark.us-west-1.aliyuncs.com"},
-                {"us-east-1", "emr-serverless-spark.us-east-1.aliyuncs.com"},
-                {"eu-central-1", "emr-serverless-spark.eu-central-1.aliyuncs.com"},
-                {"na-south-1", "emr-serverless-spark.na-south-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("emr-serverless-spark", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -3721,7 +3703,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace queue.</para>
+        /// <para>Edits a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3746,6 +3728,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
                 query["regionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environments))
             {
                 body["environments"] = request.Environments;
@@ -3793,7 +3779,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace queue.</para>
+        /// <para>Edits a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3818,6 +3804,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
                 query["regionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environments))
             {
                 body["environments"] = request.Environments;
@@ -3865,7 +3855,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace queue.</para>
+        /// <para>Edits a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3884,7 +3874,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a workspace queue.</para>
+        /// <para>Edits a workspace queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4571,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a job.</para>
+        /// <para>Retrieves the details of a job run by calling GetJobRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4627,7 +4617,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a job.</para>
+        /// <para>Retrieves the details of a job run by calling GetJobRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4673,7 +4663,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a job.</para>
+        /// <para>Retrieves the details of a job run by calling GetJobRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4692,7 +4682,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a job.</para>
+        /// <para>Retrieves the details of a job run by calling GetJobRun.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5203,7 +5193,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</para>
+        /// <para>Retrieves a Ray cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5239,7 +5229,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</para>
+        /// <para>Retrieves a Ray cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5275,7 +5265,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</para>
+        /// <para>Retrieves a Ray cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5290,7 +5280,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Ray cluster, including its configuration, runtime state, node information, and connection endpoints.</para>
+        /// <para>Retrieves a Ray cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6998,6 +6988,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Lists Kyuubi Gateways.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListKyuubiServicesRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7008,11 +7001,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <returns>
         /// ListKyuubiServicesResponse
         /// </returns>
-        public ListKyuubiServicesResponse ListKyuubiServicesWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListKyuubiServicesResponse ListKyuubiServicesWithOptions(string workspaceId, ListKyuubiServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7034,6 +7034,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Lists Kyuubi Gateways.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListKyuubiServicesRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7044,11 +7047,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <returns>
         /// ListKyuubiServicesResponse
         /// </returns>
-        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesWithOptionsAsync(string workspaceId, ListKyuubiServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7070,14 +7080,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Lists Kyuubi Gateways.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListKyuubiServicesRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListKyuubiServicesResponse
         /// </returns>
-        public ListKyuubiServicesResponse ListKyuubiServices(string workspaceId)
+        public ListKyuubiServicesResponse ListKyuubiServices(string workspaceId, ListKyuubiServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListKyuubiServicesWithOptions(workspaceId, headers, runtime);
+            return ListKyuubiServicesWithOptions(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7085,14 +7099,18 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
         /// <para>Lists Kyuubi Gateways.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListKyuubiServicesRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListKyuubiServicesResponse
         /// </returns>
-        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesAsync(string workspaceId)
+        public async Task<ListKyuubiServicesResponse> ListKyuubiServicesAsync(string workspaceId, ListKyuubiServicesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListKyuubiServicesWithOptionsAsync(workspaceId, headers, runtime);
+            return await ListKyuubiServicesWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9743,6 +9761,244 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries APM Grafana panel data for Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryApmGrafanaDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApmGrafanaDataResponse
+        /// </returns>
+        public QueryApmGrafanaDataResponse QueryApmGrafanaDataWithOptions(QueryApmGrafanaDataRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryApmGrafanaDataShrinkRequest request = new QueryApmGrafanaDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryParams))
+            {
+                request.QueryParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryParams, "queryParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentName))
+            {
+                query["componentName"] = request.ComponentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardId))
+            {
+                query["dashboardId"] = request.DashboardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryParamsShrink))
+            {
+                query["queryParams"] = request.QueryParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryUrl))
+            {
+                query["queryUrl"] = request.QueryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Step))
+            {
+                query["step"] = request.Step;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["time"] = request.Time;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                query["variables"] = request.Variables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryApmGrafanaData",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/apm/action/queryApmGrafanaData",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryApmGrafanaDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries APM Grafana panel data for Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// QueryApmGrafanaDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApmGrafanaDataResponse
+        /// </returns>
+        public async Task<QueryApmGrafanaDataResponse> QueryApmGrafanaDataWithOptionsAsync(QueryApmGrafanaDataRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryApmGrafanaDataShrinkRequest request = new QueryApmGrafanaDataShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryParams))
+            {
+                request.QueryParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryParams, "queryParams", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentName))
+            {
+                query["componentName"] = request.ComponentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardId))
+            {
+                query["dashboardId"] = request.DashboardId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.End))
+            {
+                query["end"] = request.End;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Provider))
+            {
+                query["provider"] = request.Provider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryParamsShrink))
+            {
+                query["queryParams"] = request.QueryParamsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryUrl))
+            {
+                query["queryUrl"] = request.QueryUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Step))
+            {
+                query["step"] = request.Step;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["time"] = request.Time;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Variables))
+            {
+                query["variables"] = request.Variables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryApmGrafanaData",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/apm/action/queryApmGrafanaData",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryApmGrafanaDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries APM Grafana panel data for Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApmGrafanaDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApmGrafanaDataResponse
+        /// </returns>
+        public QueryApmGrafanaDataResponse QueryApmGrafanaData(QueryApmGrafanaDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryApmGrafanaDataWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries APM Grafana panel data for Serverless Spark.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApmGrafanaDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApmGrafanaDataResponse
+        /// </returns>
+        public async Task<QueryApmGrafanaDataResponse> QueryApmGrafanaDataAsync(QueryApmGrafanaDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryApmGrafanaDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Refreshes the token for a Livy Gateway.</para>
         /// </summary>
         /// 
@@ -10493,7 +10749,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workflow manually.</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10525,6 +10781,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["email"] = request.Email;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedParallelismNumber))
+            {
+                query["expectedParallelismNumber"] = request.ExpectedParallelismNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["interval"] = request.Interval;
@@ -10544,6 +10804,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                query["runMode"] = request.RunMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeQueue))
             {
@@ -10579,7 +10843,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workflow manually.</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10611,6 +10875,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 query["email"] = request.Email;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpectedParallelismNumber))
+            {
+                query["expectedParallelismNumber"] = request.ExpectedParallelismNumber;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["interval"] = request.Interval;
@@ -10630,6 +10898,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunMode))
+            {
+                query["runMode"] = request.RunMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuntimeQueue))
             {
@@ -10665,7 +10937,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workflow manually.</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10684,7 +10956,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a workflow manually.</para>
+        /// <para>Manually runs a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11649,6 +11921,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["activeDeadlineSeconds"] = request.ActiveDeadlineSeconds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["clusterId"] = request.ClusterId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
             {
                 body["displayReleaseVersion"] = request.DisplayReleaseVersion;
@@ -11770,6 +12046,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveDeadlineSeconds))
             {
                 body["activeDeadlineSeconds"] = request.ActiveDeadlineSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["clusterId"] = request.ClusterId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayReleaseVersion))
             {

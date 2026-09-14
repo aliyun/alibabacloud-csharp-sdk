@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
-    public class GetJobRunRequest : TeaModel {
+    public class ListKyuubiServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The token of the Kyuubi Gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>6w3s2e7y7t9fxnvtai9sv1uebw8b7bvc</para>
         /// </summary>
-        [NameInMap("regionId")]
+        [NameInMap("token")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string Token { get; set; }
 
     }
 

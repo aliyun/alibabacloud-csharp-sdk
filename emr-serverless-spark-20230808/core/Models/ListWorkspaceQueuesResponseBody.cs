@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspaceQueuesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned at a time.</para>
+        /// <para>The maximum number of records returned per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 /// <para>The display name of the permission.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>文件目录遍历、文件浏览</para>
+                /// <para>File directory traversal, file browsing</para>
                 /// </summary>
                 [NameInMap("displayName")]
                 [Validation(Required=false)]
@@ -116,6 +116,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test queue</para>
+            /// </summary>
+            [NameInMap("description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
+
+            /// <summary>
             /// <para>The list of queue environment types.</para>
             /// </summary>
             [NameInMap("environments")]
@@ -126,6 +136,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public int? GpuMachineNum { get; set; }
 
+            /// <summary>
+            /// <para>The list of GPU models.</para>
+            /// </summary>
             [NameInMap("gpuSpec")]
             [Validation(Required=false)]
             public List<string> GpuSpec { get; set; }
@@ -155,10 +168,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string MinResource { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
-            /// <item><description>Pre: subscription</description></item>
+            /// <item><description>PayAsYouGo: pay-as-you-go.</description></item>
+            /// <item><description>Pre: subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,6 +181,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string PaymentType { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether resource prefetch is enabled.</para>
+            /// </summary>
             [NameInMap("preheat")]
             [Validation(Required=false)]
             public bool? Preheat { get; set; }
@@ -183,6 +199,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Properties { get; set; }
 
             /// <summary>
+            /// <para>The queue category, CPU or GPU.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CPU</para>
             /// </summary>
@@ -201,7 +219,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The queue scope.</para>
+            /// <para>The queue architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;arch&quot;: &quot;x86&quot;}</para>

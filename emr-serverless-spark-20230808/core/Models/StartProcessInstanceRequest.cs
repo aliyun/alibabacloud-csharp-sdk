@@ -21,12 +21,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string Email { get; set; }
 
+        /// <summary>
+        /// <para>The expected concurrency.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
+        [NameInMap("expectedParallelismNumber")]
+        [Validation(Required=false)]
+        public int? ExpectedParallelismNumber { get; set; }
+
         [NameInMap("interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the workflow runs in a production environment.</para>
+        /// <para>Specifies whether the workflow runs in the production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -68,6 +78,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The execution policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RUN_MODE_PARALLEL</para>
+        /// </summary>
+        [NameInMap("runMode")]
+        [Validation(Required=false)]
+        public string RunMode { get; set; }
+
+        /// <summary>
         /// <para>The runtime queue.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +98,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RuntimeQueue { get; set; }
 
         /// <summary>
-        /// <para>The hash code of the version.</para>
+        /// <para>The version hash code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dh*********</para>
@@ -88,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string VersionHashCode { get; set; }
 
         /// <summary>
-        /// <para>The version number of the workflow definition.</para>
+        /// <para>The workflow definition version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
