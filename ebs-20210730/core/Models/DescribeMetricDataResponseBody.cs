@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeMetricDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Collection of monitoring data for the cloud disk.</para>
+        /// <para>A collection of monitoring data for the disk.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeMetricDataResponseBodyDataList> DataList { get; set; }
         public class DescribeMetricDataResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>List of monitoring data, consisting of a series of consecutive second-level timestamps and the corresponding metric values at those times.</para>
+            /// <para>A list of monitoring data. The list contains a series of consecutive second-level timestamps and the corresponding metric values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;1699258861&quot;: 1,&quot;1699259461&quot;: 0}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public object Datapoints { get; set; }
 
             /// <summary>
-            /// <para>Labels.</para>
+            /// <para>The labels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;DiskId&quot;: &quot;d-1234&quot;}</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11B55F58-D3A4-4A9B-9596-342420D0****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of data points queried.</para>
+        /// <para>The total number of data entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>List of warning messages.</para>
+        /// <para>A list of warning messages.</para>
         /// </summary>
         [NameInMap("Warnings")]
         [Validation(Required=false)]

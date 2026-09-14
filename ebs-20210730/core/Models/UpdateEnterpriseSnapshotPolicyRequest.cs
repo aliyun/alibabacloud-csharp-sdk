@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class UpdateEnterpriseSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -20,19 +20,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Snapshot replication destination information.</para>
+        /// <para>The cross-region copy destination information.</para>
         /// </summary>
         [NameInMap("CrossRegionCopyInfo")]
         [Validation(Required=false)]
         public UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfo CrossRegionCopyInfo { get; set; }
         public class UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfo : TeaModel {
             /// <summary>
-            /// <para>Whether cross-region replication is enabled. The range of values:</para>
+            /// <para>Specifies whether to enable cross-region replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,14 +41,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>Destination region information.</para>
+            /// <para>The destination region information.</para>
             /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
             public List<UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions> Regions { get; set; }
             public class UpdateEnterpriseSnapshotPolicyRequestCrossRegionCopyInfoRegions : TeaModel {
                 /// <summary>
-                /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</para>
+                /// <para>The destination region ID for snapshot replication. You can call <a href="https://help.aliyun.com/document_detail/354206.html">DescribeDiskReplicaPairs</a> to query the region information of existing asynchronous replication relationships.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Number of days to retain the destination snapshot. The range of values is greater than 1.</para>
+                /// <para>The number of days to retain snapshots in the destination region. The value must be greater than 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The description of the policy.</para>
+        /// <para>The description of the snapshot policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The ID of the policy to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -94,7 +92,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The id of the policy.</para>
+        /// <para>The snapshot policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,14 +114,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Snapshot retention rule.</para>
+        /// <para>The retention rule.</para>
         /// </summary>
         [NameInMap("RetainRule")]
         [Validation(Required=false)]
         public UpdateEnterpriseSnapshotPolicyRequestRetainRule RetainRule { get; set; }
         public class UpdateEnterpriseSnapshotPolicyRequestRetainRule : TeaModel {
             /// <summary>
-            /// <para>Maximum number of retained snapshots.</para>
+            /// <para>The number of snapshots to retain. Valid values: 1 to 256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -133,7 +131,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? Number { get; set; }
 
             /// <summary>
-            /// <para>The time interval , valid value greater than 1.</para>
+            /// <para>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -143,7 +141,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? TimeInterval { get; set; }
 
             /// <summary>
-            /// <para>The unit of time, valid values:</para>
+            /// <para>The unit of the retention time. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DAYS</description></item>
             /// <item><description>WEEKS</description></item>
@@ -159,15 +157,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The rule for scheduling.</para>
+        /// <para>The schedule rule.</para>
         /// </summary>
         [NameInMap("Schedule")]
         [Validation(Required=false)]
         public UpdateEnterpriseSnapshotPolicyRequestSchedule Schedule { get; set; }
         public class UpdateEnterpriseSnapshotPolicyRequestSchedule : TeaModel {
             /// <summary>
-            /// <para>The time when the policy will to be scheduled. Valid values: Set the parameter in a cron expression.</para>
-            /// <para>For example, you can use <c>0 0 4 1/1 * ?</c> to specify 04:00:00 (UTC+8) on the first day of each month.</para>
+            /// <para>The execution cycle and time of the policy. A cron expression is used.</para>
+            /// <para>For example, <c>0 0 4 1/1 * ?</c> specifies that the snapshot operation is performed at 04:00 every day, starting from the first day of each month.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("CronExpression")]
@@ -177,17 +175,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The special snapshot retention rules.</para>
+        /// <para>The special retention rules.</para>
         /// </summary>
         [NameInMap("SpecialRetainRules")]
         [Validation(Required=false)]
         public UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRules SpecialRetainRules { get; set; }
         public class UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRules : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the special retention is enabled.</para>
+            /// <para>Specifies whether to enable special retention. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enable</description></item>
-            /// <item><description>false: disable</description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,18 +196,18 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The special retention rules.</para>
+            /// <para>The list of special retention rules. Multiple rules are supported.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRulesRules> Rules { get; set; }
             public class UpdateEnterpriseSnapshotPolicyRequestSpecialRetainRulesRules : TeaModel {
                 /// <summary>
-                /// <para>The periodic unit for specially retained snapshots. If configured to WEEKS, it provides special retention for the first snapshot of each week. The retention period is determined by TimeUnit and TimeInterval. The range of values are:</para>
+                /// <para>The period unit for special retention snapshots. For example, if this parameter is set to WEEKS, the first snapshot of each week is given special retention. The retention duration is determined by the TimeUnit and TimeInterval parameters. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>WEEKS</description></item>
                 /// <item><description>MONTHS</description></item>
-                /// <item><description>YEARS&quot;</description></item>
+                /// <item><description>YEARS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -220,7 +218,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public string SpecialPeriodUnit { get; set; }
 
                 /// <summary>
-                /// <para>Retention Time Value. The range of values is greater than 1.</para>
+                /// <para>The time interval of the retention rule. The unit is specified by the TimeUnit parameter. The value must be greater than 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -230,16 +228,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public int? TimeInterval { get; set; }
 
                 /// <summary>
-                /// <para>Retention time unit for special snapshots. The range of values:</para>
+                /// <para>The unit of the retention time for special snapshots. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>DAYS</para>
-                /// </description></item>
-                /// <item><description><para>WEEKS</para>
-                /// </description></item>
+                /// <item><description>DAYS</description></item>
+                /// <item><description>WEEKS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>WEEKS</para>
+                /// <para>DAYS</para>
                 /// </summary>
                 [NameInMap("TimeUnit")]
                 [Validation(Required=false)]
@@ -250,10 +246,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The status of the policy. Valid values:</para>
+        /// <para>The status of the snapshot policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENABLED</b>: Enable snapshot policy execution.</description></item>
-        /// <item><description><b>DISABLED</b>: Disable snapshot policy execution.</description></item>
+        /// <item><description>ENABLED</description></item>
+        /// <item><description>DISABLED</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -264,19 +260,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Advanced snapshot features.</para>
+        /// <para>The advanced snapshot feature.</para>
         /// </summary>
         [NameInMap("StorageRule")]
         [Validation(Required=false)]
         public UpdateEnterpriseSnapshotPolicyRequestStorageRule StorageRule { get; set; }
         public class UpdateEnterpriseSnapshotPolicyRequestStorageRule : TeaModel {
             /// <summary>
-            /// <para>Whether to enable the rapid availability of snapshots. The range of values:</para>
+            /// <para>Specifies whether to enable instant access for snapshots. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
+            /// <item><description>true</description></item>
+            /// <item><description>false</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskReplicaPairsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The query token returned from this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Details of the replication pairs.</para>
+        /// <para>The replication pairs.</para>
         /// </summary>
         [NameInMap("ReplicaPairs")]
         [Validation(Required=false)]
         public List<DescribeDiskReplicaPairsResponseBodyReplicaPairs> ReplicaPairs { get; set; }
         public class DescribeDiskReplicaPairsResponseBodyReplicaPairs : TeaModel {
             /// <summary>
-            /// <para>The bandwidth used to asynchronously replicate data from the primary disk to the secondary disk. Unit: Kbit/s.</para>
+            /// <para>The bandwidth used for asynchronous replication. Unit: Kbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10240</para>
@@ -57,10 +57,13 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the replication pair. Valid values:</para>
+            /// <para>The billing method of the replication pair.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY: subscription</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go</description></item>
+            /// <item><description><para>PREPAY: subscription.</para>
+            /// </description></item>
+            /// <item><description><para>POSTPAY: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the replication pair was created. The value of this parameter is a timestamp. Unit: seconds.</para>
+            /// <para>The creation time. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649750977</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DestinationDiskId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the secondary disk.</para>
+            /// <para>The region of the secondary disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DestinationRegion { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the secondary disk.</para>
+            /// <para>The zone of the secondary disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-b</para>
@@ -121,17 +124,23 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DestinationZoneId { get; set; }
 
             /// <summary>
-            /// <para>Whether the replication time control is enabled. If the replication pair has been added to a replication group, it is consistent with the attributes of the replication group.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>Specifies whether real-time control (RTC) is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>false: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>If the replication pair is in a replication pair-consistent group, the value of this parameter is the same as that of the group.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("EnableRtc")]
             [Validation(Required=false)]
             public bool? EnableRtc { get; set; }
 
             /// <summary>
-            /// <para>The time when the replication pair expires. The value of this parameter is a timestamp. Unit: seconds.</para>
+            /// <para>The expiration time of the replication pair. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649750977</para>
@@ -141,7 +150,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when data was last replicated from the primary disk to the secondary disk in the replication pair. The value of this parameter is a timestamp. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</para>
+            /// <para>The time when the last asynchronous replication was completed. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649751977</para>
@@ -161,7 +170,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string PairName { get; set; }
 
             /// <summary>
-            /// <para>The initial source region (primary region) of the replication pair.</para>
+            /// <para>The initial source region of the replication pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -171,7 +180,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string PrimaryRegion { get; set; }
 
             /// <summary>
-            /// <para>The initial source zone (primary zone) of the replication pair.</para>
+            /// <para>The initial source zone of the replication pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-a</para>
@@ -231,10 +240,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the site from which the information about the replication pairs and replication pair-consistent group was obtained. Valid values:</para>
+            /// <para>The site type of the replication pair or replication pair-consistent group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>production: primary site</description></item>
-            /// <item><description>backup: secondary site</description></item>
+            /// <item><description><para>production: the production site.</para>
+            /// </description></item>
+            /// <item><description><para>backup: the disaster recovery site.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,7 +266,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string SourceDiskId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the primary disk.</para>
+            /// <para>The region of the primary disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -265,7 +276,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string SourceRegion { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the primary disk.</para>
+            /// <para>The zone of the primary disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-a</para>
@@ -275,7 +286,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string SourceZoneId { get; set; }
 
             /// <summary>
-            /// <para>The initial destination region (secondary region) of the replication pair.</para>
+            /// <para>The initial destination region of the replication pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -285,7 +296,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string StandbyRegion { get; set; }
 
             /// <summary>
-            /// <para>The initial destination zone (secondary zone) of the replication pair.</para>
+            /// <para>The initial destination zone of the replication pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-b</para>
@@ -297,25 +308,44 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// <summary>
             /// <para>The status of the replication pair. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invalid: The replication pair was invalid. When a replication pair becomes abnormal, it enters this state.</description></item>
-            /// <item><description>creating: The replication pair was being created.</description></item>
-            /// <item><description>created: The replication pair was created.</description></item>
-            /// <item><description>create_failed: The replication pair failed to be created.</description></item>
-            /// <item><description>initial_syncing: Data was synchronized from the primary disk to the secondary disk for the first time. After a replication pair is created and activated, the replication pair is in this state the first time data is synchronized from the primary disk to the secondary disk.</description></item>
-            /// <item><description>manual_syncing: Data was being manually synchronized from the primary disk to the secondary disk. After data is manually synchronized from the primary disk to the secondary disk, the replication pair returns to the stopped state. The first time data is manually synchronized from the primary disk to the secondary disk, the replication pair is in the manual_syncing state during the synchronization.</description></item>
-            /// <item><description>syncing: Data was being synchronized from the primary disk to the secondary disk. When data is being asynchronously replicated from the primary disk to the secondary disk again in subsequent operations, the replication pair is in this state.</description></item>
-            /// <item><description>normal: The replication pair was working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</description></item>
-            /// <item><description>stopping: The replication pair was being stopped.</description></item>
-            /// <item><description>stopped: The replication pair was stopped.</description></item>
-            /// <item><description>stop_failed: The replication pair failed to be stopped.</description></item>
-            /// <item><description>failovering: A failover was being performed.</description></item>
-            /// <item><description>failovered: A failover was performed.</description></item>
-            /// <item><description>failover_failed: A failover failed to be performed.</description></item>
-            /// <item><description>reprotecting: A reverse replication was being performed.</description></item>
-            /// <item><description>reprotect_failed: A reverse replication failed to be performed.</description></item>
-            /// <item><description>deleting: The replication pair was being deleted.</description></item>
-            /// <item><description>delete_failed: The replication pair failed to be deleted.</description></item>
-            /// <item><description>deleted: The replication pair was deleted.</description></item>
+            /// <item><description><para>invalid: The replication pair is invalid. This status indicates that the replication pair is not working correctly.</para>
+            /// </description></item>
+            /// <item><description><para>creating: The replication pair is being created.</para>
+            /// </description></item>
+            /// <item><description><para>created: The replication pair is created.</para>
+            /// </description></item>
+            /// <item><description><para>create_failed: The replication pair failed to be created.</para>
+            /// </description></item>
+            /// <item><description><para>initial_syncing: The replication pair is in the initial synchronization state. After a replication pair is created and started, it enters this state during the first asynchronous replication of data from the primary disk to the secondary disk.</para>
+            /// </description></item>
+            /// <item><description><para>manual_syncing: The replication pair is being manually synchronized. After the manual synchronization is complete, the replication pair returns to the stopped state. If it is the first one-time synchronization, the status is also manual_syncing.</para>
+            /// </description></item>
+            /// <item><description><para>syncing: The replication pair is synchronizing data. The replication pair is in this state when data is asynchronously replicated from the primary disk to the secondary disk for a second or subsequent time.</para>
+            /// </description></item>
+            /// <item><description><para>normal: The replication pair is in the normal state. The replication pair enters this state when data replication is complete in the current replication cycle.</para>
+            /// </description></item>
+            /// <item><description><para>stopping: The replication pair is being stopped.</para>
+            /// </description></item>
+            /// <item><description><para>stopped: The replication pair is stopped.</para>
+            /// </description></item>
+            /// <item><description><para>stop_failed: The replication pair failed to be stopped.</para>
+            /// </description></item>
+            /// <item><description><para>failovering: A failover is in progress.</para>
+            /// </description></item>
+            /// <item><description><para>failovered: The failover is complete.</para>
+            /// </description></item>
+            /// <item><description><para>failover_failed: The failover failed.</para>
+            /// </description></item>
+            /// <item><description><para>reprotecting: A reverse replication is in progress.</para>
+            /// </description></item>
+            /// <item><description><para>reprotect_failed: The reverse replication failed.</para>
+            /// </description></item>
+            /// <item><description><para>deleting: The replication pair is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>delete_failed: The replication pair failed to be deleted.</para>
+            /// </description></item>
+            /// <item><description><para>deleted: The replication pair is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -326,14 +356,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The message that describes the state of the replication pair. This parameter has a value when <c>Status</c> has a value of invalid or <c>create_failed</c>. Valid values:</para>
+            /// <para>The status message of the replication pair. This parameter is returned when the Status is <c>invalid</c> or <c>create_failed</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PrePayOrderExpired: The replication pair has expired.</description></item>
-            /// <item><description>PostPayOrderCeaseService: The pay-as-you-go replication pair has been stopped due to an overdue payment.</description></item>
-            /// <item><description>DeviceRemoved: The primary or secondary disk has been deleted.</description></item>
-            /// <item><description>DeviceKeyChanged: The <c>DeviceKey</c> mapping of the primary or secondary disk has changed.</description></item>
-            /// <item><description>DeviceSizeChanged: The <c>DeviceSize</c> value of the primary or secondary disk has changed.</description></item>
-            /// <item><description>OperationDenied.QuotaExceed: The maximum number of replication pairs that can be created has been reached.</description></item>
+            /// <item><description><para>PrePayOrderExpired: The subscription replication pair has expired.</para>
+            /// </description></item>
+            /// <item><description><para>PostPayOrderCeaseService: The service for the pay-as-you-go replication pair is suspended, usually due to an overdue payment.</para>
+            /// </description></item>
+            /// <item><description><para>DeviceRemoved: The primary or secondary disk is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>DeviceKeyChanged: The <c>DeviceKey</c> mapping of the primary or secondary disk has changed.</para>
+            /// </description></item>
+            /// <item><description><para>DeviceSizeChanged: The <c>DeviceSize</c> of the primary or secondary disk has changed.</para>
+            /// </description></item>
+            /// <item><description><para>OperationDenied.QuotaExceed: The number of created replication pairs exceeds the quota.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -375,7 +411,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAA478A0-BEE6-1D42-BEB6-A9CFEAD6****</para>
@@ -385,7 +421,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

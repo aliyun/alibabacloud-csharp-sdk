@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The detailed reason why access was denied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The app ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>app-bd5e3533</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The app name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TestApp_g5t</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The status code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -50,14 +60,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/j6if7e3w217z31q/j6if7e3w217z31q.sql.zip?Expires=1753331032&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=vOXj4E1%2FCqncWcDtu3UxxuOcyh0%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/j6if7e3w217z31q/j6if7e3w217z31q.sql.zip?Expires=1753331032&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=vOXj4E1%2FCqncWcDtu3UxxuOcyh0%3D</a></para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The error code description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -66,6 +82,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The additional information. If the request is successful, &quot;success&quot; is returned. If the request fails, a specific error code is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -74,6 +92,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E604ABBF-FD0F-5080-BE2B-BCF674A9E941</para>
         /// </summary>
@@ -82,6 +102,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the app was created successfully. Valid values: true: The app was created successfully. false: The app failed to be created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -90,6 +112,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>

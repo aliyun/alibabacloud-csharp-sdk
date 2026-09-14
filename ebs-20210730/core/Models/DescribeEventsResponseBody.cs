@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("ResourceEvents")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyResourceEvents> ResourceEvents { get; set; }
         public class DescribeEventsResponseBodyResourceEvents : TeaModel {
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The event description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>need snapshot</para>
+            /// <para>You can purchase 4296 provisioned IOPS for cost optimization. Based on your usage over the past 7 days, costs are estimated to decrease by 16%</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</para>
+            /// <para>The end time of the event. This value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1679538083000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The level of the event. Valid values:</para>
+            /// <para>The event level. Valid values:</para>
             /// <ol>
             /// <item><description>INFO</description></item>
             /// <item><description>WARN</description></item>
@@ -72,20 +72,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the event. Valid values:</para>
+            /// <para>The event name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</description></item>
-            /// <item><description>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</description></item>
-            /// <item><description>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</description></item>
-            /// <item><description>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</description></item>
-            /// <item><description>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</description></item>
-            /// <item><description>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</description></item>
-            /// <item><description>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</description></item>
-            /// <item><description>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</description></item>
-            /// <item><description>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</description></item>
-            /// <item><description>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</description></item>
-            /// <item><description>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</description></item>
-            /// <item><description>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</description></item>
+            /// <item><description>NoSnapshot: data protection</description></item>
+            /// <item><description>BurstIOTriggered: burst I/O</description></item>
+            /// <item><description>CostOptimizationNeeded: cost optimization</description></item>
+            /// <item><description>DiskSpecNotMatchedWithInstance: instance and disk specification mismatch</description></item>
+            /// <item><description>DiskIONo4kAligned: non-4K aligned read/write</description></item>
+            /// <item><description>DiskIOHang: disk IOHang occurred</description></item>
+            /// <item><description>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</description></item>
+            /// <item><description>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</description></item>
+            /// <item><description>DiskIOPSExceedInstanceMaxLimit: disk IOPS reached the instance upper limit</description></item>
+            /// <item><description>DiskBPSExceedInstanceMaxLimit: disk BPS reached the instance upper limit</description></item>
+            /// <item><description>DiskIOPSExceedDiskMaxLimit: disk IOPS reached the disk upper limit</description></item>
+            /// <item><description>DiskBPSExceedDiskMaxLimit: disk BPS reached the disk upper limit</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The type of the event. Valid values:</para>
+            /// <para>The event type. Valid values:</para>
             /// <ol>
             /// <item><description>Notification</description></item>
             /// <item><description>SystemException</description></item>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>Extra attributes of event, possible fields are:</para>
+            /// <para>The additional properties. Possible fields:</para>
             /// <list type="bullet">
-            /// <item><description>EcsInstanceId: ECS instance ID where the cloud disk is mounted;</description></item>
-            /// <item><description>Adapter: cloud disk mount point.</description></item>
+            /// <item><description>EcsInstanceId: the ID of the ECS instance to which the cloud disk is attached.</description></item>
+            /// <item><description>Adapter: the mount point of the cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,13 +125,13 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ExtraAttributes { get; set; }
 
             /// <summary>
-            /// <para>The recommended action after the event occurred. Valid values:</para>
+            /// <para>The recommended action after the event occurs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ModifyDiskSpec</description></item>
-            /// <item><description>CreateSnapshot</description></item>
-            /// <item><description>ResizeDisk</description></item>
-            /// <item><description>AdjustProvision</description></item>
-            /// <item><description>ModifyInstanceSpec</description></item>
+            /// <item><description>ModifyDiskSpec: change disk specifications</description></item>
+            /// <item><description>CreateSnapshot: create a snapshot</description></item>
+            /// <item><description>ResizeDisk: expand disk capacity</description></item>
+            /// <item><description>AdjustProvision: adjust provisioned performance</description></item>
+            /// <item><description>ModifyInstanceSpec: change instance specifications</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string RecommendAction { get; set; }
 
             /// <summary>
-            /// <para>The codes of the parameters for the recommended action after the event occurred.</para>
+            /// <para>The parameters for the recommended action after the event occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4296</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string RecommendParams { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-bp67acfmxazb4p****</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disk</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.</para>
+            /// <para>The start time of the event. This value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684204822000</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the event. Valid values:</para>
+            /// <para>The event status. Valid values:</para>
             /// <ol>
-            /// <item><description>WillExecute</description></item>
-            /// <item><description>Executing</description></item>
-            /// <item><description>Executed</description></item>
-            /// <item><description>Ignore</description></item>
-            /// <item><description>Expired</description></item>
-            /// <item><description>Deleted</description></item>
+            /// <item><description>WillExecute: pending</description></item>
+            /// <item><description>Executing: processing</description></item>
+            /// <item><description>Executed: processed</description></item>
+            /// <item><description>Ignore: ignored</description></item>
+            /// <item><description>Expired: expired</description></item>
+            /// <item><description>Deleted: deleted</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries returned for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

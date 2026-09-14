@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateEnterpriseSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The id of a policy.</para>
+        /// <para>The snapshot policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esp-xxx</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7A8959DA-1E04-5724-8288-58334031454E</para>
+        /// <para>F13483A9-17E2-5085-9B2E-2155B0487FF7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

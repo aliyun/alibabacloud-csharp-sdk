@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeMetricDataShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Aggregation method over time. Possible values include:</para>
+        /// <para>The method for aggregating data over time. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SUM_OVER_TIME</description></item>
         /// <item><description>COUNT_OVER_TIME</description></item>
         /// <item><description>AVG_OVER_TIME</description></item>
         /// <item><description>MAX_OVER_TIME</description></item>
         /// <item><description>MIN_OVER_TIME</description></item>
-        /// <item><description>SUM_OVER_TIME_LCRO: Sum over a left-closed, right-open interval</description></item>
-        /// <item><description>AVG_OVER_TIME_LCRO: Average over a left-closed, right-open interval</description></item>
-        /// <item><description>SUM_OVER_TIME_LORC: Sum over a left-open, right-closed interval</description></item>
-        /// <item><description>AVG_OVER_TIME_LORC: Average over a left-open, right-closed interval</description></item>
+        /// <item><description>SUM_OVER_TIME_LCRO: The sum of values in a left-closed, right-open interval.</description></item>
+        /// <item><description>AVG_OVER_TIME_LCRO: The average of values in a left-closed, right-open interval.</description></item>
+        /// <item><description>SUM_OVER_TIME_LORC: The sum of values in a left-open, right-closed interval.</description></item>
+        /// <item><description>AVG_OVER_TIME_LORC: The average of values in a left-open, right-closed interval.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AggreOps { get; set; }
 
         /// <summary>
-        /// <para>Aggregation method between lines. Possible values include:</para>
+        /// <para>The method for aggregating data across different lines. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NON: No aggregation</description></item>
-        /// <item><description>SUM: Sum</description></item>
-        /// <item><description>AVG: Average</description></item>
-        /// <item><description>COUNT: Count</description></item>
-        /// <item><description>MAX: Maximum</description></item>
-        /// <item><description>MIN: Minimum</description></item>
+        /// <item><description>NON: No aggregation is performed.</description></item>
+        /// <item><description>SUM: The sum of values.</description></item>
+        /// <item><description>AVG: The average of values.</description></item>
+        /// <item><description>COUNT: The number of values.</description></item>
+        /// <item><description>MAX: The maximum value.</description></item>
+        /// <item><description>MIN: The minimum value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,15 +49,15 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AggreOverLineOps { get; set; }
 
         /// <summary>
-        /// <para>The dimension map, in the JSON format. Valid values:</para>
+        /// <para>A map of dimensions in the JSON format. The map specifies the dimensions to query. The following keys are supported:</para>
         /// <list type="bullet">
-        /// <item><description>DiskId: the disk name. Example: d-xxx.</description></item>
-        /// <item><description>DeviceType: the disk type. system indicates the system disk, and data indicates the data disk.</description></item>
-        /// <item><description>DeviceCategory: the disk category. Example: cloud_essd.</description></item>
-        /// <item><description>EcsInstanceId: the ECS instance name. Example: i-xxx.</description></item>
-        /// <item><description>Azone: the zone, such as cn-hangzhou-a.</description></item>
+        /// <item><description>DiskId: The disk name, such as d-xxx.</description></item>
+        /// <item><description>DeviceType: The disk category. \<c>system\\</c> indicates a system disk and \<c>data\\</c> indicates a data disk.</description></item>
+        /// <item><description>DeviceCategory: The disk type, such as cloud_essd.</description></item>
+        /// <item><description>EcsInstanceId: The name of the ECS instance to which the disk is attached, such as i-xxx.</description></item>
+        /// <item><description>Azone: The zone, such as cn-hangzhou-a.</description></item>
         /// </list>
-        /// <para>The returned result is the intersection of all dimension filtering conditions.</para>
+        /// <para>The returned results are the intersection of all specified dimension-based filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;DiskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;], &quot;DeviceCategory&quot;: [&quot;cloud_essd&quot;]}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The end time point for obtaining metric data. It should not be later than the current moment. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end of the time range to query metric data. The time cannot be later than the current time. The time must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-11-21T02:00:00Z</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The list of fields used for grouping and aggregation.</para>
+        /// <para>A list of fields for grouping and aggregation.</para>
         /// </summary>
         [NameInMap("GroupByLabels")]
         [Validation(Required=false)]
         public string GroupByLabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>Metric name. Possible values include:</para>
+        /// <para>The name of the metric. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>disk_bps_percent</description></item>
         /// <item><description>disk_iops_percent</description></item>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which data is collected for the metric. Unit: seconds. Default value: 5. Valid values:</para>
+        /// <para>The interval at which to query metric data. Unit: seconds. The default value is 5. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>5: 5 seconds. The query time range can be up to 12 hours.</description></item>
-        /// <item><description>10: 10 seconds. The query time range can be up to 24 hours.</description></item>
-        /// <item><description>60: 60 seconds. The query time range can be up to 7 days.</description></item>
-        /// <item><description>300: 300 seconds. The query time range can be up to 30 days.</description></item>
-        /// <item><description>600: 600 seconds. The query time range can be up to 30 days.</description></item>
-        /// <item><description>3600: 3,600 seconds. The query time range can be up to 30 days.</description></item>
+        /// <item><description>5: 5-second precision. You can query data within a 12-hour time range.</description></item>
+        /// <item><description>10: 10-second precision. You can query data within a 24-hour time range.</description></item>
+        /// <item><description>60: 60-second precision. You can query data within a 7-day time range.</description></item>
+        /// <item><description>300: 300-second precision. You can query data within a 30-day time range.</description></item>
+        /// <item><description>600: 600-second precision. You can query data within a 30-day time range.</description></item>
+        /// <item><description>3600: 3600-second precision. You can query data within a 30-day time range.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. You can specify a point in time that is up to 30 days before the current time. If both StartTime and EndTime are left empty, the monitoring metric data of the most recent statistical period is queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query metric data. The start time can be up to 30 days before the current time. If you leave both the StartTime and EndTime parameters empty, the system queries the metrics for the most recent period. The time must be in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-11-21T01:50:00Z</para>

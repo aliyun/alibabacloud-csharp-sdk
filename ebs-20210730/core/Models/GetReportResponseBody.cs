@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class GetReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data Details.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Datas")]
         [Validation(Required=false)]
         public List<GetReportResponseBodyDatas> Datas { get; set; }
         public class GetReportResponseBodyDatas : TeaModel {
             /// <summary>
-            /// <para>Data.</para>
+            /// <para>The data.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<GetReportResponseBodyDatasData> Data { get; set; }
             public class GetReportResponseBodyDatasData : TeaModel {
                 /// <summary>
-                /// <para>Data Points.</para>
+                /// <para>The data points.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public Dictionary<string, object> DataPoints { get; set; }
 
                 /// <summary>
-                /// <para>Data Labels.</para>
+                /// <para>The data labels.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             }
 
             /// <summary>
-            /// <para>Data Title.</para>
+            /// <para>The data title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disk_count_percent_by_category</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C123F94F-4E38-19AE-942A-A8D6F44F****</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the regions.</para>
+        /// <para>The collection of region and zone information.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China (Hangzhou)</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Details about the zones.</para>
+            /// <para>The collection of zone information.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsZones> Zones { get; set; }
             public class DescribeRegionsResponseBodyRegionsZones : TeaModel {
                 /// <summary>
-                /// <para>The name of the zone.</para>
+                /// <para>The zone name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hangzhou Zone H</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The type of resource list.</para>
+                /// <para>The list of resource types.</para>
                 /// </summary>
                 [NameInMap("ResourceTypes")]
                 [Validation(Required=false)]
                 public List<string> ResourceTypes { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
+                /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17EE62D8-064E-5404-8B0D-72122478****</para>

@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of CloudLens for EBS. Valid values:</para>
+        /// <para>The status of EBS Lens. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Applying</description></item>
-        /// <item><description>UnAvailable</description></item>
-        /// <item><description>Available</description></item>
+        /// <item><description><para>Applying: The service is being applied for.</para>
+        /// </description></item>
+        /// <item><description><para>UnAvailable: The service is unavailable.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The service is available.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeLensMonitorDisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the disks.</para>
+        /// <para>The list of cloud disk information.</para>
         /// </summary>
         [NameInMap("DiskInfos")]
         [Validation(Required=false)]
         public List<DescribeLensMonitorDisksResponseBodyDiskInfos> DiskInfos { get; set; }
         public class DescribeLensMonitorDisksResponseBodyDiskInfos : TeaModel {
             /// <summary>
-            /// <para>The BPS.</para>
+            /// <para>The maximum data throughput for read/write (I/O) operations per second. Unit: MB/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? Bps { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the performance burst feature is enabled. Valid values:</para>
+            /// <para>Indicates whether burst (performance bursting) is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
-            /// <para>This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disk</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public bool? BurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The type of the disk. Valid values:</para>
+            /// <para>The cloud disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud</description></item>
-            /// <item><description>cloud_efficiency</description></item>
-            /// <item><description>cloud_ssd</description></item>
-            /// <item><description>cloud_essd</description></item>
-            /// <item><description>cloud_auto</description></item>
-            /// <item><description>cloud_essd_entry</description></item>
+            /// <item><description>cloud: basic cloud disk.</description></item>
+            /// <item><description>cloud_efficiency: ultra cloud disk.</description></item>
+            /// <item><description>cloud_ssd: standard SSD.</description></item>
+            /// <item><description>cloud_essd: Enterprise SSD (ESSD).</description></item>
+            /// <item><description>cloud_auto: ESSD AutoPL cloud disk.</description></item>
+            /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the disk.</para>
+            /// <para>The cloud disk ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-cd401****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the disk.</para>
+            /// <para>The cloud disk name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disk-28c6b****</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskName { get; set; }
 
             /// <summary>
-            /// <para>The disk status. Valid values:</para>
+            /// <para>The cloud disk status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Available</description></item>
-            /// <item><description>Deleted</description></item>
+            /// <item><description>Available: in use.</description></item>
+            /// <item><description>Deleted: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The disk type. Valid values:</para>
+            /// <para>The cloud disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system disk</description></item>
-            /// <item><description>data: data disk</description></item>
+            /// <item><description>system: system cloud disk.</description></item>
+            /// <item><description>data: data cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The IOPS.</para>
+            /// <para>The maximum number of read/write (I/O) operations per second. Unit: operations/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4000</para>
@@ -118,19 +118,19 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? Iops { get; set; }
 
             /// <summary>
-            /// <para>Event tags of the disk.</para>
+            /// <para>The collection of event tags for the cloud disk. Event tags display events that occurred on the cloud disk within the last 24 hours, with a delay of up to 1 hour compared to the actual events.</para>
             /// </summary>
             [NameInMap("LensTags")]
             [Validation(Required=false)]
             public List<string> LensTags { get; set; }
 
             /// <summary>
-            /// <para>The new performance level of the ESSD. Valid values:</para>
+            /// <para>The performance level (PL) of the ESSD cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: maximum random read/write IOPS of 10,000 per standard SSD.</description></item>
+            /// <item><description>PL1: maximum random read/write IOPS of 50,000 per standard SSD.</description></item>
+            /// <item><description>PL2: maximum random read/write IOPS of 100,000 per standard SSD.</description></item>
+            /// <item><description>PL3: maximum random read/write IOPS of 1,000,000 per standard SSD.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,9 +141,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-            /// <para>Baseline performance = min{1,800 + 50 × Capacity, 50,000}</para>
-            /// <para>This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// <para>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline performance}.</para>
+            /// <para>Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <para>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disk</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4000</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? ProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the disk.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -162,12 +162,18 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the cloud disk is a shared cloud disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SharingEnabled")]
             [Validation(Required=false)]
             public string SharingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The size of the disk. Unit: GiB.</para>
+            /// <para>The cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -177,7 +183,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>Tags of the disk.</para>
+            /// <para>The collection of tags for the cloud disk.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -206,7 +212,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID of the cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-j</para>
@@ -218,7 +224,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -228,7 +234,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. A request ID is returned regardless of whether the API call succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskReplicaGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The query token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> ReplicaGroups { get; set; }
         public class DescribeDiskReplicaGroupsResponseBodyReplicaGroups : TeaModel {
             /// <summary>
-            /// <para>The bandwidth value. Unit: Kbit/s. This parameter is not publicly available and has a system-preset value.</para>
+            /// <para>The bandwidth. Unit: Kbit/s. This parameter is not yet available. The return value is preset by the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the secondary site is deployed.</para>
+            /// <para>The region ID of the disaster recovery site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DestinationRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone in which the secondary site is deployed.</para>
+            /// <para>The zone ID of the disaster recovery site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-e</para>
@@ -87,7 +87,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string DestinationZoneId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to enable replication time control.</para>
+            /// <para>Specifies whether to enable replication time control (RTC). Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>false: Disables RTC.</para>
+            /// </description></item>
+            /// <item><description><para>true: Enables RTC.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>If you set this parameter to true, RTC is enabled for the replication pair-consistent group and all asynchronous replication pairs that are added to the group.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +116,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.</para>
+            /// <para>The time when the last asynchronous replication was completed for the replication pair-consistent group. This parameter is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1637835114</para>
@@ -117,14 +126,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? LastRecoverPoint { get; set; }
 
             /// <summary>
-            /// <para>The IDs of replication pairs that belong to the replication pair-consistent group.</para>
+            /// <para>The list of replication pair IDs in the replication pair-consistent group.</para>
             /// </summary>
             [NameInMap("PairIds")]
             [Validation(Required=false)]
             public List<byte[]> PairIds { get; set; }
 
             /// <summary>
-            /// <para>The number of replication pairs that belong to the replication pair-consistent group.</para>
+            /// <para>The number of replication pairs in the replication pair-consistent group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -134,7 +143,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? PairNumber { get; set; }
 
             /// <summary>
-            /// <para>The initial source region (primary region) of the replication pair-consistent group.</para>
+            /// <para>The initial source region of the replication group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -144,7 +153,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string PrimaryRegion { get; set; }
 
             /// <summary>
-            /// <para>The initial source zone (primary zone) of the replication pair-consistent group.</para>
+            /// <para>The initial source zone of the replication group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-h</para>
@@ -164,7 +173,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public long? RPO { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the replication pair-consistent groups.</para>
+            /// <para>The ID of the replication pair-consistent group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-myreplica****</para>
@@ -174,7 +183,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ReplicaGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the replication pair-consistent group belongs.</para>
+            /// <para>The ID of the resource group to which the replication group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2a*******</para>
@@ -184,10 +193,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of the site from which the information about the replication pairs and replication pair-consistent group was obtained. Valid values:</para>
+            /// <para>The site of the replication pair and the replication pair-consistent group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>production: primary site</description></item>
-            /// <item><description>backup: secondary site</description></item>
+            /// <item><description><para>production: The production site.</para>
+            /// </description></item>
+            /// <item><description><para>backup: The disaster recovery site.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -198,7 +209,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Site { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the primary site is deployed.</para>
+            /// <para>The region ID of the production site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -208,7 +219,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string SourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone in which the primary site is deployed.</para>
+            /// <para>The zone ID of the production site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-f</para>
@@ -218,7 +229,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string SourceZoneId { get; set; }
 
             /// <summary>
-            /// <para>The initial destination region (secondary region) of the replication pair-consistent group.</para>
+            /// <para>The initial destination region of the replication group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -228,7 +239,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string StandbyRegion { get; set; }
 
             /// <summary>
-            /// <para>The initial destination zone (secondary zone) of the replication pair-consistent group.</para>
+            /// <para>The initial destination zone of the replication group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-e</para>
@@ -240,24 +251,42 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             /// <summary>
             /// <para>The status of the replication pair-consistent group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>invalid: The replication pair-consistent group is invalid, which indicates that abnormal replication pairs are present in the replication pair-consistent group.</description></item>
-            /// <item><description>creating: The replication pair-consistent group is being created.</description></item>
-            /// <item><description>created: The replication pair-consistent group was created.</description></item>
-            /// <item><description>create_failed: The replication pair-consistent group failed to be created.</description></item>
-            /// <item><description>manual_syncing: Data was being manually synchronized between the disks in the replication pair-consistent group. When data was being manually synchronized for the first time, the replication pair is in this state.</description></item>
-            /// <item><description>syncing: Data was being synchronized between the disks. When data is being asynchronously replicated from the primary disk to the secondary disk again in subsequent operations, the replication pair is in this state.</description></item>
-            /// <item><description>normal: The replication pair was working as expected. When the system finishes replicating data from the primary disk to the secondary disk within the current replication cycle, the replication pair enters this state.</description></item>
-            /// <item><description>stopping: The replication pair was being stopped.</description></item>
-            /// <item><description>stopped: The replication pair was stopped.</description></item>
-            /// <item><description>stop_failed: The replication pair failed to be stopped.</description></item>
-            /// <item><description>failovering: A failover was being performed.</description></item>
-            /// <item><description>failovered: A failover was performed.</description></item>
-            /// <item><description>failover_failed: A failover failed to be performed.</description></item>
-            /// <item><description>reprotecting: A reverse replication was being performed.</description></item>
-            /// <item><description>reprotect_failed: A reverse replication failed to be performed.</description></item>
-            /// <item><description>deleting: The replication pair was being deleted.</description></item>
-            /// <item><description>delete_failed: The replication pair failed to be deleted.</description></item>
-            /// <item><description>deleted: The replication pair was deleted.</description></item>
+            /// <item><description><para>invalid: The replication pair-consistent group is invalid. This status indicates that a replication pair in the group is abnormal.</para>
+            /// </description></item>
+            /// <item><description><para>creating: The replication pair-consistent group is being created.</para>
+            /// </description></item>
+            /// <item><description><para>created: The replication pair-consistent group is created.</para>
+            /// </description></item>
+            /// <item><description><para>create_failed: The replication pair-consistent group failed to be created.</para>
+            /// </description></item>
+            /// <item><description><para>manual_syncing: The replication pair-consistent group is performing a one-time synchronization. The group is also in this state during the first one-time synchronization.</para>
+            /// </description></item>
+            /// <item><description><para>syncing: The replication pair-consistent group is synchronizing data. The group is in this state when data is asynchronously replicated from the primary disk to the secondary disk for a subsequent time.</para>
+            /// </description></item>
+            /// <item><description><para>normal: Normal. When data replication is complete in the current asynchronous replication cycle, the group is in this state.</para>
+            /// </description></item>
+            /// <item><description><para>stopping: The replication pair-consistent group is being stopped.</para>
+            /// </description></item>
+            /// <item><description><para>stopped: The replication pair-consistent group is stopped.</para>
+            /// </description></item>
+            /// <item><description><para>stop_failed: The replication pair-consistent group failed to be stopped.</para>
+            /// </description></item>
+            /// <item><description><para>failovering: A failover is being performed.</para>
+            /// </description></item>
+            /// <item><description><para>failovered: The failover is complete.</para>
+            /// </description></item>
+            /// <item><description><para>failover_failed: The failover failed.</para>
+            /// </description></item>
+            /// <item><description><para>reprotecting: A reverse replication is being performed.</para>
+            /// </description></item>
+            /// <item><description><para>reprotect_failed: The reverse replication failed.</para>
+            /// </description></item>
+            /// <item><description><para>deleting: The replication pair-consistent group is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>delete_failed: The replication pair-consistent group failed to be deleted.</para>
+            /// </description></item>
+            /// <item><description><para>deleted: The replication pair-consistent group is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -268,14 +297,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the replication pair-consistent group.</para>
+            /// <para>The tags of the replication group.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags> Tags { get; set; }
             public class DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the replication pair-consistent group.</para>
+                /// <para>The key of the tag of the replication group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testKey</para>
@@ -285,7 +314,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the replication pair-consistent group.</para>
+                /// <para>The value of the tag of the replication group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testValue</para>

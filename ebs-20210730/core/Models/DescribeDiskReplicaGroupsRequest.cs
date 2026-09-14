@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskReplicaGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</para>
-        /// <para>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried. You can specify up to the IDs of 100 replication pair-consistent groups.</para>
+        /// <para>The IDs of the replication pair-consistent groups. You can specify one or more group IDs. Separate multiple IDs with a comma (,).</para>
+        /// <para>If you do not specify this parameter, all replication pair-consistent groups in the current region are queried. You can specify up to 100 group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string GroupIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. You can use this parameter together with NextToken.</para>
+        /// <para>The maximum number of entries to return on a single page. You can use this parameter with NextToken.</para>
         /// <para>Valid values: 1 to 500.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication pair-consistent group. You can perform a fuzzy search.</para>
+        /// <para>The name of the replication group. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-name***</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</para>
+        /// <para>The query token. Set this parameter to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If you set NextToken, the PageSize and PageNumber parameters are ignored, and the TotalCount in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -63,7 +63,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page.
+        /// Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -73,7 +74,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the replication pair-consistent group belongs.</para>
+        /// <para>The region ID of the replication pair-consistent group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,14 +95,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.</para>
+        /// <para>The site to query. This parameter is used when replication pairs are deployed across zones.</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter is not specified, information such as the status of replication pair-consistent groups at the primary site is queried and returned.</para>
+        /// <item><description><para>If you do not specify this parameter, the records and status information of replication pairs at the production site are returned.</para>
         /// </description></item>
-        /// <item><description><para>Otherwise, information such as the state of replication pairs at the site specified by the Site parameter is queried and returned. Valid values:</para>
+        /// <item><description><para>If you specify this parameter, only the records and status information of replication pairs at the specified site are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>production: primary site</description></item>
-        /// <item><description>backup: secondary site</description></item>
+        /// <item><description><para>production: The production site.</para>
+        /// </description></item>
+        /// <item><description><para>backup: The disaster recovery site.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -114,14 +117,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Site { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the replication pair-consistent group. You can specify up to 20 tags.</para>
+        /// <para>The tags. The list can contain up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDiskReplicaGroupsRequestTag> Tag { get; set; }
         public class DescribeDiskReplicaGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the replication pair-consistent group.</para>
+            /// <para>The key of the tag of the replication pair-consistent group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-key</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the replication pair-consistent group.</para>
+            /// <para>The value of the tag of the replication pair-consistent group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-value</para>

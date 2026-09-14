@@ -10,22 +10,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ModifyDiskReplicaGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth value. Unit: Kbit/s.</para>
+        /// <para>The bandwidth. Unit: Kbps.</para>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -45,7 +43,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable replication time control.</para>
+        /// <para>Specifies whether to enable replication time control (RTC). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false: RTC is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>true: RTC is enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If this parameter is set to true, RTC is enabled for the replication pair-consistent group. RTC is also enabled for all asynchronous replication pairs that are added to the group.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -55,7 +62,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public bool? EnableRtc { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>myreplicagrouptest</para>
@@ -65,7 +72,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The RPO of the replication pair-consistent group. Unit: seconds. Valid value: 900.</para>
+        /// <para>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. A value of 900 is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the replication pair-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/426614.html">DescribeDiskReplicaGroups</a> operation to query the IDs of replication pair-consistent groups.</para>
+        /// <para>The ID of the replication pair-consistent group. Call <a href="https://help.aliyun.com/document_detail/426614.html">DescribeDiskReplicaGroups</a> to query the IDs of replication pair-consistent groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

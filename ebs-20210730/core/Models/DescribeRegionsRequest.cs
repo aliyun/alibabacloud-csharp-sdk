@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which the regions and zones are named. This parameter corresponds to the <c>LocalName</c> response parameter. Valid values:</para>
+        /// <para>The language type for region and zone names. This parameter determines the value of <c>LocalName</c> in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description>zh-CN: Chinese.</description></item>
+        /// <item><description>en-US: English.</description></item>
+        /// <item><description>ja: Japanese.</description></item>
         /// </list>
         /// <para>Default value: zh-CN.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID of the user access endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -36,13 +36,16 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ear: async replication</description></item>
-        /// <item><description>lens: CloudLens for EBS</description></item>
-        /// <item><description>dbsc: Dedicated Block Storage Cluster</description></item>
+        /// <item><description><para>ear: asynchronous replication.</para>
+        /// </description></item>
+        /// <item><description><para>lens: EBS Lens.</para>
+        /// </description></item>
+        /// <item><description><para>dbsc: dedicated block storage cluster.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: ear.</para>
+        /// <para>If you do not specify a resource type, region information for all resource types is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ear</para>

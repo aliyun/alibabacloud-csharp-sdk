@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-01T04:00:00Z</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the event. Valid values:</para>
+        /// <para>The event level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INFO</b></description></item>
-        /// <item><description><b>WARN</b></description></item>
-        /// <item><description><b>CRITICAL</b></description></item>
+        /// <item><description><b>INFO</b>: Notification.</description></item>
+        /// <item><description><b>WARN</b>: Warning.</description></item>
+        /// <item><description><b>CRITICAL</b>: Critical.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,20 +35,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EventLevel { get; set; }
 
         /// <summary>
-        /// <para>The name of the event. Valid values:</para>
+        /// <para>The event name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.</description></item>
-        /// <item><description>BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.</description></item>
-        /// <item><description>CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.</description></item>
-        /// <item><description>DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.</description></item>
-        /// <item><description>DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.</description></item>
-        /// <item><description>DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.</description></item>
-        /// <item><description>InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.</description></item>
-        /// <item><description>InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.</description></item>
-        /// <item><description>DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.</description></item>
-        /// <item><description>DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.</description></item>
-        /// <item><description>DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.</description></item>
-        /// <item><description>DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.</description></item>
+        /// <item><description>NoSnapshot: data protection</description></item>
+        /// <item><description>BurstIOTriggered: burst I/O</description></item>
+        /// <item><description>CostOptimizationNeeded: cost optimization</description></item>
+        /// <item><description>DiskSpecNotMatchedWithInstance: instance and disk specification mismatch</description></item>
+        /// <item><description>DiskIONo4kAligned: non-4K aligned read/write</description></item>
+        /// <item><description>DiskIOHang: disk IOHang occurred</description></item>
+        /// <item><description>InstanceIOPSExceedInstanceMaxLimit: instance IOPS reached the upper limit</description></item>
+        /// <item><description>InstanceBPSExceedInstanceMaxLimit: instance BPS reached the upper limit</description></item>
+        /// <item><description>DiskIOPSExceedInstanceMaxLimit: disk IOPS reached the instance upper limit</description></item>
+        /// <item><description>DiskBPSExceedInstanceMaxLimit: disk BPS reached the instance upper limit</description></item>
+        /// <item><description>DiskIOPSExceedDiskMaxLimit: disk IOPS reached the disk upper limit</description></item>
+        /// <item><description>DiskBPSExceedDiskMaxLimit: disk BPS reached the disk upper limit</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. If you specify MaxResults, <c>MaxResults</c> and <c>NextToken</c> are used for a paged query.</para>
+        /// <para>The maximum number of entries per page for a paged query. If you specify this parameter, the <c>MaxResults</c> and <c>NextToken</c> parameters are used together for the query.</para>
         /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions supported.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the list of regions supported by EBS Lens.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,11 +102,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>disk.</description></item>
+        /// <item><description>disk: cloud disk</description></item>
         /// </list>
-        /// <para>Default value: disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disk</para>
@@ -116,7 +115,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the event. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-01T03:00:00Z</para>
@@ -126,14 +125,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of event. Valid values:</para>
+        /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WillExecute</description></item>
-        /// <item><description>Executing</description></item>
-        /// <item><description>Executed</description></item>
-        /// <item><description>Ignore</description></item>
-        /// <item><description>Expired</description></item>
-        /// <item><description>Deleted</description></item>
+        /// <item><description>WillExecute: pending </description></item>
+        /// <item><description>Executing: processing</description></item>
+        /// <item><description>Executed: processed</description></item>
+        /// <item><description>Ignore: ignored</description></item>
+        /// <item><description>Expired: expired</description></item>
+        /// <item><description>Deleted: deleted</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

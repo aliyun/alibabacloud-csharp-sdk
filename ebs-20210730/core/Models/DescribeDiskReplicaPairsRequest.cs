@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class DescribeDiskReplicaPairsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page. You can use this parameter together with NextToken.</para>
+        /// <para>The maximum number of entries to return on each page. Use this parameter with NextToken.</para>
         /// <para>Valid values: 1 to 500.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication pair. Fuzzy search is supported.</para>
+        /// <para>The name of the replication pair. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name***</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If you specify NextToken, the PageSize and PageNumber request parameters do not take effect, and the TotalCount response parameter is invalid.</para>
+        /// <para>The query token. Set this parameter to the NextToken value returned from the previous call to this operation. You do not need to set this parameter for the first call. If you set NextToken, the PageSize and PageNumber parameters are ignored, and the TotalCount value in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -52,7 +52,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page.
+        /// Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,8 +63,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of replication pairs. You can specify the IDs of one or more replication pairs and separate the IDs with commas (,). Example: <c>pair-cn-dsa****,pair-cn-asd****</c>.</para>
-        /// <para>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried. You can specify a maximum of 100 replication pair IDs.</para>
+        /// <para>The IDs of replication pairs. Specify one or more replication pair IDs. The IDs must be in the <c>pair-cn-dsa****,pair-cn-asd****</c> format.</para>
+        /// <para>If you leave this parameter empty, all replication pairs in the current region are queried. You can specify up to 100 replication pair IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pair-cn-dsa****</para>
@@ -73,7 +74,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PairIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</para>
+        /// <para>The ID of the region where the primary or secondary disk of the replication pair resides. Call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the regions that support asynchronous replication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,10 +85,10 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the replication pair-consistent group. You can specify the ID of a replication pair-consistent group to query the replication pairs in the group. Example: <c>pg-****</c>.</para>
-        /// <para>This parameter is empty by default, which indicates that all replication pairs in the specified region are queried.</para>
+        /// <para>The ID of the replication pair-consistent group. Specify the ID of a replication pair-consistent group to query the replication pairs in the group. The ID must be in the <c>pg-****</c> format.</para>
+        /// <para>If you leave this parameter empty, all replication pairs in the current region are queried.</para>
         /// <remarks>
-        /// <para> If this parameter is set to<c>-</c>, replication pairs that are not added to any replication pair-consistent groups are returned.</para>
+        /// <para>If you set this parameter to <c>-</c>, replication pairs that are not in any replication pair-consistent group are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,10 +109,12 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the site from which the information of replication pairs is retrieved. Valid value:</para>
+        /// <para>The site from which to query data. Query data from the production site or the disaster recovery site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>production: primary site</description></item>
-        /// <item><description>backup: secondary site</description></item>
+        /// <item><description><para>production: the production site.</para>
+        /// </description></item>
+        /// <item><description><para>backup: the disaster recovery site.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: production.</para>
         /// 
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Site { get; set; }
 
         /// <summary>
-        /// <para>The tags. Up to 20 tags are supported.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

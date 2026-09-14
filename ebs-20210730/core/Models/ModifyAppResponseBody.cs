@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ModifyAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,14 +40,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic message. This parameter is not in use. Ignore it.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gcqe6nn722rw1g5/gcqe6nn722rw1g5.diff.zip?Expires=1750651377&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=55f4Rcml1vjydPgiv5c9KRdSGQo%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gcqe6nn722rw1g5/gcqe6nn722rw1g5.diff.zip?Expires=1750651377&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=55f4Rcml1vjydPgiv5c9KRdSGQo%3D</a></para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -58,6 +72,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
@@ -66,6 +82,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -74,6 +92,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The user code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>

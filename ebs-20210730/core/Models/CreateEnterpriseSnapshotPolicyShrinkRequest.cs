@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateEnterpriseSnapshotPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client that is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Snapshot replication destination information.</para>
+        /// <para>The snapshot replication information.</para>
         /// </summary>
         [NameInMap("CrossRegionCopyInfo")]
         [Validation(Required=false)]
         public string CrossRegionCopyInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the policy.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The Policy Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the regions that support asynchronous replication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the snapshot policy.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot retention rule.</para>
+        /// <para>The retention rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RetainRule")]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RetainRuleShrink { get; set; }
 
         /// <summary>
-        /// <para>The rule for scheduling.</para>
+        /// <para>The schedule rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Schedule")]
@@ -85,19 +85,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ScheduleShrink { get; set; }
 
         /// <summary>
-        /// <para>The special snapshot retention rules.</para>
+        /// <para>The special retention rules.</para>
         /// </summary>
         [NameInMap("SpecialRetainRules")]
         [Validation(Required=false)]
         public string SpecialRetainRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The status of the policy. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ENABLED: Enable snapshot policy execution.</para>
-        /// </description></item>
-        /// <item><description><para>DISABLED: Disable snapshot policy execution.</para>
-        /// </description></item>
+        /// <item><description>DISABLED</description></item>
+        /// <item><description>ENABLED</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,21 +106,21 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Advanced snapshot features.</para>
+        /// <para>The advanced snapshot feature.</para>
         /// </summary>
         [NameInMap("StorageRule")]
         [Validation(Required=false)]
         public string StorageRuleShrink { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag key-value pairs. Valid values of n: 1 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateEnterpriseSnapshotPolicyShrinkRequestTag> Tag { get; set; }
         public class CreateEnterpriseSnapshotPolicyShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key of the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -133,9 +131,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
-            /// <para>The tag value can be 0 to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a unique tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value of the resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         }
 
         /// <summary>
-        /// <para>Binding target type, valid value:</para>
+        /// <para>The type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DISK</description></item>
         /// </list>

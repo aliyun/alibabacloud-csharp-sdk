@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ModifyDiskReplicaPairRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth value. Unit: Kbit/s.</para>
+        /// <para>The bandwidth for async replication, in Kbps.</para>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a value for this parameter from your client. Make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -43,7 +43,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable replication time control.</para>
+        /// <para>Specifies whether to enable replication time control (RTC). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false: Disables RTC.</para>
+        /// </description></item>
+        /// <item><description><para>true: Enables RTC.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para>If a replication pair is part of a replication group, its RTC setting is the same as the setting of the group.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -63,7 +73,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PairName { get; set; }
 
         /// <summary>
-        /// <para>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Valid value: 900.</para>
+        /// <para>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds. Currently, only a value of 900 is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -73,7 +83,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? RPO { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the primary or secondary disk in the replication pair. You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which async replication is supported.</para>
+        /// <para>The region ID of the primary or secondary disk in the replication pair. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the regions that support async replication.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

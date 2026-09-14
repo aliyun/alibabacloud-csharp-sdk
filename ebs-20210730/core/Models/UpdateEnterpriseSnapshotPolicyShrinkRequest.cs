@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class UpdateEnterpriseSnapshotPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Snapshot replication destination information.</para>
+        /// <para>The cross-region copy destination information.</para>
         /// </summary>
         [NameInMap("CrossRegionCopyInfo")]
         [Validation(Required=false)]
         public string CrossRegionCopyInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the policy.</para>
+        /// <para>The description of the snapshot policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The ID of the policy to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The id of the policy.</para>
+        /// <para>The snapshot policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The region ID . You can call the <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> operation to query the most recent list of regions in which snapshot policy is supported.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,31 +69,31 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Snapshot retention rule.</para>
+        /// <para>The retention rule.</para>
         /// </summary>
         [NameInMap("RetainRule")]
         [Validation(Required=false)]
         public string RetainRuleShrink { get; set; }
 
         /// <summary>
-        /// <para>The rule for scheduling.</para>
+        /// <para>The schedule rule.</para>
         /// </summary>
         [NameInMap("Schedule")]
         [Validation(Required=false)]
         public string ScheduleShrink { get; set; }
 
         /// <summary>
-        /// <para>The special snapshot retention rules.</para>
+        /// <para>The special retention rules.</para>
         /// </summary>
         [NameInMap("SpecialRetainRules")]
         [Validation(Required=false)]
         public string SpecialRetainRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The status of the policy. Valid values:</para>
+        /// <para>The status of the snapshot policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENABLED</b>: Enable snapshot policy execution.</description></item>
-        /// <item><description><b>DISABLED</b>: Disable snapshot policy execution.</description></item>
+        /// <item><description>ENABLED</description></item>
+        /// <item><description>DISABLED</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Advanced snapshot features.</para>
+        /// <para>The advanced snapshot feature.</para>
         /// </summary>
         [NameInMap("StorageRule")]
         [Validation(Required=false)]

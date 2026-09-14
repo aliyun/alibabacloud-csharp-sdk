@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDiagnoseReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>The report ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>report-qe2s****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ReportId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>

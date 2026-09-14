@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class CreateDiskReplicaGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The bandwidth value. Unit: Mbit/s.</para>
+        /// <para>The bandwidth in Kbps.</para>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10240</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
         public long? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The \<c>ClientToken\\</c> parameter value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the secondary site.</para>
+        /// <para>The ID of the region where the disaster recovery site is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DestinationRegionId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the secondary site.</para>
+        /// <para>The ID of the zone where the disaster recovery site is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,17 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string DestinationZoneId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable replication time control. By default, this parameter is disabled.</para>
+        /// <para>Specifies whether to enable replication time control (RTC). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false: Disable RTC.</para>
+        /// </description></item>
+        /// <item><description><para>true: Enable RTC.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para>If you set this parameter to true, RTC is enabled for the replication pair-consistent group. RTC is also enabled for all asynchronous replication pairs that are added to the group.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -75,7 +85,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public bool? EnableRtc { get; set; }
 
         /// <summary>
-        /// <para>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>myreplicagrouptest</para>
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The RPO of the replication pair-consistent group. Unit: seconds. Valid value: 900.</para>
+        /// <para>The recovery point objective (RPO) of the replication pair-consistent group, in seconds. The only supported value is 900.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -95,7 +105,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public long? RPO { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the replication pair-consistent group. The primary site is deployed in the specified region.</para>
+        /// <para>The ID of the region where the replication pair-consistent group resides. This is the same as the region of the production site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +126,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the primary site.</para>
+        /// <para>The ID of the zone where the production site is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,14 +137,14 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string SourceZoneId { get; set; }
 
         /// <summary>
-        /// <para>The tags. Up to 20 tags are supported.</para>
+        /// <para>The tags to add to the resource. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDiskReplicaGroupRequestTag> Tag { get; set; }
         public class CreateDiskReplicaGroupRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the replication pair-consistent group.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-key</para>
@@ -144,7 +154,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the replication pair-consistent group.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag-value</para>

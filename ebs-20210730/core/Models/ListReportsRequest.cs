@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
 {
     public class ListReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of items for Token-based pagination.</para>
+        /// <para>The maximum number of entries to return when using token-based pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Query token (Token), the value is the NextToken parameter value returned from the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a6792e832ff0XXXXX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page number for paginated queries.</para>
+        /// <para>The page number in paged queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of rows per page when performing paginated queries.</para>
+        /// <para>The number of entries per page set in Settings for a paged query during paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ebs20210730.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region ID. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the list of regions supported by Block Storage Data Insights.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/354276.html">DescribeRegions</a> to query the regions supported by EBS Lens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
