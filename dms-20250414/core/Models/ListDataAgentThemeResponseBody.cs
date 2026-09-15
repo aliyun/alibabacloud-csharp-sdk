@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public List<ListDataAgentThemeResponseBodyData> Data { get; set; }
         public class ListDataAgentThemeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The common scenarios. Valid values: report, infographic, and others.</para>
+            /// <para>The common scenario of the theme. Valid values: report, infographic, and others.</para>
             /// 
             /// <b>Example:</b>
             /// <para>report</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ModifiedAt { get; set; }
 
             /// <summary>
-            /// <para>The tracing reference that points to the UUID of the source theme.</para>
+            /// <para>The traceability reference that points to the UUID of the source theme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6d1e3f9a-<b><b>-</b></b>-****-2b8c4e6f0a1d</para>
@@ -104,8 +104,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The theme stage. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>design: contains only design.md.</description></item>
-            /// <item><description>template: complete and renderable.</description></item>
+            /// <item><description>design: The theme contains only design.md.</description></item>
+            /// <item><description>template: The theme is complete and renderable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request failed.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request failed.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The current page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

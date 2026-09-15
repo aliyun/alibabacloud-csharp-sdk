@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            /// <summary>
+            /// <para>The data source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("Datasource")]
             [Validation(Required=false)]
             public string Datasource { get; set; }
@@ -114,14 +120,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The custom agent name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent测试名称</para>
+            /// <para>AgentTestName</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether sessions are displayed after analysis. This parameter is not supported.</para>
+            /// <para>Specifies whether sessions are displayed after analysis. This feature is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

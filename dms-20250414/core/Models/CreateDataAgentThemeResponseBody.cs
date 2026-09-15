@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request is abnormal.</para>
+        /// <para>The error code returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>

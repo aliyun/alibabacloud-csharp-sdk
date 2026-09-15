@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend completed the artifact task. This is a UNIX timestamp accurate to the second.</para>
+                /// <para>The time when the backend completed the artifact task. The value is a UNIX timestamp accurate to seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The globally unique artifact ID. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</para>
+                /// <para>The artifact ID, which is globally unique. If the report is produced by calling SendChatMessage with MessageType set to REPORT, the artifact ID is the same as the MessageId in the response of the SendChatMessage operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bab******33e1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The artifact name. This is typically a string concatenated by the system and is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
+                /// <para>The artifact name, which is typically a string concatenated by the system. This name is aligned with the name field in the ListFileUpload operation. You can use this field to query the download URL of the artifact file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>report_****_2026****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend received the artifact request. This is a UNIX timestamp accurate to the second.</para>
+                /// <para>The time when the backend received the artifact request. The value is a UNIX timestamp accurate to seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReceiveTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the backend actually started running the artifact task. This is a UNIX timestamp accurate to the second.</para>
+                /// <para>The time when the backend actually started running the artifact task. The value is a UNIX timestamp accurate to seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1778743587</para>
@@ -136,14 +136,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The chat replay history.</para>
+            /// <para>The chat history replay records.</para>
             /// </summary>
             [NameInMap("ChatHistoryLocations")]
             [Validation(Required=false)]
             public List<DescribeDataAgentSessionResponseBodyDataChatHistoryLocations> ChatHistoryLocations { get; set; }
             public class DescribeDataAgentSessionResponseBodyDataChatHistoryLocations : TeaModel {
                 /// <summary>
-                /// <para>The key of the chat replay history.</para>
+                /// <para>The key of the chat history replay record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testKey1</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The OSS download URL of the chat replay history.</para>
+                /// <para>The OSS download URL of the chat history replay record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The data source category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>CHAT</b>: specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</para>
+                /// <item><description><para><b>CHAT</b>: Specified through the CreateDataAgentSession or SendChatMessage operation during a conversation.</para>
                 /// </description></item>
-                /// <item><description><para><b>CUSTOM_AGENT</b>: from the preset analysis data scope in a custom agent.</para>
+                /// <item><description><para><b>CUSTOM_AGENT</b>: From the preset analysis data scope in a custom agent.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of this data entry. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</para>
+                /// <para>The similarity score of this record. The scoring algorithm is related to the algorithm (l2/ip/cosine) specified when the index was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.65</para>
@@ -299,8 +299,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>debug</b>: test stage.</description></item>
-                /// <item><description><b>prod</b>: production stage.</description></item>
+                /// <item><description><b>debug</b>: The debug stage.</description></item>
+                /// <item><description><b>prod</b>: The production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -371,9 +371,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ASK_DATA</b>: ask data mode.</description></item>
-                /// <item><description><b>ANALYSIS</b>: analysis mode.</description></item>
-                /// <item><description><b>INSIGHT</b>: insight mode.</description></item>
+                /// <item><description><b>ASK_DATA</b>: The ask-data mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: The analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: The insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -404,10 +404,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportWaterMark { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user OSS bucket.</para>
-                /// <list type="bullet">
-                /// <item><description>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</description></item>
-                /// </list>
+                /// <para>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-oss-bucket</para>
@@ -442,7 +439,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>分析一下这份文件，给出报告。</para>
+            /// <para>Analyze this file and generate a report</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -493,7 +490,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
         /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 

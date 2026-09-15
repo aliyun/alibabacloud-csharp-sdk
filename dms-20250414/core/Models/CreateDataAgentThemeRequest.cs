@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentThemeRequest : TeaModel {
         /// <summary>
-        /// <para>The application scenario, which affects filtering when viewing the theme list in the console. Valid values:</para>
+        /// <para>The scenario, which affects the filtering when you view the theme list in the console. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>(Recommended) custom: a user-uploaded custom theme with no preset style or information organization structure.</description></item>
-        /// <item><description>report: a web report that conforms to the DataAgent information organization structure.</description></item>
-        /// <item><description>(Not supported) infographic: an infographic that conforms to the DataAgent information organization structure.</description></item>
+        /// <item><description>(Recommended) custom: A user-uploaded custom theme with no preset style or information organization structure.</description></item>
+        /// <item><description>report: A web report that conforms to the DataAgent information organization structure.</description></item>
+        /// <item><description>(Not supported) infographic: An infographic that conforms to the DataAgent information organization structure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>The file source, which affects the backend logic for determining whether the theme is valid. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>upload: uploaded through OSS.</description></item>
-        /// <item><description>(Not supported) public_url: provided through an OSS URL that allows public network access.</description></item>
-        /// <item><description>(Not supported) user_oss: provided through a user OSS URL.</description></item>
+        /// <item><description>upload: The file is uploaded through OSS.</description></item>
+        /// <item><description>(Not supported) public_url: The file is provided through a public network access OSS URL.</description></item>
+        /// <item><description>(Not supported) user_oss: The file is provided through a user OSS URL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ThemeId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the theme. The value can be up to 64 characters in length. This parameter is required during creation.</para>
+        /// <para>The display name of the theme. The value can be up to 64 characters in length. This parameter is required when you create a theme.</para>
         /// 
         /// <b>Example:</b>
         /// <para>weekly report</para>
@@ -82,6 +82,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("ThemeType")]
         [Validation(Required=false)]
         public string ThemeType { get; set; }
+
+        /// <summary>
+        /// <para>The workspace to which the theme belongs. If this parameter is not specified or is set to personal, the personal workspace is used. You can also specify a collaboration workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>99fad******qg6c0l4nlacu</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

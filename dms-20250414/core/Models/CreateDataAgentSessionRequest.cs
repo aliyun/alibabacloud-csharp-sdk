@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
-            /// <para>The custom agent stage. Valid values:</para>
+            /// <para>The stage of the custom agent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>debug</b>: Test stage.</para>
-            /// </description></item>
-            /// <item><description><para><b>prod</b>: Production stage.</para>
-            /// </description></item>
+            /// <item><description><b>debug</b>: Debug stage.</description></item>
+            /// <item><description><b>prod</b>: Production stage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,14 +70,29 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public bool? EnableSearch { get; set; }
 
+            /// <summary>
+            /// <para>The encryption key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("EncryptKey")]
             [Validation(Required=false)]
             public string EncryptKey { get; set; }
 
+            /// <summary>
+            /// <para>The encryption type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("EncryptType")]
             [Validation(Required=false)]
             public string EncryptType { get; set; }
 
+            /// <summary>
+            /// <para>The list of knowledge base IDs.</para>
+            /// </summary>
             [NameInMap("KbUuidList")]
             [Validation(Required=false)]
             public List<string> KbUuidList { get; set; }
@@ -87,10 +100,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The language. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>CHINESE</b>: Chinese</para>
-            /// </description></item>
-            /// <item><description><para><b>ENGLISH</b>: English</para>
-            /// </description></item>
+            /// <item><description><b>CHINESE</b>: Chinese.</description></item>
+            /// <item><description><b>ENGLISH</b>: English.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +112,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>A list of MCP server IDs.</para>
+            /// <para>The list of MCP server IDs in the session configuration.</para>
             /// </summary>
             [NameInMap("McpServerIds")]
             [Validation(Required=false)]
@@ -110,12 +121,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ASK_DATA</b>: Quick inquiry mode.</para>
-            /// </description></item>
-            /// <item><description><para><b>ANALYSIS</b>: Analysis mode.</para>
-            /// </description></item>
-            /// <item><description><para><b>INSIGHT</b>: Insight mode.</para>
-            /// </description></item>
+            /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
+            /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
+            /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,18 +133,30 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Mode { get; set; }
 
+            /// <summary>
+            /// <para>The report page width.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("ReportPageWidth")]
             [Validation(Required=false)]
             public long? ReportPageWidth { get; set; }
 
+            /// <summary>
+            /// <para>The report watermark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>null</para>
+            /// </summary>
             [NameInMap("ReportWaterMark")]
             [Validation(Required=false)]
             public string ReportWaterMark { get; set; }
 
             /// <summary>
-            /// <para>The OSS bucket name.</para>
+            /// <para>The name of the user OSS bucket.</para>
             /// <list type="bullet">
-            /// <item><description>This bucket stores intermediate files and report artifacts from the analysis.</description></item>
+            /// <item><description>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,10 +169,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The session title. Supports Chinese and English. Maximum length: 128 characters.</para>
+        /// <para>The title. Chinese and English characters are supported. Maximum length: 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>帮我分析一下这份数据，给出报告。</para>
+        /// <para>Help me analyze this data and generate a report</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

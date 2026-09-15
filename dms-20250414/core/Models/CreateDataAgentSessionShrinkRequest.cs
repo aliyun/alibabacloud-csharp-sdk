@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The session title. Supports Chinese and English. Maximum length: 128 characters.</para>
+        /// <para>The title. Chinese and English characters are supported. Maximum length: 128 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>帮我分析一下这份数据，给出报告。</para>
+        /// <para>Help me analyze this data and generate a report</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

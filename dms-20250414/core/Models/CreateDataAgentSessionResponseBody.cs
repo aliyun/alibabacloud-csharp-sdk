@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response structure.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDataAgentSessionResponseBodyData Data { get; set; }
         public class CreateDataAgentSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>Agent Id</para>
             /// 
             /// <b>Example:</b>
             /// <para>cu0cs*******mf</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was created, in Unix milliseconds.</para>
+            /// <para>The time when the session was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765262307992</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated file.</para>
+            /// <para>The basic information about the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string File { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current user has favorited the session.</para>
+            /// <para>Indicates whether the session is saved to the favorites of the current user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -86,10 +86,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>debug</b>: Debug stage</para>
-                /// </description></item>
-                /// <item><description><para><b>prod</b>: Production stage</para>
-                /// </description></item>
+                /// <item><description><b>debug</b>: Debug stage.</description></item>
+                /// <item><description><b>prod</b>: Production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +98,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentStage { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether web search is enabled.</para>
+                /// <para>Specifies whether to enable web search.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -109,14 +107,29 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public bool? EnableSearch { get; set; }
 
+                /// <summary>
+                /// <para>The encryption key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("EncryptKey")]
                 [Validation(Required=false)]
                 public string EncryptKey { get; set; }
 
+                /// <summary>
+                /// <para>The encryption type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("EncryptType")]
                 [Validation(Required=false)]
                 public string EncryptType { get; set; }
 
+                /// <summary>
+                /// <para>The list of knowledge base IDs.</para>
+                /// </summary>
                 [NameInMap("KbUuidList")]
                 [Validation(Required=false)]
                 public List<string> KbUuidList { get; set; }
@@ -124,10 +137,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The language. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>CHINESE</b>: Chinese</para>
-                /// </description></item>
-                /// <item><description><para><b>ENGLISH</b>: English</para>
-                /// </description></item>
+                /// <item><description><b>CHINESE</b>: Chinese.</description></item>
+                /// <item><description><b>ENGLISH</b>: English.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -138,7 +149,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>A list of MCP server IDs.</para>
+                /// <para>The list of MCP server IDs in the session configuration.</para>
                 /// </summary>
                 [NameInMap("McpServerIds")]
                 [Validation(Required=false)]
@@ -147,12 +158,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ASK_DATA</b>: Quick Inquiry Mode</para>
-                /// </description></item>
-                /// <item><description><para><b>ANALYSIS</b>: Analysis Mode</para>
-                /// </description></item>
-                /// <item><description><para><b>INSIGHT</b>: Insight Mode</para>
-                /// </description></item>
+                /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,18 +170,30 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string Mode { get; set; }
 
+                /// <summary>
+                /// <para>The report page width.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("ReportPageWidth")]
                 [Validation(Required=false)]
                 public long? ReportPageWidth { get; set; }
 
+                /// <summary>
+                /// <para>The report watermark.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>null</para>
+                /// </summary>
                 [NameInMap("ReportWaterMark")]
                 [Validation(Required=false)]
                 public string ReportWaterMark { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user\&quot;s OSS bucket.</para>
+                /// <para>The name of the user OSS bucket.</para>
                 /// <list type="bullet">
-                /// <item><description>Analysis files and report artifacts can be uploaded to this OSS bucket.</description></item>
+                /// <item><description>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -206,10 +226,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
-            /// <para>The session title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>帮我分析一下这份数据，给出报告。</para>
+            /// <para>Help me analyze this data and generate a report</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -228,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned when the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -238,7 +258,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CB***********3F1A</para>
@@ -250,10 +270,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

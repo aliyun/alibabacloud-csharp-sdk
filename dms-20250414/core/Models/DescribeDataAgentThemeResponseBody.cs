@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ModifiedAt { get; set; }
 
             /// <summary>
-            /// <para>The theme tracing information. This field is currently not enabled.</para>
+            /// <para>The tracing information of the theme. This field is currently not enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6d1e3f9a-<b><b>-</b></b>-****-2b8c4e6f0a1d</para>
@@ -67,11 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReferTo { get; set; }
 
             /// <summary>
-            /// <para>The source of the theme. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>system</description></item>
-            /// <item><description>custom</description></item>
-            /// </list>
+            /// <para>The source of the theme. Valid values: system, custom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -101,10 +97,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ThemeName { get; set; }
 
             /// <summary>
-            /// <para>The theme stage. Valid values:</para>
+            /// <para>The stage of the theme. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>design: design.md only.</description></item>
-            /// <item><description>template: complete and renderable.</description></item>
+            /// <item><description>design: The theme contains only design.md.</description></item>
+            /// <item><description>template: The theme is complete and renderable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +113,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request is abnormal.</para>
+        /// <para>The error code returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -147,10 +143,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Success")]
