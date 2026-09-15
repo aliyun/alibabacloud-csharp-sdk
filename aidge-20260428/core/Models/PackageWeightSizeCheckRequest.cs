@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class PackageWeightSizeCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the annotated image with manual bounding box markings, which is the original image overlaid with blue or red rectangular bounding box lines. The URL must be publicly accessible. The image must not exceed 4000 × 4000 pixels or 10 MB in size. Supported formats: png, jpeg, and jpg.</para>
+        /// <para>The URL of the image with manual bounding box annotations, which is the original image overlaid with blue or red rectangular bounding box lines. The URL must be publicly accessible. The image must not exceed 4000 × 4000 pixels or 10 MB in size. Supported formats: png, jpeg, and jpg.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

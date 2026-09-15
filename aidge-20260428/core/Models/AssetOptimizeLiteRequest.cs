@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>The custom glossary for term intervention.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Glossary")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether translation is needed.</para>
+        /// <para>Specifies whether translation is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

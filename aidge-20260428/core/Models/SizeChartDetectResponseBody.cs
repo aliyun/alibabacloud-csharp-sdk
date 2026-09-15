@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? IsSizeChart { get; set; }
 
             /// <summary>
-            /// <para>The usage information. The key is the usage name, and the value is the count.</para>
+            /// <para>The usage information. The key is the usage name and the value is the count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
         /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 

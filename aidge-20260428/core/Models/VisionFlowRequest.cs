@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class VisionFlowRequest : TeaModel {
         /// <summary>
-        /// <para>The AI capabilities to apply (1=Intelligent Element Detection, 2=Intelligent Matting, 3=Intelligent Removal, 4=Image Translation Pro, 5=Intelligent Cropping, 6=HD Upscaling). Multiple selections allowed.</para>
+        /// <para>The AI capabilities to apply (1 = Intelligent Element Detection, 2 = Intelligent Matting, 3 = Intelligent Removal, 4 = Image Translation Pro, 5 = Intelligent Cropping, 6 = HD Upscaling). Multiple selections allowed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<int?> Ability { get; set; }
 
         /// <summary>
-        /// <para>The background type of the output image. Valid values: WHITE_BACKGROUND (white background) and TRANSPARENT (transparent background). Required when the Intelligent Matting capability is selected.</para>
+        /// <para>The background type of the output image. Valid values: WHITE_BACKGROUND (white background) and TRANSPARENT (transparent background). This parameter is required when the Intelligent Matting capability is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WHITE_BACKGROUND</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BackGroundType { get; set; }
 
         /// <summary>
-        /// <para>The glossary ID. Optional. Create the glossary separately in the console and provide its ID. If empty, translation results are not modified.</para>
+        /// <para>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If left empty, translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The URL of the image to process. Required. Resolution must be greater than 256×256, long side no greater than 1920 pixels, short side no greater than 1080 pixels. File size must not exceed 5 MB. Supported formats: png, jpeg, jpg, bmp, webp.</para>
+        /// <para>The URL of the image to process. This parameter is required. Resolution must be greater than 256 × 256, long side no greater than 1920 pixels, short side no greater than 1080 pixels. Maximum size: 5 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether images containing the specified elements proceed to subsequent processing. A value of true indicates that images with the specified elements proceed to subsequent processing. A value of false indicates that images without the specified elements proceed. Required when the Intelligent Element Detection capability is selected.</para>
+        /// <para>Specifies whether images with the detected elements proceed to subsequent processing. A value of true indicates that images containing the elements proceed to subsequent processing. A value of false indicates that they do not. This parameter is required when the Intelligent Element Detection capability is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IsFilter { get; set; }
 
         /// <summary>
-        /// <para>The specific removal area in RLE format. Optional. If provided, this takes priority and the ObjectRemoveElements and NonobjectRemoveElements parameters are ignored.</para>
+        /// <para>The specific removal region in RLE format. Optional. If provided, this parameter takes priority and the ObjectRemoveElements and NonobjectRemoveElements parameters are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>474556 160 475356 160</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Mask { get; set; }
 
         /// <summary>
-        /// <para>The elements to detect on the non-subject area of the image (1=Watermark, 2=Logo, 3=Text, 4=Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of NonobjectDetectElements or ObjectDetectElements is required.</para>
+        /// <para>The elements to detect on the non-subject area of the image (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of NonobjectDetectElements or ObjectDetectElements is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,3]</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<int?> NonobjectDetectElements { get; set; }
 
         /// <summary>
-        /// <para>The elements to remove from the non-subject area of the image (1=Transparent text block, 2=Specific name, 3=Text, 4=Ad patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of NonobjectRemoveElements or ObjectRemoveElements is required.</para>
+        /// <para>The elements to remove from the non-subject area of the image (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of NonobjectRemoveElements or ObjectRemoveElements is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,4]</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<int?> NonobjectRemoveElements { get; set; }
 
         /// <summary>
-        /// <para>The elements to detect on the image subject (1=Watermark, 2=Logo, 3=Text, 4=Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of ObjectDetectElements or NonobjectDetectElements is required.</para>
+        /// <para>The elements to detect on the image subject (1 = Watermark, 2 = Logo, 3 = Text, 4 = Text-bearing color block). Multiple selections allowed. When the Intelligent Element Detection capability is selected, at least one of ObjectDetectElements or NonobjectDetectElements is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,3,4]</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<int?> ObjectDetectElements { get; set; }
 
         /// <summary>
-        /// <para>The elements to remove from the image subject (1=Transparent text block, 2=Specific name, 3=Text, 4=Ad patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of ObjectRemoveElements or NonobjectRemoveElements is required.</para>
+        /// <para>The elements to remove from the image subject (1 = Transparent text block, 2 = Specific name, 3 = Text, 4 = Overlay patch). Multiple selections allowed. When the Intelligent Removal capability is selected, at least one of ObjectRemoveElements or NonobjectRemoveElements is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2,4]</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<int?> ObjectRemoveElements { get; set; }
 
         /// <summary>
-        /// <para>The source language code. Optional. Refer to the supported language pairs list for available language directions.</para>
+        /// <para>The source language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The desired height of the cropped image, in pixels. Valid values: 100 to 5000. Required when the Intelligent Cropping capability is selected.</para>
+        /// <para>The desired height of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? TargetHeight { get; set; }
 
         /// <summary>
-        /// <para>The target language code. Optional. Refer to the supported language pairs list for available language directions.</para>
+        /// <para>The target language code. Optional. For supported language pairs, refer to the supported translation language pairs list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The desired width of the cropped image, in pixels. Valid values: 100 to 5000. Required when the Intelligent Cropping capability is selected.</para>
+        /// <para>The desired width of the cropped image, in pixels. Valid values: 100 to 5000. This parameter is required when the Intelligent Cropping capability is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>800</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>The image upscaling factor. Optional. Default value: 2. Valid values: 2 to 4. Required when the HD Upscaling capability is selected.</para>
+        /// <para>The image upscaling factor. Optional. Default value: 2. Valid values: 2 to 4. This parameter is required when the HD Upscaling capability is selected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

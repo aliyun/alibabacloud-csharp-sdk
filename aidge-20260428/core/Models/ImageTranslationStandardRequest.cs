@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardRequest : TeaModel {
         /// <summary>
-        /// <para>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
+        /// <para>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</para>
+        /// <para>Specifies whether to translate text on the product area of an image. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

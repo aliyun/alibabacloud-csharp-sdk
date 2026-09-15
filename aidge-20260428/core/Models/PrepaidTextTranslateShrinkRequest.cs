@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class PrepaidTextTranslateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation strategy is used by default.</para>
+        /// <para>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or an invalid value is passed, the general translation policy is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba-商品</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>The format type of the source text. This parameter is optional. Supports text (plain text format) and html (web page format, preserving HTML tags).</para>
+        /// <para>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The format of the translation text. html (web page format. This setting processes both the source text and translated text in HTML format) or text (text format. This setting processes both the source text and translated result as plain text without format processing).</para>
+        /// <para>The format of the translation text. html (web page format. This setting processes the source text and translated text in HTML format). text (text format. This setting processes the source text and translated text as plain text without any format processing).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-commerce-title</para>

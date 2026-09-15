@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRecognitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned for successful calls.</para>
+        /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? ObjWatermark { get; set; }
 
             /// <summary>
-            /// <para>The product count.</para>
+            /// <para>The number of products.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? PdNum { get; set; }
 
             /// <summary>
-            /// <para>The product proportion.</para>
+            /// <para>The proportion of the product area in the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>74.15%</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<string> RecText { get; set; }
 
             /// <summary>
-            /// <para>The text proportion.</para>
+            /// <para>The proportion of the text area in the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.52%</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned for successful calls.</para>
+        /// <para>The error message. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The video URL (MP4/MOV, ≤ 200 MB).</para>
+        /// <para>The URL of the video (MP4/MOV, ≤ 200 MB).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

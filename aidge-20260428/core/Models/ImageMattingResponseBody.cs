@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>The URL of the matting result image.</para>
+            /// <para>The URL of the image matting result.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The matting quality score.</para>
+            /// <para>The quality score of the image matting result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.11</para>

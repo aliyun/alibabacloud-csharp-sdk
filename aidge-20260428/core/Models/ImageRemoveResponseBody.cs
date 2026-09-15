@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public ImageRemoveResponseBodyData Data { get; set; }
         public class ImageRemoveResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The height of the result image in pixels.</para>
+            /// <para>The height of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, long?> UsageMap { get; set; }
 
             /// <summary>
-            /// <para>The width of the result image in pixels.</para>
+            /// <para>The width of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>

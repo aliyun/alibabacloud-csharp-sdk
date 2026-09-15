@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Silk, new spring style</para>
+        /// <para>Silk, Spring New Arrival</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>The product attributes that describe the characteristics of the product, such as material. Provide the attribute names and values.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>材质:涤纶,适用对象:通用,品牌:艾马逊AMASON PET</para>
+        /// <para>Material:Polyester,Target Audience:General,Brand:AMASON PET</para>
         /// </summary>
         [NameInMap("ItemSpec")]
         [Validation(Required=false)]
         public string ItemSpec { get; set; }
 
         /// <summary>
-        /// <para>The product SKU title.</para>
+        /// <para>The SKU title of the product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0:0:颜色:黑(不含定位器);0:1:颜色:智能定位(不含项圈);0:2:颜色:范围定位(不含项圈);0:3:颜色:蓝(不含定位器);0:4:颜色:橙(不含定位器);0:5:颜色:粉(不含定位器);0:6:颜色:红(不含定位器);0:7:颜色:黄(不含定位器);0:8:颜色:紫(不含定位器)</para>
+        /// <para>0:0:Color:Black(without locator);0:1:Color:Smart Locator(without collar);0:2:Color:Range Locator(without collar);0:3:Color:Blue(without locator);0:4:Color:Orange(without locator);0:5:Color:Pink(without locator);0:6:Color:Red(without locator);0:7:Color:Yellow(without locator);0:8:Color:Purple(without locator)</para>
         /// </summary>
         [NameInMap("Sku")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The source platform where products are sourced from.</para>
+        /// <para>The source platform from which products are sourced.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The target listing platform. Currently only temu is supported.</para>
+        /// <para>The target listing platform. Currently, only temu is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Women\&quot;s new spring clothing</para>
+        /// <para>Women\&quot;s Spring New Arrival Clothing</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

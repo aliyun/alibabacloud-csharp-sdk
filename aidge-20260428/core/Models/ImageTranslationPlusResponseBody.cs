@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationPlusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned for successful calls.</para>
+        /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public ImageTranslationPlusResponseBodyData Data { get; set; }
         public class ImageTranslationPlusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Use the queryTaskResult API to poll for results.</para>
+            /// <para>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-abc123</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned for successful calls.</para>
+        /// <para>The error message. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

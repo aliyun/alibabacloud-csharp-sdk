@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public ProductHotspotDetectionResponseBodyData Data { get; set; }
         public class ProductHotspotDetectionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of recognized products and their bounding boxes.</para>
+            /// <para>The list of detected products and their bounding boxes.</para>
             /// </summary>
             [NameInMap("Products")]
             [Validation(Required=false)]
             public List<ProductHotspotDetectionResponseBodyDataProducts> Products { get; set; }
             public class ProductHotspotDetectionResponseBodyDataProducts : TeaModel {
                 /// <summary>
-                /// <para>The bounding boxes of the product instances.</para>
+                /// <para>The bounding boxes of the detected product instances.</para>
                 /// </summary>
                 [NameInMap("Boxes")]
                 [Validation(Required=false)]

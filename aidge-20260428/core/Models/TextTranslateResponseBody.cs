@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

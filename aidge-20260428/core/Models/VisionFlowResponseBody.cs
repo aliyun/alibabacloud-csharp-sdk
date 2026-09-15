@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used to uniquely identify a single API call.</para>
+        /// <para>The request ID, used to uniquely identify a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3E65785-0180-1227-91B0-2F5F52F679FB</para>

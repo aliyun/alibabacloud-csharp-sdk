@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the reference image. Optional. When this parameter is not empty, the system performs multi-image differential comparison.</para>
+        /// <para>The URL of the reference image. This parameter is optional. If a non-empty value is specified, multi-image differential comparison is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/reference.jpg">https://example.com/reference.jpg</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageRefer { get; set; }
 
         /// <summary>
-        /// <para>The URL of the target image to be inspected.</para>
+        /// <para>The URL of the target image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The business request identity. Optional. This value is returned as-is in the response for Tracing Analysis purposes.</para>
+        /// <para>The business request identity. This parameter is optional. The value is returned as-is in the response for Tracing Analysis purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-2026-06-04-001</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ReqId { get; set; }
 
         /// <summary>
-        /// <para>The rule prompt in natural language that describes the inspection criteria.</para>
+        /// <para>The rule prompt in natural language.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The door-shaped display stand must be placed in the entrance area; the functional display card must be placed on the counter surface</para>
+        /// <para>The door-shaped display stand must be placed in the entrance area; the functional card stand must be placed on the counter surface</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public DiduiAreaDeductionResponseBodyData Data { get; set; }
         public class DiduiAreaDeductionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of downstream call attempts.</para>
+            /// <para>The number of downstream calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public long? LatencyMs { get; set; }
 
             /// <summary>
-            /// <para>The workflow description message.</para>
+            /// <para>The workflow description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The workflow business status.</para>
+            /// <para>Indicates whether the workflow execution is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

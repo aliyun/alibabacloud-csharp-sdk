@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The translation result data. ResultList contains the URL of the translation result. EditInfo in GenFiles contains the recognized text information.</para>
+        /// <para>The translation result data. ResultList contains the URLs of the translation results. GenFiles contains EditInfo, which includes the recognized text information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string RepairedUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The collection of global IDs of translated images.</para>
+                    /// <para>The collection of global IDs for the translated images.</para>
                     /// </summary>
                     [NameInMap("ResultImageIds")]
                     [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The original text before translation.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Cute Design · Crisp Bell</para>
+                        /// <para>萌趣造型·清脆响铃</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public int? Fontsize { get; set; }
 
                         /// <summary>
-                        /// <para>The horizontal layout. Valid values: center, left, right.</para>
+                        /// <para>The horizontal layout mode. Valid values: center, left, right.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>left</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> Texts { get; set; }
                         public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts : TeaModel {
                             /// <summary>
-                            /// <para>The color of the translated text.</para>
+                            /// <para>The text color after translation.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>#515151</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public int? Fontsize { get; set; }
 
                             /// <summary>
-                            /// <para>The horizontal layout. Valid values: center, left, right.</para>
+                            /// <para>The horizontal layout mode. Valid values: center, left, right.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>center</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public string HorizontalLayout { get; set; }
 
                             /// <summary>
-                            /// <para>The coordinates of the image inpainting area.</para>
+                            /// <para>The coordinates of the image repair area.</para>
                             /// </summary>
                             [NameInMap("ImageRect")]
                             [Validation(Required=false)]
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             }
 
                             /// <summary>
-                            /// <para>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is set to false.</para>
+                            /// <para>Indicates whether the TextItem is valid. The TextItem is invalid if this value does not exist or is set to false.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>true</para>
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             public string Value { get; set; }
 
                             /// <summary>
-                            /// <para>The vertical layout. Valid values: center, top, down.</para>
+                            /// <para>The vertical layout mode. Valid values: center, top, and down.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>center</para>
@@ -395,7 +395,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         }
 
                         /// <summary>
-                        /// <para>The vertical layout. Valid values: center, top, down.</para>
+                        /// <para>The vertical layout mode. Valid values: center, top, and down.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>center</para>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<ImageTranslationProResponseBodyDataResultList> ResultList { get; set; }
             public class ImageTranslationProResponseBodyDataResultList : TeaModel {
                 /// <summary>
-                /// <para>The URL of the image translation result image.</para>
+                /// <para>The URL of the translated result image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></para>
@@ -489,7 +489,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The usage information, including the number of processed images.</para>
+            /// <para>The usage information, such as the number of processed images.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Returns &quot;Success&quot; for a successful call. Returns a specific error message for an exception, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
+        /// <para>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Used to uniquely identify a request.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61785C32-80C2-19A3-9E55-2C3702C84B40</para>

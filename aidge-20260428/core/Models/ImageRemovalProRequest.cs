@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <summary>
         /// <para>The call type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: asynchronous.</description></item>
-        /// <item><description>false: synchronous.</description></item>
+        /// <item><description>true: Asynchronous.</description></item>
+        /// <item><description>false: Synchronous.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

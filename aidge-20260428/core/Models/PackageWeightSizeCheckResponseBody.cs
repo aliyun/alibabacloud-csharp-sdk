@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public PackageWeightSizeCheckResponseBodyData Data { get; set; }
         public class PackageWeightSizeCheckResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, which is used to query the review result by calling QueryAsyncTaskResult.</para>
+            /// <para>The asynchronous task ID used to query the review result later by calling QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a8323ada-a196-9061-976f-90e38b27323a</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</para>
+        /// <para>The error message. &quot;Success&quot; is returned for successful calls. A specific error message is returned for failed calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the API call.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F93D82E4-D0B6-1043-AC58-282597BC3C10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

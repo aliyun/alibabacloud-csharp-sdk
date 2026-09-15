@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class EcomVideoRecreationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. <c>success</c> indicates success. An error code is returned upon failure.</para>
+        /// <para>The result code. A value of <c>success</c> indicates success. An error code is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public EcomVideoRecreationResponseBodyData Data { get; set; }
         public class EcomVideoRecreationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID for QueryAsyncTaskResult queries.</para>
+            /// <para>The asynchronous task ID used to query results with QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task_778fa8bd21804828a5d147050e30edac</para>

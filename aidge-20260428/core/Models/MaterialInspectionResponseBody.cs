@@ -34,21 +34,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public MaterialInspectionResponseBodyDataResult Result { get; set; }
             public class MaterialInspectionResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The natural language summary of the inspection result, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</para>
+                /// <para>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1项规则：1 PASS，所有检测项合规</para>
+                /// <para>1 rule: 1 PASS, all inspection items are compliant</para>
                 /// </summary>
                 [NameInMap("Evidence")]
                 [Validation(Required=false)]
                 public string Evidence { get; set; }
 
                 /// <summary>
-                /// <para>The overall determination result. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>PASS: All inspection items are compliant.</description></item>
-                /// <item><description>FAIL: One or more inspection items are non-compliant.</description></item>
-                /// </list>
+                /// <para>The overall determination result. Valid values: PASS and FAIL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PASS</para>
@@ -58,7 +54,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string OverallResult { get; set; }
 
                 /// <summary>
-                /// <para>The request ID returned as-is from the input.</para>
+                /// <para>The request ID returned as-is from the request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>req-001</para>
@@ -75,12 +71,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<MaterialInspectionResponseBodyDataResultSteps> Steps { get; set; }
                 public class MaterialInspectionResponseBodyDataResultSteps : TeaModel {
                     /// <summary>
-                    /// <para>The determination result of the step. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>PASS: The step is compliant.</description></item>
-                    /// <item><description>FAIL: The step is non-compliant.</description></item>
-                    /// <item><description>UNABLE_TO_JUDGE: The system cannot determine the result.</description></item>
-                    /// </list>
+                    /// <para>The determination result of the step. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PASS</para>
@@ -102,7 +93,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 }
 
                 /// <summary>
-                /// <para>The detection type that indicates the identified material category.</para>
+                /// <para>The detection type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Stamp</para>

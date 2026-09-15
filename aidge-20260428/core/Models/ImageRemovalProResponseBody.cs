@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The intelligent removal Pro result.</para>
+        /// <para>The Intelligent Eraser Pro result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemovalProResponseBodyData Data { get; set; }
         public class ImageRemovalProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the result image. This parameter is returned in synchronous mode.</para>
+            /// <para>The URL of the erasure result image. This parameter is returned in synchronous mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&Expires=4999655814&Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D">https://aib-image.oss-ap-southeast-1.aliyuncs.com/ai_desc%2F250cc947-9cd5-4df0-9c23-44eba5d0dfc30.jpg?OSSAccessKeyId=LTAI5tSEGjGp5wixZgHLc3bV&amp;Expires=4999655814&amp;Signature=shvGNDmkyv9MLTw4%2BOxYglJCpAE%3D</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query the task result.</para>
+            /// <para>The asynchronous task ID. This parameter is returned in asynchronous mode and is used to query task results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ed9d8504-6141-9fbb-8345-4fa36433483f</para>

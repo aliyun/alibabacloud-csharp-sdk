@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 /// <para>The attribute input type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>单选下拉</para>
+                /// <para>Single-select dropdown</para>
                 /// </summary>
                 [NameInMap("InputType")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>猫项圈</para>
+            /// <para>Cat Collars</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             /// <para>The full path of the category, separated by &quot;/&quot;.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>宠物用品/猫用品/猫挂饰、项圈、牵引带/猫项圈</para>
+            /// <para>Pet Supplies/Cat Supplies/Cat Charms, Collars &amp; Leashes/Cat Collars</para>
             /// </summary>
             [NameInMap("CategoryPath")]
             [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? TotalAttributes { get; set; }
 
             /// <summary>
-            /// <para>The usage information.</para>
+            /// <para>The usage fields.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]

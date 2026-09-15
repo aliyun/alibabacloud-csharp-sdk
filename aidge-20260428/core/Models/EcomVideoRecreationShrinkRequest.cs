@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class EcomVideoRecreationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The input parameters for video remix.</para>
+        /// <para>The input parameters for video multiplication.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
