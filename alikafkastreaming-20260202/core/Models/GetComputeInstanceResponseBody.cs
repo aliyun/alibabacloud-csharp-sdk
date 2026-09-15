@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>rg-aek53bg4tl6fgma</para>
+            /// </summary>
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
             [NameInMap("ServiceStatus")]
