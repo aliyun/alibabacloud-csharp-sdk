@@ -23,15 +23,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: performs the actual operation.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The focus level. Separate multiple levels with commas (,).</para>
-        /// <para>When <b>Project</b> is <b>yundun_soar_incident_generate</b> or <b>yundun_soar_incident_update</b>, valid values:</para>
+        /// <para>When <b>Project</b> is set to <b>yundun_soar_incident_generate</b> or <b>yundun_soar_incident_update</b>, valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CRITICAL</b>: Critical.</description></item>
         /// <item><description><b>HIGH</b>: High.</description></item>
@@ -39,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>LOW</b>: Low.</description></item>
         /// <item><description><b>INFO</b>: Informational.</description></item>
         /// </list>
-        /// <para>When <b>Project</b> is <b>yundun_sas_antiransomware_task</b>, valid values:</para>
+        /// <para>When <b>Project</b> is set to <b>yundun_sas_antiransomware_task</b>, valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Success</b>: Execution succeeded.</description></item>
         /// <item><description><b>Failed</b>: Execution failed.</description></item>
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>yundun_security_Weekreport</b>: Security weekly report (email only)</description></item>
         /// <item><description><b>sas_healthcheck</b>: Baseline check</description></item>
         /// <item><description><b>yundun_defennce_antiRansomware_overflow</b>: Anti-ransomware storage space exceeded</description></item>
-        /// <item><description><b>yundun_sas_cloudsiem_log</b>: Cloud Threat Detection and Response (CTDR) log excess notification</description></item>
+        /// <item><description><b>yundun_sas_cloudsiem_log</b>: Threat analysis log excess notification</description></item>
         /// <item><description><b>sas_suspicious</b>: Security alert</description></item>
         /// <item><description><b>yundun_aegis_AV_true</b>: Precise defense</description></item>
         /// <item><description><b>yundun_sas_ak_leakage AccessKey</b>: AccessKey leak intelligence</description></item>
@@ -139,9 +151,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <h4>When the BizType field is empty: valid values</h4>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No limit.</description></item>
-        /// <item><description><b>1</b>: Notifications are sent only between 08:00 and 22:00.</description></item>
+        /// <item><description><b>1</b>: Notifications are sent only during 08:00-22:00.</description></item>
         /// </list>
-        /// <h4>When the BizType field is <c>cms</c>: description</h4>
+        /// <h4>When the BizType field is <c>cms</c></h4>
         /// <para>Specifies the push frequency limit, in seconds. The minimum value is <b>60</b>.</para>
         /// 
         /// <b>Example:</b>

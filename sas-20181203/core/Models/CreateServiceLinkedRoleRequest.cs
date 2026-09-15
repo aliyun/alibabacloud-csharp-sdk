@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The service-linked role. Default value: <b>AliyunServiceRoleForSas</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>AliyunServiceRoleForSas</b>: the service-linked role for Security Center (SAS). Security Center uses this role to access your resources in other cloud services.</description></item>

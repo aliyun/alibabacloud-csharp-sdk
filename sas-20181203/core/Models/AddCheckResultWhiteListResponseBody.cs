@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckResultWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para><b>[Deprecated]</b> The result of adding to the whitelist. This field is deprecated and can be ignored.</para>
+        /// <para><b>[Deprecated]</b> The result of adding items to the whitelist. This field is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

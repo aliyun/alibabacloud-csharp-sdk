@@ -16,6 +16,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. Valid values: true: performs a check without executing the operation. false: executes the operation. Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("EdrModuleSwitch")]
         [Validation(Required=false)]
         public ModifyPostPayModuleSwitchRequestEdrModuleSwitch EdrModuleSwitch { get; set; }
@@ -159,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>1</b>: Enabled.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>Notice: The basic service module switch cannot be manually modified. This module is enabled when any other module is enabled, and is disabled when all other modules are disabled.</para>
+            /// <para>Notice: The basic service module switch cannot be manually modified. This module is in the enabling status when any other module is enabled, and is in the shutdown status only when all other modules are disabled.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

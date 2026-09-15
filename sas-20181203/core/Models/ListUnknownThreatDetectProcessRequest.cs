@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The analysis result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>black</b>: abnormal process</para>
-        /// </description></item>
-        /// <item><description><para><b>white</b>: normal process</para>
-        /// </description></item>
+        /// <item><description><b>black</b>: abnormal process</description></item>
+        /// <item><description><b>white</b>: normal process</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnalyzeResult { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number of the current page when using paged query. This is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for the first detection, in milliseconds.</para>
+        /// <para>The end of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966345</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FirstTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range for the first detection, in milliseconds.</para>
+        /// <para>The start of the time range during which the process was first detected. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966344</para>
@@ -56,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FirstTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The MD5 value of the file.</para>
+        /// <para>The MD5 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0552c44e243abdea1729d4507bce****</para>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The maximum number of entries per page when using paged query. This is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The SHA-256 value of the file.</para>
+        /// <para>The SHA-256 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f204693a7d2ce99d6c4434e550d985ee1c7be7cb5dd9a76094369af0d2******</para>
@@ -114,6 +112,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Sha256")]
         [Validation(Required=false)]
         public string Sha256 { get; set; }
+
+        /// <summary>
+        /// <para>The label.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Process Tag</para>
+        /// </summary>
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public string Tag { get; set; }
 
         /// <summary>
         /// <para>The UUID of the server to query.</para>

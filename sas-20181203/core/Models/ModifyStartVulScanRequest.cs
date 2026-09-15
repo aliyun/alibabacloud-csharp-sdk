@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without performing the actual operation.</description></item>
+        /// <item><description>false: performs the actual request.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
         /// <remarks>
         /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
@@ -27,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Settings for the vulnerability types to detect by using the one-click scan feature. Valid values:</para>
+        /// <para>Settings for the vulnerability types to be detected by the one-click scan feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
@@ -49,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Types { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The list of server UUIDs. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

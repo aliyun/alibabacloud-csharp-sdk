@@ -16,6 +16,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: performs the actual operation.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
@@ -25,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security alert.</para>
+        /// <para>The ID of the alert event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

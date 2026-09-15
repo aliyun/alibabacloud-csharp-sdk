@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateCommonOverallConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The switch status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled</description></item>
+        /// <item><description><b>off</b>: disabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,6 +30,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>Specifies whether asset configuration is required. Default value: <b>false</b>. Valid values:</para>
@@ -61,8 +68,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>kdump_switch</b>: proactive defense experience optimization</description></item>
-        /// <item><description><b>threat_detect</b>: adaptive threat detection capability</description></item>
+        /// <item><description><b>kdump_switch</b>: proactive defense optimization</description></item>
+        /// <item><description><b>threat_detect</b>: adaptive threat detection</description></item>
         /// <item><description><b>suspicious_aggregation</b>: alert association</description></item>
         /// <item><description><b>alidetect</b>: file detection</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_38857</b>: Linux entry service performs high-risk operations</description></item>
@@ -100,8 +107,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54369</b>: Windows creates WMI auto-start items</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50869</b>: Linux privilege escalation to execute high-risk commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_53272</b>: Linux kernel vulnerability exploitation for privilege escalation</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54395</b>: Linux privilege escalation to read/write sensitive files</description></item>
-        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57897</b>: Linux suspected privilege escalation behavior</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_54395</b>: Linux privilege escalation to read or write sensitive files</description></item>
+        /// <item><description><b>USER-ENABLE-SWITCH-TYPE_57897</b>: Linux suspected privilege escalation</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_52825</b>: Windows privilege escalation to execute high-risk commands</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_5507</b>: Linux malicious driver</description></item>
         /// <item><description><b>USER-ENABLE-SWITCH-TYPE_50876</b>: Linux anti-security software</description></item>

@@ -17,6 +17,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform only a dry run of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: performs the actual request.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The extended information field:</para>
         /// <list type="bullet">
         /// <item><description><b>additionType</b>: the extended scan type</description></item>
@@ -40,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The scan type of the virus scan. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>system</b>: system scan</description></item>
-        /// <item><description><b>user</b>: custom scan.</description></item>
+        /// <item><description><b>user</b>: custom scan</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

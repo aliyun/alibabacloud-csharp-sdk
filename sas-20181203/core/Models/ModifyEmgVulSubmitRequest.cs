@@ -10,19 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyEmgVulSubmitRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values: true: performs a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,10 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to perform vulnerability detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>yes</b>: Perform vulnerability detection.</para>
-        /// </description></item>
-        /// <item><description><para><b>no</b>: Do not perform vulnerability detection.</para>
-        /// </description></item>
+        /// <item><description><b>yes</b>: Perform vulnerability detection.</description></item>
+        /// <item><description><b>no</b>: Do not perform vulnerability detection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

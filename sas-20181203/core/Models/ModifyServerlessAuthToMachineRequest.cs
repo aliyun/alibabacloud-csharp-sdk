@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindAppList { get; set; }
 
         /// <summary>
-        /// <para>The Asset Type. Valid values:</para>
+        /// <para>The Asset Type for the operation. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>INSTANCE</b>: Instance.</description></item>
         /// <item><description><b>APP</b>: Application.</description></item>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindUuidList { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you enter the parameter.</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</para>
         /// <remarks>
         /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
@@ -110,6 +110,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Criteria")]
         [Validation(Required=false)]
         public string Criteria { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. true: performs only a check without executing the actual operation. false: performs the actual operation. Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>The logical relationship among multiple search conditions. Valid values:</para>

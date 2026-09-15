@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operation code of the cloud service configuration check task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Throttling</b>: Rate limited.</description></item>
-            /// <item><description><b>ActionTrialUnauthorized</b>: Unauthorized error.</description></item>
+            /// <item><description><b>Throttling</b>: rate limit.</description></item>
+            /// <item><description><b>ActionTrialUnauthorized</b>: unauthorized error.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

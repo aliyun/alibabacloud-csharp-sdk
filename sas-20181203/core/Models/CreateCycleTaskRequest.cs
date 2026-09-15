@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Enable.</description></item>
@@ -58,7 +65,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The extended information field.</para>
-        /// <para>Note: This parameter is actually required. If this parameter is not specified, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</para>
+        /// <remarks>
+        /// <para>Note: This parameter is required. If you do not specify this parameter, the API returns an error. The value is a JSON-formatted string that must contain at least the targetInfo array.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -96,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The source from which the task is added.</para>
+        /// <para>The source from which the task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console_batch</para>
@@ -106,7 +115,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The task end time, in hours.</para>
+        /// <para>The end time of the task, in hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetEndTime { get; set; }
 
         /// <summary>
-        /// <para>The task start time, in hours.</para>
+        /// <para>The start time of the task, in hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,11 +148,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The node type. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
         /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
-        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scanning.</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scan.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

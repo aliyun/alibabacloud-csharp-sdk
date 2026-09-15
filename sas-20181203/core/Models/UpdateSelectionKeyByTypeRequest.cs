@@ -34,6 +34,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without performing the actual operation.</description></item>
+        /// <item><description>false: performs the actual request.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The unique identifier of the asset selection.</para>
         /// 
         /// <b>Example:</b>

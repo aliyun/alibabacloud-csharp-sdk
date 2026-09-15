@@ -10,11 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCreateVulWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run without executing the actual operation.</description></item>
+        /// <item><description>false: performs the actual operation.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>The reason for adding the vulnerability whitelist.</para>
@@ -46,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><b>uuids</b>: The collection of host asset UUIDs. The field type is String.</description></item>
         /// <item><description><b>groupIds</b>: The collection of server group IDs. The field type is Long.<remarks>
-        /// <para>If this value is empty, the whitelist applies to all hosts. If <b>type</b> is set to <b>GroupId</b>, <b>groupIds</b> cannot be empty. If <b>type</b> is set to <b>Uuid</b>, <b>uuids</b> cannot be empty.</para>
+        /// <para>If this parameter is left empty, the whitelist takes effect on all hosts. If <b>type</b> is set to <b>GroupId</b>, <b>groupIds</b> cannot be empty. If <b>type</b> is set to <b>Uuid</b>, <b>uuids</b> cannot be empty.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -61,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The information about the vulnerability to add to the whitelist. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Status</b>: The vulnerability status.</para>
+        /// <item><description><para><b>Status</b>: The status of the vulnerability.</para>
         /// </description></item>
         /// <item><description><para><b>GmtLast</b>: The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
         /// </description></item>
@@ -69,9 +81,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>AsapCount</b>: The number of high-priority vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>Name</b>: The vulnerability name.</para>
+        /// <item><description><para><b>Name</b>: The name of the vulnerability.</para>
         /// </description></item>
-        /// <item><description><para><b>Type</b>: The vulnerability type. Valid values:</para>
+        /// <item><description><para><b>Type</b>: The type of the vulnerability. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
@@ -92,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>TotalFixCount</b>: The total number of fixed vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>Tags</b>: The vulnerability tags.</para>
+        /// <item><description><para><b>Tags</b>: The tags of the vulnerability.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
