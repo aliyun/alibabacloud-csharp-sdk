@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1545</para>
+            /// <para>1554</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

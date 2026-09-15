@@ -1,3 +1,8 @@
+2026-09-15 Version: 1.13.2
+- Update API UpdateServiceConfig: add request parameters ClientToken.
+- Update API UpdateServiceConfig: add request parameters DryRun.
+
+
 2026-09-02 Version: 1.13.1
 - Update API GetGuardLogStats: add request parameters CommodityCode.
 

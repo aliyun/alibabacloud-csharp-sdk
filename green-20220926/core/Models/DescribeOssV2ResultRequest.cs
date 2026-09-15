@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-14 16:08:38</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-14 16:08:38</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Image stock task 20240914100517757</para>
+        /// <para>Image batch task 20240914100517757</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

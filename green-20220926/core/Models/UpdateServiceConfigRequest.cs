@@ -10,6 +10,23 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateServiceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The client-generated idempotency token used to prevent duplicate operations caused by network retries. The token must be unique across requests and contain only printable ASCII characters (ASCII 32-126).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>550e8400-e29b-41d4-a716-446655440000</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. When set to true, only parameter validation and business logic checks are performed without actually creating or updating resources.</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
         /// <para>The document configuration.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordHitLibs { get; set; }
 
         /// <summary>
-        /// <para>The machine-assisted moderation configuration.</para>
+        /// <para>The human-machine moderation configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

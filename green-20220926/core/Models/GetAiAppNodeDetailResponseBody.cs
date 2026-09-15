@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred.</para>
+            /// <para>The time when the event occurred. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 16:08:38</para>

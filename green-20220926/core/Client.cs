@@ -4622,7 +4622,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</para>
+        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4693,7 +4693,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</para>
+        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4764,7 +4764,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</para>
+        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4787,7 +4787,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation information. API operation is free of charge.</para>
+        /// <para>API operation is used together with the Image Moderation Enhanced API. After you call the Image Moderation Enhanced API, you can call API operation to obtain more moderation details. API operation is free of charge.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14598,7 +14598,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</para>
+        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14665,7 +14665,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</para>
+        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14732,7 +14732,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</para>
+        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14755,7 +14755,7 @@ namespace AlibabaCloud.SDK.Green20220926
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, results are automatically deleted.</para>
+        /// <para>This operation is free of charge. Set the query interval to 30 seconds (that is, query results 30 seconds after you submit an asynchronous detection task). The maximum interval cannot exceed 24 hours. Otherwise, the results are automatically deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18807,6 +18807,14 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileConfig))
             {
                 body["FileConfig"] = request.FileConfig;
@@ -18891,6 +18899,14 @@ namespace AlibabaCloud.SDK.Green20220926
                 query["RegionId"] = request.RegionId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileConfig))
             {
                 body["FileConfig"] = request.FileConfig;

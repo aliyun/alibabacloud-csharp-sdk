@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The freeze type. This parameter is required when Operation is set to freeze. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ACL: Modify file permissions.</description></item>
-        /// <item><description>COPY: Move the file to a directory. Directory description: 1. The directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during manual freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</description></item>
+        /// <item><description>COPY: Move the file directory. Description of the destination directory: 1. The file directory selected when the task was created takes priority. 2. If automatic freezing was not enabled during creation, or ACL freezing was configured, the directory selected during freezing in the console is used. 3. The default directory is alicip_riskfile_backup/.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <list type="bullet">
         /// <item><description>freeze: Freeze.</description></item>
         /// <item><description>unfreeze: Unfreeze.</description></item>
-        /// <item><description>misreport: False positive (not a violation).</description></item>
-        /// <item><description>missOut: Missed violation.</description></item>
+        /// <item><description>misreport: Non-violation false positive.</description></item>
+        /// <item><description>missOut: Violation missed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Image batch task 20240914100517757</para>
+        /// <para>Image stock task 20240914100517757</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
