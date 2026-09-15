@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ModifyDataAgentThemeRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the theme. Maximum length: 255 characters. A value of null indicates that the field is not modified. An empty string clears the field.</para>
+        /// <para>The description. Maximum length: 255 characters. A null value indicates that the field is not modified, and an empty string clears the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>weekly report</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The business identifier of the theme.</para>
+        /// <para>The business ID of the theme.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0f8b2c1d-<b><b>-</b></b>-****-9a3e5f7b1c2d</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ThemeId { get; set; }
 
         /// <summary>
-        /// <para>The display name of the theme. Maximum length: 64 characters. A value of null indicates that the field is not modified. An empty string clears the field.</para>
+        /// <para>The display name. Maximum length: 64 characters. A null value indicates that the field is not modified, and an empty string clears the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>weekly report</para>

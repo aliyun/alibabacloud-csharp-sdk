@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The target object key, which is exactly locked by the policy.</para>
+            /// <para>The target object key that is exactly locked by the policy.</para>
             /// </summary>
             [NameInMap("ObjectKey")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The theme business identifier generated or reused for this request. Pass this identifier to the CreateDataAgentTheme operation after the upload is complete to register the metadata.</para>
+            /// <para>The theme business ID generated or reused for this request. After the upload is complete, pass this ID to the CreateDataAgentTheme operation to register the metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0f8b2c1d****a3e5f7b1c2d</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string UploadDir { get; set; }
 
             /// <summary>
-            /// <para>The PostObject destination address over the public network.</para>
+            /// <para>The PostObject target address over the public network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>https://**********.oss-cn-hangzhou.aliyuncs.com</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned when the request fails.</para>
+        /// <para>The error code. This parameter is returned only if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>

@@ -1303,7 +1303,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Agent</para>
+        /// <para>Creates a Database Gateway agent identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1357,7 +1357,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Agent</para>
+        /// <para>Creates a Database Gateway agent identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1411,7 +1411,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Agent</para>
+        /// <para>Creates a Database Gateway agent identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1429,7 +1429,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 Agent</para>
+        /// <para>Creates a Database Gateway agent identity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9268,7 +9268,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9311,7 +9311,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9354,7 +9354,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9373,7 +9373,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
-        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// For more information, see <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18035,7 +18035,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
+        /// <para>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18085,7 +18085,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
+        /// <para>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18135,7 +18135,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
+        /// <para>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18153,7 +18153,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
+        /// <para>Modifies the display name and description of a DataAgent theme. A null parameter value indicates that the corresponding field is not modified, and an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">

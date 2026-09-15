@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The stage of the custom agent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>debug</b>: Debug stage.</description></item>
-            /// <item><description><b>prod</b>: Production stage.</description></item>
+            /// <item><description><b>debug</b>: the debugging stage.</description></item>
+            /// <item><description><b>prod</b>: the production stage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,6 +112,54 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Language { get; set; }
 
             /// <summary>
+            /// <para>The list of MCP header configurations.</para>
+            /// </summary>
+            [NameInMap("McpHeaders")]
+            [Validation(Required=false)]
+            public List<CreateDataAgentSessionRequestSessionConfigMcpHeaders> McpHeaders { get; set; }
+            public class CreateDataAgentSessionRequestSessionConfigMcpHeaders : TeaModel {
+                /// <summary>
+                /// <para>The MCP header configuration.</para>
+                /// </summary>
+                [NameInMap("McpHeader")]
+                [Validation(Required=false)]
+                public List<CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader> McpHeader { get; set; }
+                public class CreateDataAgentSessionRequestSessionConfigMcpHeadersMcpHeader : TeaModel {
+                    /// <summary>
+                    /// <para>The key to add to the header.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>UserId</para>
+                    /// </summary>
+                    [NameInMap("Key")]
+                    [Validation(Required=false)]
+                    public string Key { get; set; }
+
+                    /// <summary>
+                    /// <para>The value to add to the header.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>421****571</para>
+                    /// </summary>
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The ID of the MCP server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1fl4r*****1qi</para>
+                /// </summary>
+                [NameInMap("McpServerId")]
+                [Validation(Required=false)]
+                public string McpServerId { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The list of MCP server IDs in the session configuration.</para>
             /// </summary>
             [NameInMap("McpServerIds")]
@@ -121,9 +169,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <summary>
             /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
-            /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
-            /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
+            /// <item><description><b>ASK_DATA</b>: the data query mode.</description></item>
+            /// <item><description><b>ANALYSIS</b>: the analysis mode.</description></item>
+            /// <item><description><b>INSIGHT</b>: the insight mode.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,10 +202,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReportWaterMark { get; set; }
 
             /// <summary>
-            /// <para>The name of the user OSS bucket.</para>
-            /// <list type="bullet">
-            /// <item><description>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</description></item>
-            /// </list>
+            /// <para>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-oss-bucket</para>

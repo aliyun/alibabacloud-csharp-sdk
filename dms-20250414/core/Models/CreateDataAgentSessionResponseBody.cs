@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the session was created.</para>
+            /// <para>The creation time of the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765262307992</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The basic information about the file.</para>
+            /// <para>The basic information of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
@@ -86,8 +86,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>debug</b>: Debug stage.</description></item>
-                /// <item><description><b>prod</b>: Production stage.</description></item>
+                /// <item><description><b>debug</b>: the debugging stage.</description></item>
+                /// <item><description><b>prod</b>: the production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -158,9 +158,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 /// <summary>
                 /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
-                /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
-                /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
+                /// <item><description><b>ASK_DATA</b>: the data query mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: the analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: the insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -191,10 +191,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportWaterMark { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user OSS bucket.</para>
-                /// <list type="bullet">
-                /// <item><description>Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</description></item>
-                /// </list>
+                /// <para>The name of the user OSS bucket. Analysis process files and report artifacts can be uploaded to the specified OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-oss-bucket</para>
@@ -248,7 +245,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the request failed.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
