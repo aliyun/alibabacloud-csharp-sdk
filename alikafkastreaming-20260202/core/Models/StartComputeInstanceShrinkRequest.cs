@@ -9,35 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class StartComputeInstanceShrinkRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alikafka_streaming-cn-pe333xxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>streaming-prod</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        [NameInMap("SelectedZones")]
-        [Validation(Required=false)]
-        public string SelectedZones { get; set; }
-
-        [NameInMap("ServiceVersion")]
-        [Validation(Required=false)]
-        public string ServiceVersion { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -48,6 +46,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-bp1abcdefg</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

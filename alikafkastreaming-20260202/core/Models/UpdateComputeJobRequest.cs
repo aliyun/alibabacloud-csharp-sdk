@@ -9,12 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 {
     public class UpdateComputeJobRequest : TeaModel {
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alikafka_streaming-cn-a1b2c3d4</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -22,6 +21,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>order_enrichment</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -29,18 +31,21 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>订单流实时清洗</para>
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
-
-        [NameInMap("UpgradeMode")]
-        [Validation(Required=false)]
-        public string UpgradeMode { get; set; }
 
     }
 

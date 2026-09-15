@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
     public class CreateComputeInstanceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("PaidType")]
         [Validation(Required=false)]
@@ -18,18 +21,21 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-acfm2pz25js****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
-
-        [NameInMap("ResourceType")]
-        [Validation(Required=false)]
-        public string ResourceType { get; set; }
 
     }
 

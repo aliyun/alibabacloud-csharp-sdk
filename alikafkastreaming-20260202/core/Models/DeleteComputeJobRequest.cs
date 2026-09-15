@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
     public class DeleteComputeJobRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alikafka_streaming-cn-pe333xxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>order_enrichment</para>
         /// </summary>
         [NameInMap("JobName")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

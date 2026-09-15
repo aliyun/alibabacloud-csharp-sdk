@@ -11,17 +11,19 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
     public class GetComputeInstanceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alikafka_streaming-cn-xxxxxxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
