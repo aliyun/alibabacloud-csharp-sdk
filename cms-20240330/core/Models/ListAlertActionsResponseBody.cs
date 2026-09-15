@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertActionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of alert action integration configurations.</para>
+        /// <para>The list of action integration configurations.</para>
         /// </summary>
         [NameInMap("alertActions")]
         [Validation(Required=false)]
         public List<ListAlertActionsResponseBodyAlertActions> AlertActions { get; set; }
         public class ListAlertActionsResponseBodyAlertActions : TeaModel {
             /// <summary>
-            /// <para>The unique ID of the alert action integration.</para>
+            /// <para>The unique IDs of the action integrations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertActionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert action integration.</para>
+            /// <para>The name of the action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AlertActionName { get; set; }
 
             /// <summary>
-            /// <para>Specifies the event bus.</para>
+            /// <para>The EventBridge parameters.</para>
             /// </summary>
             [NameInMap("ebParam")]
             [Validation(Required=false)]
             public ListAlertActionsResponseBodyAlertActionsEbParam EbParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsEbParam : TeaModel {
                 /// <summary>
-                /// <para>The event provider.</para>
+                /// <para>The event source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The parameters of Auto Scaling.</para>
+            /// <para>The elastic scaling parameters.</para>
             /// </summary>
             [NameInMap("essParam")]
             [Validation(Required=false)]
             public ListAlertActionsResponseBodyAlertActionsEssParam EssParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsEssParam : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Auto Scaling group.</para>
+                /// <para>The ID of the elastic scaling group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testId</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EssGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scaling rule.</para>
+                /// <para>The ID of the elastic scaling rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testId</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The parameters of Function Compute 3.0.</para>
+            /// <para>The Function Compute 3.0 parameters.</para>
             /// </summary>
             [NameInMap("fc3Param")]
             [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The parameters of Function Compute.</para>
+            /// <para>The Function Compute parameters.</para>
             /// </summary>
             [NameInMap("fcParam")]
             [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The parameters of Simple Message Queue (formerly MNS).</para>
+            /// <para>The Simple Message Queue (formerly MNS) parameters.</para>
             /// </summary>
             [NameInMap("mnsParam")]
             [Validation(Required=false)]
@@ -220,12 +220,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MnsType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource.</para>
+                /// <para>The resource name.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the resource type is \<c>queue\\</c>, this parameter specifies the queue name.</para>
-                /// </description></item>
-                /// <item><description><para>If the resource type is \<c>topic\\</c>, this parameter specifies the topic name.</para>
-                /// </description></item>
+                /// <item><description>If the resource type is queue, the resource name is the queue name.</description></item>
+                /// <item><description>If the resource type is topic, the resource name is the topic name.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -265,7 +263,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The integration webhook of PagerDuty. Versions 1 and 2 are supported.</para>
+                /// <para>The integration webhook of PagerDuty. V1 and V2 versions are supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></para>
@@ -277,7 +275,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The parameters of Simple Log Service.</para>
+            /// <para>The Simple Log Service parameters.</para>
             /// </summary>
             [NameInMap("slsParam")]
             [Validation(Required=false)]
@@ -316,7 +314,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The type of the alert action integration.</para>
+            /// <para>The type of the action integration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FC</para>
@@ -333,7 +331,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public ListAlertActionsResponseBodyAlertActionsWebhookParam WebhookParam { get; set; }
             public class ListAlertActionsResponseBodyAlertActionsWebhookParam : TeaModel {
                 /// <summary>
-                /// <para>The data format. This parameter is valid only when the request method is POST.</para>
+                /// <para>The data format. This parameter takes effect only when the request method is POST.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>JSON</para>
@@ -350,7 +348,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public Dictionary<string, string> Headers { get; set; }
 
                 /// <summary>
-                /// <para>The request method of the webhook.</para>
+                /// <para>The webhook request method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GET</para>
@@ -360,7 +358,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The callback URL for alerts.</para>
+                /// <para>The alert callback URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.test.com">http://www.test.com</a></para>

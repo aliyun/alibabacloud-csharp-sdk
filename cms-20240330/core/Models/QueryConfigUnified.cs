@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryConfigUnified : TeaModel {
         /// <summary>
-        /// <para>The aggregate functions. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY.</para>
+        /// <para>The aggregate functions. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AVG</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Specifies whether to perform alert detection only after data is complete (originally used when type=PROMETHEUS_MULTI_QUERY). This field overlaps with enableDataCompleteCheck. Using this field on write path returns 400.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether to perform alert detection only after data is complete (originally used when type is set to PROMETHEUS_MULTI_QUERY). This field overlaps with enableDataCompleteCheck. Using this field on write paths returns 400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? CheckAfterDataComplete { get; set; }
 
         /// <summary>
-        /// <para>The list of dimensions. This parameter is used when type is set to CLOUD_MONITORING_QUERY. Each dimension is a key/value string mapping.</para>
+        /// <para>The dimension list. This parameter is used when type is set to CLOUD_MONITORING_QUERY. Each dimension is a key/value string mapping.</para>
         /// </summary>
         [NameInMap("dimensions")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The duration in seconds. Used when type=PROMETHEUS_MULTI_QUERY.</para>
+        /// <para>The duration in seconds. Used when type is set to PROMETHEUS_MULTI_QUERY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The query expression or SPL statement. Recommended when type=PROMETHEUS_SINGLE_QUERY. Optional when type=UMODEL_METRICSET_QUERY for custom SPL. Required when type=UMODEL_LOGSET_QUERY, where an SPL query statement must be provided (the business layer enforces this requirement).</para>
+        /// <para>The query expression or SPL statement. Recommended when type is set to PROMETHEUS_SINGLE_QUERY. Optional when type is set to UMODEL_METRICSET_QUERY for custom SPL. Required when type is set to UMODEL_LOGSET_QUERY, where an SPL query statement must be provided (the business layer enforces this requirement).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<PrometheusMetricFilterValue> FilterValues { get; set; }
 
         /// <summary>
-        /// <para>The list of group fields. This parameter is used when type is set to SLS_MULTI_QUERY and groupType is set to custom.</para>
+        /// <para>The group field list. This parameter is used when type is set to SLS_MULTI_QUERY and groupType is set to custom.</para>
         /// </summary>
         [NameInMap("groupFieldList")]
         [Validation(Required=false)]
         public List<string> GroupFieldList { get; set; }
 
         /// <summary>
-        /// <para>The group ID (type=CLOUD_MONITORING_QUERY). Dual semantics: og- prefix = observation group (GROUP_V2. The prefix itself conveys the semantics. relationType is not required. The backend resolves members through the entity store). Numeric only = application group (GROUP_V1 legacy resource group. Requires relationType=GROUP).</para>
+        /// <para>The group ID (type=CLOUD_MONITORING_QUERY). Dual semantics: an og- prefix indicates an observation group (GROUP_V2, the prefix itself conveys the semantics, no relationType is needed, and the backend resolves members through the entity store). A numeric-only value indicates an application group (GROUP_V1 legacy resource group, requires relationType=GROUP).</para>
         /// 
         /// <b>Example:</b>
         /// <para>og-845e0a26455f437c</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The grouping policy (used when type=SLS_MULTI_QUERY): none / label / custom.</para>
+        /// <para>The grouping policy (used when type is set to SLS_MULTI_QUERY): none / label / custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The join list (used when type=SLS_MULTI_QUERY. Maximum of 2: joinings[0] corresponds to the set operation between query 0 and query 1. joinings[1] corresponds to the set operation between query 1 and query 2).</para>
+        /// <para>The join list (used when type is set to SLS_MULTI_QUERY, with a maximum of 2 entries: joinings[0] corresponds to the set operation between query 0 and query 1, and joinings[1] corresponds to the set operation between query 1 and query 2).</para>
         /// </summary>
         [NameInMap("joinings")]
         [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<LabelFilters> LabelFilters { get; set; }
 
         /// <summary>
-        /// <para>The original V1 query JSON string returned as a fallback when type=UNKNOWN_QUERY and read path parsing fails. Contains the field values that triggered the failure, such as filter.operator=ABC. When the frontend detects that this field is not empty, display it as read-only.</para>
+        /// <para>The raw V1 query JSON string returned as a fallback when type is set to UNKNOWN_QUERY and the read path fails to parse (contains the field values that triggered the failure, such as filter.operator=ABC). When the frontend detects that this field is not empty, display it as read-only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LegacyRaw { get; set; }
 
         /// <summary>
-        /// <para>Returned when type=UNKNOWN_QUERY. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</para>
+        /// <para>Returned when type is set to UNKNOWN_QUERY, indicating that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LogSet { get; set; }
 
         /// <summary>
-        /// <para>The measure group key. This parameter is optional when type is set to APM_MULTI_QUERY. It corresponds to alertMetricInput.groupKey in V1.</para>
+        /// <para>The metric group key. This parameter is optional when type is set to APM_MULTI_QUERY. It corresponds to alertMetricInput.groupKey in V1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MeasureGroupKey { get; set; }
 
         /// <summary>
-        /// <para>The APM measure configuration list.</para>
+        /// <para>The APM metric configuration list.</para>
         /// </summary>
         [NameInMap("measureList")]
         [Validation(Required=false)]
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The query time offset in seconds. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY. Works with windowSecs to implement an offset query over the range [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: [0, 86400].</para>
+        /// <para>The query time offset in seconds. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. Works with windowSecs to implement an offset query over the range [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: [0, 86400].</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PromQl { get; set; }
 
         /// <summary>
-        /// <para>The subquery list (polymorphic by type): When type=SLS_MULTI_QUERY, each entry is a SlsNamedQueryEntry (timeUnit/start/end/window/expr). When type=PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry (name/expr). When type=UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry.</para>
+        /// <para>The subquery list (polymorphic by type): when type is set to SLS_MULTI_QUERY, each entry is a SlsNamedQueryEntry (timeUnit/start/end/window/expr). When type is set to PROMETHEUS_MULTI_QUERY, each entry is a PrometheusNamedQueryEntry (name/expr). When type is set to UMODEL_METRICSET_MULTI_QUERY, each entry is a MetricSetNamedQueryEntry.</para>
         /// </summary>
         [NameInMap("queries")]
         [Validation(Required=false)]
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The aggregation time window in seconds. Used when type=UMODEL_METRICSET_QUERY / UMODEL_LOGSET_QUERY. Valid range: [60, 86400].</para>
+        /// <para>The aggregation time window in seconds. Used when type is set to UMODEL_METRICSET_QUERY or UMODEL_LOGSET_QUERY. Valid range: [60, 86400].</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

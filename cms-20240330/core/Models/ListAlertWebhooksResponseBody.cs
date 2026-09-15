@@ -138,6 +138,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string WebhookId { get; set; }
 
+            /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default-cms-0000000000000000-cn-hangzhou</para>
+            /// </summary>
             [NameInMap("workspace")]
             [Validation(Required=false)]
             public string Workspace { get; set; }

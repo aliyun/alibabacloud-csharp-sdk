@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EnableMaintainWindowRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace name. This parameter is required by the backend and is used to isolate silence policy resources across different business spaces.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>workspace-test</para>
+        /// <para>default-cms-xxxx-cn-hangzhou</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]

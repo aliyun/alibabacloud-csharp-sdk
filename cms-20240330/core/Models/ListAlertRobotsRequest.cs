@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertRobotsRequest : TeaModel {
         /// <summary>
-        /// <para>The robot name. Prefix fuzzy match is supported.</para>
+        /// <para>The robot name. Supports prefix fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The robot IDs.</para>
+        /// <para>The robot ID.</para>
         /// </summary>
         [NameInMap("robotIds")]
         [Validation(Required=false)]

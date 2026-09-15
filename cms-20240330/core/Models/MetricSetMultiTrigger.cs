@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MetricSetMultiTrigger : TeaModel {
         /// <summary>
-        /// <para>The minimum deviation or absolute deviation dead zone for the dynamic baseline. Takes effect only with baseline operators. The unit is the same as the metric. The value must be greater than or equal to 0. A value of 0 means no restriction.</para>
+        /// <para>The dynamic baseline minimum deviation or absolute deviation dead zone. Effective only for baseline operators. The unit is the same as the metric. The value must be greater than or equal to 0. A value of 0 means no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public double? AbsDeviation { get; set; }
 
         /// <summary>
-        /// <para>The baseline period. Takes effect only with baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days.</para>
+        /// <para>The baseline period. Effective only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LogicOperator { get; set; }
 
         /// <summary>
-        /// <para>The upper bound of the range. Required when expressionType is SIMPLE and operator is IN_RANGE or OUT_OF_RANGE. The value must be greater than or equal to min.</para>
+        /// <para>The upper bound of the range. Required when expressionType is SIMPLE and operator is IN_RANGE/OUT_OF_RANGE. The value must be greater than or equal to min.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public double? Max { get; set; }
 
         /// <summary>
-        /// <para>The lower bound of the range. Required when expressionType is SIMPLE and operator is IN_RANGE or OUT_OF_RANGE.</para>
+        /// <para>The lower bound of the range. Required when expressionType is SIMPLE and operator is IN_RANGE/OUT_OF_RANGE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string QueryName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic baseline sensitivity. Takes effect when expressionType is SIMPLE and a baseline operator is used. Valid values: HIGH (narrowest and most sensitive band), MEDIUM, and LOW (widest and least sensitive band).</para>
+        /// <para>The dynamic baseline sensitivity. Effective when expressionType is SIMPLE and a baseline operator is used. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>

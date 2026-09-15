@@ -9,8 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusInstancesShrinkRequest : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The region IDs for filtering, separated by commas.</para>
+        /// <para>The region IDs for filtering, separated by commas. Currently, only a single region ID is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -20,6 +22,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("filterRegionIds")]
         [Validation(Required=false)]
+        [Obsolete]
         public string FilterRegionIds { get; set; }
 
         /// <summary>
@@ -84,6 +87,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The resource type of the instance.</para>
         /// 
@@ -95,6 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("resourceType")]
         [Validation(Required=false)]
+        [Obsolete]
         public string ResourceType { get; set; }
 
         /// <summary>
@@ -105,11 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance version. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>V1: V1 version.</description></item>
-        /// <item><description>V2: V2 version.</description></item>
-        /// </list>
+        /// <para>The instance version. Valid values: V1 and V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>

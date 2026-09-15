@@ -10,12 +10,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusDashboardsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of dashboards for the Prometheus instance.</para>
+        /// <para>The list of dashboards for the Managed Service for Prometheus instance.</para>
         /// </summary>
         [NameInMap("prometheusDashboards")]
         [Validation(Required=false)]
         public List<ListPrometheusDashboardsResponseBodyPrometheusDashboards> PrometheusDashboards { get; set; }
         public class ListPrometheusDashboardsResponseBodyPrometheusDashboards : TeaModel {
+            /// <summary>
+            /// <para>The UID of the dashboard folder.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>abc</para>
+            /// </summary>
+            [NameInMap("folderUid")]
+            [Validation(Required=false)]
+            public string FolderUid { get; set; }
+
             /// <summary>
             /// <para>The dashboard ID.</para>
             /// 
@@ -64,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>The URL of the dashboard.</para>
+            /// <para>The dashboard URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application">https://gnew.console.aliyun.com/d/xxx-17460385-807-7-6/cs-cost-application</a></para>
@@ -76,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

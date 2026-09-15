@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The contact IDs.</para>
+        /// <para>The IDs of the alert contacts.</para>
         /// </summary>
         [NameInMap("contactIds")]
         [Validation(Required=false)]
         public string ContactIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The email address of the contact.</para>
+        /// <para>The email address of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:test@aliyun.com">test@aliyun.com</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The ID of the contact group to which the contact belongs.</para>
+        /// <para>The ID of the contact group to which the alert contact belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group-id-123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The contact name.</para>
+        /// <para>The name of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the contact.</para>
+        /// <para>The phone number of the alert contact.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15012345678</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Phone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only ungrouped contacts.</para>
+        /// <para>Specifies whether to query only ungrouped alert contacts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

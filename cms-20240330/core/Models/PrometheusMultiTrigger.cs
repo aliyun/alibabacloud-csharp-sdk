@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string QueryName { get; set; }
 
         /// <summary>
-        /// <para>The alert severity level. Severity levels in descending priority: CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers are configured, they are sorted by this priority, and the first match fires the alert.</para>
+        /// <para>The alert severity level. The priority order is CRITICAL &gt; ERROR &gt; WARN / WARNING &gt; INFO. When multiple triggers are defined, they are sorted by this priority, and the first match fires the alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>

@@ -75,12 +75,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The payment type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go by metric volume.</description></item>
-            /// <item><description>POSTPAY_GB: pay-as-you-go by write volume.</description></item>
-            /// <item><description>PREPAY: subscription.</description></item>
-            /// <item><description>FREE: free.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go by metric volume.</description></item>
+            /// <item><description>POSTPAY_GB: Pay-as-you-go by write volume.</description></item>
+            /// <item><description>PREPAY: Subscription.</description></item>
+            /// <item><description>FREE: Free.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

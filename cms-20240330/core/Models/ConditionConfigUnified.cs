@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ConditionConfigUnified : TeaModel {
         /// <summary>
-        /// <para>The dynamic baseline minimum deviation or absolute deviation dead zone (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric. The value must be &gt;= 0. A value of 0 means no restriction.</para>
+        /// <para>The minimum deviation or absolute deviation dead zone for the dynamic baseline (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric unit. The value must be &gt;= 0. A value of 0 means no restriction.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Aggregate { get; set; }
 
         /// <summary>
-        /// <para>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N times. Default value: 1.</para>
+        /// <para>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N consecutive times. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AlertCount { get; set; }
 
         /// <summary>
-        /// <para>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. Automatic detection does not return the specific detection result.</para>
+        /// <para>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. The automatic detection result cannot be displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<CompareList> CompareList { get; set; }
 
         /// <summary>
-        /// <para>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to COMPOSITE. Required fields: relation, severity, times, and escalations.</para>
+        /// <para>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is COMPOSITE. Required fields: relation, severity, times, and escalations.</para>
         /// </summary>
         [NameInMap("compositeEscalation")]
         [Validation(Required=false)]
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EscalationType { get; set; }
 
         /// <summary>
-        /// <para>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to EXPRESS. This field is output only in read paths.</para>
+        /// <para>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is EXPRESS. This field is output only in read paths.</para>
         /// </summary>
         [NameInMap("expressEscalation")]
         [Validation(Required=false)]
         public CloudMonitoringExpressEscalation ExpressEscalation { get; set; }
 
         /// <summary>
-        /// <para>The raw V1 condition JSON string returned when type is set to UNKNOWN_CONDITION and the read path fails to parse the condition. When the frontend detects that this field is not empty, display it as read-only.</para>
+        /// <para>The raw V1 condition JSON string returned when type is UNKNOWN_CONDITION and the read path fails to parse the condition. If this field is not empty, the frontend displays it as read-only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LegacyRaw { get; set; }
 
         /// <summary>
-        /// <para>Returned when type is set to UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</para>
+        /// <para>Returned when type is UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor product team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LegacyType { get; set; }
 
         /// <summary>
-        /// <para>The log field name (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</para>
+        /// <para>The log field name (used when type is UMODEL_LOGSET_CONDITION and matchOperator is CONTAINS, EQUALS, or REGEX).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MatchOperator { get; set; }
 
         /// <summary>
-        /// <para>The log match value (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</para>
+        /// <para>The log match value (used when type is UMODEL_LOGSET_CONDITION and matchOperator is CONTAINS, EQUALS, or REGEX).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample value</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MatchValue { get; set; }
 
         /// <summary>
-        /// <para>The upper bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</para>
+        /// <para>The upper bound of the range (used by UMODEL_METRICSET_CONDITION when operator is IN_RANGE or OUT_OF_RANGE).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public double? Max { get; set; }
 
         /// <summary>
-        /// <para>The lower bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</para>
+        /// <para>The lower bound of the range (used by UMODEL_METRICSET_CONDITION when operator is IN_RANGE or OUT_OF_RANGE).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataAlertLevel { get; set; }
 
         /// <summary>
-        /// <para>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect only when noDataPolicy is set to NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</para>
+        /// <para>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect when noDataPolicy is NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>The PromQL-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to PROMETHEUS. This field is output only in read paths.</para>
+        /// <para>The PromQL trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is PROMETHEUS. This field is output only in read paths.</para>
         /// </summary>
         [NameInMap("prometheus")]
         [Validation(Required=false)]
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Relation { get; set; }
 
         /// <summary>
-        /// <para>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is set to ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</para>
+        /// <para>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>MEDIUM</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to SIMPLE. Required fields: metricName, period, and escalations.</para>
+        /// <para>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is SIMPLE. Required fields: metricName, period, and escalations.</para>
         /// </summary>
         [NameInMap("simpleEscalation")]
         [Validation(Required=false)]
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ThresholdList> ThresholdList { get; set; }
 
         /// <summary>
-        /// <para>The trigger list. This field is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority, and the first match fires.</para>
+        /// <para>The trigger list. The structure is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority. The first match fires the alert.</para>
         /// </summary>
         [NameInMap("triggers")]
         [Validation(Required=false)]
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</para>
+        /// <para>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is YOY_UP or YOY_DOWN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>minute</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string YoyTimeUnit { get; set; }
 
         /// <summary>
-        /// <para>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</para>
+        /// <para>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is YOY_UP or YOY_DOWN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

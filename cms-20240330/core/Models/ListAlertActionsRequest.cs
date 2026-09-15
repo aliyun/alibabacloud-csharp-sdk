@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertActionsRequest : TeaModel {
         /// <summary>
-        /// <para>The unique IDs of the alert action integrations.</para>
+        /// <para>The unique IDs of the action integrations.</para>
         /// </summary>
         [NameInMap("alertActionIds")]
         [Validation(Required=false)]
         public List<string> AlertActionIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert action integration.</para>
+        /// <para>The name of the action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the alert action integration.</para>
+        /// <para>The type of the action integration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC</para>

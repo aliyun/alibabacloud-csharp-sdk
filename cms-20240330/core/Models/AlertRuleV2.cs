@@ -24,24 +24,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Annotations { get; set; }
 
         /// <summary>
-        /// <para>The ARMS integration configuration.</para>
+        /// <para>The Application Real-Time Monitoring Service (ARMS) integration configuration.</para>
         /// </summary>
         [NameInMap("armsIntegrationConfig")]
         [Validation(Required=false)]
         public ArmsIntegrationConfig ArmsIntegrationConfig { get; set; }
 
         /// <summary>
-        /// <para>The business source. This value is read-only. Example values: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, and sls.</para>
+        /// <para>The business source (read-only), such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
         public string BizSource { get; set; }
 
         /// <summary>
-        /// <para>The detection condition configuration. Supported types: Prometheus simple, UModel, APM simple, and APM composite.</para>
+        /// <para>The detection condition configuration aggregation (Prometheus simple, UModel, APM simple, or APM composite).</para>
         /// </summary>
         [NameInMap("conditionConfig")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentTemplate { get; set; }
 
         /// <summary>
-        /// <para>The creation time in ISO 8601 format. This value is read-only.</para>
+        /// <para>The creation time (read-only), in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751595283143</para>
@@ -68,14 +68,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The datasource configuration. This is a unified object shared by PROMETHEUS, UMODEL, and APM. Fields are selected based on the type.</para>
+        /// <para>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object. Fields are selected based on the type).</para>
         /// </summary>
         [NameInMap("datasourceConfig")]
         [Validation(Required=false)]
         public DatasourceConfigUnified DatasourceConfig { get; set; }
 
         /// <summary>
-        /// <para>The datasource type. This value is read-only and derived.</para>
+        /// <para>The data source type (read-only, derived).</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -112,14 +112,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The notification configuration. Currently, only DIRECT_NOTIFY is supported, which corresponds to DirectNotifyConfig.</para>
+        /// <para>The rule manager (read-only). An empty value indicates a user-created rule. A non-empty value indicates the rule is created and managed by the corresponding cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>integrationCenter</para>
+        /// </summary>
+        [NameInMap("managedBy")]
+        [Validation(Required=false)]
+        public string ManagedBy { get; set; }
+
+        /// <summary>
+        /// <para>The notification configuration aggregation (currently only DIRECT_NOTIFY, corresponding to DirectNotifyConfig).</para>
         /// </summary>
         [NameInMap("notifyConfig")]
         [Validation(Required=false)]
         public NotifyConfigUnified NotifyConfig { get; set; }
 
         /// <summary>
-        /// <para>The notification policy ID. This value is read-only and derived from the first entry in the notification policy list.</para>
+        /// <para>The notification policy ID (read-only, derived). The value is the first entry in the notification policy list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -138,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Indicates whether the rule applies to all resources of this type. This value is read-only and derived. For new integrations, use observeResourceConfig.relationType and check whether it is set to ALL for equivalent semantics.</para>
+        /// <para><b>[Deprecated]</b> Specifies whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType and check whether the value is ALL for equivalent semantics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? ObserveResourceGlobalScope { get; set; }
 
         /// <summary>
-        /// <para>The list of observable resource IDs. This value is read-only and derived.</para>
+        /// <para>The list of observable resource IDs (read-only, derived).</para>
         /// </summary>
         [NameInMap("observeResourceList")]
         [Validation(Required=false)]
@@ -158,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> The observable resource type. This value is read-only and derived. Use observeResourceConfig.entityType instead for new integrations.</para>
+        /// <para><b>[Deprecated]</b> The observable resource type (read-only, derived). For new integrations, use observeResourceConfig.entityType instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -169,31 +179,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ObserveResourceType { get; set; }
 
         /// <summary>
-        /// <para>The partition key. This value is read-only and maintained by the system for rule routing and sharding.</para>
+        /// <para>The partition key (read-only). Maintained by the system for rule routing and sharding.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("partitionKey")]
         [Validation(Required=false)]
         public string PartitionKey { get; set; }
 
         /// <summary>
-        /// <para>The query configuration. Valid types: PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, and APM_MULTI_QUERY.</para>
+        /// <para>The query configuration aggregation (PROMETHEUS_SINGLE_QUERY, UMODEL_METRICSET_QUERY, or APM_MULTI_QUERY).</para>
         /// </summary>
         [NameInMap("queryConfig")]
         [Validation(Required=false)]
         public QueryConfigUnified QueryConfig { get; set; }
 
         /// <summary>
-        /// <para>The RCA (root cause analysis) configuration.</para>
+        /// <para>The root cause analysis (RCA) configuration.</para>
         /// </summary>
         [NameInMap("rcaConfig")]
         [Validation(Required=false)]
         public AlertRuleRcaConfig RcaConfig { get; set; }
 
         /// <summary>
-        /// <para>The region ID, aligned with V1 AlertRule.regionId. Priority: the regionId in the request body takes precedence over the gateway callerRegionId.</para>
+        /// <para>The region ID, aligned with V1 AlertRule.regionId. Priority: regionId in the request body takes precedence over callerRegionId from the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -203,14 +213,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling configuration. Currently, only the FIXED type is supported.</para>
+        /// <para>The scheduling configuration aggregation (currently only FIXED is supported).</para>
         /// </summary>
         [NameInMap("scheduleConfig")]
         [Validation(Required=false)]
         public ScheduleConfigUnified ScheduleConfig { get; set; }
 
         /// <summary>
-        /// <para>The severity levels covered by this rule, in comma-separated format. This value is read-only and derived. The format is consistent with the filter.severityLevels query parameter.</para>
+        /// <para>The severity levels covered by this rule, separated by commas (read-only, derived). The format is consistent with the filter.severityLevels query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -220,7 +230,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SeverityLevels { get; set; }
 
         /// <summary>
-        /// <para>The alert status. This value is read-only.</para>
+        /// <para>The alert status (read-only).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alarm</para>
@@ -230,7 +240,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time in ISO 8601 format. This value is read-only.</para>
+        /// <para>The update time (read-only), in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1764556086388</para>
@@ -240,7 +250,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The rule UUID. This value is system-generated and read-only.</para>
+        /// <para>The rule UUID (system-generated, read-only).</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxx-xxxx</para>

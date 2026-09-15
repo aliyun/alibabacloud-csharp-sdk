@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of contacts.</para>
+        /// <para>The list of alert contacts.</para>
         /// </summary>
         [NameInMap("contacts")]
         [Validation(Required=false)]
         public List<ListContactsResponseBodyContacts> Contacts { get; set; }
         public class ListContactsResponseBodyContacts : TeaModel {
             /// <summary>
-            /// <para>The contact ID.</para>
+            /// <para>The ID of the on-duty contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ContactId { get; set; }
 
             /// <summary>
-            /// <para>The email address of the contact.</para>
+            /// <para>The email address of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@aliyun.com">test@aliyun.com</a></para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EmailVerify { get; set; }
 
             /// <summary>
-            /// <para>The contact groups to which the contact belongs.</para>
+            /// <para>The contact groups to which the alert contact belongs.</para>
             /// </summary>
             [NameInMap("groupList")]
             [Validation(Required=false)]
             public List<string> GroupList { get; set; }
 
             /// <summary>
-            /// <para>The instant messaging user ID mappings. Multiple instant messaging tools are supported.</para>
+            /// <para>The mapping of instant messaging user IDs. Multiple instant messaging tools are supported.</para>
             /// </summary>
             [NameInMap("imUserIds")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The contact name.</para>
+            /// <para>The name of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The phone number of the contact.</para>
+            /// <para>The phone number of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130123456789</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the phone number of the contact is verified.</para>
+            /// <para>Indicates whether the phone number of the alert contact is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? PhoneVerify { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the alert contact was last updated. Format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-22 02:21:51</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

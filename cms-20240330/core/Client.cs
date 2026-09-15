@@ -2670,8 +2670,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订阅</para>
+        /// <para>Creates a silence policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy uses filterSetting to filter events. When the policy is enabled and the current time hits the configured effective rules, hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications. The events are still Normal and stored in the database.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required. filterSetting must contain at least one condition. You do not have to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation is failed. If a policy name already exists in the same workspace, the InvalidParameterValue error is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMaintainWindowRequest
@@ -2717,8 +2723,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订阅</para>
+        /// <para>Creates a silence policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy uses filterSetting to filter events. When the policy is enabled and the current time hits the configured effective rules, hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications. The events are still Normal and stored in the database.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required. filterSetting must contain at least one condition. You do not have to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation is failed. If a policy name already exists in the same workspace, the InvalidParameterValue error is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMaintainWindowRequest
@@ -2764,8 +2776,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订阅</para>
+        /// <para>Creates a silence policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy uses filterSetting to filter events. When the policy is enabled and the current time hits the configured effective rules, hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications. The events are still Normal and stored in the database.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required. filterSetting must contain at least one condition. You do not have to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation is failed. If a policy name already exists in the same workspace, the InvalidParameterValue error is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMaintainWindowRequest
@@ -2783,8 +2801,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订阅</para>
+        /// <para>Creates a silence policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a silence policy in a specified workspace. A silence policy uses filterSetting to filter events. When the policy is enabled and the current time hits the configured effective rules, hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications. The events are still Normal and stored in the database.
+        /// When you create a silence policy, maintainWindowName and filterSetting are required. filterSetting must contain at least one condition. You do not have to configure any effective period. In this case, the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation is failed. If a policy name already exists in the same workspace, the InvalidParameterValue error is returned. After the policy is created, the silence policy ID is returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMaintainWindowRequest
@@ -6584,12 +6608,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除转换器</para>
+        /// <para>Deletes a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed based on the deleted policy for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6635,12 +6659,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除转换器</para>
+        /// <para>Deletes a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed based on the deleted policy for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6686,12 +6710,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除转换器</para>
+        /// <para>Deletes a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed based on the deleted policy for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6710,12 +6734,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除转换器</para>
+        /// <para>Deletes a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Deletes a specified silence policy. After the deletion succeeds, the service refreshes the runtime cache through asynchronous messages. Therefore, events may still be processed based on the deleted policy for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9128,12 +9152,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停转换器</para>
+        /// <para>Pauses a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Pauses a specified silence policy. After the policy is paused, the service refreshes the runtime cache by using asynchronous messages. After the refresh is complete, the policy no longer participates in event silence evaluation. Events may still be processed based on the pre-pause state for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9179,12 +9203,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停转换器</para>
+        /// <para>Pauses a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Pauses a specified silence policy. After the policy is paused, the service refreshes the runtime cache by using asynchronous messages. After the refresh is complete, the policy no longer participates in event silence evaluation. Events may still be processed based on the pre-pause state for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9230,12 +9254,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停转换器</para>
+        /// <para>Pauses a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Pauses a specified silence policy. After the policy is paused, the service refreshes the runtime cache by using asynchronous messages. After the refresh is complete, the policy no longer participates in event silence evaluation. Events may still be processed based on the pre-pause state for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9254,12 +9278,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停转换器</para>
+        /// <para>Pauses a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Pauses a specified silence policy. After the policy is paused, the service refreshes the runtime cache by using asynchronous messages. After the refresh is complete, the policy no longer participates in event silence evaluation. Events may still be processed based on the pre-pause state for a short period of time. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9428,12 +9452,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动转换器</para>
+        /// <para>Enables a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9479,12 +9503,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动转换器</para>
+        /// <para>Enables a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9530,12 +9554,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动转换器</para>
+        /// <para>Enables a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9554,12 +9578,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动转换器</para>
+        /// <para>Enables a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12364,12 +12388,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Queries the detailed configuration of a specified silence policy, including the policy name, description, enabled status, filter conditions, effective period configuration, creation time, and update time. The current query result does not return workspaceFilterSetting. If the specified silence policy does not exist, ResourceNotFound is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12415,12 +12439,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Queries the detailed configuration of a specified silence policy, including the policy name, description, enabled status, filter conditions, effective period configuration, creation time, and update time. The current query result does not return workspaceFilterSetting. If the specified silence policy does not exist, ResourceNotFound is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12466,12 +12490,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Queries the detailed configuration of a specified silence policy, including the policy name, description, enabled status, filter conditions, effective period configuration, creation time, and update time. The current query result does not return workspaceFilterSetting. If the specified silence policy does not exist, ResourceNotFound is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12490,12 +12514,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅</para>
+        /// <para>Retrieves a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Queries the detailed configuration of a specified silence policy, including the policy name, description, enabled status, filter conditions, effective period configuration, creation time, and update time. The current query result does not return workspaceFilterSetting. If the specified silence policy does not exist, ResourceNotFound is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15598,7 +15622,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <c>product</c> dimension.</para>
+        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15680,7 +15704,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <c>product</c> dimension.</para>
+        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15762,7 +15786,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <c>product</c> dimension.</para>
+        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15787,7 +15811,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <c>product</c> dimension.</para>
+        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16320,7 +16344,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16409,7 +16433,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16498,7 +16522,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16522,7 +16546,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries contacts.</para>
+        /// <para>Queries alert contacts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18684,13 +18708,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询维护窗口列表</para>
+        /// <para>Queries a list of silence policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
-        /// 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</para>
+        /// <para>Queries a paginated list of silence policies in a specified workspace. You can filter results by policy name (fuzzy match), policy ID (exact match), or enabled status. You can also sort results by creation time, update time, or enabled status. An empty list is returned when no matching items exist. The list items do not include workspaceFilterSetting.
+        /// When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that more results may be available and does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18764,13 +18788,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询维护窗口列表</para>
+        /// <para>Queries a list of silence policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
-        /// 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</para>
+        /// <para>Queries a paginated list of silence policies in a specified workspace. You can filter results by policy name (fuzzy match), policy ID (exact match), or enabled status. You can also sort results by creation time, update time, or enabled status. An empty list is returned when no matching items exist. The list items do not include workspaceFilterSetting.
+        /// When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that more results may be available and does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18844,13 +18868,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询维护窗口列表</para>
+        /// <para>Queries a list of silence policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
-        /// 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</para>
+        /// <para>Queries a paginated list of silence policies in a specified workspace. You can filter results by policy name (fuzzy match), policy ID (exact match), or enabled status. You can also sort results by creation time, update time, or enabled status. An empty list is returned when no matching items exist. The list items do not include workspaceFilterSetting.
+        /// When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that more results may be available and does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18869,13 +18893,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询维护窗口列表</para>
+        /// <para>Queries a list of silence policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
-        /// 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</para>
+        /// <para>Queries a paginated list of silence policies in a specified workspace. You can filter results by policy name (fuzzy match), policy ID (exact match), or enabled status. You can also sort results by creation time, update time, or enabled status. An empty list is returned when no matching items exist. The list items do not include workspaceFilterSetting.
+        /// When the number of returned items reaches maxResults, the response may contain a non-empty nextToken. A non-empty nextToken only indicates that more results may be available and does not guarantee that the next page contains data. An empty nextToken indicates the end of paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19376,12 +19400,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19431,12 +19455,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19486,12 +19510,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19510,12 +19534,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
+        /// <para>Retrieves the list of dashboards for a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21743,7 +21767,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21818,7 +21842,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21893,7 +21917,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21917,7 +21941,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24542,13 +24566,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的维护窗口配置。</para>
+        /// <para>Updates a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
-        /// 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Updates the configuration of a specified silence policy. If maintainWindowName is left empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Before submitting changes, call GetMaintainWindow to retrieve the current configuration.
+        /// This operation does not modify the enabled status of the policy. To enable or pause a policy, call EnableMaintainWindow or DisableMaintainWindow. Time configuration validation is the same as that for CreateMaintainWindow. If a policy name already exists in the same workspace, the InvalidParameterValue error code is returned. If the specified silence policy does not exist, the ResourceNotFound error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24595,13 +24619,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的维护窗口配置。</para>
+        /// <para>Updates a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
-        /// 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Updates the configuration of a specified silence policy. If maintainWindowName is left empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Before submitting changes, call GetMaintainWindow to retrieve the current configuration.
+        /// This operation does not modify the enabled status of the policy. To enable or pause a policy, call EnableMaintainWindow or DisableMaintainWindow. Time configuration validation is the same as that for CreateMaintainWindow. If a policy name already exists in the same workspace, the InvalidParameterValue error code is returned. If the specified silence policy does not exist, the ResourceNotFound error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24648,13 +24672,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的维护窗口配置。</para>
+        /// <para>Updates a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
-        /// 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Updates the configuration of a specified silence policy. If maintainWindowName is left empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Before submitting changes, call GetMaintainWindow to retrieve the current configuration.
+        /// This operation does not modify the enabled status of the policy. To enable or pause a policy, call EnableMaintainWindow or DisableMaintainWindow. Time configuration validation is the same as that for CreateMaintainWindow. If a policy name already exists in the same workspace, the InvalidParameterValue error code is returned. If the specified silence policy does not exist, the ResourceNotFound error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24673,13 +24697,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的维护窗口配置。</para>
+        /// <para>Updates a silence policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
-        /// 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</para>
+        /// <para>Updates the configuration of a specified silence policy. If maintainWindowName is left empty, the original name is retained. The description, filterSetting, effective, effectTimeRange, startTime, and endTime fields are updated based on the values in the request body. If these fields are not provided, they are set to empty. Before submitting changes, call GetMaintainWindow to retrieve the current configuration.
+        /// This operation does not modify the enabled status of the policy. To enable or pause a policy, call EnableMaintainWindow or DisableMaintainWindow. Time configuration validation is the same as that for CreateMaintainWindow. If a policy name already exists in the same workspace, the InvalidParameterValue error code is returned. If the specified silence policy does not exist, the ResourceNotFound error code is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
