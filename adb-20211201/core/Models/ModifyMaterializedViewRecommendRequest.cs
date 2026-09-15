@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of slow queries matched by a pattern.</para>
+        /// <para>The minimum number of slow queries that a pattern must match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The scan time range, in days. Default value: 3.</para>
+        /// <para>The time range to scan, in days. Default value: 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -109,8 +109,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The recommendation policy. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>daliy: scheduled on a daily basis.</description></item>
-        /// <item><description>weekly: scheduled on a weekly basis.</description></item>
+        /// <item><description>daily: schedules the task on a daily basis.</description></item>
+        /// <item><description>weekly: schedules the task on a weekly basis.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? SlowQueryThreshold { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the task in the format HH:MM:SS.</para>
+        /// <para>The execution time of the task in HH:MM:SS format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10:00:00</para>

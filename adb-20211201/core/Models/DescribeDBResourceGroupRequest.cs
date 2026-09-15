@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <summary>
         /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, information about all resource groups in the specified cluster is returned.</para>
+        /// <para>If you do not specify this parameter, the information about all resource groups in the specified cluster is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

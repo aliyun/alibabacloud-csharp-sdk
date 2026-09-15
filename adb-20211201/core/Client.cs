@@ -28974,7 +28974,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Performs knowledge base recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28995,9 +28995,17 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 query["Question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topk))
             {
@@ -29028,7 +29036,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Performs knowledge base recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29049,9 +29057,17 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Question))
             {
                 query["Question"] = request.Question;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
+            {
+                query["Tags"] = request.Tags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Topk))
             {
@@ -29082,7 +29098,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Performs knowledge base recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29100,7 +29116,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Performs knowledge base recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40514,7 +40530,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic materialized view recommendation task.</para>
+        /// <para>Modifies a materialized view automatic recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40612,7 +40628,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic materialized view recommendation task.</para>
+        /// <para>Modifies a materialized view automatic recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40710,7 +40726,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic materialized view recommendation task.</para>
+        /// <para>Modifies a materialized view automatic recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40728,7 +40744,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an automatic materialized view recommendation task.</para>
+        /// <para>Modifies a materialized view automatic recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42338,6 +42354,142 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveKnowledgeTagsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeUploadUserResponse
+        /// </returns>
+        public RemoveKnowledgeUploadUserResponse RemoveKnowledgeUploadUserWithOptions(RemoveKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                query["Users"] = request.Users;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeUploadUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeUploadUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeUploadUserResponse> RemoveKnowledgeUploadUserWithOptionsAsync(RemoveKnowledgeUploadUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileLocation))
+            {
+                query["FileLocation"] = request.FileLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Users))
+            {
+                query["Users"] = request.Users;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveKnowledgeUploadUser",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveKnowledgeUploadUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeUploadUserResponse
+        /// </returns>
+        public RemoveKnowledgeUploadUserResponse RemoveKnowledgeUploadUser(RemoveKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveKnowledgeUploadUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes authorized users from a knowledge base document.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveKnowledgeUploadUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveKnowledgeUploadUserResponse
+        /// </returns>
+        public async Task<RemoveKnowledgeUploadUserResponse> RemoveKnowledgeUploadUserAsync(RemoveKnowledgeUploadUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveKnowledgeUploadUserWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

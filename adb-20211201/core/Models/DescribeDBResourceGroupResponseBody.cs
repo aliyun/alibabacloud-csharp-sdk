@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string AuthNodeNum { get; set; }
 
                 /// <summary>
-                /// <para>The authentication node specifications.</para>
+                /// <para>The node specifications of authentication nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ACU</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string InsertNodeNum { get; set; }
 
                 /// <summary>
-                /// <para>The write node specifications.</para>
+                /// <para>The node specifications of write nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ACU</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string SelectNodeNum { get; set; }
 
                 /// <summary>
-                /// <para>The query node specifications.</para>
+                /// <para>The node specifications of query nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ACU</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string StorageNodeNum { get; set; }
 
                 /// <summary>
-                /// <para>The storage node specifications.</para>
+                /// <para>The node specifications of storage nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ACU</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string ElasticMinComputeResource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the spot instance feature is enabled for the resource group. When the spot instance feature is enabled, the unit price of resources is reduced, but instances may be released. Valid values:</para>
+            /// <para>Indicates whether the spot instance feature is enabled for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>True</b>: The spot instance feature is enabled.</description></item>
             /// <item><description><b>False</b>: The spot instance feature is disabled.</description></item>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public List<DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules> Rules { get; set; }
                 public class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules : TeaModel {
                     /// <summary>
-                    /// <para>The end time in Cron expression format. The interval must be at least 1 hour.</para>
+                    /// <para>The end time in cron expression format. The interval must be at least 1 hour.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 3 * * ?</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string EndCronExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The start time in Cron expression format. The interval must be at least 1 hour.</para>
+                    /// <para>The start time in cron expression format. The interval must be at least 1 hour.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0 0 2 * * ?</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <list type="bullet">
             /// <item><description><b>Interactive</b></description></item>
             /// <item><description><b>Job</b><remarks>
-            /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction (Data Lakehouse Edition)</a>.</para>
+            /// <para>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction (Data Lakehouse Edition)</a>.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -473,9 +473,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 /// <summary>
                 /// <para>The Ray cluster type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>BASIC: basic type, non-high-availability</para>
+                /// <item><description><para>BASIC: basic type, non-high-availability.</para>
                 /// </description></item>
-                /// <item><description><para>HIGH_AVAILABILITY: high-availability type</para>
+                /// <item><description><para>HIGH_AVAILABILITY: high-availability type.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -631,7 +631,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                     public string AllocateUnit { get; set; }
 
                     /// <summary>
-                    /// <para>The Ray worker group name.</para>
+                    /// <para>The name of the Ray worker group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>g01</para>
@@ -771,13 +771,15 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The resource group status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>creating</b>: being created</description></item>
-            /// <item><description><b>ok</b>: created</description></item>
-            /// <item><description><b>pendingdelete</b>: pending deletion</description></item>
+            /// <item><description><b>Pending</b>: being created.</description></item>
+            /// <item><description><b>Running</b>: running.</description></item>
+            /// <item><description><b>Scaling</b>: being scaled.</description></item>
+            /// <item><description><b>Deleting</b>: being deleted.</description></item>
+            /// <item><description><b>Deleted</b>: deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>ok</para>
+            /// <para>Running</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]

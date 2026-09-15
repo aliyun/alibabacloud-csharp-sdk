@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class GetKnowledgeRecallRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for MySQL cluster.</para>
+        /// <para>The ID of the ADB MySQL cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +19,16 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
+
+        /// <summary>
+        /// <para>The file path prefix. Only files that match the specified path prefix are recalled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss://bucketName/path/prefix/</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
 
         /// <summary>
         /// <para>The question for knowledge base recall.</para>
@@ -32,7 +42,17 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string Question { get; set; }
 
         /// <summary>
-        /// <para>The top K number of related files to recall.</para>
+        /// <para>The list of tags in JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{   &quot;tag_key1&quot;: [&quot;tag_key1_value1&quot;, &quot;tag_key1_value2&quot;],   &quot;tag_key2&quot;: [&quot;tag_key2_value&quot;] }</para>
+        /// </summary>
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public string Tags { get; set; }
+
+        /// <summary>
+        /// <para>The top K associated files to recall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -42,7 +62,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? Topk { get; set; }
 
         /// <summary>
-        /// <para>The username. Only files that this user has permission to access are recalled.</para>
+        /// <para>The username. Only files that the specified user has permission to access are recalled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user_name1</para>

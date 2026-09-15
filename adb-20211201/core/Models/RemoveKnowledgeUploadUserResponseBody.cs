@@ -8,50 +8,57 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
-    public class GetKnowledgeRecallResponseBody : TeaModel {
+    public class RemoveKnowledgeUploadUserResponseBody : TeaModel {
         /// <summary>
         /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetKnowledgeRecallResponseBodyData Data { get; set; }
-        public class GetKnowledgeRecallResponseBodyData : TeaModel {
+        public RemoveKnowledgeUploadUserResponseBodyData Data { get; set; }
+        public class RemoveKnowledgeUploadUserResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The location of the knowledge base file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>oss://bucketName/path/to/file.pdf</para>
             /// </summary>
-            [NameInMap("Count")]
+            [NameInMap("FileLocation")]
             [Validation(Required=false)]
-            public int? Count { get; set; }
+            public string FileLocation { get; set; }
 
             /// <summary>
             /// <para>The prompt message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>recall 5 files</para>
+            /// <para>Successful</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The recall results.</para>
-            /// </summary>
-            [NameInMap("Results")]
-            [Validation(Required=false)]
-            public List<Dictionary<string, object>> Results { get; set; }
-
-            /// <summary>
-            /// <para>The Tracing Analysis ID.</para>
+            /// <para>The number of users that were successfully deleted.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>qf_c41fc27697d3</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("TraceId")]
+            [NameInMap("Removed")]
             [Validation(Required=false)]
-            public string TraceId { get; set; }
+            public int? Removed { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The request was successful.</description></item>
+            /// <item><description><b>false</b>: The request failed.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("Success")]
+            [Validation(Required=false)]
+            public bool? Success { get; set; }
 
         }
 
