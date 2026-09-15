@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventStreamingName { get; set; }
 
         /// <summary>
-        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a></para>
+        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Metadata { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment parameters.</para>
+        /// <para>The runtime parameters.</para>
         /// </summary>
         [NameInMap("RunOptions")]
         [Validation(Required=false)]
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select exactly one Sink type.</para>
+        /// <para>The event target. You must select exactly one type of Sink.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must select one and only one type of Source.</para>
+        /// <para>The event provider. You must select exactly one Source type.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]

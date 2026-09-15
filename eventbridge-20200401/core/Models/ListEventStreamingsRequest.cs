@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventStreamingsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned per request. You can use this parameter together with NextToken to implement paging.</para>
+        /// <para>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</para>
         /// <remarks>
         /// <para>Notice: The maximum number of entries returned per request cannot exceed 100.</para>
         /// </remarks>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>If the number of entries exceeds the value of Limit, a NextToken is returned.</para>
+        /// <para>If the number of entries that match the specified conditions exceeds the value of Limit, a NextToken is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SinkArn { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the event source.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the event source.</para>
         /// </summary>
         [NameInMap("SourceArn")]
         [Validation(Required=false)]

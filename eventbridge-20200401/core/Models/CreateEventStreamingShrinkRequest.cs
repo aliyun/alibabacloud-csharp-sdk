@@ -57,35 +57,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</para>
+        /// <para>The general JSON Configurations for the event provider. This parameter is mutually exclusive with Source. Specify one of the two parameters.</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
         /// <summary>
-        /// <para>The runtime environment parameters.</para>
+        /// <para>The runtime parameters.</para>
         /// </summary>
         [NameInMap("RunOptions")]
         [Validation(Required=false)]
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select one Sink type, and you can select only one Sink type.</para>
+        /// <para>The event target. You must specify exactly one type of Sink.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must specify one source type, and you can specify only one source type.</para>
+        /// <para>The event provider. You must specify one Source, and you can specify only one Source.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The tag list, containing up to 20 items.</para>
+        /// <para>The list of tags. A maximum of 20 tags can be specified.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The Transform-related configurations.</para>
+        /// <para>The transform configurations.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

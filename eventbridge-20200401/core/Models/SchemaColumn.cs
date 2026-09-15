@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class SchemaColumn : TeaModel {
         /// <summary>
-        /// <para>Column name</para>
+        /// <para>The column name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Column type</para>
+        /// <para>The column type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VARCHAR</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryAskLumaLogRequest : TeaModel {
         /// <summary>
-        /// <para>The cursor. Set this parameter to the messageId of the last entry on the previous page.</para>
+        /// <para>The cursor for pagination. Set this parameter to the messageId of the last entry on the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ0cyI6MTcxN...</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string After { get; set; }
 
         /// <summary>
-        /// <para>The agent name. If this parameter is left empty, all agents are queried.</para>
+        /// <para>The agent name. If this parameter is not specified, all agent call logs are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-luma-agent</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Data catalog</para>
+        /// <para>The data catalog to which the namespace belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>Idempotent Token</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Namespace name</para>
+        /// <para>The name of the namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
