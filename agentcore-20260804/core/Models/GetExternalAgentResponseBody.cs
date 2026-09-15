@@ -187,7 +187,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public class GetExternalAgentResponseBodyDataModel : TeaModel {
                 /// <summary>
                 /// <para>The model connection ID.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mc-1</para>
@@ -198,7 +197,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                 /// <summary>
                 /// <para>The upstream model name.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-max</para>
@@ -206,6 +204,68 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [NameInMap("modelName")]
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
+
+                [NameInMap("quota")]
+                [Validation(Required=false)]
+                public GetExternalAgentResponseBodyDataModelQuota Quota { get; set; }
+                public class GetExternalAgentResponseBodyDataModelQuota : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>token</para>
+                    /// </summary>
+                    [NameInMap("limitType")]
+                    [Validation(Required=false)]
+                    public string LimitType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
+                    [NameInMap("overLimit")]
+                    [Validation(Required=false)]
+                    public bool? OverLimit { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>day</para>
+                    /// </summary>
+                    [NameInMap("periodType")]
+                    [Validation(Required=false)]
+                    public string PeriodType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ACTIVE</para>
+                    /// </summary>
+                    [NameInMap("ruleStatus")]
+                    [Validation(Required=false)]
+                    public string RuleStatus { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000000</para>
+                    /// </summary>
+                    [NameInMap("usageLimit")]
+                    [Validation(Required=false)]
+                    public long? UsageLimit { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>12345</para>
+                    /// </summary>
+                    [NameInMap("usedAmount")]
+                    [Validation(Required=false)]
+                    public long? UsedAmount { get; set; }
+
+                }
 
             }
 

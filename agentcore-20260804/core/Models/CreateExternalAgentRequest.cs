@@ -65,13 +65,62 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// <para>The model token quota configuration. If not specified, no quota is configured.</para>
+                /// </summary>
+                [NameInMap("quota")]
+                [Validation(Required=false)]
+                public CreateExternalAgentRequestBodyModelQuota Quota { get; set; }
+                public class CreateExternalAgentRequestBodyModelQuota : TeaModel {
+                    /// <summary>
+                    /// <para>Specifies whether to enable token quota. Defaults to true if not specified. Set to false to disable and delete existing quota rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <para>The quota limit type. Required by backend validation when quota is enabled. Fixed value: token.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>token</para>
+                    /// </summary>
+                    [NameInMap("limitType")]
+                    [Validation(Required=false)]
+                    public string LimitType { get; set; }
+
+                    /// <summary>
+                    /// <para>The quota statistical period. Required by backend validation when quota is enabled. Valid values: day (daily) and month (monthly).</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>day</para>
+                    /// </summary>
+                    [NameInMap("periodType")]
+                    [Validation(Required=false)]
+                    public string PeriodType { get; set; }
+
+                    /// <summary>
+                    /// <para>The maximum number of tokens that can be consumed within a single period. Required by backend validation when quota is enabled. The value must be greater than 0.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1000000</para>
+                    /// </summary>
+                    [NameInMap("usageLimit")]
+                    [Validation(Required=false)]
+                    public long? UsageLimit { get; set; }
+
+                }
+
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. Valid values:</para>
+            /// <para>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PLATFORM: The platform parses and delivers the model configuration.</description></item>
-            /// <item><description>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</description></item>
+            /// <item><description>PLATFORM: platform model.</description></item>
+            /// <item><description>RUNTIME: runtime model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,7 +248,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</para>
+        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantee in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

@@ -172,6 +172,44 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                [NameInMap("quota")]
+                [Validation(Required=false)]
+                public UpdateManagedAgentRequestBodyModelQuota Quota { get; set; }
+                public class UpdateManagedAgentRequestBodyModelQuota : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>token</para>
+                    /// </summary>
+                    [NameInMap("limitType")]
+                    [Validation(Required=false)]
+                    public string LimitType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>day</para>
+                    /// </summary>
+                    [NameInMap("periodType")]
+                    [Validation(Required=false)]
+                    public string PeriodType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1000000</para>
+                    /// </summary>
+                    [NameInMap("usageLimit")]
+                    [Validation(Required=false)]
+                    public long? UsageLimit { get; set; }
+
+                }
+
             }
 
             /// <summary>

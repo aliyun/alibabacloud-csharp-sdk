@@ -187,7 +187,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public class UpdateExternalAgentResponseBodyDataModel : TeaModel {
                 /// <summary>
                 /// <para>The model connection ID.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mc-1</para>
@@ -198,7 +197,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                 /// <summary>
                 /// <para>The upstream model name.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-max</para>
@@ -207,13 +205,92 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// <para>The model token quota configuration and the quota usage status in the current cycle. This field is empty if no quota is configured.</para>
+                /// </summary>
+                [NameInMap("quota")]
+                [Validation(Required=false)]
+                public UpdateExternalAgentResponseBodyDataModelQuota Quota { get; set; }
+                public class UpdateExternalAgentResponseBodyDataModelQuota : TeaModel {
+                    /// <summary>
+                    /// <para>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    /// <summary>
+                    /// <para>The quota limit type. Currently, only token is supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>token</para>
+                    /// </summary>
+                    [NameInMap("limitType")]
+                    [Validation(Required=false)]
+                    public string LimitType { get; set; }
+
+                    /// <summary>
+                    /// <para>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
+                    [NameInMap("overLimit")]
+                    [Validation(Required=false)]
+                    public bool? OverLimit { get; set; }
+
+                    /// <summary>
+                    /// <para>The quota statistical period. day indicates a daily period. month indicates a monthly period.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>day</para>
+                    /// </summary>
+                    [NameInMap("periodType")]
+                    [Validation(Required=false)]
+                    public string PeriodType { get; set; }
+
+                    /// <summary>
+                    /// <para>The gateway quota rule status. This is a read-only field returned by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ACTIVE</para>
+                    /// </summary>
+                    [NameInMap("ruleStatus")]
+                    [Validation(Required=false)]
+                    public string RuleStatus { get; set; }
+
+                    /// <summary>
+                    /// <para>The maximum number of tokens that can be consumed within a single cycle.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1000000</para>
+                    /// </summary>
+                    [NameInMap("usageLimit")]
+                    [Validation(Required=false)]
+                    public long? UsageLimit { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>12345</para>
+                    /// </summary>
+                    [NameInMap("usedAmount")]
+                    [Validation(Required=false)]
+                    public long? UsedAmount { get; set; }
+
+                }
+
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. Valid values:</para>
+            /// <para>The model configuration source. PLATFORM indicates that the platform parses and delivers the model configuration. RUNTIME indicates that the external runtime manages the model independently, and the model parameter cannot be specified at the same time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PLATFORM: The platform parses and delivers the model configuration.</description></item>
-            /// <item><description>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</description></item>
+            /// <item><description>PLATFORM: platform model.</description></item>
+            /// <item><description>RUNTIME: runtime model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -408,7 +485,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message that indicates the result of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
