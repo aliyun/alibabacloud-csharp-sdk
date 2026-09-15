@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</para>
+        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The custom configuration items of the check item.</para>
+        /// <para>The list of custom configuration items for the check item.</para>
         /// </summary>
         [NameInMap("CustomConfigs")]
         [Validation(Required=false)]
         public List<ChangeCheckCustomConfigRequestCustomConfigs> CustomConfigs { get; set; }
         public class ChangeCheckCustomConfigRequestCustomConfigs : TeaModel {
             /// <summary>
-            /// <para>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</para>
+            /// <para>The name of the custom configuration item, which is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SessionTimeMax</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</para>
+            /// <para>The operation type of the custom configuration item. Set this parameter to DELETE only when deleting a configuration item. You do not need to specify this parameter for create or update operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The value of the custom configuration item. The value is a string.</para>
+            /// <para>The user-configured value string of the custom configuration item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The region where the Security Center instance is deployed. Valid values:</para>
+        /// <para>The region of the Security Center instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: International</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
+        /// <item><description><b>cn-hangzhou:</b> China</description></item>
+        /// <item><description><b>ap-southeast-1:</b> Singapore</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The parameters required for fixing risk items.</para>
+        /// <para>The repair parameters supported by the repair feature of the check item.</para>
         /// </summary>
         [NameInMap("RepairConfigs")]
         [Validation(Required=false)]
         public List<ChangeCheckCustomConfigRequestRepairConfigs> RepairConfigs { get; set; }
         public class ChangeCheckCustomConfigRequestRepairConfigs : TeaModel {
             /// <summary>
-            /// <para>The ID of the fixing process.</para>
+            /// <para>The ID of the repair flow used during the repair process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ascgrmscyjgs*********</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The name of the parameter required for fixing a risk item, which is unique in a check item.</para>
+            /// <para>The name of the repair parameter, which is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Port</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</para>
+            /// <para>The operation type of the custom configuration item. Set this parameter to DELETE only when deleting a configuration item. You do not need to specify this parameter for create or update operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The value of the parameter required for fixing a risk item. The value is a string.</para>
+            /// <para>The user-configured value string of the repair configuration item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

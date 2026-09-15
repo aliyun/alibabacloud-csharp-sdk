@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotProbeBindRequest : TeaModel {
         /// <summary>
-        /// <para>The ports that are bound to the probe.</para>
+        /// <para>The list of port bindings.</para>
         /// </summary>
         [NameInMap("BindPortList")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether to bind the port. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The port is bound.</description></item>
+            /// <item><description><b>false</b>: The port is not bound.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? BindPort { get; set; }
 
             /// <summary>
-            /// <para>The end port on which the probe monitors.</para>
+            /// <para>The end port of the probe listener.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? EndPort { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the port is a fixed port. Valid values:</para>
+            /// <para>Specifies whether the port is fixed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The port is fixed.</description></item>
+            /// <item><description><b>false</b>: The port is not fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,10 +55,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Fixed { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>udp</b></description></item>
+            /// <item><description><b>tcp</b>: TCP protocol.</description></item>
+            /// <item><description><b>udp</b>: UDP protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// <para>The start port on which the probe monitors.</para>
+            /// <para>The start port of the probe listener.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -93,7 +93,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The honeypot ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</para>
+        /// <para>Call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.
+        /// This parameter is required. If this parameter is not specified, the API returns InternalError (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -120,7 +121,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The probe ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// <para>Call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.
+        /// This parameter is required. If this parameter is not specified, the API returns InvalidParam (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProbeId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that are monitored.</para>
+        /// <para>The list of listener IP addresses.</para>
         /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]

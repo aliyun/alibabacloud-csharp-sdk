@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -40,7 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the management node to upgrade.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</para>
+        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.
+        /// Note: This parameter is actually required. If it is not provided, the API returns InvalidParam (400).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

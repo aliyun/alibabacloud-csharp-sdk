@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileProtectRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC7C8984-D108-516F-9D36-3DF1D1228CCA</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class GetAttackEventDetailRequest : TeaModel {
         /// <summary>
         /// <para>The unique ID of the alert event.</para>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18825544674********</para>

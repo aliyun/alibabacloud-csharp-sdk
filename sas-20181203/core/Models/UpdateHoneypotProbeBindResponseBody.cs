@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotProbeBindResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code of the response.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The detailed error message.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

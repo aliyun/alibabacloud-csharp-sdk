@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tag values.</para>
+        /// <para>The list of tag values.</para>
         /// </summary>
         [NameInMap("TagValues")]
         [Validation(Required=false)]

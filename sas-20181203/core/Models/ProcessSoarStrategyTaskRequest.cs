@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The action status of the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>SCHEDULE: scheduling</description></item>
-        /// <item><description>PAUSE: pause.</description></item>
+        /// <item><description>PAUSE: pause</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

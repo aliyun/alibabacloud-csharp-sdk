@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectRemarkRequest : TeaModel {
         /// <summary>
-        /// <para>Alert notification level list.</para>
+        /// <para>The list of alert notification levels.</para>
         /// </summary>
         [NameInMap("AlertLevels")]
         [Validation(Required=false)]
         public List<int?> AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>End time timestamp.</para>
+        /// <para>The timestamp of the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649040221</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the event.</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1764</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Event ID list.</para>
+        /// <para>The list of event IDs.</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
 
         /// <summary>
-        /// <para>Asset instance ID.</para>
+        /// <para>The ID of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1g6wxdwps7s9dz****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Asset instance name.</para>
+        /// <para>The name of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Public IP.</para>
+        /// <para>The public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101.132.XX.XX</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>Private IP.</para>
+        /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.26.XX.XX</para>
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>File operation type. Values:</para>
+        /// <para>The type of operation performed on the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b>: File deletion operation.</description></item>
-        /// <item><description><b>WRITE</b>: File write operation.</description></item>
-        /// <item><description><b>READ</b>: File read operation.</description></item>
-        /// <item><description><b>RENAME</b>: File rename operation.</description></item>
-        /// <item><description><b>CHOWN</b>: Set file owner and associated group operation.</description></item>
+        /// <item><description><b>DELETE</b>: Delete the file.</description></item>
+        /// <item><description><b>WRITE</b>: Write to the file.</description></item>
+        /// <item><description><b>READ</b>: Read the file.</description></item>
+        /// <item><description><b>RENAME</b>: Rename the file.</description></item>
+        /// <item><description><b>CHOWN</b>: Change the file owner and file group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> Remark { get; set; }
 
         /// <summary>
-        /// <para>Rule name.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-rule-1</para>
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Cross-page select all indicator. Values:</para>
+        /// <para>Specifies whether to select all items across pages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes</description></item>
-        /// <item><description><b>false</b>: No</description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? SelectAllAcrossPages { get; set; }
 
         /// <summary>
-        /// <para>Start time timestamp.</para>
+        /// <para>The timestamp of the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1651290987000</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Server UUID.</para>
+        /// <para>The UUID of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</para>

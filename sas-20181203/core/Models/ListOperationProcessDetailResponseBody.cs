@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the task was created, in milliseconds.</para>
+            /// <para>The timestamp when the task was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706544199000</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DetailTaskId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the operation subtask ended, in milliseconds.</para>
+            /// <para>The timestamp when the operation subtask ended. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706544199000</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the operation subtask started, in milliseconds.</para>
+            /// <para>The timestamp when the operation subtask started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730335622000</para>
@@ -167,11 +167,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operation subtask status code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not started.</description></item>
-            /// <item><description>1: checking.</description></item>
-            /// <item><description>2: succeeded.</description></item>
-            /// <item><description>3: timed out.</description></item>
-            /// <item><description>4: failed.</description></item>
+            /// <item><description>0: Not started.</description></item>
+            /// <item><description>1: Checking.</description></item>
+            /// <item><description>2: Succeeded.</description></item>
+            /// <item><description>3: Timed out.</description></item>
+            /// <item><description>4: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F3***</para>

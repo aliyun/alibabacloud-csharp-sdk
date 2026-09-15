@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The time when the event was first detected.</para>
+        /// <para>The time when the event was first detected. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635978934000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.XX.XX</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The vertex type. You can call the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation to obtain this parameter.</para>
+        /// <para>The vertex type. You can obtain this value by calling the <a href="~~DescribeTraceInfoDetail~~">DescribeTraceInfoDetail</a> operation. Valid values: <b>SAS_ASSET</b>: indicates a server asset. In this case, VertexId is the UUID of the server, which can be obtained by calling the DescribeCloudCenterInstances operation. If no security events exist for the account, you can obtain the VertexId by calling the DescribeCloudCenterInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server to query. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain this parameter.</para>
+        /// <para>The UUID of the server to query. You can obtain this parameter by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCloudVendorTrialConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID.</para>
+        /// <para>The unique ID of the AccessKey pair.</para>
         /// <remarks>
-        /// <para> <a href="#-describecloudvendoraccountaklist--authid"></a>You can call the <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> operation to query the AccessKey ID.</para>
+        /// <h2>You can call <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a> to obtain the AuthId.</h2>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? AuthId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the third-party cloud asset. Valid values:</para>
+        /// <para>The multi-cloud configuration information:</para>
         /// <list type="bullet">
-        /// <item><description><em>AWS</em>: Configure the sqsQueueName and sqsRegion parameters.</description></item>
-        /// <item><description><em>Tencent</em>: Configure the kafkaUserName, kafkaBootstrapServers, and kafkaTopic parameters.</description></item>
+        /// <item><description><em>AWS</em>: Input parameters sqsQueueName and sqsRegion.</description></item>
+        /// <item><description><em>Tencent</em>: Input parameters kafkaUserName, kafkaBootstrapServers, and kafkaTopic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,10 +39,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthInfo { get; set; }
 
         /// <summary>
-        /// <para>The service provider of the cloud asset. Valid values:</para>
+        /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
-        /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>Azure</b>: Azure.</description></item>
+        /// <item><description><b>AWS</b>: AWS.</description></item>
+        /// <item><description><b>VOLCENGINE</b>: Volcengine.</description></item>
+        /// <item><description><b>google</b>: Google Cloud.</description></item>
+        /// <item><description><b>CHAITIN</b>: Chaitin Technology.</description></item>
+        /// <item><description><b>FORTINET</b>: Fortinet.</description></item>
+        /// <item><description><b>THREATBOOK</b>: ThreatBook.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

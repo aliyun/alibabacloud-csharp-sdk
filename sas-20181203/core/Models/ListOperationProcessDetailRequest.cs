@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationProcessDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The page number in a paged query. Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The query end time based on the task completion time, in milliseconds.</para>
+        /// <para>The end time of the query based on the task completion time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731555850000</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query start time based on the task creation time, in milliseconds.</para>
+        /// <para>The start time of the query based on the task creation time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731469330000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<int?> StatusCodes { get; set; }
 
         /// <summary>
-        /// <para>The list of operation task IDs.</para>
+        /// <para>The list of operation task IDs. You can call the ListOperationProcess operation to obtain valid values. This parameter is required. If this parameter is not specified, the API returns 400 CspmParamIllegal.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

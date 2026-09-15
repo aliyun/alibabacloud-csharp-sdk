@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateClientAlertModeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The returned data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>259E3E77-CA6D-5407-84A5-3A1C98D12F14</para>

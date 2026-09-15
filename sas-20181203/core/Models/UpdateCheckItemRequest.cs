@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateCheckItemRequest : TeaModel {
         /// <summary>
-        /// <para>Help information for the check item.</para>
+        /// <para>The help information for the check item.</para>
         /// </summary>
         [NameInMap("AssistInfo")]
         [Validation(Required=false)]
         public UpdateCheckItemRequestAssistInfo AssistInfo { get; set; }
         public class UpdateCheckItemRequestAssistInfo : TeaModel {
             /// <summary>
-            /// <para>Type of the help information for the check item risk. Values:</para>
+            /// <para>The type of the help information for the check item risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: Text</description></item>
+            /// <item><description><b>text</b>: Text.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Content of the help information for the check item risk.</para>
+            /// <para>The content of the help information for the check item risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom assistInfo.</para>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>ID of the custom check item to be updated.</para>
+        /// <para>The ID of the custom check item to update.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCheckItems~~">ListCheckItems</a> API to get this parameter.</para>
+        /// <para>You can call the <a href="~~ListCheckItems~~">ListCheckItems</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>Definition rule for the custom check item.</para>
+        /// <para>The definition rule of the custom check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;},{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testInstanceId&quot;}]}}</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckRule { get; set; }
 
         /// <summary>
-        /// <para>Name of the custom check item.</para>
+        /// <para>The name of the custom check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testCheckItemName</para>
@@ -76,16 +76,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckShowName { get; set; }
 
         /// <summary>
-        /// <para>Description of the check item.</para>
+        /// <para>The description of the check item.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public UpdateCheckItemRequestDescription Description { get; set; }
         public class UpdateCheckItemRequestDescription : TeaModel {
             /// <summary>
-            /// <para>Type of the check item description. Values:</para>
+            /// <para>The type of the check item description. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: Text</description></item>
+            /// <item><description><b>text</b>: Text.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Description of the check item.</para>
+            /// <para>The description of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom description.</para>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Sub-asset type of the cloud product.</para>
+        /// <para>The asset subtype of the cloud service.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</para>
+        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceSubType { get; set; }
 
         /// <summary>
-        /// <para>Asset type of the cloud product.</para>
+        /// <para>The asset type of the cloud service.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get this parameter.</para>
+        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Remark information</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark.</para>
@@ -144,11 +144,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Risk level of the check item. Values:</para>
+        /// <para>The risk level of the check item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HIGH</b>: High risk</description></item>
-        /// <item><description><b>MEDIUM</b>: Medium risk</description></item>
-        /// <item><description><b>LOW</b>: Low risk</description></item>
+        /// <item><description><b>HIGH</b>: High.</description></item>
+        /// <item><description><b>MEDIUM</b>: Medium.</description></item>
+        /// <item><description><b>LOW</b>: Low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,23 +159,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>Array of section IDs associated with the check item.</para>
+        /// <para>The IDs of the sections associated with the check item.</para>
         /// </summary>
         [NameInMap("SectionIds")]
         [Validation(Required=false)]
         public List<long?> SectionIds { get; set; }
 
         /// <summary>
-        /// <para>Solution information for the check item.</para>
+        /// <para>The solution information for the check item.</para>
         /// </summary>
         [NameInMap("Solution")]
         [Validation(Required=false)]
         public UpdateCheckItemRequestSolution Solution { get; set; }
         public class UpdateCheckItemRequestSolution : TeaModel {
             /// <summary>
-            /// <para>Type of the solution information for the check item. Values:</para>
+            /// <para>The type of the solution information for the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: Text</description></item>
+            /// <item><description><b>text</b>: Text.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Content of the solution for the check item risk.</para>
+            /// <para>The solution content for the check item risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom solution.</para>
@@ -198,15 +198,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Status of the check item. Values:</para>
+        /// <para>The status of the check item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EDIT</b>: In editing</description></item>
-        /// <item><description><b>RELEASE</b>: Released</description></item>
+        /// <item><description><b>EDIT</b>: Being edited.</description></item>
+        /// <item><description><b>RELEASE</b>: Published.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Changing from <b>Released</b> to <b>In editing</b> will clear all historical records</description></item>
-        /// <item><description>Only the <b>Released</b> status allows the use of the check item for inspection.</description></item>
+        /// <item><description>Changing the status from <b>Published</b> to <b>Being edited</b> purges all historical records.</description></item>
+        /// <item><description>Only check items in the <b>Published</b> status can be used for checks.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -218,9 +218,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Cloud asset vendor.</para>
+        /// <para>The cloud asset vendor.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> API to get the available vendors.</para>
+        /// <para>You can call the <a href="~~ListCloudAssetSchemas~~">ListCloudAssetSchemas</a> operation to obtain the available vendors.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

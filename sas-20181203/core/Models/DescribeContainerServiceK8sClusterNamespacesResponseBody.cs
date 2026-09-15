@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The namespaces.</para>
+        /// <para>The list of namespaces.</para>
         /// </summary>
         [NameInMap("K8sClusterNamespaces")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C8487EF-50C2-54BB-8634-10F8C35D****</para>

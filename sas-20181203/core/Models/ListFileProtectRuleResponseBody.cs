@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListFileProtectRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("FileProtectList")]
         [Validation(Required=false)]
         public List<ListFileProtectRuleResponseBodyFileProtectList> FileProtectList { get; set; }
         public class ListFileProtectRuleResponseBodyFileProtectList : TeaModel {
             /// <summary>
-            /// <para>The handling method of the rule. Valid values:</para>
+            /// <para>The action of the rule on the client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>pass: allow</description></item>
-            /// <item><description>alert</description></item>
+            /// <item><description>alert: alert</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,12 +31,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The severity of alerts. Valid values:</para>
+            /// <para>The alert notification level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: does not generate alerts</description></item>
-            /// <item><description>1: sends notifications</description></item>
-            /// <item><description>2: suspicious</description></item>
-            /// <item><description>3: high-risk</description></item>
+            /// <item><description><para>0: No alert.</para>
+            /// </description></item>
+            /// <item><description><para>1: Reminder.</para>
+            /// </description></item>
+            /// <item><description><para>2: Suspicious.</para>
+            /// </description></item>
+            /// <item><description><para>3: High-risk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,21 +61,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EffectInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The operations performed on the files.</para>
+            /// <para>The list of operations performed on files.</para>
             /// </summary>
             [NameInMap("FileOps")]
             [Validation(Required=false)]
             public List<string> FileOps { get; set; }
 
             /// <summary>
-            /// <para>The paths to the monitored files. Wildcard characters are supported.</para>
+            /// <para>The list of monitored file paths. Wildcards are supported.</para>
             /// </summary>
             [NameInMap("FilePaths")]
             [Validation(Required=false)]
             public List<string> FilePaths { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1682304179000</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was last modified.</para>
+            /// <para>The most recent modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1682304179000</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1412511</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the operating system. Valid values:</para>
+            /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>windows</b>: Windows</description></item>
             /// <item><description><b>linux</b>: Linux</description></item>
@@ -115,14 +119,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The paths to the monitored processes. Wildcard characters are supported.</para>
+            /// <para>The list of monitored process paths. Wildcards are supported.</para>
             /// </summary>
             [NameInMap("ProcPaths")]
             [Validation(Required=false)]
             public List<string> ProcPaths { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test11</para>
@@ -158,14 +162,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListFileProtectRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListFileProtectRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -175,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -197,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FBBEB173-1F43-505F-A876-C03ECDF6CE4C</para>

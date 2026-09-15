@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The maximum number of files to decompress. Maximum value: 1000.</para>
-        /// <para>This parameter is required when Decompress is set to true.</para>
+        /// <para>This parameter is required if Decompress is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The maximum number of decompression layers when compressed files are nested within a compressed package. Maximum value: 5.</para>
-        /// <para>This parameter is required when Decompress is set to true.</para>
+        /// <para>This parameter is required if Decompress is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 of the file.</para>
+        /// <para>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>
@@ -67,7 +67,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The storage key of the file in the OSS bucket.</para>
-        /// <para>If you push the file for detection by using DownloadUrl, this parameter is optional. This parameter is obtained from the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</para>
+        /// <para>If you push the file for detection by using DownloadUrl, this parameter is optional. You can obtain this parameter by calling the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</para>
+        /// <para>Note: If Type is set to 0 and DownloadUrl is not provided, this parameter is required and must be obtained by calling the CreateFileDetectUploadUrl operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</para>
@@ -87,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of file to detect. Valid values:</para>
+        /// <para>The type of the file to be detected. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: malicious file detection</description></item>
         /// </list>

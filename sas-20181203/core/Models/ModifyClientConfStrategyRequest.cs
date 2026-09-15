@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClientConfStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The key of the tag that is added to the agent configuration policy.</para>
+        /// <para>The client configuration tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The extended tag of the agent configuration policy.</para>
+        /// <para>The extended tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TagExt { get; set; }
 
         /// <summary>
-        /// <para>The value of the tag that is added to the agent configuration policy.</para>
+        /// <para>The client tag value. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>major</description></item>
         /// <item><description>advanced</description></item>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TagValue { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server that you want to query.</para>
+        /// <para>The UUID of the asset to query. You must specify at least one of the Uuid and Uuids parameters. Otherwise, the API returns a 400 error. The Uuid parameter specifies a single asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4fe8e1cd-3c37-4851-b9de-124da32c****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset. You can specify a maximum of 500 UUIDs at a time.</para>
+        /// <para>The UUIDs of asset instances. A maximum of 500 UUIDs can be specified at a time. You must specify at least one of the Uuids and Uuid parameters. Otherwise, the API returns a 400 error. The Uuids parameter specifies multiple assets in a batch.</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

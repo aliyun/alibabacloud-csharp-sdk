@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("Fixed")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>udp</b>.</description></item>
+            /// <item><description><b>udp</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,8 +113,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The service binding type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>forward_honey</b>: forward to honeypot</description></item>
-        /// <item><description><b>scan_port</b>: listen for scans.</description></item>
+        /// <item><description><b>forward_honey</b>: forwards traffic to the honeypot.</description></item>
+        /// <item><description><b>scan_port</b>: listens for scans.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BindType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. The value starts from <b>1</b>. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page when using paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by paging.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</para>
         /// <remarks>
         /// <para>Do not leave PageSize empty.</para>
         /// </remarks>

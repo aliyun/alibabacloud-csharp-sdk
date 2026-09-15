@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The access type of the multi-cloud site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No default site exists. You can select one.</description></item>
+        /// <item><description><b>0</b>: No default site exists. You can select a site as the default site.</description></item>
         /// <item><description><b>1</b>: The current site is already the default site.</description></item>
         /// <item><description><b>2</b>: Another site is already set as the default site.</description></item>
         /// </list>

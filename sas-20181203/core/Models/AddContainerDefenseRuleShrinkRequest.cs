@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddContainerDefenseRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the rule.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-proc-defense</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The action that is performed when the rule is hit. Valid values:</para>
+        /// <para>The action to take when the rule is matched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: alert</description></item>
-        /// <item><description><b>2</b>: block</description></item>
+        /// <item><description><para><b>1</b>: Alert.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Block.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule. You do not need to manually specify the ID.</para>
+        /// <para>The rule ID. You do not need to specify this parameter when creating a rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500018</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto-test-rule-lt9umq</para>
@@ -54,10 +56,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The switch of the rule. Valid values:</para>
+        /// <para>The rule switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: off</description></item>
-        /// <item><description><b>1</b>: on</description></item>
+        /// <item><description><para><b>0</b>: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,10 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2: user-defined rules</description></item>
+        /// <item><description>2: user rule</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only the value 2 is supported.</para>
+        /// <para>Notice: Only the value 2 is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// <para>The scope.</para>
+        /// <para>The scope. This parameter is required. Specify at least one Scope entry, such as Scope.1.AllNamespace=1, which indicates that the rule applies to all namespaces. If this parameter is not specified, the API returns a 400 error.</para>
         /// </summary>
         [NameInMap("Scope")]
         [Validation(Required=false)]
@@ -93,8 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether to include all namespaces. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: You can use the Namespaces parameter to specify the namespaces to include.</description></item>
-            /// <item><description><b>1</b>: All namespaces are included.</description></item>
+            /// <item><description><para><b>0</b>: Specifies the namespaces to include by using the Namespaces parameter.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Includes all namespaces.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,9 +111,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The namespaces to include.</para>
+            /// <para>The list of included namespaces.</para>
             /// </summary>
             [NameInMap("Namespaces")]
             [Validation(Required=false)]

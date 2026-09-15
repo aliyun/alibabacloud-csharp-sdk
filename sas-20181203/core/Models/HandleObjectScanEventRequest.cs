@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleObjectScanEventRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the type for batch processing of similar alerts. Valid values:</para>
+        /// <para>The type for batch handling of similar alerts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sha256</b>: by file content</description></item>
+        /// <item><description><b>sha256</b>: by file content.</description></item>
         /// <item><description><b>eventName</b>: by alert name.</description></item>
         /// </list>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BatchType { get; set; }
 
         /// <summary>
-        /// <para>The event ID.</para>
+        /// <para>The event ID. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81****</para>
@@ -34,16 +34,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The list of event IDs.</para>
+        /// <para>The list of event IDs. You must specify at least one of EventId and EventIdList to identify the target scan events to handle.</para>
         /// </summary>
         [NameInMap("EventIdList")]
         [Validation(Required=false)]
         public List<long?> EventIdList { get; set; }
 
         /// <summary>
-        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -65,18 +65,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The list of whitelist rules. This parameter takes effect only when the alert is whitelisted.</para>
+        /// <para>The list of whitelisting rules. This parameter takes effect only when the alert is whitelisted.</para>
         /// </summary>
         [NameInMap("RuleConditionList")]
         [Validation(Required=false)]
         public List<HandleObjectScanEventRequestRuleConditionList> RuleConditionList { get; set; }
         public class HandleObjectScanEventRequestRuleConditionList : TeaModel {
             /// <summary>
-            /// <para>The whitelist field. Valid values:</para>
+            /// <para>The whitelisting field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ossKey</b>: file path</description></item>
-            /// <item><description><b>bucketName</b>: bucket name</description></item>
-            /// <item><description><b>md5</b>: file MD5</description></item>
+            /// <item><description><b>ossKey</b>: file path.</description></item>
+            /// <item><description><b>bucketName</b>: bucket name.</description></item>
+            /// <item><description><b>md5</b>: file MD5.</description></item>
             /// <item><description><b>sha256</b>: file SHA-256.</description></item>
             /// </list>
             /// 
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operator. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>contains</b>: Contains.</description></item>
-            /// <item><description><b>not_contains</b>: Does not contain.</description></item>
-            /// <item><description><b>str_equal</b>: Equals.</description></item>
-            /// <item><description><b>str_not_equal</b>: Does not equal.</description></item>
-            /// <item><description><b>regex</b>: Regular expression.</description></item>
+            /// <item><description><b>contains</b>: contains.</description></item>
+            /// <item><description><b>not_contains</b>: does not contain.</description></item>
+            /// <item><description><b>str_equal</b>: equals.</description></item>
+            /// <item><description><b>str_not_equal</b>: does not equal.</description></item>
+            /// <item><description><b>regex</b>: regular expression.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

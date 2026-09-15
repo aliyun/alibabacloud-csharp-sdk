@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the alert can be handled online. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: The alert can be unmarked as a false positive.</para>
+            /// <item><description><para><b>true</b>: The alert can be marked as handled online.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b>: The alert cannot be unmarked as a false positive.</para>
+            /// <item><description><para><b>false</b>: The alert cannot be unmarked as handled online.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <para>The value of the tracing information field.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>under a certain small probability, yundun may mistakenly judge the repeated attempts caused by the administrator forgetting or entering the wrong password as successful blasting. Please check according to the account number and time shown in the alarm details. Once it is confirmed that it is not the initiative of the administrator, it is recommended to immediately block the IP, and you can open it at the same time<a href="https://yundun.console.aliyun.com/?p=pam">PAM</a>, hosting host login password, improving remote connection efficiency and security control ability, and according to<a href="https://click.aliyun.com/m/1000226086/">best practice of ECS account security protection</a>Modify login password and convergence asset.</para>↵
+                    /// <para>Usnder a certain small probability, yundun may mistakenly judge the repeated attempts caused by the administrator forgetting or entering the wrong password as successful blasting. Please check according to the account number and time shown in the alarm details. Once it is confirmed that it is not the initiative of the administrator, it is recommended to immediately block the IP, and you can open it at the same time <a href="https://yundun.console.aliyun.com/?p=pam"> PAM</a>, hosting host login password, improving remote connection efficiency and security control ability, and according to <a href="https://click.aliyun.com/m/1000226086/"> best practice of ECS account security protection</a> Modify login password and convergence asset.</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event ended, in milliseconds.</para>
+            /// <para>The timestamp when the alert event ended. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1542366542000</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Solution { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event started, in milliseconds.</para>
+            /// <para>The timestamp when the alert event started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1542378601000</para>
@@ -348,7 +348,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description>Unusual Event</description></item>
             /// <item><description>Sensitive File Tampering</description></item>
             /// <item><description>Malicious Process (Cloud Scan)</description></item>
-            /// <item><description>Suspicious Network Connectivity</description></item>
+            /// <item><description>Suspicious Network Connection</description></item>
             /// <item><description>Other</description></item>
             /// <item><description>Suspicious Account</description></item>
             /// <item><description>Application Intrusion Event</description></item>
@@ -357,9 +357,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description>Application Whitelist</description></item>
             /// <item><description>Persistence Backdoor</description></item>
             /// <item><description>Web Application Threat Detection</description></item>
-            /// <item><description>Malicious Scripts</description></item>
+            /// <item><description>Malicious Script</description></item>
             /// <item><description>Threat Intelligence</description></item>
-            /// <item><description>Malicious Network Behavior</description></item>
+            /// <item><description>Malicious Network Activity</description></item>
             /// <item><description>Container Cluster Exception</description></item>
             /// <item><description>Web shell (Local Scan)</description></item>
             /// <item><description>Vulnerability Exploits</description></item>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7EA50837-2F0B-5BCC-AB61-4968D88D75AD</para>

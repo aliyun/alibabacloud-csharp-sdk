@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the honeypot image.</para>
+        /// <para>The honeypot image ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the IDs of images from the <b>HoneypotImageId</b> response parameter.</para>
+        /// <para>You can obtain this value from the <b>HoneypotImageId</b> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the honeypot image.</para>
+        /// <para>The honeypot image name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the names of images from the <b>HoneypotImageName</b> response parameter.</para>
+        /// <para>You can obtain this value from the <b>HoneypotImageName</b> field returned by the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,29 +49,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotName { get; set; }
 
         /// <summary>
-        /// <para>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</para>
+        /// <para>The custom configuration of the honeypot in JSON format. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>trojan_git</b>: Git-specific Defense. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zip</b>: Git Source Code Package</description></item>
-        /// <item><description><b>web</b>: Git Directory Leak</description></item>
-        /// <item><description><b>close</b>: Disabled</description></item>
+        /// <item><description><b>trojan_git</b>: The Git counter-intelligence method. Valid values:<list type="bullet">
+        /// <item><description><b>zip</b>: Git source code package.</description></item>
+        /// <item><description><b>web</b>: .git folder leak.</description></item>
+        /// <item><description><b>close</b>: Shutdown.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>trojan_git_addr</b>: Git Trojan Address.</para>
-        /// </description></item>
-        /// <item><description><para><b>trojan_git.zip</b>: Git Trojan.</para>
-        /// </description></item>
-        /// <item><description><para><b>burp</b>: Burp-specific Defense. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>open</b>: Enable</description></item>
-        /// <item><description><b>close</b>: Disable</description></item>
+        /// <item><description><b>trojan_git_addr</b>: The Git counter-intelligence endpoint.</description></item>
+        /// <item><description><b>trojan_git.zip</b>: The Git counter-intelligence trojan package.</description></item>
+        /// <item><description><b>burp</b>: The Burp counter-intelligence method. Valid values:<list type="bullet">
+        /// <item><description><b>open</b>: Enabled.</description></item>
+        /// <item><description><b>close</b>: Shutdown.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>portrait_option</b>: Source Tracing Configuration. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>false</b>: Disable</description></item>
-        /// <item><description><b>true</b>: Enable</description></item>
+        /// <item><description><b>portrait_option</b>: The tracing configuration. Valid values:<list type="bullet">
+        /// <item><description><b>false</b>: Shutdown.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -84,9 +79,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Meta { get; set; }
 
         /// <summary>
-        /// <para>The ID of the management node.</para>
+        /// <para>The ID of the honeypot management node.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</para>
+        /// <para>Call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

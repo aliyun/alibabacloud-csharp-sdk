@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectEventCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned if the request is successful.</para>
+        /// <para>The data returned when the API call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B28EC81-2FA7-5097-80D9-0DBE1A3DBD59</para>

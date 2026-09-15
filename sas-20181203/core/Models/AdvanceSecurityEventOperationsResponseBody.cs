@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The operation performed on the alert event.</para>
+        /// <para>The operation types for handling alert events.</para>
         /// </summary>
         [NameInMap("SecurityEventOperationsResponse")]
         [Validation(Required=false)]
         public List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponse> SecurityEventOperationsResponse { get; set; }
         public class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponse : TeaModel {
             /// <summary>
-            /// <para>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <b>advance_mark_mis_info</b>.</para>
+            /// <para>The configuration information when the handling method is <b>advance_mark_mis_info</b>.</para>
             /// </summary>
             [NameInMap("MarkField")]
             [Validation(Required=false)]
             public List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField> MarkField { get; set; }
             public class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkField : TeaModel {
                 /// <summary>
-                /// <para>The alias of the field that is used in the whitelist rule.</para>
+                /// <para>The name of the whitelist field in the configured whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file path</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FiledAliasName { get; set; }
 
                 /// <summary>
-                /// <para>The field that is used in the whitelist rule.</para>
+                /// <para>The whitelist field in the configured whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>filePath</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FiledName { get; set; }
 
                 /// <summary>
-                /// <para>The operation that is used in the whitelist rule. Valid values:</para>
+                /// <para>The wildcard in the configured whitelist rule. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>contains</b>: contains</description></item>
                 /// <item><description><b>notContains</b>: does not contain</description></item>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string MarkMisType { get; set; }
 
                 /// <summary>
-                /// <para>The value of the field that is used in the whitelist rule.</para>
+                /// <para>The rule value of the configured whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-04-25 10:11:04</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string MarkMisValue { get; set; }
 
                 /// <summary>
-                /// <para>The operation that is used and can be modified in the whitelist rule. Valid values:</para>
+                /// <para>The wildcard types that can be modified in the configured whitelist rule. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>contains</b>: contains</description></item>
                 /// <item><description><b>notContains</b>: does not contain</description></item>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The metadata configuration returned by the advanced whitelist rule.</para>
+            /// <para>The metadata configuration information returned for the advanced whitelist.</para>
             /// </summary>
             [NameInMap("MarkFieldsSource")]
             [Validation(Required=false)]
             public List<AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource> MarkFieldsSource { get; set; }
             public class AdvanceSecurityEventOperationsResponseBodySecurityEventOperationsResponseMarkFieldsSource : TeaModel {
                 /// <summary>
-                /// <para>The alias of the field that can be used in the whitelist rule.</para>
+                /// <para>The name of the whitelist field that can be configured in a whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file path</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FiledAliasName { get; set; }
 
                 /// <summary>
-                /// <para>The field that can be used in the whitelist rule.</para>
+                /// <para>The whitelist field that can be configured in a whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>filePath</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FiledName { get; set; }
 
                 /// <summary>
-                /// <para>The value of the field that can be used in the whitelist rule.</para>
+                /// <para>The rule value of the whitelist rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>contains</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string MarkMisValue { get; set; }
 
                 /// <summary>
-                /// <para>The operation that is supported in the whitelist rule. Valid values:</para>
+                /// <para>The supported wildcards in the whitelist rule. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>contains</b>: contains</description></item>
                 /// <item><description><b>notContains</b>: does not contain</description></item>
@@ -150,18 +150,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The operation performed to handle the alert. Valid values:</para>
+            /// <para>The handling method for the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>block_ip</b>: blocks the alert.</description></item>
-            /// <item><description><b>advance_mark_mis_info</b>: adds the alert to the whitelist.</description></item>
-            /// <item><description><b>ignore</b>: ignores the alert.</description></item>
-            /// <item><description><b>manual_handled</b>: marks the alert as manually handled.</description></item>
-            /// <item><description><b>kill_process</b>: terminates the malicious process.</description></item>
-            /// <item><description><b>cleanup</b>: performs in-depth virus detection and removal.</description></item>
-            /// <item><description><b>kill_and_quara</b>: performs virus detection and removal.</description></item>
-            /// <item><description><b>disable_malicious_defense</b>: turns off malicious defense behavior.</description></item>
-            /// <item><description><b>client_problem_check</b>: performs troubleshooting.</description></item>
-            /// <item><description><b>quara</b>: performs quarantine operations.</description></item>
+            /// <item><description><b>block_ip</b>: Block.</description></item>
+            /// <item><description><b>advance_mark_mis_info</b>: Add to whitelist.</description></item>
+            /// <item><description><b>ignore</b>: Ignore.</description></item>
+            /// <item><description><b>manual_handled</b>: Manually handled.</description></item>
+            /// <item><description><b>kill_process</b>: Terminate process.</description></item>
+            /// <item><description><b>cleanup</b>: Deep scan and removal.</description></item>
+            /// <item><description><b>kill_and_quara</b>: Virus scan and quarantine.</description></item>
+            /// <item><description><b>disable_malicious_defense</b>: Disable malicious behavior defense.</description></item>
+            /// <item><description><b>client_problem_check</b>: Troubleshoot.</description></item>
+            /// <item><description><b>quara</b>: Quarantine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperationCode { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the operation performed to handle the alert event.</para>
+            /// <para>The configuration of the sub-operation for the alert event handling method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;subOperation\&quot;:\&quot;killByMd5andPath\&quot;}</para>
@@ -182,10 +182,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperationParams { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation can be performed.</para>
+            /// <para>Indicates whether the operation is available.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The operation can be performed.</description></item>
-            /// <item><description><b>false</b>: The operation cannot be performed.</description></item>
+            /// <item><description><b>true</b>: Available.</description></item>
+            /// <item><description><b>false</b>: Not available.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

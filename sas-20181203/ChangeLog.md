@@ -1,3 +1,9 @@
+2026-09-15 Version: 10.1.4
+- Update API ChangeCheckScopeConfigInstance: add request parameters SelectionKey.
+- Update API CreateAgentlessScanTask: add request parameters From.
+- Update API CreateAgentlessScanTask: add request parameters ResourceRegionId.
+
+
 2026-09-09 Version: 10.1.3
 - Update API CreateAgentlessScanTask: add request parameters Targets.
 - Update API DescribeImageGroupedVulList: add request parameters AgentlessCanFix.

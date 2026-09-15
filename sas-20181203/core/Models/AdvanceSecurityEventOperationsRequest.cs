@@ -10,51 +10,58 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AdvanceSecurityEventOperationsRequest : TeaModel {
         /// <summary>
-        /// <para>The alert name.</para>
+        /// <para>The alert name. The EventName and EventType parameters must be specified together. If only one of them is specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>恶意脚本代码执行</para>
+        /// <para>Malicious script code execution</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The alert event type. Valid values:</para>
+        /// <para>The type of the alerting event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Suspicious process</description></item>
-        /// <item><description>Webshell</description></item>
+        /// <item><description>Abnormal process behavior</description></item>
+        /// <item><description>Web shell</description></item>
         /// <item><description>Unusual logon</description></item>
-        /// <item><description>Exception</description></item>
+        /// <item><description>Abnormal event</description></item>
         /// <item><description>Sensitive file tampering</description></item>
-        /// <item><description>Malicious process (cloud threat detection)</description></item>
-        /// <item><description>Unusual network connection</description></item>
+        /// <item><description>Malicious process (cloud scan)</description></item>
+        /// <item><description>Suspicious network connection</description></item>
         /// <item><description>Abnormal account</description></item>
         /// <item><description>Application intrusion event</description></item>
-        /// <item><description>Cloud threat detection</description></item>
-        /// <item><description>Precision defense</description></item>
+        /// <item><description>Cloud service threat detection</description></item>
+        /// <item><description>Precise defense</description></item>
         /// <item><description>Application whitelist</description></item>
-        /// <item><description>Persistent webshell</description></item>
+        /// <item><description>Persistent backdoor</description></item>
         /// <item><description>Web application threat detection</description></item>
         /// <item><description>Malicious script</description></item>
         /// <item><description>Threat intelligence</description></item>
-        /// <item><description>Malicious network activity</description></item>
-        /// <item><description>Cluster exception</description></item>
-        /// <item><description>Webshell (on-premises threat detection)</description></item>
-        /// <item><description>Vulnerability exploitation</description></item>
-        /// <item><description>Malicious process (on-premises threat detection)</description></item>
+        /// <item><description>Malicious network behavior</description></item>
+        /// <item><description>Container cluster exception</description></item>
+        /// <item><description>Web shell (local scan)</description></item>
+        /// <item><description>Vulnerability exploits</description></item>
+        /// <item><description>Malicious process (local scan)</description></item>
         /// <item><description>Trusted exception</description></item>
-        /// <item><description>Others</description></item>
+        /// <item><description>Other</description></item>
         /// </list>
-        /// <para>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</para>
+        /// <para>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Security alert check items</a>.</para>
+        /// <para>The EventName and EventType parameters must be specified together. If only one of them is specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>恶意脚本</para>
+        /// <para>Malicious script</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]
         public string EventType { get; set; }
 
+        /// <summary>
+        /// <para>The member account ID in the resource directory (Alibaba Cloud account).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1232428423234****</para>
+        /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }

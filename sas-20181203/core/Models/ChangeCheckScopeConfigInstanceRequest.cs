@@ -37,6 +37,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<string> DeleteAssetUuids { get; set; }
 
+        /// <summary>
+        /// <para>The key for cross-page select-all.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b6d1a39a-f020-4782-af2c-c4b6522*****</para>
+        /// </summary>
+        [NameInMap("SelectionKey")]
+        [Validation(Required=false)]
+        public string SelectionKey { get; set; }
+
     }
 
 }

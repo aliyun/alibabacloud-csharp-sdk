@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectEventStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The severities of alerts.</para>
+        /// <para>The list of alert notification levels.</para>
         /// </summary>
         [NameInMap("AlertLevels")]
         [Validation(Required=false)]
         public List<int?> AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end timestamp of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649040221</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the events.</para>
+        /// <para>The list of event IDs.</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public List<long?> Id { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the asset.</para>
+        /// <para>The ID of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1g6wxdwps7s9dz****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the server.</para>
+        /// <para>The name of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the server.</para>
+        /// <para>The public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120.27.XX.XX</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the server.</para>
+        /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.26.XX.XX</para>
@@ -74,13 +74,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>Type of operation on a file. eg:</para>
+        /// <para>The type of operation performed on the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DELETE</b>: delete the file.</description></item>
-        /// <item><description><b>WRITE</b>: write the file.</description></item>
-        /// <item><description><b>READ</b>: read the file.</description></item>
-        /// <item><description><b>RENAME</b>: rename the file.</description></item>
-        /// <item><description><b>CHOWN</b>: set the file owner and file association group operations.</description></item>
+        /// <item><description><b>DELETE</b>: Deletes a file.</description></item>
+        /// <item><description><b>WRITE</b>: Writes to a file.</description></item>
+        /// <item><description><b>READ</b>: Reads a file.</description></item>
+        /// <item><description><b>RENAME</b>: Renames a file.</description></item>
+        /// <item><description><b>CHOWN</b>: Changes the file owner and associated file group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>The name of the defense rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tetsRule</para>
@@ -101,21 +101,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Whether to choose all fields across industries.</para>
+        /// <para>Specifies whether to select all items across pages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Selected.</description></item>
+        /// <item><description><b>false</b>: Not selected.</description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
         /// </summary>
         [NameInMap("SelectAllAcrossPages")]
         [Validation(Required=false)]
         public bool? SelectAllAcrossPages { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start timestamp of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1680919232000</para>
@@ -125,11 +122,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The handling status of the event. Valid values:</para>
+        /// <para>The event handling status.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unhandled</description></item>
-        /// <item><description><b>1</b>: handled</description></item>
-        /// <item><description><b>2</b>: added to the whitelist</description></item>
+        /// <item><description><b>0</b>: Unhandled</description></item>
+        /// <item><description><b>1</b>: Manually handled</description></item>
+        /// <item><description><b>2</b>: Added to whitelist</description></item>
+        /// <item><description><b>3</b>: Ignored</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,9 +139,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The UUID of the server.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>eb2c782e-64f2-4590-a86c-d90164df****</para>

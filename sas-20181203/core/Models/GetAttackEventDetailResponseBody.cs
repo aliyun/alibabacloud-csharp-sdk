@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The name of the CVE vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1Panel loadfile 后台文件读取漏洞</para>
+                /// <para>1Panel loadfile backend file read vulnerability</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message. The value is fixed as <b>success</b>, which indicates that the export was successful.</para>
+        /// <para>The result message. Fixed value: <b>success</b>. This value indicates that the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -100,8 +100,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The API call was successful.</description></item>
-        /// <item><description><b>false</b>: The API call failed.</description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

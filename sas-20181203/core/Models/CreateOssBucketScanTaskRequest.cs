@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? AllKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>The list of bucket names.</para>
+        /// <para>The list of bucket names. The specified buckets must already exist in OSS and must have been synchronized to Security Center by calling the RefreshOssBucketScanInfo operation. You can call the ListOssBucket operation to obtain the list of managed buckets.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BucketNameList")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BucketNameList { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of files to decompress. The minimum value is 1 and the maximum value is 1000. When the maximum number of decompressed files is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of decompression layers when multiple levels of compressed packages are nested. The minimum value is 1 and the maximum value is 5. When the maximum number of decompression layers is exceeded, the decompression operation ends immediately. The detection of files that have already been decompressed is not affected.</para>
+        /// <para>The maximum number of decompression layers when multiple levels of nested compressed files exist. The minimum value is 1 and the maximum value is 5. When the maximum number of decompression layers is exceeded, the decompression operation stops immediately. The scanning of files that have already been decompressed is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> DecryptionList { get; set; }
 
         /// <summary>
-        /// <para>The list of file suffixes to exclude from detection.</para>
+        /// <para>The list of file suffixes to exclude from scanning.</para>
         /// </summary>
         [NameInMap("ExcludeKeySuffixList")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> KeySuffixList { get; set; }
 
         /// <summary>
-        /// <para>Specifies that only files whose last modification time is after the specified timestamp are detected. Unit: milliseconds.</para>
+        /// <para>Specifies that only files whose last modification time is after the specified timestamp are scanned. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1724301769834</para>
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? LastModifiedStartTime { get; set; }
 
         /// <summary>
-        /// <para>The detection mode. Valid values:</para>
+        /// <para>The scan mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: Full file detection.</para>
+        /// <item><description><para><b>1</b>: Full file scan.</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: Incremental file detection.</para>
+        /// <item><description><para><b>2</b>: Incremental file scan.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -105,8 +105,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The business source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OSS</b>: OSS</description></item>
-        /// <item><description><b>NAS</b>: NAS</description></item>
+        /// <item><description><b>OSS</b>: OSS.</description></item>
+        /// <item><description><b>NAS</b>: NAS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

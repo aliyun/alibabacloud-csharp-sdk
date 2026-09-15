@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListFileProtectRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The severity of alerts. Valid values:</para>
+        /// <para>The alert notification level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: does not generate alerts</description></item>
-        /// <item><description>1: sends notifications</description></item>
-        /// <item><description>2: suspicious</description></item>
-        /// <item><description>3: high-risk</description></item>
+        /// <item><description><para>0: No alert.</para>
+        /// </description></item>
+        /// <item><description><para>1: Reminder.</para>
+        /// </description></item>
+        /// <item><description><para>2: Suspicious.</para>
+        /// </description></item>
+        /// <item><description><para>3: High-risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AlertLevel { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system. Valid values:</para>
+        /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>windows</b>: Windows</description></item>
         /// <item><description><b>linux</b>: Linux</description></item>
@@ -60,10 +64,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The handling method of the rule. Valid values:</para>
+        /// <para>The action of the rule on the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pass: allow</description></item>
-        /// <item><description>alert</description></item>
+        /// <item><description><para>pass: allow</para>
+        /// </description></item>
+        /// <item><description><para>alert: alert</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateVulAutoRepairConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The reason why the vulnerability can be automatically fixed.</para>
+        /// <para>The reason for adding the vulnerabilities that can be automatically fixed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestAutoRepair</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values: -<b>cve</b>: Linux software vulnerability -<b>sys</b>: Windows system vulnerability</para>
+        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The vulnerabilities that can be automatically fixed.</para>
+        /// <para>The list of vulnerabilities that can be automatically fixed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VulAutoRepairConfigList")]

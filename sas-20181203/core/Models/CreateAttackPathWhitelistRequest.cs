@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAttackPathWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>List of cloud product assets in the attack path.</para>
+        /// <para>The list of cloud service assets in the attack path.</para>
         /// </summary>
         [NameInMap("AttackPathAssetList")]
         [Validation(Required=false)]
         public List<CreateAttackPathWhitelistRequestAttackPathAssetList> AttackPathAssetList { get; set; }
         public class CreateAttackPathWhitelistRequestAttackPathAssetList : TeaModel {
             /// <summary>
-            /// <para>Subtype of the cloud product asset.</para>
+            /// <para>The subtype of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>Type of the cloud product asset.</para>
+            /// <para>The type of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>Cloud product asset instance ID.</para>
+            /// <para>The instance ID of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the instance ID of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Node type, with values:</para>
+            /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>start</b>: Start point.</description></item>
-            /// <item><description><b>end</b>: End point.</description></item>
+            /// <item><description><b>start</b>: start node.</description></item>
+            /// <item><description><b>end</b>: end node.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeType { get; set; }
 
             /// <summary>
-            /// <para>Region ID of the cloud product asset instance.</para>
+            /// <para>The region ID of the cloud service asset instance.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud service asset instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Vendor of the cloud product asset.</para>
+            /// <para>The vendor of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud service asset.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -98,9 +98,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Path name.</para>
+        /// <para>The path name.</para>
         /// <remarks>
-        /// <para>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name.</para>
+        /// <para>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path name.
+        /// This parameter is required. If this parameter is not specified, the API returns a 400 InvalidParam error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PathName { get; set; }
 
         /// <summary>
-        /// <para>Path type.</para>
+        /// <para>The path type.</para>
         /// <remarks>
         /// <para>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path type.</para>
         /// </remarks>
@@ -125,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PathType { get; set; }
 
         /// <summary>
-        /// <para>Remark information.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -135,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Whitelist name.</para>
+        /// <para>The whitelist name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,10 +147,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string WhitelistName { get; set; }
 
         /// <summary>
-        /// <para>Whitelist type. Values:</para>
+        /// <para>The whitelist type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL_ASSET</b>: All assets</description></item>
-        /// <item><description><b>PART_ASSET</b>: Partial assets</description></item>
+        /// <item><description><b>ALL_ASSET</b>: all assets.</description></item>
+        /// <item><description><b>PART_ASSET</b>: partial assets.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotProbeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable Address Resolution Protocol (ARP) spoofing. Valid values:</para>
+        /// <para>Specifies whether to enable ARP spoof detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Arp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the business group.</para>
+        /// <para>The business group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022011817324588686</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BusinessGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the management node.</para>
+        /// <para>The management node ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</para>
+        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ControlNodeId { get; set; }
 
         /// <summary>
-        /// <para>The name of the probe.</para>
+        /// <para>The probe name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,24 +59,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the probe.</para>
+        /// <para>The collection of service configurations.</para>
         /// </summary>
         [NameInMap("HoneypotBindList")]
         [Validation(Required=false)]
         public List<CreateHoneypotProbeRequestHoneypotBindList> HoneypotBindList { get; set; }
         public class CreateHoneypotProbeRequestHoneypotBindList : TeaModel {
             /// <summary>
-            /// <para>The listener ports.</para>
+            /// <para>The list of listening ports.</para>
             /// </summary>
             [NameInMap("BindPortList")]
             [Validation(Required=false)]
             public List<CreateHoneypotProbeRequestHoneypotBindListBindPortList> BindPortList { get; set; }
             public class CreateHoneypotProbeRequestHoneypotBindListBindPortList : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to bind a port. Valid values:</para>
+                /// <para>Specifies whether to bind the port. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: yes</description></item>
-                /// <item><description><b>false</b>: no</description></item>
+                /// <item><description><b>true</b>: Yes.</description></item>
+                /// <item><description><b>false</b>: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public bool? BindPort { get; set; }
 
                 /// <summary>
-                /// <para>The end of the port range.</para>
+                /// <para>The end port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -97,21 +97,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? EndPort { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the port is a fixed port. Valid values:</para>
+                /// <para>Specifies whether the port is fixed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: no</description></item>
-                /// <item><description><b>1</b>: yes</description></item>
+                /// <item><description><b>0</b>: No.</description></item>
+                /// <item><description><b>1</b>: Yes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0</para>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("Fixed")]
                 [Validation(Required=false)]
                 public bool? Fixed { get; set; }
 
                 /// <summary>
-                /// <para>The start of the port range.</para>
+                /// <para>The start port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The destination port.</para>
                 /// <remarks>
-                /// <para>If <b>HoneypotId</b> is specified, this parameter is required.</para>
+                /// <para>This parameter is required when <b>HoneypotId</b> is not empty.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The ID of the honeypot.</para>
+            /// <para>The honeypot ID.</para>
             /// <remarks>
-            /// <para>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</para>
+            /// <para>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -151,10 +151,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable ping scan. Valid values:</para>
+        /// <para>Specifies whether to enable ping scan detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,10 +165,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Ping { get; set; }
 
         /// <summary>
-        /// <para>The type of the probe. Valid values:</para>
+        /// <para>The probe type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>host_probe</b>: host probe</description></item>
-        /// <item><description><b>vpc_black_hole_probe</b>: virtual private cloud (VPC) probe</description></item>
+        /// <item><description><para><b>host_probe</b>: host probe</para>
+        /// </description></item>
+        /// <item><description><para><b>vpc_black_hole_probe</b>: VPC blackhole probe</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -180,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProbeType { get; set; }
 
         /// <summary>
-        /// <para>The version of the probe.</para>
+        /// <para>The probe version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0</para>
@@ -190,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProbeVersion { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the proxy.</para>
+        /// <para>The proxy IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -200,9 +202,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProxyIp { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the instance.</para>
+        /// <para>The instance UUID.</para>
         /// <remarks>
-        /// <para>If <b>ProbeType</b> is set to <b>host_probe</b>, this parameter is required.</para>
+        /// <para>This parameter is required when <b>ProbeType</b> is set to <b>host_probe</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -213,9 +215,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// <remarks>
-        /// <para>If <b>ProbeType</b> is set to <b>vpc_black_hole_probe</b>, this parameter is required. You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</para>
+        /// <para>This parameter is required when <b>ProbeType</b> is set to <b>vpc_black_hole_probe</b>. You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

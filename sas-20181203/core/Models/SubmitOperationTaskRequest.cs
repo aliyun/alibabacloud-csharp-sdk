@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</para>
+        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the check item ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The dimension of the task that you want to submit. Valid values:</para>
+        /// <para>The task dimension for the submitted operation task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Instance dimension: INSTANCE</description></item>
-        /// <item><description>Check item dimension: CHECK_ID</description></item>
+        /// <item><description>INSTANCE: instance dimension</description></item>
+        /// <item><description>CHECK_ID: check item dimension</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DimensionType { get; set; }
 
         /// <summary>
-        /// <para>The asset information required to submit the tasks for instances.</para>
+        /// <para>The asset information required to submit instance tasks.</para>
         /// </summary>
         [NameInMap("OperationTaskInstances")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task that you want to roll back</para>
+            /// <para>The task ID to roll back when performing a rollback task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7d0b10e35e80c9e5ebac5f1054****</para>
@@ -75,13 +75,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The service provider of the asset. Valid values:</para>
+            /// <para>The asset vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an asset provided by Alibaba Cloud.</description></item>
-            /// <item><description><b>1</b>: an asset outside Alibaba Cloud.</description></item>
-            /// <item><description><b>2</b>: an asset in a data center.</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: an asset from a third-party cloud service provider.</description></item>
-            /// <item><description><b>8</b>: a lightweight asset.</description></item>
+            /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
+            /// <item><description><b>1</b>: asset outside the cloud</description></item>
+            /// <item><description><b>2</b>: IDC asset</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: asset from another cloud provider</description></item>
+            /// <item><description><b>8</b>: lightweight asset</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The key linked to cross-page selections during task submission.</para>
+        /// <para>The relation key associated with cross-page selection when submitting the operation.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation to query the associated key from the BusinessType field.</para>
+        /// <para>Call the <a href="~~CreateAssetSelectionConfig~~">CreateAssetSelectionConfig</a> operation and use the BusinessType field to obtain the relation key.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RelationKey { get; set; }
 
         /// <summary>
-        /// <para>The temporary parameters required for the repair task.</para>
+        /// <para>The temporary parameters required for the remediation task.</para>
         /// </summary>
         [NameInMap("RepairTempParam")]
         [Validation(Required=false)]
         public List<SubmitOperationTaskRequestRepairTempParam> RepairTempParam { get; set; }
         public class SubmitOperationTaskRequestRepairTempParam : TeaModel {
             /// <summary>
-            /// <para>The name of the temporary repair parameter.</para>
+            /// <para>The name of the temporary remediation parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPPort</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The value of the temporary repair parameter.</para>
+            /// <para>The value of the temporary remediation parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.1XX.1XX</para>
@@ -136,10 +136,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The type of the task that you want to submit. Valid values:</para>
+        /// <para>The task type for the submitted task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Repair task: REPAIR</description></item>
-        /// <item><description>Rollback task: ROLLBACK</description></item>
+        /// <item><description>REPAIR: remediation task</description></item>
+        /// <item><description>ROLLBACK: rollback task</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

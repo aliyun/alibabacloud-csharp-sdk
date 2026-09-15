@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateHoneypotNodeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to allow honeypots to access the Internet. Valid values:</para>
+        /// <para>Specifies whether to allow the honeypot to access the Internet. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: allows honeypots to access the Internet.</description></item>
-        /// <item><description><b>false</b>: does not allow honeypots to access the Internet.</description></item>
+        /// <item><description><b>true</b>: Allowed.</description></item>
+        /// <item><description><b>false</b>: Not allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? AllowHoneypotAccessInternet { get; set; }
 
         /// <summary>
-        /// <para>The number of available probes.</para>
+        /// <para>The number of available probes. This parameter is required. If this parameter is not specified, the API returns InvalidParam (400). The minimum value is 20. If the value is less than 20, the API returns InvalidProbeNum (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks that are allowed to access the management node.</para>
+        /// <para>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified (such as 0.0.0.0/0). If this parameter is not specified, the API returns InvalidParam (400).</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

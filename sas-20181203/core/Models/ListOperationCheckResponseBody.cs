@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed information about the operation instances.</para>
+        /// <para>The details of the operation instances.</para>
         /// </summary>
         [NameInMap("OperationTaskInstanceDetails")]
         [Validation(Required=false)]
         public List<ListOperationCheckResponseBodyOperationTaskInstanceDetails> OperationTaskInstanceDetails { get; set; }
         public class ListOperationCheckResponseBodyOperationTaskInstanceDetails : TeaModel {
             /// <summary>
-            /// <para>Check item ID.</para>
+            /// <para>The check item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>58</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-2zefdwrre8ey8ewr0****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Information about the repair task.</para>
+            /// <para>The information about the fix task.</para>
             /// </summary>
             [NameInMap("Repair")]
             [Validation(Required=false)]
             public List<ListOperationCheckResponseBodyOperationTaskInstanceDetailsRepair> Repair { get; set; }
             public class ListOperationCheckResponseBodyOperationTaskInstanceDetailsRepair : TeaModel {
                 /// <summary>
-                /// <para>Timestamp for processing the risk. Unit: milliseconds.</para>
+                /// <para>The timestamp when the risk was handled. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719923175000</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? OperateTime { get; set; }
 
                 /// <summary>
-                /// <para>Fix the corresponding configuration information.</para>
+                /// <para>The configuration information for the fix.</para>
                 /// </summary>
                 [NameInMap("RepairConfigs")]
                 [Validation(Required=false)]
                 public List<ListOperationCheckResponseBodyOperationTaskInstanceDetailsRepairRepairConfigs> RepairConfigs { get; set; }
                 public class ListOperationCheckResponseBodyOperationTaskInstanceDetailsRepairRepairConfigs : TeaModel {
                     /// <summary>
-                    /// <para>ID of the repair process during the repair operation.</para>
+                    /// <para>The ID of the fix flow corresponding to the fix operation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cd7c4d34c1034de08308535d6cee***</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string FlowId { get; set; }
 
                     /// <summary>
-                    /// <para>Name of the repair parameter.</para>
+                    /// <para>The name of the fix parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IpList</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Display name.</para>
+                    /// <para>The display name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>IP List</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ShowName { get; set; }
 
                     /// <summary>
-                    /// <para>JSON string for the custom configuration type of the check item.</para>
+                    /// <para>The JSON string of the custom configuration item type for the check item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;type\&quot;:\&quot;STRING\&quot;,\&quot;range\&quot;:[0,64]}</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string TypeDefine { get; set; }
 
                     /// <summary>
-                    /// <para>Real-time value of the parameter for the instance.</para>
+                    /// <para>The real-time value of the parameter for the instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>192.168.1XX.1XX</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Status of the corresponding task.</para>
+                /// <para>The status of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>REPAIR_SUCCESS_VERIFIED</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the repair task status.</para>
+                /// <para>The display name of the fix task status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>repair success verified</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string StatusShowName { get; set; }
 
                 /// <summary>
-                /// <para>TaskId of the operation task.</para>
+                /// <para>The task ID of the operation task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6a829841e335b0fb6e0014463284****</para>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The operation type of the corresponding task:</para>
+            /// <para>The operation type of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>REPAIR</b>: Repair task </description></item>
-            /// <item><description><b>ROLLBACK</b>: Rollback task</description></item>
+            /// <item><description><b>REPAIR</b>: fix task</description></item>
+            /// <item><description><b>ROLLBACK</b>: rollback task</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the current call request, which is a unique identifier generated by Alibaba Cloud for the request, and can be used for troubleshooting and problem localization.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3D7C47D-3F11-57BB-90E8-E5C20C61****</para>

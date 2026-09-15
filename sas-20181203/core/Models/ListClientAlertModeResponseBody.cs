@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListClientAlertModeResponseBodyData Data { get; set; }
         public class ListClientAlertModeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of returned entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</para>

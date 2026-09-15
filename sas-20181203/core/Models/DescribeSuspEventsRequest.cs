@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The unique ID of the alert event.</para>
         /// <remarks>
-        /// <para>To query the exception information of a single alert event, provide the unique ID of the alert event. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID.</para>
+        /// <para>To query the exception information of a single alert event, provide the unique ID of the alert event. You can obtain this ID by calling the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> AssetsTypeList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster for which you want to query alert events.</para>
+        /// <para>The cluster ID for which you want to query alert events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c4af4fdf38a98496a9b63c2be5dae****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The page number of the results to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates that the results start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,6 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>Specifies whether the alert events to query have been handled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>N</b>: Unhandled.</description></item>
+        /// <item><description><b>Y</b>: Handled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>N</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The discovery source. This parameter is invalid.</para>
+        /// <para>The discovery source. This is an invalid field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>linux</para>
@@ -146,8 +150,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,11 +162,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severity levels of the security alerts that you want to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</para>
+        /// <para>The severity levels of the alert events to query. Separate multiple severity levels with commas (,). The severity levels are listed in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>serious</b>: Critical.</description></item>
+        /// <item><description><b>serious</b>: Urgent.</description></item>
         /// <item><description><b>suspicious</b>: Suspicious.</description></item>
-        /// <item><description><b>remind</b>: Informational.</description></item>
+        /// <item><description><b>remind</b>: Reminder.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,8 +179,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The multi-account query type. Default value: <b>0</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Queries data of the current account.</description></item>
-        /// <item><description><b>1</b>: Queries data of all accounts.</description></item>
+        /// <item><description><b>0</b>: Query data of the current account.</description></item>
+        /// <item><description><b>1</b>: Query data of all accounts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,7 +228,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The number of alert events to display on each page in a paged query. Default value: <b>20</b>. Maximum value: 100.</para>
+        /// <para>The number of alert events to display on each page in a paged query. Default value: <b>20</b>, which indicates that 20 alert events are displayed on each page. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -234,7 +238,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Alarm Metric of the alerting events to query. Valid values:</para>
+        /// <para>The alerting type of the alert events to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Abnormal process behavior</b></description></item>
+        /// <item><description><b>Web shell</b></description></item>
+        /// <item><description><b>Unusual logon</b></description></item>
+        /// <item><description><b>Abnormal event</b></description></item>
+        /// <item><description><b>Sensitive file tampering</b></description></item>
+        /// <item><description><b>Malicious process (cloud scan)</b></description></item>
+        /// <item><description><b>Suspicious network connectivity</b></description></item>
+        /// <item><description><b>Abnormal account</b></description></item>
+        /// <item><description><b>Application intrusion event</b></description></item>
+        /// <item><description><b>Cloud service threat detection</b></description></item>
+        /// <item><description><b>Precise defense</b></description></item>
+        /// <item><description><b>Application whitelist</b></description></item>
+        /// <item><description><b>Persistent backdoor</b></description></item>
+        /// <item><description><b>Web application threat detection</b></description></item>
+        /// <item><description><b>Malicious script</b></description></item>
+        /// <item><description><b>Threat intelligence</b></description></item>
+        /// <item><description><b>Malicious network behavior</b></description></item>
+        /// <item><description><b>Container cluster exception</b></description></item>
+        /// <item><description><b>Web shell (local scan)</b></description></item>
+        /// <item><description><b>Vulnerability exploits</b></description></item>
+        /// <item><description><b>Malicious process (local scan)</b></description></item>
+        /// <item><description><b>Trusted exception</b></description></item>
+        /// <item><description><b>Other</b></description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>other</para>
@@ -245,6 +274,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The alert name or asset information to query.</para>
+        /// <remarks>
+        /// <para>Fuzzy match is supported. Asset information includes the asset name, public IP address, and private IP address.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -254,7 +286,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The China site (Chinese mainland) account ID of the member account in the resource directory.</para>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory.</para>
         /// <remarks>
         /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
@@ -269,8 +301,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The custom sort field. Default value: <b>operateTime</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lastTime</b>: the most recent occurrence time.</description></item>
-        /// <item><description><b>operateTime</b>: the processing time.</description></item>
+        /// <item><description><b>lastTime</b>: Latest occurrence time.</description></item>
+        /// <item><description><b>operateTime</b>: Handling time.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This field takes effect only when <b>Dealed</b> is set to Y.</para>
@@ -284,13 +316,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SortColumn { get; set; }
 
         /// <summary>
-        /// <para>The custom sort type. Default value: <b>desc</b>. Valid values:</para>
+        /// <para>The custom sort order. Default value: <b>desc</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: ascending order.</description></item>
-        /// <item><description><b>desc</b>: descending order.</description></item>
+        /// <item><description><b>asc</b>: Ascending order.</description></item>
+        /// <item><description><b>desc</b>: Descending order.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>Dealed</b> is set to Y.</para>
+        /// <para>This field takes effect only when <b>Dealed</b> is set to Y.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -329,6 +361,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The status of the alert events to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: All.</description></item>
+        /// <item><description><b>1</b>: Unhandled.</description></item>
+        /// <item><description><b>2</b>: Ignored.</description></item>
+        /// <item><description><b>4</b>: Confirmed.</description></item>
+        /// <item><description><b>8</b>: Marked as false positive.</description></item>
+        /// <item><description><b>16</b>: Handling.</description></item>
+        /// <item><description><b>32</b>: Handled.</description></item>
+        /// <item><description><b>64</b>: Expired.</description></item>
+        /// <item><description><b>128</b>: Deleted.</description></item>
+        /// <item><description><b>512</b>: Automatic blocking in progress.</description></item>
+        /// <item><description><b>513</b>: Automatic blocking completed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -338,7 +383,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the alert is identified in strict mode.</para>
+        /// <para>Specifies whether the alert is in strict mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>N: No.</description></item>
+        /// <item><description>Y: Yes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -355,7 +404,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> SupportOperateCodeList { get; set; }
 
         /// <summary>
-        /// <para>The tactic ID in ATT&amp;CK.</para>
+        /// <para>The ATT&amp;CK tactic ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TA0001</para>
@@ -365,11 +414,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TacticId { get; set; }
 
         /// <summary>
-        /// <para>The type of the container search target. Valid values:</para>
+        /// <para>The target type for container search. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>containerId</b>: container ID.</description></item>
-        /// <item><description><b>uuid</b>: server UUID.</description></item>
-        /// <item><description><b>imageUuid</b>: image UUID.</description></item>
+        /// <item><description><b>containerId</b>: container ID</description></item>
+        /// <item><description><b>uuid</b>: server UUID</description></item>
+        /// <item><description><b>imageUuid</b>: image UUID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -380,7 +429,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the latest occurrence time range.</para>
+        /// <para>The end time of the latest occurrence. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-06 13:50:38</para>
@@ -390,7 +439,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the latest occurrence time range.</para>
+        /// <para>The start time of the latest occurrence. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-05 13:50:38</para>

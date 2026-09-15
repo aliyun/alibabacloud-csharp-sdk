@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileProtectRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The severity of alerts. Valid values:</para>
+        /// <para>The alert notification level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: does not generate alerts</description></item>
-        /// <item><description>1: sends notifications</description></item>
-        /// <item><description>2: suspicious</description></item>
-        /// <item><description>3: high-risk</description></item>
+        /// <item><description><para>0: no alert</para>
+        /// </description></item>
+        /// <item><description><para>1: reminder</para>
+        /// </description></item>
+        /// <item><description><para>2: suspicious</para>
+        /// </description></item>
+        /// <item><description><para>3: high-risk</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AlertLevel { get; set; }
 
         /// <summary>
-        /// <para>The operations that you want to perform on the files.</para>
+        /// <para>The list of file operations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileOps")]
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> FileOps { get; set; }
 
         /// <summary>
-        /// <para>The paths to the files that you want to monitor. Wildcard characters are supported.</para>
+        /// <para>The list of file paths to monitor. Wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FilePaths")]
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> FilePaths { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system. Valid values:</para>
+        /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>windows</b>: Windows</description></item>
         /// <item><description><b>linux</b>: Linux</description></item>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The paths to the processes that you want to monitor. Wildcard characters are supported.</para>
+        /// <para>The list of process paths to monitor. Wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProcPaths")]
@@ -64,10 +68,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ProcPaths { get; set; }
 
         /// <summary>
-        /// <para>The handling method of the rule. Valid values:</para>
+        /// <para>The action that the rule takes on the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pass: allow</description></item>
-        /// <item><description>alert</description></item>
+        /// <item><description><para>pass: allow</para>
+        /// </description></item>
+        /// <item><description><para>alert: alert</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,10 +96,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values:</para>
+        /// <para>The rule status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The switch ID of the rule.</para>
+        /// <para>The switch ID associated with the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FILE_PROTECT_RULE_SWITCH_TYPE_0000</para>

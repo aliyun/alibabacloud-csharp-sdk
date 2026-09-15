@@ -12,11 +12,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
-        /// <item><description><b>Azure</b>: Azure</description></item>
+        /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>Azure</b>: Azure.</description></item>
         /// <item><description><b>AWS</b>: AWS.</description></item>
         /// </list>
+        /// <para>This parameter is required in practice. If this parameter is not specified, the API returns an HTTP 400 error (code: -101).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tencent</para>

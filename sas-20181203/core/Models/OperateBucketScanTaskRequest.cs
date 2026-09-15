@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
     public class OperateBucketScanTaskRequest : TeaModel {
         /// <summary>
         /// <para>The bucket name.</para>
+        /// <remarks>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns the InvalidBucketName (400) error.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>iboxpublic****</para>
@@ -22,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The operation to perform on the bucket. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Cancel detection.</description></item>
+        /// <item><description><b>1</b>: Cancel the scan task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

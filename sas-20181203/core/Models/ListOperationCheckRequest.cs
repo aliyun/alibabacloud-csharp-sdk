@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationCheckRequest : TeaModel {
         /// <summary>
-        /// <para>Check item ID.</para>
+        /// <para>The check item ID.</para>
         /// <remarks>
-        /// <para>Obtain this parameter by calling the <a href="~~ListCheckResult~~">ListCheckResult</a> interface.</para>
+        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.
+        /// This parameter is required. If you do not specify this parameter, the API returns a 400 error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>Timestamp (in milliseconds) of the end time of the queried task.</para>
+        /// <para>The timestamp of the task end time to query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719923175001</para>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Language type for request and response messages, default value is zh. Values:</para>
+        /// <para>The language of the request and response. Default value: zh. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Information about the operated instances.</para>
+        /// <para>The information about the instances on which the operation is performed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OperationTaskInstances")]
@@ -55,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<ListOperationCheckRequestOperationTaskInstances> OperationTaskInstances { get; set; }
         public class ListOperationCheckRequestOperationTaskInstances : TeaModel {
             /// <summary>
-            /// <para>Cloud asset instance ID.</para>
+            /// <para>The cloud asset instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-bp1642ib4bg2bm****</para>
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Asset vendor. Values:</para>
+            /// <para>The asset vendor. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
             /// </list>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Timestamp (in milliseconds) of the start time of the queried task.</para>
+        /// <para>The timestamp of the task start time to query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719923175000</para>
@@ -100,10 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Task type corresponding to the task:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>REPAIR</b>: Repair task</description></item>
-        /// <item><description><b>ROLLBACK</b>: Rollback task</description></item>
+        /// <item><description><b>REPAIR</b>: fix task</description></item>
+        /// <item><description><b>ROLLBACK</b>: rollback task</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

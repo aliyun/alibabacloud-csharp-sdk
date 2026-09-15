@@ -40,14 +40,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance to query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b> (default): China.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside China.</description></item>
-        /// </list>
+        /// <para>The source of the API call, which is used to collect statistics on scan task volume and scan data volume by source. If this parameter is not specified, the value is empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>image-console</para>
+        /// </summary>
+        [NameInMap("From")]
+        [Validation(Required=false)]
+        public string From { get; set; }
+
+        /// <summary>
+        /// <para>The region ID, which is usually automatically populated by the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -66,6 +72,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ReleaseAfterScan")]
         [Validation(Required=false)]
         public bool? ReleaseAfterScan { get; set; }
+
+        /// <summary>
+        /// <para>The region ID of the resource to be detected, such as cn-hangzhou.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("ResourceRegionId")]
+        [Validation(Required=false)]
+        public string ResourceRegionId { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to detect data cloud disks. Valid values:</para>
@@ -146,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified. Each identifier must be unique and non-empty.</para>
+            /// <para>The list of vulnerability identifiers to be fixed. At least one vulnerability identifier must be specified, and each identifier must be unique and non-empty.</para>
             /// </summary>
             [NameInMap("VulnerabilityIds")]
             [Validation(Required=false)]

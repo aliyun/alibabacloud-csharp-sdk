@@ -12,7 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The IDs of the check items. Separate multiple check item IDs with commas (,).</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain check item IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to obtain check item IDs.
+        /// Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The IDs of the risk items to verify. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this parameter.</para>
+        /// <para> You can call the <a href="~~DescribeCheckWarnings~~">DescribeCheckWarnings</a> operation to obtain this parameter.
+        /// Note: You must specify at least one of RiskIds and CheckIds. Otherwise, the API returns the HcIllegalParameter error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,11 +38,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the check item to verify. Valid values:</para>
+        /// <para>The status of the check items to verify.</para>
         /// <list type="bullet">
-        /// <item><description>1: not passed</description></item>
-        /// <item><description>3: passed</description></item>
-        /// <item><description>5: expired.</description></item>
+        /// <item><description><para>1: Not passed</para>
+        /// </description></item>
+        /// <item><description><para>3: Passed</para>
+        /// </description></item>
+        /// <item><description><para>5: Expired</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

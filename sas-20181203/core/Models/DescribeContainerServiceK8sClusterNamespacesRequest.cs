@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterNamespacesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster. Note: This parameter is required. If this parameter is not specified, the API returns InvalidParam (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cf4435fefd45d4b1b8643f3a0bea3****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>140.205.XXX.XXX</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCompressFileDetectResultRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the current page in a paging query. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the file.</para>
+        /// <para>The unique identifier of the file. This parameter is required in practice. If this parameter is not specified, the API returns ServerError(400). The value must be the MD5 or SHA-256 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HashKey { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

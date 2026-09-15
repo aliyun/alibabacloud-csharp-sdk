@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ProcessSoarStrategyTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. The China Chinese Cloud generates a unique identifier for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79CFF74D-E967-5407-8A78-EE03B925****</para>
