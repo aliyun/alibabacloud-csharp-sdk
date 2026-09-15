@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         /// <summary>
         /// <para>The full path of the node interface class.</para>
-        /// <para>This field is required only for Java node types, and the full path must be specified.</para>
+        /// <para>This field is required and must contain the full path only for Java node types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.alibaba.test.helloworld</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The number of threads for a single trigger on a single machine. Default value: 5.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The number of threads for a single trigger on a single machine. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>The contact information for the node.</para>
         /// <remarks>
-        /// <para>Notice: This field is deprecated.</notice></para>
+        /// <para>Notice: This parameter is deprecated.</notice></para>
         /// </remarks>
         /// </summary>
         [NameInMap("ContactInfo")]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The number of subtask dispatch threads. Default value: 5.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The number of subtask dispatch threads. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -146,13 +146,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? DispatcherSize { get; set; }
 
         /// <summary>
-        /// <para>The node execution mode. Valid values:</para>
+        /// <b>Example:</b>
+        /// <para>1789454134000</para>
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// <para>The node execution mode. The following execution modes are supported:</para>
         /// <list type="bullet">
-        /// <item><description><b>standalone</b>: standalone</description></item>
-        /// <item><description><b>broadcatst</b>: broadcast</description></item>
-        /// <item><description><b>parallel</b>: visual MapReduce</description></item>
-        /// <item><description><b>batch</b>: MapReduce</description></item>
-        /// <item><description><b>shard</b>: shard</description></item>
+        /// <item><description><b>Standalone</b>: standalone</description></item>
+        /// <item><description><b>Broadcast</b>: broadcatst</description></item>
+        /// <item><description><b>Visual MapReduce</b>: parallel</description></item>
+        /// <item><description><b>MapReduce</b>: batch</description></item>
+        /// <item><description><b>Sharding</b>: shard</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,8 +173,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Specifies whether to enable the failure alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables the failure alert.</description></item>
+        /// <item><description><b>false</b>: disables the failure alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -219,7 +227,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? MaxAttempt { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is not performed even if the scheduled time has arrived.</para>
+        /// <para>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -231,8 +239,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Specifies whether to enable the no-available-machine alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables the no-available-machine alert.</description></item>
+        /// <item><description><b>false</b>: disables the no-available-machine alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -274,7 +282,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The number of subtasks pulled per request. Default value: 100.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The number of subtasks pulled per request. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -310,7 +318,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The maximum cache size of the subtask queue. Default value: 10000.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The maximum cache size of the subtask queue. Default value: 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -340,6 +348,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string SendChannel { get; set; }
 
+        /// <summary>
+        /// <para>The start timestamp in milliseconds. The value must be greater than the current time. A value of -1 indicates immediate start.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1789454134000</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
@@ -355,7 +369,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public bool? SuccessNoticeEnable { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The retry interval for failed subtasks.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The retry interval for failed subtasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -365,7 +379,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? TaskAttemptInterval { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. Specifies the push model or pull model.</para>
+        /// <para>Advanced configuration for parallel grid tasks. Specifies the push model or pull model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>push</para>
@@ -375,7 +389,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string TaskDispatchMode { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid tasks. The number of retries for failed subtasks.</para>
+        /// <para>Advanced configuration for parallel grid tasks. The number of retries for failed subtasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -424,10 +438,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>The time expression. Set the time expression based on the selected time type.</para>
         /// <list type="bullet">
-        /// <item><description><b>cron</b>: Specify a standard cron expression. Online verification is supported.</description></item>
-        /// <item><description><b>api</b>: No time expression is required.</description></item>
-        /// <item><description><b>fixed_rate</b>: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
-        /// <item><description><b>second_delay</b>: Specify a fixed delay in seconds before each execution (1s to 60s).</description></item>
+        /// <item><description><b>cron</b>: specify a standard cron expression, which supports online verification.</description></item>
+        /// <item><description><b>api</b>: no time expression is required.</description></item>
+        /// <item><description><b>fixed_rate</b>: specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
+        /// <item><description><b>second_delay</b>: specify a fixed delay in seconds before each execution (1s to 60s).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -438,13 +452,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string TimeExpression { get; set; }
 
         /// <summary>
-        /// <para>The time configuration type. Valid values:</para>
+        /// <para>The time configuration type. The following configuration types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: cron</description></item>
-        /// <item><description><b>3</b>: fix_rate</description></item>
-        /// <item><description><b>4</b>: second_delay</description></item>
-        /// <item><description><b>5</b>: one_time</description></item>
-        /// <item><description><b>100</b>: api</description></item>
+        /// <item><description><b>cron</b>: 1</description></item>
+        /// <item><description><b>fix_rate</b>: 3</description></item>
+        /// <item><description><b>second_delay</b>: 4</description></item>
+        /// <item><description><b>one_time</b>: 5</description></item>
+        /// <item><description><b>api</b>: 100</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -467,8 +481,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Specifies whether to enable the timeout alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables the timeout alert.</description></item>
+        /// <item><description><b>false</b>: disables the timeout alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -481,8 +495,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Specifies whether to enable the timeout termination for the current trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
+        /// <item><description><b>true</b>: enables the timeout termination.</description></item>
+        /// <item><description><b>false</b>: disables the timeout termination.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -503,7 +517,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The parameter that must be configured for k8s node types.
+        /// <para>The extended attributes. This parameter is required for k8s node types.
         /// Job task: {&quot;resource&quot;:&quot;job&quot;}
         /// Shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</para>
         /// 

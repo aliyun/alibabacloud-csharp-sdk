@@ -25,26 +25,26 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
                 {"cn-hangzhou", "schedulerx.cn-hangzhou.aliyuncs.com"},
                 {"cn-shanghai", "schedulerx.cn-shanghai.aliyuncs.com"},
                 {"cn-shenzhen", "schedulerx.cn-shenzhen.aliyuncs.com"},
+                {"ap-southeast-8", "schedulerx.aliyuncs.com"},
+                {"cn-wulanchabu", "schedulerx.aliyuncs.com"},
+                {"ap-northeast-1", "schedulerx.aliyuncs.com"},
+                {"cn-chengdu", "schedulerx.aliyuncs.com"},
+                {"cn-qingdao", "schedulerx.aliyuncs.com"},
+                {"cn-guangzhou", "schedulerx.aliyuncs.com"},
+                {"cn-hongkong", "schedulerx.aliyuncs.com"},
+                {"ap-southeast-1", "schedulerx.aliyuncs.com"},
+                {"ap-southeast-3", "schedulerx.aliyuncs.com"},
+                {"cn-huhehaote", "schedulerx.aliyuncs.com"},
+                {"ap-southeast-5", "schedulerx.aliyuncs.com"},
+                {"ap-southeast-6", "schedulerx.aliyuncs.com"},
+                {"cn-zhangjiakou", "schedulerx.aliyuncs.com"},
+                {"ap-southeast-7", "schedulerx.aliyuncs.com"},
                 {"us-west-1", "schedulerx.aliyuncs.com"},
                 {"us-east-1", "schedulerx.aliyuncs.com"},
-                {"public", "schedulerx.aliyuncs.com"},
-                {"eu-west-1", "schedulerx.aliyuncs.com"},
                 {"eu-central-1", "schedulerx.aliyuncs.com"},
-                {"cn-zhangjiakou", "schedulerx.aliyuncs.com"},
-                {"cn-wulanchabu", "schedulerx.aliyuncs.com"},
+                {"eu-west-1", "schedulerx.aliyuncs.com"},
+                {"public", "schedulerx.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "schedulerx.aliyuncs.com"},
-                {"cn-qingdao", "schedulerx.aliyuncs.com"},
-                {"cn-huhehaote", "schedulerx.aliyuncs.com"},
-                {"cn-hongkong", "schedulerx.aliyuncs.com"},
-                {"cn-guangzhou", "schedulerx.aliyuncs.com"},
-                {"cn-chengdu", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-8", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-7", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-6", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-5", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-3", "schedulerx.aliyuncs.com"},
-                {"ap-southeast-1", "schedulerx.aliyuncs.com"},
-                {"ap-northeast-1", "schedulerx.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("schedulerx2", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -988,6 +988,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             {
                 body["DispatcherSize"] = request.DispatcherSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
             {
                 body["ExecuteMode"] = request.ExecuteMode;
@@ -1179,6 +1183,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispatcherSize))
             {
                 body["DispatcherSize"] = request.DispatcherSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
             {
@@ -4138,7 +4146,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</para>
+        /// <para>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4176,7 +4184,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</para>
+        /// <para>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4214,7 +4222,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</para>
+        /// <para>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4232,7 +4240,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</para>
+        /// <para>Retrieves the details of a specified node by job ID. This operation is typically used to update a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5606,7 +5614,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of nodes.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5655,7 +5663,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of nodes.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5704,7 +5712,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of nodes.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5733,7 +5741,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of nodes.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8438,7 +8446,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</para>
+        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8499,6 +8507,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispatcherSize))
             {
                 body["DispatcherSize"] = request.DispatcherSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
             {
@@ -8634,7 +8646,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</para>
+        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8695,6 +8707,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DispatcherSize))
             {
                 body["DispatcherSize"] = request.DispatcherSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
             {
@@ -8830,7 +8846,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</para>
+        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8848,7 +8864,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</para>
+        /// <para>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields before making modifications.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the node was created successfully. Valid values:</para>
+        /// <para>Indicates whether the node was created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The node was created successfully.</description></item>
+        /// <item><description><b>true</b>: The node was created.</description></item>
         /// <item><description><b>false</b>: The node failed to be created.</description></item>
         /// </list>
         /// 

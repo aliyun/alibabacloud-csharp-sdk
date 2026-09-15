@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the job.</para>
+        /// <para>The information about the specified node.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetJobInfoResponseBodyData Data { get; set; }
         public class GetJobInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The configurations of the job.</para>
+            /// <para>The node configuration information.</para>
             /// </summary>
             [NameInMap("JobConfigInfo")]
             [Validation(Required=false)]
             public GetJobInfoResponseBodyDataJobConfigInfo JobConfigInfo { get; set; }
             public class GetJobInfoResponseBodyDataJobConfigInfo : TeaModel {
                 /// <summary>
-                /// <para>The interval at which the system retried to run the job after a job failure. Default value: 30. Unit: seconds.</para>
+                /// <para>The retry interval on failure. Unit: seconds. Default value: 30.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public int? AttemptInterval { get; set; }
 
                 /// <summary>
-                /// <para>The full path of the job interface class. This parameter is returned only for jobs whose job type is Java.</para>
+                /// <para>The full path of the node interface class. This field is available only for Java-type nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.alibaba.test.helloword</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string ClassName { get; set; }
 
                 /// <summary>
-                /// <para>The script of a script job.</para>
+                /// <para>The script content for script-type nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>echo &quot;clear&quot; &gt; /home/admin/edas-container/logs/catalina.out</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The description of the job.</para>
+                /// <para>The node description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -74,18 +74,22 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The execution mode of the job. Valid values:</para>
+                /// <b>Example:</b>
+                /// <para>1789454134000</para>
+                /// </summary>
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                /// <summary>
+                /// <para>The node execution mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Stand-alone operation</b>: standalone</para>
-                /// </description></item>
-                /// <item><description><para><b>Broadcast run</b>: broadcast</para>
-                /// </description></item>
-                /// <item><description><para><b>Visual MapReduce</b>: parallel</para>
-                /// </description></item>
-                /// <item><description><para><b>MapReduce</b>: batch</para>
-                /// </description></item>
-                /// <item><description><para><b>Shard run</b>: sharding</para>
-                /// </description></item>
+                /// <item><description><b>standalone</b>: standalone</description></item>
+                /// <item><description><b>broadcatst</b>: broadcast</description></item>
+                /// <item><description><b>parallel</b>: parallel computing</description></item>
+                /// <item><description><b>grid</b>: in-memory grid</description></item>
+                /// <item><description><b>batch</b>: grid computing</description></item>
+                /// <item><description><b>shard</b>: shard</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -96,8 +100,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string ExecuteMode { get; set; }
 
                 /// <summary>
-                /// <para>The full path used to upload files to Object Storage Service (OSS).</para>
-                /// <para>If you use a JAR package, you can upload the JAR package to this OSS path.</para>
+                /// <para>The full path of the file uploaded to Object Storage Service (OSS).</para>
+                /// <para>If you select JAR package execution, you can upload the corresponding JAR package to this OSS path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://test.oss-cn-hangzhou.aliyuncs.com/schedulerX/test.jar">https://test.oss-cn-hangzhou.aliyuncs.com/schedulerX/test.jar</a></para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string JarUrl { get; set; }
 
                 /// <summary>
-                /// <para>The job ID.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>538039</para>
@@ -117,21 +121,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public long? JobId { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring information of the job.</para>
+                /// <para>The node monitoring information.</para>
                 /// </summary>
                 [NameInMap("JobMonitorInfo")]
                 [Validation(Required=false)]
                 public GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfo JobMonitorInfo { get; set; }
                 public class GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfo : TeaModel {
                     /// <summary>
-                    /// <para>The alert contact Information.</para>
+                    /// <para>The contact information.</para>
                     /// </summary>
                     [NameInMap("ContactInfo")]
                     [Validation(Required=false)]
                     public List<GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfoContactInfo> ContactInfo { get; set; }
                     public class GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfoContactInfo : TeaModel {
                         /// <summary>
-                        /// <para>The webhook URL of the DingTalk chatbot.</para>
+                        /// <para>The webhook URL of DingTalk.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=XXXXXX">https://oapi.dingtalk.com/robot/send?access_token=XXXXXX</a></para>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public string Ding { get; set; }
 
                         /// <summary>
-                        /// <para>The email address of the alert contact.</para>
+                        /// <para>The email address of the user.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="mailto:user@demo.com">user@demo.com</a></para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public string UserMail { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the alert contact.</para>
+                        /// <para>The username.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>userA</para>
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public string UserName { get; set; }
 
                         /// <summary>
-                        /// <para>The mobile phone number of the alert contact.</para>
+                        /// <para>The mobile phone number of the user.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1381111****</para>
@@ -173,19 +177,17 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     }
 
                     /// <summary>
-                    /// <para>The configurations of the alerting features and the alert thresholds.</para>
+                    /// <para>The alert switch and threshold configuration.</para>
                     /// </summary>
                     [NameInMap("MonitorConfig")]
                     [Validation(Required=false)]
                     public GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfoMonitorConfig MonitorConfig { get; set; }
                     public class GetJobInfoResponseBodyDataJobConfigInfoJobMonitorInfoMonitorConfig : TeaModel {
                         /// <summary>
-                        /// <para>Indicates whether the Failure alarm switch was turned on. Valid values:</para>
+                        /// <para>Specifies whether to enable the failure alert. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>true</b></para>
-                        /// </description></item>
-                        /// <item><description><para><b>false</b></para>
-                        /// </description></item>
+                        /// <item><description><b>true</b>: Enables the failure alert.</description></item>
+                        /// <item><description><b>false</b>: Disables the failure alert.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -196,7 +198,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public bool? FailEnable { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the No machine alarm available switch was turned on.</para>
+                        /// <para>Specifies whether to enable the alert for no available machines.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -206,7 +208,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public bool? MissWorkerEnable { get; set; }
 
                         /// <summary>
-                        /// <para>The method used to send alerts. Only Short Message Service (SMS) is supported.</para>
+                        /// <para>The alert notification method. Currently, only sms is supported.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>sms</para>
@@ -216,7 +218,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public string SendChannel { get; set; }
 
                         /// <summary>
-                        /// <para>The timeout threshold. Default value: 7200. Unit: seconds.</para>
+                        /// <para>The timeout threshold. Unit: seconds. Default value: 7200.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>12300</para>
@@ -226,12 +228,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public long? Timeout { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the Timeout alarm switch was turned on. Valid values:</para>
+                        /// <para>Specifies whether to enable the timeout alert. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para><b>true</b></para>
-                        /// </description></item>
-                        /// <item><description><para><b>false</b></para>
-                        /// </description></item>
+                        /// <item><description><b>true</b>: Enables the timeout alert.</description></item>
+                        /// <item><description><b>false</b>: Disables the timeout alert.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         public bool? TimeoutEnable { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the Timeout termination switch was turned on. The switch is turned off by default.</para>
+                        /// <para>Specifies whether to terminate the current trigger upon timeout. This feature is disabled by default.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
-                /// <para>The job type.</para>
+                /// <para>The node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>java</para>
@@ -266,14 +266,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string JobType { get; set; }
 
                 /// <summary>
-                /// <para>The advanced configurations of the job.</para>
+                /// <para>The advanced configuration. This configuration is available only for parallel computing, in-memory grid, and grid computing modes.</para>
                 /// </summary>
                 [NameInMap("MapTaskXAttrs")]
                 [Validation(Required=false)]
                 public GetJobInfoResponseBodyDataJobConfigInfoMapTaskXAttrs MapTaskXAttrs { get; set; }
                 public class GetJobInfoResponseBodyDataJobConfigInfoMapTaskXAttrs : TeaModel {
                     /// <summary>
-                    /// <para>The number of threads that were triggered by a single worker at a time. Default value: 5.</para>
+                    /// <para>The number of threads for a single trigger on a single machine. Default value: 5.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? ConsumerSize { get; set; }
 
                     /// <summary>
-                    /// <para>The number of task distribution threads. Default value: 5.</para>
+                    /// <para>The number of threads for subtask distribution. Default value: 5.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? DispatcherSize { get; set; }
 
                     /// <summary>
-                    /// <para>The number of tasks that were pulled by a parallel job at a time. Default value: 100.</para>
+                    /// <para>The number of subtasks pulled per request for parallel nodes. Default value: 100.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? PageSize { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of tasks that can be queued. Default value: 10000.</para>
+                    /// <para>The maximum number of subtasks that can be cached in the queue. Default value: 10000.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10000</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? QueueSize { get; set; }
 
                     /// <summary>
-                    /// <para>The interval at which the system retried to run the task after a task failure.</para>
+                    /// <para>The retry interval for a subtask on failure.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? TaskAttemptInterval { get; set; }
 
                     /// <summary>
-                    /// <para>The number of retries after a task failure.</para>
+                    /// <para>The maximum number of retries for a subtask on failure.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
-                /// <para>The maximum number of retries after a job failure. This parameter was specified based on your business requirements. Default value: 0.</para>
+                /// <para>The maximum number of retries on failure. Set this parameter based on your business requirements. Default value: 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public int? MaxAttempt { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of concurrent instances. Default value: 1. The default value indicates that if the last triggered instance is running, the next instance is not triggered even if the scheduled point in time for running the next instance is reached.</para>
+                /// <para>The maximum number of concurrently running instances. Default value: 1. A value of 1 indicates that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string MaxConcurrency { get; set; }
 
                 /// <summary>
-                /// <para>The job name.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>helloworld</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The user-defined parameters that you can obtain when the job is running.</para>
+                /// <para>The user-defined parameters that can be obtained at runtime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -375,12 +375,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string Parameters { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the job was enabled. Valid values:</para>
+                /// <para>The node status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: The job was enabled and could be triggered.</para>
-                /// </description></item>
-                /// <item><description><para><b>0</b>: The job was disabled and could not be triggered.</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: Enabled. The node can be triggered normally.</description></item>
+                /// <item><description><b>0</b>: Disabled. The node is not triggered.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -391,14 +389,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The time configurations.</para>
+                /// <para>The time configuration information.</para>
                 /// </summary>
                 [NameInMap("TimeConfig")]
                 [Validation(Required=false)]
                 public GetJobInfoResponseBodyDataJobConfigInfoTimeConfig TimeConfig { get; set; }
                 public class GetJobInfoResponseBodyDataJobConfigInfoTimeConfig : TeaModel {
                     /// <summary>
-                    /// <para>Custom calendar days specified if TimeType is set to <b>1</b> (cron).</para>
+                    /// <para>The custom calendar for the <b>cron</b> type. This parameter is optional.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>workday</para>
@@ -408,7 +406,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public string Calendar { get; set; }
 
                     /// <summary>
-                    /// <para>The time offset specified if TimeType is set to <b>1</b> (cron). Unit: seconds.</para>
+                    /// <para>The time offset for the <b>cron</b> type. Unit: seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -418,16 +416,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public int? DataOffset { get; set; }
 
                     /// <summary>
-                    /// <para>The time expression specified based on the value of TimeType:</para>
+                    /// <para>The time expression. The following time expression types are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>If TimeType is set to <b>100</b> (api), no time expression is required.</para>
-                    /// </description></item>
-                    /// <item><description><para>If TimeType is set to <b>3</b> (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.</para>
-                    /// </description></item>
-                    /// <item><description><para>If TimeType is set to <b>1</b> (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.</para>
-                    /// </description></item>
-                    /// <item><description><para>If TimeType is set to <b>4</b> (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</para>
-                    /// </description></item>
+                    /// <item><description><b>api</b>: No time expression is required.</description></item>
+                    /// <item><description><b>fix_rate</b>: A fixed frequency value. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
+                    /// <item><description><b>cron</b>: A standard cron expression.</description></item>
+                    /// <item><description><b>second_delay</b>: A fixed delay in seconds before each execution (valid range: 1s to 60s).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -438,18 +432,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public string TimeExpression { get; set; }
 
                     /// <summary>
-                    /// <para>The time type. Valid values:</para>
+                    /// <para>The time configuration type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>1</b>: cron</para>
-                    /// </description></item>
-                    /// <item><description><para><b>3</b>: fix_rate</para>
-                    /// </description></item>
-                    /// <item><description><para><b>4</b>: second_delay</para>
-                    /// </description></item>
-                    /// <item><description><para><b>5</b>: one_time</para>
-                    /// </description></item>
-                    /// <item><description><para><b>100</b>: api</para>
-                    /// </description></item>
+                    /// <item><description><b>1</b>: cron</description></item>
+                    /// <item><description><b>3</b>: fix_rate</description></item>
+                    /// <item><description><b>4</b>: second_delay</description></item>
+                    /// <item><description><b>5</b>: one_time</description></item>
+                    /// <item><description><b>100</b>: api</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -462,7 +451,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 }
 
                 /// <summary>
-                /// <para>The extended fields.</para>
+                /// <para>The extended fields of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;pageSize&quot;:5,&quot;queueSize&quot;:10,&quot;consumerSize&quot;:5,&quot;dispatcherSize&quot;:5,&quot;taskMaxAttempt&quot;:0,&quot;taskAttemptInterval&quot;:0,&quot;globalConsumerSize&quot;:1000,&quot;taskDispatchMode&quot;:&quot;push&quot;}</para>
@@ -476,7 +465,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>The error message returned only if an error occurs.</para>
+        /// <para>The error message. This parameter is returned only when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jobid: 92583 not match groupId: testSchedulerx.defaultGroup</para>
@@ -496,12 +485,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the job details were obtained. Valid values:</para>
+        /// <para>Indicates whether the node details were retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The node details were retrieved.</description></item>
+        /// <item><description><b>false</b>: The node details failed to be retrieved.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

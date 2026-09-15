@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetJobInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The application ID. You can obtain the ID on the Application Management page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</para>
+        /// <para>The node ID. You can obtain the ID on the Task Management page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The job name.</para>
+        /// <para>The node name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>simpleJob</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The namespace ID. You can obtain the ID on the Namespace page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The namespace source. This parameter is required only for a special third party.</para>
+        /// <para>This parameter is required only for special third-party users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>

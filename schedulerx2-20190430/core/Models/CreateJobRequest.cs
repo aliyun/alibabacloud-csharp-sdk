@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? AttemptInterval { get; set; }
 
         /// <summary>
-        /// <para>The custom calendar. This parameter is available for the cron time type.</para>
+        /// <para>The custom calendar. This parameter is optional for the cron time type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>workday</para>
         /// </summary>
         [NameInMap("Calendar")]
         [Validation(Required=false)]
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 
         /// <summary>
         /// <para>The full path of the node interface class.</para>
-        /// <para>This field is required only when you select the Java node type. Specify the full path.</para>
+        /// <para>This field is available and required only when you select the Java node type. Specify the full path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.alibaba.schedulerx.test.helloworld</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string ClassName { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The number of threads triggered for a single execution on a single machine. Default value: 5.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The number of threads for a single trigger on a single machine. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>The node contact information.</para>
         /// <remarks>
-        /// <para>Notice: This field is deprecated.</notice></para>
+        /// <para>Notice: This parameter is deprecated.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ContactInfo")]
@@ -58,7 +61,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public List<CreateJobRequestContactInfo> ContactInfo { get; set; }
         public class CreateJobRequestContactInfo : TeaModel {
             /// <summary>
-            /// <para>The webhook URL of the DingTalk chatbot for the alert contact\&quot;s DingTalk group. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</para>
+            /// <para>The webhook URL of the DingTalk chatbot in the DingTalk group for alert contacts. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</para>
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number of the alert recipient.</para>
+            /// <para>The phone number for receiving alerts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The time offset. Unit: seconds. This parameter is available for the cron time type.</para>
+        /// <para>The time offset for the cron time type. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2400</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The number of subtask dispatch threads. Default value: 5.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The number of threads for subtask dispatching. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -141,6 +144,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [NameInMap("DispatcherSize")]
         [Validation(Required=false)]
         public int? DispatcherSize { get; set; }
+
+        /// <summary>
+        /// <para>The node expiration timestamp in milliseconds. The value must be greater than the current time and the start time. A value of -1 indicates no expiration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1789454134000</para>
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
 
         /// <summary>
         /// <para>The node execution mode. The following execution modes are supported:</para>
@@ -228,7 +241,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? MaxAttempt { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is not performed even if the scheduled time arrives.</para>
+        /// <para>The maximum number of concurrently running instances. Default value: 1. A value of 1 indicates that if the previous trigger has not finished running, the next trigger is skipped even if the scheduled time has arrived.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -284,7 +297,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The number of subtasks pulled in a single request. Default value: 100.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The number of subtasks pulled per request. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -320,7 +333,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The maximum cache size of the subtask queue. Default value: 10000.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The maximum number of subtasks that can be cached in the queue. Default value: 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -344,7 +357,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The alert notification channel.</para>
         /// <list type="bullet">
         /// <item><description>Use the default channel of the application group: default.</description></item>
-        /// <item><description>Specify a notification channel for the node: sms, mail, phone, or webhook.</description></item>
+        /// <item><description>Specify the notification channel for the node: sms,mail,phone,webhook.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -354,12 +367,18 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string SendChannel { get; set; }
 
+        /// <summary>
+        /// <para>The start timestamp in milliseconds. The value must be greater than the current time. A value of -1 indicates immediate start.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1789454134000</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The node status. Valid values: 0: disabled. 1: enabled. Default value: 1 (enabled).</para>
+        /// <para>The node status. 0: disabled. 1: enabled. Default value: enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -379,7 +398,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public bool? SuccessNoticeEnable { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The retry interval for a failed subtask. Default value: 0.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The retry interval for a subtask on failure. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -389,7 +408,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? TaskAttemptInterval { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration for parallel grid nodes. The number of retries for a failed subtask. Default value: 0.</para>
+        /// <para>Advanced configuration for parallel grid nodes. The maximum number of retries for a subtask on failure. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -404,8 +423,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <item><description><b>cron</b>: Specify a standard cron expression. Online verification is supported.</description></item>
         /// <item><description><b>api</b>: No time expression is required.</description></item>
         /// <item><description><b>fixed_rate</b>: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</description></item>
-        /// <item><description><b>second_delay</b>: Specify a fixed delay in seconds before each execution (1s to 60s).</description></item>
-        /// <item><description><b>one_time</b>: Specify a time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
+        /// <item><description><b>second_delay</b>: Specify a fixed delay in seconds before each execution (valid values: 1 to 60).</description></item>
+        /// <item><description><b>one_time</b>: Specify a time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
