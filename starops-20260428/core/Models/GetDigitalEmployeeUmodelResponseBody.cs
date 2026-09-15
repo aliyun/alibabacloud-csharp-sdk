@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-1234567890AB</para>

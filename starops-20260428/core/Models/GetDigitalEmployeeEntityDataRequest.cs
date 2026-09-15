@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeEntityDataRequest : TeaModel {
         /// <summary>
-        /// <para>The UNIX timestamp. Unit: seconds.</para>
+        /// <para>The UNIX timestamp, in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp. Unit: seconds. The value must be greater than the value of from.</para>
+        /// <para>The UNIX timestamp, in seconds. The value must be greater than the value of from.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -16,9 +16,22 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         [Validation(Required=false)]
         public List<ListDigitalEmployeesResponseBodyDigitalEmployees> DigitalEmployees { get; set; }
         public class ListDigitalEmployeesResponseBodyDigitalEmployees : TeaModel {
+            /// <summary>
+            /// <para>The attributes.</para>
+            /// </summary>
             [NameInMap("attributes")]
             [Validation(Required=false)]
             public Dictionary<string, string> Attributes { get; set; }
+
+            /// <summary>
+            /// <para>The channel type of the digital employee.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
+            [NameInMap("channel")]
+            [Validation(Required=false)]
+            public string Channel { get; set; }
 
             /// <summary>
             /// <para>The creation time.</para>
@@ -86,7 +99,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian> Bailian { get; set; }
                 public class ListDigitalEmployeesResponseBodyDigitalEmployeesKnowledgesBailian : TeaModel {
                     /// <summary>
-                    /// <para>The attributes of the knowledge base.</para>
+                    /// <para>The knowledge base attributes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -174,7 +187,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public List<Tag> Tags { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

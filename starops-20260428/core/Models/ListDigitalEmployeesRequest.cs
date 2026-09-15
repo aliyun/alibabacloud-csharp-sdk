@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListDigitalEmployeesRequest : TeaModel {
         /// <summary>
+        /// <para>Filters digital employees by channel type. If this parameter is not specified, the default channel is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// <para>The display name of the digital employee.</para>
         /// 
         /// <b>Example:</b>

@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Connector is enabled.</para>
+        /// <para>Specifies whether the Connector is enabled.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("enabled")]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeEntityDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query result in the form of a two-dimensional array. Each cell is returned as a string.</para>
+        /// <para>The query results in the form of a two-dimensional array. Each cell is returned as a string.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<List<string>> Data { get; set; }
 
         /// <summary>
-        /// <para>The name of each column in the query result.</para>
+        /// <para>The name of each column in the query results.</para>
         /// </summary>
         [NameInMap("header")]
         [Validation(Required=false)]

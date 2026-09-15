@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>The channel type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
@@ -183,7 +193,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The sandbox network ACL policy configuration for the digital employee.</para>
+        /// <para>The sandbox network ACL policy configuration of the digital employee.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</para>
@@ -236,7 +246,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public GetDigitalEmployeeResponseBodyToolPolicy ToolPolicy { get; set; }
         public class GetDigitalEmployeeResponseBodyToolPolicy : TeaModel {
             /// <summary>
-            /// <para>The security policy configuration for Aliyun CLI tool calling.</para>
+            /// <para>The security policy configuration for Alibaba Cloud CLI tool calling invokes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</para>
@@ -246,7 +256,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public GetDigitalEmployeeResponseBodyToolPolicyAliyun Aliyun { get; set; }
             public class GetDigitalEmployeeResponseBodyToolPolicyAliyun : TeaModel {
                 /// <summary>
-                /// <para>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically approved without human confirmation. If empty or not configured, built-in read-only operations (Get</em>, List*, Describe*) are automatically approved. Unmatched requests require human-in-the-loop (HIL) confirmation.</para>
+                /// <para>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched actions are automatically approved without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically approved. Unmatched actions require human-in-the-loop (HIL) confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</para>
@@ -256,7 +266,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 public List<string> AutoPassPolicy { get; set; }
 
                 /// <summary>
-                /// <para>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If empty or not configured, no operations are actively denied. STAROps directly rejects matched requests. The Pop side performs a secondary fallback check.</para>
+                /// <para>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no actions are actively denied. STAROps directly denies matched actions. The Pop side performs secondary fallback enforcement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>
@@ -278,7 +288,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The list of Aliyun CLI tool policy statements.</para>
+                /// <para>The list of Alibaba Cloud CLI tool policy statements.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</para>
@@ -339,7 +349,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The modification time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>

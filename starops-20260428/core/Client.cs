@@ -1597,7 +1597,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "DeleteDigitalEmployeeUmodelCommonSchemaRef",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/commonSchemaRefs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -1637,7 +1637,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "DeleteDigitalEmployeeUmodelCommonSchemaRef",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/commonSchemaRefs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
                 Method = "DELETE",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2595,7 +2595,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "GetDigitalEmployeeEntityData",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2649,7 +2649,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "GetDigitalEmployeeEntityData",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/entities/query",
                 Method = "POST",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2877,7 +2877,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "GetDigitalEmployeeUmodel",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -2917,7 +2917,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "GetDigitalEmployeeUmodel",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
                 Method = "GET",
                 AuthType = "AK",
                 Style = "ROA",
@@ -3882,6 +3882,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["displayName"] = request.DisplayName;
@@ -3963,6 +3967,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["displayName"] = request.DisplayName;
@@ -4823,7 +4831,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "UpdateDigitalEmployeeUmodel",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -4869,7 +4877,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "UpdateDigitalEmployeeUmodel",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel",
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5289,7 +5297,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "UpsertDigitalEmployeeUmodelCommonSchemaRef",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/commonSchemaRefs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
@@ -5335,7 +5343,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
                 Action = "UpsertDigitalEmployeeUmodelCommonSchemaRef",
                 Version = "2026-04-28",
                 Protocol = "HTTPS",
-                Pathname = "/digital-employee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/common-schema-refs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/umodel/commonSchemaRefs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(group),
                 Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",

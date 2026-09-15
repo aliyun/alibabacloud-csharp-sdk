@@ -57,6 +57,9 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
+            /// <summary>
+            /// <para>The custom headers.</para>
+            /// </summary>
             [NameInMap("headers")]
             [Validation(Required=false)]
             public Dictionary<string, string> Headers { get; set; }
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         /// <para>The description of the MCP service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通过 MCP 调用日志查询工具。</para>
+        /// <para>Call the log query tool through MCP</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         /// <para>The display name of the MCP service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>日志查询</para>
+        /// <para>Log Query</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -273,7 +276,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             /// <para>The description of the MCP tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查询指定日志库中的日志。</para>
+            /// <para>Query logs in a specified Logstore</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -283,7 +286,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             /// <para>The display name of the MCP tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>日志查询工具</para>
+            /// <para>Log Query Tool</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -355,7 +358,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             /// <para>The title of the MCP tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>查询日志</para>
+            /// <para>Query Logs</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
