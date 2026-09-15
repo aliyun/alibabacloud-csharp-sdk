@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetCredentialResponseBodyData Data { get; set; }
         public class GetCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of agents that are bound to the credential.</para>
+            /// <para>The list of agents bound to the credential.</para>
             /// </summary>
             [NameInMap("boundAgents")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
+            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked result of the credential content. When credentialType is apiKey, the value of apiKey is returned as asterisks (*) of equal length.</para>
+            /// <para>The masked content of the credential. When credentialType is apiKey, the value of apiKey is returned as asterisks (*) of equal length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -96,10 +96,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialType { get; set; }
 
             /// <summary>
-            /// <para>The credential description. The description can be up to 256 characters in length.</para>
+            /// <para>The credential description, up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>API Key used for calling model services in the production environment</para>
+            /// <para>API Key used to call model services in the production environment</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -126,7 +126,56 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
+            /// <para>Each item contains resourceType, resourceId, and resourceName. If the resource has been deleted, resourceName is empty.</para>
+            /// </summary>
+            [NameInMap("resourceRefs")]
+            [Validation(Required=false)]
+            public List<GetCredentialResponseBodyDataResourceRefs> ResourceRefs { get; set; }
+            public class GetCredentialResponseBodyDataResourceRefs : TeaModel {
+                /// <summary>
+                /// <para>The unique identifier of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent-xxxx</para>
+                /// </summary>
+                [NameInMap("resourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                /// <summary>
+                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-agent</para>
+                /// </summary>
+                [NameInMap("resourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                /// <summary>
+                /// <para>The resource type, such as agent.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent</para>
+                /// </summary>
+                [NameInMap("resourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The scope of resources to which the credential applies.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("resourceScope")]
+            [Validation(Required=false)]
+            public string ResourceScope { get; set; }
+
+            /// <summary>
+            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -158,7 +207,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

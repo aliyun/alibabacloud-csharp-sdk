@@ -27,6 +27,20 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateWorkspaceResponseBodyData Data { get; set; }
         public class UpdateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The OSS storage authorization status.</para>
+            /// </summary>
+            [NameInMap("authorizationStatus")]
+            [Validation(Required=false)]
+            public string AuthorizationStatus { get; set; }
+
+            /// <summary>
+            /// <para>The name of the private OSS bucket.</para>
+            /// </summary>
+            [NameInMap("bucketName")]
+            [Validation(Required=false)]
+            public string BucketName { get; set; }
+
+            /// <summary>
             /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
@@ -37,14 +51,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workspace network configuration.</para>
+            /// <para>The network configuration of the workspace.</para>
             /// </summary>
             [NameInMap("networkConfiguration")]
             [Validation(Required=false)]
             public UpdateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The user VPC network configuration.</para>
+                /// <para>The VPC network configuration.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
@@ -68,7 +82,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the user VPC.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -100,6 +114,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The storage type of the workspace.</para>
+            /// </summary>
+            [NameInMap("storageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
 
             /// <summary>
             /// <para>The ID of the tenant to which the workspace belongs.</para>

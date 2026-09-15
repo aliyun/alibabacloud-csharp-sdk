@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</para>
+            /// <para>The model configuration. Available only when modelSource is set to PLATFORM.</para>
             /// </summary>
             [NameInMap("model")]
             [Validation(Required=false)]
@@ -70,8 +70,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The source of the model configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PLATFORM: The platform parses and delivers the model configuration. You can specify the model parameter.</description></item>
-            /// <item><description>RUNTIME: The external runtime manages the model on its own. You cannot specify the model parameter at the same time.</description></item>
+            /// <item><description>PLATFORM: The platform parses and delivers the model configuration.</description></item>
+            /// <item><description>RUNTIME: The external runtime manages the model on its own. You cannot specify model at the same time.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,6 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                     /// <summary>
                     /// <para>The version of the template in AI Registry.</para>
+                    /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -198,7 +199,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotency token. The backend does not guarantee idempotence in the current version.</para>
+        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

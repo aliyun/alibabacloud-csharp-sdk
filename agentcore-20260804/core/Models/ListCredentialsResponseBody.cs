@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned with equal-length asterisks (*).</para>
+            /// <para>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the resource.</para>
+            /// <para>The region ID where the resource resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -115,6 +115,55 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            /// <summary>
+            /// <para>The list of resources to which the credential can be applied.</para>
+            /// </summary>
+            [NameInMap("resourceRefs")]
+            [Validation(Required=false)]
+            public List<ListCredentialsResponseBodyItemsResourceRefs> ResourceRefs { get; set; }
+            public class ListCredentialsResponseBodyItemsResourceRefs : TeaModel {
+                /// <summary>
+                /// <para>The unique identifier of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent-xxxx</para>
+                /// </summary>
+                [NameInMap("resourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                /// <summary>
+                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-agent</para>
+                /// </summary>
+                [NameInMap("resourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                /// <summary>
+                /// <para>The resource type, such as agent.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent</para>
+                /// </summary>
+                [NameInMap("resourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The scope of resources to which the credential can be applied.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("resourceScope")]
+            [Validation(Required=false)]
+            public string ResourceScope { get; set; }
 
             /// <summary>
             /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
@@ -139,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that takes effect for this query.</para>
+        /// <para>The maximum number of records per page that took effect for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +208,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if no more pages are available.</para>
+        /// <para>The pagination token for the next page. This value is empty if there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

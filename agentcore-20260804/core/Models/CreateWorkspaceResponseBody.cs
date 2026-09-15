@@ -27,6 +27,57 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateWorkspaceResponseBodyData Data { get; set; }
         public class CreateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The AI Registry namespace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>namespace-0123456789abcdef</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("aiRegistryNamespaceId")]
+            [Validation(Required=false)]
+            public string AiRegistryNamespaceId { get; set; }
+
+            /// <summary>
+            /// <para>The OSS storage authorization status.</para>
+            /// </summary>
+            [NameInMap("authorizationStatus")]
+            [Validation(Required=false)]
+            public string AuthorizationStatus { get; set; }
+
+            /// <summary>
+            /// <para>The name of the private OSS bucket.</para>
+            /// </summary>
+            [NameInMap("bucketName")]
+            [Validation(Required=false)]
+            public string BucketName { get; set; }
+
+            /// <summary>
+            /// <para>The CloudMonitor workspace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cms-ws-0123456789abcdef</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("cmsWorkspaceId")]
+            [Validation(Required=false)]
+            public string CmsWorkspaceId { get; set; }
+
+            /// <summary>
+            /// <para>The time when the workspace was created, in ISO-8601 format.</para>
+            /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-08-28T10:00:00+08:00</para>
+            /// </summary>
+            [NameInMap("createTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
             /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the VPC.</para>
+                    /// <para>The ID of the user VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -92,6 +143,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfm1234567890</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// <para>The workspace status.</para>
             /// 
             /// <b>Example:</b>
@@ -100,6 +164,58 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal conditions.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Waiting for OSS RAM authorization</para>
+            /// 
+            /// <b>if can be null:</b>
+            /// <c>true</c>
+            /// </summary>
+            [NameInMap("statusReason")]
+            [Validation(Required=false)]
+            public string StatusReason { get; set; }
+
+            /// <summary>
+            /// <para>The storage type of the workspace.</para>
+            /// </summary>
+            [NameInMap("storageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
+            /// <summary>
+            /// <para>The list of workspace tags. An empty array is returned if no tags are set.</para>
+            /// <para>This parameter is required.</para>
+            /// </summary>
+            [NameInMap("tags")]
+            [Validation(Required=false)]
+            public List<CreateWorkspaceResponseBodyDataTags> Tags { get; set; }
+            public class CreateWorkspaceResponseBodyDataTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>environment</para>
+                /// </summary>
+                [NameInMap("key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>development</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The ID of the tenant to which the workspace belongs.</para>
@@ -154,7 +270,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

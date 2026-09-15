@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Document { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model is able to invoke multiple tool calls in a single response.</para>
+                /// <para>Indicates whether the model supports invoking multiple tools in a single response.</para>
                 /// </summary>
                 [NameInMap("multiToolCall")]
                 [Validation(Required=false)]
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public bool? Reasoning { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports streaming tool calling.</para>
+                /// <para>Indicates whether the model supports streaming tool invocation.</para>
                 /// </summary>
                 [NameInMap("streamToolCall")]
                 [Validation(Required=false)]
                 public bool? StreamToolCall { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the model supports tool calling.</para>
+                /// <para>Indicates whether the model supports tool invocation.</para>
                 /// </summary>
                 [NameInMap("toolCall")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
-            /// <para>The context window size of the model, in tokens. The value must be a positive integer.</para>
+            /// <para>The model context window size, in tokens. The value must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128000</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of output tokens supported per generation by the model.</para>
+            /// <para>The maximum number of output tokens supported per generation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>131072</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

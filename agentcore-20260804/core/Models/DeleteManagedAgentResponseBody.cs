@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DeleteManagedAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value SUCCESS is returned if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The summary information of the managed agent after deletion.</para>
+        /// <para>The summary information of the deleted managed agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -75,16 +75,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            /// <summary>
-            /// <para>The effective specification version number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("effectiveSpecVersion")]
-            [Validation(Required=false)]
-            public long? EffectiveSpecVersion { get; set; }
 
             /// <summary>
             /// <para>The latest specification version number.</para>
@@ -149,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value 200 is returned if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -159,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The message returned for the request processing result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

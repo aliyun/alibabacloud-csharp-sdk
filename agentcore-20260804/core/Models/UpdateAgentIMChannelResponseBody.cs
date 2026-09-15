@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the IM channel. Default value: true (when created).</para>
+            /// <para>Specifies whether to enable the IM channel. Default value upon creation: true.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the current status of the IM channel.</para>
+            /// <para>The reason for the current IM channel status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppFlow creation failed</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The result message of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

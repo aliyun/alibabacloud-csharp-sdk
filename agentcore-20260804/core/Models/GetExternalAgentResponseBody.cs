@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value SUCCESS is returned when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The external agent details.</para>
+        /// <para>The details of the external agent.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The external agent description.</para>
+            /// <para>The description of the external agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A code review agent running in the user environment</para>
@@ -77,85 +77,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The runtime result corresponding to the currently effective specification.</para>
-            /// </summary>
-            [NameInMap("effectiveResult")]
-            [Validation(Required=false)]
-            public GetExternalAgentResponseBodyDataEffectiveResult EffectiveResult { get; set; }
-            public class GetExternalAgentResponseBodyDataEffectiveResult : TeaModel {
-                /// <summary>
-                /// <para>The user ID of the agent in Matrix.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>@agent-1:matrix.example.com</para>
-                /// </summary>
-                [NameInMap("matrixUserId")]
-                [Validation(Required=false)]
-                public string MatrixUserId { get; set; }
-
-                /// <summary>
-                /// <para>The Matrix personal room ID of the agent.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>!room:matrix.example.com</para>
-                /// </summary>
-                [NameInMap("personalRoomId")]
-                [Validation(Required=false)]
-                public string PersonalRoomId { get; set; }
-
-                /// <summary>
-                /// <para>The acceptance status of the runtime for the current request version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ACCEPTED</para>
-                /// </summary>
-                [NameInMap("runtimeAcceptStatus")]
-                [Validation(Required=false)]
-                public string RuntimeAcceptStatus { get; set; }
-
-                /// <summary>
-                /// <para>The runtime instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>runtime-123</para>
-                /// </summary>
-                [NameInMap("runtimeId")]
-                [Validation(Required=false)]
-                public string RuntimeId { get; set; }
-
-                /// <summary>
-                /// <para>The runtime request version number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5</para>
-                /// </summary>
-                [NameInMap("runtimeRequestVersion")]
-                [Validation(Required=false)]
-                public long? RuntimeRequestVersion { get; set; }
-
-                /// <summary>
-                /// <para>The storage prefix of the agent in the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>agents/agent-1</para>
-                /// </summary>
-                [NameInMap("workspacePrefix")]
-                [Validation(Required=false)]
-                public string WorkspacePrefix { get; set; }
-
-            }
-
-            /// <summary>
-            /// <para>The currently effective specification version number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("effectiveSpecVersion")]
-            [Validation(Required=false)]
-            public long? EffectiveSpecVersion { get; set; }
-
-            /// <summary>
             /// <para>The runtime status information reported by the external agent.</para>
             /// </summary>
             [NameInMap("externalAgentStatus")]
@@ -163,11 +84,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetExternalAgentResponseBodyDataExternalAgentStatus ExternalAgentStatus { get; set; }
             public class GetExternalAgentResponseBodyDataExternalAgentStatus : TeaModel {
                 /// <summary>
-                /// <para>The heartbeat status. Valid values:</para>
+                /// <para>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ONLINE: The latest heartbeat has not exceeded the configured timeout threshold.</description></item>
-                /// <item><description>STALE: The heartbeat has timed out.</description></item>
-                /// <item><description>UNKNOWN: The heartbeat is missing or has an invalid format.</description></item>
+                /// <item><description>ONLINE: Online.</description></item>
+                /// <item><description>STALE: Heartbeat expired.</description></item>
+                /// <item><description>UNKNOWN: Unknown.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -178,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string HeartbeatStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the external agent was last active in RFC 3339 format.</para>
+                /// <para>The last active time of the external agent in RFC 3339 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T00:00:00Z</para>
@@ -188,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LastActiveAt { get; set; }
 
                 /// <summary>
-                /// <para>The time of the last heartbeat from the external agent in RFC 3339 format.</para>
+                /// <para>The last heartbeat time of the external agent in RFC 3339 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T00:00:00Z</para>
@@ -242,8 +163,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The processing status of the latest specification version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending: Pending processing.</description></item>
-            /// <item><description>processing: Being processed.</description></item>
+            /// <item><description>pending: Pending.</description></item>
+            /// <item><description>processing: Processing.</description></item>
             /// <item><description>waiting_retry: Waiting for retry.</description></item>
             /// <item><description>succeeded: Succeeded.</description></item>
             /// <item><description>failed: Failed.</description></item>
@@ -258,7 +179,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LatestVersionStatus { get; set; }
 
             /// <summary>
-            /// <para>The model configuration. Available only when modelSource is set to PLATFORM.</para>
+            /// <para>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</para>
             /// </summary>
             [NameInMap("model")]
             [Validation(Required=false)]
@@ -289,10 +210,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The model configuration source. Valid values:</para>
+            /// <para>The source of the model configuration. PLATFORM indicates that the model configuration is parsed and delivered by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PLATFORM: The model configuration is parsed and delivered by the platform.</description></item>
-            /// <item><description>RUNTIME: The model is managed by the external runtime. The model parameter cannot be specified at the same time.</description></item>
+            /// <item><description>PLATFORM: Platform model.</description></item>
+            /// <item><description>RUNTIME: Runtime model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelSource { get; set; }
 
             /// <summary>
-            /// <para>The external agent name.</para>
+            /// <para>The name of the external agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-external-agent</para>
@@ -363,14 +284,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The external agent status. Valid values:</para>
+            /// <para>The status of the external agent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: The agent is being created.</description></item>
-            /// <item><description>Running: The agent is running.</description></item>
-            /// <item><description>Failed: The agent has failed.</description></item>
-            /// <item><description>Updating: The agent is being updated.</description></item>
-            /// <item><description>Deleting: The agent is being deleted.</description></item>
-            /// <item><description>Deleted: The agent has been deleted.</description></item>
+            /// <item><description>Creating: Being created.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Updating: Being updated.</description></item>
+            /// <item><description>Deleting: Being deleted.</description></item>
+            /// <item><description>Deleted: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -407,6 +328,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                     /// <summary>
                     /// <para>The version of the template in AI Registry.</para>
+                    /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1.0.0</para>
@@ -476,7 +398,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value 200 is returned when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -486,7 +408,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request processing result message.</para>
+        /// <para>The message that indicates the result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

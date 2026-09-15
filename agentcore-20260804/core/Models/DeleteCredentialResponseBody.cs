@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The deleted credential information.</para>
+        /// <para>The information about the deleted credential.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

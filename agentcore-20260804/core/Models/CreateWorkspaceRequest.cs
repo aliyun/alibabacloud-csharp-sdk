@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the VPC.</para>
+                    /// <para>The ID of the user VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
             }
+
+            [NameInMap("storageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
 
         }
 

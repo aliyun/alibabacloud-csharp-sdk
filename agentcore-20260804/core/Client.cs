@@ -359,6 +359,156 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Converts an MCP to free editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertMcpToFreeEditRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertMcpToFreeEditResponse
+        /// </returns>
+        public ConvertMcpToFreeEditResponse ConvertMcpToFreeEditWithOptions(string workspaceId, string mcpServerId, ConvertMcpToFreeEditRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertMcpToFreeEdit",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/convert-to-free-edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertMcpToFreeEditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an MCP to free editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertMcpToFreeEditRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertMcpToFreeEditResponse
+        /// </returns>
+        public async Task<ConvertMcpToFreeEditResponse> ConvertMcpToFreeEditWithOptionsAsync(string workspaceId, string mcpServerId, ConvertMcpToFreeEditRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertMcpToFreeEdit",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/convert-to-free-edit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertMcpToFreeEditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an MCP to free editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertMcpToFreeEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertMcpToFreeEditResponse
+        /// </returns>
+        public ConvertMcpToFreeEditResponse ConvertMcpToFreeEdit(string workspaceId, string mcpServerId, ConvertMcpToFreeEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ConvertMcpToFreeEditWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an MCP to free editing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables template usage constraints. After the conversion, the MCP retains its source and tags but no longer appears on the usage page.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertMcpToFreeEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertMcpToFreeEditResponse
+        /// </returns>
+        public async Task<ConvertMcpToFreeEditResponse> ConvertMcpToFreeEditAsync(string workspaceId, string mcpServerId, ConvertMcpToFreeEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ConvertMcpToFreeEditWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
         /// </summary>
         /// 
@@ -865,8 +1015,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
+        /// <para>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a credential in a workspace for authentication of services such as Connector.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCredentialRequest
@@ -923,8 +1078,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
+        /// <para>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a credential in a workspace for authentication of services such as Connector.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCredentialRequest
@@ -981,8 +1141,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
+        /// <para>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a credential in a workspace for authentication of services such as Connector.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -1000,8 +1165,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a credential in a specified workspace for agent authentication when accessing external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
+        /// <para>Creates a credential in a specified workspace for authentication when an agent accesses external services. Currently, only the apiKey type is supported. The credential content is passed in as a JSON string through credentialMetadata and can only be queried in masked form after being written.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a credential in a workspace for authentication of services such as Connector.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -3349,8 +3519,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
+        /// <para>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -3395,8 +3570,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
+        /// <para>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -3441,8 +3621,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
+        /// <para>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -3460,8 +3645,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a credential from the specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
+        /// <para>Deletes a credential from a specified workspace and removes the ciphertext hosted in the credential service. After deletion, agents that are bound to this credential can no longer retrieve the credential content.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an access credential from a specified workspace. A credential cannot be deleted while it is still bound to an MCP service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -3617,7 +3807,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3663,7 +3853,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3709,7 +3899,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3728,7 +3918,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Unbinds the external identity provider from a specified workspace and cleans up users synchronized by that identity provider. The unbinding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3870,7 +4060,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
         /// </description>
         /// 
@@ -3916,7 +4106,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
         /// </description>
         /// 
@@ -3962,7 +4152,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
         /// </description>
         /// 
@@ -3987,7 +4177,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
         /// </description>
         /// 
@@ -4551,7 +4741,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
+        /// <para>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4597,7 +4787,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
+        /// <para>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4643,7 +4833,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
+        /// <para>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4662,7 +4852,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a team in the specified workspace. Deleting a team does not delete the users or agents in the team. It only dissociates the member relationships.</para>
+        /// <para>Deletes a team from a specified workspace. Deleting a team does not delete the users or agents within it. Only the membership associations are removed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4945,6 +5135,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteWorkspaceWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a specified Connector in a workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConnectorResponse
+        /// </returns>
+        public DisableConnectorResponse DisableConnectorWithOptions(string workspaceId, string connectorName, DisableConnectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableConnectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a specified Connector in a workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConnectorResponse
+        /// </returns>
+        public async Task<DisableConnectorResponse> DisableConnectorWithOptionsAsync(string workspaceId, string connectorName, DisableConnectorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/disable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableConnectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a specified Connector in a workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConnectorResponse
+        /// </returns>
+        public DisableConnectorResponse DisableConnector(string workspaceId, string connectorName, DisableConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a specified Connector in a workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableConnectorResponse
+        /// </returns>
+        public async Task<DisableConnectorResponse> DisableConnectorAsync(string workspaceId, string connectorName, DisableConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableConnectorWithOptionsAsync(workspaceId, connectorName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5241,6 +5569,168 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DownloadSkillVersionViaOssWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConnectorResponse
+        /// </returns>
+        public EnableConnectorResponse EnableConnectorWithOptions(string workspaceId, string connectorName, EnableConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableConnectorShrinkRequest request = new EnableConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableConnectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// EnableConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConnectorResponse
+        /// </returns>
+        public async Task<EnableConnectorResponse> EnableConnectorWithOptionsAsync(string workspaceId, string connectorName, EnableConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            EnableConnectorShrinkRequest request = new EnableConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/enable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableConnectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConnectorResponse
+        /// </returns>
+        public EnableConnectorResponse EnableConnector(string workspaceId, string connectorName, EnableConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableConnectorResponse
+        /// </returns>
+        public async Task<EnableConnectorResponse> EnableConnectorAsync(string workspaceId, string connectorName, EnableConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableConnectorWithOptionsAsync(workspaceId, connectorName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5691,13 +6181,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5743,13 +6233,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5795,13 +6285,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5820,13 +6310,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required to import an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6129,8 +6619,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single credential. Sensitive fields are not returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -6169,8 +6664,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single credential. Sensitive fields are not returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -6209,8 +6709,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single credential. Sensitive fields are not returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -6228,8 +6733,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified credential and returns the list of agents that are bound to the credential. The credential content is returned in masked form.</para>
+        /// <para>Queries the details of a specified credential and returns the list of agents bound to the credential. The credential content is returned in masked form.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a single credential. Sensitive fields are not returned.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -6759,13 +7269,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6805,13 +7315,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6851,13 +7361,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6876,13 +7386,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// <para>Queries the details of a specified MCP service, including the address, type, status, authentication configuration, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6897,6 +7407,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetMcpWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the current template version and installation form schema.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpMarketItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpMarketItemResponse
+        /// </returns>
+        public GetMcpMarketItemResponse GetMcpMarketItemWithOptions(string workspaceId, string marketItemId, GetMcpMarketItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpMarketItem",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(marketItemId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpMarketItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the current template version and installation form schema.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpMarketItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpMarketItemResponse
+        /// </returns>
+        public async Task<GetMcpMarketItemResponse> GetMcpMarketItemWithOptionsAsync(string workspaceId, string marketItemId, GetMcpMarketItemRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpMarketItem",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(marketItemId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpMarketItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the current template version and installation form schema.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpMarketItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpMarketItemResponse
+        /// </returns>
+        public GetMcpMarketItemResponse GetMcpMarketItem(string workspaceId, string marketItemId, GetMcpMarketItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMcpMarketItemWithOptions(workspaceId, marketItemId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Returns the current template version and installation form schema.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpMarketItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpMarketItemResponse
+        /// </returns>
+        public async Task<GetMcpMarketItemResponse> GetMcpMarketItemAsync(string workspaceId, string marketItemId, GetMcpMarketItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMcpMarketItemWithOptionsAsync(workspaceId, marketItemId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7851,7 +8499,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
+        /// <para>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7891,7 +8539,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
+        /// <para>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7931,7 +8579,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
+        /// <para>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7950,7 +8598,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified team. The response includes the complete properties and team roles of each user member and agent member in the team.</para>
+        /// <para>Queries the details of a specified team. The response includes the complete attributes and team roles of each user member and agent member in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8087,12 +8735,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
+        /// <para>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+        /// <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -8132,12 +8780,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
+        /// <para>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+        /// <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -8177,12 +8825,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
+        /// <para>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+        /// <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -8201,12 +8849,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
+        /// <para>Queries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
+        /// <h2>Operation description\nQueries the details of a workspace by workspace ID, including the lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -8359,6 +9007,188 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetWorkspacePluginWithOptionsAsync(workspaceId, pluginName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallMcpMarketItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMcpMarketItemResponse
+        /// </returns>
+        public InstallMcpMarketItemResponse InstallMcpMarketItemWithOptions(string workspaceId, string marketItemId, InstallMcpMarketItemRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InstallMcpMarketItemShrinkRequest request = new InstallMcpMarketItemShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["templateVersion"] = request.TemplateVersion;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallMcpMarketItem",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(marketItemId) + "/install",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallMcpMarketItemResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallMcpMarketItemRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMcpMarketItemResponse
+        /// </returns>
+        public async Task<InstallMcpMarketItemResponse> InstallMcpMarketItemWithOptionsAsync(string workspaceId, string marketItemId, InstallMcpMarketItemRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InstallMcpMarketItemShrinkRequest request = new InstallMcpMarketItemShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["templateVersion"] = request.TemplateVersion;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallMcpMarketItem",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(marketItemId) + "/install",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallMcpMarketItemResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallMcpMarketItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMcpMarketItemResponse
+        /// </returns>
+        public InstallMcpMarketItemResponse InstallMcpMarketItem(string workspaceId, string marketItemId, InstallMcpMarketItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return InstallMcpMarketItemWithOptions(workspaceId, marketItemId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs an MCP marketplace template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates input based on the specified template version and creates an MCP in the workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallMcpMarketItemRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallMcpMarketItemResponse
+        /// </returns>
+        public async Task<InstallMcpMarketItemResponse> InstallMcpMarketItemAsync(string workspaceId, string marketItemId, InstallMcpMarketItemRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await InstallMcpMarketItemWithOptionsAsync(workspaceId, marketItemId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9071,8 +9901,337 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries the list of models for a connector.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorModelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorModelsResponse
+        /// </returns>
+        public ListConnectorModelsResponse ListConnectorModelsWithOptions(string workspaceId, string connectorName, ListConnectorModelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorKeyId))
+            {
+                query["connectorKeyId"] = request.ConnectorKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnectorModels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectorModelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of models for a connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorModelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorModelsResponse
+        /// </returns>
+        public async Task<ListConnectorModelsResponse> ListConnectorModelsWithOptionsAsync(string workspaceId, string connectorName, ListConnectorModelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorKeyId))
+            {
+                query["connectorKeyId"] = request.ConnectorKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnectorModels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectorModelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of models for a connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorModelsResponse
+        /// </returns>
+        public ListConnectorModelsResponse ListConnectorModels(string workspaceId, string connectorName, ListConnectorModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConnectorModelsWithOptions(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of models for a connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorModelsResponse
+        /// </returns>
+        public async Task<ListConnectorModelsResponse> ListConnectorModelsAsync(string workspaceId, string connectorName, ListConnectorModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConnectorModelsWithOptionsAsync(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of connectors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of connectors in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorsResponse
+        /// </returns>
+        public ListConnectorsResponse ListConnectorsWithOptions(string workspaceId, ListConnectorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnectors",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectorsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of connectors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of connectors in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorsResponse
+        /// </returns>
+        public async Task<ListConnectorsResponse> ListConnectorsWithOptionsAsync(string workspaceId, ListConnectorsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConnectors",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConnectorsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of connectors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of connectors in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorsResponse
+        /// </returns>
+        public ListConnectorsResponse ListConnectors(string workspaceId, ListConnectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConnectorsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of connectors.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of connectors in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConnectorsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConnectorsResponse
+        /// </returns>
+        public async Task<ListConnectorsResponse> ListConnectorsAsync(string workspaceId, ListConnectorsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConnectorsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -9133,8 +10292,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -9195,8 +10359,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -9214,8 +10383,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace by using paging. You can use credentialType to filter by type, nameLike to filter by credential name using fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -9534,7 +10708,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
+        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9589,7 +10763,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
+        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9644,7 +10818,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
+        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9668,7 +10842,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
+        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9683,6 +10857,188 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListManagedAgentsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP marketplace templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpMarketItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpMarketItemsResponse
+        /// </returns>
+        public ListMcpMarketItemsResponse ListMcpMarketItemsWithOptions(string workspaceId, ListMcpMarketItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpType))
+            {
+                query["mcpType"] = request.McpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficialTag))
+            {
+                query["officialTag"] = request.OfficialTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpMarketItems",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpMarketItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP marketplace templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpMarketItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpMarketItemsResponse
+        /// </returns>
+        public async Task<ListMcpMarketItemsResponse> ListMcpMarketItemsWithOptionsAsync(string workspaceId, ListMcpMarketItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpType))
+            {
+                query["mcpType"] = request.McpType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficialTag))
+            {
+                query["officialTag"] = request.OfficialTag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpMarketItems",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-market/items",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpMarketItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP marketplace templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpMarketItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpMarketItemsResponse
+        /// </returns>
+        public ListMcpMarketItemsResponse ListMcpMarketItems(string workspaceId, ListMcpMarketItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMcpMarketItemsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP marketplace templates.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries all online official MCP templates. You can filter results by keyword, usage tag, and MCP type.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpMarketItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpMarketItemsResponse
+        /// </returns>
+        public async Task<ListMcpMarketItemsResponse> ListMcpMarketItemsAsync(string workspaceId, ListMcpMarketItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMcpMarketItemsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9849,13 +11205,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9887,9 +11243,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficialTag))
+            {
+                query["officialTag"] = request.OfficialTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
             {
                 query["searchType"] = request.SearchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageActive))
+            {
+                query["usageActive"] = request.UsageActive;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9913,13 +11277,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9951,9 +11315,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficialTag))
+            {
+                query["officialTag"] = request.OfficialTag;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
             {
                 query["searchType"] = request.SearchType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageActive))
+            {
+                query["usageActive"] = request.UsageActive;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9977,13 +11349,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10002,13 +11374,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by page.</para>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10611,6 +11983,338 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListPredefinedModelsWithOptionsAsync(providerType, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Sandbox sessions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxSessionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxSessionsResponse
+        /// </returns>
+        public ListSandboxSessionsResponse ListSandboxSessionsWithOptions(string workspaceId, string agentId, string sandboxId, ListSandboxSessionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSandboxSessions",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/sessions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSandboxSessionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Sandbox sessions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxSessionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxSessionsResponse
+        /// </returns>
+        public async Task<ListSandboxSessionsResponse> ListSandboxSessionsWithOptionsAsync(string workspaceId, string agentId, string sandboxId, ListSandboxSessionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSandboxSessions",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sandboxId) + "/sessions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSandboxSessionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Sandbox sessions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxSessionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxSessionsResponse
+        /// </returns>
+        public ListSandboxSessionsResponse ListSandboxSessions(string workspaceId, string agentId, string sandboxId, ListSandboxSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSandboxSessionsWithOptions(workspaceId, agentId, sandboxId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Sandbox sessions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxSessionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxSessionsResponse
+        /// </returns>
+        public async Task<ListSandboxSessionsResponse> ListSandboxSessionsAsync(string workspaceId, string agentId, string sandboxId, ListSandboxSessionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSandboxSessionsWithOptionsAsync(workspaceId, agentId, sandboxId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of sandboxes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxesResponse
+        /// </returns>
+        public ListSandboxesResponse ListSandboxesWithOptions(string workspaceId, string agentId, ListSandboxesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchText))
+            {
+                query["searchText"] = request.SearchText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSandboxes",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSandboxesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of sandboxes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxesResponse
+        /// </returns>
+        public async Task<ListSandboxesResponse> ListSandboxesWithOptionsAsync(string workspaceId, string agentId, ListSandboxesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchText))
+            {
+                query["searchText"] = request.SearchText;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSandboxes",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/sandboxes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSandboxesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of sandboxes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxesResponse
+        /// </returns>
+        public ListSandboxesResponse ListSandboxes(string workspaceId, string agentId, ListSandboxesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSandboxesWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of sandboxes.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSandboxesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSandboxesResponse
+        /// </returns>
+        public async Task<ListSandboxesResponse> ListSandboxesAsync(string workspaceId, string agentId, ListSandboxesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSandboxesWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11339,12 +13043,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
+        /// <para>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per page, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per paging request, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -11398,12 +13102,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
+        /// <para>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per page, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per paging request, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -11457,12 +13161,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
+        /// <para>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per page, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per paging request, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -11481,12 +13185,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
+        /// <para>Queries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of Deleted by default. Results are stably sorted by creation order on the server side.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per page, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries workspaces under the current tenant by paging. The list does not return soft-deleted records with a status of <c>Deleted</c> by default. Results are stably sorted by creation order on the server side. Use <c>nextToken</c> to retrieve the next page, <c>skip</c> to skip a specified number of workspaces, <c>maxResults</c> to specify the maximum number of records per paging request, and <c>nameLike</c> to filter workspaces by name using fuzzy match. If <c>maxResults</c> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -13323,8 +15027,175 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectorResponse
+        /// </returns>
+        public UpdateConnectorResponse UpdateConnectorWithOptions(string workspaceId, string connectorName, UpdateConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConnectorShrinkRequest request = new UpdateConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConnectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectorResponse
+        /// </returns>
+        public async Task<UpdateConnectorResponse> UpdateConnectorWithOptionsAsync(string workspaceId, string connectorName, UpdateConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateConnectorShrinkRequest request = new UpdateConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateConnectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectorResponse
+        /// </returns>
+        public UpdateConnectorResponse UpdateConnector(string workspaceId, string connectorName, UpdateConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateConnectorResponse
+        /// </returns>
+        public async Task<UpdateConnectorResponse> UpdateConnectorAsync(string workspaceId, string connectorName, UpdateConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateConnectorWithOptionsAsync(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the metadata or resource scope of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateCredentialRequest
@@ -13384,6 +15255,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the metadata or resource scope of a specified credential.</para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateCredentialRequest
         /// </param>
@@ -13442,6 +15318,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the metadata or resource scope of a specified credential.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCredentialRequest
         /// </param>
@@ -13460,6 +15341,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <summary>
         /// <para>Updates the content or description of a specified credential. At least one of credentialMetadata and description must be specified. Unspecified properties remain unchanged. The credential name and credential type cannot be modified after creation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the metadata or resource scope of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCredentialRequest
@@ -13651,7 +15537,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13703,7 +15589,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13755,7 +15641,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13774,7 +15660,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the login switch, member synchronization switch, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
+        /// <para>Updates the login toggle, member synchronization toggle, or application configuration of a specified external identity provider in a workspace. Unspecified properties remain unchanged. The update is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14125,14 +16011,196 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Updates MCP parameters by template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMcpTemplateConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpTemplateConfigResponse
+        /// </returns>
+        public UpdateMcpTemplateConfigResponse UpdateMcpTemplateConfigWithOptions(string workspaceId, string mcpServerId, UpdateMcpTemplateConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMcpTemplateConfigShrinkRequest request = new UpdateMcpTemplateConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["templateVersion"] = request.TemplateVersion;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcpTemplateConfig",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/template-config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpTemplateConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates MCP parameters by template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMcpTemplateConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpTemplateConfigResponse
+        /// </returns>
+        public async Task<UpdateMcpTemplateConfigResponse> UpdateMcpTemplateConfigWithOptionsAsync(string workspaceId, string mcpServerId, UpdateMcpTemplateConfigRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMcpTemplateConfigShrinkRequest request = new UpdateMcpTemplateConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateVersion))
+            {
+                query["templateVersion"] = request.TemplateVersion;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcpTemplateConfig",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/template-config",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpTemplateConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates MCP parameters by template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpTemplateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpTemplateConfigResponse
+        /// </returns>
+        public UpdateMcpTemplateConfigResponse UpdateMcpTemplateConfig(string workspaceId, string mcpServerId, UpdateMcpTemplateConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMcpTemplateConfigWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates MCP parameters by template.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the schema-exposed parameters by using the same template version that was bound when the MCP was created. This operation does not upgrade the template version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpTemplateConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpTemplateConfigResponse
+        /// </returns>
+        public async Task<UpdateMcpTemplateConfigResponse> UpdateMcpTemplateConfigAsync(string workspaceId, string mcpServerId, UpdateMcpTemplateConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMcpTemplateConfigWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the description, context token limit, maximum output token count, or capability configuration of a specified model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
-        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
-        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// <para>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14195,9 +16263,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
-        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
-        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// <para>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14260,9 +16328,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
-        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
-        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// <para>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14286,9 +16354,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
-        /// Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
-        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
+        /// <para>This operation supports updating description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+        /// Modifying only description does not refresh the model configuration of associated Agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed Agents that reference the model within the same workspace, as well as external Agents whose model source is PLATFORM. External Agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+        /// A successful response indicates that the model configuration has been saved. It does not indicate that associated Agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15267,12 +17335,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15330,12 +17398,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15393,12 +17461,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -15417,12 +17485,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. Status, TenantId, and RegionId are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -15769,6 +17837,318 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UploadSkillViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// VerifyConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConnectorResponse
+        /// </returns>
+        public VerifyConnectorResponse VerifyConnectorWithOptions(string workspaceId, string connectorName, VerifyConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            VerifyConnectorShrinkRequest request = new VerifyConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyConnectorResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// VerifyConnectorRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConnectorResponse
+        /// </returns>
+        public async Task<VerifyConnectorResponse> VerifyConnectorWithOptionsAsync(string workspaceId, string connectorName, VerifyConnectorRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            VerifyConnectorShrinkRequest request = new VerifyConnectorShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyConnector",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/connectors/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectorName) + "/actions/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyConnectorResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConnectorResponse
+        /// </returns>
+        public VerifyConnectorResponse VerifyConnector(string workspaceId, string connectorName, VerifyConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyConnectorWithOptions(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the credentials of a Connector.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Validates whether the credentials of a specified Connector are valid and returns a list of invalid Service Account Keys.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyConnectorRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyConnectorResponse
+        /// </returns>
+        public async Task<VerifyConnectorResponse> VerifyConnectorAsync(string workspaceId, string connectorName, VerifyConnectorRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyConnectorWithOptionsAsync(workspaceId, connectorName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceOssMountRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceOssMountRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceOssMountRamAuthorizationResponse VerifyWorkspaceOssMountRamAuthorizationWithOptions(string workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceOssMountRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/oss-mount/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceOssMountRamAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceOssMountRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceOssMountRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceOssMountRamAuthorizationResponse> VerifyWorkspaceOssMountRamAuthorizationWithOptionsAsync(string workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketName))
+            {
+                query["bucketName"] = request.BucketName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceOssMountRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/oss-mount/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceOssMountRamAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceOssMountRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceOssMountRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceOssMountRamAuthorizationResponse VerifyWorkspaceOssMountRamAuthorization(string workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyWorkspaceOssMountRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceOssMountRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceOssMountRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceOssMountRamAuthorizationResponse> VerifyWorkspaceOssMountRamAuthorizationAsync(string workspaceId, VerifyWorkspaceOssMountRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyWorkspaceOssMountRamAuthorizationWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
     }

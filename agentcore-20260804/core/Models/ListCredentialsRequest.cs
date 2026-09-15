@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string CredentialType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of records to return per page. Valid values: 1 to 100. If this parameter is not specified, 10 records are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The filter condition for fuzzy match by credential name.</para>
+        /// <para>The fuzzy match filter condition for credential names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model</para>

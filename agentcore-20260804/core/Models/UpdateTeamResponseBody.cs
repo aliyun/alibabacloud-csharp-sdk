@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateTeamResponseBodyData Data { get; set; }
         public class UpdateTeamResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of agent members in the team.</para>
+            /// <para>The agent member list of the team.</para>
             /// </summary>
             [NameInMap("agents")]
             [Validation(Required=false)]
@@ -44,7 +44,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER. Each team must have exactly one LEADER.</para>
+                /// <para>The role of the agent in the team. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>LEADER</description></item>
+                /// <item><description>WORKER</description></item>
+                /// </list>
+                /// <para>Each team must have exactly one LEADER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -56,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, in RFC 3339 format.</para>
+            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -69,7 +74,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Team responsible for intelligent customer service</para>
+            /// <para>A team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -86,7 +91,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The team status. Valid values: Creating, Active, Updating, Deleting, Failed, Deleted.</para>
+            /// <para>The team status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating</description></item>
+            /// <item><description>Active</description></item>
+            /// <item><description>Updating</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>Failed</description></item>
+            /// <item><description>Deleted</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -106,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time of the last modification in UTC, in RFC 3339 format.</para>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -116,14 +129,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The list of user members in the team.</para>
+            /// <para>The user member list of the team.</para>
             /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<UpdateTeamResponseBodyDataUsers> Users { get; set; }
             public class UpdateTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ADMIN</description></item>
+                /// <item><description>MEMBER</description></item>
+                /// </list>
+                /// <para>Each team must have exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>
@@ -167,7 +185,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

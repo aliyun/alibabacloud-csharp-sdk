@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The event subscription callback URL. Configure this URL in the application on the external identity provider side to receive organization change events. An empty string is returned if the user pool has not been provisioned.</para>
+            /// <para>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string IdentityProviderType { get; set; }
 
             /// <summary>
-            /// <para>The logon callback URL. Configure this URL in the application on the external identity provider side. An empty string is returned if the user pool has not been provisioned.</para>
+            /// <para>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CONFIGURED: The configuration has been accepted and is waiting for the user pool to be provisioned.</description></item>
+            /// <item><description>CONFIGURED: The configuration has been accepted and is waiting for user pool activation.</description></item>
             /// <item><description>SYNCING: Organization members are being synchronized.</description></item>
             /// <item><description>SYNCED: Organization member synchronization is complete.</description></item>
             /// <item><description>READY: The binding is active.</description></item>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

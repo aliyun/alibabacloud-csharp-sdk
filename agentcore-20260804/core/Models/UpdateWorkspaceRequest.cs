@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The updated workspace network configuration.</para>
+            /// <para>The updated network configuration of the workspace.</para>
             /// </summary>
             [NameInMap("networkConfiguration")]
             [Validation(Required=false)]
             public UpdateWorkspaceRequestBodyNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceRequestBodyNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The user VPC network configuration.</para>
+                /// <para>The VPC network configuration.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("vpc")]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</para>
+                    /// <para>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be specified, and all vSwitches must belong to the VPC specified by VpcId.</para>
                     /// </summary>
                     [NameInMap("vSwitchIds")]
                     [Validation(Required=false)]
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the user VPC.</para>
+                    /// <para>The VPC ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListWorkspacesResponseBodyItems> Items { get; set; }
         public class ListWorkspacesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The creation time of the workspace.</para>
+            /// <para>The time when the workspace was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-06T03:56:56Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>production-agents</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page used for this request.</para>
+        /// <para>The maximum number of records per page used in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if no more pages exist.</para>
+        /// <para>The pagination token for the next page. This parameter is empty if no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d29ya3NwYWNlLW9mZnNldDo0MA</para>

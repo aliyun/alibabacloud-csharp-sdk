@@ -90,14 +90,52 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The effective specification version number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>The agent runtime framework.</para>
             /// </summary>
-            [NameInMap("effectiveSpecVersion")]
+            [NameInMap("harness")]
             [Validation(Required=false)]
-            public long? EffectiveSpecVersion { get; set; }
+            public ListManagedAgentsResponseBodyItemsHarness Harness { get; set; }
+            public class ListManagedAgentsResponseBodyItemsHarness : TeaModel {
+                /// <summary>
+                /// <para>The Connector binding configuration for the qodercli framework.</para>
+                /// </summary>
+                [NameInMap("configuration")]
+                [Validation(Required=false)]
+                public ListManagedAgentsResponseBodyItemsHarnessConfiguration Configuration { get; set; }
+                public class ListManagedAgentsResponseBodyItemsHarnessConfiguration : TeaModel {
+                    /// <summary>
+                    /// <para>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>key-xxxx</para>
+                    /// </summary>
+                    [NameInMap("connectorServiceAccountKey")]
+                    [Validation(Required=false)]
+                    public string ConnectorServiceAccountKey { get; set; }
+
+                    /// <summary>
+                    /// <para>The Connector Key name populated during queries. This parameter is not used as a binding reference during writes.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>my-connector-key</para>
+                    /// </summary>
+                    [NameInMap("connectorServiceAccountName")]
+                    [Validation(Required=false)]
+                    public string ConnectorServiceAccountName { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>qodercli</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
 
             /// <summary>
             /// <para>The latest specification version number.</para>
@@ -110,7 +148,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The managed agent name.</para>
+            /// <para>The name of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent</para>
@@ -130,7 +168,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the managed agent.</para>
+            /// <para>The status of the managed agent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating: Being created.</description></item>
+            /// <item><description>Failed: Failed.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Updating: Being updated.</description></item>
+            /// <item><description>Deleted: Deleted.</description></item>
+            /// <item><description>Deleting: Being deleted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -172,7 +218,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -182,7 +228,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates that no more pages are available.</para>
+        /// <para>The token for the next page. An empty value indicates that the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

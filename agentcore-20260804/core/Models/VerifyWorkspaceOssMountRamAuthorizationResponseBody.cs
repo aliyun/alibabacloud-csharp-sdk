@@ -1,0 +1,65 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AgentCore20260804.Models
+{
+    public class VerifyWorkspaceOssMountRamAuthorizationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The business status code.</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public VerifyWorkspaceOssMountRamAuthorizationResponseBodyData Data { get; set; }
+        public class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The OSS storage authorization status.</para>
+            /// </summary>
+            [NameInMap("authorizationStatus")]
+            [Validation(Required=false)]
+            public string AuthorizationStatus { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// </summary>
+        [NameInMap("httpStatusCode")]
+        [Validation(Required=false)]
+        public int? HttpStatusCode { get; set; }
+
+        /// <summary>
+        /// <para>The response message.</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// </summary>
+        [NameInMap("success")]
+        [Validation(Required=false)]
+        public bool? Success { get; set; }
+
+    }
+
+}

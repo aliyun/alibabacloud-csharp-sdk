@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListExternalAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value SUCCESS is returned for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value 200 is returned for a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DeployType { get; set; }
 
             /// <summary>
-            /// <para>The external agent description.</para>
+            /// <para>The description of the external agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A code review agent running in the user environment</para>
@@ -88,16 +88,6 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
-
-            /// <summary>
-            /// <para>The currently effective specification version number.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("effectiveSpecVersion")]
-            [Validation(Required=false)]
-            public long? EffectiveSpecVersion { get; set; }
 
             /// <summary>
             /// <para>The latest specification version number.</para>
@@ -110,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The external agent name.</para>
+            /// <para>The name of the external agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-external-agent</para>
@@ -130,7 +120,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The external agent status. Valid values:</para>
+            /// <para>The status of the external agent. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Creating: The agent is being created.</description></item>
             /// <item><description>Running: The agent is running.</description></item>
@@ -180,7 +170,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The message that indicates the result of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -190,7 +180,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates the last page.</para>
+        /// <para>The token for the next page. An empty value indicates that the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

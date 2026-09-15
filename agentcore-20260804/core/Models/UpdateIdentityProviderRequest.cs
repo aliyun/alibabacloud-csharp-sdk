@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>The data encryption key for event subscriptions. The value must be consistent with the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
+                /// <para>The data encryption key for event subscriptions. The value must match the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-encrypt-key</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The verification token for event subscriptions. The value must be consistent with the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
+                /// <para>The verification token for event subscriptions. The value must match the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-verification-token</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</para>
+            /// <para>Specifies whether to enable organization member synchronization. When enabled, the external identity provider synchronizes organization members as workspace users.</para>
             /// </summary>
             [NameInMap("syncEnabled")]
             [Validation(Required=false)]

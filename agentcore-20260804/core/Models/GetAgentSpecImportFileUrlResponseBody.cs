@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetAgentSpecImportFileUrlResponseBodyData Data { get; set; }
         public class GetAgentSpecImportFileUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Content-Type used for the OSS PUT request.</para>
+            /// <para>The Content-Type to use for the OSS PUT request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/zip</para>

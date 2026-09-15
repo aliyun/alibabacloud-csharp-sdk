@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The business tags.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample property value</para>
+            /// <para>SamplePropertyValue</para>
             /// </summary>
             [NameInMap("bizTags")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample content</para>
+            /// <para>SampleContent</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]

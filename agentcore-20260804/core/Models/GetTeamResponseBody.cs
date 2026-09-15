@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
-                /// <para>The deployment mode of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</para>
+                /// <para>The deployment type of the agent. MANAGED indicates platform-managed deployment. SELF_HOSTED indicates self-hosted deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MANAGED</para>
@@ -84,17 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The currently effective specification version number of the agent.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
-                [NameInMap("effectiveSpecVersion")]
-                [Validation(Required=false)]
-                public long? EffectiveSpecVersion { get; set; }
-
-                /// <summary>
-                /// <para>The latest specification version number of the agent.</para>
+                /// <para>The latest configuration version number of the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -144,7 +134,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamRole { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+                /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>
@@ -179,7 +169,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A team responsible for intelligent customer service</para>
+            /// <para>A team responsible for intelligent customer service operations</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -196,7 +186,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -226,7 +216,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -243,7 +233,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<GetTeamResponseBodyDataUsers> Users { get; set; }
             public class GetTeamResponseBodyDataUsers : TeaModel {
                 /// <summary>
-                /// <para>The authentication method of the user. password indicates local password authentication within the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+                /// <para>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate synchronization and authentication by the corresponding external identity provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>password</para>
@@ -293,7 +283,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string InitialPassword { get; set; }
 
                 /// <summary>
-                /// <para>The username. The name must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</para>
+                /// <para>The username. The name must be unique within the workspace. It can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 32 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user-01</para>
@@ -303,10 +293,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The note for the user. The note can be up to 1024 characters in length.</para>
+                /// <para>The user note. The note can be up to 1024 characters in length.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Agent operations group member</para>
+                /// <para>Member of the agent operations group</para>
                 /// </summary>
                 [NameInMap("note")]
                 [Validation(Required=false)]
@@ -333,7 +323,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string TeamRole { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+                /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-08-12T03:04:05Z</para>
@@ -387,7 +377,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request failed.</para>
+        /// <para>The response message. An error description is returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

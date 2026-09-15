@@ -27,7 +27,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetWorkspaceResponseBodyData Data { get; set; }
         public class GetWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The OSS storage authorization status.</para>
+            /// </summary>
+            [NameInMap("authorizationStatus")]
+            [Validation(Required=false)]
+            public string AuthorizationStatus { get; set; }
+
+            /// <summary>
+            /// <para>The name of the private OSS bucket.</para>
+            /// </summary>
+            [NameInMap("bucketName")]
+            [Validation(Required=false)]
+            public string BucketName { get; set; }
+
+            /// <summary>
+            /// <para>The time when the workspace was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-06T03:56:56Z</para>
@@ -47,21 +61,31 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workspace network configuration.</para>
+            /// <para>The network configuration of the workspace.</para>
             /// </summary>
             [NameInMap("networkConfiguration")]
             [Validation(Required=false)]
             public GetWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class GetWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The user VPC network configuration.</para>
+                /// <para>The public egress IP address allocated to the workspace. You can use this IP address to configure IP address whitelists for external services. This field is returned only when the public egress resource is attached and an address is allocated. The field is empty if no address is allocated, the attachment is failed, or the address is being released. This address is independent of whether VPC networking is active.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>203.0.113.10</para>
+                /// </summary>
+                [NameInMap("publicEgressIp")]
+                [Validation(Required=false)]
+                public string PublicEgressIp { get; set; }
+
+                /// <summary>
+                /// <para>The VPC network configuration of the user.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
                 public GetWorkspaceResponseBodyDataNetworkConfigurationVpc Vpc { get; set; }
                 public class GetWorkspaceResponseBodyDataNetworkConfigurationVpc : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the VPC network is enabled.</para>
+                    /// <para>Indicates whether VPC networking is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -102,7 +126,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The workspace status. Valid values: Initializing, InitializationFailed, Initialized, Deleting, Deleted.</para>
+            /// <para>The workspace status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Initializing</description></item>
+            /// <item><description>InitializationFailed</description></item>
+            /// <item><description>Initialized</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>Deleted</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Initialized</para>
@@ -120,6 +151,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             [NameInMap("statusReason")]
             [Validation(Required=false)]
             public string StatusReason { get; set; }
+
+            /// <summary>
+            /// <para>The storage type of the workspace.</para>
+            /// </summary>
+            [NameInMap("storageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
 
             /// <summary>
             /// <para>The ID of the tenant to which the workspace belongs.</para>

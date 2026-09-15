@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateTeamRequestBody Body { get; set; }
         public class CreateTeamRequestBody : TeaModel {
             /// <summary>
-            /// <para>The list of agent members for the team.</para>
+            /// <para>The list of agent members in the team.</para>
             /// </summary>
             [NameInMap("agents")]
             [Validation(Required=false)]
@@ -34,11 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The role of the agent in the team. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>LEADER</description></item>
-                /// <item><description>WORKER</description></item>
-                /// </list>
+                /// <para>The role of the agent in the team. Valid values: LEADER, WORKER.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WORKER</para>
@@ -71,19 +67,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of user members for the team. The list must include exactly one member with the ADMIN role.</para>
+            /// <para>The list of user members in the team. The list must include exactly one member with the ADMIN role.</para>
             /// </summary>
             [NameInMap("users")]
             [Validation(Required=false)]
             public List<CreateTeamRequestBodyUsers> Users { get; set; }
             public class CreateTeamRequestBodyUsers : TeaModel {
                 /// <summary>
-                /// <para>The role of the user in the team. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ADMIN</description></item>
-                /// <item><description>MEMBER</description></item>
-                /// </list>
-                /// <para>Each team must have exactly one ADMIN.</para>
+                /// <para>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must include exactly one ADMIN.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ADMIN</para>

@@ -20,14 +20,18 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The binding information of the external identity provider after the unbinding operation is accepted.</para>
+        /// <para>The binding information of the external identity provider after the unbinding request is accepted.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public DeleteIdentityProviderResponseBodyData Data { get; set; }
         public class DeleteIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DingTalk</description></item>
+            /// <item><description>Feishu</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -45,8 +49,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <item><description>READY: The binding is in effect.</description></item>
             /// <item><description>SYNC_FAILED: Organization member synchronization failed.</description></item>
             /// <item><description>UPDATING: The configuration is being updated.</description></item>
-            /// <item><description>UPDATE_FAILED: Configuration update failed.</description></item>
-            /// <item><description>DISCONNECTING: The unbinding is in progress.</description></item>
+            /// <item><description>UPDATE_FAILED: The configuration update failed.</description></item>
+            /// <item><description>DISCONNECTING: The identity provider is being unbound.</description></item>
             /// <item><description>DISCONNECT_FAILED: The unbinding failed.</description></item>
             /// </list>
             /// 
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

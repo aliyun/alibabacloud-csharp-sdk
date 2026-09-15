@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>A reserved idempotency token. The backend does not provide persistent idempotence guarantee in the current version.</para>
+        /// <para>Reserved idempotency token. The backend does not provide persistent idempotence guarantees in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

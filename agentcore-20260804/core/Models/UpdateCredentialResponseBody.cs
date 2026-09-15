@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public UpdateCredentialResponseBodyData Data { get; set; }
         public class UpdateCredentialResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
+            /// <para>The masked credential content. If credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -97,7 +97,56 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The time of the most recent modification in UTC, formatted according to RFC 3339.</para>
+            /// <para>Each item contains resourceType, resourceId, and resourceName. resourceName is empty if the resource has been deleted.</para>
+            /// </summary>
+            [NameInMap("resourceRefs")]
+            [Validation(Required=false)]
+            public List<UpdateCredentialResponseBodyDataResourceRefs> ResourceRefs { get; set; }
+            public class UpdateCredentialResponseBodyDataResourceRefs : TeaModel {
+                /// <summary>
+                /// <para>The unique identifier of the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent-xxxx</para>
+                /// </summary>
+                [NameInMap("resourceId")]
+                [Validation(Required=false)]
+                public string ResourceId { get; set; }
+
+                /// <summary>
+                /// <para>The resource name. This value is empty if the resource has been deleted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-agent</para>
+                /// </summary>
+                [NameInMap("resourceName")]
+                [Validation(Required=false)]
+                public string ResourceName { get; set; }
+
+                /// <summary>
+                /// <para>The resource type, such as agent.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agent</para>
+                /// </summary>
+                [NameInMap("resourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The credential resource scope.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL</para>
+            /// </summary>
+            [NameInMap("resourceScope")]
+            [Validation(Required=false)]
+            public string ResourceScope { get; set; }
+
+            /// <summary>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

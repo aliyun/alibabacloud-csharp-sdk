@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string OssObjectName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to overwrite existing drafts. Default value: false.</para>
+            /// <para>Specifies whether to overwrite the existing draft. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public bool? Overwrite { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to publish immediately after upload. Default value: false.</para>
+            /// <para>Specifies whether to publish directly after upload. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

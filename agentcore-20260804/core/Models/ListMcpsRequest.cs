@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListMcpsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The MCP service name. Used together with SearchType.</para>
+        /// <para>The MCP service name or service ID. Used together with SearchType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-mcp-server</para>
@@ -40,6 +40,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Filters results by official usage tag.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>KNOWLEDGE_BASE</para>
+        /// </summary>
+        [NameInMap("officialTag")]
+        [Validation(Required=false)]
+        public string OfficialTag { get; set; }
+
+        /// <summary>
         /// <para>The name matching method. Takes effect only when Name is specified. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>accurate: exact match.</description></item>
@@ -53,6 +63,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("searchType")]
         [Validation(Required=false)]
         public string SearchType { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the service is still bound by the official template usage constraint.</para>
+        /// </summary>
+        [NameInMap("usageActive")]
+        [Validation(Required=false)]
+        public bool? UsageActive { get; set; }
 
     }
 
