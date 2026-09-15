@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The description of the API.</para>
+        /// <para>The API description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Update API description</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress Class to listen on.</para>
+            /// <para>The Ingress class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in the Ingress Status.</para>
+            /// <para>Specifies whether to update the address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -165,14 +165,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>The versioning configuration of the API.</para>
+        /// <para>The API versioning configuration.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to a real update are performed without updating any configurations or producing side effects. If not specified or set to false, the behavior is the same as the existing version.</para>
+        /// <para>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual update are performed, but no configurations are modified and no side effects are produced. If set to false or left empty, the behavior is the same as the existing version.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]

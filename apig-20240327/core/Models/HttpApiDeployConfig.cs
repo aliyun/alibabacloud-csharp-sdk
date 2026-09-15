@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
             /// <summary>
-            /// <para>The capability tier of the intelligent routing candidate. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</para>
+            /// <para>The capability tier for intelligent routing candidates. Specify this parameter only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of subdomain content.</para>
+        /// <para>The list of second-level domain name content.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, premium. An explicit empty array indicates that no system model is enabled.</para>
+        /// <para>The set of explicitly enabled gateway system model capability tiers. Takes effect only when the publishing scenario is AiAutoRouter. Valid values: economy, standard, and premium. An explicitly empty array indicates that no system models are enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;economy&quot;,&quot;standard&quot;,&quot;premium&quot;]</para>

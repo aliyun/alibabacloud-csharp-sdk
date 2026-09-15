@@ -10,9 +10,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardRequest : TeaModel {
         /// <summary>
-        /// <para>The response language. Valid values:
-        /// zh: Chinese
-        /// en: English</para>
+        /// <para>The language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The dashboard name. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>LOG: access log</description></item>
-        /// <item><description>PLUGIN: plug-in log</description></item>
+        /// <item><description>PLUGIN: plugin log</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The plug-in type ID.</para>
+        /// <para>The plugin type ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginClassId { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inner-ai-search-cvd3mcum1hks660icn10</para>

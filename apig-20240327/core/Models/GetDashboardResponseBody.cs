@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetDashboardResponseBodyData Data { get; set; }
         public class GetDashboardResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the gateway.</para>
+            /// <para>The unique ID of the gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-co370icmjeu****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The dashboard URL.</para>
+            /// <para>The URL of the dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></para>

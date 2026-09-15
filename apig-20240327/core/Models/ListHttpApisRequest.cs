@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The gateway type associated with the HTTP API. Valid values:</para>
+        /// <para>The type of gateway associated with the HTTP API. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>API: cloud-native API gateway.</description></item>
         /// <item><description>AI: AI gateway.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Searches by exact name match.</para>
+        /// <para>Searches for an HTTP API by exact name match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>login</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid range: [1, 100]. Default value: 10.</para>
+        /// <para>The page size. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ahr5uil8raz0rq3b</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Types { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return API information that has been published to the specified environment.</para>
+        /// <para>Specifies whether to return information about APIs published to the specified environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAPIsPublishedToEnvironment { get; set; }
 
         /// <summary>
-        /// <para>Specifies the environment ID. The response includes consumer authentication policy information for each API in the specified environment.</para>
+        /// <para>The environment ID. If specified, the response includes consumer authentication policy information for each API in the specified environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithAuthPolicyInEnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether permission authentication policies are enabled.</para>
+        /// <para>Specifies whether the permission authentication policy is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyList { get; set; }
 
         /// <summary>
-        /// <para>Specifies the consumer ID. The response includes the authorization rule list for the specified consumer for each API.</para>
+        /// <para>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer for each API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithIngressInfo { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID. Used to retrieve plug-in publishing information based on this plug-in ID.</para>
+        /// <para>The plug-in ID. If specified, the response includes plug-in publishing information for the specified plug-in.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-ct9qn3um1hktue8dqol0</para>

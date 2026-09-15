@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer group ID. If specified, the authorization rules of this consumer group are queried.</para>
+        /// <para>The consumer group ID. If specified, the authorization rules of the consumer group are queried. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerGroupNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The consumer ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-ct21c16m1hkp64hk6qmg</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent resource ID.</para>
+        /// <para>The parent resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha-cn-li942gy8p01</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ParentResourceId { get; set; }
 
         /// <summary>
-        /// <para>The principal type. Valid values: Consumer or ConsumerGroup.</para>
+        /// <para>The principal type. Valid values: Consumer and ConsumerGroup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ConsumerGroup</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PrincipalType { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The resource ID. At least one of the following parameters must be specified: resourceId, parentResourceId, consumerId, and consumerGroupId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ha-cn-li942gy8p03</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service source types.</para>
+        /// <para>The service source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K8S</para>

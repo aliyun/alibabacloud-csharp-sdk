@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public QueryConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class QueryConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of consumer rules.</para>
+            /// <para>The list of consumer authorization rules.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<QueryConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class QueryConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The API information details.</para>
+                /// <para>The API information.</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer information details.</para>
+                /// <para>The consumer information.</para>
                 /// </summary>
                 [NameInMap("consumerInfo")]
                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The publish status of the API in the current environment.</para>
+                /// <para>The deployment status of the API in the current environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -112,11 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>The expiration mode. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>LongTerm</description></item>
-                /// <item><description>ShortTerm</description></item>
-                /// </list>
+                /// <para>The expiration mode. Valid values: LongTerm and ShortTerm.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -153,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>The principal type. Valid values: Consumer or ConsumerGroup.</para>
+                /// <para>The principal type. Valid values: Consumer and ConsumerGroup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ConsumerGroup</para>
@@ -173,14 +169,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource information details.</para>
+                /// <para>The resource information.</para>
                 /// </summary>
                 [NameInMap("resourceInfo")]
                 [Validation(Required=false)]
                 public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo ResourceInfo { get; set; }
                 public class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The operation information.</para>
+                    /// <para>The API operation information.</para>
                     /// </summary>
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]

@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The expiration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LongTerm</description></item>
-        /// <item><description>ShortTerm</description></item>
+        /// <item><description>LongTerm: long-term</description></item>
+        /// <item><description>ShortTerm: short-term</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public HttpDubboTranscoder HttpDubboTranscoder { get; set; }
 
                 /// <summary>
-                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not specified for the AiAutoRouter scenario, the default model of the AI service is used.</para>
+                /// <para>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If not specified in the AiAutoRouter scenario, the default model of the AI service is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The service protocol. Valid values:</para>
+                /// <para>The Terms of Service. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>HTTP.</description></item>
                 /// <item><description>HTTPS.</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The service version. This parameter takes effect only in the tag-based scenario.</para>
+                /// <para>The service version. This parameter takes effect only in tag-based scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? McpStatisticsEnable { get; set; }
 
             /// <summary>
-            /// <para>The service protocol. Valid values:</para>
+            /// <para>The Terms of Service. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TCP.</description></item>
             /// <item><description>HTTP.</description></item>
