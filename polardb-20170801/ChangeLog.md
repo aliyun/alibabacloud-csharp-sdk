@@ -1,3 +1,16 @@
+2026-09-15 Version: 8.3.2
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.CustomOssPath.
+- Update API DescribeAIDBClusterAttribute: add response parameters Body.PreviousCustomOssPath.
+- Update API DescribeAvailableModels: add request parameters ModelType.
+- Update API DescribeAvailableModels: add response parameters Body.ModelType.
+- Update API DescribeAvailableModels: add response parameters Body.TuneArch.
+- Update API DescribeAvailableModels: add response parameters Body.Items.$.CustomModelName.
+- Update API DescribeAvailableModels: add response parameters Body.Items.$.DisplayModelName.
+- Update API DescribeAvailableModels: add response parameters Body.Items.$.GmtModified.
+- Update API DescribeAvailableModels: add response parameters Body.Items.$.ModelType.
+- Update API DescribeAvailableModels: add response parameters Body.Items.$.OssPath.
+
+
 2026-09-11 Version: 8.3.1
 - Update API DescribeApplications: add response parameters Body.Items.$.BranchId.
 

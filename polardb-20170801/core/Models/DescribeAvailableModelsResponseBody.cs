@@ -37,6 +37,36 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAvailableModelsResponseBodyItems> Items { get; set; }
         public class DescribeAvailableModelsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The custom model registration key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Qwen3-32B</para>
+            /// </summary>
+            [NameInMap("CustomModelName")]
+            [Validation(Required=false)]
+            public string CustomModelName { get; set; }
+
+            /// <summary>
+            /// <para>The display name of the model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>My Qwen3 32B</para>
+            /// </summary>
+            [NameInMap("DisplayModelName")]
+            [Validation(Required=false)]
+            public string DisplayModelName { get; set; }
+
+            /// <summary>
+            /// <para>The last modified time of the registration.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-09-07 20:57:20</para>
+            /// </summary>
+            [NameInMap("GmtModified")]
+            [Validation(Required=false)]
+            public string GmtModified { get; set; }
+
+            /// <summary>
             /// <para>The supported GPU types.</para>
             /// </summary>
             [NameInMap("GpuRequired")]
@@ -106,6 +136,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelSeries { get; set; }
 
             /// <summary>
+            /// <para>The model type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom</para>
+            /// </summary>
+            [NameInMap("ModelType")]
+            [Validation(Required=false)]
+            public string ModelType { get; set; }
+
+            /// <summary>
+            /// <para>The OSS path of the custom model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/my-model-bucket/models</para>
+            /// </summary>
+            [NameInMap("OssPath")]
+            [Validation(Required=false)]
+            public string OssPath { get; set; }
+
+            /// <summary>
             /// <para>The supported GPU models.</para>
             /// </summary>
             [NameInMap("SupportedGpuModels")]
@@ -119,6 +169,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The model type corresponding to the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom</para>
+        /// </summary>
+        [NameInMap("ModelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
+
+        /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
@@ -127,6 +187,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The model fine-tuning architecture.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>swift</para>
+        /// </summary>
+        [NameInMap("TuneArch")]
+        [Validation(Required=false)]
+        public string TuneArch { get; set; }
 
     }
 

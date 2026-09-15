@@ -26049,7 +26049,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed attributes of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26107,7 +26107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed attributes of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26165,7 +26165,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed attributes of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26183,7 +26183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed attributes of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32369,7 +32369,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of AI cluster models.</para>
+        /// <para>Retrieves the list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32389,6 +32389,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeType))
             {
                 query["KubeType"] = request.KubeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -32415,7 +32419,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of AI cluster models.</para>
+        /// <para>Retrieves the list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32435,6 +32439,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubeType))
             {
                 query["KubeType"] = request.KubeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -32461,7 +32469,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of AI cluster models.</para>
+        /// <para>Retrieves the list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32479,7 +32487,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of AI cluster models.</para>
+        /// <para>Retrieves the list of models in an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
