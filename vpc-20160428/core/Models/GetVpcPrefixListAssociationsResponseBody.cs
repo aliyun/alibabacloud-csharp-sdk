@@ -142,6 +142,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of CIDR blocks in the prefix list that are not effective for the associated resource.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>192.124.0.0/16</para>
+            /// </summary>
+            [NameInMap("SuppressedList")]
+            [Validation(Required=false)]
+            public string SuppressedList { get; set; }
+
         }
 
         /// <summary>

@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <b>1</b> to <b>1000</b>. Default value: <b>1</b>.</ph></para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayBy95</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is enhanced 95th percentile billing, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
-        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByDominantTraffic</b>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, which indicates the billing method is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayBy95</b>, which indicates the billing method is enhanced 95th percentile, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByDominantTraffic</b>, which indicates the billing method is pay-by-dominant-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
         /// <para> Default value: <b>1000</b>.</para>
         /// <para>This parameter is required.</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The line type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) lines. BGP (multi-ISP) lines are supported in all regions.</description></item>
-        /// <item><description><b>BGP_PRO</b>: BGP (multi-ISP) premium lines. Currently, BGP (multi-ISP) premium Internet Shared Bandwidth instances are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</description></item>
+        /// <item><description><b>BGP</b> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</description></item>
+        /// <item><description><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines. Currently, only Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (Multi-ISP) Pro Internet Shared Bandwidth instances.</description></item>
         /// </list>
         /// <para>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</para>
         /// <list type="bullet">
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>ChinaUnicom_L2</b>: China Unicom L2</description></item>
         /// <item><description><b>ChinaMobile_L2</b>: China Mobile L2</description></item>
         /// </list>
-        /// <para>If you are an Alibaba Finance Cloud user in Hangzhou, this parameter is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
+        /// <para>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <b>BGP_FinanceCloud</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BGP</para>
@@ -83,12 +83,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
         /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
-        /// <item><description><b>PayBy95</b>: pay-by-enhanced-95th-percentile.</description></item>
+        /// <item><description><b>PayBy95</b>: enhanced 95th percentile.</description></item>
         /// <item><description><b>PayByDominantTraffic</b>: pay-by-dominant-traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>中国站示例值：PayByBandwidth，国际站示例值：PayByTraffic</para>
+        /// <para>For China site: PayByBandwidth, for International site: PayByTraffic</para>
         /// </summary>
         [NameInMap("InternetChargeType")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The minimum bandwidth commitment percentage of the Internet Shared Bandwidth instance. Set the value to <b>20</b>.</para>
         /// <para> &lt;props=&quot;china&quot;&gt;<ph>This parameter is required when <b>InternetChargeType</b> is set to <b>PayBy95</b>.</ph></para>
         /// <remarks>
-        /// <para>This parameter is supported only on the China site.</para>
+        /// <para>Only the China site supports this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,17 +158,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The edition of Anti-DDoS.</para>
+        /// <para>The security protection level.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you leave this parameter empty, Anti-DDoS Origin Basic is used by default.</para>
+        /// <item><description><para>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</para>
         /// </description></item>
         /// <item><description><para>If you set this parameter to <b>AntiDDoS_Enhanced</b>, Anti-DDoS Origin Enhanced is used.</para>
         /// </description></item>
         /// </list>
-        /// <para>&lt;props=&quot;china&quot;&gt;<ph>You can set this parameter when <b>InternetChargeType</b> is set to <b>PayBy95</b>.</ph></para>
-        /// <para>You can add up to 10 security protection levels.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<ph>This parameter can be configured when <b>InternetChargeType</b> is set to <b>PayBy95</b>.</ph></para>
+        /// <para>You can specify up to 10 security protection levels.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The error message of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Specified CIDR block is already exists, entry.cidrBlock=xxxx</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs returned for the successfully added custom route entries. The routing information is included.</para>
+        /// <para>The routing instance IDs returned for the custom route entries that were successfully added.</para>
         /// </summary>
         [NameInMap("RouteEntryIds")]
         [Validation(Required=false)]

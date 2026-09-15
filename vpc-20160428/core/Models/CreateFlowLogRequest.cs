@@ -134,9 +134,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource whose traffic you want to catch. Valid values:</para>
+        /// <para>The type of the resource whose traffic you want to capture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
+        /// <item><description><para><b>NetworkInterface</b>: network interface controllers (NICs).</para>
         /// </description></item>
         /// <item><description><para><b>VSwitch</b>: all network interface controllers (NICs) in a vSwitch.</para>
         /// </description></item>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<CreateFlowLogRequestTag> Tag { get; set; }
         public class CreateFlowLogRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string for this parameter.</para>
             /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -184,10 +184,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The traffic path to capture. Valid values:</para>
+        /// <para>The traffic path to collect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: captures all traffic.</description></item>
-        /// <item><description><b>internetGateway</b>: captures Internet traffic.</description></item>
+        /// <item><description><b>all</b> (default): all scenarios.</description></item>
+        /// <item><description><b>internetGateway</b>: traffic to access the Internet.</description></item>
+        /// <item><description><b>natGateway</b>: traffic through NAT gateway.</description></item>
+        /// <item><description><b>vpnGateway</b>: traffic through VPN gateway.</description></item>
+        /// <item><description><b>transitRouter</b>: traffic through TR.</description></item>
+        /// <item><description><b>gatewayEndpoint</b>: traffic through gateway endpoint to access Alibaba Cloud services.</description></item>
+        /// <item><description><b>vbr</b>: traffic through Virtual Border Router (VBR) to access Express Connect circuits.</description></item>
+        /// <item><description><b>ecr</b>: traffic through Express Connect Router (ECR).</description></item>
+        /// <item><description><b>ipv4Gateway</b>: traffic through IPv4 gateway to access the Internet.</description></item>
+        /// <item><description><b>gatewayLoadBalancerEndpoint</b>: traffic through Gateway Load Balancer endpoint (GWLBe).</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TrafficPath")]
@@ -201,7 +209,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>Allow</b>: traffic allowed by access control.</para>
         /// </description></item>
-        /// <item><description><para><b>Drop</b>: traffic deny by access control.</para>
+        /// <item><description><para><b>Drop</b>: traffic denied by access control.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateRouteEntryRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client. Make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the custom route entry. IPv4 CIDR blocks, IPv6 CIDR blocks, prefix list destination CIDR blocks, and prefix list instance IDs are supported. The following requirements must be met:</para>
+        /// <para>The destination CIDR block of the custom route entry. IPv4 CIDR blocks, IPv6 CIDR blocks, destination CIDR blocks of prefix lists, and instance IDs of prefix lists are supported. The following requirements must be met:</para>
         /// <list type="bullet">
         /// <item><description><para>The destination CIDR block cannot point to or be contained by 100.64.0.0/10.  </para>
         /// </description></item>
@@ -54,8 +54,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request format, and business restrictions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a normal request. After the request passes the dry run, an HTTP 2xx status code is returned and the route is created.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the route entry. The system checks required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends the request. After the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The information about the next hops.</para>
+        /// <para>The information about the next hop.</para>
         /// </summary>
         [NameInMap("NextHopList")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The weight of the next hop of the ECMP route.</para>
+            /// <para>The weight of the next hop for the ECMP route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>HaVip</b>: high-availability virtual IP address.  </para>
         /// </description></item>
-        /// <item><description><para><b>RouterInterface</b>: router interface.</para>
+        /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
         /// </description></item>
         /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
         /// </description></item>

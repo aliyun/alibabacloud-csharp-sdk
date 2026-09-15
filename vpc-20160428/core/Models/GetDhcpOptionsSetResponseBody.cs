@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The DHCP options configuration.</para>
+        /// <para>The DHCP options configuration information.</para>
         /// </summary>
         [NameInMap("DhcpOptions")]
         [Validation(Required=false)]

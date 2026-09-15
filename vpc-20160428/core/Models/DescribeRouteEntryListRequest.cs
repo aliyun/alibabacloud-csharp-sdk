@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>NetworkInterface</b>: secondary elastic network interface controller (NIC).</para>
         /// </description></item>
-        /// <item><description><para><b>RouterInterface</b>: routing interface.</para>
+        /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
         /// </description></item>
         /// <item><description><para><b>IPv6Gateway</b>: IPv6 gateway.</para>
         /// </description></item>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Valid values:</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is the first request or no subsequent query exists, leave this parameter empty.</description></item>
-        /// <item><description>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</description></item>
+        /// <item><description>You do not need to specify this parameter for the first request or if no subsequent request exists.</description></item>
+        /// <item><description>If a subsequent request exists, set the value to the NextToken value that is returned from the last call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the route table to which the route belongs.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error message is returned. If the check passes, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the vSwitch reserved CIDR block for a vSwitch is created.</description></item>
+        /// <item><description><b>true</b>: performs a dry run. The system checks the required parameters, request format, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. If the check succeeds, an HTTP 2xx status code is returned and the reserved CIDR block for a vSwitch is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>IPv6</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>You do not need to specify this parameter when creating an IPv4 reserved CIDR block for a vSwitch. This parameter is required when creating an IPv6 reserved CIDR block for a vSwitch.</para>
+        /// <para>You do not need to specify this parameter when you create an IPv4 reserved CIDR block for a vSwitch. This parameter is required when you create an IPv6 reserved CIDR block for a vSwitch.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must specify either the <b>VSwitchCidrReservationMask</b> parameter or the <b>VSwitchCidrReservationCidr</b> parameter.</description></item>
-        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</description></item>
+        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -157,13 +157,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The mask of the reserved CIDR block for a vSwitch.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>IpVersion</b> is set to <b>IPv4</b>, the mask length of the reserved CIDR block must be at least 2 bits longer than the IPv4 CIDR block mask of the vSwitch and cannot exceed 28.</description></item>
-        /// <item><description>If <b>IpVersion</b> is set to <b>IPv6</b>, the mask length of the reserved CIDR block must be longer than the IPv6 CIDR block mask of the vSwitch and cannot exceed 80.</description></item>
+        /// <item><description>If <b>IpVersion</b> is set to <b>IPv4</b>, the mask length of the reserved CIDR block for a vSwitch must be at least 2 bits longer than the mask of the IPv4 CIDR block of the vSwitch and cannot exceed 28.</description></item>
+        /// <item><description>If <b>IpVersion</b> is set to <b>IPv6</b>, the mask length of the reserved CIDR block for a vSwitch must be longer than the mask of the IPv6 CIDR block of the vSwitch and cannot exceed 80.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>You must specify either the <b>VSwitchCidrReservationMask</b> parameter or the <b>VSwitchCidrReservationCidr</b> parameter.</description></item>
-        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</description></item>
+        /// <item><description>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the reserved CIDR block for a vSwitch. Valid values: <b>prefix</b>, which indicates that IP addresses are allocated by CIDR block.</para>
         /// <remarks>
-        /// <para>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block for a vSwitch. If the IP addresses in the reserved CIDR block for a vSwitch are exhausted, the system returns an error.</para>
+        /// <para>When users or cloud services automatically assign CIDR blocks to elastic network interface controllers (NICs), the CIDR blocks must be allocated from the reserved CIDR block. If the IP addresses in the reserved CIDR block are exhausted, the system returns an error.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchCidrReservationType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch for which you want to create a reserved CIDR block for a vSwitch.</para>
+        /// <para>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

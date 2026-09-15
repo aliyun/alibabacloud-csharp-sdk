@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVSwitchAttributesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of active IP addresses.</para>
+        /// <para>The active IP address count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

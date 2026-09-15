@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about all route tables returned.</para>
+        /// <para>The information about all queried route tables.</para>
         /// </summary>
         [NameInMap("RouteEntrySummarys")]
         [Validation(Required=false)]
@@ -47,15 +47,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The type of the route. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>all</b>: all route types.</description></item>
-                /// <item><description><b>custom</b>: custom route.</description></item>
-                /// <item><description><b>system</b>: system route.</description></item>
-                /// <item><description><b>bgp</b>: BGP route.</description></item>
-                /// <item><description><b>cen</b>: Cloud Enterprise Network (CEN) route.</description></item>
-                /// <item><description><b>type_vpn_bgp_internal</b>: VPN BGP route.</description></item>
-                /// <item><description><b>ECR</b>: Express Connect Router (ECR) route.</description></item>
+                /// <item><description><b>custom</b>: custom routes.</description></item>
+                /// <item><description><b>system</b>: system routes.</description></item>
+                /// <item><description><b>bgp</b>: BGP routes.</description></item>
+                /// <item><description><b>cen</b>: Cloud Enterprise Network (CEN) routes.</description></item>
+                /// <item><description><b>type_vpn_bgp_internal</b>: BGP routes of VPN.</description></item>
+                /// <item><description><b>ECR</b>: Express Connect Router (ECR) routes.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>The returned system routes are the system routes in the system route table.</para>
+                /// <para>The returned system routes are the system routes under the system route table.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

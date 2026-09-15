@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the region where the route table resides.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,12 +41,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The type of the route. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>all</b>: all route types.</description></item>
-        /// <item><description><b>custom</b>: custom route.</description></item>
-        /// <item><description><b>system</b>: system route.</description></item>
-        /// <item><description><b>bgp</b>: BGP route.</description></item>
-        /// <item><description><b>cen</b>: Cloud Enterprise Network (CEN) route.</description></item>
-        /// <item><description><b>type_vpn_bgp_internal</b>: VPN BGP route.</description></item>
-        /// <item><description><b>ECR</b>: Express Connect Router (ECR) route.</description></item>
+        /// <item><description><b>custom</b>: custom routes.</description></item>
+        /// <item><description><b>system</b>: system routes.</description></item>
+        /// <item><description><b>bgp</b>: BGP routes.</description></item>
+        /// <item><description><b>cen</b>: Cloud Enterprise Network (CEN) routes.</description></item>
+        /// <item><description><b>type_vpn_bgp_internal</b>: BGP routes of VPN.</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR) routes.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

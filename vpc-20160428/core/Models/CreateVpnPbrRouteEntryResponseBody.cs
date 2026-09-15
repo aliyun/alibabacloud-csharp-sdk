@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateVpnPbrRouteEntryResponseBody : TeaModel {
         /// <summary>
         /// <para>The timestamp when the policy-based route was created. Unit: milliseconds.</para>
-        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string OverlayMode { get; set; }
 
         /// <summary>
-        /// <para>The policy priority of the policy-based route.</para>
+        /// <para>The policy priority of the policy-based routing entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The VPN gateway instance ID.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1cmw7jh1nfe43m9****</para>

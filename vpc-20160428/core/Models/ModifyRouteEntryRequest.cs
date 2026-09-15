@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <para><b>true</b>: performs a dry run without modifying the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</para>
+        /// <para><b>false</b> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The new next hop instance ID of the route entry.</para>
+        /// <para>The instance ID of the new next hop of the route entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp17y37ytsenqyim****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>RouterInterface</b>: vRouter interface.</para>
         /// </description></item>
-        /// <item><description><para><b>NetworkInterface</b>: elastic network interfaces (ENIs).</para>
+        /// <item><description><para><b>NetworkInterface</b>: elastic network interface (ENI).</para>
         /// </description></item>
         /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
         /// </description></item>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </description></item>
         /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
         /// </description></item>
-        /// <item><description><para><b>Attachment</b>: forward router.</para>
+        /// <item><description><para><b>Attachment</b>: transit router.</para>
         /// </description></item>
         /// <item><description><para><b>VpcPeer</b>: VPC peering connection.</para>
         /// </description></item>

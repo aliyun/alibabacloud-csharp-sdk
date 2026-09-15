@@ -655,15 +655,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before invoking this operation, note the following:</para>
+        /// <para>Before you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>When you invoke this operation to add an EIP to an Internet Shared Bandwidth instance, the EIP must meet the following conditions:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
+        /// <item><description>The billing method of the EIP is pay-as-you-go.</description></item>
         /// <item><description>The EIP is in the same region as the Internet Shared Bandwidth instance.</description></item>
         /// <item><description>The line type of the EIP is the same as that of the Internet Shared Bandwidth instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP is not yet added to the Internet Shared Bandwidth instance. The addition task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
+        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP is not yet added to the Internet Shared Bandwidth instance. The addition node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
         /// <item><description>If the association status is <b>BINDING</b>, the Internet Shared Bandwidth instance is being associated with the EIP. In this state, you can only execute query operations.</description></item>
         /// <item><description>If the association status is <b>BINDED</b>, the Internet Shared Bandwidth instance is associated with the EIP.</description></item>
         /// </list>
@@ -751,15 +751,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before invoking this operation, note the following:</para>
+        /// <para>Before you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>When you invoke this operation to add an EIP to an Internet Shared Bandwidth instance, the EIP must meet the following conditions:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
+        /// <item><description>The billing method of the EIP is pay-as-you-go.</description></item>
         /// <item><description>The EIP is in the same region as the Internet Shared Bandwidth instance.</description></item>
         /// <item><description>The line type of the EIP is the same as that of the Internet Shared Bandwidth instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP is not yet added to the Internet Shared Bandwidth instance. The addition task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
+        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP is not yet added to the Internet Shared Bandwidth instance. The addition node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
         /// <item><description>If the association status is <b>BINDING</b>, the Internet Shared Bandwidth instance is being associated with the EIP. In this state, you can only execute query operations.</description></item>
         /// <item><description>If the association status is <b>BINDED</b>, the Internet Shared Bandwidth instance is associated with the EIP.</description></item>
         /// </list>
@@ -847,15 +847,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before invoking this operation, note the following:</para>
+        /// <para>Before you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>When you invoke this operation to add an EIP to an Internet Shared Bandwidth instance, the EIP must meet the following conditions:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
+        /// <item><description>The billing method of the EIP is pay-as-you-go.</description></item>
         /// <item><description>The EIP is in the same region as the Internet Shared Bandwidth instance.</description></item>
         /// <item><description>The line type of the EIP is the same as that of the Internet Shared Bandwidth instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP is not yet added to the Internet Shared Bandwidth instance. The addition task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
+        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP is not yet added to the Internet Shared Bandwidth instance. The addition node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
         /// <item><description>If the association status is <b>BINDING</b>, the Internet Shared Bandwidth instance is being associated with the EIP. In this state, you can only execute query operations.</description></item>
         /// <item><description>If the association status is <b>BINDED</b>, the Internet Shared Bandwidth instance is associated with the EIP.</description></item>
         /// </list>
@@ -883,15 +883,15 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before invoking this operation, note the following:</para>
+        /// <para>Before you invoke this operation, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>When you invoke this operation to add an EIP to an Internet Shared Bandwidth instance, the EIP must meet the following conditions:<list type="bullet">
-        /// <item><description>The EIP uses the pay-as-you-go billing method.</description></item>
+        /// <item><description>The billing method of the EIP is pay-as-you-go.</description></item>
         /// <item><description>The EIP is in the same region as the Internet Shared Bandwidth instance.</description></item>
         /// <item><description>The line type of the EIP is the same as that of the Internet Shared Bandwidth instance.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP is not yet added to the Internet Shared Bandwidth instance. The addition task is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
+        /// <item><description>The <b>AddCommonBandwidthPackageIp</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP is not yet added to the Internet Shared Bandwidth instance. The addition node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120309.html">DescribeCommonBandwidthPackages</a> to query the association status between the Internet Shared Bandwidth instance and the EIP. <list type="bullet">
         /// <item><description>If the association status is <b>BINDING</b>, the Internet Shared Bandwidth instance is being associated with the EIP. In this state, you can only execute query operations.</description></item>
         /// <item><description>If the association status is <b>BINDED</b>, the Internet Shared Bandwidth instance is associated with the EIP.</description></item>
         /// </list>
@@ -10226,7 +10226,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>CreateDhcpOptionsSet</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID but the DHCP options set is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the creation status of the DHCP options set:<list type="bullet">
         /// <item><description>If the vSwitch is in the <b>Pending</b> state, the DHCP options set is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the DHCP options set is active.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Active</b> state, the DHCP options set is active.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10335,7 +10335,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>CreateDhcpOptionsSet</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID but the DHCP options set is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the creation status of the DHCP options set:<list type="bullet">
         /// <item><description>If the vSwitch is in the <b>Pending</b> state, the DHCP options set is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the DHCP options set is active.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Active</b> state, the DHCP options set is active.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10444,7 +10444,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>CreateDhcpOptionsSet</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID but the DHCP options set is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the creation status of the DHCP options set:<list type="bullet">
         /// <item><description>If the vSwitch is in the <b>Pending</b> state, the DHCP options set is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the DHCP options set is active.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Active</b> state, the DHCP options set is active.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -10473,7 +10473,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description><b>CreateDhcpOptionsSet</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID but the DHCP options set is not yet created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/448820.html">GetDhcpOptionsSet</a> to query the creation status of the DHCP options set:<list type="bullet">
         /// <item><description>If the vSwitch is in the <b>Pending</b> state, the DHCP options set is being configured.</description></item>
-        /// <item><description>If the vSwitch is in the <b>Available</b> state, the DHCP options set is active.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Active</b> state, the DHCP options set is active.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12155,7 +12155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you call this operation, the system returns an instance ID, but the flow log has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12274,7 +12274,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you call this operation, the system returns an instance ID, but the flow log has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12393,7 +12393,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you call this operation, the system returns an instance ID, but the flow log has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -12420,7 +12420,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the flow log is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
+        /// <para><em>CreateFlowLog</em>* is an asynchronous operation. After you call this operation, the system returns an instance ID, but the flow log has not been created yet. The creation task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/448670.html">DescribeFlowLogs</a> to query the creation status of the flow log:</para>
         /// <list type="bullet">
         /// <item><description>If the flow log is in the <b>Activating</b> state, the flow log is being created.</description></item>
         /// <item><description>If the flow log is in the <b>Active</b> state, the flow log is created and activated.</description></item>
@@ -17702,22 +17702,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates custom route entries in a route table of a VPC vRouter in a batch.</para>
+        /// <para>Creates custom route entries in a route table of a vRouter in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system continues to run the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the route:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route is created.</description></item>
+        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the custom route entry has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being created.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntries</b> does not support concurrent batch creation of custom route entries in the same VPC.
-        /// <b>Before you add custom route entries to a route table of a VPC vRouter, take note of the following items:</b></description></item>
+        /// <item><description><b>CreateRouteEntries</b> does not support concurrent bulk creation of custom route entries in the same VPC.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b></description></item>
         /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot be the same as, contain, or be contained by the CIDR block of a vSwitch in the VPC.</description></item>
-        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to or be contained by 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.</description></item>
         /// <item><description>The destination CIDR blocks (<b>DstCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DstCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHop</b>).</description></item>
@@ -17792,22 +17792,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates custom route entries in a route table of a VPC vRouter in a batch.</para>
+        /// <para>Creates custom route entries in a route table of a vRouter in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system continues to run the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the route:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route is created.</description></item>
+        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the custom route entry has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being created.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntries</b> does not support concurrent batch creation of custom route entries in the same VPC.
-        /// <b>Before you add custom route entries to a route table of a VPC vRouter, take note of the following items:</b></description></item>
+        /// <item><description><b>CreateRouteEntries</b> does not support concurrent bulk creation of custom route entries in the same VPC.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b></description></item>
         /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot be the same as, contain, or be contained by the CIDR block of a vSwitch in the VPC.</description></item>
-        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to or be contained by 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.</description></item>
         /// <item><description>The destination CIDR blocks (<b>DstCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DstCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHop</b>).</description></item>
@@ -17882,22 +17882,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates custom route entries in a route table of a VPC vRouter in a batch.</para>
+        /// <para>Creates custom route entries in a route table of a vRouter in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system continues to run the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the route:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route is created.</description></item>
+        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the custom route entry has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being created.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntries</b> does not support concurrent batch creation of custom route entries in the same VPC.
-        /// <b>Before you add custom route entries to a route table of a VPC vRouter, take note of the following items:</b></description></item>
+        /// <item><description><b>CreateRouteEntries</b> does not support concurrent bulk creation of custom route entries in the same VPC.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b></description></item>
         /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot be the same as, contain, or be contained by the CIDR block of a vSwitch in the VPC.</description></item>
-        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to or be contained by 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.</description></item>
         /// <item><description>The destination CIDR blocks (<b>DstCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DstCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHop</b>).</description></item>
@@ -17920,22 +17920,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates custom route entries in a route table of a VPC vRouter in a batch.</para>
+        /// <para>Creates custom route entries in a route table of a vRouter in bulk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system continues to run the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the route:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route is created.</description></item>
+        /// <item><description><b>CreateRouteEntries</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the custom route entry has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the creation status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being created.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntries</b> does not support concurrent batch creation of custom route entries in the same VPC.
-        /// <b>Before you add custom route entries to a route table of a VPC vRouter, take note of the following items:</b></description></item>
+        /// <item><description><b>CreateRouteEntries</b> does not support concurrent bulk creation of custom route entries in the same VPC.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b></description></item>
         /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
         /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot be the same as, contain, or be contained by the CIDR block of a vSwitch in the VPC.</description></item>
-        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to or be contained by 100.64.0.0/10.</description></item>
+        /// <item><description>The destination CIDR block (<b>DstCidrBlock</b>) of a custom route entry cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.</description></item>
         /// <item><description>The destination CIDR blocks (<b>DstCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
         /// <item><description>If the specified destination CIDR block (<b>DstCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHop</b>).</description></item>
@@ -17964,23 +17964,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntry</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the route creation status:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route has been created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send a request, the system returns an instance ID while the custom route entry is still being added in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being added.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been added.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntry</b> does not support concurrent creation of custom route entries in the same VPC or the same VBR.</description></item>
-        /// <item><description><b>CreateRouteEntry</b> may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to a route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of entries in the prefix list route. The sum cannot exceed the route quota.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent addition of custom route entries in the same VPC or the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the request as appropriate.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list route. The sum cannot exceed the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain up to 200 custom route entries.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as a vSwitch CIDR block in the VPC. It can contain a vSwitch CIDR block but cannot be contained by a vSwitch CIDR block.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of a vSwitch but cannot be contained by the CIDR block of a vSwitch.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
-        /// <item><description>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.</description></item>
+        /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
         /// <item><description>You can configure ECMP routing by using the <b>NextHopList</b> parameter settings:<list type="bullet">
@@ -17991,26 +17991,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to a route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain up to 200 custom route entries.  </para>
+        /// <item><description><para>A route table can contain a maximum of 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.   </para>
+        /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.   </para>
         /// </description></item>
         /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
-        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
+        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be the vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create route entries on a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
+        /// <item><description><para>You can add route entries to a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only Normal (non-ECMP) routes are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only non-ECMP route entries are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18112,23 +18112,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntry</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the route creation status:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route has been created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send a request, the system returns an instance ID while the custom route entry is still being added in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being added.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been added.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntry</b> does not support concurrent creation of custom route entries in the same VPC or the same VBR.</description></item>
-        /// <item><description><b>CreateRouteEntry</b> may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to a route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of entries in the prefix list route. The sum cannot exceed the route quota.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent addition of custom route entries in the same VPC or the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the request as appropriate.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list route. The sum cannot exceed the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain up to 200 custom route entries.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as a vSwitch CIDR block in the VPC. It can contain a vSwitch CIDR block but cannot be contained by a vSwitch CIDR block.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of a vSwitch but cannot be contained by the CIDR block of a vSwitch.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
-        /// <item><description>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.</description></item>
+        /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
         /// <item><description>You can configure ECMP routing by using the <b>NextHopList</b> parameter settings:<list type="bullet">
@@ -18139,26 +18139,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to a route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain up to 200 custom route entries.  </para>
+        /// <item><description><para>A route table can contain a maximum of 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.   </para>
+        /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.   </para>
         /// </description></item>
         /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
-        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
+        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be the vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create route entries on a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
+        /// <item><description><para>You can add route entries to a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only Normal (non-ECMP) routes are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only non-ECMP route entries are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18260,23 +18260,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntry</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the route creation status:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route has been created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send a request, the system returns an instance ID while the custom route entry is still being added in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being added.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been added.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntry</b> does not support concurrent creation of custom route entries in the same VPC or the same VBR.</description></item>
-        /// <item><description><b>CreateRouteEntry</b> may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to a route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of entries in the prefix list route. The sum cannot exceed the route quota.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent addition of custom route entries in the same VPC or the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the request as appropriate.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list route. The sum cannot exceed the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain up to 200 custom route entries.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as a vSwitch CIDR block in the VPC. It can contain a vSwitch CIDR block but cannot be contained by a vSwitch CIDR block.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of a vSwitch but cannot be contained by the CIDR block of a vSwitch.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
-        /// <item><description>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.</description></item>
+        /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
         /// <item><description>You can configure ECMP routing by using the <b>NextHopList</b> parameter settings:<list type="bullet">
@@ -18287,26 +18287,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to a route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain up to 200 custom route entries.  </para>
+        /// <item><description><para>A route table can contain a maximum of 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.   </para>
+        /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.   </para>
         /// </description></item>
         /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
-        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
+        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be the vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create route entries on a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
+        /// <item><description><para>You can add route entries to a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only Normal (non-ECMP) routes are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only non-ECMP route entries are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18332,23 +18332,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>CreateRouteEntry</b> is an asynchronous operation. After you invoke this operation, the system returns an instance ID, but the route has not been created yet. The system is still running the task in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the route creation status:<list type="bullet">
-        /// <item><description>If the route is in the <b>Creating</b> state, the route is being created.</description></item>
-        /// <item><description>If the route is in the <b>Created</b> state, the route has been created.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation is asynchronous. After you send a request, the system returns an instance ID while the custom route entry is still being added in the background. You can invoke <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the status of the custom route entry:<list type="bullet">
+        /// <item><description>If the custom route entry is in the <b>Creating</b> state, the custom route entry is being added.</description></item>
+        /// <item><description>If the custom route entry is in the <b>Created</b> state, the custom route entry has been added.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>CreateRouteEntry</b> does not support concurrent creation of custom route entries in the same VPC or the same VBR.</description></item>
-        /// <item><description><b>CreateRouteEntry</b> may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the operation as needed.
-        /// <b>When you use this operation to add a custom route entry to a route table of a vRouter, take note of the following items:</b><remarks>
-        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of entries in the prefix list route. The sum cannot exceed the route quota.</para>
+        /// <item><description>The <b>CreateRouteEntry</b> operation does not support concurrent addition of custom route entries in the same VPC or the same VBR.</description></item>
+        /// <item><description>The <b>CreateRouteEntry</b> operation may return the <b>TaskConflict</b> error code in concurrent scenarios. Retry the request as appropriate.
+        /// <b>When you use this operation to add custom route entries to a route table of a vRouter, take note of the following items:</b><remarks>
+        /// <para>When the route to be added is a prefix list route, the route quota is calculated based on the sum of existing routes and the maximum number of route entries in the prefix list route. The sum cannot exceed the route quota limit.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>A route table can contain up to 200 custom route entries.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as a vSwitch CIDR block in the VPC. It can contain a vSwitch CIDR block but cannot be contained by a vSwitch CIDR block.</description></item>
-        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description>A route table can contain a maximum of 200 custom route entries.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry cannot be the same as the CIDR block of a vSwitch in the VPC. The destination CIDR block can contain the CIDR block of a vSwitch but cannot be contained by the CIDR block of a vSwitch.</description></item>
+        /// <item><description>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></description></item>
-        /// <item><description>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.</description></item>
-        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.</description></item>
+        /// <item><description>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).</description></item>
+        /// <item><description>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.</description></item>
         /// <item><description>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).</description></item>
         /// <item><description>The next hop (<b>NextHopId</b>) of a custom route entry must be in the same VPC as the route table.</description></item>
         /// <item><description>You can configure ECMP routing by using the <b>NextHopList</b> parameter settings:<list type="bullet">
@@ -18359,26 +18359,26 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para><b>When you use this operation to add a custom route entry to a route table of a VBR, take note of the following items:</b></para>
+        /// <para><b>When you use this operation to add custom route entries to a route table of a Virtual Border Router (VBR), take note of the following items:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>A route table can contain up to 200 custom route entries.  </para>
+        /// <item><description><para>A route table can contain a maximum of 200 custom route entries.  </para>
         /// </description></item>
         /// <item><description><para>The <b>NextHopList</b> parameter is not supported.   </para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the cloud service system route CIDR block <c>100.64.0.0/10</c>, but cannot be the same as this CIDR block.
+        /// <item><description><para>The destination CIDR block (<b>DestinationCidrBlock</b>) of a custom route entry can be a more specific CIDR block than the system route CIDR block <c>100.64.0.0/10</c> used by cloud services, but cannot be the same as this CIDR block.
         /// <notice>The system route with the destination CIDR block <c>100.64.0.0/10</c> is used for communication among cloud services within the VPC. Exercise caution when you configure a more specific route. Incorrect configurations may cause cloud services to become inaccessible.</notice></para>
         /// </description></item>
-        /// <item><description><para>The destination CIDR blocks (<b>DestinationCidrBlock</b>) of route entries in the same route table must be unique.   </para>
+        /// <item><description><para>Route entries in the same route table cannot have the same destination CIDR block (<b>DestinationCidrBlock</b>).   </para>
         /// </description></item>
-        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, it is treated as a CIDR block with a 32-bit mask.   </para>
+        /// <item><description><para>If the specified destination CIDR block (<b>DestinationCidrBlock</b>) is an IP address, the system processes it with a 32-bit mask.   </para>
         /// </description></item>
         /// <item><description><para>Multiple custom route entries can point to the same next hop (<b>NextHopId</b>).  </para>
         /// </description></item>
-        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be a vRouter interface associated with the VBR.  </para>
+        /// <item><description><para>The next hop (<b>NextHopId</b>) of a custom route entry must be the vRouter interface associated with the VBR.  </para>
         /// </description></item>
-        /// <item><description><para>You can create route entries on a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
+        /// <item><description><para>You can add route entries to a VBR only when the VBR is in the <b>Active</b> state, the corresponding Express Connect circuit is in the <b>Enabled</b> state, and the circuit is not locked due to overdue payment.  </para>
         /// </description></item>
-        /// <item><description><para>Only Normal (non-ECMP) routes are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
+        /// <item><description><para>Only non-ECMP route entries are supported. Specify the <b>DestinationCidrBlock</b>, <b>NextHopType</b>, and <b>NextHopId</b> parameters. Do not specify the <b>NextHopList</b> parameter.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -21274,20 +21274,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reserved CIDR block for a vSwitch.</para>
+        /// <para>Creates a reserved CIDR block for a vSwitch by calling the CreateVSwitchCidrReservation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you invoke this operation to create a reserved CIDR block for a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The maximum number of reserved IPv4 and IPv6 CIDR blocks in a VPC is 100 each.</description></item>
+        /// <item><description>The maximum number of reserved IPv4 CIDR blocks and reserved IPv6 CIDR blocks in a VPC is 100 each.</description></item>
         /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.<list type="bullet">
-        /// <item><description>IPv4 CIDR block: The first and last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
-        /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv4 CIDR block: The first IP address and the last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv6 CIDR block: The first IP address and the last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21394,20 +21394,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reserved CIDR block for a vSwitch.</para>
+        /// <para>Creates a reserved CIDR block for a vSwitch by calling the CreateVSwitchCidrReservation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you invoke this operation to create a reserved CIDR block for a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The maximum number of reserved IPv4 and IPv6 CIDR blocks in a VPC is 100 each.</description></item>
+        /// <item><description>The maximum number of reserved IPv4 CIDR blocks and reserved IPv6 CIDR blocks in a VPC is 100 each.</description></item>
         /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.<list type="bullet">
-        /// <item><description>IPv4 CIDR block: The first and last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
-        /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv4 CIDR block: The first IP address and the last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv6 CIDR block: The first IP address and the last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21514,20 +21514,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reserved CIDR block for a vSwitch.</para>
+        /// <para>Creates a reserved CIDR block for a vSwitch by calling the CreateVSwitchCidrReservation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you invoke this operation to create a reserved CIDR block for a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The maximum number of reserved IPv4 and IPv6 CIDR blocks in a VPC is 100 each.</description></item>
+        /// <item><description>The maximum number of reserved IPv4 CIDR blocks and reserved IPv6 CIDR blocks in a VPC is 100 each.</description></item>
         /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.<list type="bullet">
-        /// <item><description>IPv4 CIDR block: The first and last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
-        /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv4 CIDR block: The first IP address and the last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv6 CIDR block: The first IP address and the last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -21550,20 +21550,20 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a reserved CIDR block for a vSwitch.</para>
+        /// <para>Creates a reserved CIDR block for a vSwitch by calling the CreateVSwitchCidrReservation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>When you invoke this operation to create a reserved CIDR block for a vSwitch, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The maximum number of reserved IPv4 and IPv6 CIDR blocks in a VPC is 100 each.</description></item>
+        /// <item><description>The maximum number of reserved IPv4 CIDR blocks and reserved IPv6 CIDR blocks in a VPC is 100 each.</description></item>
         /// <item><description>A reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.<list type="bullet">
-        /// <item><description>IPv4 CIDR block: The first and last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
-        /// <item><description>IPv6 CIDR block: The first and last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv4 CIDR block: The first IP address and the last three IP addresses of the vSwitch are system reserved IP addresses.</description></item>
+        /// <item><description>IPv6 CIDR block: The first IP address and the last nine IP addresses of the vSwitch are system reserved IP addresses.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The background node is still in progress. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
+        /// <item><description>The <b>CreateVSwitchCidrReservation</b> operation is asynchronous. After you send a request, the system returns an instance ID, but the reserved CIDR block for a vSwitch has not been created. The system continues to run the background node. You can invoke <a href="https://help.aliyun.com/document_detail/610155.html">ListVSwitchCidrReservations</a> to query the creation status of the reserved CIDR block for a vSwitch:<list type="bullet">
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigning</b> state, the reserved CIDR block for a vSwitch is being allocated.</description></item>
         /// <item><description>If the reserved CIDR block for a vSwitch is in the <b>Assigned</b> state, the reserved CIDR block for a vSwitch has been allocated.</description></item>
         /// </list>
@@ -24822,9 +24822,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>For single-tunnel VPN gateways:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// <item><description>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After you send a request, the system returns the policy-based route information, but the route has not been created yet. The system continues to create the route in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the creation status of the policy-based routing node:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
@@ -24944,9 +24947,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>For single-tunnel VPN gateways:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// <item><description>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After you send a request, the system returns the policy-based route information, but the route has not been created yet. The system continues to create the route in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the creation status of the policy-based routing node:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
@@ -25066,9 +25072,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>For single-tunnel VPN gateways:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// <item><description>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After you send a request, the system returns the policy-based route information, but the route has not been created yet. The system continues to create the route in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the creation status of the policy-based routing node:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
@@ -25104,9 +25113,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Policy-based routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add policy-based routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. Such policy-based routes may cause the console to fail to display instance status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnPbrRouteEntry</b> operation is asynchronous. After you invoke this operation, the system returns the information about the policy-based route, but the routing has not been created. The creation node is still running in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query instance status of the VPN gateway instance to determine the creation status of the policy-based route:<list type="bullet">
+        /// <item><description>For single-tunnel VPN gateways:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// <item><description>CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a policy-based route.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><b>CreateVpnPbrRouteEntry</b> is an asynchronous operation. After you send a request, the system returns the policy-based route information, but the route has not been created yet. The system continues to create the route in the background. You can invoke the <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> operation to query the instance status of the VPN gateway to determine the creation status of the policy-based routing node:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the policy-based route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the policy-based route is created.</description></item>
         /// </list>
@@ -25130,7 +25142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a destination route for a VPN gateway instance by calling the CreateVpnRouteEntry operation. After a destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
+        /// <para>Creates a destination route for a VPN gateway instance. After the destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25142,9 +25154,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Destination routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add destination routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. These routes may cause the console to fail to display the status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination route configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>For single-tunnel VPN gateways, CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination routing configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the destination route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the destination route is created.</description></item>
         /// </list>
@@ -25244,7 +25256,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a destination route for a VPN gateway instance by calling the CreateVpnRouteEntry operation. After a destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
+        /// <para>Creates a destination route for a VPN gateway instance. After the destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25256,9 +25268,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Destination routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add destination routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. These routes may cause the console to fail to display the status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination route configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>For single-tunnel VPN gateways, CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination routing configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the destination route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the destination route is created.</description></item>
         /// </list>
@@ -25358,7 +25370,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a destination route for a VPN gateway instance by calling the CreateVpnRouteEntry operation. After a destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
+        /// <para>Creates a destination route for a VPN gateway instance. After the destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25370,9 +25382,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Destination routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add destination routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. These routes may cause the console to fail to display the status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination route configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>For single-tunnel VPN gateways, CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination routing configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the destination route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the destination route is created.</description></item>
         /// </list>
@@ -25396,7 +25408,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a destination route for a VPN gateway instance by calling the CreateVpnRouteEntry operation. After a destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
+        /// <para>Creates a destination route for a VPN gateway instance. After the destination route is created, the VPN gateway instance matches the destination route based on the destination IP address of the traffic and then forwards the traffic based on the matched destination route.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25408,9 +25420,9 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>Destination routes whose destination CIDR block is 0.0.0.0/0 are not supported.</description></item>
-        /// <item><description>Do not add destination routes whose destination CIDR block is 100.64.0.0/10, a subnet of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. These routes may cause the console to fail to display the status of IPsec-VPN connections or cause IPsec-VPN connection negotiation to be failed.</description></item>
-        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination route configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
+        /// <item><description>0.0.0.0/0 is not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>For single-tunnel VPN gateways, CIDR blocks that overlap with 100.64.0.0/10 (including 100.64.0.0/10 itself, its subnets, and parent CIDR blocks that contain it) are not supported as the destination CIDR block of a destination route.</description></item>
+        /// <item><description>The <b>CreateVpnRouteEntry</b> operation is asynchronous. After you send a request, the system returns the destination routing configuration but the destination route is not yet created. The creation node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the creation status of the destination route:<list type="bullet">
         /// <item><description>If the VPN gateway instance is in the <b>updating</b> state, the destination route is being created.</description></item>
         /// <item><description>If the VPN gateway instance is in the <b>active</b> state, the destination route is created.</description></item>
         /// </list>
@@ -32302,21 +32314,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
+        /// <para>Deletes custom route entries in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete routing entries, note the following items: </para>
+        /// <para>When you call this operation to delete route entries, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
-        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
-        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
+        /// <item><description>Only route entries in the <b>Available</b> state can be deleted.  </description></item>
+        /// <item><description>Route entries cannot be deleted if the VPC to which the route table belongs has a vSwitch or route entry being created or deleted. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the route entry is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route entry:<list type="bullet">
+        /// <item><description>If the route entry is in the <b>Deleting</b> state, the route entry is being deleted.</description></item>
+        /// <item><description>If the specified route entry cannot be found, the route entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of route entries from route tables in the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32387,21 +32399,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
+        /// <para>Deletes custom route entries in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete routing entries, note the following items: </para>
+        /// <para>When you call this operation to delete route entries, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
-        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
-        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
+        /// <item><description>Only route entries in the <b>Available</b> state can be deleted.  </description></item>
+        /// <item><description>Route entries cannot be deleted if the VPC to which the route table belongs has a vSwitch or route entry being created or deleted. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the route entry is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route entry:<list type="bullet">
+        /// <item><description>If the route entry is in the <b>Deleting</b> state, the route entry is being deleted.</description></item>
+        /// <item><description>If the specified route entry cannot be found, the route entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of route entries from route tables in the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32472,21 +32484,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
+        /// <para>Deletes custom route entries in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete routing entries, note the following items: </para>
+        /// <para>When you call this operation to delete route entries, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
-        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
-        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
+        /// <item><description>Only route entries in the <b>Available</b> state can be deleted.  </description></item>
+        /// <item><description>Route entries cannot be deleted if the VPC to which the route table belongs has a vSwitch or route entry being created or deleted. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the route entry is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route entry:<list type="bullet">
+        /// <item><description>If the route entry is in the <b>Deleting</b> state, the route entry is being deleted.</description></item>
+        /// <item><description>If the specified route entry cannot be found, the route entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of route entries from route tables in the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32505,21 +32517,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
+        /// <para>Deletes custom route entries in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete routing entries, note the following items: </para>
+        /// <para>When you call this operation to delete route entries, take note of the following items: </para>
         /// <list type="bullet">
-        /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
-        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
-        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
+        /// <item><description>Only route entries in the <b>Available</b> state can be deleted.  </description></item>
+        /// <item><description>Route entries cannot be deleted if the VPC to which the route table belongs has a vSwitch or route entry being created or deleted. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the route entry is not yet deleted. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route entry:<list type="bullet">
+        /// <item><description>If the route entry is in the <b>Deleting</b> state, the route entry is being deleted.</description></item>
+        /// <item><description>If the specified route entry cannot be found, the route entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of route entries from route tables in the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32538,17 +32550,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a VPC vRouter or Virtual Border Router (VBR).</para>
+        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a vRouter or Virtual Border Router (VBR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete a route, note the following items:</para>
+        /// <para>When you call this operation to delete a route, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only routes in the <b>Available</b> state can be deleted.</description></item>
-        /// <item><description>A route cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or route entry.</description></item>
+        /// <item><description>A route cannot be deleted while the VPC that contains the route table is creating or deleting a vSwitch or route.</description></item>
         /// <item><description>To delete a route from the route table of a VBR, call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the <b>NextHopId</b> of the route that you want to delete, and then call this operation to delete the route.</description></item>
-        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
         /// <item><description>If the route is in the <b>Deleting</b> state, the route is being deleted.</description></item>
         /// <item><description>If the specified route cannot be found, the route is deleted.</description></item>
         /// </list>
@@ -32636,17 +32648,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a VPC vRouter or Virtual Border Router (VBR).</para>
+        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a vRouter or Virtual Border Router (VBR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete a route, note the following items:</para>
+        /// <para>When you call this operation to delete a route, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only routes in the <b>Available</b> state can be deleted.</description></item>
-        /// <item><description>A route cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or route entry.</description></item>
+        /// <item><description>A route cannot be deleted while the VPC that contains the route table is creating or deleting a vSwitch or route.</description></item>
         /// <item><description>To delete a route from the route table of a VBR, call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the <b>NextHopId</b> of the route that you want to delete, and then call this operation to delete the route.</description></item>
-        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
         /// <item><description>If the route is in the <b>Deleting</b> state, the route is being deleted.</description></item>
         /// <item><description>If the specified route cannot be found, the route is deleted.</description></item>
         /// </list>
@@ -32734,17 +32746,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a VPC vRouter or Virtual Border Router (VBR).</para>
+        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a vRouter or Virtual Border Router (VBR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete a route, note the following items:</para>
+        /// <para>When you call this operation to delete a route, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only routes in the <b>Available</b> state can be deleted.</description></item>
-        /// <item><description>A route cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or route entry.</description></item>
+        /// <item><description>A route cannot be deleted while the VPC that contains the route table is creating or deleting a vSwitch or route.</description></item>
         /// <item><description>To delete a route from the route table of a VBR, call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the <b>NextHopId</b> of the route that you want to delete, and then call this operation to delete the route.</description></item>
-        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
         /// <item><description>If the route is in the <b>Deleting</b> state, the route is being deleted.</description></item>
         /// <item><description>If the specified route cannot be found, the route is deleted.</description></item>
         /// </list>
@@ -32768,17 +32780,17 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a VPC vRouter or Virtual Border Router (VBR).</para>
+        /// <para>Invokes the DeleteRouteEntry operation to delete a route from the route table of a vRouter or Virtual Border Router (VBR).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation to delete a route, note the following items:</para>
+        /// <para>When you call this operation to delete a route, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description>Only routes in the <b>Available</b> state can be deleted.</description></item>
-        /// <item><description>A route cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or route entry.</description></item>
+        /// <item><description>A route cannot be deleted while the VPC that contains the route table is creating or deleting a vSwitch or route.</description></item>
         /// <item><description>To delete a route from the route table of a VBR, call the <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> operation to query the <b>NextHopId</b> of the route that you want to delete, and then call this operation to delete the route.</description></item>
-        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
+        /// <item><description>The <b>DeleteRouteEntry</b> operation is asynchronous. After you send a request, the system returns a request ID, but the route has not been deleted yet. The deletion task runs in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the route:<list type="bullet">
         /// <item><description>If the route is in the <b>Deleting</b> state, the route is being deleted.</description></item>
         /// <item><description>If the specified route cannot be found, the route is deleted.</description></item>
         /// </list>
@@ -71250,7 +71262,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyRouteEntry operation to modify custom route entry name, description, and route next hop.</para>
+        /// <para>Calls the ModifyRouteEntry operation to modify the name, description, and next hop of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71348,7 +71360,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyRouteEntry operation to modify custom route entry name, description, and route next hop.</para>
+        /// <para>Calls the ModifyRouteEntry operation to modify the name, description, and next hop of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71446,7 +71458,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyRouteEntry operation to modify custom route entry name, description, and route next hop.</para>
+        /// <para>Calls the ModifyRouteEntry operation to modify the name, description, and next hop of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71472,7 +71484,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes the ModifyRouteEntry operation to modify custom route entry name, description, and route next hop.</para>
+        /// <para>Calls the ModifyRouteEntry operation to modify the name, description, and next hop of a custom route entry.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -80678,23 +80690,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
+        /// <para>Redeploys the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeliver the latest prefix list instance to the associated route table.</description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID, but the latest prefix list instance has not been redelivered yet. The redelivery task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest delivery status of the prefix list instance:<list type="bullet">
-        /// <item><description>If the delivery status is <b>Modifying</b>, the latest prefix list instance is being redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>ModifyFailed</b>, the latest prefix list instance failed to be redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>Created</b>, the latest prefix list instance is redelivered.</description></item>
+        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeploy the latest prefix list instance to the associated route table.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the latest prefix list instance is not yet redeployed, and the redeployment task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest deployment status of the prefix list instance:<list type="bullet">
+        /// <item><description>If the deployment status of the prefix list instance is <b>Modifying</b>, the latest prefix list instance is being redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>ModifyFailed</b>, the latest prefix list instance failed to be redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>Created</b>, the latest prefix list instance is redeployed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry delivery of the latest prefix list instance for the same prefix list.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry of redeploying the latest prefix list instance for the same prefix list.</description></item>
         /// </list>
         /// <h2>Scenarios</h2>
-        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the failed issue on the referencing side, invoke the <b>RetryVpcPrefixListAssociation</b> operation to redeliver the latest prefix list instance.</para>
+        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the issue on the referencing side, call the <b>RetryVpcPrefixListAssociation</b> operation to redeploy the latest prefix list instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80772,23 +80784,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
+        /// <para>Redeploys the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeliver the latest prefix list instance to the associated route table.</description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID, but the latest prefix list instance has not been redelivered yet. The redelivery task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest delivery status of the prefix list instance:<list type="bullet">
-        /// <item><description>If the delivery status is <b>Modifying</b>, the latest prefix list instance is being redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>ModifyFailed</b>, the latest prefix list instance failed to be redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>Created</b>, the latest prefix list instance is redelivered.</description></item>
+        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeploy the latest prefix list instance to the associated route table.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the latest prefix list instance is not yet redeployed, and the redeployment task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest deployment status of the prefix list instance:<list type="bullet">
+        /// <item><description>If the deployment status of the prefix list instance is <b>Modifying</b>, the latest prefix list instance is being redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>ModifyFailed</b>, the latest prefix list instance failed to be redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>Created</b>, the latest prefix list instance is redeployed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry delivery of the latest prefix list instance for the same prefix list.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry of redeploying the latest prefix list instance for the same prefix list.</description></item>
         /// </list>
         /// <h2>Scenarios</h2>
-        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the failed issue on the referencing side, invoke the <b>RetryVpcPrefixListAssociation</b> operation to redeliver the latest prefix list instance.</para>
+        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the issue on the referencing side, call the <b>RetryVpcPrefixListAssociation</b> operation to redeploy the latest prefix list instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80866,23 +80878,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
+        /// <para>Redeploys the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeliver the latest prefix list instance to the associated route table.</description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID, but the latest prefix list instance has not been redelivered yet. The redelivery task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest delivery status of the prefix list instance:<list type="bullet">
-        /// <item><description>If the delivery status is <b>Modifying</b>, the latest prefix list instance is being redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>ModifyFailed</b>, the latest prefix list instance failed to be redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>Created</b>, the latest prefix list instance is redelivered.</description></item>
+        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeploy the latest prefix list instance to the associated route table.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the latest prefix list instance is not yet redeployed, and the redeployment task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest deployment status of the prefix list instance:<list type="bullet">
+        /// <item><description>If the deployment status of the prefix list instance is <b>Modifying</b>, the latest prefix list instance is being redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>ModifyFailed</b>, the latest prefix list instance failed to be redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>Created</b>, the latest prefix list instance is redeployed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry delivery of the latest prefix list instance for the same prefix list.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry of redeploying the latest prefix list instance for the same prefix list.</description></item>
         /// </list>
         /// <h2>Scenarios</h2>
-        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the failed issue on the referencing side, invoke the <b>RetryVpcPrefixListAssociation</b> operation to redeliver the latest prefix list instance.</para>
+        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the issue on the referencing side, call the <b>RetryVpcPrefixListAssociation</b> operation to redeploy the latest prefix list instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80900,23 +80912,23 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries the delivery of the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
+        /// <para>Redeploys the latest prefix list by calling the RetryVpcPrefixListAssociation operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeliver the latest prefix list instance to the associated route table.</description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID, but the latest prefix list instance has not been redelivered yet. The redelivery task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest delivery status of the prefix list instance:<list type="bullet">
-        /// <item><description>If the delivery status is <b>Modifying</b>, the latest prefix list instance is being redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>ModifyFailed</b>, the latest prefix list instance failed to be redelivered.</description></item>
-        /// <item><description>If the delivery status is <b>Created</b>, the latest prefix list instance is redelivered.</description></item>
+        /// <item><description>After you modify the information of a prefix list instance, if the route table associated with the prefix list instance does not automatically update the prefix list instance information, you can call this operation to redeploy the latest prefix list instance to the associated route table.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the latest prefix list instance is not yet redeployed, and the redeployment task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/445478.html">GetVpcPrefixListAssociations</a> to query the latest deployment status of the prefix list instance:<list type="bullet">
+        /// <item><description>If the deployment status of the prefix list instance is <b>Modifying</b>, the latest prefix list instance is being redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>ModifyFailed</b>, the latest prefix list instance failed to be redeployed.</description></item>
+        /// <item><description>If the deployment status of the prefix list instance is <b>Created</b>, the latest prefix list instance is redeployed.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry delivery of the latest prefix list instance for the same prefix list.</description></item>
+        /// <item><description>The <b>RetryVpcPrefixListAssociation</b> operation does not support concurrent retry of redeploying the latest prefix list instance for the same prefix list.</description></item>
         /// </list>
         /// <h2>Scenarios</h2>
-        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the failed issue on the referencing side, invoke the <b>RetryVpcPrefixListAssociation</b> operation to redeliver the latest prefix list instance.</para>
+        /// <para>When you modify a prefix list instance, the modification succeeds as long as the CIDR blocks are valid, no conflicting CIDR blocks exist, and the maximum number of entries for the prefix list instance is not exceeded. However, the reference may fail due to issues on the referencing side, such as quota limits or a route conflict with existing routing entries. After you resolve the issue on the referencing side, call the <b>RetryVpcPrefixListAssociation</b> operation to redeploy the latest prefix list instance.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The hostname suffix. Example: example.com.</para>
-        /// <para>After the DHCP options set is used to associate VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</para>
+        /// <para>After you associate VPC with the DHCP options set, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</para>
         /// <remarks>
-        /// <para>If you do not specify DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</para>
+        /// <para>If you do not specify DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud by default (100.100.2.136 and 100.100.2.138).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,9 +84,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The lease time of the IPv6 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
         /// </description></item>
-        /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -103,9 +103,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The lease time of the IPv4 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the lease time is in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
+        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
         /// </description></item>
-        /// <item><description><para>If the lease time is in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
+        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the DHCP options set resides.</para>
+        /// <para>The region where the DHCP options set resides.</para>
         /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

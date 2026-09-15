@@ -1,3 +1,8 @@
+2026-09-15 Version: 7.3.2
+- Update API DescribeRouteEntryList: add response parameters Body.TotalCount.
+- Update API GetVpcPrefixListAssociations: add response parameters Body.PrefixListAssociation.$.SuppressedList.
+
+
 2026-09-04 Version: 7.3.1
 - Update API CreateVSwitch: add request parameters CidrMask.
 - Update API CreateVSwitch: add request parameters Ipv6CidrMask.
