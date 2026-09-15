@@ -203,6 +203,126 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>取消生成任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelGenerationJobResponse
+        /// </returns>
+        public CancelGenerationJobResponse CancelGenerationJobWithOptions(CancelGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelGenerationJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消生成任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelGenerationJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelGenerationJobResponse
+        /// </returns>
+        public async Task<CancelGenerationJobResponse> CancelGenerationJobWithOptionsAsync(CancelGenerationJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelGenerationJob",
+                Version = "2026-07-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelGenerationJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消生成任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelGenerationJobResponse
+        /// </returns>
+        public CancelGenerationJobResponse CancelGenerationJob(CancelGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelGenerationJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消生成任务接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelGenerationJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelGenerationJobResponse
+        /// </returns>
+        public async Task<CancelGenerationJobResponse> CancelGenerationJobAsync(CancelGenerationJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelGenerationJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a media asset category.</para>
         /// </summary>
         /// 
@@ -2480,7 +2600,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2527,7 +2647,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2574,7 +2694,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2597,7 +2717,7 @@ namespace AlibabaCloud.SDK.Yike20260707
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the status, input, parameters, and desired state results of a video translation job based on the <c>JobId</c>.</para>
+        /// <para>Queries the status, input, parameters, and final results of a video translation job by <c>JobId</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4259,12 +4379,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</para>
+        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</para>
+        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4322,12 +4442,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</para>
+        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</para>
+        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4385,12 +4505,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</para>
+        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</para>
+        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4408,12 +4528,12 @@ namespace AlibabaCloud.SDK.Yike20260707
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an asynchronous video text erasure task that supports full-video erasure, time range-based erasure, and region-specific erasure.</para>
+        /// <para>Submits an asynchronous video text removal job. Supports full-frame removal, time range–based removal, and region-based removal.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Submits an asynchronous video text erasure task. The input can be an accessible video URL or a Yike video media asset ID. You can configure the erasure time range and text regions.</para>
+        /// <para>Submits an asynchronous video text removal job. The input can be an accessible video URL or a Yike media asset ID. You can configure the removal time range and text regions.</para>
         /// </description>
         /// 
         /// <param name="request">

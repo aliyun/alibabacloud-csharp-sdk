@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public GetVideoTranslationJobResponseBodyJob Job { get; set; }
         public class GetVideoTranslationJobResponseBodyJob : TeaModel {
             /// <summary>
-            /// <para>The input video duration, in seconds.</para>
+            /// <para>The duration of the input video, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60.5</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public double? Duration { get; set; }
 
             /// <summary>
-            /// <para>The editing project ID for a single-target-language job. For multi-target-language results, retrieve the ID from Output.AiResult.ResultMap.</para>
+            /// <para>The editing project ID for single-target-language jobs. For multi-target-language results, retrieve the value from Output.AiResult.ResultMap.</para>
             /// 
             /// <b>Example:</b>
             /// <para>editing-project-001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string EditingProjectId { get; set; }
 
             /// <summary>
-            /// <para>The business error code returned when the job fails. This field is typically not returned for non-failed states.</para>
+            /// <para>The business error code returned when the job fails. This field is not returned when the job is not in a failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidInput</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The business error message returned when the job fails. This field is typically not returned for non-failed states.</para>
+            /// <para>The business error message returned when the job fails. This field is not returned when the job is not in a failed state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Input video is invalid.</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             public string JobType { get; set; }
 
             /// <summary>
-            /// <para>The job output JSON string. When the job succeeds, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</para>
+            /// <para>The job output JSON string. On success, AiResult.ResultMap organizes the final video, subtitle, and audio outputs by target language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AiResult&quot;:{&quot;ResultMap&quot;:{&quot;en&quot;:{&quot;EditingProjectId&quot;:&quot;editing-project-001&quot;,&quot;MediaURL&quot;:&quot;<a href="https://example.com/video-translation/en/result.mp4%22,%22MediaId%22:%22media-output-001%22%7D%7D%7D%7D">https://example.com/video-translation/en/result.mp4&quot;,&quot;MediaId&quot;:&quot;media-output-001&quot;}}}}</a></para>

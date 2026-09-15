@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
     public class SubmitImageGenerationJobRequest : TeaModel {
         /// <summary>
         /// <para>The aspect ratio. Valid values: 16:9 (default), 9:16, 4:3, 3:4, 1:1, and 21:9.</para>
+        /// <list type="bullet">
+        /// <item><description>qwen-image-3.0 additionally supports: 4:5, 5:4, 2:3, and 3:2.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>4:3</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string AspectRatio { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is completed no more than once, preventing duplicate operations caused by multiple retries.</para>
+        /// <para>The idempotency token. A unique, case-sensitive string of up to 32 characters. This token ensures that the request is processed only once, preventing duplicate operations caused by multiple retries.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b><b>3e761e9d11edba640c42a1b7</b></b></para>
@@ -32,9 +35,9 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         /// <summary>
         /// <para>The task input. This parameter is required. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Prompt: String. Required. The prompt for image generation.</description></item>
+        /// <item><description>Prompt: String. Required. The prompt text.</description></item>
         /// <item><description>Medias: A list of media items. Required when the task type is <c>image_to_image</c>. A maximum of 9 items are supported.<remarks>
-        /// <para>The Media struct contains the following fields: Type, the media type, String, valid value: image. URL, the download URL of the media, String. MediaId, the media asset ID, String.</para>
+        /// <para>The Media structure contains the following fields: Type, the media type (String, valid value: image). URL, the media download URL (String). MediaId, the media asset ID (String).</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         public string Input { get; set; }
 
         /// <summary>
-        /// <para>The task feature parameters. The value is a JSON string. You do not need to set this parameter.</para>
+        /// <para>The task feature parameters. The value is a JSON string. You do not need to set this parameter currently.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
