@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateVolumeInput : TeaModel {
+        /// <summary>
+        /// <para>The AgenticBucket configuration.</para>
+        /// </summary>
         [NameInMap("agenticBucketVolumeConfig")]
         [Validation(Required=false)]
         public AgenticBucketVolumeConfig AgenticBucketVolumeConfig { get; set; }
@@ -28,7 +31,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public CreateVolumeInputMountConfig MountConfig { get; set; }
         public class CreateVolumeInputMountConfig : TeaModel {
             /// <summary>
-            /// <para>The RAM role that the user grants to the cloud sandbox. After this role is set, the cloud sandbox assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</para>
+            /// <para>The RAM role that the user grants to the cloud sandbox. After the role is set, the cloud sandbox assumes this role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::1338904783509062:role/aliyunfcdefaultrole</para>

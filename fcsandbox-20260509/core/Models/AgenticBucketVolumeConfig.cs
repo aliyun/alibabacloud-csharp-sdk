@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class AgenticBucketVolumeConfig : TeaModel {
         /// <summary>
+        /// <para>AgenticBucket</para>
+        /// 
         /// <b>Example:</b>
         /// <para>absx9f61c8a-1311999136518149-cn-hangzhou-ab-apsr</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string AgenticBucket { get; set; }
 
         /// <summary>
+        /// <para>The BucketSpace of the agentic child.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bs429pop1-1311999136518149-cn-hangzhou-bs-apsr</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string BucketName { get; set; }
 
         /// <summary>
+        /// <para>The file path under the BucketSpace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/test/</para>
         /// 
@@ -37,6 +43,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string BucketPath { get; set; }
 
         /// <summary>
+        /// <para>Agentic Bucket Endpoint</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a>&quot;</para>
         /// </summary>
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the bucket is read-only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class E2BVolume : TeaModel {
+        /// <summary>
+        /// <para>The AgenticBucket configuration.</para>
+        /// </summary>
         [NameInMap("agenticBucketVolumeConfig")]
         [Validation(Required=false)]
         public AgenticBucketVolumeConfig AgenticBucketVolumeConfig { get; set; }
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public AgenticFSVolumeConfig AgenticFSVolumeConfig { get; set; }
 
         /// <summary>
-        /// <para>The time when the volume was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-10T11:05:55Z</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public E2BVolumeMountConfig MountConfig { get; set; }
         public class E2BVolumeMountConfig : TeaModel {
             /// <summary>
-            /// <para>The RAM role that the user grants to the sandboxed container. After this role is set, the sandboxed container assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the sandboxed container, such as OSS and AgenticFS.</para>
+            /// <para>The RAM role that the user grants to the cloud sandbox. After this role is set, the cloud sandbox assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::1673427197867277:role/aliyunfcdefaultrole</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// </summary>
             [NameInMap("vpcConfig")]
             [Validation(Required=false)]
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
                 public List<string> VSwitchIds { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-2ze4l2vyhej6a6dwapm4q</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The reason for the status.</para>
+        /// <para>The status reason.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string TeamID { get; set; }
 
         /// <summary>
-        /// <para>The time when the volume was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-07-10T11:05:55Z</para>
