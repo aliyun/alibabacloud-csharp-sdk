@@ -6819,7 +6819,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists partitions.</para>
+        /// <para>Lists the partitions of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6873,7 +6873,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists partitions.</para>
+        /// <para>Lists the partitions of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6927,7 +6927,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists partitions.</para>
+        /// <para>Lists the partitions of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6946,7 +6946,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists partitions.</para>
+        /// <para>Lists the partitions of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">

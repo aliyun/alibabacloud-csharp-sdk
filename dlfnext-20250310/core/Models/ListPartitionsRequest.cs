@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListPartitionsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in a single request.</para>
+        /// <para>The maximum number of records to retrieve in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</para>
+        /// <para>The pagination token used to retrieve the next page of data. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

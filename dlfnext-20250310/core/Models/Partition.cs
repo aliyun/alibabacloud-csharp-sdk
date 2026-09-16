@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? LastFileCreationTime { get; set; }
 
+        [NameInMap("options")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Options { get; set; }
+
         /// <summary>
         /// <para>The number of records.</para>
         /// 
