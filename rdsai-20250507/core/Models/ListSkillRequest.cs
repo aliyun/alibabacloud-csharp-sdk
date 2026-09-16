@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The languages supported by the skills.</para>
+        /// <para>The supported languages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh-CN: Simplified Chinese</description></item>
         /// <item><description>zh-TW: Traditional Chinese</description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The ContextDB workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000000-0000-4000-8000-000000000001</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

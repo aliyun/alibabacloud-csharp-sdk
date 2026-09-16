@@ -10,37 +10,34 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateSkillRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the skill.</para>
+        /// <para>The content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;MySQL&quot;: &quot;MySQL 优化指南...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL 优化指南...&quot;}</para>
+        /// <para>{&quot;MySQL&quot;: &quot;MySQL optimization guide...&quot;,&quot;PostgreSQL&quot;: &quot;PostgreSQL optimization guide...&quot;}</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Dictionary<string, object> Content { get; set; }
 
         /// <summary>
-        /// <para>The list of database engines.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The list of database types.</para>
         /// </summary>
         [NameInMap("Dbtypes")]
         [Validation(Required=false)]
         public List<string> Dbtypes { get; set; }
 
         /// <summary>
-        /// <para>The description of the skill. It can be up to 1000 characters in length.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The Skill description. The description can be up to 1000 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SQL 查询优化技能。</para>
+        /// <para>SQL query optimization skill</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill, which can contain only lowercase letters, numbers, and hyphens.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The Skill name. The name can contain only lowercase letters, digits, and hyphens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>query-optimization</para>
@@ -48,6 +45,36 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The Skill upload session ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>upload-example</para>
+        /// </summary>
+        [NameInMap("UploadId")]
+        [Validation(Required=false)]
+        public string UploadId { get; set; }
+
+        /// <summary>
+        /// <para>The Skill upload session token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>token-example</para>
+        /// </summary>
+        [NameInMap("UploadToken")]
+        [Validation(Required=false)]
+        public string UploadToken { get; set; }
+
+        /// <summary>
+        /// <para>The ContextDB workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000000-0000-4000-8000-000000000001</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

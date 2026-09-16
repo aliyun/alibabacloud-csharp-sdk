@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
+        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inline</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The task input.</para>
+        /// <para>The task inputs.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
@@ -105,6 +105,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The tool approval call ID for resuming execution. Pass this parameter after all decisions in the current approval round are completed in the console to continue the interrupted ChatMessage Loop. Do not pass this parameter for regular conversations.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>call-example</para>
+            /// </summary>
+            [NameInMap("ResumeCallId")]
+            [Validation(Required=false)]
+            public string ResumeCallId { get; set; }
+
+            /// <summary>
             /// <para>The thinking depth.</para>
             /// 
             /// <b>Example:</b>
@@ -124,6 +134,26 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Timezone { get; set; }
 
+            /// <summary>
+            /// <para>The tool approval mode for the current conversation. Valid values: read_only (read-only, write tools are rejected), manual (write tools require manual approval), and auto (the approval sub-agent automatically determines the action. If the result is needs_human, the approval is escalated to manual review). When this parameter is passed, the approval mode of the current conversation is updated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>manual</para>
+            /// </summary>
+            [NameInMap("ToolApprovalMode")]
+            [Validation(Required=false)]
+            public string ToolApprovalMode { get; set; }
+
+            /// <summary>
+            /// <para>The ContextDB workspace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>00000000-0000-4000-8000-000000000001</para>
+            /// </summary>
+            [NameInMap("WorkspaceId")]
+            [Validation(Required=false)]
+            public string WorkspaceId { get; set; }
+
         }
 
         /// <summary>
@@ -138,10 +168,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The query content.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
+        /// <para>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

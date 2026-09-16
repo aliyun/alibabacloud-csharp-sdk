@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the historical conversation.</para>
+            /// <para>The historical conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60b335ca-124d-4ee1-864b-de554987****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The conversation introduction.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试搜索RDS资源</para>
+            /// <para>Test searching for RDS resources</para>
             /// </summary>
             [NameInMap("Introduction")]
             [Validation(Required=false)]
@@ -51,14 +51,30 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? IsRunning { get; set; }
 
             /// <summary>
-            /// <para>The name of the historical conversation.</para>
+            /// <para>The historical conversation name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>搜索RDS资源。</para>
+            /// <para>Search for RDS resources</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            /// <summary>
+            /// <para>The session status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>idle: The session is idle.</description></item>
+            /// <item><description>running: The session is generating a response.</description></item>
+            /// <item><description>pending_approval: The session is waiting for approval or manual review.</description></item>
+            /// </list>
+            /// <para>If both pending_approval and running conditions are met, pending_approval is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>idle</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
 
             [NameInMap("UpdatedAt")]
             [Validation(Required=false)]

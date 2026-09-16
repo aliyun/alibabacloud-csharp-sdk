@@ -13,11 +13,31 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The answer content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and capacity expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for a specific instance, please let me know your specific requirements!</para>
+        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and storage expansion is not needed at this time. If you need to view the detailed configuration, performance monitoring, or perform other operations for an instance, let me know your specific requirements!</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public string Answer { get; set; }
+
+        /// <summary>
+        /// <para>The tool invocation approval status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pending</para>
+        /// </summary>
+        [NameInMap("ApprovalStatus")]
+        [Validation(Required=false)]
+        public string ApprovalStatus { get; set; }
+
+        /// <summary>
+        /// <para>The tool invocation ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>call-example</para>
+        /// </summary>
+        [NameInMap("CallId")]
+        [Validation(Required=false)]
+        public string CallId { get; set; }
 
         /// <summary>
         /// <para>The conversation ID.</para>
@@ -38,6 +58,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("CreatedAt")]
         [Validation(Required=false)]
         public long? CreatedAt { get; set; }
+
+        /// <summary>
+        /// <para>The tool invocation description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Search ContextDB records</para>
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// <para>The event.</para>
@@ -73,7 +103,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Will be deprecated in the future, no need to pay attention</para>
+        /// <para>This field will be deprecated in the future. Ignore it</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
@@ -90,6 +120,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The tool approval round ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>round-example</para>
+        /// </summary>
+        [NameInMap("RoundId")]
+        [Validation(Required=false)]
+        public string RoundId { get; set; }
+
+        /// <summary>
         /// <para>The asynchronous task ID.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +138,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        /// <summary>
+        /// <para>The tool invocation parameters.</para>
+        /// </summary>
+        [NameInMap("ToolArguments")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> ToolArguments { get; set; }
+
+        /// <summary>
+        /// <para>The tool name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>contextdb.search</para>
+        /// </summary>
+        [NameInMap("ToolName")]
+        [Validation(Required=false)]
+        public string ToolName { get; set; }
 
     }
 

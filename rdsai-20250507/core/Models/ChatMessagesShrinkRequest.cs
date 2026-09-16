@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of event = message. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
+        /// <para>The event output type. Valid values: inline and separate. Default value: inline. When set to inline, tool invocation events, sub-node events, and document events are included in the answer field of the event = message response. When set to separate, tool invocation events, sub-node events, and document events each have their own event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inline</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string FilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The task input.</para>
+        /// <para>The task inputs.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
@@ -52,10 +52,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <para>The query content.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
+        /// <para>Check the disk usage of instance rm-bp14as9914vd3**** and whether storage expansion is needed</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string FirstId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paging query. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,6 +42,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("Limit")]
         [Validation(Required=false)]
         public long? Limit { get; set; }
+
+        /// <summary>
+        /// <para>The ContextDB workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000000-0000-4000-8000-000000000001</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Limit { get; set; }
 
         /// <summary>
-        /// <para>The favorite pinning flag for the application.</para>
+        /// <para>The pinned bookmark flag for the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,6 +48,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
+
+        /// <summary>
+        /// <para>The ContextDB workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>00000000-0000-4000-8000-000000000001</para>
+        /// </summary>
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

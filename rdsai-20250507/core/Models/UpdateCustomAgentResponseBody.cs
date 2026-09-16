@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateCustomAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether tools are enabled.</para>
+        /// <para>Specifies whether to enable tools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EnableTools { get; set; }
 
         /// <summary>
-        /// <para>AgentId.</para>
+        /// <para>AgentId。</para>
         /// 
         /// <b>Example:</b>
         /// <para>82cf3d62-0add-47bd-869f-877131f7****</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom agent.</para>
+        /// <para>The name of the dedicated agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查询实例列表Agent</para>
+        /// <para>QueryInstanceListAgent</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of associated skill details.</para>
+        /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
         public List<UpdateCustomAgentResponseBodySkills> Skills { get; set; }
@@ -75,14 +78,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The system prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我是您用来查询实例列表的专属Agent</para>
+        /// <para>I am your dedicated agent for querying instance lists</para>
         /// </summary>
         [NameInMap("SystemPrompt")]
         [Validation(Required=false)]
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The tools that the custom agent can use.</para>
+        /// <para>The tool information.</para>
         /// </summary>
         [NameInMap("Tools")]
         [Validation(Required=false)]

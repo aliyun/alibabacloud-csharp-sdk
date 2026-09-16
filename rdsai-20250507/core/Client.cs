@@ -24,17 +24,9 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 {"cn-wulanchabu", "rdsai.aliyuncs.com"},
                 {"cn-shenzhen", "rdsai.aliyuncs.com"},
                 {"cn-beijing", "rdsai.aliyuncs.com"},
-                {"ap-northeast-1", "rdsai.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "rdsai.cn-chengdu.aliyuncs.com"},
                 {"cn-shanghai", "rdsai.aliyuncs.com"},
                 {"cn-guangzhou", "rdsai.aliyuncs.com"},
-                {"cn-hongkong", "rdsai.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "rdsai.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "rdsai.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-5", "rdsai.ap-southeast-5.aliyuncs.com"},
                 {"cn-hangzhou", "rdsai.aliyuncs.com"},
-                {"us-west-1", "rdsai.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "rdsai.eu-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("rdsai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -257,6 +249,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["TaskId"] = request.TaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -298,6 +294,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2368,7 +2368,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user-defined skill.</para>
+        /// <para>Creates a user-defined Skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2411,6 +2411,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                query["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadToken))
+            {
+                query["UploadToken"] = request.UploadToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2432,7 +2444,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user-defined skill.</para>
+        /// <para>Creates a user-defined Skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2475,6 +2487,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadId))
+            {
+                query["UploadId"] = request.UploadId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadToken))
+            {
+                query["UploadToken"] = request.UploadToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -2496,7 +2520,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user-defined skill.</para>
+        /// <para>Creates a user-defined Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2514,7 +2538,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a user-defined skill.</para>
+        /// <para>Creates a user-defined Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3164,7 +3188,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the dedicated agent created by a user.</para>
+        /// <para>Deletes a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3206,7 +3230,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the dedicated agent created by a user.</para>
+        /// <para>Deletes a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3248,7 +3272,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the dedicated agent created by a user.</para>
+        /// <para>Deletes a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3266,7 +3290,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the dedicated agent created by a user.</para>
+        /// <para>Deletes a dedicated agent created by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3572,7 +3596,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified skill.</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3592,6 +3616,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
             {
                 query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3614,7 +3642,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified skill.</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3634,6 +3662,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
             {
                 query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3656,7 +3688,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified skill.</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3674,7 +3706,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified skill.</para>
+        /// <para>Deletes a specified Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7281,6 +7313,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["SortBy"] = request.SortBy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7334,6 +7370,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
             {
                 query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7681,6 +7721,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Limit"] = request.Limit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -7734,6 +7778,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
             {
                 query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8224,7 +8272,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
+        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8249,6 +8297,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["SkillId"] = request.SkillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8270,7 +8322,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
+        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8295,6 +8347,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["SkillId"] = request.SkillId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -8316,7 +8372,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
+        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8334,7 +8390,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a specified skill. You can obtain the details of user-defined skills or the system preset skills.</para>
+        /// <para>Retrieves the details of a specified Skill. You can retrieve your own Skills or system preset Skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9676,7 +9732,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
+        /// <para>Retrieves the custom skills of the current user and all system-preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9705,6 +9761,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9726,7 +9786,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
+        /// <para>Retrieves the custom skills of the current user and all system-preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,6 +9815,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9776,7 +9840,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
+        /// <para>Retrieves the custom skills of the current user and all system-preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9794,7 +9858,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the user-defined skills and all system preset skills of the current user.</para>
+        /// <para>Retrieves the custom skills of the current user and all system-preset skills.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11356,7 +11420,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the returned messages.</para>
+        /// <para>Modifies message feedback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11406,7 +11470,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the returned messages.</para>
+        /// <para>Modifies message feedback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11456,7 +11520,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the returned messages.</para>
+        /// <para>Modifies message feedback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11474,7 +11538,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the returned messages.</para>
+        /// <para>Modifies message feedback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14400,7 +14464,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specified skill.</para>
+        /// <para>Updates the information of a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14468,7 +14532,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specified skill.</para>
+        /// <para>Updates the information of a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14536,7 +14600,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specified skill.</para>
+        /// <para>Updates the information of a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14554,7 +14618,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a specified skill.</para>
+        /// <para>Updates the information of a specified skill.</para>
         /// </summary>
         /// 
         /// <param name="request">

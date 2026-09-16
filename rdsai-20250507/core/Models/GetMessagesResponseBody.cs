@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <para>The answer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and scaling is not required for now. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</para>
+            /// <para>The disk usage of the instance rm-bp14as9914vd3**** you queried is 23%, and no capacity expansion is needed at this time. If you need to view the detailed configurations or performance monitoring of a specific instance, or perform other operations, let me know your specific requirements!</para>
             /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
-            /// <para>The conversation ID.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9cbbe885-b240-4803-9d15-6781a3fd****</para>
@@ -50,6 +50,83 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public List<GetMessagesResponseBodyDataEvents> Events { get; set; }
             public class GetMessagesResponseBodyDataEvents : TeaModel {
+                /// <summary>
+                /// <para>The approval status of the tool calling.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pending</para>
+                /// </summary>
+                [NameInMap("ApprovalStatus")]
+                [Validation(Required=false)]
+                public string ApprovalStatus { get; set; }
+
+                /// <summary>
+                /// <para>The tool calling ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>call-example</para>
+                /// </summary>
+                [NameInMap("CallId")]
+                [Validation(Required=false)]
+                public string CallId { get; set; }
+
+                /// <summary>
+                /// <para>The session ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>conversation-example</para>
+                /// </summary>
+                [NameInMap("ConversationId")]
+                [Validation(Required=false)]
+                public string ConversationId { get; set; }
+
+                /// <summary>
+                /// <para>The description of the tool calling.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Search ContextDB records</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The message ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>message-example</para>
+                /// </summary>
+                [NameInMap("MessageId")]
+                [Validation(Required=false)]
+                public string MessageId { get; set; }
+
+                /// <summary>
+                /// <para>The tool approval round ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>round-example</para>
+                /// </summary>
+                [NameInMap("RoundId")]
+                [Validation(Required=false)]
+                public string RoundId { get; set; }
+
+                /// <summary>
+                /// <para>The parameters of the tool calling.</para>
+                /// </summary>
+                [NameInMap("ToolArguments")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> ToolArguments { get; set; }
+
+                /// <summary>
+                /// <para>The tool name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>contextdb.search</para>
+                /// </summary>
+                [NameInMap("ToolName")]
+                [Validation(Required=false)]
+                public string ToolName { get; set; }
+
                 [NameInMap("answer")]
                 [Validation(Required=false)]
                 public string Answer { get; set; }
@@ -112,13 +189,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <para>The upload file ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>file-example</para>
+                /// </summary>
+                [NameInMap("UploadFileId")]
+                [Validation(Required=false)]
+                public string UploadFileId { get; set; }
+
             }
 
             /// <summary>
             /// <para>The query statement.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>What is the disk usage of instance rm-bp14as9914vd3****, and is scaling required?</para>
+            /// <para>Disk usage of instance rm-bp14as9914vd3****, is capacity expansion needed</para>
             /// </summary>
             [NameInMap("Query")]
             [Validation(Required=false)]

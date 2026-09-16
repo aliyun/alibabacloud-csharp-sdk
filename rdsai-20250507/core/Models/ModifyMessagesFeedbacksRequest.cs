@@ -10,22 +10,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyMessagesFeedbacksRequest : TeaModel {
         /// <summary>
-        /// <para>The rating of the message.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>like</description></item>
-        /// <item><description>dislike</description></item>
-        /// </list>
+        /// <para>The feedback content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无法理解上下文；答非所问</para>
+        /// <para>Unable to understand context; irrelevant answer</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ModifyMessagesFeedbacks</b>.</para>
+        /// <para>The message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yy9rkn6q-js75-0dka-0cc2-6b5o86uj****</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The message ID.</para>
+        /// <para>The rating.</para>
         /// 
         /// <b>Example:</b>
         /// <para>like</para>
