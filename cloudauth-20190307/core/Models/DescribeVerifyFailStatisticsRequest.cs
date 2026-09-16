@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether the age is greater than 14. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>T</b>: greater than 14.</description></item>
-        /// <item><description><b>F</b>: less than 14.</description></item>
+        /// <item><description><b>T</b>: Greater than 14.</description></item>
+        /// <item><description><b>F</b>: Less than 14.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The API code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INIT_SERVICE</b>: server-side initialization failure.</description></item>
-        /// <item><description><b>INIT_DEVICE</b>: client-side failure.</description></item>
-        /// <item><description><b>VERIFY_DEVICE</b>: authentication not passed.</description></item>
+        /// <item><description><b>INIT_SERVICE</b>: Server-side initialization failure.</description></item>
+        /// <item><description><b>INIT_DEVICE</b>: Client-side failure.</description></item>
+        /// <item><description><b>VERIFY_DEVICE</b>: Authentication not passed.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <list type="bullet">
         /// <item><description>ios</description></item>
         /// <item><description>android</description></item>
-        /// <item><description>websdk.</description></item>
+        /// <item><description>websdk</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string DeviceType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in milliseconds, such as 1760630399999.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
+        /// <item><description><b>antcloudauth</b>: Financial-grade ID Verification.</description></item>
         /// <item><description><b>cloudauthst</b> (discontinued): ID Verification Enhanced Edition.</description></item>
         /// <item><description><b>cloudauth</b> (discontinued): ID Verification.</description></item>
         /// </list>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in milliseconds, such as 1760025600000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

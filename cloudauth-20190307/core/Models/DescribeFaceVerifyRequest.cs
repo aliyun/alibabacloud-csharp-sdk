@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PictureReturnType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the verification scenario.</para>
+        /// <para>The verification scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000006</para>

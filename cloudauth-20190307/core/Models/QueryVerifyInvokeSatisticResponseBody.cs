@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public List<QueryVerifyInvokeSatisticResponseBodyItemsData> Data { get; set; }
             public class QueryVerifyInvokeSatisticResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>The count of the statistical value.</para>
+                /// <para>The count of the statistics value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>The statistics date.</para>
+            /// <para>The statistics date. Format: YYYY-MM-DD. Example: 2025-10-16.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the response is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

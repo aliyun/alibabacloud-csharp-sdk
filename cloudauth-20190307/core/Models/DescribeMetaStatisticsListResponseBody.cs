@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public List<DescribeMetaStatisticsListResponseBodyItems> Items { get; set; }
         public class DescribeMetaStatisticsListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The commodity (product) code.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MOBILE_ONLINE_LENGTH</para>
@@ -37,16 +37,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition)</description></item>
             /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification</description></item>
             /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition)</description></item>
-            /// <item><description><b>MOBILE_DETECT</b>: phone number detection</description></item>
+            /// <item><description><b>MOBILE_DETECT</b>: number detection</description></item>
             /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition)</description></item>
             /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition</description></item>
             /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition</description></item>
             /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query</description></item>
-            /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
+            /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>身份证二要素</para>
+            /// <para>ID card two-element verification</para>
             /// </summary>
             [NameInMap("ApiName")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BillRate { get; set; }
 
             /// <summary>
-            /// <para>The number of successful phone number queries (exclusive to phone number detection).</para>
+            /// <para>The number of successful mobile number queries (exclusive to number detection).</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -83,21 +83,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? ChargeCount { get; set; }
 
             /// <summary>
-            /// <para>The date.</para>
+            /// <para>The date. Format: YYYY-MM-DD, such as 2015-08-24.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11/8</para>
+            /// <para>2015-08-24</para>
             /// </summary>
             [NameInMap("Date")]
             [Validation(Required=false)]
             public string Date { get; set; }
 
             /// <summary>
-            /// <para>The name of the telecommunications service provider. Valid values:</para>
+            /// <para>The carrier name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>CMCC</b>: China Mobile</description></item>
             /// <item><description><b>CUCC</b>: China Unicom</description></item>
-            /// <item><description><b>CTCC</b>: China Telecom.</description></item>
+            /// <item><description><b>CTCC</b>: China Telecom</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IspName { get; set; }
 
             /// <summary>
-            /// <para>The number of calls with no education information found.</para>
+            /// <para>The number of calls with no education record information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

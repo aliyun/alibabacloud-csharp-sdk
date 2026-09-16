@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <para>The name of the resource plan.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>实人认证流量包</para>
+            /// <para>ID Verification data transfer plan</para>
             /// </summary>
             [NameInMap("CommodityName")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CurrProportion { get; set; }
 
             /// <summary>
-            /// <para>The data transfer plan details.</para>
+            /// <para>The details of the data transfer plan.</para>
             /// </summary>
             [NameInMap("FlowDetails")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 /// <para>The name of the data transfer plan.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>实人认证流量包</para>
+                /// <para>ID Verification data transfer plan</para>
                 /// </summary>
                 [NameInMap("CommodityName")]
                 [Validation(Required=false)]
@@ -114,12 +114,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string CurrProportion { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time.</para>
+                /// <para>The expiration time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>2025-10-10 00:00:00</para>
                 /// </summary>
                 [NameInMap("ExpireDate")]
                 [Validation(Required=false)]
@@ -148,12 +146,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The effective period.</para>
+                /// <para>The effective period. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-10 00:00:00.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description></description></item>
-                /// </list>
+                /// <para>2025-10-10 00:00:00</para>
                 /// </summary>
                 [NameInMap("TakeEffectDate")]
                 [Validation(Required=false)]
@@ -204,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

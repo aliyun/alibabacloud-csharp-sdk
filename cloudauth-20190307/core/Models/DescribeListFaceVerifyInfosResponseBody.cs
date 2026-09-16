@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the facial recognition record.</para>
+            /// <para>The creation time of the facial recognition record. The value is a UNIX timestamp in milliseconds (ms), such as 1740389697000.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-10-02T11:16:06Z</para>
+            /// <para>1740389697000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]

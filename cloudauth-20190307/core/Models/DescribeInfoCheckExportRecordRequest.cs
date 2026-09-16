@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The query end time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-11 21:24:48</para>
@@ -44,18 +44,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <list type="bullet">
         /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification.</description></item>
         /// <item><description><b>ID_PERIOD</b>: ID card validity period verification.</description></item>
-        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration.</description></item>
-        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status.</description></item>
-        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition).</description></item>
-        /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition).</description></item>
-        /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification.</description></item>
-        /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition).</description></item>
-        /// <item><description><b>MOBILE_DETECT</b>: phone number detection.</description></item>
-        /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition).</description></item>
-        /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition.</description></item>
-        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition.</description></item>
-        /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query.</description></item>
-        /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
+        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: Mobile number online duration.</description></item>
+        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: Mobile number online status.</description></item>
+        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: Mobile number three-element verification (simple edition).</description></item>
+        /// <item><description><b>MOBILE_3_META</b>: Mobile number three-element verification (detailed edition).</description></item>
+        /// <item><description><b>MOBILE_2_META</b>: Mobile number two-element verification.</description></item>
+        /// <item><description><b>BANK_CARD_N_META</b>: Bank card verification (detailed edition).</description></item>
+        /// <item><description><b>MOBILE_DETECT</b>: Number detection.</description></item>
+        /// <item><description><b>VEHICLE_N_META</b>: Vehicle element verification (enhanced edition).</description></item>
+        /// <item><description><b>VEHICLE_PENTA_INFO</b>: Vehicle five-element information recognition.</description></item>
+        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: Vehicle information recognition.</description></item>
+        /// <item><description><b>VEHICLE_INSURE_DATE</b>: Vehicle insurance date query.</description></item>
+        /// <item><description><b>VEHICLE_CHECK</b>: Vehicle element verification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The query start time. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-11 21:24:48.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-11 21:24:48</para>

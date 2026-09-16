@@ -40,12 +40,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class DescribeFaceVerifyResponseBodyResultObject : TeaModel {
+            /// <summary>
+            /// <para>The result of degraded verification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;certifyId\&quot;:\&quot;ab110b7bbfea6631b37bc472797ac923\&quot;,\&quot;degradeType\&quot;:\&quot;ALIPAY\&quot;,\&quot;passed\&quot;:\&quot;T\&quot;}</para>
+            /// </summary>
+            [NameInMap("DegradeInfo")]
+            [Validation(Required=false)]
+            public string DegradeInfo { get; set; }
+
             /// <summary>
             /// <para>The device risk label.</para>
             /// 
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceToken { get; set; }
 
             /// <summary>
-            /// <para>The identity information of the verification subject. This field is empty in common verification scenarios.</para>
+            /// <para>The identity information of the verification subject. This field is empty for common verification scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -117,13 +127,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Success { get; set; }
 
             /// <summary>
-            /// <para>The identity information and corresponding encoding entered by the user in rare character mode. The value is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</para>
+            /// <para>Records the identity information and corresponding encoding entered by the user in rare character mode. The return data is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</para>
             /// <list type="bullet">
             /// <item><description><para>name: the name entered by the user.</para>
             /// </description></item>
-            /// <item><description><para>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;王先生&quot;, the actual verified name is &quot;王先升&quot;.</para>
+            /// <item><description><para>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;Wang Xiansheng&quot;, the actual verified name is &quot;Wang Xiansheng&quot; (with a different character).</para>
             /// </description></item>
-            /// <item><description><para>number: the ID number entered by the user.</para>
+            /// <item><description><para>number: the ID card number entered by the user.</para>
             /// </description></item>
             /// </list>
             /// 

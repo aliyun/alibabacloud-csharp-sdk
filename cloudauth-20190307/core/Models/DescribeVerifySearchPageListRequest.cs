@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
-        /// <para>The certification ID.</para>
+        /// <para>The authentication ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shadbdd3dbacd001cfa892a5e2b98dxx</para>
@@ -41,17 +41,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The query end time. The format is a Unix timestamp in milliseconds.</para>
+        /// <para>The end time of the query. Format: YYYY-MM-DD HH:mm:ss, such as 2025-10-16 23:59:59.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-10-16 23:59:59 +0800</para>
+        /// <para>2025-10-16 23:59:59</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether there is a device risk. Setting this parameter to true indicates that root = 1, simulator = 1, or virtual_video = 1.</para>
+        /// <para>Specifies whether device risk exists. Set this parameter to true to indicate root = 1, simulator = 1, or virtual_video = 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the customer request.</para>
+        /// <para>The unique identifier of the customer request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the authentication passed:</para>
+        /// <para>Indicates whether the authentication is passed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>T</b>: Passed.</description></item>
-        /// <item><description><b>F</b>: Failed.</description></item>
+        /// <item><description><b>F</b>: Not passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The business scenario risk:</para>
+        /// <para>The business scenario risk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No risk.</description></item>
-        /// <item><description><b>1</b>: Risk detected.</description></item>
+        /// <item><description><b>1</b>: Risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? RiskBizScenario { get; set; }
 
         /// <summary>
-        /// <para>The device risk:</para>
+        /// <para>The device risk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No risk.</description></item>
-        /// <item><description><b>1</b>: Risk detected.</description></item>
+        /// <item><description><b>1</b>: Risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,10 +144,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? RiskDevice { get; set; }
 
         /// <summary>
-        /// <para>The DeviceToken risk:</para>
+        /// <para>The DeviceToken risk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No risk.</description></item>
-        /// <item><description><b>1</b>: Risk detected.</description></item>
+        /// <item><description><b>1</b>: Risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? RiskDeviceToken { get; set; }
 
         /// <summary>
-        /// <para>The generic risk:</para>
+        /// <para>The generic risk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No risk.</description></item>
-        /// <item><description><b>1</b>: Risk detected.</description></item>
+        /// <item><description><b>1</b>: Risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,10 +172,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? RiskGeneric { get; set; }
 
         /// <summary>
-        /// <para>The large model mining risk:</para>
+        /// <para>The large model mining risk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No risk.</description></item>
-        /// <item><description><b>1</b>: Risk detected.</description></item>
+        /// <item><description><b>1</b>: Risk exists.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? RiskModelMining { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the device is rooted. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the identity tag risk type.</para>
+        /// <para>Specifies whether the device is rooted. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the identity tag risk type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the device is a simulator. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the device tag risk type.</para>
+        /// <para>Specifies whether the device is a simulator. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the device tag risk type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -216,17 +216,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? Simulator { get; set; }
 
         /// <summary>
-        /// <para>The query start time.</para>
+        /// <para>The start time of the query. Format: YYYY-MM-DD HH:mm:ss, such as 2025-10-10 00:00:00.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-10-10 00:00:00 +0800</para>
+        /// <para>2025-10-10 00:00:00</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The result code. For details, see <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/error-code-person-verify?spm=a2c4g.11186623.0.0.6015566ebArcFw#d88910e172fgg">SubCode Description</a>.</para>
+        /// <para>The result code. For more information about valid values, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/error-code-person-verify#d88910e172fgg">SubCode description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>201</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SubCode { get; set; }
 
         /// <summary>
-        /// <para>Comma-separated result codes. For details, see <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/error-code-person-verify?spm=a2c4g.11186623.0.0.6015566ebArcFw#d88910e172fgg">SubCode Description</a>.</para>
+        /// <para>Comma-separated result codes. For more information about valid values, see <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/error-code-person-verify#d88910e172fgg">SubCode description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>201,202</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SubCodes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether virtual video is used. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the behavior tag risk type.</para>
+        /// <para>Specifies whether virtual video adaptation is used. Set this parameter to 1 if selected. Otherwise, do not pass this parameter. This corresponds to the behavior tag risk type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

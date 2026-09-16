@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The remarks for the whitelist.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试白名单。</para>
+        /// <para>Test whitelist</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -96,6 +96,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? ValidDay { get; set; }
 
         /// <summary>
+        /// <para>The whitelist type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUPER</para>
         /// </summary>

@@ -29,19 +29,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <summary>
             /// <para>The product API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification</description></item>
-            /// <item><description><b>ID_PERIOD</b>: ID card validity period verification</description></item>
-            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration</description></item>
-            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status</description></item>
-            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition)</description></item>
-            /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition)</description></item>
-            /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification</description></item>
-            /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition)</description></item>
-            /// <item><description><b>MOBILE_DETECT</b>: phone number detection </description></item>
-            /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition)</description></item>
-            /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition</description></item>
-            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition</description></item>
-            /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query</description></item>
+            /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification.</description></item>
+            /// <item><description><b>ID_PERIOD</b>: ID card validity period verification.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status.</description></item>
+            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition).</description></item>
+            /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification.</description></item>
+            /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_DETECT</b>: phone number detection. </description></item>
+            /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition).</description></item>
+            /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition.</description></item>
+            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition.</description></item>
+            /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query.</description></item>
             /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
             /// </list>
             /// 
@@ -55,24 +55,24 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <summary>
             /// <para>The name corresponding to the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification</description></item>
-            /// <item><description><b>ID_PERIOD</b>: ID card validity period verification</description></item>
-            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration</description></item>
-            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status</description></item>
-            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition)</description></item>
-            /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition)</description></item>
-            /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification</description></item>
-            /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition)</description></item>
-            /// <item><description><b>MOBILE_DETECT</b>: phone number detection </description></item>
-            /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition)</description></item>
-            /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition</description></item>
-            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition</description></item>
-            /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query</description></item>
-            /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
+            /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification.</description></item>
+            /// <item><description><b>ID_PERIOD</b>: ID card validity period verification.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: Mobile number online duration.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: Mobile number online status.</description></item>
+            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: Mobile number three-element verification (simple edition).</description></item>
+            /// <item><description><b>MOBILE_3_META</b>: Mobile number three-element verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_2_META</b>: Mobile number two-element verification.</description></item>
+            /// <item><description><b>BANK_CARD_N_META</b>: Bank card verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_DETECT</b>: Number detection. </description></item>
+            /// <item><description><b>VEHICLE_N_META</b>: Vehicle element verification (enhanced edition).</description></item>
+            /// <item><description><b>VEHICLE_PENTA_INFO</b>: Vehicle five-element information recognition.</description></item>
+            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: Vehicle information recognition.</description></item>
+            /// <item><description><b>VEHICLE_INSURE_DATE</b>: Vehicle insurance date query.</description></item>
+            /// <item><description><b>VEHICLE_CHECK</b>: Vehicle element verification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>身份证二要素</para>
+            /// <para>ID card two-element verification</para>
             /// </summary>
             [NameInMap("ApiName")]
             [Validation(Required=false)]
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BankCard { get; set; }
 
             /// <summary>
-            /// <para>The verification status. Valid values:</para>
+            /// <para>The authentication status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Verification passed.</description></item>
-            /// <item><description><b>2</b>: Verification failed.</description></item>
+            /// <item><description><b>1</b>: Authentication passed.</description></item>
+            /// <item><description><b>2</b>: Authentication failed.</description></item>
             /// <item><description><b>3</b>: No record found.</description></item>
             /// </list>
             /// 
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>The verification date.</para>
+            /// <para>The authentication date. Format: YYYY-MM-DD HH:mm:ss, for example, 2025-10-17 10:00:11.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-17 10:00:11</para>
@@ -124,10 +124,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IdentifyNum { get; set; }
 
             /// <summary>
-            /// <para>The name of the telecommunications service provider. Valid values:</para>
+            /// <para>The telecommunications service provider name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CMCC</b>: China Mobile</description></item>
-            /// <item><description><b>CUCC</b>: China Unicom</description></item>
+            /// <item><description><b>CMCC</b>: China Mobile.</description></item>
+            /// <item><description><b>CUCC</b>: China Unicom.</description></item>
             /// <item><description><b>CTCC</b>: China Telecom.</description></item>
             /// </list>
             /// 
@@ -168,29 +168,29 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 /// <summary>
                 /// <para>The vehicle type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>01</b>: large vehicle  </description></item>
-                /// <item><description><b>02</b>: small vehicle  </description></item>
-                /// <item><description><b>03</b>: embassy vehicle  </description></item>
-                /// <item><description><b>04</b>: consulate vehicle  </description></item>
-                /// <item><description><b>05</b>: overseas vehicle  </description></item>
-                /// <item><description><b>06</b>: foreign vehicle  </description></item>
-                /// <item><description><b>07</b>: standard motorcycle  </description></item>
-                /// <item><description><b>08</b>: light motorcycle  </description></item>
-                /// <item><description><b>09</b>: embassy motorcycle  </description></item>
-                /// <item><description><b>10</b>: consulate motorcycle  </description></item>
-                /// <item><description><b>11</b>: overseas motorcycle  </description></item>
-                /// <item><description><b>12</b>: foreign motorcycle  </description></item>
-                /// <item><description><b>13</b>: low-speed vehicle  </description></item>
-                /// <item><description><b>14</b>: tractor  </description></item>
-                /// <item><description><b>15</b>: trailer  </description></item>
-                /// <item><description><b>16</b>: training vehicle  </description></item>
-                /// <item><description><b>17</b>: training motorcycle  </description></item>
-                /// <item><description><b>20</b>: temporary entry vehicle  </description></item>
-                /// <item><description><b>21</b>: temporary entry motorcycle  </description></item>
-                /// <item><description><b>22</b>: temporary driving vehicle  </description></item>
-                /// <item><description><b>23</b>: police vehicle  </description></item>
-                /// <item><description><b>24</b>: police motorcycle  </description></item>
-                /// <item><description><b>51</b>: new energy large vehicle  </description></item>
+                /// <item><description><b>01</b>: large vehicle.  </description></item>
+                /// <item><description><b>02</b>: small vehicle.  </description></item>
+                /// <item><description><b>03</b>: embassy vehicle.  </description></item>
+                /// <item><description><b>04</b>: consulate vehicle.  </description></item>
+                /// <item><description><b>05</b>: overseas vehicle.  </description></item>
+                /// <item><description><b>06</b>: foreign vehicle.  </description></item>
+                /// <item><description><b>07</b>: standard motorcycle.  </description></item>
+                /// <item><description><b>08</b>: light motorcycle.  </description></item>
+                /// <item><description><b>09</b>: embassy motorcycle.  </description></item>
+                /// <item><description><b>10</b>: consulate motorcycle.  </description></item>
+                /// <item><description><b>11</b>: overseas motorcycle.  </description></item>
+                /// <item><description><b>12</b>: foreign motorcycle.  </description></item>
+                /// <item><description><b>13</b>: low-speed vehicle.  </description></item>
+                /// <item><description><b>14</b>: tractor.  </description></item>
+                /// <item><description><b>15</b>: trailer.  </description></item>
+                /// <item><description><b>16</b>: training vehicle.  </description></item>
+                /// <item><description><b>17</b>: training motorcycle.  </description></item>
+                /// <item><description><b>20</b>: temporary entry vehicle.  </description></item>
+                /// <item><description><b>21</b>: temporary entry motorcycle.  </description></item>
+                /// <item><description><b>22</b>: temporary driving vehicle.  </description></item>
+                /// <item><description><b>23</b>: police vehicle.  </description></item>
+                /// <item><description><b>24</b>: police motorcycle.  </description></item>
+                /// <item><description><b>51</b>: new energy large vehicle.  </description></item>
                 /// <item><description><b>52</b>: new energy small vehicle.</description></item>
                 /// </list>
                 /// 
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 /// <para>The vehicle type name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>新能源小型车</para>
+                /// <para>New energy small vehicle</para>
                 /// </summary>
                 [NameInMap("VehicleTypeName")]
                 [Validation(Required=false)]
@@ -308,10 +308,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string BankCard { get; set; }
 
                     /// <summary>
-                    /// <para>The verification status. Valid values:</para>
+                    /// <para>The authentication status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>1</b>: Verification passed.</description></item>
-                    /// <item><description><b>2</b>: Verification failed.</description></item>
+                    /// <item><description><b>1</b>: Authentication passed.</description></item>
+                    /// <item><description><b>2</b>: Authentication failed.</description></item>
                     /// <item><description><b>3</b>: No record found.</description></item>
                     /// </list>
                     /// 
@@ -326,17 +326,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     /// <para>The brand name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>奔驰</para>
+                    /// <para>Mercedes-Benz</para>
                     /// </summary>
                     [NameInMap("Brand")]
                     [Validation(Required=false)]
                     public string Brand { get; set; }
 
                     /// <summary>
-                    /// <para>The body color.</para>
+                    /// <para>The vehicle body color.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>白</para>
+                    /// <para>White</para>
                     /// </summary>
                     [NameInMap("Color")]
                     [Validation(Required=false)]
@@ -386,14 +386,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     /// <para>The fuel type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>电</para>
+                    /// <para>Electric</para>
                     /// </summary>
                     [NameInMap("FuelType")]
                     [Validation(Required=false)]
                     public string FuelType { get; set; }
 
                     /// <summary>
-                    /// <para>The inspection validity expiration date.</para>
+                    /// <para>The inspection validity expiration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2026-07-31 00:00:00.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-07-31 00:00:00</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string Power { get; set; }
 
                     /// <summary>
-                    /// <para>The initial registration date.</para>
+                    /// <para>The initial registration date. Format: YYYY-MM-DD HH:mm:ss, for example, 2015-08-24 00:00:00.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2015-08-24 00:00:00</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string RegistrationDate { get; set; }
 
                     /// <summary>
-                    /// <para>The manufacturing date.</para>
+                    /// <para>The manufacturing date. Format: YYYY-MM-DD HH:mm:ss, for example, 2022-08-13 00:00:00.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2022-08-13 00:00:00</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string ReleaseDate { get; set; }
 
                     /// <summary>
-                    /// <para>The mandatory retirement date.</para>
+                    /// <para>The mandatory retirement date. Format: YYYY-MM-DD HH:mm:ss, for example, 2099-12-31 00:00:00.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2099-12-31 00:00:00</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string RetirementDate { get; set; }
 
                     /// <summary>
-                    /// <para>The gross mass.</para>
+                    /// <para>The total mass.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2350</para>
@@ -466,7 +466,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     /// <para>The vehicle type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>小型轿车</para>
+                    /// <para>Small sedan</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     /// <para>The motor vehicle status.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>正常</para>
+                    /// <para>Normal</para>
                     /// </summary>
                     [NameInMap("VehicleState")]
                     [Validation(Required=false)]
@@ -540,14 +540,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <para>The response content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;code\&quot;:\&quot;200\&quot;,\&quot;data\&quot;:{\&quot;bizCode\&quot;:\&quot;1\&quot;,\&quot;ispName\&quot;:\&quot;CMCC\&quot;,\&quot;subCode\&quot;:\&quot;101\&quot;},\&quot;message\&quot;:\&quot;调用成功\&quot;}</para>
+            /// <para>{\&quot;code\&quot;:\&quot;200\&quot;,\&quot;data\&quot;:{\&quot;bizCode\&quot;:\&quot;1\&quot;,\&quot;ispName\&quot;:\&quot;CMCC\&quot;,\&quot;subCode\&quot;:\&quot;101\&quot;},\&quot;message\&quot;:\&quot;Call successful\&quot;}</para>
             /// </summary>
             [NameInMap("ResponseJson")]
             [Validation(Required=false)]
             public string ResponseJson { get; set; }
 
             /// <summary>
-            /// <para>The result code. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</para>
+            /// <para>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>207</para>

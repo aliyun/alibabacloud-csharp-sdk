@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of results.</para>
+        /// <para>The result list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeInfoCheckExportRecordResponseBodyItems> Items { get; set; }
         public class DescribeInfoCheckExportRecordResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The download date.</para>
+            /// <para>The download time. The value is a UNIX timestamp in milliseconds (ms), for example, 1758250979000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758250979000</para>
@@ -93,22 +93,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <list type="bullet">
             /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification.</description></item>
             /// <item><description><b>ID_PERIOD</b>: ID card validity period verification.</description></item>
-            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration.</description></item>
-            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status.</description></item>
-            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition).</description></item>
-            /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition).</description></item>
-            /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification.</description></item>
-            /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition).</description></item>
-            /// <item><description><b>MOBILE_DETECT</b>: phone number detection.</description></item>
-            /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition).</description></item>
-            /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition.</description></item>
-            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition.</description></item>
-            /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query.</description></item>
-            /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: Mobile number online duration.</description></item>
+            /// <item><description><b>MOBILE_ONLINE_STATUS</b>: Mobile number online status.</description></item>
+            /// <item><description><b>MOBILE_3_META_SIMPLE</b>: Mobile number three-element verification (simple edition).</description></item>
+            /// <item><description><b>MOBILE_3_META</b>: Mobile number three-element verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_2_META</b>: Mobile number two-element verification.</description></item>
+            /// <item><description><b>BANK_CARD_N_META</b>: Bank card verification (detailed edition).</description></item>
+            /// <item><description><b>MOBILE_DETECT</b>: Number detection.</description></item>
+            /// <item><description><b>VEHICLE_N_META</b>: Vehicle element verification (enhanced edition).</description></item>
+            /// <item><description><b>VEHICLE_PENTA_INFO</b>: Vehicle five-element information recognition.</description></item>
+            /// <item><description><b>VEHICLE_LICENSE_INFO</b>: Vehicle information recognition.</description></item>
+            /// <item><description><b>VEHICLE_INSURE_DATE</b>: Vehicle insurance date query.</description></item>
+            /// <item><description><b>VEHICLE_CHECK</b>: Vehicle element verification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>身份证二要素</para>
+            /// <para>ID_CARD_2_META</para>
             /// </summary>
             [NameInMap("ProductType")]
             [Validation(Required=false)]
@@ -117,9 +117,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The file is being generated.</description></item>
-            /// <item><description><b>2</b>: The file has been generated.</description></item>
-            /// <item><description><b>3</b>: The file failed to be generated.</description></item>
+            /// <item><description><b>1</b>: File is being generated.</description></item>
+            /// <item><description><b>2</b>: File generation is complete.</description></item>
+            /// <item><description><b>3</b>: File generation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the response is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

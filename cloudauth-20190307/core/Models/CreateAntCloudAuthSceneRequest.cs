@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to enable mini program binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: enabled</description></item>
-        /// <item><description><b>N (default)</b>: disabled.</description></item>
+        /// <item><description><b>Y</b>: Enabled.</description></item>
+        /// <item><description><b>N (default)</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,17 +37,47 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The name of the uploaded verification file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试.txt</para>
+        /// <para>test.txt</para>
         /// </summary>
         [NameInMap("CheckFileName")]
         [Validation(Required=false)]
         public string CheckFileName { get; set; }
 
         /// <summary>
+        /// <para>The iOS app scheme for degradation redirect.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cloudauth://callback</para>
+        /// </summary>
+        [NameInMap("DegradeAppScheme")]
+        [Validation(Required=false)]
+        public string DegradeAppScheme { get; set; }
+
+        /// <summary>
+        /// <para>The SubCode that triggers degradation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>201,202</para>
+        /// </summary>
+        [NameInMap("DegradeSubCodes")]
+        [Validation(Required=false)]
+        public string DegradeSubCodes { get; set; }
+
+        /// <summary>
+        /// <para>The degradation verification type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALIPAY</para>
+        /// </summary>
+        [NameInMap("DegradeType")]
+        [Validation(Required=false)]
+        public string DegradeType { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable enhanced device risk detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: enabled</description></item>
-        /// <item><description><b>N</b>: disabled.</description></item>
+        /// <item><description><b>Y</b>: Enabled.</description></item>
+        /// <item><description><b>N</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The mini program name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试APP</para>
+        /// <para>TestApp</para>
         /// </summary>
         [NameInMap("MiniProgramName")]
         [Validation(Required=false)]
@@ -70,8 +100,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The mini program platform to bind. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WECHAT</b>: WeChat</description></item>
-        /// <item><description><b>ALIPAY</b>: Alipay</description></item>
+        /// <item><description><b>WECHAT</b>: WeChat.</description></item>
+        /// <item><description><b>ALIPAY</b>: Alipay.</description></item>
         /// <item><description><b>TIKTOK</b>: TikTok.</description></item>
         /// </list>
         /// 
@@ -107,14 +137,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试场景</para>
+        /// <para>TestScenario</para>
         /// </summary>
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to deliver the files generated during authentication to the customer\&quot;s OSS. Valid values:</para>
+        /// <para>Specifies whether to deliver files generated during verification to the customer\&quot;s OSS. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Y</b>: Yes.</description></item>
         /// <item><description><b>N</b>: No.</description></item>
@@ -126,6 +156,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("StoreImage")]
         [Validation(Required=false)]
         public string StoreImage { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable degradation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("UseDegrade")]
+        [Validation(Required=false)]
+        public string UseDegrade { get; set; }
 
     }
 

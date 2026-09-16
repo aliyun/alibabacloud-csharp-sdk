@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public DescribeVerifyStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>The number of client-side initializations.</para>
+            /// <para>The number of client-side init attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitDevice { get; set; }
 
             /// <summary>
-            /// <para>The number of client-side initializations for identity deduplication.</para>
+            /// <para>The number of identity deduplication client-side init requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitDeviceId { get; set; }
 
             /// <summary>
-            /// <para>The number of successful client-side initializations for identity deduplication.</para>
+            /// <para>The number of successful identity deduplication client-side init requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitDeviceIdSuccess { get; set; }
 
             /// <summary>
-            /// <para>The number of successful client-side initialization calls.</para>
+            /// <para>The number of client-side init calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitDeviceSuccess { get; set; }
 
             /// <summary>
-            /// <para>The number of server-side initializations.</para>
+            /// <para>The number of server-side init attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>73</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitService { get; set; }
 
             /// <summary>
-            /// <para>The total number of server-side initialization requests for identity deduplication.</para>
+            /// <para>The total number of identity deduplication server-side init requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitServiceId { get; set; }
 
             /// <summary>
-            /// <para>The number of successful server-side initializations for identity deduplication.</para>
+            /// <para>The number of successful identity deduplication server-side init requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitServiceIdSuccess { get; set; }
 
             /// <summary>
-            /// <para>The number of successful server-side initialization authentications.</para>
+            /// <para>The number of successful server-side init authentications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>134</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? InitServiceSuccess { get; set; }
 
             /// <summary>
-            /// <para>The daily pass/conversion rates (PV).</para>
+            /// <para>The daily pass rate and conversion rate statistics (PV).</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string Date { get; set; }
 
                 /// <summary>
-                /// <para>The client-side initialization pass rate.</para>
+                /// <para>The client-side init pass rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string InitDevicePassRate { get; set; }
 
                 /// <summary>
-                /// <para>The number of server-side initializations.</para>
+                /// <para>The number of server-side init requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public long? InitService { get; set; }
 
                 /// <summary>
-                /// <para>The server-side initialization conversion rate.</para>
+                /// <para>The server-side init conversion rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>26.67</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string InitServiceConversionRate { get; set; }
 
                 /// <summary>
-                /// <para>The server-side initialization pass rate.</para>
+                /// <para>The server-side init pass rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>The number of client-side verifications.</para>
+            /// <para>The number of client-side verification attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? VerifyDevice { get; set; }
 
             /// <summary>
-            /// <para>The number of client-side authentication attempts for identity deduplication.</para>
+            /// <para>The number of identity deduplication client-side authentication attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? VerifyDeviceId { get; set; }
 
             /// <summary>
-            /// <para>The number of successful client-side verifications for identity deduplication.</para>
+            /// <para>The number of successful identity deduplication client-side verifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? VerifyDeviceIdSuccess { get; set; }
 
             /// <summary>
-            /// <para>The number of successful client-side authentications for identity deduplication.</para>
+            /// <para>The number of successful identity deduplication client-side authentications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

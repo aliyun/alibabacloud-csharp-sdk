@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyFailStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2C596D1-B14B-5D79-9672-61D7686912B2</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The returned count data.</para>
+                    /// <para>The count data returned.</para>
                     /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                         public long? Count { get; set; }
 
                         /// <summary>
-                        /// <para>The date.</para>
+                        /// <para>The date. Format: YYYY-MM-DD, such as 2025-10-16.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2025-10-16</para>

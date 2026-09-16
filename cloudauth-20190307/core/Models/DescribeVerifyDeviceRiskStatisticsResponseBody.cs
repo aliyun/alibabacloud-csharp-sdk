@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IdFakeRate { get; set; }
 
             /// <summary>
-            /// <para>The data items in the response.</para>
+            /// <para>The data items of the returned result.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public long? DailyCallCount { get; set; }
 
                 /// <summary>
-                /// <para>The date.</para>
+                /// <para>The date. Format: YYYY-MM-DD, such as 2025-10-10.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-10</para>

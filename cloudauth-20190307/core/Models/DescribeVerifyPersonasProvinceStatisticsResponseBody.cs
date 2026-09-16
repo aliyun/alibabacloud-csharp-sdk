@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 /// <para>The province name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>浙江</para>
+                /// <para>Zhejiang</para>
                 /// </summary>
                 [NameInMap("ProvinceName")]
                 [Validation(Required=false)]

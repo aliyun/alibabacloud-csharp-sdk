@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FINANCE_VERIFY</b>: Financial-Grade ID Verification</description></item>
-        /// <item><description><b>SMART_VERIFY</b>: Enhanced ID Verification (discontinued)</description></item>
+        /// <item><description><b>FINANCE_VERIFY</b>: Financial-grade ID Verification.</description></item>
+        /// <item><description><b>SMART_VERIFY</b>: Enhanced ID Verification (discontinued).</description></item>
         /// <item><description><b>FACE_VERIFY</b>: ID Verification (discontinued).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>

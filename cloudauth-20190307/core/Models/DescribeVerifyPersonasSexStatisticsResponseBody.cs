@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public DescribeVerifyPersonasSexStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyPersonasSexStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>The number of authenticated users aged 14 and under.</para>
+            /// <para>The number of users aged 14 and under.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Age0To14Cnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of authenticated users aged 14 and under.</para>
+            /// <para>The proportion of users aged 14 and under.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Age0To14Rate { get; set; }
 
             /// <summary>
-            /// <para>The number of authenticated users aged 14 to 18.</para>
+            /// <para>The number of users aged 14 to 18.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Age14To18Cnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of authenticated users aged 14 to 18.</para>
+            /// <para>The proportion of users aged 14 to 18.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Age14To18Rate { get; set; }
 
             /// <summary>
-            /// <para>The number of authenticated users aged 18 to 35.</para>
+            /// <para>The number of verified users aged 18 to 35.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Age18To35Cnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of authenticated users aged 18 to 35.</para>
+            /// <para>The proportion of verified users aged 18 to 35.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64.29</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Age18To35Rate { get; set; }
 
             /// <summary>
-            /// <para>The number of authenticated users aged 35 to 50.</para>
+            /// <para>The number of verified users aged 35 to 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Age35To50Cnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of authenticated users aged 35 to 50.</para>
+            /// <para>The proportion of verified users aged 35 to 50.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35.71</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Age35To50Rate { get; set; }
 
             /// <summary>
-            /// <para>The number of authenticated users aged 50 and over.</para>
+            /// <para>The number of verified users aged 50 and over.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Age50To999Cnt { get; set; }
 
             /// <summary>
-            /// <para>The number of authenticated users aged 50 and over.</para>
+            /// <para>The number of verified users aged 50 and over.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Age50To999Rate { get; set; }
 
             /// <summary>
-            /// <para>The total number of authenticated users.</para>
+            /// <para>The total number of verified users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AllUserCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of female authenticated users.</para>
+            /// <para>The number of female users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? FemaleCnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of female authenticated users.</para>
+            /// <para>The proportion of female verified users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28.57</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FemaleRate { get; set; }
 
             /// <summary>
-            /// <para>The number of male authenticated users.</para>
+            /// <para>The number of male users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? MaleCnt { get; set; }
 
             /// <summary>
-            /// <para>The proportion of male authenticated users.</para>
+            /// <para>The proportion of male users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>71.43</para>

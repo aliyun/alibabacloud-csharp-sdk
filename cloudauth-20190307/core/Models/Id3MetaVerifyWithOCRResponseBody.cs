@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The response code. 200 indicates success. Other values indicate failure. <b>Important</b></para>
         /// <list type="bullet">
-        /// <item><description>This parameter indicates only whether the API call was made correctly. For more information about return codes, see error codes.</description></item>
-        /// <item><description>Check the fields in ResultObject for the business verification result.</description></item>
+        /// <item><description>This parameter indicates whether the API was called correctly. For more information about return codes, refer to the error codes.</description></item>
+        /// <item><description>Check the business verification result in the fields of ResultObject.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message of the API call. This parameter indicates only whether an exception occurred during the API call.</para>
+        /// <para>The response message. Important: This parameter only indicates whether the API call is abnormal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <summary>
             /// <para>The identity verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: consistent.</description></item>
-            /// <item><description>2: inconsistent.</description></item>
-            /// <item><description>3: no record found.</description></item>
+            /// <item><description>1: Consistent.</description></item>
+            /// <item><description>2: Inconsistent.</description></item>
+            /// <item><description>3: No record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>{&quot;address&quot;:&quot;浙江省杭州市余*****&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}.</para>
+            /// <para>{&quot;address&quot;:&quot;No. XX, XX Road, Hangzhou, Zhejiang&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;John&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;Han&quot;,&quot;authority&quot;:&quot;XXX Public Security Bureau&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OCR读取的身份证信息。</para>
+            /// <para>The ID card information extracted by OCR.</para>
             /// </summary>
             [NameInMap("CardInfo")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateWhitelistSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CF4979D3-060F-5336-BD9F-0D46ECB66B22</para>

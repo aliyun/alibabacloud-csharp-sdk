@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public List<DescribePageFaceVerifyDataResponseBodyItems> Items { get; set; }
         public class DescribePageFaceVerifyDataResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The date.</para>
+            /// <para>The date. The value is in ISO 8601/RFC 3339 format, UTC time zone (Z indicates +00:00), with millisecond precision, such as 2024-03-24T00:00:00.000Z.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-03-24T00:00:00.000Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <para>The scene name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>****实名认证</para>
+            /// <para>****Real-name verification</para>
             /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-A***B-A3DC0DE3C83E</para>

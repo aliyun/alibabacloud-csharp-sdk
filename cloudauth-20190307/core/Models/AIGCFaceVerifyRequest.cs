@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OssObjectName { get; set; }
 
         /// <summary>
-        /// <para>The custom business unique identifier on the client side, used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</para>
+        /// <para>The custom business unique identifier on the client side, which is used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OuterOrderNo { get; set; }
 
         /// <summary>
-        /// <para>The product plan.</para>
+        /// <para>The product solution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LR_FR_AIGC</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public DescribeVerifyPersonasOsStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyPersonasOsStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>The total number of devices used for ID Verification.</para>
+            /// <para>The total number of authenticated devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AllDeviceCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of Android devices used for ID Verification.</para>
+            /// <para>The number of authenticated Android devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceAndroidRate { get; set; }
 
             /// <summary>
-            /// <para>The number of iOS devices used for ID Verification.</para>
+            /// <para>The number of authenticated iOS devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

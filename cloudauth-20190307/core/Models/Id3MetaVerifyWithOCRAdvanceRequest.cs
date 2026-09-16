@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The input stream of the portrait side image of the ID card. Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None.</para>
         /// </summary>
         [NameInMap("CertFile")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The image of the national emblem side of the ID card. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None.</para>
         /// </summary>
         [NameInMap("CertNationalFile")]
         [Validation(Required=false)]
         public Stream CertNationalFileObject { get; set; }
 
         /// <summary>
-        /// <para>The URL of the national emblem side image of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</para>
+        /// <para>The URL of the national emblem side image of the ID card. A publicly accessible HTTP or HTTPS URL. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNationalUrl { get; set; }
 
         /// <summary>
-        /// <para>The image of the portrait side of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertUrl or CertFile.</para>
+        /// <para>The image of the portrait side of the ID card. A publicly accessible HTTP or HTTPS URL. Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>

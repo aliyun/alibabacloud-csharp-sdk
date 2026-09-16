@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id3MetaVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success. Other values indicate failure.</para>
+        /// <para>The response code. 200 indicates success. Other values indicate failure.</para>
         /// <para><b>Important</b></para>
         /// <list type="bullet">
-        /// <item><description>This parameter indicates only whether the API call is successful. For more information about return codes, see error codes.</description></item>
-        /// <item><description>Check the fields in ResultObject for the business verification result.</description></item>
+        /// <item><description>This parameter indicates whether the API call is successful. For more information about return codes, see error codes.</description></item>
+        /// <item><description>Check the business verification result in the fields of ResultObject.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message of the API call.</para>
+        /// <para>The response message.</para>
         /// <para><b>Important</b></para>
-        /// <para>This parameter indicates only whether the API call is abnormal.</para>
+        /// <para>This parameter only indicates whether the API call is abnormal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <summary>
             /// <para>The identity verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Consistent.</description></item>
-            /// <item><description>2: Inconsistent.</description></item>
-            /// <item><description>3: No record found.</description></item>
+            /// <item><description>1: verification is consistent.</description></item>
+            /// <item><description>2: verification is inconsistent.</description></item>
+            /// <item><description>3: no record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,6 +81,32 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FaceDetail { get; set; }
 
             /// <summary>
+            /// <para>The authoritative source verification details. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>101: authentication passed.</para>
+            /// </description></item>
+            /// <item><description><para>201: authentication failed. The name does not match the ID card number.</para>
+            /// </description></item>
+            /// <item><description><para>202: authentication failed. The person is suspected to be the ID holder.</para>
+            /// </description></item>
+            /// <item><description><para>203: authentication failed. No photo exists in the database.</para>
+            /// </description></item>
+            /// <item><description><para>204: authentication failed. The person is not the same individual.</para>
+            /// </description></item>
+            /// <item><description><para>205: authentication failed. Modeling of the image to be compared failed.</para>
+            /// </description></item>
+            /// <item><description><para>206: authentication failed. The image format is incorrect.</para>
+            /// </description></item>
+            /// <item><description><para>207: authentication failed. The uploaded image is too small. Upload a new image.</para>
+            /// </description></item>
+            /// <item><description><para>208: authentication failed. The quality of the uploaded portrait photo is poor. Upload a new photo.</para>
+            /// </description></item>
+            /// <item><description><para>301: no record found. The ID number does not exist in the database.</para>
+            /// </description></item>
+            /// <item><description><para>302: no record found. Verification cannot be performed.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>101</para>
             /// </summary>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the ID Verification request.</para>
+        /// <para>The unique identifier of the ID Verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha75b4e19a1ddda059b920757b0e12b</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</para>
+        /// <para>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For information about how to create a verification scenario, see Add a verification scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000xxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <list type="bullet">
         /// <item><description>DELETE: Deleted.</description></item>
         /// <item><description>VALID: Not deleted and within the validity period (valid).</description></item>
-        /// <item><description>INVALID: Not deleted but outside the validity period (invalid).</description></item>
+        /// <item><description>INVALID: Not deleted but not within the validity period (invalid).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

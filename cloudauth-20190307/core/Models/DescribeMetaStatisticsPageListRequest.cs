@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeMetaStatisticsPageListRequest : TeaModel {
         /// <summary>
-        /// <para>Product API:</para>
+        /// <para>The product API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ID_CARD_2_META</b>: ID Card Two-Element Verification</description></item>
-        /// <item><description><b>ID_PERIOD</b>: ID Card Validity Verification Period</description></item>
-        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: Mobile Online Duration</description></item>
-        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: Mobile Online Status</description></item>
-        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: Mobile Number Three-Element Verification (Simple)</description></item>
-        /// <item><description><b>MOBILE_3_META</b>: Mobile Number Three-Element Verification (Detailed)</description></item>
-        /// <item><description><b>MOBILE_2_META</b>: Mobile Number Two-Element Verification</description></item>
-        /// <item><description><b>BANK_CARD_N_META</b>: Bank Card Verification (Detailed)</description></item>
-        /// <item><description><b>MOBILE_DETECT</b>: Number Detection</description></item>
-        /// <item><description><b>VEHICLE_N_META</b>: Vehicle Element Verification (Enhanced)</description></item>
-        /// <item><description><b>VEHICLE_PENTA_INFO</b>: Vehicle Five-Element Information Recognition</description></item>
-        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: Vehicle Information Recognition</description></item>
-        /// <item><description><b>VEHICLE_INSURE_DATE</b>: Vehicle Insurance Date Query</description></item>
-        /// <item><description><b>VEHICLE_CHECK</b>: Vehicle Element Verification</description></item>
+        /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification</description></item>
+        /// <item><description><b>ID_PERIOD</b>: ID card validity period verification</description></item>
+        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration</description></item>
+        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status</description></item>
+        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition)</description></item>
+        /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition)</description></item>
+        /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification</description></item>
+        /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition)</description></item>
+        /// <item><description><b>MOBILE_DETECT</b>: phone number detection </description></item>
+        /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition)</description></item>
+        /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition</description></item>
+        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition</description></item>
+        /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query</description></item>
+        /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Api { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Query end time. Unix timestamp.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>Number of data entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Query start time. The timestamp is in milliseconds.</para>
+        /// <para>The start time of the query. The timestamp is in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

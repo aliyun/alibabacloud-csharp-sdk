@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Required. The end time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
+        /// <para>Required. The end time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-30</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Required. The start time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
+        /// <para>Required. The start time in the format of yyyy-MM-dd. The default time is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-10</para>

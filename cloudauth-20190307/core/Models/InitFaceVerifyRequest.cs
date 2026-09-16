@@ -12,14 +12,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether the SDK enables strict face quality detection:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Y</b>: enabled.</para>
+        /// <item><description><para><b>Y</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>N</b>: disabled (default).</para>
+        /// <item><description><para><b>N</b>: Disabled (default).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If this parameter is enabled, the SDK must integrate the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-sdk-package-clipping">strict face quality detection module</a>. Strict quality detection may reduce the face authentication success rate.</description></item>
+        /// <item><description>If this parameter is enabled, the SDK must integrate the <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-sdk-package-clipping">strict face quality detection module</a>. Strict quality detection may reduce the face recognition success rate.</description></item>
         /// <item><description>Only Android SDK 2.3.24 and later versions are supported.</description></item>
         /// </list>
         /// </remarks>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
         /// <summary>
         /// <para>The date of birth on the certificate.</para>
-        /// <para>This field is required when <b>CertType</b> is set to <b>PASSPORT</b> and <b>Mode</b> is set to <b>3</b>.</para>
+        /// <para>This field is required when the certificate type <b>CertType</b> is set to <b>PASSPORT</b> and <b>Mode</b> is set to <b>3</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1993-10-10</para>
@@ -64,13 +64,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CallbackToken { get; set; }
 
         /// <summary>
-        /// <para>The callback URL for the authentication result. The callback request method is GET by default, and the callback URL must start with <c>https</c>. After authentication is complete, the platform calls back this URL and automatically appends the <c>certifyId</c> and <c>passed</c> fields. The <c>passed</c> field returns the subcode value. Example: <c>https://www.alibabacloud.com?callbackToken=1000004826&amp;certifyId=shaxxxx&amp;passed=200.</c></para>
+        /// <para>The callback notification URL for the authentication result. The default callback request method is GET, and the callback URL must start with <c>https</c>. After authentication is complete, the platform calls back this URL and automatically appends the <c>certifyId</c> and <c>passed</c> fields. The <c>passed</c> field returns the subcode value. Example: <c>https://www.aliyun.com?callbackToken=1000004826&amp;certifyId=shaxxxx&amp;passed=200.</c></para>
         /// <notice>
         /// 
         /// <list type="bullet">
-        /// <item><description>The callback is triggered only when authentication is complete (including both passed and failed). If the user abandons authentication, an abnormal break occurs, or authentication is not performed, no notification is sent. After receiving the callback notification, invoke the query operation to obtain authentication details if needed.</description></item>
-        /// <item><description>The URL is validated for public network access before the operation is invoked. If the URL is not accessible over the public network, a 401 error is returned.</description></item>
-        /// <item><description>After receiving the callback, return HTTP status code 200. Otherwise, a retry is triggered with two callbacks within 3 seconds.</description></item>
+        /// <item><description>The callback is triggered only when authentication is complete (including both passed and failed). If authentication is abandoned, abnormally breaks, or is not performed, no notification is sent. After receiving the callback notification, you can use the query operation to obtain authentication details if needed.</description></item>
+        /// <item><description>The accessibility of the provided URL is verified before the operation is invoked. If the URL cannot be accessed through public network access, error 401 is returned.</description></item>
+        /// <item><description>After receiving the callback, your service must return HTTP status code 200. Otherwise, a retry is triggered with two callbacks within 3 seconds.</description></item>
         /// </list>
         /// </notice>
         /// 
@@ -84,13 +84,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to enable the camera selection feature:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Y</b>: enabled.</para>
+        /// <item><description><para><b>Y</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>N</b>: disabled (default).</para>
+        /// <item><description><para><b>N</b>: Disabled (default).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This feature takes effect only for PC integration mode. After this feature is enabled, users can select a camera for authentication.</para>
+        /// <para>This feature takes effect only for PC integration mode. After it is enabled, users can select a camera for authentication.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The real name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>Wang Shanshan</para>
         /// </summary>
         [NameInMap("CertName")]
         [Validation(Required=false)]
@@ -135,9 +135,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <remarks>
         /// <para>Warning: This parameter will be deprecated.</warning></para>
         /// </remarks>
-        /// <para>The CertifyId from a previous successful ID Verification. The photo from that authentication is used as the comparison photo.</para>
+        /// <para>The CertifyId from a previous successful ID Verification session. The photo from that authentication is used as the comparison photo.</para>
         /// <remarks>
-        /// <para>You can use one of the following four methods to submit a photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select only one method.</para>
+        /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,9 +150,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The type of the returned <b>CertifyUrl</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>L</b>: original long URL.</para>
+        /// <item><description><para><b>L</b>: Original long URL.</para>
         /// </description></item>
-        /// <item><description><para><b>S</b> (default): short URL.</para>
+        /// <item><description><para><b>S</b> (default): Short URL.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -177,15 +177,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyUrlType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow cropping of the face photo. By default, cropping is not allowed.</para>
+        /// <para>Specifies whether to allow cropping of face images. Cropping is not allowed by default.</para>
         /// <list type="bullet">
-        /// <item><description><para>T: allows cropping.</para>
+        /// <item><description><para>T: Cropping is allowed.</para>
         /// </description></item>
-        /// <item><description><para>F: does not allow cropping.</para>
+        /// <item><description><para>F: Cropping is not allowed.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the requested image is not captured by a standard liveness detection SDK, allow cropping of the face photo. After this feature is enabled, the requested image is cropped and corrected before the request is sent to the service.</para>
+        /// <para>If the requested image is not captured by a standard liveness detection SDK, allow cropping of face images. After this feature is enabled, the requested image is first cropped and corrected before the request is sent to the service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -196,6 +196,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Crop { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable beauty mode: Y/N.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -204,8 +206,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EnableBeauty { get; set; }
 
         /// <summary>
-        /// <para>The encryption algorithm. Currently, only the SM2 algorithm is supported.</para>
-        /// <para>After encrypted transmission is enabled, pass in the encrypted CertName and CertNo. For more information about encryption, refer to <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-parameter-encryption#task-2229332">Parameter encryption description</a>.</para>
+        /// <para>The encryption algorithm. Currently, only the SM2 national cryptographic algorithm is supported.</para>
+        /// <para>After encrypted transmission is enabled, pass in the encrypted CertName and CertNo. For encryption instructions, refer to <a href="https://www.alibabacloud.com/help/en/id-verification/financial-grade-id-verification/description-of-parameter-encryption#task-2229332">Parameter encryption description</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SM2</para>
@@ -217,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The Base64-encoded photo.</para>
         /// <remarks>
-        /// <para>You can use one of the following four methods to submit a photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select only one method.</para>
+        /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,7 +232,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The OSS photo URL. Currently, only authorized OSS photo URLs are supported.</para>
         /// <remarks>
-        /// <para>You can use one of the following four methods to submit a photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select only one method.</para>
+        /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -257,10 +259,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceGuardOutput { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the &quot;I have completed authentication&quot; button on the H5 fallback page after authentication is complete:</para>
+        /// <para>Specifies whether to display the &quot;I have completed authentication&quot; button on the H5 degradation page after authentication is complete:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: enabled.</description></item>
-        /// <item><description><b>N</b> (default): disabled.</description></item>
+        /// <item><description><b>Y</b>: Enabled.</description></item>
+        /// <item><description><b>N</b> (default): Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -303,13 +305,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The method for obtaining passport NFC verification elements:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: user input. The end user manually enters certificate element information using the UI provided by the Alibaba Cloud SDK.</para>
+        /// <item><description><para><b>1</b>: User input. The end user manually enters certificate element information using the UI provided by the Alibaba Cloud SDK.</para>
         /// </description></item>
-        /// <item><description><para><b>3</b>: external parameter input. Certificate element information is passed in externally.</para>
+        /// <item><description><para><b>3</b>: External parameter input. Certificate element information is passed in externally.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>To decode the encrypted information on the passport chip through NFC, three passport elements are required: name, date of birth, and certificate expiration date.</para>
+        /// <para>NFC decoding of passport chip encrypted information requires three passport elements: name, date of birth, and certificate expiration date.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -327,15 +329,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>Note:
         /// The liveness detection type supports only the following values. Custom actions or combinations are not supported.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>LIVENESS</b> (default): blink</para>
+        /// <item><description><para><b>LIVENESS</b> (default): Blink.</para>
         /// </description></item>
-        /// <item><description><para><b>PHOTINUS_LIVENESS</b>: blink + colorful light</para>
+        /// <item><description><para><b>PHOTINUS_LIVENESS</b>: Blink + colorful light.</para>
         /// </description></item>
-        /// <item><description><para><b>MULTI_ACTION</b>: blink + head shake (the order of blink and head shake is random)</para>
+        /// <item><description><para><b>MULTI_ACTION</b>: Blink + head shake (the order of blink and head shake is random).</para>
         /// </description></item>
-        /// <item><description><para><b>MOVE_ACTION</b> (recommended): move closer/farther + blink</para>
+        /// <item><description><para><b>MOVE_ACTION</b> (recommended): Move closer/farther + blink.</para>
         /// </description></item>
-        /// <item><description><para><b>MOVE_PHOTINUS</b>: move closer/farther + colorful light</para>
+        /// <item><description><para><b>MOVE_PHOTINUS</b>: Move closer/farther + colorful light.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -360,9 +362,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to block authentication when multiple faces are detected on the device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Y</b>: blocked. The client prompts the user to redo face authentication.</para>
+        /// <item><description><para><b>Y</b>: Block. The client prompts the user to redo face recognition.</para>
         /// </description></item>
-        /// <item><description><para><b>N</b> (default): not blocked. The largest face in the frame is sent to the server for security detection.</para>
+        /// <item><description><para><b>N</b> (default): Do not block. The largest face in the frame is sent to the server for security detection.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -376,7 +378,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The bucket name of the authorized OSS space.</para>
         /// <remarks>
-        /// <para>You can use one of the following four methods to submit a photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select only one method.</para>
+        /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -389,7 +391,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The file name in the authorized OSS space.</para>
         /// <remarks>
-        /// <para>You can use one of the following four methods to submit a photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select only one method.</para>
+        /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -401,7 +403,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
         /// <summary>
         /// <para>The unique identifier of the merchant request.</para>
-        /// <para>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</para>
+        /// <para>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can use a time segment, and the last part can use a random or incremental sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -411,17 +413,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OuterOrderNo { get; set; }
 
         /// <summary>
-        /// <para>The fallback configuration when WebRTC or WebAssembly is incompatible during mobile H5 authentication.</para>
+        /// <para>The degradation configuration when WebRTC or WebAssembly incompatibility occurs during mobile H5 authentication.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>keep</b>: fallback is not supported. The system returns directly.</para>
+        /// <item><description><para><b>keep</b>: Degradation is not supported. The system returns directly.</para>
         /// </description></item>
-        /// <item><description><para><b>url</b> (default): fallback is supported. An authentication URL is returned. The user opens or switches to a browser to authenticate using this URL.</para>
+        /// <item><description><para><b>url</b> (default): Degradation is supported. An authentication URL is returned. The user opens or switches to a browser to authenticate using this URL.</para>
         /// </description></item>
-        /// <item><description><para><b>video</b>: fallback is supported. The system camera records a 3 to 5 second blink video for authentication.</para>
+        /// <item><description><para><b>video</b>: Degradation is supported. The system camera is used to record a 3-5 second blink video for authentication.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When the fallback mode is Video, the following features are disabled and product security is reduced. Configure this mode only for security scenarios.</para>
+        /// <para>When the degradation mode is Video, the following features become ineffective and product security is reduced. Configure this mode only for security scenarios.</para>
         /// <list type="bullet">
         /// <item><description>The liveness detection type setting does not take effect.</description></item>
         /// <item><description>The VideoEvidence feature is not supported.</description></item>
@@ -438,9 +440,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>A fixed value. This parameter varies depending on the product plan:</para>
         /// <list type="bullet">
-        /// <item><description>APP authentication plan: set to ID_PRO.</description></item>
-        /// <item><description>Face liveness verification plan: set to PV_FV.</description></item>
-        /// <item><description>Liveness detection plan: set to LR_FR.</description></item>
+        /// <item><description>APP authentication plan: The fixed value is ID_PRO.</description></item>
+        /// <item><description>Face liveness verification plan: The fixed value is PV_FV.</description></item>
+        /// <item><description>Liveness detection plan: The fixed value is LR_FR.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -453,9 +455,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to enable the rare character mode:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Y</b>: enabled. An information input box is displayed before authentication. The user must enter the name with rare characters and the ID card number, and agree to the protocol before starting the authentication process.</para>
+        /// <item><description><para><b>Y</b>: Enabled. An information input box pops up before authentication, requiring the user to enter the rare character name and ID card number and agree to the agreement before starting the authentication process.</para>
         /// </description></item>
-        /// <item><description><para><b>N</b>: disabled (default).</para>
+        /// <item><description><para><b>N</b>: Disabled (default).</para>
         /// </description></item>
         /// </list>
         /// 
@@ -469,9 +471,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to read the certificate photo:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Y</b>: read.</para>
+        /// <item><description><para><b>Y</b>: Read.</para>
         /// </description></item>
-        /// <item><description><para><b>N</b>: do not read.</para>
+        /// <item><description><para><b>N</b>: Do not read.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -486,7 +488,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ReadImg { get; set; }
 
         /// <summary>
-        /// <para>The redirect URL for the merchant business page.</para>
+        /// <para>The target URL to which the merchant business page redirects.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
@@ -496,7 +498,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ReturnUrl { get; set; }
 
         /// <summary>
-        /// <para>The authentication scenario ID.</para>
+        /// <para>The authentication scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000006</para>
@@ -506,16 +508,16 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>The elderly-friendly configuration parameter. This parameter takes effect for each authentication request. You can select different parameters for each authentication request based on the business attributes, customer distribution, and operational characteristics of your app. Valid values (default: 0):</para>
+        /// <para>The elderly-friendly configuration parameter. This parameter takes effect for each authentication request. You can select different parameters for each authentication request based on the business attributes, customer distribution, and operational characteristics of your app. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: disabled. The elderly-friendly mode is not enabled for the current authentication request.</para>
+        /// <item><description><para><b>0</b> (default): Disabled. The current authentication request does not enable elderly-friendly mode.</para>
         /// </description></item>
-        /// <item><description><para><b>1</b>: enabled. The elderly-friendly mode is enabled for the current authentication request.</para>
+        /// <item><description><para><b>1</b>: Enabled. The current authentication request enables elderly-friendly mode.</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: user choice.</para>
+        /// <item><description><para><b>2</b>: User choice.</para>
         /// </description></item>
         /// </list>
-        /// <para>Allows the end user to select the authentication mode. The product guide page provides two authentication entries: &quot;Start Authentication&quot; and &quot;Elderly Authentication Mode&quot;. When the user selects &quot;Elderly Authentication Mode&quot;, the system enters elderly-friendly mode.</para>
+        /// <para>Allows end users to select the authentication mode. The product guide page provides two authentication entries: &quot;Start Authentication&quot; and &quot;Senior Authentication Mode&quot;. When the user selects &quot;Senior Authentication Mode&quot;, the system enters elderly-friendly mode.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>The elderly-friendly parameter takes effect only when the liveness detection type <b>Model</b> is set to <b>LIVENESS</b> or <b>MULTI_ACTION</b>.</description></item>
@@ -552,7 +554,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
         /// <summary>
         /// <para>The certificate expiration date.</para>
-        /// <para>This field is required when <b>CertType</b> is set to <b>PASSPORT</b> and <b>Mode</b> is set to <b>3</b>.</para>
+        /// <para>This field is required when the certificate type <b>CertType</b> is set to <b>PASSPORT</b> and <b>Mode</b> is set to <b>3</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2039-06-10</para>
@@ -564,9 +566,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Specifies whether to enable video evidence:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enabled.</para>
+        /// <item><description><para><b>true</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: disabled (default).</para>
+        /// <item><description><para><b>false</b>: Disabled (default).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -583,14 +585,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The custom voluntary content. This parameter is required when personalized settings are enabled. The format is a JSON string of a String List.</para>
         /// <list type="bullet">
-        /// <item><description><para>For read-aloud scenarios: the content cannot exceed 60 Chinese characters (excluding punctuation), and the List contains only 1 element.</para>
+        /// <item><description><para>For read-aloud scenarios: The content cannot exceed 60 Chinese characters (excluding punctuation), and the List contains only 1 element.</para>
         /// </description></item>
-        /// <item><description><para>For Q&amp;A scenarios: a maximum of 3 questions can be set. Each question cannot exceed 30 Chinese characters, and each question is a separate element in the List.</para>
+        /// <item><description><para>For Q&amp;A scenarios: A maximum of 3 questions can be set. Each question cannot exceed 30 Chinese characters. Each question is a separate element in the List.</para>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;本人王先生同意***协议。&quot;]</para>
+        /// <para>[&quot;I, Mr. Wang, agree to the *** agreement.&quot;]</para>
         /// </summary>
         [NameInMap("VoluntaryCustomizedContent")]
         [Validation(Required=false)]

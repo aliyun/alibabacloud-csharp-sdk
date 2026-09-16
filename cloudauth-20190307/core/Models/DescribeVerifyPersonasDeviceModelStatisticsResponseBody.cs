@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AllDeviceCnt { get; set; }
 
             /// <summary>
-            /// <para>The list of data for different phone models.</para>
+            /// <para>The data list of different phone models.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string DeviceModel { get; set; }
 
                 /// <summary>
-                /// <para>The ratio of devices of this model to the total number of devices.</para>
+                /// <para>The ratio of this device model to the total number of devices.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16.13</para>

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the query result. Valid values:</para>
+        /// <para>The language of the query results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The service code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloudauthst</b>: enhanced financial-grade edition.</description></item>
-        /// <item><description><b>antcloudauth</b>: financial-grade edition.</description></item>
+        /// <item><description><b>cloudauthst</b>: Enhanced Finance Edition.</description></item>
+        /// <item><description><b>antcloudauth</b>: Finance Edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period.</para>
+        /// <para>The end time of the validity period. Format: UNIX timestamp. Unit: milliseconds. Example: 1730304000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1730304000000</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? ValidEndDate { get; set; }
 
         /// <summary>
-        /// <para>The start time of the validity period. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the validity period. Format: UNIX timestamp. Unit: milliseconds. Example: 1759939200000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1759939200000</para>
@@ -136,6 +136,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? ValidStartDate { get; set; }
 
         /// <summary>
+        /// <para>The whitelist type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUPER</para>
         /// </summary>

@@ -12,19 +12,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>The product API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification</description></item>
-        /// <item><description><b>ID_PERIOD</b>: ID card validity period verification</description></item>
-        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration</description></item>
-        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status</description></item>
-        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition)</description></item>
-        /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition)</description></item>
-        /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification</description></item>
-        /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition)</description></item>
-        /// <item><description><b>MOBILE_DETECT</b>: phone number detection </description></item>
-        /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition)</description></item>
-        /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition</description></item>
-        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition</description></item>
-        /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query</description></item>
+        /// <item><description><b>ID_CARD_2_META</b>: ID card two-element verification.</description></item>
+        /// <item><description><b>ID_PERIOD</b>: ID card validity period verification.</description></item>
+        /// <item><description><b>MOBILE_ONLINE_LENGTH</b>: mobile number online duration.</description></item>
+        /// <item><description><b>MOBILE_ONLINE_STATUS</b>: mobile number online status.</description></item>
+        /// <item><description><b>MOBILE_3_META_SIMPLE</b>: mobile number three-element verification (simple edition).</description></item>
+        /// <item><description><b>MOBILE_3_META</b>: mobile number three-element verification (detailed edition).</description></item>
+        /// <item><description><b>MOBILE_2_META</b>: mobile number two-element verification.</description></item>
+        /// <item><description><b>BANK_CARD_N_META</b>: bank card verification (detailed edition).</description></item>
+        /// <item><description><b>MOBILE_DETECT</b>: phone number detection. </description></item>
+        /// <item><description><b>VEHICLE_N_META</b>: vehicle element verification (enhanced edition).</description></item>
+        /// <item><description><b>VEHICLE_PENTA_INFO</b>: vehicle five-element information recognition.</description></item>
+        /// <item><description><b>VEHICLE_LICENSE_INFO</b>: vehicle information recognition.</description></item>
+        /// <item><description><b>VEHICLE_INSURE_DATE</b>: vehicle insurance date query.</description></item>
         /// <item><description><b>VEHICLE_CHECK</b>: vehicle element verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BankCard { get; set; }
 
         /// <summary>
-        /// <para>The verification status. Valid values:</para>
+        /// <para>The authentication status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Verification passed.</description></item>
-        /// <item><description><b>2</b>: Verification failed.</description></item>
+        /// <item><description><b>1</b>: Authentication passed.</description></item>
+        /// <item><description><b>2</b>: Authentication failed.</description></item>
         /// <item><description><b>3</b>: No record found.</description></item>
         /// </list>
         /// 
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>The name of the telecommunications service provider. Valid values:</para>
+        /// <para>The telecommunications service provider name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CMCC</b>: China Mobile</description></item>
-        /// <item><description><b>CUCC</b>: China Unicom</description></item>
+        /// <item><description><b>CMCC</b>: China Mobile.</description></item>
+        /// <item><description><b>CUCC</b>: China Unicom.</description></item>
         /// <item><description><b>CTCC</b>: China Telecom.</description></item>
         /// </list>
         /// 
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IspName { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number.</para>
+        /// <para>The mobile number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19127612221</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? StartDate { get; set; }
 
         /// <summary>
-        /// <para>The result code. For more information, see <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</para>
+        /// <para>The result code. For more information, refer to the <a href="https://www.alibabacloud.com/help/en/id-verification/information-verification/">official documentation</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>205</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>John Smith</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>Specifies whether the age is older than 14. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>T</b>: older than 14</description></item>
-        /// <item><description><b>F</b>: younger than 14.</description></item>
+        /// <item><description><b>F</b>: younger than 14</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string AgeGt { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end time of the query. Format: UNIX timestamp. Unit: milliseconds. Example: 1760630399999.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
-        /// <item><description><b>cloudauthst</b> (discontinued): enhanced ID Verification.</description></item>
+        /// <item><description><b>cloudauthst</b> (discontinued): ID Verification - Enhanced Edition.</description></item>
         /// <item><description><b>cloudauth</b> (discontinued): ID Verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The start time of the query. Format: UNIX timestamp. Unit: milliseconds. Example: 1760025600000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

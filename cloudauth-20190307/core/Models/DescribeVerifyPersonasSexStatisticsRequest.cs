@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
-        /// <item><description><b>cloudauthst</b> (discontinued): enhanced ID Verification.</description></item>
+        /// <item><description><b>cloudauthst</b> (discontinued): ID Verification enhanced edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The time range. The search scope is the previous N days. For example, a value of 1 indicates the previous day.</para>
+        /// <para>The time range. The search range is the previous N days. Format: a numeric string. Unit: days (d). A value of 7 indicates the previous 7 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

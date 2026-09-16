@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertNo { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the ID Verification request.</para>
+            /// <para>The unique identifier of the ID Verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha43d9cabd52d370d9f4cca9468f71e</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <list type="bullet">
             /// <item><description>DELETE: Deleted.</description></item>
             /// <item><description>VALID: Not deleted and within the validity period (valid).</description></item>
-            /// <item><description>INVALID: Not deleted but outside the validity period (invalid).</description></item>
+            /// <item><description>INVALID: Not deleted but not within the validity period (invalid).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The end date of the validity period.</para>
+            /// <para>The end date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-09-02 13:57:51.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-02 13:57:51</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ValidEndDate { get; set; }
 
             /// <summary>
-            /// <para>The start date of the validity period.</para>
+            /// <para>The start date of the validity period. Format: YYYY-MM-DD HH:mm:ss, for example, 2024-08-30 13:57:51.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-30 13:57:51</para>

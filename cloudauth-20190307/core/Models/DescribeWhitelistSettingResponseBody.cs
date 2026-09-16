@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16 17:28:03</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试白名单</para>
+            /// <para>Test whitelist</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The expiration date.</para>
+            /// <para>The effective end date. Format: YYYY-MM-DD HH:mm:ss. Example: 2025-10-16 17:28:03.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16 17:28:03</para>
@@ -132,6 +132,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ValidStartDate { get; set; }
 
             /// <summary>
+            /// <para>The whitelist type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUPER</para>
             /// </summary>
