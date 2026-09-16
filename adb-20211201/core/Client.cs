@@ -34294,6 +34294,166 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询知识库文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeFilesResponse
+        /// </returns>
+        public ListKnowledgeFilesResponse ListKnowledgeFilesWithOptions(ListKnowledgeFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
+            {
+                query["FileIds"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeFiles",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeFilesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeFilesResponse
+        /// </returns>
+        public async Task<ListKnowledgeFilesResponse> ListKnowledgeFilesWithOptionsAsync(ListKnowledgeFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
+            {
+                query["FileIds"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["Page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.User))
+            {
+                query["User"] = request.User;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListKnowledgeFiles",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListKnowledgeFilesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeFilesResponse
+        /// </returns>
+        public ListKnowledgeFilesResponse ListKnowledgeFiles(ListKnowledgeFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListKnowledgeFilesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询知识库文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListKnowledgeFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListKnowledgeFilesResponse
+        /// </returns>
+        public async Task<ListKnowledgeFilesResponse> ListKnowledgeFilesAsync(ListKnowledgeFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListKnowledgeFilesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags of a knowledge base document.</para>
         /// </summary>
         /// 
