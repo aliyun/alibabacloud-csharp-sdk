@@ -17625,6 +17625,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterCustomModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterCustomModelResponse
+        /// </returns>
+        public DeleteAIDBClusterCustomModelResponse DeleteAIDBClusterCustomModelWithOptions(DeleteAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAIDBClusterCustomModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAIDBClusterCustomModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterCustomModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterCustomModelResponse
+        /// </returns>
+        public async Task<DeleteAIDBClusterCustomModelResponse> DeleteAIDBClusterCustomModelWithOptionsAsync(DeleteAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAIDBClusterCustomModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAIDBClusterCustomModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterCustomModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterCustomModelResponse
+        /// </returns>
+        public DeleteAIDBClusterCustomModelResponse DeleteAIDBClusterCustomModel(DeleteAIDBClusterCustomModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAIDBClusterCustomModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a custom model registration from an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAIDBClusterCustomModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAIDBClusterCustomModelResponse
+        /// </returns>
+        public async Task<DeleteAIDBClusterCustomModelResponse> DeleteAIDBClusterCustomModelAsync(DeleteAIDBClusterCustomModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAIDBClusterCustomModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
@@ -60725,6 +60861,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAIDBClusterModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAIDBClusterModelResponse
+        /// </returns>
+        public ModifyAIDBClusterModelResponse ModifyAIDBClusterModelWithOptions(ModifyAIDBClusterModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
+            {
+                query["DisplayModelName"] = request.DisplayModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAIDBClusterModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAIDBClusterModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAIDBClusterModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAIDBClusterModelResponse
+        /// </returns>
+        public async Task<ModifyAIDBClusterModelResponse> ModifyAIDBClusterModelWithOptionsAsync(ModifyAIDBClusterModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
+            {
+                query["DisplayModelName"] = request.DisplayModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyAIDBClusterModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyAIDBClusterModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAIDBClusterModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAIDBClusterModelResponse
+        /// </returns>
+        public ModifyAIDBClusterModelResponse ModifyAIDBClusterModel(ModifyAIDBClusterModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyAIDBClusterModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyAIDBClusterModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyAIDBClusterModelResponse
+        /// </returns>
+        public async Task<ModifyAIDBClusterModelResponse> ModifyAIDBClusterModelAsync(ModifyAIDBClusterModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyAIDBClusterModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the description of a PolarDB database account.</para>
         /// </summary>
         /// 
@@ -75037,6 +75325,166 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RefreshDBClusterStorageUsageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a custom model for an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterAIDBClusterCustomModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterAIDBClusterCustomModelResponse
+        /// </returns>
+        public RegisterAIDBClusterCustomModelResponse RegisterAIDBClusterCustomModelWithOptions(RegisterAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketName))
+            {
+                query["CustomOssBucketName"] = request.CustomOssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketPath))
+            {
+                query["CustomOssBucketPath"] = request.CustomOssBucketPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
+            {
+                query["DisplayModelName"] = request.DisplayModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterAIDBClusterCustomModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterAIDBClusterCustomModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a custom model for an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterAIDBClusterCustomModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterAIDBClusterCustomModelResponse
+        /// </returns>
+        public async Task<RegisterAIDBClusterCustomModelResponse> RegisterAIDBClusterCustomModelWithOptionsAsync(RegisterAIDBClusterCustomModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketName))
+            {
+                query["CustomOssBucketName"] = request.CustomOssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOssBucketPath))
+            {
+                query["CustomOssBucketPath"] = request.CustomOssBucketPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayModelName))
+            {
+                query["DisplayModelName"] = request.DisplayModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelName))
+            {
+                query["ModelName"] = request.ModelName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RegisterAIDBClusterCustomModel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RegisterAIDBClusterCustomModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a custom model for an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterAIDBClusterCustomModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterAIDBClusterCustomModelResponse
+        /// </returns>
+        public RegisterAIDBClusterCustomModelResponse RegisterAIDBClusterCustomModel(RegisterAIDBClusterCustomModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RegisterAIDBClusterCustomModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Registers a custom model for an AI cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RegisterAIDBClusterCustomModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RegisterAIDBClusterCustomModelResponse
+        /// </returns>
+        public async Task<RegisterAIDBClusterCustomModelResponse> RegisterAIDBClusterCustomModelAsync(RegisterAIDBClusterCustomModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RegisterAIDBClusterCustomModelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
