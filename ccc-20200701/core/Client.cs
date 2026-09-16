@@ -3588,6 +3588,154 @@ namespace AlibabaCloud.SDK.CCC20200701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>假期工作日检查</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckBusinessHoursRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBusinessHoursResponse
+        /// </returns>
+        public CheckBusinessHoursResponse CheckBusinessHoursWithOptions(CheckBusinessHoursRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["Time"] = request.Time;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckBusinessHours",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckBusinessHoursResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>假期工作日检查</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckBusinessHoursRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBusinessHoursResponse
+        /// </returns>
+        public async Task<CheckBusinessHoursResponse> CheckBusinessHoursWithOptionsAsync(CheckBusinessHoursRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Time))
+            {
+                query["Time"] = request.Time;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckBusinessHours",
+                Version = "2020-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckBusinessHoursResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>假期工作日检查</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckBusinessHoursRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBusinessHoursResponse
+        /// </returns>
+        public CheckBusinessHoursResponse CheckBusinessHours(CheckBusinessHoursRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckBusinessHoursWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>假期工作日检查</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>拥有RAM权限的账号可以到RAM控制台查询阿里云主账号下管理的所有RAM子账号，RAM控制台地址：<a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckBusinessHoursRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBusinessHoursResponse
+        /// </returns>
+        public async Task<CheckBusinessHoursResponse> CheckBusinessHoursAsync(CheckBusinessHoursRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckBusinessHoursWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Call the <c>ClaimCall</c> API to assign a call to an agent.</para>
         /// </summary>
         /// 
