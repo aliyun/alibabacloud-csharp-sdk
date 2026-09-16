@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

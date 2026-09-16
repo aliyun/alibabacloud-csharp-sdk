@@ -19,18 +19,6 @@ namespace AlibabaCloud.SDK.Milvus20231012
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"eu-central-1", "milvus.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "milvus.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "milvus.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "milvus.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "milvus.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "milvus.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "milvus.cn-hangzhou.aliyuncs.com"},
-                {"cn-beijing", "milvus.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-1", "milvus.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("milvus", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -562,6 +550,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
             {
                 body["multiZoneMode"] = request.MultiZoneMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["nodeType"] = request.NodeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDuration))
             {
                 body["paymentDuration"] = request.PaymentDuration;
@@ -713,6 +705,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiZoneMode))
             {
                 body["multiZoneMode"] = request.MultiZoneMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeType))
+            {
+                body["nodeType"] = request.NodeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentDuration))
             {

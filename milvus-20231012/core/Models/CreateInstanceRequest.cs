@@ -38,6 +38,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatic payment is enabled.</description></item>
+        /// <item><description>false: Only an order is generated. No payment is made.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when the payment type is set to Subscription.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when the billing method of the instance is Subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string BackupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source backup cluster.</para>
+            /// <para>The ID of the source cluster for the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-xxxxxxx</para>
@@ -123,11 +127,16 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public string CuType { get; set; }
 
+            /// <summary>
+            /// <para>The QueryNode data cloud disk configuration. This parameter is supported only when type is set to query.</para>
+            /// </summary>
             [NameInMap("dataDisk")]
             [Validation(Required=false)]
             public CreateInstanceRequestComponentsDataDisk DataDisk { get; set; }
             public class CreateInstanceRequestComponentsDataDisk : TeaModel {
                 /// <summary>
+                /// <para>Specifies whether to enable the QueryNode data cloud disk.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -136,6 +145,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
+                /// <para>The ESSD performance level (PL). Valid values: PL0, PL1, PL2, and PL3. If StorageClass is not specified, this parameter is used for parsing.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
                 /// </summary>
@@ -144,6 +155,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
+                /// <para>The data cloud disk capacity. Unit: GiB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -152,6 +165,8 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? Size { get; set; }
 
                 /// <summary>
+                /// <para>The StorageClass of the data cloud disk. Valid values: alicloud-disk-essd-pl0, alicloud-disk-essd-pl1, alicloud-disk-essd-pl2, and alicloud-disk-essd-pl3.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>alicloud-disk-essd-pl1</para>
                 /// </summary>
@@ -162,7 +177,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             }
 
             /// <summary>
-            /// <para>The disk size type for Query Node. Set to Large for storage-optimized, and Normal for compute-optimized or other configurations.</para>
+            /// <para>The disk size type for the Query Node. Set this parameter to Large for storage-optimized instances, and to Normal for compute-optimized and other instance types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -208,7 +223,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Configuration { get; set; }
 
         /// <summary>
-        /// <para>The database administrator password.</para>
+        /// <para>The database password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test12</para>
@@ -239,7 +254,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable high availability.</para>
+        /// <para>Specifies whether to enable high availability (HA).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -296,6 +311,16 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string MultiZoneMode { get; set; }
 
         /// <summary>
+        /// <para>The node type. Valid values for Milvus standalone: perf, enhanced, and cap. Default value: perf.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>perf</para>
+        /// </summary>
+        [NameInMap("nodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
+
+        /// <summary>
         /// <para>The payment duration.</para>
         /// 
         /// <b>Example:</b>
@@ -306,7 +331,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>The payment duration unit.</para>
+        /// <para>The unit of the payment duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>month</para>
