@@ -17,6 +17,16 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>数字员工渠道类型。不填时使用默认渠道。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("channel")]
+        [Validation(Required=false)]
+        public string Channel { get; set; }
+
+        /// <summary>
         /// <para>The default rule of the digital employee.</para>
         /// 
         /// <b>Example:</b>

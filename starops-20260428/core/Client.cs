@@ -400,6 +400,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["attributes"] = request.Attributes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["channel"] = request.Channel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
                 body["defaultRule"] = request.DefaultRule;
@@ -490,6 +494,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
             {
                 body["attributes"] = request.Attributes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                body["channel"] = request.Channel;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
