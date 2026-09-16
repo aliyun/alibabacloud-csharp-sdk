@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? Auto { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>Specify whether to enable lifecycle management for the artifact.</para>
         /// 
@@ -28,6 +32,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("EnableDeleteTag")]
         [Validation(Required=false)]
         public bool? EnableDeleteTag { get; set; }
+
+        [NameInMap("EnableDeleteUntaggedManifest")]
+        [Validation(Required=false)]
+        public bool? EnableDeleteUntaggedManifest { get; set; }
 
         /// <summary>
         /// <para>The instance ID.</para>

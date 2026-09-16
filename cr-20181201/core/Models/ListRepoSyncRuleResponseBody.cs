@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoSyncRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListRepoSyncRuleResponseBodySyncRules> SyncRules { get; set; }
         public class ListRepoSyncRuleResponseBodySyncRules : TeaModel {
             /// <summary>
-            /// <para>The time when the synchronization rule was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572604642000</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether images are synchronized across different Alibaba Cloud accounts. Valid values:</para>
+            /// <para>Indicates whether images are synchronized across accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>true</c></para>
+            /// <item><description><para><c>true</c>: Images are synchronized across accounts.</para>
             /// </description></item>
-            /// <item><description><para><c>false</c></para>
+            /// <item><description><para><c>false</c>: Images are synchronized within the same account.</para>
             /// </description></item>
             /// </list>
-            /// <para>Default value: <c>false</c>.</para>
+            /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -93,12 +93,18 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public bool? CrossUser { get; set; }
 
+            /// <summary>
+            /// <para>The custom synchronization link ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>stl-w7b1tdlq1mfrw***</para>
+            /// </summary>
             [NameInMap("LinkId")]
             [Validation(Required=false)]
             public string LinkId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the source instance.</para>
+            /// <para>The source instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-kmsiwlxxdcva****</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string LocalInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace in the source instance.</para>
+            /// <para>The namespace name of the source instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string LocalRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository in the source instance.</para>
+            /// <para>The repository name of the source instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo-local</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string LocalRepoName { get; set; }
 
             /// <summary>
-            /// <para>The time when the synchronization rule was last modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572604642000</para>
@@ -147,18 +153,32 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public long? ModifiedTime { get; set; }
 
+            /// <summary>
+            /// <para>The namespace regex at the instance level.</para>
+            /// <remarks>
+            /// <para>This parameter is valid only when SyncScope is set to <c>INSTANCE</c>.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("NamespaceNameFilter")]
             [Validation(Required=false)]
             public string NamespaceNameFilter { get; set; }
 
+            /// <summary>
+            /// <para>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</para>
+            /// <para>Valid values: 1 to 5.</para>
+            /// <para>Default value: 3.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("Priority")]
             [Validation(Required=false)]
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The regular expression that is used to filter repositories.</para>
+            /// <para>The repository filtering rule.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when <c>SyncScope</c> is set to <c>NAMESPACE</c>.</para>
+            /// <para>This parameter is valid only when SyncScope is set to <c>INSTANCE</c> or <c>NAMESPACE</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -171,9 +191,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The synchronization direction. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>FROM</c>: from the source instance to the target instance.</para>
+            /// <item><description><para><c>FROM</c>: synchronizes from the source instance to the target instance</para>
             /// </description></item>
-            /// <item><description><para><c>TO</c>: from the target instance to the source instance.</para>
+            /// <item><description><para><c>TO</c>: synchronizes from the target instance to the source instance</para>
             /// </description></item>
             /// </list>
             /// 
@@ -185,7 +205,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncDirection { get; set; }
 
             /// <summary>
-            /// <para>The ID of the synchronization rule.</para>
+            /// <para>The synchronization rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crsr-7lph66uloi6h****</para>
@@ -195,7 +215,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncRuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the synchronization rule.</para>
+            /// <para>The synchronization rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sync-rule-1</para>
@@ -207,9 +227,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The synchronization scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>NAMESPACE</c>: Synchronizes resources by namespace.</para>
+            /// <item><description><para><c>INSTANCE</c>: synchronizes based on namespace regex and repository regex rules</para>
             /// </description></item>
-            /// <item><description><para><c>REPO</c>: Synchronizes resources by repository.</para>
+            /// <item><description><para><c>NAMESPACE</c>: synchronizes by namespace</para>
+            /// </description></item>
+            /// <item><description><para><c>REPO</c>: synchronizes by image repository</para>
             /// </description></item>
             /// </list>
             /// 
@@ -223,9 +245,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// <summary>
             /// <para>The trigger policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>INITIATIVE</c>: The synchronization is actively triggered.</para>
+            /// <item><description><para><c>INITIATIVE</c>: proactive trigger</para>
             /// </description></item>
-            /// <item><description><para><c>PASSIVE</c>: The synchronization is passively triggered.</para>
+            /// <item><description><para><c>PASSIVE</c>: passive trigger</para>
             /// </description></item>
             /// </list>
             /// 
@@ -237,7 +259,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string SyncTrigger { get; set; }
 
             /// <summary>
-            /// <para>The regular expression that is used to filter tags.</para>
+            /// <para>The tag filtering rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.*</para>
@@ -247,7 +269,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TagFilter { get; set; }
 
             /// <summary>
-            /// <para>The ID of the target instance.</para>
+            /// <para>The target instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-k77rd2eo9ztt****</para>
@@ -257,7 +279,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TargetInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace in the target instance.</para>
+            /// <para>The namespace name of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -277,7 +299,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string TargetRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository in the target instance.</para>
+            /// <para>The repository name of the target instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-repo-target</para>

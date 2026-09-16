@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class ListRepoTagResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The image list.</para>
+        /// <para>The list of images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public long? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was updated.</para>
+            /// <para>The time when the image was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1572875608000</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,10 +108,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token for the next page. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }

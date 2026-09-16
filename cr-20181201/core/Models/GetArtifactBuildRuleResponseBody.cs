@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactBuildRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the artifact. Valid values:</para>
+        /// <para>The type of the accelerated image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ACCELERATED_IMAGE</c>: accelerated images.</description></item>
+        /// <item><description><c>ACCELERATED_IMAGE</c>: generates an accelerated image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the artifact building rule.</para>
+        /// <para>The build rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crabr-o2670wqz2n70****</para>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRuleId { get; set; }
 
         /// <summary>
-        /// <para>The API return code:</para>
+        /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>200</b>: Indicates success.</description></item>
-        /// <item><description>Others: Indicate error codes.</description></item>
+        /// <item><description><b>200</b>: success.</description></item>
+        /// <item><description>Other values: error codes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API request is successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>Additional parameters.</para>
+        /// <para>The additional parameters.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -78,7 +80,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public bool? ImageIndexOnly { get; set; }
 
             /// <summary>
-            /// <para>The list of files that you want to prefetch when you use the image acceleration feature. Each entry contains the Base64-encoded absolute path of a file.</para>
+            /// <para>The task priority. Valid values: [1, 5].</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
+            [NameInMap("Priority")]
+            [Validation(Required=false)]
+            public int? Priority { get; set; }
+
+            /// <summary>
+            /// <para>The list of prefetch files for the accelerated image. Each line contains an absolute path. The list is Base64-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L2hvbWUvdGVzdC8=</para>
@@ -100,9 +112,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective range of the artifact building rule.</para>
+        /// <para>The ID of the scope in which the rule takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The parameter value is the ID of the image repository.</description></item>
+        /// <item><description>ScopeId: the image repository ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,9 +125,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScopeId { get; set; }
 
         /// <summary>
-        /// <para>The effective range of the artifact building rule. Valid values:</para>
+        /// <para>The scope of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>REPOSITORY</c>: The artifact building rule is effective in the repository level.</description></item>
+        /// <item><description><c>REPOSITORY</c>: repository level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

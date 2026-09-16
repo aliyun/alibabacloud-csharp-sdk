@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactBuildRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the artifact.</para>
+        /// <para>The type of the accelerated image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ACCELERATED_IMAGE</c>: accelerated images.</description></item>
+        /// <item><description><c>ACCELERATED_IMAGE</c>: generates an accelerated image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the artifact building rule.</para>
+        /// <para>The build rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crabr-o2670wqz2n70****</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string BuildRuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Container Registry instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the effective range of the artifact building rule.</para>
+        /// <para>The ID of the scope in which the rule takes effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to the ID of the image repository.</description></item>
+        /// <item><description>ScopeId: the image repository ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScopeId { get; set; }
 
         /// <summary>
-        /// <para>The effective range of the artifact building rule. Valid values:</para>
+        /// <para>The scope of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>REPOSITORY</c>: The artifact building rule is effective in the repository level.</description></item>
+        /// <item><description><c>REPOSITORY</c>: repository level.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

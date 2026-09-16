@@ -19,50 +19,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "cr.us-west-1.aliyuncs.com"},
-                {"us-southeast-1", "cr.us-southeast-1.aliyuncs.com"},
-                {"us-east-1", "cr.us-east-1.aliyuncs.com"},
-                {"na-south-1", "cr.na-south-1.aliyuncs.com"},
-                {"me-east-1", "cr.me-east-1.aliyuncs.com"},
-                {"me-central-1", "cr.me-central-1.aliyuncs.com"},
-                {"eu-west-2", "cr.eu-west-2.aliyuncs.com"},
-                {"eu-west-1", "cr.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "cr.eu-central-1.aliyuncs.com"},
-                {"cn-zhongwei", "cr.cn-zhongwei.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "cr.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "cr.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu-gic-1", "cr.cn-wulanchabu-gic-1.aliyuncs.com"},
-                {"cn-wulanchabu", "cr.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "cr.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "cr.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "cr.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "cr.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "cr.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "cr.cn-qingdao.aliyuncs.com"},
-                {"cn-north-2-gov-1", "cr.cn-north-2-gov-1.aliyuncs.com"},
-                {"cn-nanjing", "cr.cn-nanjing.aliyuncs.com"},
-                {"cn-huhehaote", "cr.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "cr.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "cr.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "cr.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "cr.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "cr.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "cr.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "cr.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "cr.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "cr.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-beijing", "cr.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-8", "cr.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "cr.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "cr.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "cr.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "cr.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "cr.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "cr.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "cr.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -820,9 +776,17 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["Auto"] = request.Auto;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteTag))
             {
                 query["EnableDeleteTag"] = request.EnableDeleteTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteUntaggedManifest))
+            {
+                query["EnableDeleteUntaggedManifest"] = request.EnableDeleteUntaggedManifest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -894,9 +858,17 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["Auto"] = request.Auto;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteTag))
             {
                 query["EnableDeleteTag"] = request.EnableDeleteTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteUntaggedManifest))
+            {
+                query["EnableDeleteUntaggedManifest"] = request.EnableDeleteUntaggedManifest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -3067,7 +3039,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image synchronization rule for an image repository.</para>
+        /// <para>Creates a synchronization rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,7 +3141,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image synchronization rule for an image repository.</para>
+        /// <para>Creates a synchronization rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3271,7 +3243,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image synchronization rule for an image repository.</para>
+        /// <para>Creates a synchronization rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3289,7 +3261,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image synchronization rule for an image repository.</para>
+        /// <para>Creates a synchronization rule for an image repository.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3307,7 +3279,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually create a sync task.</para>
+        /// <para>Manually creates a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3389,7 +3361,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually create a sync task.</para>
+        /// <para>Manually creates a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3471,7 +3443,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually create a sync task.</para>
+        /// <para>Manually creates a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3461,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually create a sync task.</para>
+        /// <para>Manually creates a synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3507,7 +3479,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image replication task based on a manual replication rule.</para>
+        /// <para>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3565,7 +3537,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image replication task based on a manual replication rule.</para>
+        /// <para>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3623,7 +3595,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image replication task based on a manual replication rule.</para>
+        /// <para>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3641,7 +3613,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image replication task based on a manual replication rule.</para>
+        /// <para>Creates a synchronization task for an image repository based on a synchronization rule (manual synchronization rules only).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7227,7 +7199,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building rule.</para>
+        /// <para>Retrieves an artifact build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7265,7 +7237,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building rule.</para>
+        /// <para>Retrieves an artifact build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7303,7 +7275,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building rule.</para>
+        /// <para>Retrieves an artifact build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7321,7 +7293,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an artifact building rule.</para>
+        /// <para>Retrieves an artifact build rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7339,7 +7311,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact build task.</para>
+        /// <para>Retrieves the build task of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7377,7 +7349,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact build task.</para>
+        /// <para>Retrieves the build task of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7415,7 +7387,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact build task.</para>
+        /// <para>Retrieves the build task of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7433,7 +7405,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an artifact build task.</para>
+        /// <para>Retrieves the build task of an artifact.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7451,7 +7423,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists artifact lifecycle management rules.</para>
+        /// <para>Queries the lifecycle management rules of artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7489,7 +7461,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists artifact lifecycle management rules.</para>
+        /// <para>Queries the lifecycle management rules of artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7527,7 +7499,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists artifact lifecycle management rules.</para>
+        /// <para>Queries the lifecycle management rules of artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7545,7 +7517,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists artifact lifecycle management rules.</para>
+        /// <para>Queries the lifecycle management rules of artifacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9735,7 +9707,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an image synchronization task in an instance.</para>
+        /// <para>Queries a repository synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9781,7 +9753,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an image synchronization task in an instance.</para>
+        /// <para>Queries a repository synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9827,7 +9799,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an image synchronization task in an instance.</para>
+        /// <para>Queries a repository synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9845,7 +9817,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an image synchronization task in an instance.</para>
+        /// <para>Queries a repository synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13167,7 +13139,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of repository synchronization rules.</para>
+        /// <para>Queries the list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13233,7 +13205,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of repository synchronization rules.</para>
+        /// <para>Queries the list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13299,7 +13271,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of repository synchronization rules.</para>
+        /// <para>Queries the list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13317,7 +13289,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of repository synchronization rules.</para>
+        /// <para>Queries the list of repository synchronization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13335,7 +13307,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists repository synchronization tasks.</para>
+        /// <para>Queries the list of repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13401,7 +13373,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists repository synchronization tasks.</para>
+        /// <para>Queries the list of repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13467,7 +13439,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists repository synchronization tasks.</para>
+        /// <para>Queries the list of repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13485,7 +13457,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists repository synchronization tasks.</para>
+        /// <para>Queries the list of repository synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15195,7 +15167,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lifecycle management rule of an artifact.</para>
+        /// <para>Updates an artifact lifecycle management rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15216,9 +15188,17 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["Auto"] = request.Auto;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteTag))
             {
                 query["EnableDeleteTag"] = request.EnableDeleteTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteUntaggedManifest))
+            {
+                query["EnableDeleteUntaggedManifest"] = request.EnableDeleteUntaggedManifest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -15273,7 +15253,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lifecycle management rule of an artifact.</para>
+        /// <para>Updates an artifact lifecycle management rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15294,9 +15274,17 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["Auto"] = request.Auto;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteTag))
             {
                 query["EnableDeleteTag"] = request.EnableDeleteTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDeleteUntaggedManifest))
+            {
+                query["EnableDeleteUntaggedManifest"] = request.EnableDeleteUntaggedManifest;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -15351,7 +15339,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lifecycle management rule of an artifact.</para>
+        /// <para>Updates an artifact lifecycle management rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15369,7 +15357,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a lifecycle management rule of an artifact.</para>
+        /// <para>Updates an artifact lifecycle management rule.</para>
         /// </summary>
         /// 
         /// <param name="request">

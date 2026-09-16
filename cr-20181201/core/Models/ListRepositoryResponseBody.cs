@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -29,10 +29,22 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? IsSuccess { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of entries returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token. If a next page exists, the service returns a NextToken value. Pass this value in the next request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>*****V3MpHK1AP0pfERHZN5pu6lESTRpd5hnHNnmKOP/+w9F</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -65,7 +77,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public List<ListRepositoryResponseBodyRepositories> Repositories { get; set; }
         public class ListRepositoryResponseBodyRepositories : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the repository was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -85,7 +97,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The time when the repository was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1564153576000</para>
@@ -177,7 +189,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The summary information.</para>
+            /// <para>The summary.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test OK</para>
@@ -187,7 +199,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             public string Summary { get; set; }
 
             /// <summary>
-            /// <para>The image tag immutability.</para>
+            /// <para>The tag immutability of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

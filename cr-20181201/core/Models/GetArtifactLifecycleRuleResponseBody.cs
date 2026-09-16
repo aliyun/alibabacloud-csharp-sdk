@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetArtifactLifecycleRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies if the rule is executed automatically.</para>
+        /// <para>Indicates whether automatic execution is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? Auto { get; set; }
 
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1571926439000</para>
@@ -40,7 +40,16 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies if lifecycle management is enabled.</para>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether lifecycle management is enabled.</para>
+        /// <para>Only one of this parameter and EnableDeleteUntaggedManifest can be set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -48,6 +57,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [NameInMap("EnableDeleteTag")]
         [Validation(Required=false)]
         public bool? EnableDeleteTag { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>False</para>
+        /// </summary>
+        [NameInMap("EnableDeleteUntaggedManifest")]
+        [Validation(Required=false)]
+        public bool? EnableDeleteUntaggedManifest { get; set; }
 
         /// <summary>
         /// <para>The instance ID.</para>
@@ -60,11 +77,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request succeeded.</para>
+        /// <item><description><para><c>true</c>: The API call is successful.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// <item><description><para><c>false</c>: The API call failed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -76,7 +93,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The last modified time.</para>
+        /// <para>The last modification time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1638259914000</para>
@@ -96,7 +113,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the next scheduled execution.</para>
+        /// <para>The next execution time. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1701878400000</para>
@@ -105,38 +122,71 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public long? NextTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of lifecycle policies.</para>
+        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public List<GetArtifactLifecycleRuleResponseBodyPolicies> Policies { get; set; }
         public class GetArtifactLifecycleRuleResponseBodyPolicies : TeaModel {
+            /// <summary>
+            /// <para>The trigger condition of the lifecycle policy.</para>
+            /// </summary>
             [NameInMap("Condition")]
             [Validation(Required=false)]
             public GetArtifactLifecycleRuleResponseBodyPoliciesCondition Condition { get; set; }
             public class GetArtifactLifecycleRuleResponseBodyPoliciesCondition : TeaModel {
+                /// <summary>
+                /// <para>The number of days since the last pull.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("LastPullOlderThanDays")]
                 [Validation(Required=false)]
                 public int? LastPullOlderThanDays { get; set; }
 
+                /// <summary>
+                /// <para>The number of days since the last push.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("LastPushOlderThanDays")]
                 [Validation(Required=false)]
                 public int? LastPushOlderThanDays { get; set; }
 
+                /// <summary>
+                /// <para>The number of latest image versions to retain.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("LatestTagCount")]
                 [Validation(Required=false)]
                 public int? LatestTagCount { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The image version filter condition.</para>
+            /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public GetArtifactLifecycleRuleResponseBodyPoliciesFilter Filter { get; set; }
             public class GetArtifactLifecycleRuleResponseBodyPoliciesFilter : TeaModel {
+                /// <summary>
+                /// <para>The wildcard used to match image versions.</para>
+                /// </summary>
                 [NameInMap("TagWildcard")]
                 [Validation(Required=false)]
                 public string TagWildcard { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The lifecycle policy type.</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
@@ -144,7 +194,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         }
 
         /// <summary>
-        /// <para>The repository name.</para>
+        /// <para>The image repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-repo</para>
@@ -164,7 +214,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of image versions to retain.</para>
+        /// <para>The number of images to retain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -184,7 +234,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The execution schedule.</para>
+        /// <para>The execution cycle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WEEK</para>
@@ -194,7 +244,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ScheduleTime { get; set; }
 
         /// <summary>
-        /// <para>The scope of the rule.</para>
+        /// <para>The cleanup scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
@@ -204,7 +254,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The regular expression that matches image tags to select versions for retention.</para>
+        /// <para>The regular expression used to match image versions to retain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.*-alpine</para>

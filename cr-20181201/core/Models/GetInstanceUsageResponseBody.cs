@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class GetInstanceUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The quota of chart namespaces.</para>
+        /// <para>The quota of Chart namespaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChartNamespaceQuota { get; set; }
 
         /// <summary>
-        /// <para>The number of chart namespaces that are created in the instance.</para>
+        /// <para>The number of Chart namespaces created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChartNamespaceUsage { get; set; }
 
         /// <summary>
-        /// <para>The quota of chart repositories for the instance.</para>
+        /// <para>The quota of Chart repositories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string ChartRepoQuota { get; set; }
 
         /// <summary>
-        /// <para>The number of chart repositories that are created.</para>
+        /// <para>The number of Chart repositories created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The request is successful.</description></item>
-        /// <item><description><c>false</c>: The request fails.</description></item>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
-        /// <para>The quota of image namespaces for the instance.</para>
+        /// <para>The quota of image namespaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceQuota { get; set; }
 
         /// <summary>
-        /// <para>The number of image namespaces that are created in the instance.</para>
+        /// <para>The number of image namespaces used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -94,7 +96,17 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceUsage { get; set; }
 
         /// <summary>
-        /// <para>The quota of image repositories for the instance.</para>
+        /// <para>The number of performance units, which indicates the additional instance capacity purchased on top of the Advanced Edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PerformanceUnits")]
+        [Validation(Required=false)]
+        public int? PerformanceUnits { get; set; }
+
+        /// <summary>
+        /// <para>The quota of image repositories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoQuota { get; set; }
 
         /// <summary>
-        /// <para>The number of image repositories that are created in the instance.</para>
+        /// <para>The number of image repositories used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -114,7 +126,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoUsage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A726E801-7FCF-43F9-AF1C-51B3E65D3E7A</para>
@@ -124,7 +136,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>VPC quota</para>
+        /// <para>The VPC quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -134,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string VpcQuota { get; set; }
 
         /// <summary>
-        /// <para>Number of bound VPCs</para>
+        /// <para>The number of bound VPCs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

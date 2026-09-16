@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The name of the repository namespace.</para>
+        /// <para>The name of the namespace to which the repository belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sync task. This ID is also the <c>SyncBatchTaskId</c> returned in the response, which identifies the image\&quot;s sync batch task.</para>
+        /// <para>The synchronization task record ID, which corresponds to the SyncBatchTaskId (batch synchronization task ID for images) in the response.</para>
         /// <remarks>
-        /// <para>An image that matches multiple sync rules generates multiple sync tasks, each with the same <c>SyncBatchTaskId</c>.</para>
+        /// <para>When an image matches multiple synchronization rules and generates multiple synchronization tasks, these tasks share the same SyncBatchTaskId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SyncRecordId { get; set; }
 
         /// <summary>
-        /// <para>The image tag.</para>
+        /// <para>The image version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nginx</para>

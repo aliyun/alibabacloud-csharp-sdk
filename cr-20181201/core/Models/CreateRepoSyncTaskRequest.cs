@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoSyncTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Source instance ID</para>
+        /// <para>The source instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to overwrite an existing image:</para>
+        /// <para>Specifies whether to forcibly overwrite existing images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Overwrite the existing image.</para>
+        /// <item><description><para><c>true</c>: Forcibly overwrites existing images.</para>
         /// </description></item>
-        /// <item><description><para><c>false</c>: Do not overwrite the existing image.</para>
+        /// <item><description><para><c>false</c>: Does not forcibly overwrite existing images.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,12 +36,20 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public bool? Override { get; set; }
 
+        /// <summary>
+        /// <para>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</para>
+        /// <para>Valid values: 1 to 5.</para>
+        /// <para>Default value: 3.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>Image repository ID in the source instance</para>
+        /// <para>The ID of the image repository in the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>Image tag in the source instance</para>
+        /// <para>The image tag in the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +71,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>Target instance ID</para>
+        /// <para>The target instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +82,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Namespace in the target instance</para>
+        /// <para>The namespace of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +93,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetNamespace { get; set; }
 
         /// <summary>
-        /// <para>Region ID of the target instance</para>
+        /// <para>The region ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +104,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetRegionId { get; set; }
 
         /// <summary>
-        /// <para>Name of the image repository in the target instance</para>
+        /// <para>The name of the image repository in the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +115,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetRepoName { get; set; }
 
         /// <summary>
-        /// <para>Image tag in the target instance</para>
+        /// <para>The image tag in the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +126,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetTag { get; set; }
 
         /// <summary>
-        /// <para>UID of the account to which the target instance belongs</para>
+        /// <para>The UID of the account to which the target instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345***</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 {
     public class CreateRepoSyncRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The source instance ID.</para>
+        /// <para>The ID of the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the custom synchronization link.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>stl-72cjfd3fayno8***</para>
+        /// </summary>
         [NameInMap("LinkId")]
         [Validation(Required=false)]
         public string LinkId { get; set; }
@@ -35,6 +41,11 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
+        /// <para>The instance-level namespace regex filter.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when SyncScope is set to <c>INSTANCE</c>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>.*</para>
         /// </summary>
@@ -42,12 +53,20 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         [Validation(Required=false)]
         public string NamespaceNameFilter { get; set; }
 
+        /// <summary>
+        /// <para>The execution priority of the synchronization task. Synchronization tasks are executed in descending order of priority. Tasks with the same priority are executed in random order.</para>
+        /// <para>Valid values: 1 to 5.</para>
+        /// <para>Default value: 3.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("Priority")]
         [Validation(Required=false)]
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository in the source instance.</para>
+        /// <para>The repository name of the source instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo1</para>
@@ -57,9 +76,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The regular expression that is used to filter repositories.</para>
+        /// <para>The repository filter rule.</para>
         /// <remarks>
-        /// <para> This parameter is valid only when SyncScope is set to <c>NAMESPACE</c>.</para>
+        /// <para>This parameter takes effect only when SyncScope is set to <c>INSTANCE</c> or <c>NAMESPACE</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +89,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string RepoNameFilter { get; set; }
 
         /// <summary>
-        /// <para>The name of the image synchronization rule.</para>
+        /// <para>The name of the synchronization rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,10 +100,14 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SyncRuleName { get; set; }
 
         /// <summary>
-        /// <para>The synchronization scope. Valid values:</para>
+        /// <para>The synchronization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>REPO</c>: synchronizes the image tags in an image repository that meet the synchronization rule.</description></item>
-        /// <item><description><c>NAMESPACE</c>: synchronizes the image tags in a namespace that meet the synchronization rule.</description></item>
+        /// <item><description><para><c>REPO</c>: Synchronizes by image repository.</para>
+        /// </description></item>
+        /// <item><description><para><c>NAMESPACE</c>: Synchronizes by namespace.</para>
+        /// </description></item>
+        /// <item><description><para><c>INSTANCE</c>: Synchronizes by namespace regex and repository regex.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -96,10 +119,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SyncScope { get; set; }
 
         /// <summary>
-        /// <para>The mode of triggering the synchronization rule. Valid values:</para>
+        /// <para>The trigger for the synchronization action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>INITIATIVE</c>: manually triggers the synchronization rule.</description></item>
-        /// <item><description><c>PASSIVE</c>: automatically triggers the synchronization rule.</description></item>
+        /// <item><description><para><c>INITIATIVE</c>: Manual trigger.</para>
+        /// </description></item>
+        /// <item><description><para><c>PASSIVE</c>: Automatic trigger.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +135,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string SyncTrigger { get; set; }
 
         /// <summary>
-        /// <para>The regular expression that is used to filter image tags.</para>
+        /// <para>The tag filter rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +146,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TagFilter { get; set; }
 
         /// <summary>
-        /// <para>The destination instance ID.</para>
+        /// <para>The ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,7 +157,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The namespace name of the destination instance.</para>
+        /// <para>The namespace name of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>
@@ -142,7 +167,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetNamespaceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the destination instance.</para>
+        /// <para>The region ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,7 +178,7 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository in the destination instance.</para>
+        /// <para>The image repository name of the target instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>repo1</para>
@@ -163,9 +188,9 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
         public string TargetRepoName { get; set; }
 
         /// <summary>
-        /// <para>The user ID (UID) of the account to which the destination instance belongs.</para>
+        /// <para>The UID of the account to which the target instance belongs.</para>
         /// <remarks>
-        /// <para> If you synchronize images across accounts, you must use the UID.</para>
+        /// <para>This parameter is required for cross-account image synchronization.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
