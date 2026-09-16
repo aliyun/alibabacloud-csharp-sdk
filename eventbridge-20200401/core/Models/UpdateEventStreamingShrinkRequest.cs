@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string FilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The generic JSON configurations for the event provider. This parameter is mutually exclusive with Source.</para>
+        /// <para>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</para>
         /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The event transformer configurations.</para>
+        /// <para>The transform-related configurations.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

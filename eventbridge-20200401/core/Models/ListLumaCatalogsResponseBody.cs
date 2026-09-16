@@ -36,6 +36,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public List<Catalog> Catalogs { get; set; }
 
+            /// <summary>
+            /// <para>本次请求实际生效的每页数量。未传 Limit 时为服务端默认值，超出上限时为收敛后的值</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("Limit")]
+            [Validation(Required=false)]
+            public int? Limit { get; set; }
+
+            /// <summary>
+            /// <para>下一页起始Token，传入下次请求的 NextToken 可获取下一页；为空表示已无更多数据</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
+            /// <summary>
+            /// <para>Agent 绑定的数据目录总数，与本页返回条数无关</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+
         }
 
         /// <summary>

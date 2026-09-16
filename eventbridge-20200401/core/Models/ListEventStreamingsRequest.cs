@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <summary>
         /// <para>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</para>
         /// <remarks>
-        /// <para>Notice: The maximum number of entries returned per request cannot exceed 100.</para>
+        /// <para>Notice: The maximum number of entries to return per request cannot exceed 100.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

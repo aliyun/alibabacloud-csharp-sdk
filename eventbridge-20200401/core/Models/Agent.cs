@@ -17,6 +17,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>8vHW4mDRxxxxx</para>
+        /// </summary>
+        [NameInMap("McpServerId")]
+        [Validation(Required=false)]
+        public string McpServerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>data-analyze-agent</para>
+        /// </summary>
+        [NameInMap("McpServerName")]
+        [Validation(Required=false)]
+        public string McpServerName { get; set; }
+
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public Metadata Metadata { get; set; }

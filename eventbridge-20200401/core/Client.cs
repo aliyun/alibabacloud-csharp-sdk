@@ -8042,6 +8042,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["ConnectionNamePrefix"] = request.ConnectionNamePrefix;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeType))
+            {
+                body["ExcludeType"] = request.ExcludeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
@@ -8100,6 +8104,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionNamePrefix))
             {
                 body["ConnectionNamePrefix"] = request.ConnectionNamePrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeType))
+            {
+                body["ExcludeType"] = request.ExcludeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -8670,6 +8678,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["AgentName"] = request.AgentName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -8716,6 +8732,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
             {
                 body["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9184,12 +9208,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9214,9 +9238,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["Catalog"] = request.Catalog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9239,12 +9271,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9269,9 +9301,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["Catalog"] = request.Catalog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9294,12 +9334,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9317,12 +9357,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all knowledge bases bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all knowledge bases bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the knowledge bases bound to a Luma Agent in a specified namespace. Results are returned in pages. To retrieve the next page, pass the NextToken value from the previous response. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than MaxResults. Do not determine whether the last page is reached based on an insufficient number of entries on the current page.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9369,6 +9409,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
             {
                 body["Catalog"] = request.Catalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9420,6 +9468,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Catalog))
             {
                 body["Catalog"] = request.Catalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9488,12 +9544,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9518,9 +9574,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["Catalog"] = request.Catalog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9543,12 +9607,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9573,9 +9637,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["Catalog"] = request.Catalog;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["Limit"] = request.Limit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 body["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9598,12 +9670,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9621,12 +9693,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists all event tables bound to a Luma Agent in a specified namespace. Returns the complete set of bindings without pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists all event tables bound to a Luma Agent under a specified namespace. Returns the complete set of bindings without pagination.</para>
+        /// <para>Lists the event tables bound to a Luma Agent in a specified namespace. Results are returned in pages. Pass the NextToken from the previous response to retrieve the next page. An empty NextToken indicates that no more data is available. Expired bindings are skipped, so the number of entries on a single page may be less than the Limit value. Do not use an insufficient number of entries on the current page to determine that the last page has been reached.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13111,6 +13183,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerId))
+            {
+                body["McpServerId"] = request.McpServerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerName))
+            {
+                body["McpServerName"] = request.McpServerName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
             {
                 body["Metadata"] = request.MetadataShrink;
@@ -13174,6 +13254,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerId))
+            {
+                body["McpServerId"] = request.McpServerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServerName))
+            {
+                body["McpServerName"] = request.McpServerName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
             {

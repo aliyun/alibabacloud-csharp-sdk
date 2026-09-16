@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConnectionNamePrefix { get; set; }
 
         /// <summary>
+        /// <para>排除单个连接类型，取值范围与 Type 相同。传入单个类型名称，不支持数组或逗号分隔的多个值。例如传入 Http 可排除 HTTP 类型的连接。未传或传入空字符串时不排除任何类型；与 Type 相同时返回空列表。分页与总数均在过滤后计算。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Http</para>
+        /// </summary>
+        [NameInMap("ExcludeType")]
+        [Validation(Required=false)]
+        public string ExcludeType { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</para>
         /// <list type="bullet">
         /// <item><description>Default value: 10.</description></item>

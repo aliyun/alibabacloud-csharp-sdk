@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must specify exactly one type of Sink.</para>
+        /// <para>The event target. You must select exactly one type of Sink.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must specify one Source, and you can specify only one Source.</para>
+        /// <para>The event provider. You must select exactly one Source type.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The transform configurations.</para>
+        /// <para>The Transform-related configurations.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

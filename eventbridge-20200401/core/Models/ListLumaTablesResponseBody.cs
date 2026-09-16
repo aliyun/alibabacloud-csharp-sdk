@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListLumaTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code of the operation. A value of Success indicates success. An error code is returned if the call fails.</para>
+        /// <para>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,34 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of event tables bound to the Agent. All results are returned at once without pagination.</para>
+        /// <para>The list of event tables bound to the agent, including entries and pagination information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListLumaTablesResponseBodyData Data { get; set; }
         public class ListLumaTablesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of event tables bound to the Agent.</para>
+            /// <para>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("Limit")]
+            [Validation(Required=false)]
+            public int? Limit { get; set; }
+
+            /// <summary>
+            /// <para>The token for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
+
+            /// <summary>
+            /// <para>The list of event tables bound to the agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Namespace&quot;:&quot;my_namespace&quot;}]</para>
@@ -36,10 +56,20 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public List<LumaTable> Tables { get; set; }
 
+            /// <summary>
+            /// <para>The total number of event tables bound to the agent, regardless of the number of entries returned on the current page.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("TotalCount")]
+            [Validation(Required=false)]
+            public int? TotalCount { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</para>
+        /// <para>The message returned by the operation. The value Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -49,7 +79,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request, used for troubleshooting and ticket feedback.</para>
+        /// <para>The unique identifier of this request, which is used for troubleshooting and ticket submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
@@ -59,7 +89,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates a successful call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
