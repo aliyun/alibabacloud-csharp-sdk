@@ -25,12 +25,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>env-xxxx</para>
         /// </summary>
         [NameInMap("environmentId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string EnvironmentId { get; set; }
 
         /// <summary>

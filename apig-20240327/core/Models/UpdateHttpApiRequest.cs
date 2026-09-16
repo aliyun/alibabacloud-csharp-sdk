@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only modify the configuration. If set to true, only the configuration is modified without triggering a redeployment.</para>
+        /// <para>Specifies whether to only modify the configuration. If this parameter is set to true, only the configuration is modified without triggering redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -172,7 +172,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiVersionConfig VersionConfig { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual update are performed, but no configurations are modified and no side effects are produced. If set to false or left empty, the behavior is the same as the existing version.</para>
+        /// <para>The idempotent request identifier. If you call this operation for the same HTTP API with the same clientToken value and request parameters, the result of the first successful call is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>update-http-api-client-token-001</para>
+        /// </summary>
+        [NameInMap("clientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run. If this parameter is set to true, all synchronous validations identical to an actual update are performed, but no configurations are updated and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</para>
         /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
