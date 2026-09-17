@@ -19,21 +19,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"},
-                {"cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"},
-                {"ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"},
-                {"cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"},
-                {"cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"},
-                {"cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"},
-                {"eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -7846,7 +7831,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of jobs.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7928,7 +7913,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of jobs.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8010,7 +7995,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of jobs.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8028,7 +8013,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of jobs.</para>
+        /// <para>Retrieves a list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job01 standalone job</para>
+        /// <para>job01 standalone task</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobHandler { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The job name.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job01</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The job label filter condition.</para>
+        /// <para>The task label filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{key:value}</para>
