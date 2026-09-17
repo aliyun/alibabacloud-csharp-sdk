@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetDashboardShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
         /// <item><description>en: English</description></item>
@@ -41,11 +41,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The dashboard name. Valid values:</para>
+        /// <para>The name of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: access log</description></item>
-        /// <item><description>PLUGIN: plugin log</description></item>
+        /// <item><description>LOG: Access log.</description></item>
+        /// <item><description>PLUGIN: Plugin log.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>PLUGIN</para>
@@ -85,10 +88,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RouteId { get; set; }
 
         /// <summary>
-        /// <para>The dashboard source. Valid values:</para>
+        /// <para>The source of the dashboard. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: log dashboard</description></item>
+        /// <item><description>SLS: Log dashboard.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Note: This parameter is required. If this parameter is not specified, the API returns InvalidParameter.IsEmpty (400).</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>SLS</para>

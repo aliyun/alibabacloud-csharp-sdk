@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CachedAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of total cached consumption. Supports decimals in credit scenarios.</para>
+            /// <para>The exact value of total cached consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20.5</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? CachedAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of cached consumption. Supports decimals in credit scenarios.</para>
+                    /// <para>The exact value of cached consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10.5</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? InputAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of input consumption. Supports decimals in credit scenarios.</para>
+                    /// <para>The exact value of input consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120.5</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? OutputAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of output consumption. Supports decimals in credit scenarios.</para>
+                    /// <para>The exact value of output consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>80.5</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? UsedAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The exact value of total consumption. Supports decimals in credit scenarios.</para>
+                    /// <para>The exact value of total consumption. Decimals are supported in credit scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>210.5</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? InputAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of total input consumption. Supports decimals in credit scenarios.</para>
+            /// <para>The exact value of total input consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300.5</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? OutputAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of total output consumption. Supports decimals in credit scenarios.</para>
+            /// <para>The exact value of total output consumption. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180.5</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? UsedAmount { get; set; }
 
             /// <summary>
-            /// <para>The exact value of the total used amount of the subject. Supports decimals in credit scenarios.</para>
+            /// <para>The exact value of the total used amount of the subject. Decimals are supported in credit scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500.5</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

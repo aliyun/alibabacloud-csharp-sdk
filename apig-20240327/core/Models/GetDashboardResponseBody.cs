@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The dashboard name.</para>
+            /// <para>The name of the dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PLUGIN</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The dashboard title.</para>
+            /// <para>The title of the dashboard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APIG Plugin</para>

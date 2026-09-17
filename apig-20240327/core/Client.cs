@@ -11212,7 +11212,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
+        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11279,7 +11280,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
+        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11346,7 +11348,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
+        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11370,7 +11373,8 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the usage details of a specific subject under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.
+        /// Before you begin: Before calling this operation, make sure that Simple Log Service log delivery is enabled for the target gateway by calling UpdateGatewayFeature (name=log-config, value={&quot;enable&quot;:true}). Otherwise, the error CloudProductInactive.LogDeliveryNotEnabled is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11385,6 +11389,144 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetGatewayQuotaRuleSubjectUsageWithOptionsAsync(gatewayId, ruleId, subjectId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关资源配额与用量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayResourceQuotaUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayResourceQuotaUsageResponse
+        /// </returns>
+        public GetGatewayResourceQuotaUsageResponse GetGatewayResourceQuotaUsageWithOptions(string gatewayId, GetGatewayResourceQuotaUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayResourceQuotaUsage",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/resource-quota-usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayResourceQuotaUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关资源配额与用量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayResourceQuotaUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayResourceQuotaUsageResponse
+        /// </returns>
+        public async Task<GetGatewayResourceQuotaUsageResponse> GetGatewayResourceQuotaUsageWithOptionsAsync(string gatewayId, GetGatewayResourceQuotaUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayResourceQuotaUsage",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/resource-quota-usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayResourceQuotaUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关资源配额与用量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayResourceQuotaUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayResourceQuotaUsageResponse
+        /// </returns>
+        public GetGatewayResourceQuotaUsageResponse GetGatewayResourceQuotaUsage(string gatewayId, GetGatewayResourceQuotaUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGatewayResourceQuotaUsageWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关资源配额与用量</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 API 网关或 AI 网关的九项资源配额用量、有效上限及统计范围。接口只读，成功响应包含全部九项；自定义插件配额暂不展示数值。该结果是各来源独立读取的当前观测，不保证新增资源一定成功。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayResourceQuotaUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayResourceQuotaUsageResponse
+        /// </returns>
+        public async Task<GetGatewayResourceQuotaUsageResponse> GetGatewayResourceQuotaUsageAsync(string gatewayId, GetGatewayResourceQuotaUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGatewayResourceQuotaUsageWithOptionsAsync(gatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25424,7 +25566,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
         /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
@@ -25434,10 +25576,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the request.</description></item>
+        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -25526,7 +25668,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
         /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
@@ -25536,10 +25678,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the request.</description></item>
+        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -25628,7 +25770,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
         /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
@@ -25638,10 +25780,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the request.</description></item>
+        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
@@ -25675,7 +25817,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways running version 2.1.21 or later. Editing a rule preserves the historical usage of consumer subjects bound to the rule.</para>
         /// <remarks>
         /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
@@ -25685,10 +25827,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Confirm and submit the request.</description></item>
+        /// <item><description>Step 2: Confirm and submit the changes.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
