@@ -1,3 +1,7 @@
+2026-09-17 Version: 6.9.0
+- Support API ReplyAgentSession.
+
+
 2026-09-14 Version: 6.8.0
 - Support API GetComputeResourceAuthUserMappings.
 - Support API UpdateComputeResourceAuthUserMappings.
