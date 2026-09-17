@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status code or POP error code. Valid values: Success: The operation was successful.</para>
+        /// <para>The API status or POP error code. Valid values: Success: The operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public List<Agent> Agents { get; set; }
 
             /// <summary>
-            /// <para>The ID of the first record.</para>
+            /// <para>The ID of the first entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uat-agent</para>
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string FirstId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether more pages are available. Valid values:</para>
+            /// <para>Indicates whether there is a next page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: More pages are available.</para>
+            /// <item><description><para>true: There is a next page.</para>
             /// </description></item>
-            /// <item><description><para>false: No more pages are available.</para>
+            /// <item><description><para>false: There is no next page.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string HasMore { get; set; }
 
             /// <summary>
-            /// <para>The ID of the last record.</para>
+            /// <para>The ID of the last conversation record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>last-agent</para>

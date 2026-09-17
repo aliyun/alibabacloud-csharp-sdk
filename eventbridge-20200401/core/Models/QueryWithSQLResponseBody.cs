@@ -8,12 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class UpdateAgentResponseBody : TeaModel {
+    public class QueryWithSQLResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success: The request was successful.                                 </description></item>
-        /// <item><description>Other values: An error occurred. For more information, see Error codes.</description></item>
+        /// <item><description><para>Success: The request was successful.    </para>
+        /// </description></item>
+        /// <item><description><para>Other values: An error occurred. For more information, see error codes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +26,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>The event trace information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public UpdateAgentResponseBodyData Data { get; set; }
-        public class UpdateAgentResponseBodyData : TeaModel {
+        public QueryWithSQLResponseBodyData Data { get; set; }
+        public class QueryWithSQLResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Agent ARN</para>
+            /// <para>The query result rows.</para>
+            /// </summary>
+            [NameInMap("Rows")]
+            [Validation(Required=false)]
+            public List<Row> Rows { get; set; }
+
+            /// <summary>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:eventbridge:{region}:{accountId}:agent/{agentName}</para>
+            /// <para>1</para>
             /// </summary>
-            [NameInMap("AgentArn")]
+            [NameInMap("Total")]
             [Validation(Required=false)]
-            public string AgentArn { get; set; }
+            public int? Total { get; set; }
 
         }
 
@@ -46,7 +55,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>InvalidArgument</para>
+        /// <para>Operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,14 +65,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>382E6272-XXXXX-A8AF0BFAC1A5</para>
+        /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation was successful.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

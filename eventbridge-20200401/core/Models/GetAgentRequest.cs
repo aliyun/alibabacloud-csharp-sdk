@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The agent name.</para>
+        /// <para>The Agent name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the MCP server associated with the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8vHW4mDRxxxxx</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string McpServerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>data-analyze-agent</para>
         /// </summary>

@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class GetAgentResponseBody : TeaModel {
+    public class CreateKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code. Valid values: Success: The operation was successful.</para>
+        /// <para>The response code. A value of Success indicates a successful operation. An error code is returned if the operation fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,20 +20,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>The details of the created knowledge base, including the name, status, and configuration information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public Agent Data { get; set; }
+        public KnowledgeBase Data { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</para>
+        /// <para>Operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -43,14 +40,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E0FFAB67-XXXXXX-CAD4D37448C4</para>
+        /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation is successful.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListLumaCatalogsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Agent.</para>
+        /// <para>The name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>每页返回的最大数据条数。取值范围 1~100，不传时默认 100。每条记录都需回源查询一次元数据，因此该值同时限制单次调用的回源次数</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100. Each entry requires a back-to-origin metadata query, so this value also limits the number of back-to-origin requests per call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</para>
+        /// <para>The token for the paging query. Leave this parameter empty or set it to &quot;0&quot; for the first query. For subsequent pages, use the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

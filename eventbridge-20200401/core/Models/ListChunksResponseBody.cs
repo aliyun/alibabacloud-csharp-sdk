@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class ListLumaCatalogsResponseBody : TeaModel {
+    public class ListChunksResponseBody : TeaModel {
         /// <summary>
         /// <para>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</para>
         /// 
@@ -20,47 +20,47 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of data catalogs bound to the agent, including entries and pagination information.</para>
+        /// <para>The chunk list query result, which contains chunk entries and pagination information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ListLumaCatalogsResponseBodyData Data { get; set; }
-        public class ListLumaCatalogsResponseBodyData : TeaModel {
+        public ListChunksResponseBodyData Data { get; set; }
+        public class ListChunksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of data catalogs bound to the agent.</para>
+            /// <para>The list of chunk entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;Name&quot;:&quot;my_catalog&quot;}]</para>
+            /// <para>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:1,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</para>
             /// </summary>
-            [NameInMap("Catalogs")]
+            [NameInMap("Chunks")]
             [Validation(Required=false)]
-            public List<Catalog> Catalogs { get; set; }
+            public List<KnowledgeBaseChunk> Chunks { get; set; }
 
             /// <summary>
-            /// <para>The effective page size for this request. If the Limit parameter is not specified, the server default value is used. If the specified value exceeds the upper limit, the value is adjusted to the maximum allowed value.</para>
+            /// <para>The maximum number of results per page that took effect for this request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>20</para>
             /// </summary>
-            [NameInMap("Limit")]
+            [NameInMap("MaxResults")]
             [Validation(Required=false)]
-            public int? Limit { get; set; }
+            public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token for the next page. Pass this value as the NextToken in the next request to retrieve the next page. An empty value indicates that no more data is available.</para>
+            /// <para>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>ca1eb85f5d99c7d6a97e6****</para>
             /// </summary>
             [NameInMap("NextToken")]
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of data catalogs bound to the agent, regardless of the number of entries returned on the current page.</para>
+            /// <para>The total number of chunks in the specified document when DocumentId is specified. In full knowledge base mode (when DocumentId is not specified), this field is not returned. Pagination ends when NextToken is empty.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>120</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The response message. A value of Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</para>
+        /// <para>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request. Use this ID for troubleshooting and when submitting a ticket.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
