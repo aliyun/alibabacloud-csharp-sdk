@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class CredentialSubmitIntlResponseBody : TeaModel {
+    public class CredentialSubmitIntlV2ResponseBody : TeaModel {
         /// <summary>
         /// <para>The return code.</para>
         /// 
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
+        /// <para>7F971622-38C0-5F56-B2EC-315367979B4F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -44,13 +44,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CredentialSubmitIntlResponseBodyResult Result { get; set; }
-        public class CredentialSubmitIntlResponseBodyResult : TeaModel {
+        public CredentialSubmitIntlV2ResponseBodyResult Result { get; set; }
+        public class CredentialSubmitIntlV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the authentication request.</para>
+            /// <para>The unique identifier of the verification request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4ab0b***cbde97</para>
+            /// <para>hk573be80f944d95ac812e0*******a8</para>
             /// </summary>
             [NameInMap("TransactionId")]
             [Validation(Required=false)]

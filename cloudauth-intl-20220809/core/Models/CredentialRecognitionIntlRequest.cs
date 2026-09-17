@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;address_rule&quot;: &quot;Includes Adrress 杭州市***&quot;,
-        ///     &quot;name_rule&quot;: &quot;Includes Name  张*&quot;,
-        ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+        ///     &quot;address_rule&quot;: &quot;Includes Address Hangzhou ***&quot;,
+        ///     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+        ///     &quot;date_of_issue_rule&quot;: &quot;Within 2026.05.20&quot;
         /// }</para>
         /// </summary>
         [NameInMap("CheckRuleConfig")]
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The credential type.</para>
+        /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Transaction credential: 01 (includes various electronic bill images such as water, electricity, gas, and credit card bills)</description></item>
+        /// <item><description>01: transaction credential (including electronic bill images for water, electricity, gas, credit card, and other types)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,6 +56,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
+
+        /// <summary>
+        /// <para>The input file type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>IMAGE (default): image.</para>
+        /// </description></item>
+        /// <item><description><para>PDF: PDF format.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IMAGE</para>
+        /// </summary>
+        [NameInMap("FileInputType")]
+        [Validation(Required=false)]
+        public string FileInputType { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable tampering detection. Valid values:</para>
@@ -73,7 +89,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</para>
+        /// <para>Specifies whether to enable quality detection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Y: Enabled.</description></item>
+        /// <item><description>N: Disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -83,9 +103,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdQuality { get; set; }
 
         /// <summary>
-        /// <para>The extraction type:</para>
+        /// <para>The extraction type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0101: Electronic bill address and name module (extracts address and name through intelligent analysis)</description></item>
+        /// <item><description>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +117,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// <para>Specifies whether to enable translation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -107,7 +131,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable OCR result standardization. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// <para>Specifies whether to enable OCR result normalization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -117,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

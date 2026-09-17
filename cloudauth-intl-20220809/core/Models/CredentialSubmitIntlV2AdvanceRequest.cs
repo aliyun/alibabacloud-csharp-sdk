@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class CredentialSubmitIntlRequest : TeaModel {
+    public class CredentialSubmitIntlV2AdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The field validation rule configuration in JSON string format.</para>
+        /// <para>The field validation rule configuration. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
-        ///     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+        ///     &quot;address_rule&quot;: &quot;Includes Adrress Hangzhou ***&quot;,
+        ///     &quot;name_rule&quot;: &quot;Includes Name  Zhang*&quot;,
         ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
         /// }</para>
         /// </summary>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CheckRuleConfig { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</para>
+        /// <para>The Base64-encoded image. If you choose this method to submit a photo, check the photo size and do not submit an excessively large photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -32,6 +32,16 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("CredentialOcrPictureBase64")]
         [Validation(Required=false)]
         public string CredentialOcrPictureBase64 { get; set; }
+
+        /// <summary>
+        /// <para>The image file stream.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>InputStream</para>
+        /// </summary>
+        [NameInMap("CredentialOcrPictureFile")]
+        [Validation(Required=false)]
+        public Stream CredentialOcrPictureFileObject { get; set; }
 
         /// <summary>
         /// <para>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
@@ -46,7 +56,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>02: vehicle registration certificate.</description></item>
+        /// <item><description>01: Transaction voucher, which includes electronic bill images for utilities such as water, electricity, gas, and credit cards.</description></item>
+        /// <item><description>02: Vehicle registration certificate.</description></item>
+        /// <item><description>03: Transfer transaction record.</description></item>
+        /// <item><description>04: Proof of address (POA).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,12 +71,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>The input file type. Valid values:</para>
+        /// <para>The type of the input material. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>IMAGE (default): image.</para>
-        /// </description></item>
-        /// <item><description><para>PDF: PDF format.</para>
-        /// </description></item>
+        /// <item><description>IMAGE (default): image.</description></item>
+        /// <item><description>PDF: PDF format.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,18 +93,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("FraudCheck")]
         [Validation(Required=false)]
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable quality detection. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Y: Enabled.</description></item>
-        /// <item><description>N: Disabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -103,21 +110,23 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdQuality { get; set; }
 
         /// <summary>
-        /// <para>The custom business unique identifier on the merchant side, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string.</para>
+        /// <para>The first few characters consist of a custom abbreviation defined by the merchant, the middle part can contain a time segment, and the last part can use a random or incremental sequence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e0c34a***353888</para>
+        /// <para>dso932dsjsd22</para>
         /// </summary>
         [NameInMap("MerchantBizId")]
         [Validation(Required=false)]
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The extraction type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0201: Thailand vehicle registration certificate.</description></item>
-        /// </list>
+        /// <para>The extraction type. Valid values:
+        /// 0101: electronic bill address and name module (extracts address and name modules through intelligent analysis).
+        /// 0201: 
+        /// 0301: transfer transaction amount information.
+        /// 0401: POA credential extraction information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,11 +137,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable translation. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
-        /// <item><description>1: Enabled.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -142,21 +147,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrTranslation { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable OCR result standardization. Valid values:</para>
+        /// <para>Specifies whether to enable standardization of key fields recognized by OCR. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>0: Disabled (default). </description></item>
         /// <item><description>1: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("OcrValueStandard")]
         [Validation(Required=false)]
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to use. Set the value to CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -167,11 +172,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</para>
+        /// <para>The custom verification scenario ID. You can use this scenario ID to query related records in the console. The value is a combination of up to 10 letters, digits, or underscores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123****123</para>
+        /// <para>1234567890</para>
         /// </summary>
         [NameInMap("SceneCode")]
         [Validation(Required=false)]

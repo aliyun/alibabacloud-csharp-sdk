@@ -19,13 +19,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hongkong", "cloudauth-intl.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-5", "cloudauth-intl.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "cloudauth-intl.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "cloudauth-intl.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudauth-intl", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -2017,12 +2010,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2042,6 +2035,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
             {
@@ -2102,12 +2099,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2127,6 +2124,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
             {
@@ -2187,12 +2188,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2210,12 +2211,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2233,12 +2234,436 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlV2Response
+        /// </returns>
+        public CredentialRecognitionIntlV2Response CredentialRecognitionIntlV2WithOptions(CredentialRecognitionIntlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFile))
+            {
+                query["CredentialOcrPictureFile"] = request.CredentialOcrPictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialRecognitionIntlV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialRecognitionIntlV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlV2Response
+        /// </returns>
+        public async Task<CredentialRecognitionIntlV2Response> CredentialRecognitionIntlV2WithOptionsAsync(CredentialRecognitionIntlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFile))
+            {
+                query["CredentialOcrPictureFile"] = request.CredentialOcrPictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialRecognitionIntlV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialRecognitionIntlV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlV2Response
+        /// </returns>
+        public CredentialRecognitionIntlV2Response CredentialRecognitionIntlV2(CredentialRecognitionIntlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialRecognitionIntlV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) is forged, and extracts key information from the credential.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialRecognitionIntlV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialRecognitionIntlV2Response
+        /// </returns>
+        public async Task<CredentialRecognitionIntlV2Response> CredentialRecognitionIntlV2Async(CredentialRecognitionIntlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialRecognitionIntlV2WithOptionsAsync(request, runtime);
+        }
+
+        public CredentialRecognitionIntlV2Response CredentialRecognitionIntlV2Advance(CredentialRecognitionIntlV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            CredentialRecognitionIntlV2Request credentialRecognitionIntlV2Req = new CredentialRecognitionIntlV2Request();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialRecognitionIntlV2Req);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFileObject))
+            {
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.CredentialOcrPictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                credentialRecognitionIntlV2Req.CredentialOcrPictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            CredentialRecognitionIntlV2Response credentialRecognitionIntlV2Resp = CredentialRecognitionIntlV2WithOptions(credentialRecognitionIntlV2Req, runtime);
+            return credentialRecognitionIntlV2Resp;
+        }
+
+        public async Task<CredentialRecognitionIntlV2Response> CredentialRecognitionIntlV2AdvanceAsync(CredentialRecognitionIntlV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            CredentialRecognitionIntlV2Request credentialRecognitionIntlV2Req = new CredentialRecognitionIntlV2Request();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialRecognitionIntlV2Req);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFileObject))
+            {
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.CredentialOcrPictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                credentialRecognitionIntlV2Req.CredentialOcrPictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            CredentialRecognitionIntlV2Response credentialRecognitionIntlV2Resp = await CredentialRecognitionIntlV2WithOptionsAsync(credentialRecognitionIntlV2Req, runtime);
+            return credentialRecognitionIntlV2Resp;
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Submits credential recognition information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2258,6 +2683,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
             {
@@ -2331,7 +2760,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2351,6 +2780,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
             {
                 query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
             {
@@ -2424,7 +2857,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2447,7 +2880,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2461,6 +2894,446 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CredentialSubmitIntlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a credential recognition request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlV2Response
+        /// </returns>
+        public CredentialSubmitIntlV2Response CredentialSubmitIntlV2WithOptions(CredentialSubmitIntlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFile))
+            {
+                query["CredentialOcrPictureFile"] = request.CredentialOcrPictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialSubmitIntlV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialSubmitIntlV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a credential recognition request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlV2Response
+        /// </returns>
+        public async Task<CredentialSubmitIntlV2Response> CredentialSubmitIntlV2WithOptionsAsync(CredentialSubmitIntlV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFile))
+            {
+                query["CredentialOcrPictureFile"] = request.CredentialOcrPictureFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocType))
+            {
+                query["DocType"] = request.DocType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInputType))
+            {
+                query["FileInputType"] = request.FileInputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FraudCheck))
+            {
+                query["FraudCheck"] = request.FraudCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
+            {
+                query["MerchantBizId"] = request.MerchantBizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
+            {
+                query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
+            {
+                query["SceneCode"] = request.SceneCode;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
+            {
+                body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureUrl))
+            {
+                body["CredentialOcrPictureUrl"] = request.CredentialOcrPictureUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CredentialSubmitIntlV2",
+                Version = "2022-08-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CredentialSubmitIntlV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a credential recognition request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlV2Response
+        /// </returns>
+        public CredentialSubmitIntlV2Response CredentialSubmitIntlV2(CredentialSubmitIntlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CredentialSubmitIntlV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a credential recognition request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Initializes the credential recognition OCR operation. Call this operation to obtain a transactionId.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CredentialSubmitIntlV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// CredentialSubmitIntlV2Response
+        /// </returns>
+        public async Task<CredentialSubmitIntlV2Response> CredentialSubmitIntlV2Async(CredentialSubmitIntlV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CredentialSubmitIntlV2WithOptionsAsync(request, runtime);
+        }
+
+        public CredentialSubmitIntlV2Response CredentialSubmitIntlV2Advance(CredentialSubmitIntlV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = this._credential.GetCredential();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            CredentialSubmitIntlV2Request credentialSubmitIntlV2Req = new CredentialSubmitIntlV2Request();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialSubmitIntlV2Req);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFileObject))
+            {
+                object tmpResp0 = authClient.CallApi(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.CredentialOcrPictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                credentialSubmitIntlV2Req.CredentialOcrPictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            CredentialSubmitIntlV2Response credentialSubmitIntlV2Resp = CredentialSubmitIntlV2WithOptions(credentialSubmitIntlV2Req, runtime);
+            return credentialSubmitIntlV2Resp;
+        }
+
+        public async Task<CredentialSubmitIntlV2Response> CredentialSubmitIntlV2AdvanceAsync(CredentialSubmitIntlV2AdvanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            // Step 0: init client
+            Aliyun.Credentials.Models.CredentialModel credentialModel = null;
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(_credential))
+            {
+                throw new TeaException(new Dictionary<string, string>
+                {
+                    {"code", "InvalidCredentials"},
+                    {"message", "Please set up the credentials correctly. If you are setting them through environment variables, please ensure that ALIBABA_CLOUD_ACCESS_KEY_ID and ALIBABA_CLOUD_ACCESS_KEY_SECRET are set correctly. See https://help.aliyun.com/zh/sdk/developer-reference/configure-the-alibaba-cloud-accesskey-environment-variable-on-linux-macos-and-windows-systems for more details."},
+                });
+            }
+            credentialModel = await this._credential.GetCredentialAsync();
+            string accessKeyId = credentialModel.AccessKeyId;
+            string accessKeySecret = credentialModel.AccessKeySecret;
+            string securityToken = credentialModel.SecurityToken;
+            string credentialType = credentialModel.Type;
+            string openPlatformEndpoint = _openPlatformEndpoint;
+            if (AlibabaCloud.TeaUtil.Common.Empty(openPlatformEndpoint))
+            {
+                openPlatformEndpoint = "openplatform.aliyuncs.com";
+            }
+            if (AlibabaCloud.TeaUtil.Common.IsUnset(credentialType))
+            {
+                credentialType = "access_key";
+            }
+            AlibabaCloud.OpenApiClient.Models.Config authConfig = new AlibabaCloud.OpenApiClient.Models.Config
+            {
+                AccessKeyId = accessKeyId,
+                AccessKeySecret = accessKeySecret,
+                SecurityToken = securityToken,
+                Type = credentialType,
+                Endpoint = openPlatformEndpoint,
+                Protocol = _protocol,
+                RegionId = _regionId,
+            };
+            AlibabaCloud.OpenApiClient.Client authClient = new AlibabaCloud.OpenApiClient.Client(authConfig);
+            Dictionary<string, string> authRequest = new Dictionary<string, string>
+            {
+                {"Product", "Cloudauth-intl"},
+                {"RegionId", _regionId},
+            };
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest authReq = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(authRequest),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params authParams = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2019-12-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            Dictionary<string, object> authResponse = new Dictionary<string, object>(){};
+            AlibabaCloud.SDK.TeaFileform.Models.FileField fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField();
+            Dictionary<string, object> ossHeader = new Dictionary<string, object>(){};
+            Dictionary<string, object> tmpBody = new Dictionary<string, object>(){};
+            bool? useAccelerate = false;
+            Dictionary<string, string> authResponseBody = new Dictionary<string, string>(){};
+            CredentialSubmitIntlV2Request credentialSubmitIntlV2Req = new CredentialSubmitIntlV2Request();
+            AlibabaCloud.OpenApiUtil.Client.Convert(request, credentialSubmitIntlV2Req);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureFileObject))
+            {
+                object tmpResp0 = await authClient.CallApiAsync(authParams, authReq, runtime);
+                authResponse = AlibabaCloud.TeaUtil.Common.AssertAsMap(tmpResp0);
+                tmpBody = AlibabaCloud.TeaUtil.Common.AssertAsMap(authResponse.Get("body"));
+                useAccelerate = AlibabaCloud.TeaUtil.Common.AssertAsBoolean(tmpBody.Get("UseAccelerate"));
+                authResponseBody = AlibabaCloud.TeaUtil.Common.StringifyMapValue(tmpBody);
+                fileObj = new AlibabaCloud.SDK.TeaFileform.Models.FileField
+                {
+                    Filename = authResponseBody.Get("ObjectKey"),
+                    Content = request.CredentialOcrPictureFileObject,
+                    ContentType = "",
+                };
+                ossHeader = new Dictionary<string, object>
+                {
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
+                    {"policy", authResponseBody.Get("EncodedPolicy")},
+                    {"Signature", authResponseBody.Get("Signature")},
+                    {"key", authResponseBody.Get("ObjectKey")},
+                    {"file", fileObj},
+                    {"success_action_status", "201"},
+                };
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
+                credentialSubmitIntlV2Req.CredentialOcrPictureFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
+            }
+            CredentialSubmitIntlV2Response credentialSubmitIntlV2Resp = await CredentialSubmitIntlV2WithOptionsAsync(credentialSubmitIntlV2Req, runtime);
+            return credentialSubmitIntlV2Resp;
         }
 
         /// <term><b>Summary:</b></term>
