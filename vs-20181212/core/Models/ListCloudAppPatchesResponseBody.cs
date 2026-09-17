@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppPatchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the query list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud application patches.</para>
+        /// <para>The list of patches for the cloud application.</para>
         /// </summary>
         [NameInMap("Patches")]
         [Validation(Required=false)]
@@ -57,20 +57,34 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchName { get; set; }
 
             /// <summary>
-            /// <para>The upload status of the application. Valid values:</para>
+            /// <para>The relative path of the post-command within the application package. Only Windows-type applications are supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>install.ps1</para>
+            /// </summary>
+            [NameInMap("PostCommandPath")]
+            [Validation(Required=false)]
+            public string PostCommandPath { get; set; }
+
+            /// <summary>
+            /// <para>The timeout period for the post-command execution, in seconds. Only Windows-type applications are supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PostCommandTimeoutSec")]
+            [Validation(Required=false)]
+            public int? PostCommandTimeoutSec { get; set; }
+
+            /// <summary>
+            /// <para>The application upload status. Valid values:</para>
             /// <ol>
-            /// <item><description><para>Created</para>
-            /// </description></item>
-            /// <item><description><para>Doing</para>
-            /// </description></item>
-            /// <item><description><para>Success: A final state.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: A final state.</para>
-            /// </description></item>
-            /// <item><description><para>Deleting</para>
-            /// </description></item>
-            /// <item><description><para>DeleteFailed: A final state.</para>
-            /// </description></item>
+            /// <item><description>Created</description></item>
+            /// <item><description>Doing</description></item>
+            /// <item><description>Success: desired state.</description></item>
+            /// <item><description>Failed: desired state.</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>DeleteFailed: desired state.</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -81,7 +95,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The description of the status.</para>
+            /// <para>The status description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>
@@ -91,7 +105,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
-            /// <para>The time when the status was last updated.</para>
+            /// <para>The most recent time when the status was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-23T02:12:28</para>

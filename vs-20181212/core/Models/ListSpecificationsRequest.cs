@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             /// <para>The specification family.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>4090CU</para>
+            /// <para>G49\G59</para>
             /// </summary>
             [NameInMap("Class")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? Memory { get; set; }
 
             /// <summary>
-            /// <para>The number of cards per single load.</para>
+            /// <para>The number of cards per workload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? Shard { get; set; }
 
             /// <summary>
-            /// <para><c>RenderingSpec</c></para>
+            /// <para>The specification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>crs.xic.s1</para>
+            /// <para>ew.gn8t6xlarge-rb.x1p</para>
             /// </summary>
             [NameInMap("Specification")]
             [Validation(Required=false)]

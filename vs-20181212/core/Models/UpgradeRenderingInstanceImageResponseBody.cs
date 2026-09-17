@@ -8,49 +8,49 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class RebootRenderingServerResponseBody : TeaModel {
+    public class UpgradeRenderingInstanceImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of cloud application service instances that failed to restart.</para>
+        /// <para>The number of failed instances.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("FailedInstanceCount")]
+        [NameInMap("FailedCount")]
         [Validation(Required=false)]
-        public int? FailedInstanceCount { get; set; }
+        public long? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The cloud application service instance IDs and the associated failure information.</para>
+        /// <para>The information about failed instances.</para>
         /// </summary>
-        [NameInMap("FailedInstances")]
+        [NameInMap("FailedItems")]
         [Validation(Required=false)]
-        public List<RebootRenderingServerResponseBodyFailedInstances> FailedInstances { get; set; }
-        public class RebootRenderingServerResponseBodyFailedInstances : TeaModel {
+        public List<UpgradeRenderingInstanceImageResponseBodyFailedItems> FailedItems { get; set; }
+        public class UpgradeRenderingInstanceImageResponseBodyFailedItems : TeaModel {
             /// <summary>
             /// <para>The error code of the failure.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>300000</para>
+            /// <para>200302</para>
             /// </summary>
             [NameInMap("ErrCode")]
             [Validation(Required=false)]
-            public int? ErrCode { get; set; }
+            public string ErrCode { get; set; }
 
             /// <summary>
             /// <para>The error message of the failure.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Rejected due to timeout</para>
+            /// <para>Not Applied</para>
             /// </summary>
             [NameInMap("ErrMessage")]
             [Validation(Required=false)]
             public string ErrMessage { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cloud application service instance.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>render-421cd2a1125947c19fcd5c7dd2c7d31e</para>
+            /// <para>render-072da95539d3402da90353b244191722</para>
             /// </summary>
             [NameInMap("RenderingInstanceId")]
             [Validation(Required=false)]
@@ -69,27 +69,27 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud application service instances that were successfully restarted.</para>
+        /// <para>The number of successful instances.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("SuccessInstanceCount")]
+        [NameInMap("SuccessCount")]
         [Validation(Required=false)]
-        public int? SuccessInstanceCount { get; set; }
+        public long? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>The cloud application service instance IDs and the associated result descriptions.</para>
+        /// <para>The information about successful instances.</para>
         /// </summary>
-        [NameInMap("SuccessInstances")]
+        [NameInMap("SuccessItems")]
         [Validation(Required=false)]
-        public List<RebootRenderingServerResponseBodySuccessInstances> SuccessInstances { get; set; }
-        public class RebootRenderingServerResponseBodySuccessInstances : TeaModel {
+        public List<UpgradeRenderingInstanceImageResponseBodySuccessItems> SuccessItems { get; set; }
+        public class UpgradeRenderingInstanceImageResponseBodySuccessItems : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the cloud application service instance.</para>
+            /// <para>The cloud application service instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>render-e6cf423c787e4e43b460a788da254fe3</para>
+            /// <para>render-1ada8cd82783407b99fa202826fc6447</para>
             /// </summary>
             [NameInMap("RenderingInstanceId")]
             [Validation(Required=false)]

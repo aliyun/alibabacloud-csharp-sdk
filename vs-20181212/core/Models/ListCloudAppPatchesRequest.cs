@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppPatchesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud application. This ID corresponds to a unique application package.</para>
+        /// <para>The cloud application ID, which corresponds to a unique application package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The time range for filtering. The time must be in UTC and in the ISO 8601 standard format yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-10T21:00:00Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list to return. The value starts from 1.
+        /// <para>The page number of the list to query. Minimum value: 1.
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.
+        /// <para>The number of entries per page for a paged query. Maximum value: 100.
         /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchName { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The time is in UTC and follows the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-11-29T00:00:00Z</para>

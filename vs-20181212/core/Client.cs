@@ -20455,13 +20455,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of patches for a cloud application.</para>
+        /// <para>Queries the patch list of a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// <para>You must specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20528,13 +20528,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of patches for a cloud application.</para>
+        /// <para>Queries the patch list of a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// <para>You must specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20601,13 +20601,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of patches for a cloud application.</para>
+        /// <para>Queries the patch list of a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// <para>You must specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20626,13 +20626,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of patches for a cloud application.</para>
+        /// <para>Queries the patch list of a cloud application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// <para>You must specify at least one of the template ID and templatetype.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -20651,7 +20651,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
+        /// <para>Queries a list of cloud applications. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20689,7 +20689,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
+        /// <para>Queries a list of cloud applications. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20727,7 +20727,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
+        /// <para>Queries a list of cloud applications. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20745,7 +20745,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
+        /// <para>Queries a list of cloud applications. Paging is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21743,6 +21743,178 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of images.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</description></item>
+        /// <item><description>You must specify at least one of the <c>SessionId</c> and <c>ClientId</c> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRenderingImagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRenderingImagesResponse
+        /// </returns>
+        public ListRenderingImagesResponse ListRenderingImagesWithOptions(ListRenderingImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRenderingImages",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRenderingImagesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</description></item>
+        /// <item><description>You must specify at least one of the <c>SessionId</c> and <c>ClientId</c> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRenderingImagesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRenderingImagesResponse
+        /// </returns>
+        public async Task<ListRenderingImagesResponse> ListRenderingImagesWithOptionsAsync(ListRenderingImagesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRenderingImages",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRenderingImagesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</description></item>
+        /// <item><description>You must specify at least one of the <c>SessionId</c> and <c>ClientId</c> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRenderingImagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRenderingImagesResponse
+        /// </returns>
+        public ListRenderingImagesResponse ListRenderingImages(ListRenderingImagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListRenderingImagesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of images.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports filtering and paged query of rendering session lists by using various parameter combinations.</description></item>
+        /// <item><description>You must specify at least one of the <c>SessionId</c> and <c>ClientId</c> parameters, but neither is required. If both parameters are specified, more precise matching is performed based on the two parameters.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListRenderingImagesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRenderingImagesResponse
+        /// </returns>
+        public async Task<ListRenderingImagesResponse> ListRenderingImagesAsync(ListRenderingImagesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListRenderingImagesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries custom gateways.</para>
         /// </summary>
         /// 
@@ -22675,7 +22847,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cloud application service specification information. Paging is supported.</para>
+        /// <para>Queries the specifications of all cloud application services. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22735,7 +22907,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cloud application service specification information. Paging is supported.</para>
+        /// <para>Queries the specifications of all cloud application services. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22795,7 +22967,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cloud application service specification information. Paging is supported.</para>
+        /// <para>Queries the specifications of all cloud application services. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22823,7 +22995,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all cloud application service specification information. Paging is supported.</para>
+        /// <para>Queries the specifications of all cloud application services. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -25975,7 +26147,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the host of a cloud application service instance.</para>
+        /// <para>Restarts the hosts of cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25998,6 +26170,10 @@ namespace AlibabaCloud.SDK.Vs20181212
                 request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precheck))
+            {
+                query["Precheck"] = request.Precheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
             {
                 query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
@@ -26023,7 +26199,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the host of a cloud application service instance.</para>
+        /// <para>Restarts the hosts of cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26046,6 +26222,10 @@ namespace AlibabaCloud.SDK.Vs20181212
                 request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Precheck))
+            {
+                query["Precheck"] = request.Precheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
             {
                 query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
@@ -26071,7 +26251,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the host of a cloud application service instance.</para>
+        /// <para>Restarts the hosts of cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26089,7 +26269,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the host of a cloud application service instance.</para>
+        /// <para>Restarts the hosts of cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30939,7 +31119,8 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
+        /// <para>Updates the information of a cloud application, such as the description, application labels, and patches.
+        /// You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31009,7 +31190,8 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
+        /// <para>Updates the information of a cloud application, such as the description, application labels, and patches.
+        /// You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31079,7 +31261,8 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
+        /// <para>Updates the information of a cloud application, such as the description, application labels, and patches.
+        /// You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31097,7 +31280,8 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
+        /// <para>Updates the information of a cloud application, such as the description, application labels, and patches.
+        /// You can upload patches or hot update packages, and create hot update packages for Android cloud application marketplace applications. Each cloud application supports up to 20 patches, and only one patch can be in the uploading state at a time for a single cloud application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31867,7 +32051,147 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
+        /// <para>Upgrades instance images in batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradeRenderingInstanceImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingInstanceImageResponse
+        /// </returns>
+        public UpgradeRenderingInstanceImageResponse UpgradeRenderingInstanceImageWithOptions(UpgradeRenderingInstanceImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradeRenderingInstanceImageShrinkRequest request = new UpgradeRenderingInstanceImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeRenderingInstanceImage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeRenderingInstanceImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades instance images in batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpgradeRenderingInstanceImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingInstanceImageResponse
+        /// </returns>
+        public async Task<UpgradeRenderingInstanceImageResponse> UpgradeRenderingInstanceImageWithOptionsAsync(UpgradeRenderingInstanceImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpgradeRenderingInstanceImageShrinkRequest request = new UpgradeRenderingInstanceImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
+            {
+                query["ImageId"] = request.ImageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpgradeRenderingInstanceImage",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpgradeRenderingInstanceImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades instance images in batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeRenderingInstanceImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingInstanceImageResponse
+        /// </returns>
+        public UpgradeRenderingInstanceImageResponse UpgradeRenderingInstanceImage(UpgradeRenderingInstanceImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpgradeRenderingInstanceImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades instance images in batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpgradeRenderingInstanceImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpgradeRenderingInstanceImageResponse
+        /// </returns>
+        public async Task<UpgradeRenderingInstanceImageResponse> UpgradeRenderingInstanceImageAsync(UpgradeRenderingInstanceImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpgradeRenderingInstanceImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31922,6 +32246,14 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["PkgType"] = request.PkgType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCommandPath))
+            {
+                query["PostCommandPath"] = request.PostCommandPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCommandTimeoutSec))
+            {
+                query["PostCommandTimeoutSec"] = request.PostCommandTimeoutSec;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -31943,7 +32275,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
+        /// <para>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -31998,6 +32330,14 @@ namespace AlibabaCloud.SDK.Vs20181212
             {
                 query["PkgType"] = request.PkgType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCommandPath))
+            {
+                query["PostCommandPath"] = request.PostCommandPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCommandTimeoutSec))
+            {
+                query["PostCommandTimeoutSec"] = request.PostCommandTimeoutSec;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -32019,7 +32359,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
+        /// <para>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32037,7 +32377,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
+        /// <para>Uploads a cloud application package for listing. This is an asynchronous operation. You can call the ListCloudApps operation to query the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -8,24 +8,25 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
-    public class RebootRenderingServerShrinkRequest : TeaModel {
+    public class UpgradeRenderingInstanceImageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only an admission check without actually restarting the hosts. Default value: false.</para>
+        /// <para>The image ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>m-bp15om9lg9zb20magg86</para>
         /// </summary>
-        [NameInMap("Precheck")]
+        [NameInMap("ImageId")]
         [Validation(Required=false)]
-        public bool? Precheck { get; set; }
+        public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud application service instance IDs.</para>
+        /// <para>The list of cloud application service instance IDs. A maximum of 100 IDs can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]
         [Validation(Required=false)]
-        public string RenderingInstanceIdsShrink { get; set; }
+        public List<string> RenderingInstanceIds { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateCloudAppInfoShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud application, which corresponds to a unique application package.</para>
+        /// <para>The cloud application ID, which corresponds to a unique application package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,19 +24,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于测试使用</para>
+        /// <para>For testing purposes</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Information about the patch package to upload.</para>
+        /// <para>The information about the patch package to upload.</para>
         /// <ol>
-        /// <item><description><para>This parameter is not supported when PkgType is android.</para>
-        /// </description></item>
-        /// <item><description><para>For the same AppId, only one patch can be in the process of uploading at a time. This means only one patch can be in a state other than its desired state.</para>
-        /// </description></item>
+        /// <item><description>Not supported when PkgType is set to android.</description></item>
+        /// <item><description>Only one patch can be in the uploading state at a time for the same AppId (only one patch in a non-final state is allowed per AppId).</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Patch")]
@@ -44,14 +42,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchShrink { get; set; }
 
         /// <summary>
-        /// <para>The tags for the cloud application. You can select multiple tags. This action resets all existing tags for the cloud application.</para>
+        /// <para>The cloud application labels. You can select multiple labels. This operation resets the cloud application labels.</para>
         /// <ol>
-        /// <item><description><para>Valid values:
-        /// hot, game, and app.</para>
-        /// </description></item>
-        /// <item><description><para>Special case:
-        /// To delete all tags, enter [&quot;NULL&quot;].</para>
-        /// </description></item>
+        /// <item><description>Valid values:
+        ///   a. hot
+        ///   b. game
+        ///   c. app</description></item>
+        /// <item><description>Special cases:
+        ///   a. To delete all labels, set this parameter to [&quot;NULL&quot;].</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("PkgLabels")]
@@ -59,10 +57,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PkgLabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stable patch. This patch is used by default if you do not specify a PatchId when the application is in use, such as during a session startup. This parameter is not supported when PkgType is android.
-        /// Special value:</para>
+        /// <para>The stable PatchId. When a PatchId is not specified during business operations (such as session startup), this PatchId is used by default. Not supported when PkgType is set to android.
+        /// Special values:</para>
         /// <ol>
-        /// <item><description>If you set this parameter to origin, the patch version is removed and the initial version is used.</description></item>
+        /// <item><description>origin: cancels the patch version and uses the initial version by default.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>

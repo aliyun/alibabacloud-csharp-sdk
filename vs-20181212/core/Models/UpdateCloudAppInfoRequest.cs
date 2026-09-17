@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateCloudAppInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud application, which corresponds to a unique application package.</para>
+        /// <para>The cloud application ID, which corresponds to a unique application package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,19 +24,17 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用于测试使用</para>
+        /// <para>For testing purposes</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Information about the patch package to upload.</para>
+        /// <para>The information about the patch package to upload.</para>
         /// <ol>
-        /// <item><description><para>This parameter is not supported when PkgType is android.</para>
-        /// </description></item>
-        /// <item><description><para>For the same AppId, only one patch can be in the process of uploading at a time. This means only one patch can be in a state other than its desired state.</para>
-        /// </description></item>
+        /// <item><description>Not supported when PkgType is set to android.</description></item>
+        /// <item><description>Only one patch can be in the uploading state at a time for the same AppId (only one patch in a non-final state is allowed per AppId).</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Patch")]
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public UpdateCloudAppInfoRequestPatch Patch { get; set; }
         public class UpdateCloudAppInfoRequestPatch : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically set the patch as the stable version after it is successfully uploaded. The default value is false.</para>
+            /// <para>Specifies whether to automatically set the patch as the stable patch after a successful upload. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -54,9 +52,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? AsStablePatch { get; set; }
 
             /// <summary>
-            /// <para>The download URL for the patch package.
-            /// You must specify either RenderingInstanceId or DownloadURL.
-            /// DownloadURL takes precedence.</para>
+            /// <para>The download URL of the patch package.
+            /// Either RenderingInstanceId or DownloadURL is required. DownloadURL takes priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://test_host/app/test-tar-pkg.tar">https://test_host/app/test-tar-pkg.tar</a></para>
@@ -66,7 +63,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DownloadURL { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash of the patch package, used to verify integrity. This parameter is valid only if DownloadURL is not empty. It is required if DownloadURL is not empty.</para>
+            /// <para>The MD5 hash of the patch package, used for integrity verification. Valid only when DownloadURL is not empty. Required when DownloadURL is not empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>346f6404395adfg5bae1e45g4e943bf7</para>
@@ -76,17 +73,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The name or description of the patch package. This is a unique identifier under the AppId.
-            /// Default naming conventions:</para>
+            /// <para>The name or description of the patch package, which serves as a unique identifier under the AppId.
+            /// Naming conventions:</para>
             /// <ol>
-            /// <item><description><para>Cannot be origin or all.</para>
-            /// </description></item>
-            /// <item><description><para>Must be 1 to 50 characters in length.</para>
-            /// </description></item>
-            /// <item><description><para>Can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</para>
-            /// </description></item>
-            /// <item><description><para>The first and last characters must be a letter or a digit.</para>
-            /// </description></item>
+            /// <item><description>Cannot be set to origin or all.</description></item>
+            /// <item><description>Must be 1 to 50 characters in length.</description></item>
+            /// <item><description>Can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
+            /// <item><description>Must start and end with a letter or digit.</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -97,16 +90,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchName { get; set; }
 
             /// <summary>
-            /// <para>The format of the installation package. By default, the system uses the file extension from the download URL. This parameter is valid only if DownloadURL is not empty. Valid values:</para>
+            /// <para>The format of the installation package. The default value is the file extension of the download URL. Valid only when DownloadURL is not empty. Valid values:</para>
             /// <ol>
-            /// <item><description><para>tar.gz</para>
-            /// </description></item>
-            /// <item><description><para>tar</para>
-            /// </description></item>
-            /// <item><description><para>zip</para>
-            /// </description></item>
-            /// <item><description><para>rar</para>
-            /// </description></item>
+            /// <item><description>tar.gz</description></item>
+            /// <item><description>tar</description></item>
+            /// <item><description>zip</description></item>
+            /// <item><description>rar</description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -117,7 +106,27 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PkgFormat { get; set; }
 
             /// <summary>
-            /// <para>The instance ID required to create the patch package. This parameter is valid only in the Android application marketplace scenario (PkgType=andrpid_appmarket). Specify either RenderingInstanceId or DownloadURL. DownloadURL takes precedence.</para>
+            /// <para>The relative path of the post-command within the application package. Only supported for Windows applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>install.ps1</para>
+            /// </summary>
+            [NameInMap("PostCommandPath")]
+            [Validation(Required=false)]
+            public string PostCommandPath { get; set; }
+
+            /// <summary>
+            /// <para>The timeout period for the post-command execution, in seconds. Only supported for Windows applications.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("PostCommandTimeoutSec")]
+            [Validation(Required=false)]
+            public int? PostCommandTimeoutSec { get; set; }
+
+            /// <summary>
+            /// <para>The instance ID of the instance used to create the patch package. Valid only for Android application marketplace scenarios (PkgType=andrpid_appmarket). Either RenderingInstanceId or DownloadURL is required. DownloadURL takes priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>render-d7ec79fe47ce47aca2d8d7500d25a28a</para>
@@ -129,14 +138,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>The tags for the cloud application. You can select multiple tags. This action resets all existing tags for the cloud application.</para>
+        /// <para>The cloud application labels. You can select multiple labels. This operation resets the cloud application labels.</para>
         /// <ol>
-        /// <item><description><para>Valid values:
-        /// hot, game, and app.</para>
-        /// </description></item>
-        /// <item><description><para>Special case:
-        /// To delete all tags, enter [&quot;NULL&quot;].</para>
-        /// </description></item>
+        /// <item><description>Valid values:
+        ///   a. hot
+        ///   b. game
+        ///   c. app</description></item>
+        /// <item><description>Special cases:
+        ///   a. To delete all labels, set this parameter to [&quot;NULL&quot;].</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("PkgLabels")]
@@ -144,10 +153,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<string> PkgLabels { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stable patch. This patch is used by default if you do not specify a PatchId when the application is in use, such as during a session startup. This parameter is not supported when PkgType is android.
-        /// Special value:</para>
+        /// <para>The stable PatchId. When a PatchId is not specified during business operations (such as session startup), this PatchId is used by default. Not supported when PkgType is set to android.
+        /// Special values:</para>
         /// <ol>
-        /// <item><description>If you set this parameter to origin, the patch version is removed and the initial version is used.</description></item>
+        /// <item><description>origin: cancels the patch version and uses the initial version by default.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>

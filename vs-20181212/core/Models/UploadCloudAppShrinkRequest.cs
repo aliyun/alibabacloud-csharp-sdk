@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadCloudAppShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application name. For Android apps, use the package name, such as com.aaa.bbb.</para>
-        /// <para>Value requirements:</para>
+        /// <para>The application name. For Android applications, use the package name, such as com.aaa.bbb.</para>
+        /// <para>Value rules:</para>
         /// <ol>
-        /// <item><description><para>Length: 4–50 characters</para>
-        /// </description></item>
-        /// <item><description><para>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</para>
-        /// </description></item>
-        /// <item><description><para>The first and last characters must be a letter or digit</para>
-        /// </description></item>
+        /// <item><description>Length: 4 to 50 characters.</description></item>
+        /// <item><description>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
+        /// <item><description>The first and last characters must be letters or digits.</description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,14 +27,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Value requirements:</para>
+        /// <para>The application version. For Android applications, use the VersionName, such as 1.1.1.</para>
+        /// <para>Value rules:</para>
         /// <ol>
-        /// <item><description><para>Length: 1–50 characters</para>
-        /// </description></item>
-        /// <item><description><para>Allowed characters: lowercase letters, digits, underscores (_), hyphens (-), and dots (.)</para>
-        /// </description></item>
-        /// <item><description><para>The first and last characters must be a letter or digit</para>
-        /// </description></item>
+        /// <item><description>Length: 1 to 50 characters.</description></item>
+        /// <item><description>Lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</description></item>
+        /// <item><description>The first and last characters must be letters or digits.</description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,10 +44,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// <para>A description of the application.</para>
+        /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试应用包</para>
+        /// <para>Test application package</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -70,7 +65,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash of the application package, used to verify package integrity.</para>
+        /// <para>The MD5 checksum of the application package, used to verify package integrity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,18 +76,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The package format. By default, this is inferred from the file extension in the DownloadUrl. Valid values:</para>
+        /// <para>The package format. The default value is the file extension of the download URL. Valid values:</para>
         /// <ol>
-        /// <item><description><para>apk</para>
-        /// </description></item>
-        /// <item><description><para>tar.gz</para>
-        /// </description></item>
-        /// <item><description><para>tar</para>
-        /// </description></item>
-        /// <item><description><para>zip</para>
-        /// </description></item>
-        /// <item><description><para>rar</para>
-        /// </description></item>
+        /// <item><description>apk</description></item>
+        /// <item><description>tar.gz</description></item>
+        /// <item><description>tar</description></item>
+        /// <item><description>zip</description></item>
+        /// <item><description>rar</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -103,14 +93,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PkgFormat { get; set; }
 
         /// <summary>
-        /// <para>Cloud application labels. You can select multiple. Valid values:</para>
+        /// <para>The cloud application labels. You can select multiple values. Valid values:</para>
         /// <ol>
-        /// <item><description><para>hot</para>
-        /// </description></item>
-        /// <item><description><para>game</para>
-        /// </description></item>
-        /// <item><description><para>app</para>
-        /// </description></item>
+        /// <item><description>hot</description></item>
+        /// <item><description>game</description></item>
+        /// <item><description>app</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("PkgLabels")]
@@ -121,24 +108,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         /// <para>The package type.</para>
         /// <h2>Valid values:</h2>
         /// <ol>
-        /// <item><description><para>android</para>
-        /// </description></item>
-        /// <item><description><para>win</para>
-        /// </description></item>
-        /// <item><description><para>android_appmarket: for Android app marketplace scenarios. This scenario enforces real APK PackageName restrictions:
-        /// a. PackageNames must be unique across different AppNames.
-        /// b. The same AppName with different AppVersions can map to different PackageNames.</para>
-        /// </description></item>
+        /// <item><description>android</description></item>
+        /// <item><description>win</description></item>
+        /// <item><description>android_appmarket: corresponds to the Android app marketplace scenario. In this scenario, the actual APK PackageName is restricted:
+        /// a. Different AppName values cannot share the same PackageName.
+        /// b. The same AppName with different AppVersion values can be associated with different PackageName values.</description></item>
         /// </ol>
-        /// <h2>Default behavior:</h2>
-        /// <para>If not specified, the system automatically maps the package type based on PkgFormat (or infers PkgFormat from the DownloadUrl file extension). The default mapping is:</para>
+        /// <h2>Default value:</h2>
+        /// <para>If not specified, the package type is automatically mapped based on PkgFormat (or the file extension of DownloadUrl). Default mappings between PkgFormat and package type:</para>
         /// <ol>
-        /// <item><description><para>android: apk</para>
-        /// </description></item>
-        /// <item><description><para>win: tar.gz, tar, zip, rar</para>
-        /// </description></item>
-        /// <item><description><para>android_appmarket: apk</para>
-        /// </description></item>
+        /// <item><description>android: apk (the apk format is mapped to android by default).</description></item>
+        /// <item><description>win: tar.gz, tar, zip, rar.</description></item>
+        /// <item><description>android_appmarket: apk.</description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -147,6 +128,26 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [NameInMap("PkgType")]
         [Validation(Required=false)]
         public string PkgType { get; set; }
+
+        /// <summary>
+        /// <para>The relative path of the post-installation command within the application package. Only supported for win type applications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>install.ps1</para>
+        /// </summary>
+        [NameInMap("PostCommandPath")]
+        [Validation(Required=false)]
+        public string PostCommandPath { get; set; }
+
+        /// <summary>
+        /// <para>The timeout period (in seconds) for the post-installation command. Only supported for win type applications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("PostCommandTimeoutSec")]
+        [Validation(Required=false)]
+        public int? PostCommandTimeoutSec { get; set; }
 
     }
 
