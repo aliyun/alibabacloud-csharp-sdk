@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAlertWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The content type of the data. Supported values:</para>
+        /// <para>The content type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>JSON</para>
-        /// </description></item>
-        /// <item><description><para>FORM</para>
-        /// </description></item>
+        /// <item><description>JSON</description></item>
+        /// <item><description>FORM</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,19 +24,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The headers.</para>
+        /// <para>headers</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// <para>The language. Supported values:</para>
+        /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>zh_CN</para>
-        /// </description></item>
-        /// <item><description><para>en_US</para>
-        /// </description></item>
+        /// <item><description>zh_CN</description></item>
+        /// <item><description>en_US</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,12 +45,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The request method. Supported values:</para>
+        /// <para>The request method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GET</para>
-        /// </description></item>
-        /// <item><description><para>POST</para>
-        /// </description></item>
+        /// <item><description>GET</description></item>
+        /// <item><description>POST</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

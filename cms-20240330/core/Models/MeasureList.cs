@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class MeasureList : TeaModel {
         /// <summary>
-        /// <para>The grouping dimension.</para>
+        /// <para>The list of grouping dimensions for metric data. Specifies the dimension keys by which metric results are computed through grouping and aggregation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;host.name&quot;, &quot;region&quot;]</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]

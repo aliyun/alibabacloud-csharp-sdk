@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SeverityNotifyConfig : TeaModel {
         /// <summary>
-        /// <para>The list of Notification Recipients. Each recipient specifies the type, identifier, and enabled channels.</para>
+        /// <para>The list of Notification Recipients. Each recipient specifies a type, an identifier, and the enabled channels.</para>
         /// </summary>
         [NameInMap("receivers")]
         [Validation(Required=false)]

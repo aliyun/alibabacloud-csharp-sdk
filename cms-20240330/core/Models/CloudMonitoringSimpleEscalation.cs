@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CloudMonitoringSimpleEscalation : TeaModel {
         /// <summary>
-        /// <para>The multi-level trigger list.</para>
+        /// <para>The list of multi-level trigger configurations for cloud service monitoring. Each item defines a trigger level, such as Warning or Critical, and includes parameters such as the threshold, duration, and notification method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;level&quot;:&quot;WARN&quot;,&quot;comparisonOperator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;80&quot;,&quot;times&quot;:3}]</para>
         /// </summary>
         [NameInMap("escalations")]
         [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The collection period, in seconds.</para>
+        /// <para>The aggregation period, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

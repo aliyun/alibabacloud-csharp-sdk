@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DisplayNameFilter : TeaModel {
         /// <summary>
-        /// <para>Returns only resources whose display name contains the specified string. The match is case-sensitive.</para>
+        /// <para>The inclusion keyword for the display name. Only alert rules whose display names contain this keyword are returned. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CPU monitoring</para>
         /// </summary>
         [NameInMap("contains")]
         [Validation(Required=false)]
         public string Contains { get; set; }
 
         /// <summary>
-        /// <para>Returns only resources whose display name does not contain the specified string. The match is case-sensitive.</para>
+        /// <para>The exclusion keyword for the display name. Alert rules whose display names contain this keyword are excluded. Fuzzy match is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ARM</para>
         /// </summary>
         [NameInMap("notContains")]
         [Validation(Required=false)]

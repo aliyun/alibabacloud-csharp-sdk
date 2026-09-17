@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SlsQueryJoin : TeaModel {
         /// <summary>
-        /// <para>The list of join conditions.</para>
+        /// <para>The list of join conditions for SLS query result sets. The conditions define the matching rules between multiple SLS query results for cross-Logstore data correlation analysis.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;leftField&quot;:&quot;traceId&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;trace_id&quot;}]</para>
         /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]

@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The list of resources. If relationType is set to ALL, this parameter can be left empty, which indicates all resources. If relationType is set to TAG, this parameter is a list of labels in key=value format (such as [&quot;env=prod&quot;, &quot;app=foo&quot;]). This is supported only for APM data sources with APM_MULTI_QUERY.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;i-bp1a2b3c4d5e6f7g8h9i&quot;,&quot;i-bp9h8g7f6e5d4c3b2a1&quot;]</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

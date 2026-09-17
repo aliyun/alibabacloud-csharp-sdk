@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class LabelMatcher : TeaModel {
         /// <summary>
-        /// <para>The label key to match.</para>
+        /// <para>The key name of the label matcher. This parameter specifies the label dimension identity to match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>_cms_workspace</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The label value to match.</para>
+        /// <para>The match value of the label matcher. This parameter is used together with key to specify the value that the label key must match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-123</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

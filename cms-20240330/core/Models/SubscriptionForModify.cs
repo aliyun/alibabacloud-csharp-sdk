@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the notification policy.</para>
+        /// <para>The UUID of the notification strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -106,11 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Subscribe.</description></item>
-        /// <item><description>false or null: Do not subscribe.</description></item>
-        /// </list>
+        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

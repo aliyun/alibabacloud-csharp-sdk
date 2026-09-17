@@ -1062,6 +1062,192 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRobotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRobotResponse
+        /// </returns>
+        public CreateAlertRobotResponse CreateAlertRobotWithOptions(CreateAlertRobotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotId))
+            {
+                body["robotId"] = request.RobotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotSignKey))
+            {
+                body["robotSignKey"] = request.RobotSignKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                body["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlertRobot",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robot",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlertRobotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRobotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRobotResponse
+        /// </returns>
+        public async Task<CreateAlertRobotResponse> CreateAlertRobotWithOptionsAsync(CreateAlertRobotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotId))
+            {
+                body["robotId"] = request.RobotId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotSignKey))
+            {
+                body["robotSignKey"] = request.RobotSignKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                body["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAlertRobot",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robot",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAlertRobotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRobotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRobotResponse
+        /// </returns>
+        public CreateAlertRobotResponse CreateAlertRobot(CreateAlertRobotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAlertRobotWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAlertRobotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAlertRobotResponse
+        /// </returns>
+        public async Task<CreateAlertRobotResponse> CreateAlertRobotAsync(CreateAlertRobotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAlertRobotWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a webhook.</para>
         /// </summary>
         /// 
@@ -5128,6 +5314,156 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteAggTaskGroupWithOptionsAsync(instanceId, groupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert chatbot.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAlertRobotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRobotsResponse
+        /// </returns>
+        public DeleteAlertRobotsResponse DeleteAlertRobotsWithOptions(DeleteAlertRobotsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAlertRobotsShrinkRequest request = new DeleteAlertRobotsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RobotIds))
+            {
+                request.RobotIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RobotIds, "robotIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotIdsShrink))
+            {
+                query["robotIds"] = request.RobotIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertRobots",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robots",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlertRobotsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert chatbot.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteAlertRobotsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRobotsResponse
+        /// </returns>
+        public async Task<DeleteAlertRobotsResponse> DeleteAlertRobotsWithOptionsAsync(DeleteAlertRobotsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteAlertRobotsShrinkRequest request = new DeleteAlertRobotsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RobotIds))
+            {
+                request.RobotIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RobotIds, "robotIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotIdsShrink))
+            {
+                query["robotIds"] = request.RobotIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAlertRobots",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robots",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAlertRobotsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert chatbot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRobotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRobotsResponse
+        /// </returns>
+        public DeleteAlertRobotsResponse DeleteAlertRobots(DeleteAlertRobotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAlertRobotsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an alert chatbot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAlertRobotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAlertRobotsResponse
+        /// </returns>
+        public async Task<DeleteAlertRobotsResponse> DeleteAlertRobotsAsync(DeleteAlertRobotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAlertRobotsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15621,8 +15957,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
+        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15703,8 +16038,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
+        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15785,8 +16119,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
+        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15810,8 +16143,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation can only query alert history from the last year.
-        /// This topic provides an example of querying the alert history of Elastic Computing Service from the <c>product</c> dimension of a cloud service.</para>
+        /// <para>Queries the list of alert robots under the current account. Alert robots are webhook receivers for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter results by robot ID, name, type, and workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23222,6 +23554,176 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateAggTaskGroupStatusWithOptionsAsync(instanceId, groupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRobotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRobotResponse
+        /// </returns>
+        public UpdateAlertRobotResponse UpdateAlertRobotWithOptions(string robotId, UpdateAlertRobotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotSignKey))
+            {
+                body["robotSignKey"] = request.RobotSignKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlertRobot",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robot/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(robotId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertRobotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRobotRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRobotResponse
+        /// </returns>
+        public async Task<UpdateAlertRobotResponse> UpdateAlertRobotWithOptionsAsync(string robotId, UpdateAlertRobotRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RobotSignKey))
+            {
+                body["robotSignKey"] = request.RobotSignKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAlertRobot",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/robot/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(robotId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAlertRobotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRobotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRobotResponse
+        /// </returns>
+        public UpdateAlertRobotResponse UpdateAlertRobot(string robotId, UpdateAlertRobotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAlertRobotWithOptions(robotId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an alert robot.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAlertRobotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAlertRobotResponse
+        /// </returns>
+        public async Task<UpdateAlertRobotResponse> UpdateAlertRobotAsync(string robotId, UpdateAlertRobotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAlertRobotWithOptionsAsync(robotId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

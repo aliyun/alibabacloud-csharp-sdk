@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentResponsePlanForModify : TeaModel {
         /// <summary>
-        /// <para>The auto-recovery time in seconds when no events occur.</para>
+        /// <para>The auto-recovery time when no events occur, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The lifecycle mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValue</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleName</para>
+        /// <para>Sample name</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SampleValue</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Required for Update. Can be omitted for Create, in which case the backend generates it. The UUID is shared with NotifyStrategy.</para>
+        /// <para>Required for Update. Can be omitted for Create, in which case the backend generates it. Shared with NotifyStrategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>

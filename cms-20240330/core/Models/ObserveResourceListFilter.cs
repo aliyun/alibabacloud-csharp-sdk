@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ObserveResourceListFilter : TeaModel {
         /// <summary>
-        /// <para>Returns resources if a specified property contains any string in this array.</para>
+        /// <para>The match condition that requires the observeResourceList of a rule to contain at least one instance ID from the array (OR semantics).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;i-bp1a2b3c4d5e6f7g8h9i&quot;]</para>
         /// </summary>
         [NameInMap("contains")]
         [Validation(Required=false)]

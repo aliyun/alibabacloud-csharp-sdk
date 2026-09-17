@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample description</para>
+        /// <para>SampleDescription</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether recovery notifications are sent.</para>
+        /// <para>Indicates whether to send a notification upon recovery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? IgnoreRestoredNotification { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the associated response plan, which equals notifyStrategyId.</para>
+        /// <para>The associated response plan UUID, which equals notifyStrategyId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The lifecycle mode. Within SNS, this value is always BundleStrategy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>SampleValue</para>
         /// </summary>
         [NameInMap("mode")]
         [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample name</para>
+        /// <para>SampleName</para>
         /// </summary>
         [NameInMap("notifyStrategyName")]
         [Validation(Required=false)]
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The digital employee name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sample name</para>
+            /// <para>SampleName</para>
             /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
@@ -232,14 +232,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public NotifyStrategyForSNSViewRoutesEffectTimeRange EffectTimeRange { get; set; }
             public class NotifyStrategyForSNSViewRoutesEffectTimeRange : TeaModel {
                 /// <summary>
-                /// <para>The effective days, from Monday to Sunday.</para>
+                /// <para>The effective days (Monday to Sunday).</para>
                 /// </summary>
                 [NameInMap("dayInWeek")]
                 [Validation(Required=false)]
                 public List<int?> DayInWeek { get; set; }
 
                 /// <summary>
-                /// <para>The start time in minutes.</para>
+                /// <para>The start time (in minutes).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public int? EndTimeInMinute { get; set; }
 
                 /// <summary>
-                /// <para>The start time in minutes.</para>
+                /// <para>The start time (in minutes).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The synchronization source. For SNS creation, this value is always OBS.</para>
+        /// <para>The sync source. For SNS creation, this value is always OBS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The workspace identifier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample value</para>
+        /// <para>SampleValue</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]

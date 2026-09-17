@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: Subscribed. false or null: Not subscribed.</para>
+        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribe. false or null: Do not subscribe.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionId { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the subscription.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

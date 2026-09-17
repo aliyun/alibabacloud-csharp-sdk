@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<NotifyStrategyForSNSModifyCustomTemplateEntries> CustomTemplateEntries { get; set; }
         public class NotifyStrategyForSNSModifyCustomTemplateEntries : TeaModel {
             /// <summary>
-            /// <para><b>[Deprecated]</b> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type field of the template object referenced by templateUuid.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type of the template object referenced by templateUuid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to send a notification when the alert is recovered.</para>
+        /// <para>Specifies whether to send a notification when the alert is restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -166,6 +166,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>The digital employee name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>apsara-ops</para>
             /// </summary>
             [NameInMap("digitalEmployeeName")]
             [Validation(Required=false)]
@@ -221,14 +224,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable root cause analysis (RCA).</para>
+            /// <para>Specifies whether to enable Root Cause Analysis (RCA).</para>
             /// </summary>
             [NameInMap("enableRca")]
             [Validation(Required=false)]
             public bool? EnableRca { get; set; }
 
             /// <summary>
-            /// <para>The route-level filter. This is different from the top-level subscription.filterSetting.</para>
+            /// <para>The route-level filter. This is at a different level from the top-level subscription.filterSetting.</para>
             /// </summary>
             [NameInMap("filterSetting")]
             [Validation(Required=false)]
@@ -274,7 +277,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 }
 
                 /// <summary>
-                /// <para>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the system uses relation (AND or OR) to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</para>
+                /// <para>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the relation (AND or OR) is used to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>(1 AND 2 )OR 3</para>

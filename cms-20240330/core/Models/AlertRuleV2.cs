@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ArmsIntegrationConfig ArmsIntegrationConfig { get; set; }
 
         /// <summary>
-        /// <para>The business source (read-only), such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls.</para>
+        /// <para>The business source (read-only, such as managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, or sls).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("bizSource")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object. Fields are selected based on the type).</para>
+        /// <para>The datasource config aggregation (PROMETHEUS, UMODEL, and APM share a single object, with fields selected based on type).</para>
         /// </summary>
         [NameInMap("datasourceConfig")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the alert rule is enabled.</para>
+        /// <para>Indicates whether the alert rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyConfigUnified NotifyConfig { get; set; }
 
         /// <summary>
-        /// <para>The notification policy ID (read-only, derived). The value is the first entry in the notification policy list.</para>
+        /// <para>The notification policy ID (read-only, derived, the first entry in the notification policy list).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Specifies whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType and check whether the value is ALL for equivalent semantics.</para>
+        /// <para><b>[Deprecated]</b> Indicates whether the rule takes effect on all resources of this type (read-only, derived). For new integrations, use observeResourceConfig.relationType to check whether the value is ALL for equivalent semantics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -179,10 +179,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ObserveResourceType { get; set; }
 
         /// <summary>
-        /// <para>The partition key (read-only). Maintained by the system for rule routing and sharding.</para>
+        /// <para>The partition key (read-only, maintained by the system for rule routing and sharding).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Sample value</para>
         /// </summary>
         [NameInMap("partitionKey")]
         [Validation(Required=false)]
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public QueryConfigUnified QueryConfig { get; set; }
 
         /// <summary>
-        /// <para>The root cause analysis (RCA) configuration.</para>
+        /// <para>The Root Cause Analysis (RCA) configuration.</para>
         /// </summary>
         [NameInMap("rcaConfig")]
         [Validation(Required=false)]
         public AlertRuleRcaConfig RcaConfig { get; set; }
 
         /// <summary>
-        /// <para>The region ID, aligned with V1 AlertRule.regionId. Priority: regionId in the request body takes precedence over callerRegionId from the gateway.</para>
+        /// <para>The region ID (aligned with V1 AlertRule.regionId. Priority: regionId in the request body &gt; callerRegionId from the gateway).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example-id-001</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public ScheduleConfigUnified ScheduleConfig { get; set; }
 
         /// <summary>
-        /// <para>The severity levels covered by this rule, separated by commas (read-only, derived). The format is consistent with the filter.severityLevels query parameter.</para>
+        /// <para>The severity levels covered by this rule, comma-separated (read-only, derived. Same format as the filter.severityLevels query parameter).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

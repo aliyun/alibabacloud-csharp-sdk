@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The raw V1 datasource JSON string returned as a read-path fallback when type is set to UNKNOWN and parsing fails. The frontend displays this field as read-only when the value is not empty.</para>
+        /// <para>The raw V1 datasource JSON string returned as a read-path fallback when type is set to UNKNOWN and parsing fails. When this field is not empty, the frontend displays it as read-only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;SLS&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud service category. Optional when type is set to CLOUD_MONITORING. Returns unknown when the source does not contain this information.</para>
+        /// <para>The Alibaba Cloud service category. Optional when type is set to CLOUD_MONITORING. Outputs unknown when the source does not contain this information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -80,7 +80,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of SLS stores. Used when type is set to SLS. At least one store is required. Each store contains store and storeType fields. The project and regionId fields have been moved to the top level. The deprecated fields with the same names that remain in stores return a 400 error if used in write paths.</para>
+        /// <para>The list of SLS stores. Used when type is set to SLS. At least one store is required. Each store contains the store and storeType fields. The project and regionId fields have been moved to the top level. The fields with the same names that remain in stores are deprecated. Using them in write paths returns a 400 error.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;store&quot;:&quot;cms-alert-log&quot;,&quot;storeType&quot;:&quot;log&quot;}]</para>
         /// </summary>
         [NameInMap("stores")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The robot ID.</para>
+        /// <para>The robot IDs.</para>
         /// </summary>
         [NameInMap("robots")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RobotId { get; set; }
 
             /// <summary>
-            /// <para>The signature key of the robot.</para>
+            /// <para>The signing key of the robot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RobotSignKey { get; set; }
 
             /// <summary>
-            /// <para>The robot type.</para>
+            /// <para>The robot types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>

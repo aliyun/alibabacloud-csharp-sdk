@@ -8,21 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class DirectNotifyChannel : TeaModel {
+    public class DeleteAlertRobotsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of Notification Recipient identifiers.</para>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("identifiers")]
+        [NameInMap("robotIds")]
         [Validation(Required=false)]
-        public List<string> Identifiers { get; set; }
+        public List<string> RobotIds { get; set; }
 
         /// <summary>
-        /// <para>The notification channel type.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The chatbot type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CONTACT</para>
+        /// <para>DING</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

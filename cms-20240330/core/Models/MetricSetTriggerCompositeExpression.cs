@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class MetricSetTriggerCompositeExpression : TeaModel {
         /// <summary>
         /// <para>The list of sub-conditions. Each item is a simple comparison expression.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;metric&quot;:&quot;cpu_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;},{&quot;metric&quot;:&quot;mem_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;85&quot;}]</para>
         /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]

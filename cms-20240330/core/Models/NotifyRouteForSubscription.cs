@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The list of enabled sub-channels.</para>
+            /// <para>The list of enabled subchannels.</para>
             /// </summary>
             [NameInMap("enabledSubChannels")]
             [Validation(Required=false)]

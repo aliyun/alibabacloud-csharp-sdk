@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? QueryUngroupedContacts { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The workspace name. Format: <c>default-cms-{accountId}-{region}</c>. Example: <c>default-cms-1744108686100472-cn-hangzhou</c>. You can call the ListWorkspaces API to obtain valid workspace names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-1744108686100472-cn-hangzhou</para>

@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesEntityTypeFilter : TeaModel {
+        /// <summary>
+        /// <para>Matches any value in the set (OR semantics).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;UMODEL_ENTITY&quot;,&quot;CLOUD_INSTANCE&quot;]</para>
+        /// </summary>
         [NameInMap("in")]
         [Validation(Required=false)]
         public List<string> In { get; set; }
 
+        /// <summary>
+        /// <para>Excludes any value in the set (NOT IN semantics).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;TAG&quot;]</para>
+        /// </summary>
         [NameInMap("notIn")]
         [Validation(Required=false)]
         public List<string> NotIn { get; set; }

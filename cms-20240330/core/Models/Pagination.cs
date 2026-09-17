@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class Pagination : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number, starting from 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of records per page. This parameter controls the amount of data returned in a single request. Recommended value range: 1 to 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

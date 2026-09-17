@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListContactsResponseBodyContacts> Contacts { get; set; }
         public class ListContactsResponseBodyContacts : TeaModel {
             /// <summary>
-            /// <para>The ID of the on-duty contact.</para>
+            /// <para>The ID of the alert contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

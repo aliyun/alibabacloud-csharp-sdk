@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Sample response plan</para>
+        /// <para>SampleResponsePlan</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The repeat notification configuration.</para>
+        /// <para>The repeat notification settings.</para>
         /// </summary>
         [NameInMap("repeatNotifySetting")]
         [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The source. The value must be CUSTOM within SNS.</para>
+        /// <para>The source. This value must be CUSTOM within SNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SyncFromType { get; set; }
 
         /// <summary>
-        /// <para>The response plan type. The value must be NOTIFY_STRATEGY_DEFINED within SNS.</para>
+        /// <para>The response plan type. This value must be NOTIFY_STRATEGY_DEFINED within SNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOTIFY_STRATEGY_DEFINED</para>

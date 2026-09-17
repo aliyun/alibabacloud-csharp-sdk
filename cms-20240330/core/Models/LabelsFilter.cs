@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class LabelsFilter : TeaModel {
         /// <summary>
-        /// <para>An array of <c>LabelMatcher</c> requirements. An object is selected only if it satisfies all of the requirements in this list (a logical AND). If provided, the list cannot be empty.</para>
+        /// <para>Match all labels (AND).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;production&quot;},{&quot;key&quot;:&quot;team&quot;,&quot;value&quot;:&quot;ops&quot;}]</para>
         /// </summary>
         [NameInMap("allOf")]
         [Validation(Required=false)]
         public List<LabelMatcher> AllOf { get; set; }
 
         /// <summary>
-        /// <para>An array of <c>LabelMatcher</c> requirements. An object is selected if it satisfies at least one of the requirements in this list (a logical OR). If provided, the list cannot be empty.</para>
+        /// <para>Match any label (OR).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;production&quot;},{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;staging&quot;}]</para>
         /// </summary>
         [NameInMap("anyOf")]
         [Validation(Required=false)]

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class MetricSetNamedQueryEntry : TeaModel {
         /// <summary>
         /// <para>The label filter conditions. This parameter is optional and independent for each query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;key&quot;:&quot;host.name&quot;,&quot;value&quot;:&quot;web-server-01&quot;,&quot;type&quot;:&quot;eq&quot;}]</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]

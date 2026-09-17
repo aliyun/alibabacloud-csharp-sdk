@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<TagCondition> Conditions { get; set; }
 
         /// <summary>
-        /// <para>The custom expression in advanced mode, which overwrites conditions and relation.</para>
+        /// <para>The custom expression in advanced mode. This overrides the conditions and relation settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env=prod AND region=cn-hangzhou</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Expression { get; set; }
 
         /// <summary>
-        /// <para>The condition relationship.</para>
+        /// <para>The relationship between conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AND</para>

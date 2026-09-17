@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The list of UUIDs of rules that were successfully enabled or disabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;a1b2c3d4-e5f6-7890-abcd-ef1234567890&quot;,&quot;b2c3d4e5-f6a7-8901-bcde-f12345678901&quot;]</para>
         /// </summary>
         [NameInMap("updatedUuidList")]
         [Validation(Required=false)]
