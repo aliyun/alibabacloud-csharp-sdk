@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GB.</para>
+        /// <para>The disk size. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>10240</para>
         /// </summary>
         [NameInMap("diskSize")]
         [Validation(Required=false)]
