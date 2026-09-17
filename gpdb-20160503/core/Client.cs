@@ -39553,13 +39553,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the master node specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support instances in storage reservation mode.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39583,6 +39583,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterAISpec))
             {
@@ -39617,13 +39621,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the master node specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support instances in storage reservation mode.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39647,6 +39651,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MasterAISpec))
             {
@@ -39681,13 +39689,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the master node specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support instances in storage reservation mode.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39705,13 +39713,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the specifications of coordinator node resources for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Modifies the master node specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support instances in storage reservation mode.
+        /// Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41169,13 +41177,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic start and stop policy for a Supabase instance.</para>
+        /// <para>Modifies the auto start/stop policy for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only ADBPG Supabase instances are supported.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL Supabase instances are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41230,13 +41238,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic start and stop policy for a Supabase instance.</para>
+        /// <para>Modifies the auto start/stop policy for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only ADBPG Supabase instances are supported.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL Supabase instances are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41291,13 +41299,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic start and stop policy for a Supabase instance.</para>
+        /// <para>Modifies the auto start/stop policy for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only ADBPG Supabase instances are supported.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL Supabase instances are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41316,13 +41324,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the automatic start and stop policy for a Supabase instance.</para>
+        /// <para>Modifies the auto start/stop policy for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Only ADBPG Supabase instances are supported.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL Supabase instances are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48832,6 +48840,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpec))
             {
                 query["InstanceSpec"] = request.InstanceSpec;
@@ -48939,6 +48951,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceSpec))
             {
@@ -49057,7 +49073,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49077,6 +49093,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorVersion))
             {
@@ -49123,7 +49143,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49143,6 +49163,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                query["EffectiveTime"] = request.EffectiveTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MajorVersion))
             {
@@ -49189,7 +49213,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49207,7 +49231,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the minor version of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Upgrades the minor engine version of a specified AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

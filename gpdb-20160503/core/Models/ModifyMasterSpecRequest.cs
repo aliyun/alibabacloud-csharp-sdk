@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,13 +34,27 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</para>
+        /// <para>The effective period of the specification change. Valid values: </para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediately</b> (default): The change takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The change takes effect during the maintenance window of the instance.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
+        /// </summary>
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        /// <summary>
+        /// <para>If you want to change the master node to a MasterAI node, specify this parameter.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</description></item>
-        /// <item><description>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</description></item>
-        /// <item><description>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</description></item>
-        /// <item><description>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</description></item>
+        /// <item><description>This parameter and MasterCU cannot be specified at the same time.</description></item>
+        /// <item><description>Only specific regions and zones support changing the master node to a MasterAI node.</description></item>
+        /// <item><description>Only AnalyticDB for PostgreSQL V7.0 Basic Edition instances support MasterAI nodes.</description></item>
+        /// <item><description>You can view all valid values of this parameter on the specification change page for the master node.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -52,17 +66,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MasterAISpec { get; set; }
 
         /// <summary>
-        /// <para>The specifications of coordinator node resources. Valid values:</para>
+        /// <para>The master resources. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>2 CU</description></item>
-        /// <item><description>4 CU</description></item>
-        /// <item><description>8 CU</description></item>
-        /// <item><description>16 CU</description></item>
-        /// <item><description>32 CU</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You are charged for coordinator node resources of more than 8 compute units (CUs).</para>
+        /// <item><description>2 CU </description></item>
+        /// <item><description>4 CU </description></item>
+        /// <item><description>8 CU </description></item>
+        /// <item><description>16 CU </description></item>
+        /// <item><description>32 CU <remarks>
+        /// <para>Master resources greater than 8 CU incur additional fees.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>8 CU</para>
@@ -72,7 +86,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MasterCU { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>

@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the specified region, including instance IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// <para>The effective period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Immediate</b> (default): The upgrade takes effect immediately.</description></item>
+        /// <item><description><b>MaintainTime</b>: The upgrade takes effect during the O&amp;M window. For more information, see ModifyDBInstanceMaintainTime.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
+        /// </summary>
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        /// <summary>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -31,7 +48,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The minor version of the instance.</para>
+        /// <para>The minor version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.3.6.1-202112012048</para>
@@ -45,7 +62,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -55,7 +75,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -65,7 +85,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SwitchTime { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used and does not need to be specified.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

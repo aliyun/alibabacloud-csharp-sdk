@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Immediate</para>
+        /// </summary>
+        [NameInMap("EffectiveTime")]
+        [Validation(Required=false)]
+        public string EffectiveTime { get; set; }
+
+        /// <summary>
         /// <para>The specifications of segment nodes. For information about supported node specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</para>
         /// <remarks>
         /// <para>This parameter is supported only for elastic storage mode instances.</para>

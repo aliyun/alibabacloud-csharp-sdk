@@ -1,3 +1,9 @@
+2026-09-17 Version: 3.13.2
+- Update API ModifyMasterSpec: add request parameters EffectiveTime.
+- Update API UpgradeDBInstance: add request parameters EffectiveTime.
+- Update API UpgradeDBVersion: add request parameters EffectiveTime.
+
+
 2026-09-14 Version: 3.13.1
 - Update API GetSupabaseProject: add response parameters Body.AppliedIdleTimeHours.
 - Update API ModifySupabaseAutoScalePolicy: add request parameters IdleTimeHours.

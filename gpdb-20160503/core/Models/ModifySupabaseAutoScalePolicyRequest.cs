@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseAutoScalePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable <b>automatic start and stop</b>. Valid values:</para>
+        /// <para>Specifies whether to enable <b>auto start/stop</b>.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</description></item>
-        /// <item><description>false: Disabled. After this feature is disabled, the automatic start and stop feature of Supabase is turned off.</description></item>
+        /// <item><description>false: Disabled. After this feature is disabled, the auto start/stop feature of Supabase is turned off.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,6 +25,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public bool? AutoScale { get; set; }
 
+        /// <summary>
+        /// <para>The idle time before auto stop, in hours.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.5</para>
+        /// </summary>
         [NameInMap("IdleTimeHours")]
         [Validation(Required=false)]
         public string IdleTimeHours { get; set; }

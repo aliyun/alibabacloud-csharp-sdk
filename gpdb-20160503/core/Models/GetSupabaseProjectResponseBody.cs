@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The auto-pause duration in hours.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>
@@ -18,10 +20,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AppliedIdleTimeHours { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether <b>auto start and stop</b> is enabled. Valid values:</para>
+        /// <para>Specifies whether <b>auto start/stop</b> is enabled.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</description></item>
-        /// <item><description>false: Disabled. After this feature is disabled, the auto start and stop feature of Supabase is turned off.</description></item>
+        /// <item><description>false: Disabled. After this feature is disabled, the auto start/stop feature of Supabase is turned off.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBSecurityIpList { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard password. This parameter is not in use.</para>
+        /// <para>The Supabase Dashboard password (not currently used).</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxpassword</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard username. This parameter is not in use.</para>
+        /// <para>The Supabase Dashboard username (not currently used).</para>
         /// 
         /// <b>Example:</b>
         /// <para>username</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardUserName { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the cloud disk. Valid values:</para>
+        /// <para>The cloud disk performance level. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version.</para>
+        /// <para>The database DPI engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The elastic network interface (ENI) ID. The network interface controller (NIC) ID of the instance.</para>
+        /// <para>The elastic network interface controller (NIC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-xxxxxx</para>
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Lightweight { get; set; }
 
         /// <summary>
-        /// <para>The billing type. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>POSTPAY: pay-as-you-go.</para>
         /// </description></item>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The internal network connection string of the Supabase Dashboard.</para>
+        /// <para>The Supabase Dashboard internal network connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.11</para>
@@ -202,7 +205,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectSpec { get; set; }
 
         /// <summary>
-        /// <para>The public network connection string of the Supabase Dashboard.</para>
+        /// <para>The Supabase Dashboard public network connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.154.11.10</para>
@@ -235,7 +238,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses in the IP whitelist group, separated by commas (,).</para>
+        /// <para>The list of IP addresses in the IP whitelist group, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -255,7 +258,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage size. Unit: GB.</para>
+        /// <para>The storage size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
