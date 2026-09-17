@@ -20,6 +20,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The sort number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CustomOrderNum")]
+        [Validation(Required=false)]
+        public int? CustomOrderNum { get; set; }
+
+        /// <summary>
         /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>

@@ -15098,6 +15098,10 @@ namespace AlibabaCloud.SDK.Green20220926
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOrderNum))
+            {
+                query["CustomOrderNum"] = request.CustomOrderNum;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -15151,6 +15155,10 @@ namespace AlibabaCloud.SDK.Green20220926
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomOrderNum))
+            {
+                query["CustomOrderNum"] = request.CustomOrderNum;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
