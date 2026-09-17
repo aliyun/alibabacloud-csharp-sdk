@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Experiment created, execution started.</para>
+        /// <para>Experiment created, execution started</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The experiment record ID. For online experiments, the format is typically exp-run-{uuid32}. For offline experiments, the format may also be a standard UUID.</para>
+        /// <para>The experiment record ID. For online experiments, the ID is typically in the format exp-run-{uuid32}. For offline experiments, the ID may also be a standard UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-run-f6d419b0ed3d43a7b585948a55efc07b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The experiment record status. After creation, the status is typically pending.</para>
+        /// <para>The experiment record status. The value is typically pending after creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public GetEvaluatorSkillResponseBodySkill Skill { get; set; }
         public class GetEvaluatorSkillResponseBodySkill : TeaModel {
             /// <summary>
-            /// <para>The time when the skill was created. This value is a UNIX timestamp in seconds.</para>
+            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>读取链路上下文辅助评估</para>
+            /// <para>Read trace context to assist evaluation</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Trace 上下文读取</para>
+            /// <para>Trace Context Loader</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The list of skill files.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;主技能说明&quot;}]</para>
+            /// <para>[{&quot;name&quot;:&quot;SKILL.md&quot;,&quot;content&quot;:&quot;# Trace Context Loader&quot;,&quot;remark&quot;:&quot;Main skill description&quot;}]</para>
             /// </summary>
             [NameInMap("files")]
             [Validation(Required=false)]
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The file remarks.</para>
+                /// <para>The file remark.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>主技能说明</para>
+                /// <para>Main skill description</para>
                 /// </summary>
                 [NameInMap("remark")]
                 [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The time when the skill was last updated. This value is a UNIX timestamp in seconds.</para>
+            /// <para>The update time, in seconds-level UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -155,14 +155,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The list of skill versions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;首次发布版本&quot;}]</para>
+            /// <para>[{&quot;version&quot;:&quot;1782816000000&quot;,&quot;versionDescription&quot;:&quot;Initial release version&quot;}]</para>
             /// </summary>
             [NameInMap("versions")]
             [Validation(Required=false)]
             public List<GetEvaluatorSkillResponseBodySkillVersions> Versions { get; set; }
             public class GetEvaluatorSkillResponseBodySkillVersions : TeaModel {
                 /// <summary>
-                /// <para>The time when the version was created. This value is a UNIX timestamp in seconds.</para>
+                /// <para>The version creation time, in seconds-level UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782816000</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 /// <para>The version description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>首次发布版本</para>
+                /// <para>Initial release version</para>
                 /// </summary>
                 [NameInMap("versionDescription")]
                 [Validation(Required=false)]

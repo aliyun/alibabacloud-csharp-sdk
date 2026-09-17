@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The list of skill summaries.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace 上下文读取&quot;,&quot;enable&quot;:true}]</para>
+        /// <para>[{&quot;skillName&quot;:&quot;trace_context_loader&quot;,&quot;displayName&quot;:&quot;Trace Context Loader&quot;,&quot;enable&quot;:true}]</para>
         /// </summary>
         [NameInMap("skills")]
         [Validation(Required=false)]
         public List<ListEvaluatorSkillsResponseBodySkills> Skills { get; set; }
         public class ListEvaluatorSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The creation time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <c>createTime</c> string field.</para>
+            /// <para>The creation time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <c>createTime</c> string field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>读取链路上下文辅助评估</para>
+            /// <para>Reads trace context to assist evaluation</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Trace 上下文读取</para>
+            /// <para>Trace Context Loader</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The update time. This field is declared as int64 in CloudSpec, but the backend currently returns the StarOps <c>updateTime</c> string field.</para>
+            /// <para>The update time. Declared as int64 in CloudSpec. The backend currently returns the StarOps <c>updateTime</c> string field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>

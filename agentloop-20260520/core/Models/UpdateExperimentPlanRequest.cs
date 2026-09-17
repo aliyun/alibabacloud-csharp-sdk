@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of evaluators. Omitting this field indicates no modification. Passing an empty array clears the list.</para>
+        /// <para>The list of evaluators. Omitting this field means no modification. Passing an empty array clears the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;: &quot;Builtin.agent_task_completion&quot;}]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The list of experiment configurations. When specified, the entire list is replaced. The number of configurations must be 1 to 5.</para>
+        /// <para>The list of experiment configurations. When provided, the entire list is replaced. The number of configurations must be 1 to 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;label&quot;: &quot;A&quot;, &quot;name&quot;: &quot;baseline&quot;, &quot;modelName&quot;: &quot;qwen-max&quot;}]</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan finishes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and calls PreviewPipeline. The pipeline-processed results are then written together.</para>
+        /// <para>The name of the associated data processing pipeline. This parameter is optional. If not specified, the value is not updated. If an empty character string is specified, the association is dissociated. After association, when an experiment under this plan completes execution and writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace and invokes PreviewPipeline. The pipeline-processed results are then written together.</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]

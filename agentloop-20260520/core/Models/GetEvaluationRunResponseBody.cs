@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The end time of the data window for the run, in seconds-level UNIX timestamp.</para>
+        /// <para>The end time of the run data window, in seconds-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782902400</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? DataEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the data window for the run, in seconds-level UNIX timestamp.</para>
+        /// <para>The start time of the run data window, in seconds-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? DataStartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of progress details by evaluator.</para>
+        /// <para>The list of progress entries by evaluator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorName&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;totalCount&quot;:100,&quot;successCount&quot;:96,&quot;failedCount&quot;:4}]</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string EvaluatorName { get; set; }
 
             /// <summary>
-            /// <para>The number of failed entries for this evaluator.</para>
+            /// <para>The number of failed items for this evaluator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successful entries for this evaluator.</para>
+            /// <para>The number of successful items for this evaluator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>96</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries for this evaluator.</para>
+            /// <para>The total number of items for this evaluator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The evaluator configuration snapshot at the time the run was created, in JSON string format.</para>
+        /// <para>The snapshot of the evaluator configuration at the time the run was created, in JSON string format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;}]</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The number of failed entries.</para>
+        /// <para>The number of failed items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The number of successful entries.</para>
+        /// <para>The number of successful items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The total number of evaluation entries.</para>
+        /// <para>The total number of evaluation items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateExperimentRunRequest : TeaModel {
         /// <summary>
-        /// <para>The completion time, in millisecond-level UNIX timestamp.</para>
+        /// <para>The completion time. The value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784721811392</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? CompletedAt { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks. If not specified, the default value is 0.</para>
+        /// <para>The number of completed tasks. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? CompletedTasks { get; set; }
 
         /// <summary>
-        /// <para>The execution time, in millisecond-level UNIX timestamp.</para>
+        /// <para>The execution time. The value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784721775379</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentPlanId { get; set; }
 
         /// <summary>
-        /// <para>The number of failed tasks. If not specified, the default value is 0.</para>
+        /// <para>The number of failed tasks. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? FailedTasks { get; set; }
 
         /// <summary>
-        /// <para>The list of offline experiment configurations. Required when the plan type is offline. The number of items ranges from 1 to 5.</para>
+        /// <para>The list of offline experiment configurations. This parameter is required when the plan type is offline. You can specify 1 to 5 configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;label&quot;: &quot;experimentA&quot;, &quot;name&quot;: &quot;experimentA&quot;}]</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<OfflineExperimentConfig> OfflineExperiments { get; set; }
 
         /// <summary>
-        /// <para>The experiment record name. If not specified, the default value is the plan name plus a timestamp.</para>
+        /// <para>The experiment record name. If not specified, the default value is the plan name followed by a timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent_experiment 2026/07/22 20:02:55</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The initial status. If not specified, the default value is <c>pending</c>.</para>
+        /// <para>The initial status. Default value: <c>pending</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>

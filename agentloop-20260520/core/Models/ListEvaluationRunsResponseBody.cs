@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that no more pages exist.</para>
+        /// <para>The pagination token for the next page. An empty value indicates that no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJsYXN0SWQiOjEyMH0=</para>

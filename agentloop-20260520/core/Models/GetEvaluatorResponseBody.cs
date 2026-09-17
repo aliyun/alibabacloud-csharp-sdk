@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The configuration of the current version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;prompt&quot;:&quot;请评估任务完成度&quot;}</para>
+            /// <para>{&quot;prompt&quot;:&quot;Please evaluate the task completion&quot;}</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public Dictionary<string, object> Config { get; set; }
 
             /// <summary>
-            /// <para>The time when the evaluator was created. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The creation time, in seconds-level UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816000</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The evaluator description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>判断 Agent 是否完成用户任务</para>
+            /// <para>Determines whether the Agent has completed the user task</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>链路任务完成度</para>
+            /// <para>Trace task completion</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the evaluator was last updated. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The update time, in seconds-level UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1782816600</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<GetEvaluatorResponseBodyEvaluatorVersions> Versions { get; set; }
             public class GetEvaluatorResponseBodyEvaluatorVersions : TeaModel {
                 /// <summary>
-                /// <para>The time when the version was created. The value is a UNIX timestamp in seconds.</para>
+                /// <para>The version creation time, in seconds-level UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1782816000</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 /// <para>The version description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>初始版本</para>
+                /// <para>Initial version</para>
                 /// </summary>
                 [NameInMap("versionDescription")]
                 [Validation(Required=false)]

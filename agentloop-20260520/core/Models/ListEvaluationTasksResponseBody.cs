@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The evaluation task description.</para>
+            /// <para>The description of the evaluation task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>评估线上 Agent 链路任务完成度</para>
+            /// <para>Evaluate the task completion of the online Agent trace</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records. The total count is returned only on the first page. This value may be empty on subsequent pages.</para>
+        /// <para>The total number of records. The total count is calculated only on the first page. This value may be empty on subsequent pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>126</para>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy match by plan name.</para>
+        /// <para>Fuzzy matches experiment plans by plan name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>Filters by exact status.</para>
+        /// <para>Filters experiment plans by exact status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>

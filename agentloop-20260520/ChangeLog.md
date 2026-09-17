@@ -1,3 +1,6 @@
+2026-09-17 Version: 2.3.6
+- Generated csharp 2026-05-20 for AgentLoop.
+
 2026-09-14 Version: 2.3.5
 - Update API ListPipelines: add request parameters sinkName.
 - Update API ListPipelines: add response parameters Body.pipelines.$.sink.

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Experiment record updated successfully.</para>
+        /// <para>Experiment record updated successfully</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

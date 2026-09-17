@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateEvaluatorRequest : TeaModel {
         /// <summary>
-        /// <para>The list of annotation marks.</para>
+        /// <para>The list of annotation tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;__en&quot;]</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<string> Annotations { get; set; }
 
         /// <summary>
-        /// <para>The new version configuration. This parameter is typically required when <c>version</c> is specified.</para>
+        /// <para>The configuration of the new version. This parameter is typically required when <c>version</c> is specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;prompt&quot;:&quot;请更严格地评估任务完成度&quot;}</para>
+        /// <para>{&quot;prompt&quot;:&quot;Evaluate task completion more strictly&quot;}</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The evaluator description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>判断 Agent 是否完成用户任务</para>
+        /// <para>Determines whether the agent completes the user task</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>链路任务完成度</para>
+        /// <para>Task completion of the chain</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Properties { get; set; }
 
         /// <summary>
-        /// <para>The new version number. If specified, a new version is created.</para>
+        /// <para>The new version number. A new version is created when this parameter is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.0</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The version description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>优化评分说明</para>
+        /// <para>Optimized scoring instructions</para>
         /// </summary>
         [NameInMap("versionDescription")]
         [Validation(Required=false)]

@@ -944,7 +944,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
         /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
         /// </description>
         /// 
@@ -1038,7 +1038,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
         /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
         /// </description>
         /// 
@@ -1132,7 +1132,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
         /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
         /// </description>
         /// 
@@ -1157,7 +1157,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server verifies AgentSpace permissions, initializes evaluation result storage, checks the uniqueness of the task name, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// <para>Calls the CreateEvaluationTask operation to create an evaluation task under a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
         /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
         /// </description>
         /// 
@@ -1578,7 +1578,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1665,7 +1665,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1752,7 +1752,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1776,7 +1776,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. This operation defines the configuration for an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start the execution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1800,7 +1800,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// <para>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you must pass <c>offlineExperiments</c> (1 to 5).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1889,7 +1889,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// <para>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you must pass <c>offlineExperiments</c> (1 to 5).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1978,7 +1978,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// <para>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you must pass <c>offlineExperiments</c> (1 to 5).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2002,7 +2002,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// <para>Calls CreateExperimentRun to initiate an experiment run based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you must pass <c>offlineExperiments</c> (1 to 5).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2821,7 +2821,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an evaluation task.</para>
+        /// <para>Deletes a model evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2861,7 +2861,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an evaluation task.</para>
+        /// <para>Deletes a model evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2901,7 +2901,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an evaluation task.</para>
+        /// <para>Deletes a model evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2920,7 +2920,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an evaluation task.</para>
+        /// <para>Deletes a model evaluation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3342,7 +3342,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3387,7 +3387,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3432,7 +3432,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3456,7 +3456,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting a record does not delete the experiment plan to which it belongs.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6563,7 +6563,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the skill list of an evaluator.</para>
+        /// <para>Queries the list of skills for an evaluator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6617,7 +6617,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the skill list of an evaluator.</para>
+        /// <para>Queries the list of skills for an evaluator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6671,7 +6671,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the skill list of an evaluator.</para>
+        /// <para>Queries the list of skills for an evaluator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6690,7 +6690,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the skill list of an evaluator.</para>
+        /// <para>Queries the list of skills for an evaluator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6884,7 +6884,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6955,7 +6955,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7026,7 +7026,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7050,7 +7050,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination by using <c>offset</c>/<c>limit</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7445,7 +7445,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists CI/CD pipelines.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7511,7 +7511,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists CI/CD pipelines.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7577,7 +7577,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists CI/CD pipelines.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7596,7 +7596,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists CI/CD pipelines.</para>
+        /// <para>Queries a list of pipelines. Supports filtering by name, schedule type, and schedule status with cursor-based pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9896,7 +9896,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9977,7 +9977,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10058,7 +10058,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10082,7 +10082,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for an offline experiment: running → progress writeback → completed.</para>
         /// </description>
         /// 
         /// <param name="request">

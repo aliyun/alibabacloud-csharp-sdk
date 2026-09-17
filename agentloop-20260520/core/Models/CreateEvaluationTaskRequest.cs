@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The data source and execution configuration. When <c>dataType=trace</c>, the backend automatically populates the SLS Project and sets <c>storeName=logstore-tracing</c>. For trace-level evaluation, set <c>dataScope=trace</c>.</para>
+        /// <para>The data source and execution configuration. When <c>dataType=trace</c>, the backend automatically populates the SLS Project and <c>storeName=logstore-tracing</c>. For trace-level Trace evaluation, set <c>dataScope=trace</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dataScope&quot;:&quot;trace&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DataFilter { get; set; }
 
         /// <summary>
-        /// <para>The data source type of the evaluation target. Use <c>trace</c> for trace-based evaluation.</para>
+        /// <para>The data source type of the evaluation object. Use <c>trace</c> for trace-based evaluation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task description.</para>
+        /// <para>The description of the evaluation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Evaluate the task completion of online Agent traces</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The evaluator configuration list. This parameter cannot be empty. Within the same task, <c>evaluatorRef</c> takes precedence as the unique identifier. Otherwise, <c>name</c> is used.</para>
+        /// <para>The list of evaluator configurations. This parameter cannot be empty. Within the same task, <c>evaluatorRef</c> takes precedence. Otherwise, <c>name</c> is used as the unique identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;resultName&quot;:&quot;agent_task_completion&quot;,&quot;resultType&quot;:&quot;score&quot;,&quot;variableMapping&quot;:{&quot;input&quot;:&quot;trace.input&quot;,&quot;output&quot;:&quot;trace.output&quot;,&quot;agent_trajectory&quot;:&quot;trace.agent_trajectory&quot;}}]</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The task execution strategies. Supports a JSON object or JSON string. <c>backfill</c> is used for historical data backfill, and <c>continuous</c> is used for continuous evaluation of new data.</para>
+        /// <para>The task execution strategies. Supports a JSON object or JSON string. <c>backfill</c> is used for historical data backfill. <c>continuous</c> is used for continuous evaluation of new data.</para>
         /// </summary>
         [NameInMap("runStrategies")]
         [Validation(Required=false)]
         public RunStrategies RunStrategies { get; set; }
 
         /// <summary>
-        /// <para>The task tag key-value pairs. You do not need to specify this parameter by default. Specify this parameter only when you need to associate or filter tasks by business tags.</para>
+        /// <para>The task tag key-value pairs. No tags need to be specified by default. Specify tags only when you need to associate or filter tasks by business tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;env&quot;:&quot;prod&quot;,&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;planId&quot;:&quot;plan-20260703&quot;}</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. This query parameter is declared in CloudSpec, but the backend does not currently perform idempotency comparison.</para>
+        /// <para>The idempotency token. CloudSpec declares this query parameter, but the backend does not currently perform idempotency comparison.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

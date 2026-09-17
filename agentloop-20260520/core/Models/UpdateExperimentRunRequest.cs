@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateExperimentRunRequest : TeaModel {
         /// <summary>
-        /// <para>The experiment completion time. A millisecond-level UNIX timestamp.</para>
+        /// <para>The experiment completion time. This value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784719989371</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? CompletedTasks { get; set; }
 
         /// <summary>
-        /// <para>The experiment execution time. A millisecond-level UNIX timestamp.</para>
+        /// <para>The experiment execution time. This value is a millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1784719439255</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The experiment record status. Set to cancelled to cancel execution.</para>
+        /// <para>The experiment record status. Set this parameter to cancelled to cancel the execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>

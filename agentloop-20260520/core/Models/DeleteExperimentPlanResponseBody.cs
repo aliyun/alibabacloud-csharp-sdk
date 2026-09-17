@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The deletion result. The value is deleted if the operation is successful.</para>
+        /// <para>The deletion result. The value is deleted if the operation succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deleted</para>

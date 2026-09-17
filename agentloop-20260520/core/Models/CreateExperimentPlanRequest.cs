@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateExperimentPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated dataset. If this parameter is not specified, the execution phase processes in simple mode.</para>
+        /// <para>The ID of the associated dataset. If not specified, the execution phase processes in simple mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rca_benckmark_eval</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ExperimentType { get; set; }
 
         /// <summary>
-        /// <para>The list of experiment configurations. A maximum of five configurations are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one configuration is required.</para>
+        /// <para>The list of experiment configurations. A maximum of 5 entries are supported. For offline experiments, this parameter can be omitted or set to an empty array. For online experiments, at least one entry is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
-        /// <para>The name of the associated data processing pipeline (optional). After association, when the experiment execution under this plan writes results to the experiment result Logstore, the system filters by the traceId of the experiment trace, calls PreviewPipeline, and writes the pipeline-processed results together.</para>
+        /// <para>The name of the associated data processing pipeline (optional). After association, when experiment runs under this plan finish writing results to the experiment result Logstore, the system filters by the traceId of the experiment trace, calls PreviewPipeline, and writes the pipeline-processed results together.</para>
         /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]
         public string PipelineName { get; set; }
 
         /// <summary>
-        /// <para>The experiment plan name. The name must be unique within the same AgentSpace under the same account.</para>
+        /// <para>The name of the experiment plan. The name must be unique within the same AgentSpace and account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string PlanName { get; set; }
 
         /// <summary>
-        /// <para>The custom query SQL clause in partial dataset mode. This parameter can be used when <c>selectedItemIds</c> is empty.</para>
+        /// <para>The custom query SQL clause for partial dataset mode. This parameter can be used when <c>selectedItemIds</c> is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status=\&quot;OK\&quot;</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string QuerySql { get; set; }
 
         /// <summary>
-        /// <para>The list of selected data item IDs in partial dataset mode. Use this parameter together with <c>datasetId</c>.</para>
+        /// <para>The list of selected data item IDs for partial dataset mode. This parameter must be used together with <c>datasetId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;, &quot;019f1729-be9b-7769-a006-8e98023ad7ad&quot;]</para>
