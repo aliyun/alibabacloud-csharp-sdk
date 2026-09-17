@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>A reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
+        /// <para>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

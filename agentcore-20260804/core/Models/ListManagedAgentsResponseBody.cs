@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ConnectorServiceAccountKey { get; set; }
 
                     /// <summary>
-                    /// <para>The Connector Key name populated during queries. This parameter is not used as a binding reference during writes.</para>
+                    /// <para>The Connector Key name populated during queries. This value is not used as a binding reference during writes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>my-connector-key</para>
@@ -168,15 +168,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>The status of the managed agent. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating: Being created.</description></item>
-            /// <item><description>Failed: Failed.</description></item>
-            /// <item><description>Running: Running.</description></item>
-            /// <item><description>Updating: Being updated.</description></item>
-            /// <item><description>Deleted: Deleted.</description></item>
-            /// <item><description>Deleting: Being deleted.</description></item>
-            /// </list>
+            /// <para>The status of the managed agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -228,7 +220,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page. An empty value indicates that the last page has been reached.</para>
+        /// <para>The token for the next page. An empty value indicates the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>next-token-1</para>

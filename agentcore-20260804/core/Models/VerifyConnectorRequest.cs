@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyConnectorRequestBody Body { get; set; }
         public class VerifyConnectorRequestBody : TeaModel {
             /// <summary>
-            /// <para>A JSON string. qodercli uses apiKey. This parameter is used only for validation and is not persisted.</para>
+            /// <para>The Connector configuration JSON string to validate. Set site to global or cn. The serviceAccountKeys field must contain at least one item with a serviceAccountKey.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

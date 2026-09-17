@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateManagedAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned if the request is successful.</para>
+        /// <para>The business status code. The value is SUCCESS when the operation succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The environment configuration.</para>
+            /// <para>The environment configuration information.</para>
             /// </summary>
             [NameInMap("environment")]
             [Validation(Required=false)]
@@ -137,21 +137,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</para>
+            /// <para>The agent harness configuration.</para>
             /// </summary>
             [NameInMap("harness")]
             [Validation(Required=false)]
             public UpdateManagedAgentResponseBodyDataHarness Harness { get; set; }
             public class UpdateManagedAgentResponseBodyDataHarness : TeaModel {
                 /// <summary>
-                /// <para>The Connector binding configuration for the qodercli harness.</para>
+                /// <para>The harness configuration.</para>
                 /// </summary>
                 [NameInMap("configuration")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentResponseBodyDataHarnessConfiguration Configuration { get; set; }
                 public class UpdateManagedAgentResponseBodyDataHarnessConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</para>
+                    /// <para>The connector service account key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-xxxx</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ConnectorServiceAccountKey { get; set; }
 
                     /// <summary>
-                    /// <para>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</para>
+                    /// <para>The connector service account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>my-connector-key</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</para>
+                /// <para>The harness type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qodercli</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public long? LatestSpecVersion { get; set; }
 
             /// <summary>
-            /// <para>The status of the latest version.</para>
+            /// <para>The latest version status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>succeeded</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string LatestVersionStatus { get; set; }
 
             /// <summary>
-            /// <para>The model configuration.</para>
+            /// <para>The model configuration information.</para>
             /// </summary>
             [NameInMap("model")]
             [Validation(Required=false)]
@@ -241,11 +241,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// <para>The model token quota configuration and the quota usage status for the current period. This field is empty if no quota is configured.</para>
+                /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentResponseBodyDataModelQuota Quota { get; set; }
                 public class UpdateManagedAgentResponseBodyDataModelQuota : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -254,6 +259,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
+                    /// <para>The quota limit type. Currently, only token is supported.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
                     /// </summary>
@@ -262,6 +269,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the quota has been exceeded in the current period. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -270,6 +279,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? OverLimit { get; set; }
 
                     /// <summary>
+                    /// <para>The quota statistical period. The value day indicates a daily period, and the value month indicates a monthly period.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
                     /// </summary>
@@ -278,6 +289,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
+                    /// <para>The gateway quota rule status. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVE</para>
                     /// </summary>
@@ -286,6 +299,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string RuleStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of tokens that can be consumed within a single period.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
                     /// </summary>
@@ -294,6 +309,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public long? UsageLimit { get; set; }
 
                     /// <summary>
+                    /// <para>The number of tokens consumed in the current period. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>12345</para>
                     /// </summary>
@@ -316,7 +333,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network configuration.</para>
+            /// <para>The network configuration information.</para>
             /// </summary>
             [NameInMap("network")]
             [Validation(Required=false)]
@@ -330,7 +347,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentResponseBodyDataNetworkAccessInternet AccessInternet { get; set; }
                 public class UpdateManagedAgentResponseBodyDataNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether public network access is allowed.</para>
+                    /// <para>Specifies whether to allow public network access.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -349,7 +366,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentResponseBodyDataNetworkAccessVpc AccessVpc { get; set; }
                 public class UpdateManagedAgentResponseBodyDataNetworkAccessVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether VPC access is allowed.</para>
+                    /// <para>Specifies whether to allow VPC access.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -370,28 +387,37 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<UpdateManagedAgentResponseBodyDataOssMounts> OssMounts { get; set; }
             public class UpdateManagedAgentResponseBodyDataOssMounts : TeaModel {
                 /// <summary>
-                /// <para>The OSS bucket name. Each mount item is validated as required by the backend.</para>
+                /// <para>The OSS bucket name. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bucket-001</para>
                 /// </summary>
                 [NameInMap("bucketName")]
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The absolute mount path in the container. Each mount item is validated as required by the backend.</para>
+                /// <para>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/mnt/oss/datasets</para>
                 /// </summary>
                 [NameInMap("mountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</para>
+                /// <para>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>datasets</para>
                 /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to mount as read-only. Default value: false.</para>
+                /// <para>Specifies whether to mount in read-only mode. Default value: false.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
@@ -410,7 +436,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The runtime configuration.</para>
+            /// <para>The runtime configuration information.</para>
             /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
@@ -438,42 +464,54 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The Sandbox auto scaling and session configuration.</para>
+                /// <para>The sandbox auto scaling and session configuration.</para>
                 /// </summary>
                 [NameInMap("hpa")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentResponseBodyDataRuntimeHpa Hpa { get; set; }
                 public class UpdateManagedAgentResponseBodyDataRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</para>
+                    /// <para>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</para>
+                    /// <para>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
                     /// </summary>
                     [NameInMap("maxConcurrentSessionsPerSandbox")]
                     [Validation(Required=false)]
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</para>
+                    /// <para>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
                     /// </summary>
                     [NameInMap("maxSandboxCount")]
                     [Validation(Required=false)]
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of Sandboxes. Required when HPA is enabled.</para>
+                    /// <para>The minimum number of sandboxes. This parameter is required when HPA is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("minSandboxCount")]
                     [Validation(Required=false)]
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</para>
+                    /// <para>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3600</para>
                     /// </summary>
                     [NameInMap("sessionTtlSeconds")]
                     [Validation(Required=false)]
@@ -490,7 +528,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentResponseBodyDataRuntimeSessionPolicy SessionPolicy { get; set; }
                 public class UpdateManagedAgentResponseBodyDataRuntimeSessionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
+                    /// <para>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-Session-Id</para>
@@ -515,7 +553,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The instance count of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually exist are returned. A missing key indicates a count of 0. This field is a dynamic map and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether abnormal instances exist.</para>
+            /// <para>The number of managed agent instances grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), FAILED (runtime failure). Only phases that actually occur are returned. Missing keys should be treated as 0. This field is a dynamic mapping, and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether any abnormal instances exist.</para>
             /// </summary>
             [NameInMap("sandboxPhaseCounts")]
             [Validation(Required=false)]
@@ -664,7 +702,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The update time in RFC 3339 format.</para>
+            /// <para>The time when the managed agent was last updated, in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01T00:00:00Z</para>
@@ -696,7 +734,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The result message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The scope of resources to which the credential can be applied.</para>
+            /// <para>The resource scope of the credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records per page that took effect for this query.</para>
+        /// <para>The maximum number of records per page that takes effect for this query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The runtime harness of the managed agent. Valid values: qwenpaw and qodercli.</para>
+            /// <para>The agent harness configuration.</para>
             /// </summary>
             [NameInMap("harness")]
             [Validation(Required=false)]
             public UpdateManagedAgentRequestBodyHarness Harness { get; set; }
             public class UpdateManagedAgentRequestBodyHarness : TeaModel {
                 /// <summary>
-                /// <para>The Connector binding configuration for the qodercli harness.</para>
+                /// <para>The harness configuration.</para>
                 /// </summary>
                 [NameInMap("configuration")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentRequestBodyHarnessConfiguration Configuration { get; set; }
                 public class UpdateManagedAgentRequestBodyHarnessConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</para>
+                    /// <para>The connector service account key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-xxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ConnectorServiceAccountKey { get; set; }
 
                     /// <summary>
-                    /// <para>The Connector Key name that is populated during queries. This value is not used as a binding reference during writes.</para>
+                    /// <para>The connector service account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>my-connector-key</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The type of the runtime harness. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</para>
+                /// <para>The harness type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qodercli</para>
@@ -172,11 +172,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// <para>The model token quota configuration. If this parameter is not specified, no quota is configured.</para>
+                /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentRequestBodyModelQuota Quota { get; set; }
                 public class UpdateManagedAgentRequestBodyModelQuota : TeaModel {
                     /// <summary>
+                    /// <para>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the token quota is disabled and existing quota rules are deleted.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -185,6 +190,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
+                    /// <para>The quota limit type. This parameter is required by backend validation when the quota is enabled. Fixed value: token.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
                     /// </summary>
@@ -193,6 +200,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
+                    /// <para>The quota statistical period. This parameter is required by backend validation when the quota is enabled. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>day: daily.</description></item>
+                    /// <item><description>month: monthly.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
                     /// </summary>
@@ -201,6 +214,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of tokens that can be consumed within a single period. This parameter is required by backend validation when the quota is enabled. The value must be greater than 0.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
                     /// </summary>
@@ -237,7 +252,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentRequestBodyNetworkAccessInternet AccessInternet { get; set; }
                 public class UpdateManagedAgentRequestBodyNetworkAccessInternet : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether public network access is allowed.</para>
+                    /// <para>Specifies whether to allow public network access.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -256,7 +271,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentRequestBodyNetworkAccessVpc AccessVpc { get; set; }
                 public class UpdateManagedAgentRequestBodyNetworkAccessVpc : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether VPC access is allowed.</para>
+                    /// <para>Specifies whether to allow VPC access.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -270,35 +285,44 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The OSS mount list. A maximum of 10 items are supported. Pass an empty array to clear existing mounts.</para>
+            /// <para>The list of OSS mounts. A maximum of 10 entries are supported. Pass an empty array to clear existing mounts.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
             public List<UpdateManagedAgentRequestBodyOssMounts> OssMounts { get; set; }
             public class UpdateManagedAgentRequestBodyOssMounts : TeaModel {
                 /// <summary>
-                /// <para>The OSS bucket name. Each mount item is validated as required by the backend.</para>
+                /// <para>The OSS bucket name. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bucket-001</para>
                 /// </summary>
                 [NameInMap("bucketName")]
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The absolute mount path in the container. Each mount item is validated as required by the backend.</para>
+                /// <para>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/mnt/oss/datasets</para>
                 /// </summary>
                 [NameInMap("mountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</para>
+                /// <para>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>datasets</para>
                 /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to mount as read-only. Default value: false.</para>
+                /// <para>Specifies whether to mount in read-only mode. Default value: false.</para>
                 /// </summary>
                 [NameInMap("readOnly")]
                 [Validation(Required=false)]
@@ -335,42 +359,54 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The Sandbox auto scaling and session configuration.</para>
+                /// <para>The sandbox auto scaling and session configuration.</para>
                 /// </summary>
                 [NameInMap("hpa")]
                 [Validation(Required=false)]
                 public UpdateManagedAgentRequestBodyRuntimeHpa Hpa { get; set; }
                 public class UpdateManagedAgentRequestBodyRuntimeHpa : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable auto scaling. Required when hpa is present as validated by the backend.</para>
+                    /// <para>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is specified.</para>
                     /// </summary>
                     [NameInMap("enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of active sessions per Sandbox. Required when hpa is present as validated by the backend.</para>
+                    /// <para>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
                     /// </summary>
                     [NameInMap("maxConcurrentSessionsPerSandbox")]
                     [Validation(Required=false)]
                     public int? MaxConcurrentSessionsPerSandbox { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of Sandboxes. Required when HPA is enabled and must be no less than the minimum value.</para>
+                    /// <para>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
                     /// </summary>
                     [NameInMap("maxSandboxCount")]
                     [Validation(Required=false)]
                     public int? MaxSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum number of Sandboxes. Required when HPA is enabled.</para>
+                    /// <para>The minimum number of sandboxes. This parameter is required when HPA is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("minSandboxCount")]
                     [Validation(Required=false)]
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The session reclamation time after inactivity, in seconds. Required when hpa is present as validated by the backend.</para>
+                    /// <para>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3600</para>
                     /// </summary>
                     [NameInMap("sessionTtlSeconds")]
                     [Validation(Required=false)]
@@ -387,7 +423,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public UpdateManagedAgentRequestBodyRuntimeSessionPolicy SessionPolicy { get; set; }
                 public class UpdateManagedAgentRequestBodyRuntimeSessionPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
+                    /// <para>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>X-Session-Id</para>
@@ -546,7 +582,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The reserved idempotency token. The backend does not guarantee idempotence in the current phase.</para>
+        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

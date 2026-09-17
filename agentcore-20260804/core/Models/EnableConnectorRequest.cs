@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public EnableConnectorRequestBody Body { get; set; }
         public class EnableConnectorRequestBody : TeaModel {
             /// <summary>
-            /// <para>A JSON string. qodercli uses apiKey. This field is write-only and is not returned in responses.</para>
+            /// <para>The Connector configuration JSON string. Set site to global or cn. apiKey is required. serviceAccountKeys must contain at least one named service account key. organizationId is optional.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

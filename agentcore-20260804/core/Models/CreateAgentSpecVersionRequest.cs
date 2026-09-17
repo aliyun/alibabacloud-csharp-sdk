@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateAgentSpecVersionRequestBody Body { get; set; }
         public class CreateAgentSpecVersionRequestBody : TeaModel {
             /// <summary>
-            /// <para>The existing version on which to base the draft.</para>
+            /// <para>The existing version on which the draft is based.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string BasedOnVersion { get; set; }
 
             /// <summary>
-            /// <para>The version number for the draft. If not specified, the version number is automatically incremented.</para>
+            /// <para>The version number of the draft. If this parameter is not specified, the version number is automatically incremented.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>

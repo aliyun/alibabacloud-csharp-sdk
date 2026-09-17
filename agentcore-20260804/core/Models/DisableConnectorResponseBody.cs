@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>A JSON string. For qodercli: {&quot;site&quot;:&quot;global|cn&quot;,&quot;organizationId&quot;:&quot;...&quot;,&quot;apiKey&quot;:&quot;...&quot;,&quot;serviceAccountKeys&quot;:[{&quot;id&quot;:&quot;ckey-xxx&quot;,&quot;name&quot;:&quot;default&quot;,&quot;serviceAccountKey&quot;:&quot;...&quot;}]}. This field is empty when the Connector is not enabled.</para>
+            /// <para>The Connector configuration JSON string before the Connector was disabled. This is sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The Connector name.</para>
+            /// <para>The Connector name. Currently, the value is qodercli.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qodercli</para>

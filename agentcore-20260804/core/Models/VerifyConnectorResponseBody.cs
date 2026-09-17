@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public VerifyConnectorResponseBodyData Data { get; set; }
         public class VerifyConnectorResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of Service Account Key names that failed validation. Each element is a key name string. This list is empty if all keys pass validation.</para>
+            /// <para>The list of Service Account Key labels that failed validation or returned indeterminate results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public List<string> InvalidServiceAccountKeys { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the credentials are valid.</para>
+            /// <para>Indicates whether all validated Service Account Keys are valid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

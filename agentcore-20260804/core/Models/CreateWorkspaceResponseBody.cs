@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateWorkspaceResponseBodyData Data { get; set; }
         public class CreateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AI Registry namespace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</para>
+            /// <para>The AI Registry namespace ID. This value is returned after the related resources are bound. It may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespace-0123456789abcdef</para>
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The OSS storage authorization status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AUTHORIZED</para>
             /// </summary>
             [NameInMap("authorizationStatus")]
             [Validation(Required=false)]
@@ -48,13 +51,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The name of the private OSS bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bucket-001</para>
             /// </summary>
             [NameInMap("bucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The CloudMonitor workspace ID. This value is returned after the related resource binding is complete and may be empty during initialization.</para>
+            /// <para>The CloudMonitor workspace ID. This value is returned after the related resources are bound. It may be empty during initialization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms-ws-0123456789abcdef</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CmsWorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created, in ISO-8601 format.</para>
+            /// <para>The time when the workspace was created, in ISO 8601 format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -166,7 +172,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal conditions.</para>
+            /// <para>The supplementary reason for the current workspace status. This value is used to display the specific reason when initialization fails or authorization is pending. It may be empty under normal conditions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Waiting for OSS RAM authorization</para>
@@ -180,6 +186,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The storage type of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PRIVATE</para>
             /// </summary>
             [NameInMap("storageType")]
             [Validation(Required=false)]

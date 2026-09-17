@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListConnectorModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of a service account key. This parameter is required when multiple keys exist. You can leave this parameter empty if only one key exists.</para>
+        /// <para>The Connector Key ID. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ckey-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string ConnectorKeyId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The next page token. This parameter is not supported in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>

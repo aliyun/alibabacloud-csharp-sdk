@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string AgentCoreUserId { get; set; }
 
             /// <summary>
-            /// <para>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</para>
+            /// <para>The authentication method of the user. password indicates local password authentication of the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user. The display name must be 1 to 32 characters in length.</para>
+            /// <para>The display name of the user. The name is 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>John Smith</para>
+            /// <para>John Doe</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The email address of the user. The email address can be up to 256 characters in length.</para>
+            /// <para>The email address of the user. The address can be up to 256 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:user-01@example.com">user-01@example.com</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The username must be 1 to 32 characters in length.</para>
+            /// <para>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The username is 1 to 32 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-01</para>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the user. The remarks can be up to 1024 characters in length.</para>
+            /// <para>The remarks of the user. The remarks can be up to 1,024 characters in length.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Agent operations team member</para>
+            /// <para>Member of the agent operations team</para>
             /// </summary>
             [NameInMap("note")]
             [Validation(Required=false)]
@@ -107,7 +107,15 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, DeleteFailed.</para>
+            /// <para>The user status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Creating</description></item>
+            /// <item><description>Active</description></item>
+            /// <item><description>Updating</description></item>
+            /// <item><description>Deleting</description></item>
+            /// <item><description>Failed</description></item>
+            /// <item><description>DeleteFailed</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -117,7 +125,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>

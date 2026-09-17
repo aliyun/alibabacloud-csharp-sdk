@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListAgentIMChannelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of SUCCESS indicates success.</para>
+        /// <para>The business status code. The value SUCCESS indicates a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 indicates success.</para>
+        /// <para>The HTTP status code. The value 200 indicates a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The IM channel list.</para>
+        /// <para>The list of IM channels.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</para>
+            /// <para>The channel credential summary. Only non-sensitive fields and the names of configured secret fields are returned. Secret values are not returned.</para>
             /// </summary>
             [NameInMap("credentialSummary")]
             [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public access URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -157,12 +157,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <summary>
             /// <para>The IM channel status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATING: being created.</description></item>
-            /// <item><description>READY: ready.</description></item>
-            /// <item><description>UPDATING: being updated.</description></item>
-            /// <item><description>FAILED: failed.</description></item>
-            /// <item><description>DELETING: being deleted.</description></item>
-            /// <item><description>DELETE_FAILED: deletion failed.</description></item>
+            /// <item><description>CREATING: The channel is being created.</description></item>
+            /// <item><description>READY: The channel is ready.</description></item>
+            /// <item><description>UPDATING: The channel is being updated.</description></item>
+            /// <item><description>FAILED: The channel creation or update failed.</description></item>
+            /// <item><description>DELETING: The channel is being deleted.</description></item>
+            /// <item><description>DELETE_FAILED: The channel deletion failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that match the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

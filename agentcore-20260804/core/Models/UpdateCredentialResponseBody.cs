@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CredentialId { get; set; }
 
             /// <summary>
-            /// <para>The masked credential content. If credentialType is apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
+            /// <para>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;apiKey&quot;:&quot;****************&quot;}</para>

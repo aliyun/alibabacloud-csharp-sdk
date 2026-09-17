@@ -849,13 +849,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -907,13 +907,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -965,13 +965,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -990,13 +990,13 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Request description</h2>
-        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must be no draft currently being edited.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1363,12 +1363,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1414,12 +1414,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1465,12 +1465,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1489,12 +1489,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// <para>Creates a bootstrap token and CMS configuration required for connecting a specified external agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1513,7 +1513,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1565,7 +1565,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1617,7 +1617,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1636,7 +1636,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can track the progress by querying the status through GetIdentityProvider.</para>
+        /// <para>Binds an external identity provider to a specified workspace for single sign-on and organization member synchronization. Each workspace can be bound to at most one external identity provider. The binding is an asynchronous operation. After the API returns, you can call GetIdentityProvider to query the status and track the progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2774,7 +2774,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. Use <c>Enabled</c> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2837,7 +2837,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. Use <c>Enabled</c> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2900,7 +2900,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. Use <c>Enabled</c> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -2924,7 +2924,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <c>Initializing</c> to <c>Initialized</c> within the same transaction. Use <c>Enabled</c> in the network configuration to specify whether to enable VPC networking. If VPC networking is enabled, you must provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -5139,12 +5139,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a Connector.</para>
+        /// <para>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a specified Connector in a workspace.</para>
+        /// <para>Disables a Connector in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5184,12 +5184,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a Connector.</para>
+        /// <para>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a specified Connector in a workspace.</para>
+        /// <para>Disables a Connector in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5229,12 +5229,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a Connector.</para>
+        /// <para>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a specified Connector in a workspace.</para>
+        /// <para>Disables a Connector in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5253,12 +5253,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a Connector.</para>
+        /// <para>Disables a QoderCLI Connector in a specified workspace. The Connector can be disabled only when no Agent is using it. After the Connector is disabled, the Connector and its Service Account Key configuration are removed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables a specified Connector in a workspace.</para>
+        /// <para>Disables a Connector in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5277,7 +5277,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5329,7 +5329,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5381,7 +5381,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5406,7 +5406,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5573,12 +5573,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a Connector.</para>
+        /// <para>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5630,12 +5630,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a Connector.</para>
+        /// <para>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5687,12 +5687,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a Connector.</para>
+        /// <para>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5711,12 +5711,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a Connector.</para>
+        /// <para>Enables a QoderCLI Connector in a specified workspace. The request must include the site, API key, and at least one service account key. The service validates all account keys before saving the configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables a Connector in a specified workspace. Credential verification is required before enabling.</para>
+        /// <para>Enables a Connector in a specified workspace. Credential verification is required before the Connector can be enabled.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8617,7 +8617,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
+        /// <para>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8657,7 +8657,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
+        /// <para>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8697,7 +8697,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
+        /// <para>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8716,7 +8716,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified user in a workspace. Returns an error if the user does not exist.</para>
+        /// <para>Queries the details of a specified user in a specified workspace. Returns an error if the user does not exist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8869,6 +8869,172 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetWorkspaceWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ACR RAM authorization URL for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAcrRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAcrRamAuthorizeUrlResponse
+        /// </returns>
+        public GetWorkspaceAcrRamAuthorizeUrlResponse GetWorkspaceAcrRamAuthorizeUrlWithOptions(string workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                query["acrInstanceId"] = request.AcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repository))
+            {
+                query["repository"] = request.Repository;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceAcrRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/acr/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceAcrRamAuthorizeUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ACR RAM authorization URL for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAcrRamAuthorizeUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAcrRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetWorkspaceAcrRamAuthorizeUrlResponse> GetWorkspaceAcrRamAuthorizeUrlWithOptionsAsync(string workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                query["acrInstanceId"] = request.AcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repository))
+            {
+                query["repository"] = request.Repository;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceAcrRamAuthorizeUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/acr/authorize",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceAcrRamAuthorizeUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ACR RAM authorization URL for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAcrRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAcrRamAuthorizeUrlResponse
+        /// </returns>
+        public GetWorkspaceAcrRamAuthorizeUrlResponse GetWorkspaceAcrRamAuthorizeUrl(string workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWorkspaceAcrRamAuthorizeUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the ACR RAM authorization URL for a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. If no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. If a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. The acrInstanceId, namespace, and repository parameters are required. The region and account are derived from the workspace context. The response contains the backend-resolved role and the authorization URL for the target repository. This operation does not create ACR or Agent execution versions or deliver runtime configurations. After authorization is complete, you can call Verify, and then create or update an Agent without calling a separate Ensure operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceAcrRamAuthorizeUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceAcrRamAuthorizeUrlResponse
+        /// </returns>
+        public async Task<GetWorkspaceAcrRamAuthorizeUrlResponse> GetWorkspaceAcrRamAuthorizeUrlAsync(string workspaceId, GetWorkspaceAcrRamAuthorizeUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWorkspaceAcrRamAuthorizeUrlWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9367,12 +9533,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9430,12 +9596,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9493,12 +9659,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9517,12 +9683,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// <para>Queries the list of IM channels for a specified agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9759,7 +9925,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9811,7 +9977,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9863,7 +10029,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9882,7 +10048,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs by using agentIds. The response includes the membership information between each agent and its teams, such as the team ID, team name, and the role that the agent assumes in the team.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9901,12 +10067,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of models for a connector.</para>
+        /// <para>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// <para>Queries the list of available models for a specified Connector. Pagination is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9960,12 +10126,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of models for a connector.</para>
+        /// <para>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// <para>Queries the list of available models for a specified Connector. Pagination is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10019,12 +10185,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of models for a connector.</para>
+        /// <para>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// <para>Queries the list of available models for a specified Connector. Pagination is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10043,12 +10209,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of models for a connector.</para>
+        /// <para>Queries the available official models and enterprise models for an enabled QoderCLI Connector. The service retrieves models in real time by using the saved API key and organization ID, and deduplicates the results by model ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of available models for a specified connector. Pagination is supported.</para>
+        /// <para>Queries the list of available models for a specified Connector. Pagination is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10067,7 +10233,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectors.</para>
+        /// <para>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10122,7 +10288,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectors.</para>
+        /// <para>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10177,7 +10343,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectors.</para>
+        /// <para>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10201,7 +10367,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connectors.</para>
+        /// <para>Queries the list of connectors supported by a specified workspace, including their status, number of bound agents, and configurations. The current version returns the QoderCLI connector.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10225,12 +10391,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// <para>Queries credentials in a workspace with paging. Supports filtering by type and name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10292,12 +10458,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// <para>Queries credentials in a workspace with paging. Supports filtering by type and name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10359,12 +10525,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// <para>Queries credentials in a workspace with paging. Supports filtering by type and name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10383,12 +10549,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries credentials in a specified workspace with paging. Filter by type using credentialType, perform a fuzzy match on credential names using nameLike, specify the maximum number of records per page using maxResults, and retrieve the next page using nextToken. If maxResults is not specified, the server returns 10 records by default.</para>
+        /// <para>Queries credentials in a specified workspace with paging. Use credentialType to filter by type, nameLike to perform a fuzzy match on credential names, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of credentials in a workspace with paging. Supports filtering by type and name.</para>
+        /// <para>Queries credentials in a workspace with paging. Supports filtering by type and name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10708,7 +10874,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
+        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10763,7 +10929,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
+        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10818,7 +10984,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
+        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10842,7 +11008,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Performs a paged query for the list of managed agents in a specified workspace. Returns summary information for each agent, including the identity, name, status, template, and specifications. Use paging parameters to navigate through results.</para>
+        /// <para>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11987,12 +12153,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Sandbox sessions.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12042,12 +12208,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Sandbox sessions.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12097,12 +12263,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Sandbox sessions.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12121,12 +12287,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of Sandbox sessions.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent by paging, and returns the session source and external channel type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of active sessions in the Sandbox of a specified managed agent.</para>
+        /// <para>Queries the list of active sessions in the sandbox of a specified managed agent.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12145,12 +12311,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandboxes.</para>
+        /// <para>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// <para>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12208,12 +12374,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandboxes.</para>
+        /// <para>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// <para>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12271,12 +12437,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandboxes.</para>
+        /// <para>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// <para>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12295,12 +12461,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sandboxes.</para>
+        /// <para>Queries the list of sandboxes for a managed agent in a specified workspace. You can filter results by sandbox ID and active session ID fragments.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the sandbox list of a specified managed agent. The searchText parameter performs a fuzzy match on Sandbox ID fragments, and the sessionId parameter performs a fuzzy match on currently active Session ID fragments. Both parameters can be specified simultaneously and are combined with AND logic.</para>
+        /// <para>Queries the list of sandboxes for a specified managed agent. The searchText parameter performs a fuzzy match on sandbox ID fragments, and the sessionId parameter performs a fuzzy match on active session ID fragments. Both parameters are case-insensitive and can be used together with AND logic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12324,7 +12490,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -12403,7 +12569,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -12482,7 +12648,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -12506,7 +12672,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// <h2>Operation description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page and nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -12743,7 +12909,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
+        /// <para>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12797,7 +12963,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
+        /// <para>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12851,7 +13017,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
+        /// <para>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12870,7 +13036,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries teams in a specified workspace by paging. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
+        /// <para>Performs a paged query of teams in a specified workspace. Use nameLike to filter by team name with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default. Member information in the list includes only the member identity, name, and team role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12889,7 +13055,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12947,7 +13113,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13005,7 +13171,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13024,7 +13190,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries users in a specified workspace with paging. Use nameLike to filter by username with fuzzy match, maxResults to specify the maximum number of records per page, and nextToken to retrieve the next page. If maxResults is not specified, the server returns 10 records by default.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15027,12 +15193,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the credentials of a Connector.</para>
+        /// <para>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15084,12 +15250,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the credentials of a Connector.</para>
+        /// <para>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15141,12 +15307,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the credentials of a Connector.</para>
+        /// <para>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15165,12 +15331,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the credentials of a Connector.</para>
+        /// <para>Updates the API Key or Service Account Key collection for an enabled QoderCLI Connector. When serviceAccountKeys is submitted, the service treats it as the complete updated key collection and performs additions, renames, rotations, and deletions accordingly.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the sensitive configuration of a specified Connector and aligns the Service Account Key by ID.</para>
+        /// <para>Updates the sensitive configuration of a specified Connector and aligns Service Account Keys by ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17335,12 +17501,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. The <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17398,12 +17564,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. The <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17461,12 +17627,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. The <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -17485,12 +17651,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized state can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
+        /// <para>Updates the name or network configuration of a workspace. Only workspaces in the Initialized status can be updated. The Status, TenantId, and RegionId fields are maintained by the server and cannot be modified through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> state can be updated. <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide <c>VpcId</c> and at least one <c>VSwitchIds</c>.\n.</h2>
+        /// <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <c>Initialized</c> status can be updated. The <c>Status</c>, <c>TenantId</c>, and <c>RegionId</c> fields are maintained by the server and cannot be modified through this operation. The network configuration uses <c>Enabled</c> to specify whether to enable VPC networking. When enabled, you must also provide a <c>VpcId</c> and at least one entry in <c>VSwitchIds</c>.\n.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -17841,7 +18007,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates the credentials of a Connector.</para>
+        /// <para>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17898,7 +18064,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates the credentials of a Connector.</para>
+        /// <para>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17955,7 +18121,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates the credentials of a Connector.</para>
+        /// <para>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17979,7 +18145,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates the credentials of a Connector.</para>
+        /// <para>Validates whether one or more Qoder Service Account Keys are available at a specified site. This operation does not save keys or modify the Connector status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18003,12 +18169,178 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// <para>Verifies the ACR RAM authorization of a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// <para>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAcrRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAcrRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceAcrRamAuthorizationResponse VerifyWorkspaceAcrRamAuthorizationWithOptions(string workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                query["acrInstanceId"] = request.AcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repository))
+            {
+                query["repository"] = request.Repository;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceAcrRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/acr/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceAcrRamAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the ACR RAM authorization of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAcrRamAuthorizationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAcrRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceAcrRamAuthorizationResponse> VerifyWorkspaceAcrRamAuthorizationWithOptionsAsync(string workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcrInstanceId))
+            {
+                query["acrInstanceId"] = request.AcrInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repository))
+            {
+                query["repository"] = request.Repository;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyWorkspaceAcrRamAuthorization",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/acr/authorize/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyWorkspaceAcrRamAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the ACR RAM authorization of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAcrRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAcrRamAuthorizationResponse
+        /// </returns>
+        public VerifyWorkspaceAcrRamAuthorizationResponse VerifyWorkspaceAcrRamAuthorization(string workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyWorkspaceAcrRamAuthorizationWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the ACR RAM authorization of a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACR and user OSS mounts share the same workspace role. When no existing role is found, the system uses AliyunAgentCoreWorkspace-{workspaceId}. When a valid legacy OSS mount role exists, the system reuses it and only appends permissions without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not rebuilt or renamed because of new naming templates. This operation performs a read-only check to verify whether the custom policies corresponding to the target instance, namespace, and repository are attached to the shared role, and checks the workspace prerequisite status. It does not create execution versions or trigger configuration delivery. AUTHORIZED only indicates that the custom policy for the target name is attached. It does not parse policy content or simulate final permissions. ELIGIBLE does not indicate that RuntimeManager capacity or template admission is complete, nor does it require that ACR configurations have been delivered. Creating or updating an Agent re-verifies permissions and processes ACR dependencies on the backend. Configuration waiting, failures, and retries are reported through Agent details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VerifyWorkspaceAcrRamAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyWorkspaceAcrRamAuthorizationResponse
+        /// </returns>
+        public async Task<VerifyWorkspaceAcrRamAuthorizationResponse> VerifyWorkspaceAcrRamAuthorizationAsync(string workspaceId, VerifyWorkspaceAcrRamAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyWorkspaceAcrRamAuthorizationWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18054,12 +18386,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// <para>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// <para>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18105,12 +18437,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// <para>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// <para>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18129,12 +18461,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the RAM authorization for an OSS mount in a workspace.</para>
+        /// <para>Verifies the RAM authorization for a workspace to access an OSS bucket and returns the current authorization status. When bucketName is specified, verifies the authorization for an agent-mounted bucket. When bucketName is not specified, verifies and updates the authorization status of the workspace\&quot;s private OSS storage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries whether the OSS mount role of a workspace is bound to the custom RAM policy for the target bucket. Returns AUTHORIZED or UNAUTHORIZED. If bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. If bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks.</para>
+        /// <para>Queries whether the workspace OSS mount role is bound to the custom RAM policy corresponding to the target bucket, and returns AUTHORIZED or UNAUTHORIZED. When bucketName is not specified, the existing user-managed OSS binding of the workspace is used and the authorization status is saved. When bucketName is specified, only the authorization status of the specified bucket is queried without modifying the workspace OSS binding. This operation does not verify OSS data plane access permissions or resume workspace initialization tasks. Alibaba Cloud Container Registry (ACR) and user OSS mounts share the workspace role. If no existing role is available, AliyunAgentCoreWorkspace-{workspaceId} is used. If a valid legacy OSS mount role exists, it is reused and permissions are only appended without overwriting existing OSS policies. Previously pinned shared roles continue to be reused and are not recreated or renamed due to new naming templates.</para>
         /// </description>
         /// 
         /// <param name="request">

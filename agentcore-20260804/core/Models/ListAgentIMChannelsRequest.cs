@@ -47,12 +47,12 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         /// <summary>
         /// <para>The IM channel status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CREATING: being created.</description></item>
-        /// <item><description>READY: ready.</description></item>
-        /// <item><description>UPDATING: being updated.</description></item>
-        /// <item><description>FAILED: failed.</description></item>
-        /// <item><description>DELETING: being deleted.</description></item>
-        /// <item><description>DELETE_FAILED: deletion failed.</description></item>
+        /// <item><description>CREATING: The channel is being created.</description></item>
+        /// <item><description>READY: The channel is ready.</description></item>
+        /// <item><description>UPDATING: The channel is being updated.</description></item>
+        /// <item><description>FAILED: The channel creation or update failed.</description></item>
+        /// <item><description>DELETING: The channel is being deleted.</description></item>
+        /// <item><description>DELETE_FAILED: The channel deletion failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class CreateAgentIMChannelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS indicates success.</para>
+        /// <para>The business status code. The value is SUCCESS when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the IM channel. Default value: true.</para>
+            /// <para>Specifies whether to enable the IM channel. Default value during creation: true.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ImChannelId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>se-1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the current IM channel status.</para>
+            /// <para>The reason for the current status of the IM channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppFlow creation failed</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 indicates success.</para>
+        /// <para>The HTTP status code. The value is 200 when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

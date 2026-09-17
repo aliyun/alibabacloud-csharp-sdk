@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ChannelType { get; set; }
 
             /// <summary>
-            /// <para>The channel credentials. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</para>
+            /// <para>The channel credential. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("credential")]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public Dictionary<string, string> Credential { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the IM channel. Default value: true.</para>
+            /// <para>Specifies whether to enable the IM channel. Default value during creation: true.</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
+            /// <para>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>A reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
+        /// <para>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

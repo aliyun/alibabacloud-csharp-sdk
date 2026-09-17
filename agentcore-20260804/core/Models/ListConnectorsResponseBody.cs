@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public List<ListConnectorsResponseBodyItems> Items { get; set; }
         public class ListConnectorsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of agents bound to the connector.</para>
+            /// <para>The number of bound agents.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EnabledAt { get; set; }
 
             /// <summary>
-            /// <para>A JSON string. qodercli: {&quot;site&quot;:&quot;global|cn&quot;,&quot;organizationId&quot;:&quot;...&quot;,&quot;apiKey&quot;:&quot;...&quot;,&quot;serviceAccountKeys&quot;:[{&quot;id&quot;:&quot;ckey-xxx&quot;,&quot;name&quot;:&quot;default&quot;,&quot;serviceAccountKey&quot;:&quot;...&quot;}]}. This field is absent when the connector is not enabled.</para>
+            /// <para>The connector configuration JSON string. After the connector is enabled, this string may contain sensitive credentials.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;site&quot;:&quot;global&quot;,&quot;organizationId&quot;:&quot;org-xxxx&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The connector name.</para>
+            /// <para>The connector name. The current value is qodercli.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qodercli</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned in this request.</para>
+        /// <para>The number of connectors returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The next page token. The current version does not return this field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of connectors.</para>
+        /// <para>The total number of connectors returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

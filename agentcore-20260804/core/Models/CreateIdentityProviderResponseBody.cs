@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateIdentityProviderResponseBodyData Data { get; set; }
         public class CreateIdentityProviderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DingTalk</description></item>
+            /// <item><description>Feishu</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DingTalk</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

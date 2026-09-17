@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The harness for the managed agent. Valid values: qwenpaw and qodercli.</para>
+            /// <para>The agent harness.</para>
             /// </summary>
             [NameInMap("harness")]
             [Validation(Required=false)]
             public CreateManagedAgentRequestBodyHarness Harness { get; set; }
             public class CreateManagedAgentRequestBodyHarness : TeaModel {
                 /// <summary>
-                /// <para>The Connector binding configuration for the qodercli harness.</para>
+                /// <para>The harness configuration.</para>
                 /// </summary>
                 [NameInMap("configuration")]
                 [Validation(Required=false)]
                 public CreateManagedAgentRequestBodyHarnessConfiguration Configuration { get; set; }
                 public class CreateManagedAgentRequestBodyHarnessConfiguration : TeaModel {
                     /// <summary>
-                    /// <para>The Key ID used to bind a Service Account Key of the QoderCLI Connector. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</para>
+                    /// <para>The connector service account key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>key-xxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string ConnectorServiceAccountKey { get; set; }
 
                     /// <summary>
-                    /// <para>The Connector Key name that is populated during queries. This parameter is not used as a binding criterion during writes.</para>
+                    /// <para>The connector service account name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>my-connector-key</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 }
 
                 /// <summary>
-                /// <para>The harness type. Valid values: qwenpaw and qodercli. When the type is qodercli, binding is performed based on configuration.connectorServiceAccountKey, and the name is also populated during queries.</para>
+                /// <para>The harness type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>qodercli</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
-                /// <para>The model token quota configuration. If this parameter is not specified, no quota is configured.</para>
+                /// <para>The model token quota configuration. If not specified, no quota is configured.</para>
                 /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The list of OSS mounts. A maximum of 10 entries are supported.</para>
+            /// <para>The OSS mount list. A maximum of 10 entries are supported.</para>
             /// </summary>
             [NameInMap("ossMounts")]
             [Validation(Required=false)]
@@ -295,20 +295,29 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public class CreateManagedAgentRequestBodyOssMounts : TeaModel {
                 /// <summary>
                 /// <para>The OSS bucket name. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bucket-001</para>
                 /// </summary>
                 [NameInMap("bucketName")]
                 [Validation(Required=false)]
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The absolute mount path inside the container. This parameter is required by backend validation for each mount entry.</para>
+                /// <para>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>/mnt/oss/datasets</para>
                 /// </summary>
                 [NameInMap("mountPath")]
                 [Validation(Required=false)]
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The relative object prefix within the bucket. If this parameter is not specified, the entire bucket is mounted.</para>
+                /// <para>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>datasets</para>
                 /// </summary>
                 [NameInMap("path")]
                 [Validation(Required=false)]
@@ -340,7 +349,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public CreateManagedAgentRequestBodyRuntimeCompute Compute { get; set; }
                 public class CreateManagedAgentRequestBodyRuntimeCompute : TeaModel {
                     /// <summary>
-                    /// <para>The compute class.</para>
+                    /// <para>The compute specification.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -368,6 +377,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                     /// <summary>
                     /// <para>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
                     /// </summary>
                     [NameInMap("maxConcurrentSessionsPerSandbox")]
                     [Validation(Required=false)]
@@ -375,6 +387,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                     /// <summary>
                     /// <para>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
                     /// </summary>
                     [NameInMap("maxSandboxCount")]
                     [Validation(Required=false)]
@@ -382,13 +397,19 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
                     /// <summary>
                     /// <para>The minimum number of sandboxes. This parameter is required when HPA is enabled.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("minSandboxCount")]
                     [Validation(Required=false)]
                     public int? MinSandboxCount { get; set; }
 
                     /// <summary>
-                    /// <para>The session reclamation time after inactivity, in seconds. This parameter is required by backend validation when hpa is present.</para>
+                    /// <para>The time in seconds before an inactive session is reclaimed. This parameter is required by backend validation when hpa is present.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3600</para>
                     /// </summary>
                     [NameInMap("sessionTtlSeconds")]
                     [Validation(Required=false)]
@@ -531,7 +552,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The tool configuration list.</para>
+            /// <para>The list of tool configurations.</para>
             /// </summary>
             [NameInMap("tools")]
             [Validation(Required=false)]

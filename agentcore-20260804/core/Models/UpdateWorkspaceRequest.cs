@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateWorkspaceRequestBodyNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceRequestBodyNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The VPC network configuration.</para>
+                /// <para>The VPC network configuration of the user.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("vpc")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID.</para>
+                    /// <para>The VPC ID of the user.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>

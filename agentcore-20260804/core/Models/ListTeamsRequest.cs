@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListTeamsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVhbS1vZmZzZXQ6MTA</para>

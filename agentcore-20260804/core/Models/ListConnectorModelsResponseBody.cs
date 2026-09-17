@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The description of the model.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>通义千问旗舰模型</para>
+            /// <para>Qwen flagship model</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Key ID</para>
+            /// <para>The associated Connector Key ID. This field is not returned in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ckey-xxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string KeyId { get; set; }
 
             /// <summary>
-            /// <para>The key name.</para>
+            /// <para>The associated Connector Key name. This field is not returned in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -87,11 +87,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>The source of the model. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>official: an official model.</description></item>
-            /// <item><description>enterprise: an enterprise-specific model.</description></item>
-            /// </list>
+            /// <para>The source of the model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>official</para>
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned in this request.</para>
+        /// <para>The number of models returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -123,7 +119,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page.</para>
+        /// <para>The next page token. This field is not returned in the current version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVzdA==</para>
@@ -153,7 +149,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of models.</para>
+        /// <para>The total number of models returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -73,6 +73,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             }
 
+            /// <summary>
+            /// <para>The storage type of the workspace. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PLATFORM: Platform-managed storage.</description></item>
+            /// <item><description>PRIVATE: User-owned private OSS storage.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PRIVATE</para>
+            /// </summary>
             [NameInMap("storageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }

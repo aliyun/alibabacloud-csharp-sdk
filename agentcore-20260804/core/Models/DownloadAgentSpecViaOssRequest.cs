@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class DownloadAgentSpecViaOssRequest : TeaModel {
         /// <summary>
-        /// <para>The version number. If not specified, the version corresponding to the latest label is downloaded.</para>
+        /// <para>The version number. If this parameter is not specified, the version corresponding to the latest label is downloaded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

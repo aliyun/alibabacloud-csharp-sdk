@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
     public class VerifyWorkspaceOssMountRamAuthorizationResponseBody : TeaModel {
         /// <summary>
         /// <para>The business status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public class VerifyWorkspaceOssMountRamAuthorizationResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The OSS storage authorization status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AUTHORIZED</para>
             /// </summary>
             [NameInMap("authorizationStatus")]
             [Validation(Required=false)]
@@ -34,6 +40,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("httpStatusCode")]
         [Validation(Required=false)]
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -48,6 +60,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
         /// <summary>
         /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class GetExternalAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. The value SUCCESS is returned when the request succeeds.</para>
+        /// <para>The business status code. The value is SUCCESS when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string HeartbeatStatus { get; set; }
 
                 /// <summary>
-                /// <para>The last active time of the external agent in RFC 3339 format.</para>
+                /// <para>The most recent active time of the external agent in RFC 3339 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T00:00:00Z</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string LastActiveAt { get; set; }
 
                 /// <summary>
-                /// <para>The last heartbeat time of the external agent in RFC 3339 format.</para>
+                /// <para>The most recent heartbeat time of the external agent in RFC 3339 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-01T00:00:00Z</para>
@@ -205,11 +205,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 [Validation(Required=false)]
                 public string ModelName { get; set; }
 
+                /// <summary>
+                /// <para>The model token quota configuration and the quota usage status in the current cycle. This parameter is empty if no quota is configured.</para>
+                /// </summary>
                 [NameInMap("quota")]
                 [Validation(Required=false)]
                 public GetExternalAgentResponseBodyDataModelQuota Quota { get; set; }
                 public class GetExternalAgentResponseBodyDataModelQuota : TeaModel {
                     /// <summary>
+                    /// <para>Indicates whether the quota is enabled. This parameter is not returned if no quota is configured.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -218,6 +223,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? Enabled { get; set; }
 
                     /// <summary>
+                    /// <para>The quota limit type. Currently, only token is supported.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>token</para>
                     /// </summary>
@@ -226,6 +233,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string LimitType { get; set; }
 
                     /// <summary>
+                    /// <para>Indicates whether the quota has been exceeded in the current cycle. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -234,6 +243,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public bool? OverLimit { get; set; }
 
                     /// <summary>
+                    /// <para>The quota statistical period. day indicates daily and month indicates monthly.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>day</para>
                     /// </summary>
@@ -242,6 +253,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string PeriodType { get; set; }
 
                     /// <summary>
+                    /// <para>The gateway quota rule status. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVE</para>
                     /// </summary>
@@ -250,6 +263,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public string RuleStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of tokens that can be consumed within a single cycle.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1000000</para>
                     /// </summary>
@@ -258,6 +273,8 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public long? UsageLimit { get; set; }
 
                     /// <summary>
+                    /// <para>The number of tokens consumed in the current cycle. This is a read-only field returned by the backend.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>12345</para>
                     /// </summary>
@@ -270,7 +287,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The source of the model configuration. PLATFORM indicates that the model configuration is parsed and delivered by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</para>
+            /// <para>The model configuration source. PLATFORM indicates that the model configuration is parsed and distributed by the platform. RUNTIME indicates that the model is managed by the external runtime, and the model parameter cannot be specified at the same time. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PLATFORM: Platform model.</description></item>
             /// <item><description>RUNTIME: Runtime model.</description></item>
@@ -458,7 +475,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. The value 200 is returned when the request succeeds.</para>
+        /// <para>The HTTP status code. The value is 200 when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -468,7 +485,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message that indicates the result of the request.</para>
+        /// <para>The request processing result message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

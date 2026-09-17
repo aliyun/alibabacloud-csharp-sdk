@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public class UpdateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The OSS storage authorization status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AUTHORIZED</para>
             /// </summary>
             [NameInMap("authorizationStatus")]
             [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The name of the private OSS bucket.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bucket-001</para>
             /// </summary>
             [NameInMap("bucketName")]
             [Validation(Required=false)]
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public UpdateWorkspaceResponseBodyDataNetworkConfiguration NetworkConfiguration { get; set; }
             public class UpdateWorkspaceResponseBodyDataNetworkConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The VPC network configuration.</para>
+                /// <para>The VPC network configuration of the user.</para>
                 /// </summary>
                 [NameInMap("vpc")]
                 [Validation(Required=false)]
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                     public List<string> VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID.</para>
+                    /// <para>The VPC ID of the user.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-bp1234567890</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The workspace status. Valid values: Initializing, Initialized, Deleting, Deleted.</para>
+            /// <para>The workspace status. Valid values: Initializing, Initialized, Deleting, and Deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Initialized</para>
@@ -117,13 +123,16 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
 
             /// <summary>
             /// <para>The storage type of the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PRIVATE</para>
             /// </summary>
             [NameInMap("storageType")]
             [Validation(Required=false)]
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant to which the workspace belongs.</para>
+            /// <para>The tenant ID to which the workspace belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tenant-123456</para>

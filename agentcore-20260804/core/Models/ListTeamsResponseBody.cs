@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The time when the team was created, in UTC and RFC 3339 format.</para>
+            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             /// <para>The team description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Team responsible for the intelligent customer service business</para>
+            /// <para>A team responsible for intelligent customer service</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string TeamId { get; set; }
 
             /// <summary>
-            /// <para>The time when the team was last modified, in UTC and RFC 3339 format.</para>
+            /// <para>The time of the last modification in UTC, formatted according to RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This parameter is empty if no more pages are available.</para>
+        /// <para>The pagination token for the next page. This value is empty if no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dGVhbS1vZmZzZXQ6MTA</para>

@@ -17,7 +17,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public CreateIdentityProviderRequestBody Body { get; set; }
         public class CreateIdentityProviderRequestBody : TeaModel {
             /// <summary>
-            /// <para>The type of the external identity provider. Valid values: DingTalk, Feishu.</para>
+            /// <para>The type of the external identity provider. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DingTalk</description></item>
+            /// <item><description>Feishu</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>Required. The secret of the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</para>
+                /// <para>Required. The secret of the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-app-secret</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AppSecret { get; set; }
 
                 /// <summary>
-                /// <para>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</para>
+                /// <para>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dingexamplecorpid01</para>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CorpId { get; set; }
 
                 /// <summary>
-                /// <para>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</para>
+                /// <para>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-encrypt-key</para>
@@ -92,7 +96,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string EncryptKey { get; set; }
 
                 /// <summary>
-                /// <para>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</para>
+                /// <para>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is write-only and is not returned by query operations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-verification-token</para>

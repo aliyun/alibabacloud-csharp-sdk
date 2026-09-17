@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The creation time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The creation time in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the service endpoint is located.</para>
+            /// <para>The region ID of the service endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public ListServiceEndpointsResponseBodyItemsTarget Target { get; set; }
             public class ListServiceEndpointsResponseBodyItemsTarget : TeaModel {
                 /// <summary>
-                /// <para>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</para>
+                /// <para>The target agent ID. Returned when the target type is AGENT_VERSION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>agent-123456</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentId { get; set; }
 
                 /// <summary>
-                /// <para>The target agent version number. This parameter is returned when the target type is AGENT_VERSION.</para>
+                /// <para>The target agent version number. Returned when the target type is AGENT_VERSION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string AgentVersion { get; set; }
 
                 /// <summary>
-                /// <para>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</para>
+                /// <para>The collaboration component type. Returned when the target type is TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ELEMENT_WEB</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string CollaborationComponent { get; set; }
 
                 /// <summary>
-                /// <para>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</para>
+                /// <para>The workspace resource binding ID associated with the target collaboration component. Returned when the target type is TEAM_COLLABORATION.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wrb-123456</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The last modification time in UTC, formatted according to RFC 3339.</para>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. This value is empty if no more pages exist.</para>
+        /// <para>The pagination token for the next page. This value is empty when no more pages are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</para>

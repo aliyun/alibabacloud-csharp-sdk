@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public GetServiceEndpointResponseBodyData Data { get; set; }
         public class GetServiceEndpointResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The access URL list of the service endpoint.</para>
+            /// <para>The list of access URLs for the service endpoint.</para>
             /// </summary>
             [NameInMap("accessUrls")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the access URL status. A specific reason is returned when the status is degraded.</para>
+                /// <para>The reason for the access URL status. A specific reason is returned when the status is abnormal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ServiceEndpoint.Provider.Unavailable: no provider for the target type</para>
@@ -83,11 +83,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public GetServiceEndpointResponseBodyDataAuthentication Authentication { get; set; }
             public class GetServiceEndpointResponseBodyDataAuthentication : TeaModel {
                 /// <summary>
-                /// <para>The authentication method. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NONE: no authentication required.</description></item>
-                /// <item><description>API_KEY: authentication by passing an API key through the x-api-key request header.</description></item>
-                /// </list>
+                /// <para>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that an API key is passed through the x-api-key request header for authentication.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>API_KEY</para>
@@ -109,11 +105,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DEFAULT: a default endpoint created and maintained by the platform.</description></item>
-            /// <item><description>NAMED: a named endpoint explicitly created by the user.</description></item>
-            /// </list>
+            /// <para>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NAMED</para>
@@ -123,7 +115,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string EndpointType { get; set; }
 
             /// <summary>
-            /// <para>The service endpoint name. The name is unique within the workspace and is 1 to 128 characters in length.</para>
+            /// <para>The service endpoint name. The name must be unique within the workspace and can be 1 to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-agent-endpoint</para>
@@ -133,7 +125,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the service endpoint resides.</para>
+            /// <para>The region ID of the service endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -232,7 +224,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
             }
 
             /// <summary>
-            /// <para>The last modification time in UTC, formatted in RFC 3339.</para>
+            /// <para>The time of the last modification in UTC, formatted in RFC 3339.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-08-12T03:04:05Z</para>
@@ -264,7 +256,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message. An error description is returned if the request fails.</para>
+        /// <para>The response message. An error description is returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
