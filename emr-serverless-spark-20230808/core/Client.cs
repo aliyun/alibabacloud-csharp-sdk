@@ -2979,6 +2979,212 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a workspace queue.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceQueueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceQueueResponse
+        /// </returns>
+        public CreateWorkspaceQueueResponse CreateWorkspaceQueueWithOptions(CreateWorkspaceQueueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preheat))
+            {
+                body["preheat"] = request.Preheat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCategory))
+            {
+                body["queueCategory"] = request.QueueCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceQueueName))
+            {
+                body["workspaceQueueName"] = request.WorkspaceQueueName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspaceQueue",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/queues",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceQueueResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace queue.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceQueueRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceQueueResponse
+        /// </returns>
+        public async Task<CreateWorkspaceQueueResponse> CreateWorkspaceQueueWithOptionsAsync(CreateWorkspaceQueueRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                body["paymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Preheat))
+            {
+                body["preheat"] = request.Preheat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueCategory))
+            {
+                body["queueCategory"] = request.QueueCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceSpec))
+            {
+                body["resourceSpec"] = request.ResourceSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceQueueName))
+            {
+                body["workspaceQueueName"] = request.WorkspaceQueueName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspaceQueue",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/queues",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceQueueResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace queue.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceQueueResponse
+        /// </returns>
+        public CreateWorkspaceQueueResponse CreateWorkspaceQueue(CreateWorkspaceQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateWorkspaceQueueWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace queue.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceQueueRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceQueueResponse
+        /// </returns>
+        public async Task<CreateWorkspaceQueueResponse> CreateWorkspaceQueueAsync(CreateWorkspaceQueueRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateWorkspaceQueueWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a Kyuubi gateway.</para>
         /// </summary>
         /// 
