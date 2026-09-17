@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the knowledge base.</para>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkName { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk document MCP Server endpoint.</para>
+        /// <para>The MCP Server address for DingTalk documents.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk spreadsheet MCP Server endpoint.</para>
+        /// <para>The MCP Server address for DingTalk sheets.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></para>
@@ -137,7 +137,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk operator user ID.</para>
+        /// <para>The Lark user access token. This token is used only when the application identity cannot expand group members because the bot is not in the group chat.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
+        [NameInMap("UserAccessToken")]
+        [Validation(Required=false)]
+        public string UserAccessToken { get; set; }
+
+        /// <summary>
+        /// <para>The DingTalk user ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***56</para>

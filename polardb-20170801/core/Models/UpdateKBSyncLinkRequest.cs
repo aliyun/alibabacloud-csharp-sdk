@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the knowledge base.</para>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkId { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server address for DingTalk documents.</para>
+        /// <para>The DingTalk document MCP Server endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The MCP Server address for DingTalk spreadsheets.</para>
+        /// <para>The DingTalk spreadsheet MCP Server endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></para>
@@ -103,7 +103,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? SyncIntervalMinutes { get; set; }
 
         /// <summary>
-        /// <para>The DingTalk user ID for the operation.</para>
+        /// <para>The new Lark user access token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
+        [NameInMap("UserAccessToken")]
+        [Validation(Required=false)]
+        public string UserAccessToken { get; set; }
+
+        /// <summary>
+        /// <para>The DingTalk user ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***56</para>

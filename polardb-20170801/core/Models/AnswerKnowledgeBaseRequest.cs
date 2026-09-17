@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxContextChars { get; set; }
 
         /// <summary>
-        /// <para>The user query text.</para>
+        /// <para>The user question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable reranking. Default value: false.</para>
+        /// <para>Specifies whether to enable reranking. Disabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RerankEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return citation sources. Default value: true.</para>
+        /// <para>Specifies whether to return citation sources. Enabled by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SystemPrompt { get; set; }
 
         /// <summary>
-        /// <para>The number of results to recall during retrieval.</para>
+        /// <para>The number of recall results to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TopK { get; set; }
 
         /// <summary>
-        /// <para>The supplementary user instructions.</para>
+        /// <para>The user supplementary instructions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Return a short summary and test result.</para>

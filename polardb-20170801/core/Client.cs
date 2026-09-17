@@ -1465,7 +1465,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a single-round knowledge base question answering.</para>
+        /// <para>Performs a single-turn knowledge base question answering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1547,7 +1547,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a single-round knowledge base question answering.</para>
+        /// <para>Performs a single-turn knowledge base question answering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1629,7 +1629,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a single-round knowledge base question answering.</para>
+        /// <para>Performs a single-turn knowledge base question answering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1647,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a single-round knowledge base question answering.</para>
+        /// <para>Performs a single-turn knowledge base question answering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13770,6 +13770,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["TenantId"] = request.TenantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessToken))
+            {
+                query["UserAccessToken"] = request.UserAccessToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -13859,6 +13863,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessToken))
+            {
+                query["UserAccessToken"] = request.UserAccessToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
@@ -45433,7 +45441,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-turn Q&amp;A task in a knowledge base.</para>
+        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45483,7 +45491,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-turn Q&amp;A task in a knowledge base.</para>
+        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45533,7 +45541,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-turn Q&amp;A task in a knowledge base.</para>
+        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45551,7 +45559,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result of a single-turn Q&amp;A task in a knowledge base.</para>
+        /// <para>Queries the result of a single-round knowledge base question answering task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60861,7 +60869,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60898,6 +60906,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestartMode))
+            {
+                query["RestartMode"] = request.RestartMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerBatchSize))
+            {
+                query["WorkerBatchSize"] = request.WorkerBatchSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -60919,7 +60935,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60956,6 +60972,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestartMode))
+            {
+                query["RestartMode"] = request.RestartMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerBatchSize))
+            {
+                query["WorkerBatchSize"] = request.WorkerBatchSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -60977,7 +61001,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60995,7 +61019,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the model or the customer-facing invocation name of an AI cluster.</para>
+        /// <para>Changes the model or the client-facing invocation name of an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -81662,6 +81686,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SyncIntervalMinutes"] = request.SyncIntervalMinutes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessToken))
+            {
+                query["UserAccessToken"] = request.UserAccessToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 query["UserId"] = request.UserId;
@@ -81739,6 +81767,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncIntervalMinutes))
             {
                 query["SyncIntervalMinutes"] = request.SyncIntervalMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAccessToken))
+            {
+                query["UserAccessToken"] = request.UserAccessToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {

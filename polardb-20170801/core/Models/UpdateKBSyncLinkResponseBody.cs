@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling time of the synchronization task.</para>
+        /// <para>The scheduled time of the synchronization task.</para>
         /// </summary>
         [NameInMap("SyncSchedule")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the synchronization link was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-14T05:58:42Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ImPlatform { get; set; }
 
         /// <summary>
-        /// <para>The synchronization link ID.</para>
+        /// <para>The ID of the synchronization link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pkbl-xxxxxx</para>
