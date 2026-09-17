@@ -1838,6 +1838,210 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
+        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
+        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
+        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSqlPatternCompareReportResponse
+        /// </returns>
+        public CancelSqlPatternCompareReportResponse CancelSqlPatternCompareReportWithOptions(CancelSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelSqlPatternCompareReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
+        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
+        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
+        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<CancelSqlPatternCompareReportResponse> CancelSqlPatternCompareReportWithOptionsAsync(CancelSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelSqlPatternCompareReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
+        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
+        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
+        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSqlPatternCompareReportResponse
+        /// </returns>
+        public CancelSqlPatternCompareReportResponse CancelSqlPatternCompareReport(CancelSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelSqlPatternCompareReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels a specified SQL Pattern comparison report. Reports in the following statuses can be canceled:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PENDING</c>: Waiting to be generated.</description></item>
+        /// <item><description><c>RUNNING</c>: Being generated.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>CancelAvailable</c> set to <c>true</c> can be canceled.</description></item>
+        /// <item><description>Reports that are completed, failed, or expired cannot be canceled.</description></item>
+        /// <item><description>When you cancel an already canceled report again, <c>Canceled</c> still returns <c>true</c>, and <c>CancelTime</c> retains the time of the first cancellation.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CancelSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<CancelSqlPatternCompareReportResponse> CancelSqlPatternCompareReportAsync(CancelSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelSqlPatternCompareReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries whether a database account of an AnalyticDB for MySQL cluster is associated with a Resource Access Management (RAM) user.</para>
         /// </summary>
         /// 
@@ -7138,6 +7342,226 @@ namespace AlibabaCloud.SDK.Adb20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSparkTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlPatternCompareReportResponse
+        /// </returns>
+        public CreateSqlPatternCompareReportResponse CreateSqlPatternCompareReportWithOptions(CreateSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareEndTime))
+            {
+                query["CompareEndTime"] = request.CompareEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareStartTime))
+            {
+                query["CompareStartTime"] = request.CompareStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatternType))
+            {
+                query["PatternType"] = request.PatternType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlPatternCompareReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<CreateSqlPatternCompareReportResponse> CreateSqlPatternCompareReportWithOptionsAsync(CreateSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareEndTime))
+            {
+                query["CompareEndTime"] = request.CompareEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompareStartTime))
+            {
+                query["CompareStartTime"] = request.CompareStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatternType))
+            {
+                query["PatternType"] = request.PatternType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlPatternCompareReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlPatternCompareReportResponse
+        /// </returns>
+        public CreateSqlPatternCompareReportResponse CreateSqlPatternCompareReport(CreateSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSqlPatternCompareReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Compares two time windows and asynchronously generates a SQL pattern comparison report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The start time of each window must be earlier than the end time, and the duration must not exceed 24 hours. Select windows of the same duration and similar business cycles.</description></item>
+        /// <item><description>The returned <c>ReportId</c> only indicates that the request has been accepted. Call <c>DescribeSqlPatternCompareReports</c> to query the report status, and query the details when <c>DetailEnabled</c> is <c>true</c>.</description></item>
+        /// <item><description>Only one report can be generated for an instance at a time.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<CreateSqlPatternCompareReportResponse> CreateSqlPatternCompareReportAsync(CreateSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSqlPatternCompareReportWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25046,6 +25470,526 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query of SQL Pattern comparison report details based on <c>MetricType</c> by using paging. Report type descriptions:</para>
+        /// <list type="bullet">
+        /// <item><description>NEW: Returns Patterns that are new in time window 2. <c>MetricValues</c> returns <c>Time2</c>.</description></item>
+        /// <item><description>CHANGED: Returns Patterns that exist in both time windows and have increased average values for the current metric. <c>MetricValues</c> returns <c>Avg</c>, <c>Sum</c>, and <c>Max</c>.
+        /// Metric calculation methods:</description></item>
+        /// <item><description><c>Sum</c>: The sum of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Avg</c>: The average of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Max</c>: The peak metric value within a single minute bucket.
+        /// Metric units:</description></item>
+        /// <item><description><c>QUERY_COUNT</c>: count.</description></item>
+        /// <item><description><c>CPU_COST</c>: seconds.</description></item>
+        /// <item><description><c>SHUFFLE_SIZE</c>, <c>PEAK_MEMORY</c>, <c>SCAN_SIZE</c>: GB.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>DetailEnabled</c> set to <c>true</c> can be queried for details. Reports that are incomplete, canceled, or expired cannot be queried.</description></item>
+        /// <item><description>Fields ending with <c>Percent</c> are already expressed as percentages. When the time window 1 metric value is 0, <c>ChangeRatePercent</c> may not be returned and should not be treated as 0%.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportResponse
+        /// </returns>
+        public DescribeSqlPatternCompareReportResponse DescribeSqlPatternCompareReportWithOptions(DescribeSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRate))
+            {
+                query["ChangeRate"] = request.ChangeRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePattern))
+            {
+                query["IncludePattern"] = request.IncludePattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlPatternCompareReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query of SQL Pattern comparison report details based on <c>MetricType</c> by using paging. Report type descriptions:</para>
+        /// <list type="bullet">
+        /// <item><description>NEW: Returns Patterns that are new in time window 2. <c>MetricValues</c> returns <c>Time2</c>.</description></item>
+        /// <item><description>CHANGED: Returns Patterns that exist in both time windows and have increased average values for the current metric. <c>MetricValues</c> returns <c>Avg</c>, <c>Sum</c>, and <c>Max</c>.
+        /// Metric calculation methods:</description></item>
+        /// <item><description><c>Sum</c>: The sum of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Avg</c>: The average of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Max</c>: The peak metric value within a single minute bucket.
+        /// Metric units:</description></item>
+        /// <item><description><c>QUERY_COUNT</c>: count.</description></item>
+        /// <item><description><c>CPU_COST</c>: seconds.</description></item>
+        /// <item><description><c>SHUFFLE_SIZE</c>, <c>PEAK_MEMORY</c>, <c>SCAN_SIZE</c>: GB.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>DetailEnabled</c> set to <c>true</c> can be queried for details. Reports that are incomplete, canceled, or expired cannot be queried.</description></item>
+        /// <item><description>Fields ending with <c>Percent</c> are already expressed as percentages. When the time window 1 metric value is 0, <c>ChangeRatePercent</c> may not be returned and should not be treated as 0%.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<DescribeSqlPatternCompareReportResponse> DescribeSqlPatternCompareReportWithOptionsAsync(DescribeSqlPatternCompareReportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeRate))
+            {
+                query["ChangeRate"] = request.ChangeRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludePattern))
+            {
+                query["IncludePattern"] = request.IncludePattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["ReportId"] = request.ReportId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlPatternCompareReport",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlPatternCompareReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query of SQL Pattern comparison report details based on <c>MetricType</c> by using paging. Report type descriptions:</para>
+        /// <list type="bullet">
+        /// <item><description>NEW: Returns Patterns that are new in time window 2. <c>MetricValues</c> returns <c>Time2</c>.</description></item>
+        /// <item><description>CHANGED: Returns Patterns that exist in both time windows and have increased average values for the current metric. <c>MetricValues</c> returns <c>Avg</c>, <c>Sum</c>, and <c>Max</c>.
+        /// Metric calculation methods:</description></item>
+        /// <item><description><c>Sum</c>: The sum of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Avg</c>: The average of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Max</c>: The peak metric value within a single minute bucket.
+        /// Metric units:</description></item>
+        /// <item><description><c>QUERY_COUNT</c>: count.</description></item>
+        /// <item><description><c>CPU_COST</c>: seconds.</description></item>
+        /// <item><description><c>SHUFFLE_SIZE</c>, <c>PEAK_MEMORY</c>, <c>SCAN_SIZE</c>: GB.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>DetailEnabled</c> set to <c>true</c> can be queried for details. Reports that are incomplete, canceled, or expired cannot be queried.</description></item>
+        /// <item><description>Fields ending with <c>Percent</c> are already expressed as percentages. When the time window 1 metric value is 0, <c>ChangeRatePercent</c> may not be returned and should not be treated as 0%.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportResponse
+        /// </returns>
+        public DescribeSqlPatternCompareReportResponse DescribeSqlPatternCompareReport(DescribeSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSqlPatternCompareReportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an SQL Pattern comparison report.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a paged query of SQL Pattern comparison report details based on <c>MetricType</c> by using paging. Report type descriptions:</para>
+        /// <list type="bullet">
+        /// <item><description>NEW: Returns Patterns that are new in time window 2. <c>MetricValues</c> returns <c>Time2</c>.</description></item>
+        /// <item><description>CHANGED: Returns Patterns that exist in both time windows and have increased average values for the current metric. <c>MetricValues</c> returns <c>Avg</c>, <c>Sum</c>, and <c>Max</c>.
+        /// Metric calculation methods:</description></item>
+        /// <item><description><c>Sum</c>: The sum of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Avg</c>: The average of metric values across valid query minute buckets.</description></item>
+        /// <item><description><c>Max</c>: The peak metric value within a single minute bucket.
+        /// Metric units:</description></item>
+        /// <item><description><c>QUERY_COUNT</c>: count.</description></item>
+        /// <item><description><c>CPU_COST</c>: seconds.</description></item>
+        /// <item><description><c>SHUFFLE_SIZE</c>, <c>PEAK_MEMORY</c>, <c>SCAN_SIZE</c>: GB.<remarks>
+        /// <list type="bullet">
+        /// <item><description>Only reports with <c>DetailEnabled</c> set to <c>true</c> can be queried for details. Reports that are incomplete, canceled, or expired cannot be queried.</description></item>
+        /// <item><description>Fields ending with <c>Percent</c> are already expressed as percentages. When the time window 1 metric value is 0, <c>ChangeRatePercent</c> may not be returned and should not be treated as 0%.</description></item>
+        /// <item><description>Reports are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportResponse
+        /// </returns>
+        public async Task<DescribeSqlPatternCompareReportResponse> DescribeSqlPatternCompareReportAsync(DescribeSqlPatternCompareReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSqlPatternCompareReportWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SQL Pattern comparison reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SQL Pattern comparison reports created by the current Alibaba Cloud account for a specified instance. RAM users can query reports that belong to their parent Alibaba Cloud account.
+        /// The following pagination methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>Page number-based pagination (recommended): Use <c>PageNumber</c> and <c>PageSize</c>.</description></item>
+        /// <item><description>Token-based pagination: Use <c>MaxResults</c> and <c>NextToken</c>.<remarks>
+        /// <list type="bullet">
+        /// <item><description>The two pagination methods cannot be used together. When you use page number-based pagination, the <c>MaxResults</c> parameter that is automatically included by the platform does not take effect.</description></item>
+        /// <item><description>The list returns only unexpired reports in the <c>PENDING</c>, <c>RUNNING</c>, or <c>SUCCESS</c> state.</description></item>
+        /// <item><description>Use <c>DetailEnabled</c> to determine whether report details can be queried. Use <c>CancelAvailable</c> to determine whether a report can be canceled.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportsResponse
+        /// </returns>
+        public DescribeSqlPatternCompareReportsResponse DescribeSqlPatternCompareReportsWithOptions(DescribeSqlPatternCompareReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlPatternCompareReports",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlPatternCompareReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SQL Pattern comparison reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SQL Pattern comparison reports created by the current Alibaba Cloud account for a specified instance. RAM users can query reports that belong to their parent Alibaba Cloud account.
+        /// The following pagination methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>Page number-based pagination (recommended): Use <c>PageNumber</c> and <c>PageSize</c>.</description></item>
+        /// <item><description>Token-based pagination: Use <c>MaxResults</c> and <c>NextToken</c>.<remarks>
+        /// <list type="bullet">
+        /// <item><description>The two pagination methods cannot be used together. When you use page number-based pagination, the <c>MaxResults</c> parameter that is automatically included by the platform does not take effect.</description></item>
+        /// <item><description>The list returns only unexpired reports in the <c>PENDING</c>, <c>RUNNING</c>, or <c>SUCCESS</c> state.</description></item>
+        /// <item><description>Use <c>DetailEnabled</c> to determine whether report details can be queried. Use <c>CancelAvailable</c> to determine whether a report can be canceled.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportsResponse
+        /// </returns>
+        public async Task<DescribeSqlPatternCompareReportsResponse> DescribeSqlPatternCompareReportsWithOptionsAsync(DescribeSqlPatternCompareReportsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSqlPatternCompareReports",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSqlPatternCompareReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SQL Pattern comparison reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SQL Pattern comparison reports created by the current Alibaba Cloud account for a specified instance. RAM users can query reports that belong to their parent Alibaba Cloud account.
+        /// The following pagination methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>Page number-based pagination (recommended): Use <c>PageNumber</c> and <c>PageSize</c>.</description></item>
+        /// <item><description>Token-based pagination: Use <c>MaxResults</c> and <c>NextToken</c>.<remarks>
+        /// <list type="bullet">
+        /// <item><description>The two pagination methods cannot be used together. When you use page number-based pagination, the <c>MaxResults</c> parameter that is automatically included by the platform does not take effect.</description></item>
+        /// <item><description>The list returns only unexpired reports in the <c>PENDING</c>, <c>RUNNING</c>, or <c>SUCCESS</c> state.</description></item>
+        /// <item><description>Use <c>DetailEnabled</c> to determine whether report details can be queried. Use <c>CancelAvailable</c> to determine whether a report can be canceled.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportsResponse
+        /// </returns>
+        public DescribeSqlPatternCompareReportsResponse DescribeSqlPatternCompareReports(DescribeSqlPatternCompareReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSqlPatternCompareReportsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SQL Pattern comparison reports.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SQL Pattern comparison reports created by the current Alibaba Cloud account for a specified instance. RAM users can query reports that belong to their parent Alibaba Cloud account.
+        /// The following pagination methods are supported:</para>
+        /// <list type="bullet">
+        /// <item><description>Page number-based pagination (recommended): Use <c>PageNumber</c> and <c>PageSize</c>.</description></item>
+        /// <item><description>Token-based pagination: Use <c>MaxResults</c> and <c>NextToken</c>.<remarks>
+        /// <list type="bullet">
+        /// <item><description>The two pagination methods cannot be used together. When you use page number-based pagination, the <c>MaxResults</c> parameter that is automatically included by the platform does not take effect.</description></item>
+        /// <item><description>The list returns only unexpired reports in the <c>PENDING</c>, <c>RUNNING</c>, or <c>SUCCESS</c> state.</description></item>
+        /// <item><description>Use <c>DetailEnabled</c> to determine whether report details can be queried. Use <c>CancelAvailable</c> to determine whether a report can be canceled.</description></item>
+        /// <item><description>Reports are valid for 7 days and are isolated by instance and Alibaba Cloud account.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeSqlPatternCompareReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSqlPatternCompareReportsResponse
+        /// </returns>
+        public async Task<DescribeSqlPatternCompareReportsResponse> DescribeSqlPatternCompareReportsAsync(DescribeSqlPatternCompareReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSqlPatternCompareReportsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the storage resource usage of an AnalyticDB for MySQL cluster.</para>
         /// </summary>
         /// 
@@ -34294,7 +35238,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询知识库文件</para>
+        /// <para>Queries knowledge base files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34356,7 +35300,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询知识库文件</para>
+        /// <para>Queries knowledge base files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34418,7 +35362,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询知识库文件</para>
+        /// <para>Queries knowledge base files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34436,7 +35380,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询知识库文件</para>
+        /// <para>Queries knowledge base files.</para>
         /// </summary>
         /// 
         /// <param name="request">
