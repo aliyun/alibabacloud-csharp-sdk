@@ -4923,6 +4923,144 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the specified dialect conversion rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllRulesSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllRulesSummaryResponse
+        /// </returns>
+        public GetAllRulesSummaryResponse GetAllRulesSummaryWithOptions(GetAllRulesSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAllRulesSummary",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAllRulesSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the specified dialect conversion rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllRulesSummaryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllRulesSummaryResponse
+        /// </returns>
+        public async Task<GetAllRulesSummaryResponse> GetAllRulesSummaryWithOptionsAsync(GetAllRulesSummaryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAllRulesSummary",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAllRulesSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the specified dialect conversion rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllRulesSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllRulesSummaryResponse
+        /// </returns>
+        public GetAllRulesSummaryResponse GetAllRulesSummary(GetAllRulesSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAllRulesSummaryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the specified dialect conversion rule.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAllRulesSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAllRulesSummaryResponse
+        /// </returns>
+        public async Task<GetAllRulesSummaryResponse> GetAllRulesSummaryAsync(GetAllRulesSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAllRulesSummaryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the paging list of commit (write) instances for a scheduling migration node by node ID and status, and returns the transform and commit stage status of each instance.</para>
         /// </summary>
         /// 
@@ -5703,6 +5841,152 @@ namespace AlibabaCloud.SDK.LHM20250116
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetBwmMigrationWorkflowSubmitStartWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of dialect rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCategoryDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCategoryDetailResponse
+        /// </returns>
+        public GetCategoryDetailResponse GetCategoryDetailWithOptions(GetCategoryDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCategoryDetail",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/rules/categories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCategoryDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of dialect rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCategoryDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCategoryDetailResponse
+        /// </returns>
+        public async Task<GetCategoryDetailResponse> GetCategoryDetailWithOptionsAsync(GetCategoryDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                body["category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                body["target"] = request.Target;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCategoryDetail",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/rules/categories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCategoryDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of dialect rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCategoryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCategoryDetailResponse
+        /// </returns>
+        public GetCategoryDetailResponse GetCategoryDetail(GetCategoryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCategoryDetailWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of dialect rules.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCategoryDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCategoryDetailResponse
+        /// </returns>
+        public async Task<GetCategoryDetailResponse> GetCategoryDetailAsync(GetCategoryDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCategoryDetailWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9401,21 +9685,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询校验任务配置</para>
+        /// <para>Queries the table-level configuration list of a data validation node by node ID and source table name with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按数据校验任务 ID 分页查询该任务下的表明细配置，支持按源表名称模糊筛选，用于在任务包含较多表时定位单张表的配置，核对源端与目标端的表、字段、分区、过滤条件与比对规则是否符合预期。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the table-level configurations of a data validation node by node ID with paging. Supports fuzzy filtering by source table name. This operation is useful for locating the configuration of a specific table when the node contains many tables, and for verifying whether the source and target table, column, partition, filter condition, and comparison rule settings meet expectations.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为数据校验任务 ID。</description></item>
-        /// <item><description><c>srcTable</c> 选填，按源表名称模糊搜索。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
+        /// <item><description><c>taskId</c> is required and specifies the ID of the data validation task.</description></item>
+        /// <item><description><c>srcTable</c> is optional and performs a fuzzy search by source table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的配置总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页配置列表。列表元素包含配置 ID、是否跳过 <c>isSkipped</c>、所属任务 <c>taskId</c> 与校验类型 <c>checkType</c>；源端的 <c>sourceDataSource</c>、<c>sourceId</c>、<c>sourceType</c>、<c>sourceTable</c>、<c>sourceColumns</c>、<c>sourcePartition</c>、<c>sourceWhereClause</c>、<c>sourceGroupClause</c>、<c>sourceHint</c>、<c>sourceSql</c> 与 <c>sourceCompareKey</c>，以及目标端一一对应的 <c>targetDataSource</c>、<c>targetId</c>、<c>targetType</c>、<c>targetTable</c>、<c>targetColumns</c>、<c>targetPartition</c>、<c>targetWhereClause</c>、<c>targetGroupClause</c>、<c>targetHint</c>、<c>targetSql</c> 与 <c>targetCompareKey</c>；比对规则相关的总数据量阈值 <c>totalCountThreshold</c>、分组数据量阈值 <c>groupCountThreshold</c>、批大小 <c>batchSize</c>、校验算法 <c>algorithm</c>、比较类型 <c>comparator</c>、指标类型 <c>metricType</c>、是否整表比对 <c>isFullTableCount</c>、源端与目标端是否校验所有列（<c>sourceCheckAllColumn</c>、<c>targetCheckAllColumn</c>）；另有配置详情 <c>taskConfigInfo</c> 与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> indicates the total number of configurations that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the configuration list for the current page. Each list element includes the configuration ID, whether the configuration is skipped (<c>isSkipped</c>), the associated task (<c>taskId</c>), and the check type (<c>checkType</c>). Source-side fields include <c>sourceDataSource</c>, <c>sourceId</c>, <c>sourceType</c>, <c>sourceTable</c>, <c>sourceColumns</c>, <c>sourcePartition</c>, <c>sourceWhereClause</c>, <c>sourceGroupClause</c>, <c>sourceHint</c>, <c>sourceSql</c>, and <c>sourceCompareKey</c>. The corresponding target-side fields include <c>targetDataSource</c>, <c>targetId</c>, <c>targetType</c>, <c>targetTable</c>, <c>targetColumns</c>, <c>targetPartition</c>, <c>targetWhereClause</c>, <c>targetGroupClause</c>, <c>targetHint</c>, <c>targetSql</c>, and <c>targetCompareKey</c>. Comparison rule fields include the total data volume threshold (<c>totalCountThreshold</c>), group data volume threshold (<c>groupCountThreshold</c>), batch size (<c>batchSize</c>), check algorithm (<c>algorithm</c>), comparison type (<c>comparator</c>), metric type (<c>metricType</c>), whether to perform full-table comparison (<c>isFullTableCount</c>), and whether to validate all columns on the source and target sides (<c>sourceCheckAllColumn</c> and <c>targetCheckAllColumn</c>). Additional fields include configuration details (<c>taskConfigInfo</c>) and a reserved field (<c>extra</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9473,21 +9757,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询校验任务配置</para>
+        /// <para>Queries the table-level configuration list of a data validation node by node ID and source table name with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按数据校验任务 ID 分页查询该任务下的表明细配置，支持按源表名称模糊筛选，用于在任务包含较多表时定位单张表的配置，核对源端与目标端的表、字段、分区、过滤条件与比对规则是否符合预期。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the table-level configurations of a data validation node by node ID with paging. Supports fuzzy filtering by source table name. This operation is useful for locating the configuration of a specific table when the node contains many tables, and for verifying whether the source and target table, column, partition, filter condition, and comparison rule settings meet expectations.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为数据校验任务 ID。</description></item>
-        /// <item><description><c>srcTable</c> 选填，按源表名称模糊搜索。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
+        /// <item><description><c>taskId</c> is required and specifies the ID of the data validation task.</description></item>
+        /// <item><description><c>srcTable</c> is optional and performs a fuzzy search by source table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的配置总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页配置列表。列表元素包含配置 ID、是否跳过 <c>isSkipped</c>、所属任务 <c>taskId</c> 与校验类型 <c>checkType</c>；源端的 <c>sourceDataSource</c>、<c>sourceId</c>、<c>sourceType</c>、<c>sourceTable</c>、<c>sourceColumns</c>、<c>sourcePartition</c>、<c>sourceWhereClause</c>、<c>sourceGroupClause</c>、<c>sourceHint</c>、<c>sourceSql</c> 与 <c>sourceCompareKey</c>，以及目标端一一对应的 <c>targetDataSource</c>、<c>targetId</c>、<c>targetType</c>、<c>targetTable</c>、<c>targetColumns</c>、<c>targetPartition</c>、<c>targetWhereClause</c>、<c>targetGroupClause</c>、<c>targetHint</c>、<c>targetSql</c> 与 <c>targetCompareKey</c>；比对规则相关的总数据量阈值 <c>totalCountThreshold</c>、分组数据量阈值 <c>groupCountThreshold</c>、批大小 <c>batchSize</c>、校验算法 <c>algorithm</c>、比较类型 <c>comparator</c>、指标类型 <c>metricType</c>、是否整表比对 <c>isFullTableCount</c>、源端与目标端是否校验所有列（<c>sourceCheckAllColumn</c>、<c>targetCheckAllColumn</c>）；另有配置详情 <c>taskConfigInfo</c> 与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> indicates the total number of configurations that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the configuration list for the current page. Each list element includes the configuration ID, whether the configuration is skipped (<c>isSkipped</c>), the associated task (<c>taskId</c>), and the check type (<c>checkType</c>). Source-side fields include <c>sourceDataSource</c>, <c>sourceId</c>, <c>sourceType</c>, <c>sourceTable</c>, <c>sourceColumns</c>, <c>sourcePartition</c>, <c>sourceWhereClause</c>, <c>sourceGroupClause</c>, <c>sourceHint</c>, <c>sourceSql</c>, and <c>sourceCompareKey</c>. The corresponding target-side fields include <c>targetDataSource</c>, <c>targetId</c>, <c>targetType</c>, <c>targetTable</c>, <c>targetColumns</c>, <c>targetPartition</c>, <c>targetWhereClause</c>, <c>targetGroupClause</c>, <c>targetHint</c>, <c>targetSql</c>, and <c>targetCompareKey</c>. Comparison rule fields include the total data volume threshold (<c>totalCountThreshold</c>), group data volume threshold (<c>groupCountThreshold</c>), batch size (<c>batchSize</c>), check algorithm (<c>algorithm</c>), comparison type (<c>comparator</c>), metric type (<c>metricType</c>), whether to perform full-table comparison (<c>isFullTableCount</c>), and whether to validate all columns on the source and target sides (<c>sourceCheckAllColumn</c> and <c>targetCheckAllColumn</c>). Additional fields include configuration details (<c>taskConfigInfo</c>) and a reserved field (<c>extra</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9545,21 +9829,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询校验任务配置</para>
+        /// <para>Queries the table-level configuration list of a data validation node by node ID and source table name with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按数据校验任务 ID 分页查询该任务下的表明细配置，支持按源表名称模糊筛选，用于在任务包含较多表时定位单张表的配置，核对源端与目标端的表、字段、分区、过滤条件与比对规则是否符合预期。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the table-level configurations of a data validation node by node ID with paging. Supports fuzzy filtering by source table name. This operation is useful for locating the configuration of a specific table when the node contains many tables, and for verifying whether the source and target table, column, partition, filter condition, and comparison rule settings meet expectations.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为数据校验任务 ID。</description></item>
-        /// <item><description><c>srcTable</c> 选填，按源表名称模糊搜索。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
+        /// <item><description><c>taskId</c> is required and specifies the ID of the data validation task.</description></item>
+        /// <item><description><c>srcTable</c> is optional and performs a fuzzy search by source table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的配置总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页配置列表。列表元素包含配置 ID、是否跳过 <c>isSkipped</c>、所属任务 <c>taskId</c> 与校验类型 <c>checkType</c>；源端的 <c>sourceDataSource</c>、<c>sourceId</c>、<c>sourceType</c>、<c>sourceTable</c>、<c>sourceColumns</c>、<c>sourcePartition</c>、<c>sourceWhereClause</c>、<c>sourceGroupClause</c>、<c>sourceHint</c>、<c>sourceSql</c> 与 <c>sourceCompareKey</c>，以及目标端一一对应的 <c>targetDataSource</c>、<c>targetId</c>、<c>targetType</c>、<c>targetTable</c>、<c>targetColumns</c>、<c>targetPartition</c>、<c>targetWhereClause</c>、<c>targetGroupClause</c>、<c>targetHint</c>、<c>targetSql</c> 与 <c>targetCompareKey</c>；比对规则相关的总数据量阈值 <c>totalCountThreshold</c>、分组数据量阈值 <c>groupCountThreshold</c>、批大小 <c>batchSize</c>、校验算法 <c>algorithm</c>、比较类型 <c>comparator</c>、指标类型 <c>metricType</c>、是否整表比对 <c>isFullTableCount</c>、源端与目标端是否校验所有列（<c>sourceCheckAllColumn</c>、<c>targetCheckAllColumn</c>）；另有配置详情 <c>taskConfigInfo</c> 与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> indicates the total number of configurations that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the configuration list for the current page. Each list element includes the configuration ID, whether the configuration is skipped (<c>isSkipped</c>), the associated task (<c>taskId</c>), and the check type (<c>checkType</c>). Source-side fields include <c>sourceDataSource</c>, <c>sourceId</c>, <c>sourceType</c>, <c>sourceTable</c>, <c>sourceColumns</c>, <c>sourcePartition</c>, <c>sourceWhereClause</c>, <c>sourceGroupClause</c>, <c>sourceHint</c>, <c>sourceSql</c>, and <c>sourceCompareKey</c>. The corresponding target-side fields include <c>targetDataSource</c>, <c>targetId</c>, <c>targetType</c>, <c>targetTable</c>, <c>targetColumns</c>, <c>targetPartition</c>, <c>targetWhereClause</c>, <c>targetGroupClause</c>, <c>targetHint</c>, <c>targetSql</c>, and <c>targetCompareKey</c>. Comparison rule fields include the total data volume threshold (<c>totalCountThreshold</c>), group data volume threshold (<c>groupCountThreshold</c>), batch size (<c>batchSize</c>), check algorithm (<c>algorithm</c>), comparison type (<c>comparator</c>), metric type (<c>metricType</c>), whether to perform full-table comparison (<c>isFullTableCount</c>), and whether to validate all columns on the source and target sides (<c>sourceCheckAllColumn</c> and <c>targetCheckAllColumn</c>). Additional fields include configuration details (<c>taskConfigInfo</c>) and a reserved field (<c>extra</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9578,21 +9862,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询校验任务配置</para>
+        /// <para>Queries the table-level configuration list of a data validation node by node ID and source table name with paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按数据校验任务 ID 分页查询该任务下的表明细配置，支持按源表名称模糊筛选，用于在任务包含较多表时定位单张表的配置，核对源端与目标端的表、字段、分区、过滤条件与比对规则是否符合预期。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the table-level configurations of a data validation node by node ID with paging. Supports fuzzy filtering by source table name. This operation is useful for locating the configuration of a specific table when the node contains many tables, and for verifying whether the source and target table, column, partition, filter condition, and comparison rule settings meet expectations.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为数据校验任务 ID。</description></item>
-        /// <item><description><c>srcTable</c> 选填，按源表名称模糊搜索。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
+        /// <item><description><c>taskId</c> is required and specifies the ID of the data validation task.</description></item>
+        /// <item><description><c>srcTable</c> is optional and performs a fuzzy search by source table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的配置总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页配置列表。列表元素包含配置 ID、是否跳过 <c>isSkipped</c>、所属任务 <c>taskId</c> 与校验类型 <c>checkType</c>；源端的 <c>sourceDataSource</c>、<c>sourceId</c>、<c>sourceType</c>、<c>sourceTable</c>、<c>sourceColumns</c>、<c>sourcePartition</c>、<c>sourceWhereClause</c>、<c>sourceGroupClause</c>、<c>sourceHint</c>、<c>sourceSql</c> 与 <c>sourceCompareKey</c>，以及目标端一一对应的 <c>targetDataSource</c>、<c>targetId</c>、<c>targetType</c>、<c>targetTable</c>、<c>targetColumns</c>、<c>targetPartition</c>、<c>targetWhereClause</c>、<c>targetGroupClause</c>、<c>targetHint</c>、<c>targetSql</c> 与 <c>targetCompareKey</c>；比对规则相关的总数据量阈值 <c>totalCountThreshold</c>、分组数据量阈值 <c>groupCountThreshold</c>、批大小 <c>batchSize</c>、校验算法 <c>algorithm</c>、比较类型 <c>comparator</c>、指标类型 <c>metricType</c>、是否整表比对 <c>isFullTableCount</c>、源端与目标端是否校验所有列（<c>sourceCheckAllColumn</c>、<c>targetCheckAllColumn</c>）；另有配置详情 <c>taskConfigInfo</c> 与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> indicates the total number of configurations that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the configuration list for the current page. Each list element includes the configuration ID, whether the configuration is skipped (<c>isSkipped</c>), the associated task (<c>taskId</c>), and the check type (<c>checkType</c>). Source-side fields include <c>sourceDataSource</c>, <c>sourceId</c>, <c>sourceType</c>, <c>sourceTable</c>, <c>sourceColumns</c>, <c>sourcePartition</c>, <c>sourceWhereClause</c>, <c>sourceGroupClause</c>, <c>sourceHint</c>, <c>sourceSql</c>, and <c>sourceCompareKey</c>. The corresponding target-side fields include <c>targetDataSource</c>, <c>targetId</c>, <c>targetType</c>, <c>targetTable</c>, <c>targetColumns</c>, <c>targetPartition</c>, <c>targetWhereClause</c>, <c>targetGroupClause</c>, <c>targetHint</c>, <c>targetSql</c>, and <c>targetCompareKey</c>. Comparison rule fields include the total data volume threshold (<c>totalCountThreshold</c>), group data volume threshold (<c>groupCountThreshold</c>), batch size (<c>batchSize</c>), check algorithm (<c>algorithm</c>), comparison type (<c>comparator</c>), metric type (<c>metricType</c>), whether to perform full-table comparison (<c>isFullTableCount</c>), and whether to validate all columns on the source and target sides (<c>sourceCheckAllColumn</c> and <c>targetCheckAllColumn</c>). Additional fields include configuration details (<c>taskConfigInfo</c>) and a reserved field (<c>extra</c>).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9611,21 +9895,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询校验报告，表维度明细</para>
+        /// <para>Queries a validation report by paged query, returning job dimension summaries and validation result details for each table within the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按校验作业（批次）分页查询校验报告明细，返回每个校验子作业及其对应表的校验结果，包含行数比对、字段与指标通过情况、差异率、源端与目标端配置和错误信息，是查看一次校验执行结论的主要入口。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries validation report details by validation job (batch) with paging. Returns the validation results for each validation sub-job and its corresponding tables, including row count comparison, field and metric pass status, difference rate, source and destination configurations, and fault information. This is the primary entry point for viewing the conclusions of a validation execution.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象，其中 <c>batchId</c> 必填，为校验作业（批次）ID，取自保存校验任务接口的返回值。</description></item>
-        /// <item><description><c>checkResult</c> 选填，按校验结果筛选（0 无记录、1 通过、2 不通过）；<c>jobStatus</c> 选填，按作业状态筛选（0 INIT 待运行、1 RUNNING 运行中、2 FINISHED 运行完成、3 STOPPED 终止、4 FAIL 失败、6 READY 就绪、7 SKIPPED 跳过）；<c>tableName</c> 选填，按表名筛选。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，分别表示页码（最小值与默认值为 1）与每页条数。</description></item>
+        /// <item><description>The request body is a JSON object. The <c>batchId</c> parameter is required and specifies the validation job (batch) ID, which is obtained from the response of the save validation task operation.</description></item>
+        /// <item><description><c>checkResult</c> is optional and filters by validation result (0: no records, 1: passed, 2: failed). <c>jobStatus</c> is optional and filters by job status (0: INIT - pending, 1: RUNNING - running, 2: FINISHED - completed, 3: STOPPED - stopped, 4: FAIL - failed, 6: READY - ready, 7: SKIPPED - skipped). <c>tableName</c> is optional and filters by table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional and specify the page number (minimum and default value: 1) and the number of entries per page, respectively.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的明细总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页明细列表。列表元素包含批次与作业标识（<c>batchId</c>、<c>jobId</c>、<c>resultId</c>）、是否跳过 <c>isSkipped</c>、校验结果 <c>checkResult</c> 与作业状态 <c>jobStatus</c>；源端与目标端行数（<c>sourceCount</c>、<c>targetCount</c>）、实际差异与相同行数（<c>realDiffCount</c>、<c>realSameCount</c>）、预期差异行数 <c>expDiffCount</c>、差异率 <c>diffRate</c>、作业完成率 <c>completionRate</c>、仅源端或仅目标端存在的条数（<c>onlySrcCount</c>、<c>onlyDstCount</c>）；字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）；源端与目标端的数据源、类型、表、字段、分区、where 与 group 条件、hint、SQL 列表、比较字段与错误信息；以及阈值 <c>threshold</c>、分组数据量阈值 <c>totalCountThreshold</c>、模板名称 <c>templateName</c>、任务配置 ID <c>taskConfigId</c>、执行时间 <c>execTime</c>、完成时间 <c>finishTime</c> 与错误信息 <c>errorMsg</c>。其中的 <c>jobId</c> 与 <c>resultId</c> 可分别用于查询步骤维度明细与字段维度明细。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> is the total number of details that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> is the list of details for the current page. Each list element contains batch and job identifiers (<c>batchId</c>, <c>jobId</c>, <c>resultId</c>), whether the job is skipped (<c>isSkipped</c>), the validation result (<c>checkResult</c>), and the job status (<c>jobStatus</c>). It also includes source and destination row counts (<c>sourceCount</c>, <c>targetCount</c>), actual difference and matching row counts (<c>realDiffCount</c>, <c>realSameCount</c>), expected difference row count (<c>expDiffCount</c>), difference rate (<c>diffRate</c>), job completion rate (<c>completionRate</c>), and counts of rows that exist only in the source or only in the destination (<c>onlySrcCount</c>, <c>onlyDstCount</c>). Field and metric-level validation counts and pass counts are provided (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>). Source and destination details include the data source, type, table, fields, partition, WHERE and GROUP conditions, hints, SQL list, comparison fields, and error information. Additional fields include the threshold (<c>threshold</c>), group data volume threshold (<c>totalCountThreshold</c>), template name (<c>templateName</c>), task configuration ID (<c>taskConfigId</c>), execution time (<c>execTime</c>), completion time (<c>finishTime</c>), and error message (<c>errorMsg</c>). The <c>jobId</c> and <c>resultId</c> can be used to query step-level details and field-level details, respectively.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9691,21 +9975,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询校验报告，表维度明细</para>
+        /// <para>Queries a validation report by paged query, returning job dimension summaries and validation result details for each table within the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按校验作业（批次）分页查询校验报告明细，返回每个校验子作业及其对应表的校验结果，包含行数比对、字段与指标通过情况、差异率、源端与目标端配置和错误信息，是查看一次校验执行结论的主要入口。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries validation report details by validation job (batch) with paging. Returns the validation results for each validation sub-job and its corresponding tables, including row count comparison, field and metric pass status, difference rate, source and destination configurations, and fault information. This is the primary entry point for viewing the conclusions of a validation execution.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象，其中 <c>batchId</c> 必填，为校验作业（批次）ID，取自保存校验任务接口的返回值。</description></item>
-        /// <item><description><c>checkResult</c> 选填，按校验结果筛选（0 无记录、1 通过、2 不通过）；<c>jobStatus</c> 选填，按作业状态筛选（0 INIT 待运行、1 RUNNING 运行中、2 FINISHED 运行完成、3 STOPPED 终止、4 FAIL 失败、6 READY 就绪、7 SKIPPED 跳过）；<c>tableName</c> 选填，按表名筛选。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，分别表示页码（最小值与默认值为 1）与每页条数。</description></item>
+        /// <item><description>The request body is a JSON object. The <c>batchId</c> parameter is required and specifies the validation job (batch) ID, which is obtained from the response of the save validation task operation.</description></item>
+        /// <item><description><c>checkResult</c> is optional and filters by validation result (0: no records, 1: passed, 2: failed). <c>jobStatus</c> is optional and filters by job status (0: INIT - pending, 1: RUNNING - running, 2: FINISHED - completed, 3: STOPPED - stopped, 4: FAIL - failed, 6: READY - ready, 7: SKIPPED - skipped). <c>tableName</c> is optional and filters by table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional and specify the page number (minimum and default value: 1) and the number of entries per page, respectively.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的明细总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页明细列表。列表元素包含批次与作业标识（<c>batchId</c>、<c>jobId</c>、<c>resultId</c>）、是否跳过 <c>isSkipped</c>、校验结果 <c>checkResult</c> 与作业状态 <c>jobStatus</c>；源端与目标端行数（<c>sourceCount</c>、<c>targetCount</c>）、实际差异与相同行数（<c>realDiffCount</c>、<c>realSameCount</c>）、预期差异行数 <c>expDiffCount</c>、差异率 <c>diffRate</c>、作业完成率 <c>completionRate</c>、仅源端或仅目标端存在的条数（<c>onlySrcCount</c>、<c>onlyDstCount</c>）；字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）；源端与目标端的数据源、类型、表、字段、分区、where 与 group 条件、hint、SQL 列表、比较字段与错误信息；以及阈值 <c>threshold</c>、分组数据量阈值 <c>totalCountThreshold</c>、模板名称 <c>templateName</c>、任务配置 ID <c>taskConfigId</c>、执行时间 <c>execTime</c>、完成时间 <c>finishTime</c> 与错误信息 <c>errorMsg</c>。其中的 <c>jobId</c> 与 <c>resultId</c> 可分别用于查询步骤维度明细与字段维度明细。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> is the total number of details that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> is the list of details for the current page. Each list element contains batch and job identifiers (<c>batchId</c>, <c>jobId</c>, <c>resultId</c>), whether the job is skipped (<c>isSkipped</c>), the validation result (<c>checkResult</c>), and the job status (<c>jobStatus</c>). It also includes source and destination row counts (<c>sourceCount</c>, <c>targetCount</c>), actual difference and matching row counts (<c>realDiffCount</c>, <c>realSameCount</c>), expected difference row count (<c>expDiffCount</c>), difference rate (<c>diffRate</c>), job completion rate (<c>completionRate</c>), and counts of rows that exist only in the source or only in the destination (<c>onlySrcCount</c>, <c>onlyDstCount</c>). Field and metric-level validation counts and pass counts are provided (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>). Source and destination details include the data source, type, table, fields, partition, WHERE and GROUP conditions, hints, SQL list, comparison fields, and error information. Additional fields include the threshold (<c>threshold</c>), group data volume threshold (<c>totalCountThreshold</c>), template name (<c>templateName</c>), task configuration ID (<c>taskConfigId</c>), execution time (<c>execTime</c>), completion time (<c>finishTime</c>), and error message (<c>errorMsg</c>). The <c>jobId</c> and <c>resultId</c> can be used to query step-level details and field-level details, respectively.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9771,21 +10055,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询校验报告，表维度明细</para>
+        /// <para>Queries a validation report by paged query, returning job dimension summaries and validation result details for each table within the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按校验作业（批次）分页查询校验报告明细，返回每个校验子作业及其对应表的校验结果，包含行数比对、字段与指标通过情况、差异率、源端与目标端配置和错误信息，是查看一次校验执行结论的主要入口。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries validation report details by validation job (batch) with paging. Returns the validation results for each validation sub-job and its corresponding tables, including row count comparison, field and metric pass status, difference rate, source and destination configurations, and fault information. This is the primary entry point for viewing the conclusions of a validation execution.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象，其中 <c>batchId</c> 必填，为校验作业（批次）ID，取自保存校验任务接口的返回值。</description></item>
-        /// <item><description><c>checkResult</c> 选填，按校验结果筛选（0 无记录、1 通过、2 不通过）；<c>jobStatus</c> 选填，按作业状态筛选（0 INIT 待运行、1 RUNNING 运行中、2 FINISHED 运行完成、3 STOPPED 终止、4 FAIL 失败、6 READY 就绪、7 SKIPPED 跳过）；<c>tableName</c> 选填，按表名筛选。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，分别表示页码（最小值与默认值为 1）与每页条数。</description></item>
+        /// <item><description>The request body is a JSON object. The <c>batchId</c> parameter is required and specifies the validation job (batch) ID, which is obtained from the response of the save validation task operation.</description></item>
+        /// <item><description><c>checkResult</c> is optional and filters by validation result (0: no records, 1: passed, 2: failed). <c>jobStatus</c> is optional and filters by job status (0: INIT - pending, 1: RUNNING - running, 2: FINISHED - completed, 3: STOPPED - stopped, 4: FAIL - failed, 6: READY - ready, 7: SKIPPED - skipped). <c>tableName</c> is optional and filters by table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional and specify the page number (minimum and default value: 1) and the number of entries per page, respectively.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的明细总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页明细列表。列表元素包含批次与作业标识（<c>batchId</c>、<c>jobId</c>、<c>resultId</c>）、是否跳过 <c>isSkipped</c>、校验结果 <c>checkResult</c> 与作业状态 <c>jobStatus</c>；源端与目标端行数（<c>sourceCount</c>、<c>targetCount</c>）、实际差异与相同行数（<c>realDiffCount</c>、<c>realSameCount</c>）、预期差异行数 <c>expDiffCount</c>、差异率 <c>diffRate</c>、作业完成率 <c>completionRate</c>、仅源端或仅目标端存在的条数（<c>onlySrcCount</c>、<c>onlyDstCount</c>）；字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）；源端与目标端的数据源、类型、表、字段、分区、where 与 group 条件、hint、SQL 列表、比较字段与错误信息；以及阈值 <c>threshold</c>、分组数据量阈值 <c>totalCountThreshold</c>、模板名称 <c>templateName</c>、任务配置 ID <c>taskConfigId</c>、执行时间 <c>execTime</c>、完成时间 <c>finishTime</c> 与错误信息 <c>errorMsg</c>。其中的 <c>jobId</c> 与 <c>resultId</c> 可分别用于查询步骤维度明细与字段维度明细。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> is the total number of details that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> is the list of details for the current page. Each list element contains batch and job identifiers (<c>batchId</c>, <c>jobId</c>, <c>resultId</c>), whether the job is skipped (<c>isSkipped</c>), the validation result (<c>checkResult</c>), and the job status (<c>jobStatus</c>). It also includes source and destination row counts (<c>sourceCount</c>, <c>targetCount</c>), actual difference and matching row counts (<c>realDiffCount</c>, <c>realSameCount</c>), expected difference row count (<c>expDiffCount</c>), difference rate (<c>diffRate</c>), job completion rate (<c>completionRate</c>), and counts of rows that exist only in the source or only in the destination (<c>onlySrcCount</c>, <c>onlyDstCount</c>). Field and metric-level validation counts and pass counts are provided (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>). Source and destination details include the data source, type, table, fields, partition, WHERE and GROUP conditions, hints, SQL list, comparison fields, and error information. Additional fields include the threshold (<c>threshold</c>), group data volume threshold (<c>totalCountThreshold</c>), template name (<c>templateName</c>), task configuration ID (<c>taskConfigId</c>), execution time (<c>execTime</c>), completion time (<c>finishTime</c>), and error message (<c>errorMsg</c>). The <c>jobId</c> and <c>resultId</c> can be used to query step-level details and field-level details, respectively.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9804,21 +10088,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询校验报告，表维度明细</para>
+        /// <para>Queries a validation report by paged query, returning job dimension summaries and validation result details for each table within the job.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按校验作业（批次）分页查询校验报告明细，返回每个校验子作业及其对应表的校验结果，包含行数比对、字段与指标通过情况、差异率、源端与目标端配置和错误信息，是查看一次校验执行结论的主要入口。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Queries validation report details by validation job (batch) with paging. Returns the validation results for each validation sub-job and its corresponding tables, including row count comparison, field and metric pass status, difference rate, source and destination configurations, and fault information. This is the primary entry point for viewing the conclusions of a validation execution.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象，其中 <c>batchId</c> 必填，为校验作业（批次）ID，取自保存校验任务接口的返回值。</description></item>
-        /// <item><description><c>checkResult</c> 选填，按校验结果筛选（0 无记录、1 通过、2 不通过）；<c>jobStatus</c> 选填，按作业状态筛选（0 INIT 待运行、1 RUNNING 运行中、2 FINISHED 运行完成、3 STOPPED 终止、4 FAIL 失败、6 READY 就绪、7 SKIPPED 跳过）；<c>tableName</c> 选填，按表名筛选。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，分别表示页码（最小值与默认值为 1）与每页条数。</description></item>
+        /// <item><description>The request body is a JSON object. The <c>batchId</c> parameter is required and specifies the validation job (batch) ID, which is obtained from the response of the save validation task operation.</description></item>
+        /// <item><description><c>checkResult</c> is optional and filters by validation result (0: no records, 1: passed, 2: failed). <c>jobStatus</c> is optional and filters by job status (0: INIT - pending, 1: RUNNING - running, 2: FINISHED - completed, 3: STOPPED - stopped, 4: FAIL - failed, 6: READY - ready, 7: SKIPPED - skipped). <c>tableName</c> is optional and filters by table name.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional and specify the page number (minimum and default value: 1) and the number of entries per page, respectively.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的明细总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页明细列表。列表元素包含批次与作业标识（<c>batchId</c>、<c>jobId</c>、<c>resultId</c>）、是否跳过 <c>isSkipped</c>、校验结果 <c>checkResult</c> 与作业状态 <c>jobStatus</c>；源端与目标端行数（<c>sourceCount</c>、<c>targetCount</c>）、实际差异与相同行数（<c>realDiffCount</c>、<c>realSameCount</c>）、预期差异行数 <c>expDiffCount</c>、差异率 <c>diffRate</c>、作业完成率 <c>completionRate</c>、仅源端或仅目标端存在的条数（<c>onlySrcCount</c>、<c>onlyDstCount</c>）；字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）；源端与目标端的数据源、类型、表、字段、分区、where 与 group 条件、hint、SQL 列表、比较字段与错误信息；以及阈值 <c>threshold</c>、分组数据量阈值 <c>totalCountThreshold</c>、模板名称 <c>templateName</c>、任务配置 ID <c>taskConfigId</c>、执行时间 <c>execTime</c>、完成时间 <c>finishTime</c> 与错误信息 <c>errorMsg</c>。其中的 <c>jobId</c> 与 <c>resultId</c> 可分别用于查询步骤维度明细与字段维度明细。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a paginated response: <c>totalCount</c> is the total number of details that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> is the list of details for the current page. Each list element contains batch and job identifiers (<c>batchId</c>, <c>jobId</c>, <c>resultId</c>), whether the job is skipped (<c>isSkipped</c>), the validation result (<c>checkResult</c>), and the job status (<c>jobStatus</c>). It also includes source and destination row counts (<c>sourceCount</c>, <c>targetCount</c>), actual difference and matching row counts (<c>realDiffCount</c>, <c>realSameCount</c>), expected difference row count (<c>expDiffCount</c>), difference rate (<c>diffRate</c>), job completion rate (<c>completionRate</c>), and counts of rows that exist only in the source or only in the destination (<c>onlySrcCount</c>, <c>onlyDstCount</c>). Field and metric-level validation counts and pass counts are provided (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>). Source and destination details include the data source, type, table, fields, partition, WHERE and GROUP conditions, hints, SQL list, comparison fields, and error information. Additional fields include the threshold (<c>threshold</c>), group data volume threshold (<c>totalCountThreshold</c>), template name (<c>templateName</c>), task configuration ID (<c>taskConfigId</c>), execution time (<c>execTime</c>), completion time (<c>finishTime</c>), and error message (<c>errorMsg</c>). The <c>jobId</c> and <c>resultId</c> can be used to query step-level details and field-level details, respectively.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10237,21 +10521,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询报告-作业维度明细（分区列表）</para>
+        /// <para>Queries a paged list of step (partition) dimension verification details by a UUID-format job ID with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按 UUID 形式的校验子作业 ID 分页查询 step（分区或分片）维度的校验明细。返回的明细与按数据库 ID 查询的接口一致，区别在于入参形态：本接口直接使用校验报告中给出的子作业 ID 字符串，无需先换算为数据库 ID，适合从报告结果直接下钻。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query for step (partition or shard) dimension verification details by a UUID-format verification sub-job ID. The returned details are identical to those returned by the database ID-based query operation. The difference is in the input parameter format: this operation directly uses the sub-job ID character string provided in the verification report, without requiring conversion to a database ID. This makes it suitable for drilling down directly from report results.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>jobId</c> 必填，为 UUID 形式的校验子作业 ID（字符串），取自校验报告查询接口返回的 <c>jobId</c>。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
-        /// <item><description>本接口不支持按校验结果或 step 状态筛选；需要筛选时改用按数据库 ID 查询 step 明细的接口。</description></item>
+        /// <item><description><c>jobId</c> is required. It is a UUID-format verification sub-job ID (string), obtained from the <c>jobId</c> field returned by the verification report query operation.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
+        /// <item><description>This operation does not support filtering by verification result or step status. To filter, use the operation that queries step details by database ID instead.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的 step 总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页 step 明细。列表元素包含步骤 ID <c>stepId</c>、校验结果 ID <c>resultId</c>、分片边界 <c>boundary</c>、源端与目标端分区名称（<c>sourcePtName</c>、<c>targetPtName</c>）、源端与目标端数据量（<c>srcCount</c>、<c>dstCount</c>）、源端与目标端执行 SQL（<c>srcSql</c>、<c>dstSql</c>）、step 状态 <c>status</c>（0 创建、1 运行中、2 运行完成、3 停止、4 取消）、一致性结论 <c>isConsistent</c>（0 不一致、1 一致）、错误消息 <c>errMessage</c>、启动与结束时间（<c>gmtStart</c>、<c>gmtEnd</c>）、字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>A paginated response is returned: <c>totalCount</c> is the total number of steps that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the step details for the current page. Each list element includes the step ID <c>stepId</c>, verification result ID <c>resultId</c>, shard boundary <c>boundary</c>, source and destination partition names (<c>sourcePtName</c>, <c>targetPtName</c>), source and destination data volumes (<c>srcCount</c>, <c>dstCount</c>), source and destination execution SQL statements (<c>srcSql</c>, <c>dstSql</c>), step status <c>status</c> (0: created, 1: running, 2: completed, 3: stopped, 4: canceled), consistency conclusion <c>isConsistent</c> (0: inconsistent, 1: consistent), error message <c>errMessage</c>, start and end times (<c>gmtStart</c>, <c>gmtEnd</c>), field-level and metric-level verification counts and pass counts (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>), and a reserved field <c>extra</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10305,21 +10589,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询报告-作业维度明细（分区列表）</para>
+        /// <para>Queries a paged list of step (partition) dimension verification details by a UUID-format job ID with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按 UUID 形式的校验子作业 ID 分页查询 step（分区或分片）维度的校验明细。返回的明细与按数据库 ID 查询的接口一致，区别在于入参形态：本接口直接使用校验报告中给出的子作业 ID 字符串，无需先换算为数据库 ID，适合从报告结果直接下钻。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query for step (partition or shard) dimension verification details by a UUID-format verification sub-job ID. The returned details are identical to those returned by the database ID-based query operation. The difference is in the input parameter format: this operation directly uses the sub-job ID character string provided in the verification report, without requiring conversion to a database ID. This makes it suitable for drilling down directly from report results.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>jobId</c> 必填，为 UUID 形式的校验子作业 ID（字符串），取自校验报告查询接口返回的 <c>jobId</c>。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
-        /// <item><description>本接口不支持按校验结果或 step 状态筛选；需要筛选时改用按数据库 ID 查询 step 明细的接口。</description></item>
+        /// <item><description><c>jobId</c> is required. It is a UUID-format verification sub-job ID (string), obtained from the <c>jobId</c> field returned by the verification report query operation.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
+        /// <item><description>This operation does not support filtering by verification result or step status. To filter, use the operation that queries step details by database ID instead.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的 step 总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页 step 明细。列表元素包含步骤 ID <c>stepId</c>、校验结果 ID <c>resultId</c>、分片边界 <c>boundary</c>、源端与目标端分区名称（<c>sourcePtName</c>、<c>targetPtName</c>）、源端与目标端数据量（<c>srcCount</c>、<c>dstCount</c>）、源端与目标端执行 SQL（<c>srcSql</c>、<c>dstSql</c>）、step 状态 <c>status</c>（0 创建、1 运行中、2 运行完成、3 停止、4 取消）、一致性结论 <c>isConsistent</c>（0 不一致、1 一致）、错误消息 <c>errMessage</c>、启动与结束时间（<c>gmtStart</c>、<c>gmtEnd</c>）、字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>A paginated response is returned: <c>totalCount</c> is the total number of steps that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the step details for the current page. Each list element includes the step ID <c>stepId</c>, verification result ID <c>resultId</c>, shard boundary <c>boundary</c>, source and destination partition names (<c>sourcePtName</c>, <c>targetPtName</c>), source and destination data volumes (<c>srcCount</c>, <c>dstCount</c>), source and destination execution SQL statements (<c>srcSql</c>, <c>dstSql</c>), step status <c>status</c> (0: created, 1: running, 2: completed, 3: stopped, 4: canceled), consistency conclusion <c>isConsistent</c> (0: inconsistent, 1: consistent), error message <c>errMessage</c>, start and end times (<c>gmtStart</c>, <c>gmtEnd</c>), field-level and metric-level verification counts and pass counts (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>), and a reserved field <c>extra</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10373,21 +10657,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询报告-作业维度明细（分区列表）</para>
+        /// <para>Queries a paged list of step (partition) dimension verification details by a UUID-format job ID with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按 UUID 形式的校验子作业 ID 分页查询 step（分区或分片）维度的校验明细。返回的明细与按数据库 ID 查询的接口一致，区别在于入参形态：本接口直接使用校验报告中给出的子作业 ID 字符串，无需先换算为数据库 ID，适合从报告结果直接下钻。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query for step (partition or shard) dimension verification details by a UUID-format verification sub-job ID. The returned details are identical to those returned by the database ID-based query operation. The difference is in the input parameter format: this operation directly uses the sub-job ID character string provided in the verification report, without requiring conversion to a database ID. This makes it suitable for drilling down directly from report results.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>jobId</c> 必填，为 UUID 形式的校验子作业 ID（字符串），取自校验报告查询接口返回的 <c>jobId</c>。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
-        /// <item><description>本接口不支持按校验结果或 step 状态筛选；需要筛选时改用按数据库 ID 查询 step 明细的接口。</description></item>
+        /// <item><description><c>jobId</c> is required. It is a UUID-format verification sub-job ID (string), obtained from the <c>jobId</c> field returned by the verification report query operation.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
+        /// <item><description>This operation does not support filtering by verification result or step status. To filter, use the operation that queries step details by database ID instead.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的 step 总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页 step 明细。列表元素包含步骤 ID <c>stepId</c>、校验结果 ID <c>resultId</c>、分片边界 <c>boundary</c>、源端与目标端分区名称（<c>sourcePtName</c>、<c>targetPtName</c>）、源端与目标端数据量（<c>srcCount</c>、<c>dstCount</c>）、源端与目标端执行 SQL（<c>srcSql</c>、<c>dstSql</c>）、step 状态 <c>status</c>（0 创建、1 运行中、2 运行完成、3 停止、4 取消）、一致性结论 <c>isConsistent</c>（0 不一致、1 一致）、错误消息 <c>errMessage</c>、启动与结束时间（<c>gmtStart</c>、<c>gmtEnd</c>）、字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>A paginated response is returned: <c>totalCount</c> is the total number of steps that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the step details for the current page. Each list element includes the step ID <c>stepId</c>, verification result ID <c>resultId</c>, shard boundary <c>boundary</c>, source and destination partition names (<c>sourcePtName</c>, <c>targetPtName</c>), source and destination data volumes (<c>srcCount</c>, <c>dstCount</c>), source and destination execution SQL statements (<c>srcSql</c>, <c>dstSql</c>), step status <c>status</c> (0: created, 1: running, 2: completed, 3: stopped, 4: canceled), consistency conclusion <c>isConsistent</c> (0: inconsistent, 1: consistent), error message <c>errMessage</c>, start and end times (<c>gmtStart</c>, <c>gmtEnd</c>), field-level and metric-level verification counts and pass counts (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>), and a reserved field <c>extra</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10406,21 +10690,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询报告-作业维度明细（分区列表）</para>
+        /// <para>Queries a paged list of step (partition) dimension verification details by a UUID-format job ID with paging support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>按 UUID 形式的校验子作业 ID 分页查询 step（分区或分片）维度的校验明细。返回的明细与按数据库 ID 查询的接口一致，区别在于入参形态：本接口直接使用校验报告中给出的子作业 ID 字符串，无需先换算为数据库 ID，适合从报告结果直接下钻。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query for step (partition or shard) dimension verification details by a UUID-format verification sub-job ID. The returned details are identical to those returned by the database ID-based query operation. The difference is in the input parameter format: this operation directly uses the sub-job ID character string provided in the verification report, without requiring conversion to a database ID. This makes it suitable for drilling down directly from report results.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>jobId</c> 必填，为 UUID 形式的校验子作业 ID（字符串），取自校验报告查询接口返回的 <c>jobId</c>。</description></item>
-        /// <item><description><c>pageIndex</c> 与 <c>pageSize</c> 选填，默认值为 1 与 10。</description></item>
-        /// <item><description>本接口不支持按校验结果或 step 状态筛选；需要筛选时改用按数据库 ID 查询 step 明细的接口。</description></item>
+        /// <item><description><c>jobId</c> is required. It is a UUID-format verification sub-job ID (string), obtained from the <c>jobId</c> field returned by the verification report query operation.</description></item>
+        /// <item><description><c>pageIndex</c> and <c>pageSize</c> are optional. The default values are 1 and 10.</description></item>
+        /// <item><description>This operation does not support filtering by verification result or step status. To filter, use the operation that queries step details by database ID instead.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回分页响应：<c>totalCount</c> 为满足条件的 step 总数，<c>pageIndex</c> 与 <c>pageSize</c> 回显本次分页参数，<c>data</c> 为当前页 step 明细。列表元素包含步骤 ID <c>stepId</c>、校验结果 ID <c>resultId</c>、分片边界 <c>boundary</c>、源端与目标端分区名称（<c>sourcePtName</c>、<c>targetPtName</c>）、源端与目标端数据量（<c>srcCount</c>、<c>dstCount</c>）、源端与目标端执行 SQL（<c>srcSql</c>、<c>dstSql</c>）、step 状态 <c>status</c>（0 创建、1 运行中、2 运行完成、3 停止、4 取消）、一致性结论 <c>isConsistent</c>（0 不一致、1 一致）、错误消息 <c>errMessage</c>、启动与结束时间（<c>gmtStart</c>、<c>gmtEnd</c>）、字段与指标维度的校验数与通过数（<c>checkColumCount</c>、<c>passColumCount</c>、<c>metricColumCount</c>、<c>metricPassColumCount</c>）与备用字段 <c>extra</c>。</para>
+        /// <h2>Response description</h2>
+        /// <para>A paginated response is returned: <c>totalCount</c> is the total number of steps that meet the conditions, <c>pageIndex</c> and <c>pageSize</c> echo the pagination parameters of the current request, and <c>data</c> contains the step details for the current page. Each list element includes the step ID <c>stepId</c>, verification result ID <c>resultId</c>, shard boundary <c>boundary</c>, source and destination partition names (<c>sourcePtName</c>, <c>targetPtName</c>), source and destination data volumes (<c>srcCount</c>, <c>dstCount</c>), source and destination execution SQL statements (<c>srcSql</c>, <c>dstSql</c>), step status <c>status</c> (0: created, 1: running, 2: completed, 3: stopped, 4: canceled), consistency conclusion <c>isConsistent</c> (0: inconsistent, 1: consistent), error message <c>errMessage</c>, start and end times (<c>gmtStart</c>, <c>gmtEnd</c>), field-level and metric-level verification counts and pass counts (<c>checkColumCount</c>, <c>passColumCount</c>, <c>metricColumCount</c>, <c>metricPassColumCount</c>), and a reserved field <c>extra</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11169,17 +11453,17 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度skillread</para>
+        /// <para>Submits a source workflow read task for a Skill internal operation and returns an asynchronous execution credential. Query the result by calling GetInnerReadAsyncResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>源端工作流读取任务提交内部接口。按数据源名称提交一次源端工作流读取，接口同步返回受理结果，读取的异步执行结果通过 GetInnerReadAsyncResult 查询。</para>
-        /// <h2>请求说明</h2>
-        /// <para>请求体为 JSON 对象，dataSourceName 指定读取任务的数据源名称；数据源缺失时可改由 dataSourceDescriptor 在入参中一次传齐数据源描述信息作为兜底。</para>
-        /// <h2>返回说明</h2>
-        /// <para>成功时 data 返回读取任务标识（字符串），用于后续异步结果查询；命中多个同名数据源等特定错误时 data 承载错误明细文本；失败时结合 errCode 与 errMessage 排查。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This is an internal operation for submitting source workflow read tasks. Submit a source workflow read task by specifying a data source name. The operation synchronously returns the acceptance result. Query the asynchronous execution result by calling GetInnerReadAsyncResult.</para>
+        /// <h2>Request description</h2>
+        /// <para>The request body is a JSON object. The dataSourceName parameter specifies the data source name for the read task. If the data source is missing, use dataSourceDescriptor to pass the complete data source description information in the request parameters as a fallback.</para>
+        /// <h2>Response description</h2>
+        /// <para>On success, the data field returns the read task identifier (string), which is used for subsequent asynchronous result queries. For specific errors such as multiple data sources with the same name, the data field contains error detail text. On failure, troubleshoot by using errCode and errMessage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11229,17 +11513,17 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度skillread</para>
+        /// <para>Submits a source workflow read task for a Skill internal operation and returns an asynchronous execution credential. Query the result by calling GetInnerReadAsyncResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>源端工作流读取任务提交内部接口。按数据源名称提交一次源端工作流读取，接口同步返回受理结果，读取的异步执行结果通过 GetInnerReadAsyncResult 查询。</para>
-        /// <h2>请求说明</h2>
-        /// <para>请求体为 JSON 对象，dataSourceName 指定读取任务的数据源名称；数据源缺失时可改由 dataSourceDescriptor 在入参中一次传齐数据源描述信息作为兜底。</para>
-        /// <h2>返回说明</h2>
-        /// <para>成功时 data 返回读取任务标识（字符串），用于后续异步结果查询；命中多个同名数据源等特定错误时 data 承载错误明细文本；失败时结合 errCode 与 errMessage 排查。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This is an internal operation for submitting source workflow read tasks. Submit a source workflow read task by specifying a data source name. The operation synchronously returns the acceptance result. Query the asynchronous execution result by calling GetInnerReadAsyncResult.</para>
+        /// <h2>Request description</h2>
+        /// <para>The request body is a JSON object. The dataSourceName parameter specifies the data source name for the read task. If the data source is missing, use dataSourceDescriptor to pass the complete data source description information in the request parameters as a fallback.</para>
+        /// <h2>Response description</h2>
+        /// <para>On success, the data field returns the read task identifier (string), which is used for subsequent asynchronous result queries. For specific errors such as multiple data sources with the same name, the data field contains error detail text. On failure, troubleshoot by using errCode and errMessage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11289,17 +11573,17 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度skillread</para>
+        /// <para>Submits a source workflow read task for a Skill internal operation and returns an asynchronous execution credential. Query the result by calling GetInnerReadAsyncResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>源端工作流读取任务提交内部接口。按数据源名称提交一次源端工作流读取，接口同步返回受理结果，读取的异步执行结果通过 GetInnerReadAsyncResult 查询。</para>
-        /// <h2>请求说明</h2>
-        /// <para>请求体为 JSON 对象，dataSourceName 指定读取任务的数据源名称；数据源缺失时可改由 dataSourceDescriptor 在入参中一次传齐数据源描述信息作为兜底。</para>
-        /// <h2>返回说明</h2>
-        /// <para>成功时 data 返回读取任务标识（字符串），用于后续异步结果查询；命中多个同名数据源等特定错误时 data 承载错误明细文本；失败时结合 errCode 与 errMessage 排查。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This is an internal operation for submitting source workflow read tasks. Submit a source workflow read task by specifying a data source name. The operation synchronously returns the acceptance result. Query the asynchronous execution result by calling GetInnerReadAsyncResult.</para>
+        /// <h2>Request description</h2>
+        /// <para>The request body is a JSON object. The dataSourceName parameter specifies the data source name for the read task. If the data source is missing, use dataSourceDescriptor to pass the complete data source description information in the request parameters as a fallback.</para>
+        /// <h2>Response description</h2>
+        /// <para>On success, the data field returns the read task identifier (string), which is used for subsequent asynchronous result queries. For specific errors such as multiple data sources with the same name, the data field contains error detail text. On failure, troubleshoot by using errCode and errMessage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11318,17 +11602,17 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度skillread</para>
+        /// <para>Submits a source workflow read task for a Skill internal operation and returns an asynchronous execution credential. Query the result by calling GetInnerReadAsyncResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>源端工作流读取任务提交内部接口。按数据源名称提交一次源端工作流读取，接口同步返回受理结果，读取的异步执行结果通过 GetInnerReadAsyncResult 查询。</para>
-        /// <h2>请求说明</h2>
-        /// <para>请求体为 JSON 对象，dataSourceName 指定读取任务的数据源名称；数据源缺失时可改由 dataSourceDescriptor 在入参中一次传齐数据源描述信息作为兜底。</para>
-        /// <h2>返回说明</h2>
-        /// <para>成功时 data 返回读取任务标识（字符串），用于后续异步结果查询；命中多个同名数据源等特定错误时 data 承载错误明细文本；失败时结合 errCode 与 errMessage 排查。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This is an internal operation for submitting source workflow read tasks. Submit a source workflow read task by specifying a data source name. The operation synchronously returns the acceptance result. Query the asynchronous execution result by calling GetInnerReadAsyncResult.</para>
+        /// <h2>Request description</h2>
+        /// <para>The request body is a JSON object. The dataSourceName parameter specifies the data source name for the read task. If the data source is missing, use dataSourceDescriptor to pass the complete data source description information in the request parameters as a fallback.</para>
+        /// <h2>Response description</h2>
+        /// <para>On success, the data field returns the read task identifier (string), which is used for subsequent asynchronous result queries. For specific errors such as multiple data sources with the same name, the data field contains error detail text. On failure, troubleshoot by using errCode and errMessage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11735,21 +12019,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对某个sql转换任务校验+转换</para>
+        /// <para>Validates the syntax of a specified SQL conversion task and then performs the conversion, returning the combined validation and conversion results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>对指定的 SQL 转换任务先执行语法校验、再执行转换，在一次调用内串起「校验 + 转换」两个动作，适用于希望在转换前自动拦截语法问题、而不必分两步分别调用的场景。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This operation first validates the syntax of a specified SQL conversion task and then performs the conversion. It chains the validation and conversion actions in a single call. This is useful when you want to automatically catch syntax issues before conversion without making two separate calls.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为 SQL 转换任务 ID。</description></item>
-        /// <item><description>调用会校验任务归属，只能处理归属于当前账号的任务，否则返回鉴权失败。</description></item>
-        /// <item><description>本接口按任务维度触发处理，不接受逐条脚本入参；脚本较多时处理耗时较长。</description></item>
+        /// <item><description>taskId is required and specifies the SQL conversion task ID.</description></item>
+        /// <item><description>The call verifies task ownership. Only tasks that belong to the current account can be processed. Otherwise, an authentication failure is returned.</description></item>
+        /// <item><description>This operation triggers processing at the task level and does not accept individual script input parameters. Processing may take longer when the task contains a large number of scripts.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回单值响应，<c>data</c> 为对象，其中 <c>taskId</c> 回显本次处理的任务 ID。逐条脚本的校验与转换结果不在本接口返回，需调用查询转换进度接口跟踪进展、调用查询转换结果接口获取每条脚本的源语句、目标语句与转换状态。<c>success</c> 为 <c>false</c> 时说明语法校验或转换环节失败，结合 <c>errCode</c> 与 <c>errMessage</c> 定位原因；<c>requestId</c> 用于排查本次调用。</para>
+        /// <h2>Response description</h2>
+        /// <para>The response is a single-value response. The data field is an object in which taskId indicates the task ID processed in this call. The validation and conversion results of individual scripts are not returned by this operation. Call the query conversion progress operation to track progress and the query conversion results operation to obtain the source statement, target statement, and conversion status of each script. If success is false, the syntax validation or conversion failed. Use errCode and errMessage to identify the cause. requestId can be used to troubleshoot this call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11795,21 +12079,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对某个sql转换任务校验+转换</para>
+        /// <para>Validates the syntax of a specified SQL conversion task and then performs the conversion, returning the combined validation and conversion results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>对指定的 SQL 转换任务先执行语法校验、再执行转换，在一次调用内串起「校验 + 转换」两个动作，适用于希望在转换前自动拦截语法问题、而不必分两步分别调用的场景。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This operation first validates the syntax of a specified SQL conversion task and then performs the conversion. It chains the validation and conversion actions in a single call. This is useful when you want to automatically catch syntax issues before conversion without making two separate calls.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为 SQL 转换任务 ID。</description></item>
-        /// <item><description>调用会校验任务归属，只能处理归属于当前账号的任务，否则返回鉴权失败。</description></item>
-        /// <item><description>本接口按任务维度触发处理，不接受逐条脚本入参；脚本较多时处理耗时较长。</description></item>
+        /// <item><description>taskId is required and specifies the SQL conversion task ID.</description></item>
+        /// <item><description>The call verifies task ownership. Only tasks that belong to the current account can be processed. Otherwise, an authentication failure is returned.</description></item>
+        /// <item><description>This operation triggers processing at the task level and does not accept individual script input parameters. Processing may take longer when the task contains a large number of scripts.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回单值响应，<c>data</c> 为对象，其中 <c>taskId</c> 回显本次处理的任务 ID。逐条脚本的校验与转换结果不在本接口返回，需调用查询转换进度接口跟踪进展、调用查询转换结果接口获取每条脚本的源语句、目标语句与转换状态。<c>success</c> 为 <c>false</c> 时说明语法校验或转换环节失败，结合 <c>errCode</c> 与 <c>errMessage</c> 定位原因；<c>requestId</c> 用于排查本次调用。</para>
+        /// <h2>Response description</h2>
+        /// <para>The response is a single-value response. The data field is an object in which taskId indicates the task ID processed in this call. The validation and conversion results of individual scripts are not returned by this operation. Call the query conversion progress operation to track progress and the query conversion results operation to obtain the source statement, target statement, and conversion status of each script. If success is false, the syntax validation or conversion failed. Use errCode and errMessage to identify the cause. requestId can be used to troubleshoot this call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11855,21 +12139,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对某个sql转换任务校验+转换</para>
+        /// <para>Validates the syntax of a specified SQL conversion task and then performs the conversion, returning the combined validation and conversion results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>对指定的 SQL 转换任务先执行语法校验、再执行转换，在一次调用内串起「校验 + 转换」两个动作，适用于希望在转换前自动拦截语法问题、而不必分两步分别调用的场景。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This operation first validates the syntax of a specified SQL conversion task and then performs the conversion. It chains the validation and conversion actions in a single call. This is useful when you want to automatically catch syntax issues before conversion without making two separate calls.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为 SQL 转换任务 ID。</description></item>
-        /// <item><description>调用会校验任务归属，只能处理归属于当前账号的任务，否则返回鉴权失败。</description></item>
-        /// <item><description>本接口按任务维度触发处理，不接受逐条脚本入参；脚本较多时处理耗时较长。</description></item>
+        /// <item><description>taskId is required and specifies the SQL conversion task ID.</description></item>
+        /// <item><description>The call verifies task ownership. Only tasks that belong to the current account can be processed. Otherwise, an authentication failure is returned.</description></item>
+        /// <item><description>This operation triggers processing at the task level and does not accept individual script input parameters. Processing may take longer when the task contains a large number of scripts.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回单值响应，<c>data</c> 为对象，其中 <c>taskId</c> 回显本次处理的任务 ID。逐条脚本的校验与转换结果不在本接口返回，需调用查询转换进度接口跟踪进展、调用查询转换结果接口获取每条脚本的源语句、目标语句与转换状态。<c>success</c> 为 <c>false</c> 时说明语法校验或转换环节失败，结合 <c>errCode</c> 与 <c>errMessage</c> 定位原因；<c>requestId</c> 用于排查本次调用。</para>
+        /// <h2>Response description</h2>
+        /// <para>The response is a single-value response. The data field is an object in which taskId indicates the task ID processed in this call. The validation and conversion results of individual scripts are not returned by this operation. Call the query conversion progress operation to track progress and the query conversion results operation to obtain the source statement, target statement, and conversion status of each script. If success is false, the syntax validation or conversion failed. Use errCode and errMessage to identify the cause. requestId can be used to troubleshoot this call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11888,21 +12172,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对某个sql转换任务校验+转换</para>
+        /// <para>Validates the syntax of a specified SQL conversion task and then performs the conversion, returning the combined validation and conversion results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>对指定的 SQL 转换任务先执行语法校验、再执行转换，在一次调用内串起「校验 + 转换」两个动作，适用于希望在转换前自动拦截语法问题、而不必分两步分别调用的场景。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>This operation first validates the syntax of a specified SQL conversion task and then performs the conversion. It chains the validation and conversion actions in a single call. This is useful when you want to automatically catch syntax issues before conversion without making two separate calls.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>taskId</c> 必填，为 SQL 转换任务 ID。</description></item>
-        /// <item><description>调用会校验任务归属，只能处理归属于当前账号的任务，否则返回鉴权失败。</description></item>
-        /// <item><description>本接口按任务维度触发处理，不接受逐条脚本入参；脚本较多时处理耗时较长。</description></item>
+        /// <item><description>taskId is required and specifies the SQL conversion task ID.</description></item>
+        /// <item><description>The call verifies task ownership. Only tasks that belong to the current account can be processed. Otherwise, an authentication failure is returned.</description></item>
+        /// <item><description>This operation triggers processing at the task level and does not accept individual script input parameters. Processing may take longer when the task contains a large number of scripts.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回单值响应，<c>data</c> 为对象，其中 <c>taskId</c> 回显本次处理的任务 ID。逐条脚本的校验与转换结果不在本接口返回，需调用查询转换进度接口跟踪进展、调用查询转换结果接口获取每条脚本的源语句、目标语句与转换状态。<c>success</c> 为 <c>false</c> 时说明语法校验或转换环节失败，结合 <c>errCode</c> 与 <c>errMessage</c> 定位原因；<c>requestId</c> 用于排查本次调用。</para>
+        /// <h2>Response description</h2>
+        /// <para>The response is a single-value response. The data field is an object in which taskId indicates the task ID processed in this call. The validation and conversion results of individual scripts are not returned by this operation. Call the query conversion progress operation to track progress and the query conversion results operation to obtain the source statement, target statement, and conversion status of each script. If success is false, the syntax validation or conversion failed. Use errCode and errMessage to identify the cause. requestId can be used to troubleshoot this call.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12231,21 +12515,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据校验模版</para>
+        /// <para>Updates the name and metric definitions of a metric check template. After the update, nodes that reference this template execute based on the new definitions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>更新数据校验模板的名称、描述、适用的数据源与引擎范围以及各类校验规则定义。模板被校验任务引用后，更新会改变这些任务后续执行时所采用的比对规则，请在变更前确认影响范围。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the name, description, applicable data source and DPI engine scope, and check rule definitions of a data validation template. After a template is referenced by check nodes, updates change the comparison rules used when those nodes exec subsequently. Confirm the impact scope before making changes.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象：<c>templateId</c> 指定要更新的校验模板 ID，<c>templateName</c> 与 <c>templateDesc</c> 更新模板名称与描述，<c>checkType</c> 为校验规则类型（0 数据量比对、1 指标比对、2 弱内容对比、3 自定义比对、4 全文比对、5 空值率比对），<c>dsEngineRels</c> 更新模板关联的数据源与引擎范围。</description></item>
-        /// <item><description>规则字段按 <c>checkType</c> 取用：指标比对（1）使用 <c>basicMetricRules</c>（基础数据类型指标规则，该场景下应使用此字段）、<c>complexMetricRules</c>（复合数据类型指标规则）与 <c>metricRules</c>（指标规则列表）；弱内容对比（2）使用 <c>weakContentRule</c>，该场景下需要一并传入；全文比对（4）使用 <c>fulltextRule</c>；空值率比对（5）使用 <c>nullRules</c>。与 <c>checkType</c> 不匹配的规则字段不会被使用。</description></item>
-        /// <item><description><c>requestId</c> 选填，为请求 ID。</description></item>
+        /// <item><description>The request body is a JSON object. <c>templateId</c> specifies the ID of the check template to update. <c>templateName</c> and <c>templateDesc</c> update the template name and description. <c>checkType</c> specifies the check rule type (0: data volume comparison, 1: metric comparison, 2: weak content comparison, 3: custom comparison, 4: full-text comparison, 5: null rate comparison). <c>dsEngineRels</c> updates the data source and engine scope associated with the template.</description></item>
+        /// <item><description>Rule fields are used based on <c>checkType</c>. Metric comparison (1) uses <c>basicMetricRules</c> (metric rules for basic data types, which should be used in this scenario), <c>complexMetricRules</c> (metric rules for complex data types), and <c>metricRules</c> (metric rule list). Weak content comparison (2) uses <c>weakContentRule</c>, which must be passed in for this scenario. Full-text comparison (4) uses <c>fulltextRule</c>. Null rate comparison (5) uses <c>nullRules</c>. Rule fields that do not match the <c>checkType</c> are not used.</description></item>
+        /// <item><description><c>requestId</c> is optional and specifies the request ID.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回状态响应，响应体只包含 <c>success</c>、<c>errCode</c>、<c>errMessage</c> 与 <c>requestId</c>，不返回业务数据；<c>success</c> 为 <c>true</c> 即表示模板已更新，无需再回查确认。更新失败时结合 <c>errCode</c> 与 <c>errMessage</c> 排查，常见原因为模板 ID 不存在、无权修改该模板，或规则字段与 <c>checkType</c> 不匹配导致校验不通过。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a status response. The response body contains only <c>success</c>, <c>errCode</c>, <c>errMessage</c>, and <c>requestId</c>, with no business data returned. If <c>success</c> is <c>true</c>, the template has been updated and no further confirmation query is required. If the update fails, troubleshoot by using <c>errCode</c> and <c>errMessage</c>. Common causes include a nonexistent template ID, insufficient permissions to modify the template, or rule fields that do not match the <c>checkType</c>, which causes validation failure.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12335,21 +12619,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据校验模版</para>
+        /// <para>Updates the name and metric definitions of a metric check template. After the update, nodes that reference this template execute based on the new definitions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>更新数据校验模板的名称、描述、适用的数据源与引擎范围以及各类校验规则定义。模板被校验任务引用后，更新会改变这些任务后续执行时所采用的比对规则，请在变更前确认影响范围。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the name, description, applicable data source and DPI engine scope, and check rule definitions of a data validation template. After a template is referenced by check nodes, updates change the comparison rules used when those nodes exec subsequently. Confirm the impact scope before making changes.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象：<c>templateId</c> 指定要更新的校验模板 ID，<c>templateName</c> 与 <c>templateDesc</c> 更新模板名称与描述，<c>checkType</c> 为校验规则类型（0 数据量比对、1 指标比对、2 弱内容对比、3 自定义比对、4 全文比对、5 空值率比对），<c>dsEngineRels</c> 更新模板关联的数据源与引擎范围。</description></item>
-        /// <item><description>规则字段按 <c>checkType</c> 取用：指标比对（1）使用 <c>basicMetricRules</c>（基础数据类型指标规则，该场景下应使用此字段）、<c>complexMetricRules</c>（复合数据类型指标规则）与 <c>metricRules</c>（指标规则列表）；弱内容对比（2）使用 <c>weakContentRule</c>，该场景下需要一并传入；全文比对（4）使用 <c>fulltextRule</c>；空值率比对（5）使用 <c>nullRules</c>。与 <c>checkType</c> 不匹配的规则字段不会被使用。</description></item>
-        /// <item><description><c>requestId</c> 选填，为请求 ID。</description></item>
+        /// <item><description>The request body is a JSON object. <c>templateId</c> specifies the ID of the check template to update. <c>templateName</c> and <c>templateDesc</c> update the template name and description. <c>checkType</c> specifies the check rule type (0: data volume comparison, 1: metric comparison, 2: weak content comparison, 3: custom comparison, 4: full-text comparison, 5: null rate comparison). <c>dsEngineRels</c> updates the data source and engine scope associated with the template.</description></item>
+        /// <item><description>Rule fields are used based on <c>checkType</c>. Metric comparison (1) uses <c>basicMetricRules</c> (metric rules for basic data types, which should be used in this scenario), <c>complexMetricRules</c> (metric rules for complex data types), and <c>metricRules</c> (metric rule list). Weak content comparison (2) uses <c>weakContentRule</c>, which must be passed in for this scenario. Full-text comparison (4) uses <c>fulltextRule</c>. Null rate comparison (5) uses <c>nullRules</c>. Rule fields that do not match the <c>checkType</c> are not used.</description></item>
+        /// <item><description><c>requestId</c> is optional and specifies the request ID.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回状态响应，响应体只包含 <c>success</c>、<c>errCode</c>、<c>errMessage</c> 与 <c>requestId</c>，不返回业务数据；<c>success</c> 为 <c>true</c> 即表示模板已更新，无需再回查确认。更新失败时结合 <c>errCode</c> 与 <c>errMessage</c> 排查，常见原因为模板 ID 不存在、无权修改该模板，或规则字段与 <c>checkType</c> 不匹配导致校验不通过。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a status response. The response body contains only <c>success</c>, <c>errCode</c>, <c>errMessage</c>, and <c>requestId</c>, with no business data returned. If <c>success</c> is <c>true</c>, the template has been updated and no further confirmation query is required. If the update fails, troubleshoot by using <c>errCode</c> and <c>errMessage</c>. Common causes include a nonexistent template ID, insufficient permissions to modify the template, or rule fields that do not match the <c>checkType</c>, which causes validation failure.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12439,21 +12723,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据校验模版</para>
+        /// <para>Updates the name and metric definitions of a metric check template. After the update, nodes that reference this template execute based on the new definitions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>更新数据校验模板的名称、描述、适用的数据源与引擎范围以及各类校验规则定义。模板被校验任务引用后，更新会改变这些任务后续执行时所采用的比对规则，请在变更前确认影响范围。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the name, description, applicable data source and DPI engine scope, and check rule definitions of a data validation template. After a template is referenced by check nodes, updates change the comparison rules used when those nodes exec subsequently. Confirm the impact scope before making changes.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象：<c>templateId</c> 指定要更新的校验模板 ID，<c>templateName</c> 与 <c>templateDesc</c> 更新模板名称与描述，<c>checkType</c> 为校验规则类型（0 数据量比对、1 指标比对、2 弱内容对比、3 自定义比对、4 全文比对、5 空值率比对），<c>dsEngineRels</c> 更新模板关联的数据源与引擎范围。</description></item>
-        /// <item><description>规则字段按 <c>checkType</c> 取用：指标比对（1）使用 <c>basicMetricRules</c>（基础数据类型指标规则，该场景下应使用此字段）、<c>complexMetricRules</c>（复合数据类型指标规则）与 <c>metricRules</c>（指标规则列表）；弱内容对比（2）使用 <c>weakContentRule</c>，该场景下需要一并传入；全文比对（4）使用 <c>fulltextRule</c>；空值率比对（5）使用 <c>nullRules</c>。与 <c>checkType</c> 不匹配的规则字段不会被使用。</description></item>
-        /// <item><description><c>requestId</c> 选填，为请求 ID。</description></item>
+        /// <item><description>The request body is a JSON object. <c>templateId</c> specifies the ID of the check template to update. <c>templateName</c> and <c>templateDesc</c> update the template name and description. <c>checkType</c> specifies the check rule type (0: data volume comparison, 1: metric comparison, 2: weak content comparison, 3: custom comparison, 4: full-text comparison, 5: null rate comparison). <c>dsEngineRels</c> updates the data source and engine scope associated with the template.</description></item>
+        /// <item><description>Rule fields are used based on <c>checkType</c>. Metric comparison (1) uses <c>basicMetricRules</c> (metric rules for basic data types, which should be used in this scenario), <c>complexMetricRules</c> (metric rules for complex data types), and <c>metricRules</c> (metric rule list). Weak content comparison (2) uses <c>weakContentRule</c>, which must be passed in for this scenario. Full-text comparison (4) uses <c>fulltextRule</c>. Null rate comparison (5) uses <c>nullRules</c>. Rule fields that do not match the <c>checkType</c> are not used.</description></item>
+        /// <item><description><c>requestId</c> is optional and specifies the request ID.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回状态响应，响应体只包含 <c>success</c>、<c>errCode</c>、<c>errMessage</c> 与 <c>requestId</c>，不返回业务数据；<c>success</c> 为 <c>true</c> 即表示模板已更新，无需再回查确认。更新失败时结合 <c>errCode</c> 与 <c>errMessage</c> 排查，常见原因为模板 ID 不存在、无权修改该模板，或规则字段与 <c>checkType</c> 不匹配导致校验不通过。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a status response. The response body contains only <c>success</c>, <c>errCode</c>, <c>errMessage</c>, and <c>requestId</c>, with no business data returned. If <c>success</c> is <c>true</c>, the template has been updated and no further confirmation query is required. If the update fails, troubleshoot by using <c>errCode</c> and <c>errMessage</c>. Common causes include a nonexistent template ID, insufficient permissions to modify the template, or rule fields that do not match the <c>checkType</c>, which causes validation failure.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12472,21 +12756,21 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据校验模版</para>
+        /// <para>Updates the name and metric definitions of a metric check template. After the update, nodes that reference this template execute based on the new definitions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>接口说明</h2>
-        /// <para>更新数据校验模板的名称、描述、适用的数据源与引擎范围以及各类校验规则定义。模板被校验任务引用后，更新会改变这些任务后续执行时所采用的比对规则，请在变更前确认影响范围。</para>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the name, description, applicable data source and DPI engine scope, and check rule definitions of a data validation template. After a template is referenced by check nodes, updates change the comparison rules used when those nodes exec subsequently. Confirm the impact scope before making changes.</para>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>请求体为 JSON 对象：<c>templateId</c> 指定要更新的校验模板 ID，<c>templateName</c> 与 <c>templateDesc</c> 更新模板名称与描述，<c>checkType</c> 为校验规则类型（0 数据量比对、1 指标比对、2 弱内容对比、3 自定义比对、4 全文比对、5 空值率比对），<c>dsEngineRels</c> 更新模板关联的数据源与引擎范围。</description></item>
-        /// <item><description>规则字段按 <c>checkType</c> 取用：指标比对（1）使用 <c>basicMetricRules</c>（基础数据类型指标规则，该场景下应使用此字段）、<c>complexMetricRules</c>（复合数据类型指标规则）与 <c>metricRules</c>（指标规则列表）；弱内容对比（2）使用 <c>weakContentRule</c>，该场景下需要一并传入；全文比对（4）使用 <c>fulltextRule</c>；空值率比对（5）使用 <c>nullRules</c>。与 <c>checkType</c> 不匹配的规则字段不会被使用。</description></item>
-        /// <item><description><c>requestId</c> 选填，为请求 ID。</description></item>
+        /// <item><description>The request body is a JSON object. <c>templateId</c> specifies the ID of the check template to update. <c>templateName</c> and <c>templateDesc</c> update the template name and description. <c>checkType</c> specifies the check rule type (0: data volume comparison, 1: metric comparison, 2: weak content comparison, 3: custom comparison, 4: full-text comparison, 5: null rate comparison). <c>dsEngineRels</c> updates the data source and engine scope associated with the template.</description></item>
+        /// <item><description>Rule fields are used based on <c>checkType</c>. Metric comparison (1) uses <c>basicMetricRules</c> (metric rules for basic data types, which should be used in this scenario), <c>complexMetricRules</c> (metric rules for complex data types), and <c>metricRules</c> (metric rule list). Weak content comparison (2) uses <c>weakContentRule</c>, which must be passed in for this scenario. Full-text comparison (4) uses <c>fulltextRule</c>. Null rate comparison (5) uses <c>nullRules</c>. Rule fields that do not match the <c>checkType</c> are not used.</description></item>
+        /// <item><description><c>requestId</c> is optional and specifies the request ID.</description></item>
         /// </list>
-        /// <h2>返回说明</h2>
-        /// <para>返回状态响应，响应体只包含 <c>success</c>、<c>errCode</c>、<c>errMessage</c> 与 <c>requestId</c>，不返回业务数据；<c>success</c> 为 <c>true</c> 即表示模板已更新，无需再回查确认。更新失败时结合 <c>errCode</c> 与 <c>errMessage</c> 排查，常见原因为模板 ID 不存在、无权修改该模板，或规则字段与 <c>checkType</c> 不匹配导致校验不通过。</para>
+        /// <h2>Response description</h2>
+        /// <para>Returns a status response. The response body contains only <c>success</c>, <c>errCode</c>, <c>errMessage</c>, and <c>requestId</c>, with no business data returned. If <c>success</c> is <c>true</c>, the template has been updated and no further confirmation query is required. If the update fails, troubleshoot by using <c>errCode</c> and <c>errMessage</c>. Common causes include a nonexistent template ID, insufficient permissions to modify the template, or rule fields that do not match the <c>checkType</c>, which causes validation failure.</para>
         /// </description>
         /// 
         /// <param name="request">

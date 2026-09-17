@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.LHM20250116.Models
 {
     public class ListDataCheckConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data list returned by the operation. For the element structure, see the child field descriptions.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListDataCheckConfigResponseBodyData> Data { get; set; }
         public class ListDataCheckConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The check algorithm.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? Algorithm { get; set; }
 
             /// <summary>
+            /// <para>The batch size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? BatchSize { get; set; }
 
             /// <summary>
+            /// <para>The check type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? CheckType { get; set; }
 
             /// <summary>
+            /// <para>The compare type. Valid values: =, !=, &gt;, &lt;, &gt;=, &lt;=, contains, not contains, and ==.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>=</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string Comparator { get; set; }
 
             /// <summary>
+            /// <para>The reserved field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string Extra { get; set; }
 
             /// <summary>
+            /// <para>The group data volume compare threshold.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public float? GroupCountThreshold { get; set; }
 
             /// <summary>
+            /// <para>The primary key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10001</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether a full table count is performed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? IsFullTableCount { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the check is skipped.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -86,6 +107,13 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? IsSkipped { get; set; }
 
             /// <summary>
+            /// <para>The metric type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CUSTOM_METRIC_NUM: built-in NUM mode.</description></item>
+            /// <item><description>CUSTOM_METRIC_LEN: built-in LEN mode.</description></item>
+            /// <item><description>CUSTOM_METRIC_MIX: built-in MIX mode.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CUSTOM_METRIC_MIX</para>
             /// </summary>
@@ -94,6 +122,12 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string MetricType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether all columns of the source are checked. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -102,6 +136,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? SourceCheckAllColumn { get; set; }
 
             /// <summary>
+            /// <para>The source table fields. You can specify multiple fields separated by commas (,).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a,col_b</para>
             /// </summary>
@@ -110,6 +146,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceColumns { get; set; }
 
             /// <summary>
+            /// <para>The source compare key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -118,6 +156,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceCompareKey { get; set; }
 
             /// <summary>
+            /// <para>The name of the source data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds_demo</para>
             /// </summary>
@@ -126,6 +166,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceDataSource { get; set; }
 
             /// <summary>
+            /// <para>The GROUP BY clause for the source table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a,col_b</para>
             /// </summary>
@@ -133,11 +175,16 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             [Validation(Required=false)]
             public string SourceGroupClause { get; set; }
 
+            /// <summary>
+            /// <para>The hint for the source.</para>
+            /// </summary>
             [NameInMap("sourceHint")]
             [Validation(Required=false)]
             public string SourceHint { get; set; }
 
             /// <summary>
+            /// <para>The ID of the source data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1001</para>
             /// </summary>
@@ -146,6 +193,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceId { get; set; }
 
             /// <summary>
+            /// <para>The source partition.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds=20260116</para>
             /// </summary>
@@ -154,6 +203,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourcePartition { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement for the source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM t;</para>
             /// </summary>
@@ -162,6 +213,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceSql { get; set; }
 
             /// <summary>
+            /// <para>The source table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>table_demo</para>
             /// </summary>
@@ -170,6 +223,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceTable { get; set; }
 
             /// <summary>
+            /// <para>The type of the source data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Hive</para>
             /// </summary>
@@ -178,6 +233,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceType { get; set; }
 
             /// <summary>
+            /// <para>The WHERE clause for the source table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a &gt; 0 and col_b = \&quot;x\&quot;</para>
             /// </summary>
@@ -186,6 +243,12 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string SourceWhereClause { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether all columns of the target are checked. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: No.</description></item>
+            /// <item><description>1: Yes.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -194,6 +257,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public int? TargetCheckAllColumn { get; set; }
 
             /// <summary>
+            /// <para>The target table fields. You can specify multiple fields separated by commas (,).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a,col_b</para>
             /// </summary>
@@ -202,6 +267,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetColumns { get; set; }
 
             /// <summary>
+            /// <para>The target compare key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>id</para>
             /// </summary>
@@ -210,6 +277,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetCompareKey { get; set; }
 
             /// <summary>
+            /// <para>The target data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds_demo</para>
             /// </summary>
@@ -218,6 +287,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetDataSource { get; set; }
 
             /// <summary>
+            /// <para>The GROUP BY clause for the target table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a,col_b</para>
             /// </summary>
@@ -225,11 +296,16 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             [Validation(Required=false)]
             public string TargetGroupClause { get; set; }
 
+            /// <summary>
+            /// <para>The hint for the target.</para>
+            /// </summary>
             [NameInMap("targetHint")]
             [Validation(Required=false)]
             public string TargetHint { get; set; }
 
             /// <summary>
+            /// <para>The ID of the target data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2001</para>
             /// </summary>
@@ -238,6 +314,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetId { get; set; }
 
             /// <summary>
+            /// <para>The target partition.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds=20260116</para>
             /// </summary>
@@ -246,6 +324,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetPartition { get; set; }
 
             /// <summary>
+            /// <para>The SQL statement for the target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SELECT * FROM t;</para>
             /// </summary>
@@ -254,6 +334,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetSql { get; set; }
 
             /// <summary>
+            /// <para>The target table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>table_demo</para>
             /// </summary>
@@ -262,6 +344,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetTable { get; set; }
 
             /// <summary>
+            /// <para>The type of the target data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hive</para>
             /// </summary>
@@ -270,6 +354,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetType { get; set; }
 
             /// <summary>
+            /// <para>The WHERE clause for the target table.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>col_a &gt; 0 and col_b = \&quot;x\&quot;</para>
             /// </summary>
@@ -278,6 +364,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TargetWhereClause { get; set; }
 
             /// <summary>
+            /// <para>The configuration details.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lhm|lhm_dw|*</para>
             /// </summary>
@@ -286,6 +374,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public string TaskConfigInfo { get; set; }
 
             /// <summary>
+            /// <para>The batch ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10001</para>
             /// </summary>
@@ -294,6 +384,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
             public long? TaskId { get; set; }
 
             /// <summary>
+            /// <para>The total data volume compare threshold.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -304,6 +396,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         }
 
         /// <summary>
+        /// <para>The error code. An empty string is returned if the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -312,6 +406,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message. An empty string is returned if the call is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -320,6 +416,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The page number, starting from 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -328,6 +426,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size, which is the number of records returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -336,6 +436,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4C467B38-3910-4477-9B0B-6963D83B4E72</para>
         /// </summary>
@@ -343,11 +445,16 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure. If the call fails, check errCode and errMessage for details.</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that match the query conditions. This value is used for pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

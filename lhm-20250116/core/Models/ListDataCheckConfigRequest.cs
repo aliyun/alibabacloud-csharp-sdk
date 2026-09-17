@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
 {
     public class ListDataCheckConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The source table name for fuzzy search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table_demo</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
         public string SrcTable { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data validation task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.LHM20250116.Models
 {
     public class SyntaxCheckAndTransformSqlConversionTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID that uniquely identifies a task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

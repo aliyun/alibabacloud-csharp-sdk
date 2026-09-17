@@ -8,60 +8,56 @@ using Tea;
 
 namespace AlibabaCloud.SDK.LHM20250116.Models
 {
-    public class PostInnerReaderResponseBody : TeaModel {
+    public class GetAllRulesSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business data returned by the operation (in string format). The specific content varies by operation.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demo</para>
+        /// <para>[]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error code. This value is an empty string if the call is successful.</para>
+        /// <para>The fault error message encoding.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("errCode")]
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This value is an empty string if the call is successful.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>not supported.pos 3084, line 96, column 1, token IDENTIFIER settings</para>
         /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies this call. Provide this value when troubleshooting issues.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4C467B38-3910-4477-9B0B-6963D83B4E72</para>
+        /// <para>E871A612-DBD2-53D9-B2A0-723EC30B1823</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed. Troubleshoot by using errCode and errMessage.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
-        public string Success { get; set; }
+        public bool? Success { get; set; }
 
     }
 
