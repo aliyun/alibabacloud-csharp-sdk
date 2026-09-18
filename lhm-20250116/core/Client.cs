@@ -11829,6 +11829,208 @@ namespace AlibabaCloud.SDK.LHM20250116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retains SQL audit records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveSkillAuditRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveSkillAuditRecordResponse
+        /// </returns>
+        public SaveSkillAuditRecordResponse SaveSkillAuditRecordWithOptions(SaveSkillAuditRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                body["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cid))
+            {
+                body["cid"] = request.Cid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRunStatus))
+            {
+                body["dryRunStatus"] = request.DryRunStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtInfo))
+            {
+                body["extInfo"] = request.ExtInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptTransformResult))
+            {
+                body["scriptTransformResult"] = request.ScriptTransformResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptTransformStatus))
+            {
+                body["scriptTransformStatus"] = request.ScriptTransformStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDialect))
+            {
+                body["sourceDialect"] = request.SourceDialect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceSqlScript))
+            {
+                body["sourceSqlScript"] = request.SourceSqlScript;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDialect))
+            {
+                body["targetDialect"] = request.TargetDialect;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveSkillAuditRecord",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/skill-audit/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveSkillAuditRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retains SQL audit records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveSkillAuditRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveSkillAuditRecordResponse
+        /// </returns>
+        public async Task<SaveSkillAuditRecordResponse> SaveSkillAuditRecordWithOptionsAsync(SaveSkillAuditRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                body["batchId"] = request.BatchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cid))
+            {
+                body["cid"] = request.Cid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRunStatus))
+            {
+                body["dryRunStatus"] = request.DryRunStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtInfo))
+            {
+                body["extInfo"] = request.ExtInfo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptTransformResult))
+            {
+                body["scriptTransformResult"] = request.ScriptTransformResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScriptTransformStatus))
+            {
+                body["scriptTransformStatus"] = request.ScriptTransformStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDialect))
+            {
+                body["sourceDialect"] = request.SourceDialect;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceSqlScript))
+            {
+                body["sourceSqlScript"] = request.SourceSqlScript;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDialect))
+            {
+                body["targetDialect"] = request.TargetDialect;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveSkillAuditRecord",
+                Version = "2025-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/api/bigdata/sql-translator/open/skill-audit/save",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveSkillAuditRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retains SQL audit records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveSkillAuditRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveSkillAuditRecordResponse
+        /// </returns>
+        public SaveSkillAuditRecordResponse SaveSkillAuditRecord(SaveSkillAuditRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SaveSkillAuditRecordWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retains SQL audit records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveSkillAuditRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveSkillAuditRecordResponse
+        /// </returns>
+        public async Task<SaveSkillAuditRecordResponse> SaveSkillAuditRecordAsync(SaveSkillAuditRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SaveSkillAuditRecordWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Performs a Dry Run validation on a single converted SQL statement to verify syntax and execution permissions without actually writing data.</para>
         /// </summary>
         /// 
