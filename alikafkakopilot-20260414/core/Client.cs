@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("alikafkakopilot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体 stream chat</para>
+        /// <para>Initiates a streaming chat session with an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 query["Message"] = request.Message;
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体 stream chat</para>
+        /// <para>Initiates a streaming chat session with an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106,6 +110,10 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
                 query["Message"] = request.Message;
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体 stream chat</para>
+        /// <para>Initiates a streaming chat session with an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +165,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体 stream chat</para>
+        /// <para>Initiates a streaming chat session with an agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +183,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>评价</para>
+        /// <para>Evaluates a user session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -233,7 +241,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>评价</para>
+        /// <para>Evaluates a user session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -291,7 +299,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>评价</para>
+        /// <para>Evaluates a user session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -309,7 +317,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>评价</para>
+        /// <para>Evaluates a user session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -327,7 +335,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史会话</para>
+        /// <para>Queries historical conversations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -360,6 +368,14 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCursor))
+            {
+                query["TaskCursor"] = request.TaskCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskPageSize))
+            {
+                query["TaskPageSize"] = request.TaskPageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -381,7 +397,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史会话</para>
+        /// <para>Queries historical conversations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -414,6 +430,14 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCursor))
+            {
+                query["TaskCursor"] = request.TaskCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskPageSize))
+            {
+                query["TaskPageSize"] = request.TaskPageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -435,7 +459,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史会话</para>
+        /// <para>Queries historical conversations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -453,7 +477,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史会话</para>
+        /// <para>Queries historical conversations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -471,7 +495,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体</para>
+        /// <para>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -488,6 +512,18 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCursor))
+            {
+                query["DestinationCursor"] = request.DestinationCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPageSize))
+            {
+                query["DestinationPageSize"] = request.DestinationPageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeAutomationOverview))
+            {
+                query["IncludeAutomationOverview"] = request.IncludeAutomationOverview;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -499,6 +535,14 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCursor))
+            {
+                query["TaskCursor"] = request.TaskCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskPageSize))
+            {
+                query["TaskPageSize"] = request.TaskPageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -521,7 +565,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体</para>
+        /// <para>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -538,6 +582,18 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationCursor))
+            {
+                query["DestinationCursor"] = request.DestinationCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestinationPageSize))
+            {
+                query["DestinationPageSize"] = request.DestinationPageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeAutomationOverview))
+            {
+                query["IncludeAutomationOverview"] = request.IncludeAutomationOverview;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["Page"] = request.Page;
@@ -549,6 +605,14 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
             {
                 query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCursor))
+            {
+                query["TaskCursor"] = request.TaskCursor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskPageSize))
+            {
+                query["TaskPageSize"] = request.TaskPageSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -571,7 +635,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体</para>
+        /// <para>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -589,7 +653,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能体</para>
+        /// <para>Queries the session IDs of the current user in the Console channel, sorted by creation time in descending order. Pagination is supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -607,7 +671,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>状态</para>
+        /// <para>Queries the enabling status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -653,7 +717,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>状态</para>
+        /// <para>Queries the enabling status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +763,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>状态</para>
+        /// <para>Queries the enabling status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -717,7 +781,7 @@ namespace AlibabaCloud.SDK.AlikafkaKopilot20260414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>状态</para>
+        /// <para>Queries the enabling status of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
