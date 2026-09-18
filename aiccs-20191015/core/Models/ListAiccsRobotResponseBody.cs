@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListAiccsRobotResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request status code. A return value of OK indicates that the request Succeeded.</para>
+        /// <para>The request status code. OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,34 +20,34 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Robot scripts.</para>
+        /// <para>The robot scripts.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAiccsRobotResponseBodyData> Data { get; set; }
         public class ListAiccsRobotResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Associated industry.</para>
+            /// <para>The industry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>房地产</para>
+            /// <para>RealEstate</para>
             /// </summary>
             [NameInMap("AtProfession")]
             [Validation(Required=false)]
             public string AtProfession { get; set; }
 
             /// <summary>
-            /// <para>Associated business.</para>
+            /// <para>The associated business.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>新房销售</para>
+            /// <para>NewHomeSales</para>
             /// </summary>
             [NameInMap("AtSence")]
             [Validation(Required=false)]
             public string AtSence { get; set; }
 
             /// <summary>
-            /// <para>Robot ID.</para>
+            /// <para>The robot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12****</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Robot name.</para>
+            /// <para>The robot name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试机器人</para>
+            /// <para>TestRobot</para>
             /// </summary>
             [NameInMap("RobotName")]
             [Validation(Required=false)]
             public string RobotName { get; set; }
 
             /// <summary>
-            /// <para>Robot type.</para>
+            /// <para>The robot type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CUSTOM</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
@@ -99,10 +99,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API invocation Succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

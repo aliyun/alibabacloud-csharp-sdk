@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class RobotCallResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</para>
+        /// <para>The request status code. OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The unique receipt ID of this call, which is also the unique call ID.</para>
+        /// <para>The unique receipt ID of this call, which is the unique call ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1160128<em><b><b>^10281427</b></b></em></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A90E4451-FED7-49D2-87C8-00700A8C4D0D</para>

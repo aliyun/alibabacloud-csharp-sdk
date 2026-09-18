@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListTaskDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The callee number. You can view the callee number on the <b>Detail</b> interface of <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</para>
+        /// <para>The called number. You can view the called number on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>186****0000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Called { get; set; }
 
         /// <summary>
-        /// <para>The detail ID. You can view the detail ID on the <b>Detail</b> interface of <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</para>
+        /// <para>The detail ID. You can view the detail ID on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Detail status. Valid values:</para>
+        /// <para>The detail status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>SUCCESS</b>: The outbound call succeeded.</description></item>
         /// <item><description><b>FAIL</b>: The outbound call failed.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call Status Codes</a> in Voice Service.</para>
+        /// <para>The call status code. For more information, see <a href="https://help.aliyun.com/document_detail/112804.html">Call status codes</a> in Voice Messaging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200100</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string StatusCode { get; set; }
 
         /// <summary>
-        /// <para>The job ID. You can view the job ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by using the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> API.</para>
+        /// <para>The task ID. You can view the task ID on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2718008.html">ListTask</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAiCallTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The allowed call days.</para>
+        /// <para>The available call days.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallDay")]
@@ -18,31 +18,40 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<string> CallDay { get; set; }
 
         /// <summary>
+        /// <para>The expiration date of outbound call details (the specific deadline).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>2026-07-30 20:00:20</para>
         /// </summary>
         [NameInMap("CallExpireDate")]
         [Validation(Required=false)]
         public string CallExpireDate { get; set; }
 
         /// <summary>
+        /// <para>The expiration duration of outbound call details. Unit: minutes.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>61</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("CallExpireMinutes")]
         [Validation(Required=false)]
         public long? CallExpireMinutes { get; set; }
 
         /// <summary>
+        /// <para>The outbound call validity type. Valid values:</para>
+        /// <para>0: permanently valid.
+        /// 1: valid for a specified duration after import.
+        /// 2: valid until a specified date.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>29</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("CallExpireType")]
         [Validation(Required=false)]
         public long? CallExpireType { get; set; }
 
         /// <summary>
-        /// <para>The retry interval. Unit: minutes. The maximum value is 120.</para>
+        /// <para>The retry interval. Unit: minutes. The maximum value is 120 minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -69,7 +78,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryTimes { get; set; }
 
         /// <summary>
-        /// <para>The allowed call time periods.</para>
+        /// <para>The available call time periods.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallTime")]
@@ -103,9 +112,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>Specifies whether to enable retry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enabled.</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>false (default): disabled.</para>
+        /// <item><description><para>false (default): Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -123,7 +132,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The number type. This parameter is used when the creation source is engine-based.</para>
         /// <para>0: Alibaba Cloud number.</para>
-        /// <para>1: customer-provided line.</para>
+        /// <para>1: Customer-provided line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -146,7 +155,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>1: created by engine.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无法修改，不必填写</para>
+        /// <para>Cannot be modified. Leave this parameter empty</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
@@ -196,14 +205,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试任务</para>
+        /// <para>TestTask</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The scheduled start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the specified time.</para>
+        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748923429000</para>

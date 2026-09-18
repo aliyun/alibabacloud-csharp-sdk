@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The update result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The update was successful.</para>
+        /// <item><description><para><b>true</b>: Updated.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: The update failed.</para>
+        /// <item><description><para><b>false</b>: Failed to update.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The error message. This parameter is returned only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>参数不合法</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful.</description></item>
-        /// <item><description><b>false</b>: failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

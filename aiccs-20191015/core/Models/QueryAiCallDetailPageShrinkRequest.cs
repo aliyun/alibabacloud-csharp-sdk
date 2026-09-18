@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EncryptionType { get; set; }
 
         /// <summary>
-        /// <para>The end calling time. This is a timestamp in milliseconds.</para>
+        /// <para>The end calling time. This value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The end import time. This is a timestamp in milliseconds.</para>
+        /// <para>The end import time. This value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start calling time. This is a timestamp in milliseconds.</para>
+        /// <para>The start calling time. This value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartCallingTime { get; set; }
 
         /// <summary>
-        /// <para>The start import time. This is a timestamp in milliseconds.</para>
+        /// <para>The start import time. This value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748948749000</para>

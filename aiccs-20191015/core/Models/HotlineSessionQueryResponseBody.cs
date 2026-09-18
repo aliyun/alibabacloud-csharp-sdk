@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HotlineSessionQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code. A value of &quot;Success&quot; indicates that the request succeeded.</para>
+        /// <para>The status code. A value of Success indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Call data.</para>
+        /// <para>The call data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public HotlineSessionQueryResponseBodyData Data { get; set; }
         public class HotlineSessionQueryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Call detail records.</para>
+            /// <para>The call detail records.</para>
             /// </summary>
             [NameInMap("CallDetailRecord")]
             [Validation(Required=false)]
             public List<HotlineSessionQueryResponseBodyDataCallDetailRecord> CallDetailRecord { get; set; }
             public class HotlineSessionQueryResponseBodyDataCallDetailRecord : TeaModel {
                 /// <summary>
-                /// <para>Session ID. The acid in WebSocket after an incoming call.</para>
+                /// <para>The session ID. The acid in the websocket after an inbound call.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7719786</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Acid { get; set; }
 
                 /// <summary>
-                /// <para>Agent ID.  </para>
+                /// <para>The agent ID.</para>
                 /// <remarks>
-                /// <para>This field is null in non–change owner scenarios.</para>
+                /// <para>This value is Null in non-transfer scenarios.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ActiveTransferId { get; set; }
 
                 /// <summary>
-                /// <para>Call duration, in seconds.  </para>
+                /// <para>The call duration. Unit: seconds.</para>
                 /// <remarks>
-                /// <para>Unconnected calls do not include call duration.</para>
+                /// <para>No call duration is available for unanswered calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? CallContinueTime { get; set; }
 
                 /// <summary>
-                /// <para>Call result. Valid values:</para>
+                /// <para>The call result. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b>: Normal hang-up.</description></item>
-                /// <item><description><b>touchRouteError</b>: Queue hang-up.</description></item>
-                /// <item><description><b>touchInQueue</b>: Queue hang-up.</description></item>
-                /// <item><description><b>touchInLoss</b>: Queue hang-up.</description></item>
-                /// <item><description><b>userHangup</b>: User hang-up or IVR hang-up.</description></item>
-                /// <item><description><b>sysHangup</b>: System hang-up or IVR hang-up.</description></item>
-                /// <item><description><b>transferAgent</b>: User hang-up or IVR hang-up.</description></item>
-                /// <item><description><b>dailing</b>: Agent hang-up or ring-off hang-up.</description></item>
-                /// <item><description><b>TouchRingCallLoss</b>: Queue hang-up or ring-off hang-up.</description></item>
+                /// <item><description><b>normal</b>: The call ended normally.</description></item>
+                /// <item><description><b>touchRouteError</b>: The call was terminated in the queue.</description></item>
+                /// <item><description><b>touchInQueue</b>: The call was terminated in the queue.</description></item>
+                /// <item><description><b>touchInLoss</b>: The call was terminated in the queue.</description></item>
+                /// <item><description><b>userHangup</b>: The user hung up or the call was terminated in the IVR.</description></item>
+                /// <item><description><b>sysHangup</b>: The system hung up or the call was terminated in the IVR.</description></item>
+                /// <item><description><b>transferAgent</b>: The user hung up or the call was terminated in the IVR.</description></item>
+                /// <item><description><b>dailing</b>: The agent hung up or the call was terminated during ringing.</description></item>
+                /// <item><description><b>TouchRingCallLoss</b>: The call was terminated in the queue or during ringing.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -91,11 +91,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CallResult { get; set; }
 
                 /// <summary>
-                /// <para>Call type. Valid values:</para>
+                /// <para>The call type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Outbound call</description></item>
-                /// <item><description><b>2</b>: Inbound call</description></item>
-                /// <item><description><b>3</b>: Change owner</description></item>
+                /// <item><description><b>1</b>: outbound call</description></item>
+                /// <item><description><b>2</b>: inbound call</description></item>
+                /// <item><description><b>3</b>: transferred call</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? CallType { get; set; }
 
                 /// <summary>
-                /// <para>Called number.</para>
+                /// <para>The called number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>135615*****</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CalledNumber { get; set; }
 
                 /// <summary>
-                /// <para>Calling party number, such as a user\&quot;s phone number, agent number, or machine number.</para>
+                /// <para>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0571773</para>
@@ -126,13 +126,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CallingNumber { get; set; }
 
                 /// <summary>
-                /// <para>Call creation time.</para>
+                /// <para>The time when the call was created.</para>
                 /// <remarks>
                 /// <list type="bullet">
-                /// <item><description>In outbound scenarios, this is the time when the outbound call was initiated.</description></item>
-                /// <item><description>In inbound scenarios, this is the time when the call entered the ACC system.</description></item>
+                /// <item><description>For outbound calls, this is the time when the outbound call was initiated.</description></item>
                 /// </list>
                 /// </remarks>
+                /// <list type="bullet">
+                /// <item><description>For inbound calls, this is the time when the call entered the ACC system.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-10-02 22:32:55</para>
@@ -142,15 +144,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Satisfaction rating, indicated by star level. Valid values:</para>
+                /// <para>The satisfaction rating level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>2</b>: Two-star satisfaction</description></item>
-                /// <item><description><b>3</b>: Three-star satisfaction</description></item>
-                /// <item><description><b>4</b>: Four-star satisfaction</description></item>
-                /// <item><description><b>5</b>: Five-star satisfaction</description></item>
+                /// <item><description><b>2</b>: level-2 satisfaction</description></item>
+                /// <item><description><b>3</b>: level-3 satisfaction</description></item>
+                /// <item><description><b>4</b>: level-4 satisfaction</description></item>
+                /// <item><description><b>5</b>: level-5 satisfaction</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This field has no data in outbound scenarios or scenarios where the call was not answered.</para>
+                /// <para>No data is available for outbound calls or unanswered calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -161,16 +163,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? EvaluationLevel { get; set; }
 
                 /// <summary>
-                /// <para>Satisfaction score. Valid values:</para>
+                /// <para>The satisfaction score. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Very dissatisfied</description></item>
-                /// <item><description><b>2</b>: Dissatisfied</description></item>
-                /// <item><description><b>3</b>: Neutral</description></item>
-                /// <item><description><b>4</b>: Satisfied</description></item>
-                /// <item><description><b>5</b>: Very satisfied</description></item>
+                /// <item><description><b>1</b>: Very dissatisfied.</description></item>
+                /// <item><description><b>2</b>: Dissatisfied.</description></item>
+                /// <item><description><b>3</b>: Average.</description></item>
+                /// <item><description><b>4</b>: Satisfied.</description></item>
+                /// <item><description><b>5</b>: Very satisfied.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This field has no data in outbound scenarios or scenarios where the call was not answered.</para>
+                /// <para>No data is available for outbound calls or unanswered calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -181,9 +183,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? EvaluationScore { get; set; }
 
                 /// <summary>
-                /// <para>Skill group ID.  </para>
+                /// <para>The skill group ID.</para>
                 /// <remarks>
-                /// <para>When CallType is <b>1</b>, outbound call scenarios do not include skill group information.</para>
+                /// <para>When CallType is set to <b>1</b>, no skill group information is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -194,25 +196,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? GroupId { get; set; }
 
                 /// <summary>
-                /// <para>Skill group name.  </para>
+                /// <para>The skill group name.</para>
                 /// <remarks>
-                /// <para>When CallType is <b>1</b>, outbound call scenarios do not include skill group information.</para>
+                /// <para>When CallType is set to <b>1</b>, no skill group information is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>自动化技能组</para>
+                /// <para>AutomationSkillGroup</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>Party that hung up. Valid values:  </para>
+                /// <para>The party that hung up. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: System hung up  </description></item>
-                /// <item><description><b>2</b>: Customer hung up  </description></item>
-                /// <item><description><b>3</b>: Agent hung up  </description></item>
-                /// <item><description><b>null</b>: Unknown</description></item>
+                /// <item><description><b>1</b>: System hung up.</description></item>
+                /// <item><description><b>2</b>: Customer hung up.</description></item>
+                /// <item><description><b>3</b>: Agent hung up.</description></item>
+                /// <item><description><b>null</b>: Unknown.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -223,7 +225,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string HangUpRole { get; set; }
 
                 /// <summary>
-                /// <para>Hang-up time.</para>
+                /// <para>The hang-up time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-10-02 22:33:46</para>
@@ -233,7 +235,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string HangUpTime { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the call detail record.</para>
+                /// <para>The globally unique ID of the call details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acc1c58dab4a4dd280e3813c66</para>
@@ -243,9 +245,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Time when the call entered the queue for assignment.  </para>
+                /// <para>The time when the call entered the queue for hotline assignment.</para>
                 /// <remarks>
-                /// <para>Outbound call scenarios do not include queue entry time.</para>
+                /// <para>No queue entry time is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -256,7 +258,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string InQueueTime { get; set; }
 
                 /// <summary>
-                /// <para>Membership ID.</para>
+                /// <para>The member ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7856876</para>
@@ -266,19 +268,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string MemberId { get; set; }
 
                 /// <summary>
-                /// <para>Membership name.</para>
+                /// <para>The member name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>匿名会员</para>
+                /// <para>AnonymousMember</para>
                 /// </summary>
                 [NameInMap("MemberName")]
                 [Validation(Required=false)]
                 public string MemberName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the hotline call is assigned and dequeued.</para>
+                /// <para>The time when the call left the queue for hotline assignment.</para>
                 /// <remarks>
-                /// <para>Outbound scenarios do not have a dequeue time.</para>
+                /// <para>No queue exit time is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -289,9 +291,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string OutQueueTime { get; set; }
 
                 /// <summary>
-                /// <para>Agent ID. The phone number to which the call is transferred.</para>
+                /// <para>The agent ID or transferred phone number.</para>
                 /// <remarks>
-                /// <para>This field is null in non-transfer scenarios.</para>
+                /// <para>This value is Null in non-transfer scenarios.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -302,13 +304,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string PassiveTransferId { get; set; }
 
                 /// <summary>
-                /// <para>The recipient of the transferred session. Valid values:</para>
+                /// <para>The type of the party to which the session was transferred. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: Agent ID.</description></item>
                 /// <item><description><b>2</b>: Transferred phone number.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This field is null in non-transfer scenarios.</para>
+                /// <para>This value is Null in non-transfer scenarios.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -319,7 +321,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string PassiveTransferIdType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the call is answered.</para>
+                /// <para>The time when the call was answered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-10-02 22:33:09</para>
@@ -329,7 +331,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string PickUpTime { get; set; }
 
                 /// <summary>
-                /// <para>Queue duration.</para>
+                /// <para>The queue wait duration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -339,9 +341,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? QueueUpContinueTime { get; set; }
 
                 /// <summary>
-                /// <para>Ringing duration, in seconds.</para>
+                /// <para>The ringing duration. Unit: seconds.</para>
                 /// <remarks>
-                /// <para>Outbound scenarios do not have ringing duration.</para>
+                /// <para>No ringing duration is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -352,9 +354,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? RingContinueTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when ringing ends.</para>
+                /// <para>The time when ringing ended.</para>
                 /// <remarks>
-                /// <para>Outbound scenarios do not have a ring end time.</para>
+                /// <para>No ringing end time is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -365,9 +367,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string RingEndTime { get; set; }
 
                 /// <summary>
-                /// <para>Ringing start time.  </para>
+                /// <para>The time when ringing started.</para>
                 /// <remarks>
-                /// <para>Outbound call scenarios do not include ringing start time.</para>
+                /// <para>No ringing start time is available for outbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -378,9 +380,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string RingStartTime { get; set; }
 
                 /// <summary>
-                /// <para>Agent ID.  </para>
+                /// <para>The agent ID.</para>
                 /// <remarks>
-                /// <para>In inbound scenarios, agent information is unavailable until the call is assigned to an agent.</para>
+                /// <para>No agent information is available before an agent is assigned for inbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -391,20 +393,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string ServicerId { get; set; }
 
                 /// <summary>
-                /// <para>Agent name.</para>
+                /// <para>The agent name.</para>
                 /// <remarks>
-                /// <para>Agent information is unavailable before the call is assigned to an agent in inbound scenarios.</para>
+                /// <para>No agent information is available before an agent is assigned for inbound calls.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
-                /// <para>刘测试</para>
+                /// <para>TestAgent</para>
                 /// </summary>
                 [NameInMap("ServicerName")]
                 [Validation(Required=false)]
                 public string ServicerName { get; set; }
 
                 /// <summary>
-                /// <para>Long-distance call.</para>
+                /// <para>The long-distance call.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1861111****</para>
@@ -416,7 +418,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -426,7 +428,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -436,7 +438,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26</para>
@@ -448,7 +450,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -458,7 +460,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EE339D98-9BD3-4413-B165</para>
@@ -468,7 +470,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call succeeded.</para>
+        /// <para>Indicates whether the API call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

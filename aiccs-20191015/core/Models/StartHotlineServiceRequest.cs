@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class StartHotlineServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</para>
+        /// <para>The name of the agent account, which is the mobile number or email address specified during account registration. The name must be unique within the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Unique ID for the customer request. Used for idempotency validation and can be generated using UUID.</para>
+        /// <para>The unique ID of the client request. Used for idempotency checks. You can use a UUID to generate this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
@@ -31,7 +31,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+        /// You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">AICCS console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

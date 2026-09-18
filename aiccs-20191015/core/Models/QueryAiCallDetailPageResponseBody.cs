@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The branch name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default branch.</para>
+                /// <para>Default branch</para>
                 /// </summary>
                 [NameInMap("BranchName")]
                 [Validation(Required=false)]
@@ -84,8 +84,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? BranchVersionId { get; set; }
 
                 /// <summary>
+                /// <para>The expiration time of the outbound call detail.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>29</para>
+                /// <para>2026-07-30 20:00:20</para>
                 /// </summary>
                 [NameInMap("CallExpireTime")]
                 [Validation(Required=false)]
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The call result.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Answered.</para>
+                /// <para>Answered</para>
                 /// </summary>
                 [NameInMap("CallResult")]
                 [Validation(Required=false)]
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string CalledNumber { get; set; }
 
                 /// <summary>
-                /// <para>The calling time. This is a timestamp in milliseconds.</para>
+                /// <para>The calling time. This value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? ConversationDuration { get; set; }
 
                 /// <summary>
-                /// <para>The chat record information. The structure is a JSON array, sorted in chronological order. The format is as follows:</para>
+                /// <para>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</para>
                 /// <pre><code class="language-json">[
                 ///     {
                 ///         &quot;content&quot;:&quot;Chat content&quot;,
@@ -238,17 +240,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? EncryptionType { get; set; }
 
                 /// <summary>
-                /// <para>The reason for call failure. This field is present only when the call fails.</para>
+                /// <para>The reason for call failure. This field is available only when the call fails.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Account suspended.</para>
+                /// <para>Account suspended</para>
                 /// </summary>
                 [NameInMap("FailedReason")]
                 [Validation(Required=false)]
                 public string FailedReason { get; set; }
 
                 /// <summary>
-                /// <para>The import time. This is a timestamp in milliseconds.</para>
+                /// <para>The import time. This value is a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1748948749000</para>
@@ -268,7 +270,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string MajorIntent { get; set; }
 
                 /// <summary>
-                /// <para>The variable information used at runtime, stored in key-value format in this field.</para>
+                /// <para>The variable information used at runtime, stored in this field as key-value pairs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -286,7 +288,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Options { get; set; }
 
                 /// <summary>
-                /// <para>The business serial number reserved for external input. A unique ID can be used for business association.</para>
+                /// <para>The external business serial number reserved for external input. A unique ID can be used for business association.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>outId</para>
@@ -296,7 +298,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string OutId { get; set; }
 
                 /// <summary>
-                /// <para>The download path of the recording file. This field is present only after the recording file is generated.</para>
+                /// <para>The download path of the recording file. This field is available only after the recording file is generated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https://*******</para>
@@ -338,7 +340,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 /// <para>The version name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Default version.</para>
+                /// <para>Default version</para>
                 /// </summary>
                 [NameInMap("VersionName")]
                 [Validation(Required=false)]
@@ -392,7 +394,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success.</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -409,10 +411,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Successful.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

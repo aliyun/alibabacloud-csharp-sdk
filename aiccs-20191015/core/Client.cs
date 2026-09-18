@@ -18,34 +18,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "aiccs.aliyuncs.com"},
-                {"us-east-1", "aiccs.aliyuncs.com"},
-                {"me-east-1", "aiccs.aliyuncs.com"},
-                {"eu-west-1", "aiccs.aliyuncs.com"},
-                {"eu-central-1", "aiccs.aliyuncs.com"},
-                {"cn-zhangjiakou", "aiccs.aliyuncs.com"},
-                {"cn-wulanchabu", "aiccs.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "aiccs.aliyuncs.com"},
-                {"cn-shenzhen", "aiccs.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "aiccs.aliyuncs.com"},
-                {"cn-shanghai", "aiccs.aliyuncs.com"},
-                {"cn-qingdao", "aiccs.aliyuncs.com"},
-                {"cn-north-2-gov-1", "aiccs.aliyuncs.com"},
-                {"cn-huhehaote", "aiccs.aliyuncs.com"},
-                {"cn-hongkong", "aiccs.aliyuncs.com"},
-                {"cn-hangzhou-finance", "aiccs.aliyuncs.com"},
-                {"cn-hangzhou", "aiccs.aliyuncs.com"},
-                {"cn-chengdu", "aiccs.aliyuncs.com"},
-                {"cn-beijing-finance-1", "aiccs.aliyuncs.com"},
-                {"cn-beijing", "aiccs.aliyuncs.com"},
-                {"ap-southeast-5", "aiccs.aliyuncs.com"},
-                {"ap-southeast-3", "aiccs.aliyuncs.com"},
-                {"ap-southeast-1", "aiccs.aliyuncs.com"},
-                {"ap-northeast-1", "aiccs.aliyuncs.com"},
-            };
+            this._endpointRule = "central";
             CheckConfig(config);
             this._endpoint = GetEndpoint("aiccs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -3267,7 +3240,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
+        /// <para>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3424,7 +3397,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
+        /// <para>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3581,7 +3554,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
+        /// <para>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3604,7 +3577,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before creating a call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
+        /// <para>Before creating a voice call task, use an agent to perform a test call to confirm that the results meet your requirements.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7734,16 +7707,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// <para>Ends a hotline service based on the instance ID and agent account name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
         /// <item><description>API frequency: 100 calls per second.<remarks>
-        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7796,16 +7769,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// <para>Ends a hotline service based on the instance ID and agent account name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
         /// <item><description>API frequency: 100 calls per second.<remarks>
-        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7858,16 +7831,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// <para>Ends a hotline service based on the instance ID and agent account name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
         /// <item><description>API frequency: 100 calls per second.<remarks>
-        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -7888,16 +7861,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// <para>Ends a hotline service based on the instance ID and agent account name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
         /// <item><description>API frequency: 100 calls per second.<remarks>
-        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13126,28 +13099,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// <para>Retrieves current data statistics metrics (real-time data), supporting queries grouped by instance ID, department, or skill group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
-        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
-        /// <para>Query logic priority:  </para>
+        /// <item><description>Current data statistics metrics include cumulative metrics for the current day and real-time metrics.</description></item>
+        /// <item><description>To specify department or skill group information, follow the instructions in the <a href="#api-detail-35">request parameters</a> descriptions to obtain the required values.<remarks>
+        /// <para>Query logic priority:</para>
         /// <list type="bullet">
-        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
-        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
-        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// <item><description>If GroupIds is not empty, the data metrics for the corresponding skill group list are queried.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, the data metrics for the corresponding department list are queried.</description></item>
+        /// <item><description>Otherwise, the data metrics for the AICCS instance are queried.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 times per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13200,28 +13173,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// <para>Retrieves current data statistics metrics (real-time data), supporting queries grouped by instance ID, department, or skill group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
-        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
-        /// <para>Query logic priority:  </para>
+        /// <item><description>Current data statistics metrics include cumulative metrics for the current day and real-time metrics.</description></item>
+        /// <item><description>To specify department or skill group information, follow the instructions in the <a href="#api-detail-35">request parameters</a> descriptions to obtain the required values.<remarks>
+        /// <para>Query logic priority:</para>
         /// <list type="bullet">
-        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
-        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
-        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// <item><description>If GroupIds is not empty, the data metrics for the corresponding skill group list are queried.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, the data metrics for the corresponding department list are queried.</description></item>
+        /// <item><description>Otherwise, the data metrics for the AICCS instance are queried.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 times per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13274,28 +13247,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// <para>Retrieves current data statistics metrics (real-time data), supporting queries grouped by instance ID, department, or skill group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
-        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
-        /// <para>Query logic priority:  </para>
+        /// <item><description>Current data statistics metrics include cumulative metrics for the current day and real-time metrics.</description></item>
+        /// <item><description>To specify department or skill group information, follow the instructions in the <a href="#api-detail-35">request parameters</a> descriptions to obtain the required values.<remarks>
+        /// <para>Query logic priority:</para>
         /// <list type="bullet">
-        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
-        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
-        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// <item><description>If GroupIds is not empty, the data metrics for the corresponding skill group list are queried.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, the data metrics for the corresponding department list are queried.</description></item>
+        /// <item><description>Otherwise, the data metrics for the AICCS instance are queried.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 times per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -13316,28 +13289,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// <para>Retrieves current data statistics metrics (real-time data), supporting queries grouped by instance ID, department, or skill group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
-        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
-        /// <para>Query logic priority:  </para>
+        /// <item><description>Current data statistics metrics include cumulative metrics for the current day and real-time metrics.</description></item>
+        /// <item><description>To specify department or skill group information, follow the instructions in the <a href="#api-detail-35">request parameters</a> descriptions to obtain the required values.<remarks>
+        /// <para>Query logic priority:</para>
         /// <list type="bullet">
-        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
-        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
-        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// <item><description>If GroupIds is not empty, the data metrics for the corresponding skill group list are queried.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, the data metrics for the corresponding department list are queried.</description></item>
+        /// <item><description>Otherwise, the data metrics for the AICCS instance are queried.</description></item>
         /// </list>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 times per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -17862,17 +17835,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query call details by instance ID.</para>
+        /// <para>Queries call details by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>Call details include the total number of records, call results, agent names, call time, and other information.</para>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 80 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -18021,17 +17994,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query call details by instance ID.</para>
+        /// <para>Queries call details by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>Call details include the total number of records, call results, agent names, call time, and other information.</para>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 80 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -18180,17 +18153,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query call details by instance ID.</para>
+        /// <para>Queries call details by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>Call details include the total number of records, call results, agent names, call time, and other information.</para>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 80 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -18211,17 +18184,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query call details by instance ID.</para>
+        /// <para>Queries call details by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <para>Call details include the total number of records, call results, agent names, call time, and other information.</para>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 80 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -18242,7 +18215,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a single phone number to a task.</para>
+        /// <para>Imports a single phone number record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18268,6 +18241,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
             {
                 query["EncryptionType"] = request.EncryptionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
+            {
+                query["Extension"] = request.Extension;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
             {
@@ -18318,7 +18295,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a single phone number to a task.</para>
+        /// <para>Imports a single phone number record.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18344,6 +18321,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptionType))
             {
                 query["EncryptionType"] = request.EncryptionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extension))
+            {
+                query["Extension"] = request.Extension;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
             {
@@ -18394,7 +18375,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a single phone number to a task.</para>
+        /// <para>Imports a single phone number record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18412,7 +18393,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports a single phone number to a task.</para>
+        /// <para>Imports a single phone number record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19342,20 +19323,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
+        /// <para>Retrieves the list of robot scripts, including the robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
-        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// <item><description>Before calling this operation, make sure you have scripts that have passed review.</description></item>
+        /// <item><description>If you do not have any approved scripts, first add scripts and submit them for review on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -19412,20 +19393,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
+        /// <para>Retrieves the list of robot scripts, including the robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
-        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// <item><description>Before calling this operation, make sure you have scripts that have passed review.</description></item>
+        /// <item><description>If you do not have any approved scripts, first add scripts and submit them for review on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -19482,20 +19463,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
+        /// <para>Retrieves the list of robot scripts, including the robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
-        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// <item><description>Before calling this operation, make sure you have scripts that have passed review.</description></item>
+        /// <item><description>If you do not have any approved scripts, first add scripts and submit them for review on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -19516,20 +19497,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
+        /// <para>Retrieves the list of robot scripts, including the robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
-        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// <item><description>Before calling this operation, make sure you have scripts that have passed review.</description></item>
+        /// <item><description>If you do not have any approved scripts, first add scripts and submit them for review on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20534,20 +20515,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Intelligent Contact Robot call records.</para>
+        /// <para>Queries the call records of an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
-        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</description></item>
+        /// <item><description>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20608,20 +20589,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Intelligent Contact Robot call records.</para>
+        /// <para>Queries the call records of an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
-        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</description></item>
+        /// <item><description>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20682,20 +20663,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Intelligent Contact Robot call records.</para>
+        /// <para>Queries the call records of an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
-        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</description></item>
+        /// <item><description>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -20716,20 +20697,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Intelligent Contact Robot call records.</para>
+        /// <para>Queries the call records of an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
-        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have initiated an outbound call task by using the intelligent contact robot.</description></item>
+        /// <item><description>If you have not initiated an outbound call task by using the intelligent contact robot, call the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> operation to initiate an outbound call task.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21690,22 +21671,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
+        /// <para>Retrieves the details of a call task for an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
-        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
-        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
-        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// <item><description>Call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</description></item>
+        /// <item><description>Before calling this operation, make sure that the intelligent contact robot you created has successfully started a task.</description></item>
+        /// <item><description>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the call task details. If you do not specify them, all task details are returned.</description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21786,22 +21767,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
+        /// <para>Retrieves the details of a call task for an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
-        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
-        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
-        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// <item><description>Call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</description></item>
+        /// <item><description>Before calling this operation, make sure that the intelligent contact robot you created has successfully started a task.</description></item>
+        /// <item><description>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the call task details. If you do not specify them, all task details are returned.</description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21882,22 +21863,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
+        /// <para>Retrieves the details of a call task for an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
-        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
-        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
-        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// <item><description>Call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</description></item>
+        /// <item><description>Before calling this operation, make sure that the intelligent contact robot you created has successfully started a task.</description></item>
+        /// <item><description>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the call task details. If you do not specify them, all task details are returned.</description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -21918,22 +21899,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
+        /// <para>Retrieves the details of a call task for an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
-        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
-        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
-        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// <item><description>Call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a> &gt; <b>Details</b> page.</description></item>
+        /// <item><description>Before calling this operation, make sure that the intelligent contact robot you created has successfully started a task.</description></item>
+        /// <item><description>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</description></item>
+        /// <item><description>The optional parameters in this operation are filter conditions for the call task details. If you do not specify them, all task details are returned.</description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 500 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -23516,7 +23497,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>Before querying call task details, make sure that you have created a call task.</description></item>
         /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
@@ -23648,7 +23629,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>Before querying call task details, make sure that you have created a call task.</description></item>
         /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
@@ -23780,7 +23761,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>Before querying call task details, make sure that you have created a call task.</description></item>
         /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
@@ -23806,7 +23787,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before querying call task details, make sure you have created a call task.</description></item>
+        /// <item><description>Before querying call task details, make sure that you have created a call task.</description></item>
         /// <item><description>If you have not created a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
         /// </list>
         /// </description>
@@ -23826,7 +23807,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a voice call task.</para>
+        /// <para>Queries the basic information of a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23880,7 +23861,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a voice call task.</para>
+        /// <para>Queries the basic information of a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23934,7 +23915,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a voice call task.</para>
+        /// <para>Queries the basic information of a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23952,7 +23933,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a voice call task.</para>
+        /// <para>Queries the basic information of a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27262,23 +27243,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// <para>Initiates an outbound call from an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
-        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
-        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// <item><description>Before initiating an outbound call from an intelligent contact robot, make sure that you have an approved script on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page and an approved real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after calling this operation.<remarks>
+        /// <para>For example, if the <b>date</b> parameter is &quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;, the creation time of the call is &quot;2024-06-24 03:40:31&quot;.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 1000 calls per second.<remarks>
-        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 1,000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27359,23 +27340,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// <para>Initiates an outbound call from an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
-        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
-        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// <item><description>Before initiating an outbound call from an intelligent contact robot, make sure that you have an approved script on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page and an approved real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after calling this operation.<remarks>
+        /// <para>For example, if the <b>date</b> parameter is &quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;, the creation time of the call is &quot;2024-06-24 03:40:31&quot;.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 1000 calls per second.<remarks>
-        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 1,000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27456,23 +27437,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// <para>Initiates an outbound call from an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
-        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
-        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// <item><description>Before initiating an outbound call from an intelligent contact robot, make sure that you have an approved script on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page and an approved real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after calling this operation.<remarks>
+        /// <para>For example, if the <b>date</b> parameter is &quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;, the creation time of the call is &quot;2024-06-24 03:40:31&quot;.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 1000 calls per second.<remarks>
-        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 1,000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27493,23 +27474,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// <para>Initiates an outbound call from an intelligent contact robot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
-        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
-        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// <item><description>Before initiating an outbound call from an intelligent contact robot, make sure that you have an approved script on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page and an approved real number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after calling this operation.<remarks>
+        /// <para>For example, if the <b>date</b> parameter is &quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;, the creation time of the call is &quot;2024-06-24 03:40:31&quot;.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
-        /// <h3>queries per second (QPS) Limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 1000 calls per second.<remarks>
-        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 1,000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27530,20 +27511,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// <para>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
-        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// <item><description>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.</description></item>
+        /// <item><description>After you invoke this operation, the <b>Data</b> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27712,20 +27693,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// <para>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
-        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// <item><description>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.</description></item>
+        /// <item><description>After you invoke this operation, the <b>Data</b> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27894,20 +27875,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// <para>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
-        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// <item><description>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.</description></item>
+        /// <item><description>After you invoke this operation, the <b>Data</b> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -27928,20 +27909,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// <para>Initiates an intelligent interactive voice response call based on the China-only caller ID, called number, and intelligent outbound call audio file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
-        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// <item><description>The following characters cannot appear in the intelligent interactive voice response SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.</description></item>
+        /// <item><description>After you invoke this operation, the <b>Data</b> response parameter returns the unique receipt ID for this call, which can be used to invoke the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
-        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: No throttling.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -29210,20 +29191,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// <para>Signs in a hotline agent based on the instance ID and agent account name to start the hotline service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
-        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this operation is the token required to initiate a heartbeat.</description></item>
+        /// <item><description>To pause the hotline service when an agent takes a short break, call the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 100 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -29276,20 +29257,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// <para>Signs in a hotline agent based on the instance ID and agent account name to start the hotline service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
-        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this operation is the token required to initiate a heartbeat.</description></item>
+        /// <item><description>To pause the hotline service when an agent takes a short break, call the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 100 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -29342,20 +29323,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// <para>Signs in a hotline agent based on the instance ID and agent account name to start the hotline service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
-        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this operation is the token required to initiate a heartbeat.</description></item>
+        /// <item><description>To pause the hotline service when an agent takes a short break, call the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 100 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -29376,20 +29357,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// <para>Signs in a hotline agent based on the instance ID and agent account name to start the hotline service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
-        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this operation is the token required to initiate a heartbeat.</description></item>
+        /// <item><description>To pause the hotline service when an agent takes a short break, call the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> operation.</description></item>
         /// </list>
-        /// <h3>Queries per second (QPS) limit</h3>
+        /// <h3>QPS limit</h3>
         /// <list type="bullet">
-        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
-        /// <item><description>API frequency: 100 queries per second.<remarks>
-        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// <item><description>Per-user call frequency: not throttled.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency, throttling is triggered.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -31643,7 +31624,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
+        /// <para>Before updating the configuration of a call task, make sure that the task status is stopped.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31796,7 +31777,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
+        /// <para>Before updating the configuration of a call task, make sure that the task status is stopped.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -31949,7 +31930,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
+        /// <para>Before updating the configuration of a call task, make sure that the task status is stopped.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31972,7 +31953,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before updating the configuration of a voice call task, make sure that the task is in the Stopped state.</para>
+        /// <para>Before updating the configuration of a call task, make sure that the task status is stopped.</para>
         /// </description>
         /// 
         /// <param name="request">

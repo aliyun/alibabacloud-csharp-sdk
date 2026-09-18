@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class RobotCallRequest : TeaModel {
         /// <summary>
-        /// <para>Called number.</para>
+        /// <para>The called number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
-        /// <para>Outbound caller number. View it in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</para>
+        /// <para>The caller number for the outbound call. You can view this number on the <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> page of the voice messaging service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledShowNumber { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the number status detection identity. Valid values:  </para>
+        /// <para>Specifies whether to enable the number status identification feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (Default Value): Disable.  </description></item>
-        /// <item><description><b>true</b>: Enable.  <remarks>
-        /// <para>When enabled, the reason for unanswered calls will be recorded.</para>
+        /// <item><description><b>false</b> (default): Disabled.</description></item>
+        /// <item><description><b>true</b>: Enabled.<remarks>
+        /// <para>After this feature is enabled, the reason why a call is not answered is recorded.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EarlyMediaAsr { get; set; }
 
         /// <summary>
-        /// <para>An ID reserved for the caller. This ID will be returned to the caller through the receipt message. It must be 1 to 15 bytes in length.</para>
+        /// <para>The ID reserved for the caller. This ID is returned to the caller through a receipt message. The value is 1 to 15 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>222356****</para>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Parameter list for the robot, in JSON format. The total length must not exceed 512 bytes. You can view the parameters in <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <b>Details</b> &gt; <b>Input Parameters</b>, or by using the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> API.</para>
+        /// <para>The parameter list of the robot in JSON format. The total length cannot exceed 512 bytes. You can view the parameters on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> &gt; <b>Details</b> &gt; <b>Input/Output Parameters</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2717999.html">ListRobotParams</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///   &quot;name&quot;: &quot;张三&quot;,
+        ///   &quot;name&quot;: &quot;Zhang San&quot;,
         ///   &quot;age&quot;: &quot;25&quot;
         /// }</para>
         /// </summary>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>Whether to record the call. Valid values:</para>
+        /// <para>Specifies whether to record the call. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): Do not record.</description></item>
         /// <item><description><b>true</b>: Record.</description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Robot ID, which is the script ID. View the reviewed and approved script ID in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</para>
+        /// <para>The robot ID, which is the script ID. You can view approved script IDs on the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

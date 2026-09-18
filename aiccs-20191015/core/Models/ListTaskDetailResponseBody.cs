@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request status code. A return value of OK indicates that the request succeeded.</para>
+        /// <para>The request status code. OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Detailed job information.</para>
+        /// <para>The task details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTaskDetailResponseBodyData Data { get; set; }
         public class ListTaskDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Number of items per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageNo { get; set; }
 
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>List of job information.</para>
+            /// <para>The list of task details.</para>
             /// </summary>
             [NameInMap("Record")]
             [Validation(Required=false)]
             public List<ListTaskDetailResponseBodyDataRecord> Record { get; set; }
             public class ListTaskDetailResponseBodyDataRecord : TeaModel {
                 /// <summary>
-                /// <para>Called number.</para>
+                /// <para>The called number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>186****0000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Called { get; set; }
 
                 /// <summary>
-                /// <para>Calling number.</para>
+                /// <para>The caller number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>136****0000</para>
@@ -74,21 +74,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Caller { get; set; }
 
                 /// <summary>
-                /// <para>Hang-up direction. Valid values:</para>
+                /// <para>The hangup direction. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>User</b>.</description></item>
-                /// <item><description><b>Machine</b>.</description></item>
+                /// <item><description><b>Robot</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>用户</para>
+                /// <para>User</para>
                 /// </summary>
                 [NameInMap("Direction")]
                 [Validation(Required=false)]
                 public string Direction { get; set; }
 
                 /// <summary>
-                /// <para>Call duration. Unit: seconds.</para>
+                /// <para>The call duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Duration { get; set; }
 
                 /// <summary>
-                /// <para>End time.</para>
+                /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-05-20 00:03:00</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>Record ID.</para>
+                /// <para>The detail ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Current retry count.</para>
+                /// <para>The current retry count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? RetryCurTimes { get; set; }
 
                 /// <summary>
-                /// <para>Retry Count.</para>
+                /// <para>The retry count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? RetryTimes { get; set; }
 
                 /// <summary>
-                /// <para>Start Time.</para>
+                /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-05-20 00:00:00</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>Detail status.</para>
+                /// <para>The detail status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Call status code.</para>
+                /// <para>The call status code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200100</para>
@@ -168,20 +168,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string StatusCode { get; set; }
 
                 /// <summary>
-                /// <para>Call status code description.</para>
+                /// <para>The description of the call status code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>呼叫成功</para>
+                /// <para>Call succeeded</para>
                 /// </summary>
                 [NameInMap("StatusCodeDesc")]
                 [Validation(Required=false)]
                 public string StatusCodeDesc { get; set; }
 
                 /// <summary>
-                /// <para>Intent tags.</para>
+                /// <para>The intent label.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>肯定</para>
+                /// <para>Affirmative</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             }
 
             /// <summary>
-            /// <para>Total number of jobs.</para>
+            /// <para>The total number of tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>Description of the status code.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
@@ -222,10 +222,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API invocation succeeded. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Succeeded.</description></item>
-        /// <item><description><b>false</b>: Failed.</description></item>
+        /// <item><description><b>true</b>: The operation was successful.</description></item>
+        /// <item><description><b>false</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

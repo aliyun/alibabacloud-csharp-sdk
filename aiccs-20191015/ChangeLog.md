@@ -1,3 +1,7 @@
+2026-09-18 Version: 5.4.3
+- Update API ImportOneTaskPhoneNumber: add request parameters Extension.
+
+
 2026-07-29 Version: 5.4.2
 - Update API CreateAiCallTask: add request parameters CallExpireDate.
 - Update API CreateAiCallTask: add request parameters CallExpireMinutes.

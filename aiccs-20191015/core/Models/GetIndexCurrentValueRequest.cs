@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetIndexCurrentValueRequest : TeaModel {
         /// <summary>
-        /// <para>List of department IDs. Separate multiple IDs with commas (,).</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API and check the <b>DepartmentId</b> field in the response to obtain department IDs.</para>
+        /// <para>The list of department IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> operation and check the <b>DepartmentId</b> parameter in the response to obtain the department ID.</para>
         /// <remarks>
-        /// <para>When this parameter is not empty:  </para>
+        /// <para>When this parameter is not empty:</para>
         /// <list type="bullet">
-        /// <item><description>If GroupIds is not empty, the system prioritizes querying data metrics for the skill groups specified by GroupIds.  </description></item>
-        /// <item><description>If GroupIds is empty, the system prioritizes querying data metrics for the departments specified by this parameter.</description></item>
+        /// <item><description>If GroupIds is not empty, the query is performed based on the skill group list corresponding to GroupIds.</description></item>
+        /// <item><description>If GroupIds is empty, the query is performed based on the department list corresponding to this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -28,10 +28,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string DepIds { get; set; }
 
         /// <summary>
-        /// <para>List of skill group IDs. Separate multiple IDs with commas (,).</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2717970.html">QuerySkillGroups</a> API and check the <b>SkillGroupId</b> field in the response to obtain skill group IDs.</para>
+        /// <para>The list of skill group IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2717970.html">QuerySkillGroups</a> operation and check the <b>SkillGroupId</b> parameter in the response to obtain the skill group ID.</para>
         /// <remarks>
-        /// <para>When this parameter is not empty, the system prioritizes querying data metrics for the specified skill groups.</para>
+        /// <para>When this parameter is not empty, the query is performed based on the skill group list corresponding to this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string GroupIds { get; set; }
 
         /// <summary>
-        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
+        /// <para>The AICCS instance ID. You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <remarks>
         /// <para>The AICCS instance ID is required.</para>
         /// </remarks>

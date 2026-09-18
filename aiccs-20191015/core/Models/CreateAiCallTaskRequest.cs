@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CreateAiCallTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent that is online.</para>
+        /// <para>The code of the agent that is already online.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1180**************</para>
@@ -38,24 +38,33 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<string> CallDay { get; set; }
 
         /// <summary>
+        /// <para>The expiration date of outbound call details (specific deadline).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>2026-07-30 20:00:20</para>
         /// </summary>
         [NameInMap("CallExpireDate")]
         [Validation(Required=false)]
         public string CallExpireDate { get; set; }
 
         /// <summary>
+        /// <para>The expiration duration of outbound call details. Unit: minutes.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>82</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("CallExpireMinutes")]
         [Validation(Required=false)]
         public long? CallExpireMinutes { get; set; }
 
         /// <summary>
+        /// <para>The outbound call validity type. Valid values:</para>
+        /// <para>0: permanently valid.
+        /// 1: valid for a specified duration after import.
+        /// 2: valid until a specified date.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>56</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("CallExpireType")]
         [Validation(Required=false)]
@@ -72,7 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryInterval { get; set; }
 
         /// <summary>
-        /// <para>The list of retry reasons for failed calls.</para>
+        /// <para>The list of failure retry reasons.</para>
         /// </summary>
         [NameInMap("CallRetryReason")]
         [Validation(Required=false)]
@@ -111,7 +120,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string LineEncoding { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the customer-provided line.</para>
+        /// <para>The customer-provided line number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>152****3120</para>
@@ -167,9 +176,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <summary>
         /// <para>The creation source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: created by an agent.</para>
+        /// <item><description><para>0: created by agent.</para>
         /// </description></item>
-        /// <item><description><para>1: created by an engine.</para>
+        /// <item><description><para>1: created by engine.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -181,7 +190,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Source { get; set; }
 
         /// <summary>
-        /// <para>The start type. Valid values:</para>
+        /// <para>The start mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>IMMEDIATE: starts immediately.</para>
         /// </description></item>
@@ -212,14 +221,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试任务</para>
+        /// <para>TestTask</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The scheduled start time of the task. Unit: milliseconds (UNIX timestamp). This parameter is valid and required when StarType is set to SCHEDULE. The task automatically starts at the specified time.</para>
+        /// <para>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12313123133</para>

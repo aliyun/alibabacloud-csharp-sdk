@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This parameter is returned only when the RAM permission verification fails.</para>
+        /// <para>The access denial details. This field is returned only when RAM authentication fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The agent name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试智能体</para>
+            /// <para>TestAgent</para>
             /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>SampleValue</para>
             /// </summary>
             [NameInMap("ApplicationCode")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>SampleValue</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
@@ -80,14 +80,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public List<string> CallDays { get; set; }
 
             /// <summary>
+            /// <para>The expiration date of outbound call details (specific deadline).</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>2026-07-30 20:00:20</para>
             /// </summary>
             [NameInMap("CallExpireDate")]
             [Validation(Required=false)]
             public string CallExpireDate { get; set; }
 
             /// <summary>
+            /// <para>The expiration duration of outbound call details, in minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -96,8 +100,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CallExpireMinutes { get; set; }
 
             /// <summary>
+            /// <para>The outbound call validity type. Valid values:</para>
+            /// <para>0: Permanently valid.
+            /// 1: Valid for a period of time after import.
+            /// 2: Valid until a specified time.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>12</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("CallExpireType")]
             [Validation(Required=false)]
@@ -132,21 +141,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             }
 
+            /// <summary>
+            /// <para>The callable time periods for the current outbound call instance.</para>
+            /// </summary>
             [NameInMap("CallableTimes")]
             [Validation(Required=false)]
             public List<QueryAiCallTaskDetailResponseBodyDataCallableTimes> CallableTimes { get; set; }
             public class QueryAiCallTaskDetailResponseBodyDataCallableTimes : TeaModel {
                 /// <summary>
+                /// <para>The end time.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>示例值示例值示例值</para>
+                /// <para>18:00:00</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The start time.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>示例值</para>
+                /// <para>10:00:00</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -176,7 +192,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>SampleValue</para>
             /// </summary>
             [NameInMap("LineEncoding")]
             [Validation(Required=false)]
@@ -184,7 +200,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>SampleValue</para>
             /// </summary>
             [NameInMap("LinePhoneNum")]
             [Validation(Required=false)]
@@ -209,7 +225,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? RealStartTime { get; set; }
 
             /// <summary>
-            /// <para>The number of retries.</para>
+            /// <para>The number of retry attempts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -243,7 +259,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? RetryInterval { get; set; }
 
             /// <summary>
-            /// <para>The list of failure reasons that allow retry.</para>
+            /// <para>The list of reasons that allow retry on failure.</para>
             /// </summary>
             [NameInMap("RetryReasons")]
             [Validation(Required=false)]
@@ -260,11 +276,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The start mode. Valid values:</para>
+            /// <para>The start type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>IMMEDIATE: starts immediately.</para>
+            /// <item><description><para>IMMEDIATE: Start immediately.</para>
             /// </description></item>
-            /// <item><description><para>SCHEDULE: starts at a scheduled time.</para>
+            /// <item><description><para>SCHEDULE: Start at a scheduled time.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -289,7 +305,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务</para>
+            /// <para>TestTask</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -298,10 +314,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>参数无效</para>
+        /// <para>Invalid parameter</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -318,10 +334,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
