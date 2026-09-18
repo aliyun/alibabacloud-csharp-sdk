@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.PAIModelGallery20250630.Models
+{
+    public class CreateJobPlanResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The job plan ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>jp-xxxxxx</para>
+        /// </summary>
+        [NameInMap("JobPlanId")]
+        [Validation(Required=false)]
+        public string JobPlanId { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>40325405-579C-4D82-9624-EC2B1779848E</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
