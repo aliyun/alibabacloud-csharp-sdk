@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetRayDashboardResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether Cloud Monitor is enabled for this dashboard to display Ray metrics</para>
+        /// <para>Indicates whether the dashboard has integrated CloudMonitor to display Ray metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string MetricsEnabled { get; set; }
 
         /// <summary>
-        /// <para>The Ray Dashboard URL</para>
+        /// <para>The URL of the Ray Dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy">https://pre-pai-dlc-proxy-cn-hangzhou.aliyun.com/ray/dashboard/dlc1k7426goc7bvy</a></para>

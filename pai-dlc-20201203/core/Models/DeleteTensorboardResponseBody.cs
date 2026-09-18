@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The TensorBoard ID.</para>
+        /// <para>Tensorboard ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard-20210114104214-vf9lowjt3pso</para>

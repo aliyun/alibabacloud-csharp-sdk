@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListEcsSpecsRequest : TeaModel {
         /// <summary>
-        /// <para>Filter by accelerator type. Valid values:</para>
+        /// <para>Filters by accelerator type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CPU</description></item>
         /// <item><description>GPU</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string AcceleratorType { get; set; }
 
         /// <summary>
-        /// <para>The instance types to query. Separate the types with commas (,).</para>
+        /// <para>The list of instance types to query. Separate multiple instance types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large,ecs.g6.xlarge</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>desc: descending order.</description></item>
         /// <item><description>asc: ascending order.</description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to query. The start value is 1.</para>
+        /// <para>The page number. The minimum value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries to return on each page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ECS</description></item>
         /// <item><description>Lingjun</description></item>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The field based on which the results are sorted. Valid values:</para>
+        /// <para>Sorts by return field. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CPU</description></item>
         /// <item><description>GPU</description></item>

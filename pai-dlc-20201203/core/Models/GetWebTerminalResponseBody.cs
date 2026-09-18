@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetWebTerminalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID which is used for diagnostics and Q\&amp;A.</para>
+        /// <para>The request ID for this call, used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The WebSocket URI for accessing the container. You must build a WebSocket client. For more information about the communication format, see the following code:</para>
+        /// <para>The WebSocket link for accessing the container. You need to build a WebSocket client. For the detailed communication format, refer to the following code:</para>
         /// <pre><c>ws = new WebSocket(
         ///   `wss://xxxxx`,
         /// );
         /// ws.onopen = function open() {
         ///   console.warn(\\&quot;connected\\&quot;);
-        ///   term.write(\\&quot;\\r\\&quot;);
+        ///   term.write(\\&quot;\\&quot;);
         /// };
         /// 
         /// ws.onclose = function close() {
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         ///   term.write(\\&quot;Connection closed\\&quot;);
         /// };
         /// 
-        /// // Return the following information in the backend.
+        /// // Receive response from the backend
         /// ws.onmessage = function incoming(event) {
         ///   const msg = JSON.parse(event.data);
         ///   console.warn(msg);
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         ///   }
         /// };
         /// 
-        /// // Enter the following code in the console.
+        /// // Console input
         /// term.onData(data =&gt; {
         ///   const msg = { operation: \\&quot;stdin\\&quot;, data: data };
         ///   ws.send(JSON.stringify(msg));

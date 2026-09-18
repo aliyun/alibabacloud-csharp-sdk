@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetPodEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The events returned.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PodId { get; set; }
 
         /// <summary>
-        /// <para>The node UID.</para>
+        /// <para>The instance UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94a7cc7c-0033-48b5-85bd-71c63592c268</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PodUid { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used for troubleshooting.</para>
+        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

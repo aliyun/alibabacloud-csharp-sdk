@@ -622,9 +622,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -700,9 +700,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -778,9 +778,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -805,9 +805,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC before using this operation.</para>
         /// <remarks>
-        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of the CreateJob operation parameters (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -827,16 +827,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// <para>Sends a signal to the pods of a specified job and retrieves the signal ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>This API operation sends a specific signal to one or more pods of a specified job.</description></item>
         /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
-        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// <item><description>You can query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -887,16 +887,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// <para>Sends a signal to the pods of a specified job and retrieves the signal ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>This API operation sends a specific signal to one or more pods of a specified job.</description></item>
         /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
-        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// <item><description>You can query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -947,16 +947,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// <para>Sends a signal to the pods of a specified job and retrieves the signal ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>This API operation sends a specific signal to one or more pods of a specified job.</description></item>
         /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
-        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// <item><description>You can query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -976,16 +976,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a signal to the Pods of a specified job and retrieves the signal ID.</para>
+        /// <para>Sends a signal to the pods of a specified job and retrieves the signal ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation sends a specific signal to one or more Pods of a specified job.</description></item>
+        /// <item><description>This API operation sends a specific signal to one or more pods of a specified job.</description></item>
         /// <item><description>After the signal is sent, the API immediately returns a <c>SignalId</c>. The actual signal delivery is processed by a background worker.</description></item>
-        /// <item><description>Query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
+        /// <item><description>You can query the signal status by calling the <c>GetSignal</c> or <c>ListSignals</c> operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
+        /// <para>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1127,7 +1127,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
+        /// <para>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1249,7 +1249,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
+        /// <para>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1268,7 +1268,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
+        /// <para>Creates a TensorBoard instance. You can create a TensorBoard instance from a job or by specifying a datasource config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1287,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a completed or stopped job.</para>
+        /// <para>Deletes a job that has completed or been stopped.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1323,7 +1323,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a completed or stopped job.</para>
+        /// <para>Deletes a job that has completed or been stopped.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1359,7 +1359,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a completed or stopped job.</para>
+        /// <para>Deletes a job that has completed or been stopped.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1374,7 +1374,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a completed or stopped job.</para>
+        /// <para>Deletes a job that has completed or been stopped.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1389,7 +1389,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
+        /// <para>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1429,7 +1429,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
+        /// <para>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1469,7 +1469,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
+        /// <para>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1488,7 +1488,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
+        /// <para>Deletes an unused task template. If the template is already in use by a node, it cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1645,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a stopped TensorBoard.</para>
+        /// <para>Deletes a stopped Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1691,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a stopped TensorBoard.</para>
+        /// <para>Deletes a stopped Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1737,7 +1737,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a stopped TensorBoard.</para>
+        /// <para>Deletes a stopped Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1756,7 +1756,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a stopped TensorBoard.</para>
+        /// <para>Deletes a stopped Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1775,12 +1775,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
+        /// <para>Retrieves the dashboard URL of a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1830,12 +1830,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
+        /// <para>Retrieves the dashboard URL of a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1885,12 +1885,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
+        /// <para>Retrieves the dashboard URL of a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1909,12 +1909,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
+        /// <para>Retrieves the dashboard URL of a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1933,7 +1933,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1979,7 +1979,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2025,7 +2025,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2044,7 +2044,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and runtime information of a task.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,7 +2063,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a job.</para>
+        /// <para>Retrieves system events for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2117,7 +2117,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a job.</para>
+        /// <para>Retrieves system events for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2171,7 +2171,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a job.</para>
+        /// <para>Retrieves system events for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2190,7 +2190,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a job.</para>
+        /// <para>Retrieves system events for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2209,7 +2209,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
+        /// <para>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+        /// ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2271,7 +2272,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
+        /// <para>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+        /// ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2333,7 +2335,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
+        /// <para>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+        /// ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2352,7 +2355,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the monitoring data of a job, including the CPU, GPU, and memory utilization, network, and disk read/write rate. ⚠️ Note: Except for pay-as-you-go tasks based on general-purpose computing resources, all task types are connected to CloudMonitor. Use the CloudMonitor API to call related monitoring. The overwritten features in the original API are no longer maintained. For more information, see \[Training monitoring and alerting]\\(<a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting</a>).</para>
+        /// <para>Retrieves monitoring data for a node, including CPU, GPU, and memory usage, as well as network and disk read/write rates.
+        /// ⚠️ Note: All node types except pay-as-you-go (postpaid) nodes based on general computing resources are integrated with CloudMonitor. Use CloudMonitor API operations for monitoring calls. Features already covered by the new API operations will no longer undergo maintenance in the original API operations. For more information, see <a href="https://www.alibabacloud.com/help/zh/pai/user-guide/training-monitoring-and-alerting">Training Monitoring and Alerts</a>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2371,7 +2375,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
+        /// <para>Retrieves the computing power health check result for a specific run of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2425,7 +2429,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
+        /// <para>Retrieves the computing power health check result for a specific run of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2479,7 +2483,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
+        /// <para>Retrieves the computing power health check result for a specific run of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2498,7 +2502,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains specified job sanity check result in a Deep Learning Containers (DLC) job.</para>
+        /// <para>Retrieves the computing power health check result for a specific run of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2647,19 +2651,19 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve metrics data.</para>
+        /// <para>Retrieves metrics data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
-        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
-        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
-        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
-        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
-        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// <item><description>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</description></item>
+        /// <item><description>Custom query time ranges are supported. By default, data from the last hour is returned.</description></item>
+        /// <item><description>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</description></item>
+        /// <item><description>To retrieve large amounts of data with paging, use the <c>NextToken</c> parameter for paging operations.</description></item>
+        /// <item><description><c>MetricName</c> is required and specifies the name of the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2742,19 +2746,19 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve metrics data.</para>
+        /// <para>Retrieves metrics data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
-        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
-        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
-        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
-        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
-        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// <item><description>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</description></item>
+        /// <item><description>Custom query time ranges are supported. By default, data from the last hour is returned.</description></item>
+        /// <item><description>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</description></item>
+        /// <item><description>To retrieve large amounts of data with paging, use the <c>NextToken</c> parameter for paging operations.</description></item>
+        /// <item><description><c>MetricName</c> is required and specifies the name of the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2837,19 +2841,19 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve metrics data.</para>
+        /// <para>Retrieves metrics data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
-        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
-        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
-        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
-        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
-        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// <item><description>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</description></item>
+        /// <item><description>Custom query time ranges are supported. By default, data from the last hour is returned.</description></item>
+        /// <item><description>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</description></item>
+        /// <item><description>To retrieve large amounts of data with paging, use the <c>NextToken</c> parameter for paging operations.</description></item>
+        /// <item><description><c>MetricName</c> is required and specifies the name of the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2869,19 +2873,19 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve metrics data.</para>
+        /// <para>Retrieves metrics data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
-        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
-        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
-        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
-        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
-        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// <item><description>This operation queries monitoring metrics for a specific job (JobId) or dimension (Dimensions) under a specified namespace (Namespace).</description></item>
+        /// <item><description>Custom query time ranges are supported. By default, data from the last hour is returned.</description></item>
+        /// <item><description>You can select different time intervals (Period) to retrieve data points at a finer or coarser granularity.</description></item>
+        /// <item><description>To retrieve large amounts of data with paging, use the <c>NextToken</c> parameter for paging operations.</description></item>
+        /// <item><description><c>MetricName</c> is required and specifies the name of the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific types of monitoring metrics, refer to the relevant documentation for more information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2901,7 +2905,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
+        /// <para>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2959,7 +2963,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
+        /// <para>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3017,7 +3021,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
+        /// <para>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3036,7 +3040,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
+        /// <para>Retrieves system events for a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3225,12 +3229,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Ray Dashboard URL.</para>
+        /// <para>Retrieves the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3280,12 +3284,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Ray Dashboard URL.</para>
+        /// <para>Retrieves the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3335,12 +3339,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Ray Dashboard URL.</para>
+        /// <para>Retrieves the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3359,12 +3363,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the Ray Dashboard URL.</para>
+        /// <para>Retrieves the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <para>Before you use this operation, make sure that you fully understand the billing of PAI-DLC and its <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3383,12 +3387,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
+        /// <para>Queries a RayHistoryServer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3428,12 +3435,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
+        /// <para>Queries a RayHistoryServer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3473,12 +3483,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
+        /// <para>Queries a RayHistoryServer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3497,12 +3510,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
+        /// <para>Queries a RayHistoryServer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and have read the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -3527,7 +3543,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// <para>You can call this operation to retrieve the details of a signal that corresponds to a specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing result.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3579,7 +3595,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// <para>You can call this operation to retrieve the details of a signal that corresponds to a specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing result.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3631,7 +3647,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// <para>You can call this operation to retrieve the details of a signal that corresponds to a specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing result.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3656,7 +3672,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API allows you to retrieve the signal details for the specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing status.</para>
+        /// <para>You can call this operation to retrieve the details of a signal that corresponds to a specified <c>JobId</c> and <c>SignalId</c>, including the signal status and delivery scope. Note that the response no longer contains the raw result structure for each pod. Instead, the <c>Status</c>, <c>Reason</c>, and <c>Message</c> fields describe the overall signal processing result.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3675,7 +3691,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Tensorboard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3729,7 +3745,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Tensorboard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3783,7 +3799,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Tensorboard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3802,7 +3818,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a Tensorboard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3821,7 +3837,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
+        /// <para>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3867,7 +3883,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
+        /// <para>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3913,7 +3929,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
+        /// <para>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3932,7 +3948,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the shareable link of a TensorBoard task. The link contains digital tokens. You can use a shareable link to access a TensorBoard task.</para>
+        /// <para>Retrieves the sharing link for a TensorBoard task. The link contains a digital token. You can use the sharing link to access the shared TensorBoard task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4105,7 +4121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
+        /// <para>Provides the method and steps to obtain an HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4155,7 +4171,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
+        /// <para>Provides the method and steps to obtain an HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4205,7 +4221,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
+        /// <para>Provides the method and steps to obtain an HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4224,7 +4240,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides methods and steps to obtain a HTTP link for accessing a container.</para>
+        /// <para>Provides the method and steps to obtain an HTTP link for accessing a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4243,7 +4259,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of supported instance types.</para>
+        /// <para>Queries the list of currently supported machine resource configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4313,7 +4329,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of supported instance types.</para>
+        /// <para>Queries the list of currently supported machine resource configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4383,7 +4399,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of supported instance types.</para>
+        /// <para>Queries the list of currently supported machine resource configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4402,7 +4418,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of supported instance types.</para>
+        /// <para>Queries the list of currently supported machine resource configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4421,7 +4437,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
+        /// <para>Retrieves all computing power health check results for a specific DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4467,7 +4483,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
+        /// <para>Retrieves all computing power health check results for a specific DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4513,7 +4529,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
+        /// <para>Retrieves all computing power health check results for a specific DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4532,7 +4548,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the results of all sanity checks for a DLC job.</para>
+        /// <para>Retrieves all computing power health check results for a specific DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5180,9 +5196,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
         /// <remarks>
-        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5298,9 +5314,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
         /// <remarks>
-        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5416,9 +5432,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
         /// <remarks>
-        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5443,9 +5459,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <para>Before using this operation, make sure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
         /// <remarks>
-        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// <para>Notice: The total length of parameters for the CreateJob operation (including system-generated parameters) cannot exceed 65536 bytes.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5471,7 +5487,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// <para>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5543,7 +5559,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// <para>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5615,7 +5631,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// <para>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5640,7 +5656,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>You can call this API operation to retrieve the details of all signal records for a specific job, including signal IDs, statuses, and creation times. You can use query parameters to further filter or sort the results.</para>
+        /// <para>You can call this operation to retrieve the details of all signal records for a specific job, including the signal ID, status, and creation time. You can use query parameters to further filter or sort the results.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6076,7 +6092,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6121,7 +6140,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6166,7 +6188,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6190,7 +6215,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// <para>Before using this operation, make sure that you fully understand the billing method and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6209,7 +6237,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a TensorBoard instance.</para>
+        /// <para>Starts a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6255,7 +6283,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a TensorBoard instance.</para>
+        /// <para>Starts a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6301,7 +6329,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a TensorBoard instance.</para>
+        /// <para>Starts a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6320,7 +6348,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a TensorBoard instance.</para>
+        /// <para>Starts a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6579,7 +6607,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a TensorBoard instance.</para>
+        /// <para>Stops a TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +6653,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a TensorBoard instance.</para>
+        /// <para>Stops a TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6671,7 +6699,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a TensorBoard instance.</para>
+        /// <para>Stops a TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6690,7 +6718,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a TensorBoard instance.</para>
+        /// <para>Stops a TensorBoard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7219,7 +7247,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Updates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7289,7 +7317,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Updates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7359,7 +7387,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Updates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7378,7 +7406,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Updates a task template.</para>
         /// </summary>
         /// 
         /// <param name="request">

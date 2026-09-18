@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetTensorboardSharedUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The validity period of the shareable link. Unit: seconds. Maximum value: 604800.</para>
+        /// <para>The validity period of the sharing link. Unit: seconds. Maximum value: 604800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>

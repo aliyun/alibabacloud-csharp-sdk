@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateTensorboardRequest : TeaModel {
         /// <summary>
-        /// <para>The job visibility. Valid values:</para>
+        /// <para>The visibility of the job. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PUBLIC: Visible to all members in the workspace.</description></item>
-        /// <item><description>PRIVATE: Visible only to you and the administrator of the workspace.</description></item>
+        /// <item><description>PRIVATE: Visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPU cores.</para>
+        /// <para>The number of CPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Cpu { get; set; }
 
         /// <summary>
-        /// <para>The dataset ID.</para>
+        /// <para>The dataset ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the dataset ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxxxxxxx</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the data source.</para>
+        /// <para>The datasource configurations.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
         public List<DataSourceItem> DataSources { get; set; }
 
         /// <summary>
-        /// <para>The TensorBoard name</para>
+        /// <para>The TensorBoard name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tensorboard</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The job ID. For more information about how to query the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</para>
+        /// <para>The job ID. For information about how to obtain the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-20210126170216-mtl37ge7gkvdz</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? Memory { get; set; }
 
         /// <summary>
-        /// <para>The extended fields of the dataset are in the JSON format. MountPath: the path to mount the dataset.</para>
+        /// <para>The extended field of custom dataset in JSON format. Currently, MountPath is supported, which specifies the custom mount path of custom dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</para>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job. Default value: 1. Valid values: 1 to 9.</para>
+        /// <para>The priority of the job. This is an optional parameter. Default value: 1. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description>1 is the lowest priority.</description></item>
-        /// <item><description>9 is the highest priority.</description></item>
+        /// <item><description>1: the lowest priority.</description></item>
+        /// <item><description>9: the highest priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,8 +129,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota.</para>
-        /// <para>This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</para>
+        /// <para>The resource quota ID. This parameter is required when you create a TensorBoard job by using resources from a resource quota. &lt;props=&quot;china&quot;&gt;For information about how to obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a>.
+        /// &lt;props=&quot;china&quot;&gt;Published only on China site.
+        /// Currently, only whitelisted users can create TensorBoard jobs by using resource quota resources. To use this feature, contact us.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quota12345</para>
@@ -160,7 +161,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The directory of summary.</para>
+        /// <para>The summary directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/data/</para>
@@ -170,7 +171,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SummaryPath { get; set; }
 
         /// <summary>
-        /// <para>The relative path of summary.</para>
+        /// <para>The summary relative directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/summary/</para>
@@ -180,24 +181,24 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SummaryRelativePath { get; set; }
 
         /// <summary>
-        /// <para>The configurations of datasets mounted with the TensorBoard job.</para>
+        /// <para>The list of dataset configurations mounted to the TensorBoard job.</para>
         /// </summary>
         [NameInMap("TensorboardDataSources")]
         [Validation(Required=false)]
         public List<TensorboardDataSourceSpec> TensorboardDataSources { get; set; }
 
         /// <summary>
-        /// <para>The pay-as-you-go configuration of TensorBoard, which is used to create TensorBoard jobs that use pay-as-you-go resources.</para>
+        /// <para>The pay-as-you-go configuration for TensorBoard, which is used to create a TensorBoard job that uses pay-as-you-go resources.</para>
         /// </summary>
         [NameInMap("TensorboardSpec")]
         [Validation(Required=false)]
         public TensorboardSpec TensorboardSpec { get; set; }
 
         /// <summary>
-        /// <para>The dataset URI:</para>
+        /// <para>The URI of the dataset:</para>
         /// <list type="bullet">
-        /// <item><description>Value format when DataSourceType is set to OSS: <c>oss://[oss-bucket].[endpoint]/[path]</c>.</description></item>
-        /// <item><description>Value format when DataSourceType is set to NAS:<c>nas://[nas-filesystem-id].[region]/[path]</c>.</description></item>
+        /// <item><description>If DataSourceType is set to OSS, the format is <c>oss://[oss-bucket].[endpoint]/[path]</c>.</description></item>
+        /// <item><description>If DataSourceType is set to NAS, the format is <c>nas://[nas-filesystem-id].[region]/[path]</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,7 +209,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123***</para>

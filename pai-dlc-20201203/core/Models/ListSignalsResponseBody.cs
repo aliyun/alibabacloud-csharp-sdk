@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The message returned with the result.</para>
+            /// <para>The message of the returned result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>signal delivered to 1 pods</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public List<string> Roles { get; set; }
 
             /// <summary>
-            /// <para>The delivery scope.</para>
+            /// <para>The sending scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pods</para>

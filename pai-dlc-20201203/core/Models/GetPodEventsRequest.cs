@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetPodEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time (UTC).</para>
+        /// <para>The end time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of events that can be returned.</para>
+        /// <para>The maximum number of events to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? MaxEventsNum { get; set; }
 
         /// <summary>
-        /// <para>The node UID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node UID.</para>
+        /// <para>The node UID. You can call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to obtain the node UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dlc-20210126170216-*****-chief-0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PodUid { get; set; }
 
         /// <summary>
-        /// <para>The start time (UTC).</para>
+        /// <para>The start time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-08T16:00:00Z</para>

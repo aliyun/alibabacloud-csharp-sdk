@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The status description, which contains a summary for each pod (number of successful deliveries, names of failed or pending pods, etc.).</para>
+        /// <para>The status description, which contains a summary for each pod, such as the number of successful deliveries and the names of failed or pending pods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>signal delivered to 1 pods</para>

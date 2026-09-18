@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<Tensorboard> Tensorboards { get; set; }
 
         /// <summary>
-        /// <para>The total number of Tensorboard instances that match the specified conditions.</para>
+        /// <para>The total number of data sources that match the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

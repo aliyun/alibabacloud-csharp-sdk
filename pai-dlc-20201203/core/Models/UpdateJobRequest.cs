@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>This is a training job</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -49,6 +53,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         /// <summary>
         /// <para>The user command.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sleep 1d</para>
         /// </summary>
         [NameInMap("UserCommand")]
         [Validation(Required=false)]

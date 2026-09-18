@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestID { get; set; }
 
         /// <summary>
-        /// <para>The sanity check results.</para>
+        /// <para>All computing power health check results.</para>
         /// </summary>
         [NameInMap("SanityCheckResults")]
         [Validation(Required=false)]
         public List<List<SanityCheckResultItem>> SanityCheckResults { get; set; }
 
         /// <summary>
-        /// <para>The total number of results that meet the filter conditions.</para>
+        /// <para>The total number of check results that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

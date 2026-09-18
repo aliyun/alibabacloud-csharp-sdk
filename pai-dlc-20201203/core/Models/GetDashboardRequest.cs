@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetDashboardRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether this is a shared link. If it is, the \<c>token\\</c> parameter is also required.</para>
+        /// <para>Specifies whether the link is a shared link. If set to true, the token parameter is also required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? IsShared { get; set; }
 
         /// <summary>
-        /// <para>The token obtained from GetToken.</para>
+        /// <para>The token obtained from the GetToken operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>some_token_value</para>

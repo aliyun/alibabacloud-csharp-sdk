@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetRayDashboardRequest : TeaModel {
         /// <summary>
-        /// <para>Set to true to generate a shareable link. If you set this parameter to true, you must also specify the token parameter.</para>
+        /// <para>Specifies whether the link is a shared link. If set to true, the token parameter is also required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? IsShared { get; set; }
 
         /// <summary>
-        /// <para>The token returned by GetToken</para>
+        /// <para>The token obtained from the GetToken operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>some_token_value</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRayHistoryServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of RayHistoryServer entries.</para>
+        /// <para>The list of RayHistoryServers.</para>
         /// </summary>
         [NameInMap("RayHistoryServers")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             /// <summary>
             /// <para>The visibility of the job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PUBLIC: visible to all users in the workspace.</description></item>
-            /// <item><description>PRIVATE (default): visible only to you and administrators in the workspace.</description></item>
+            /// <item><description>PUBLIC: Visible to all users in the workspace.</description></item>
+            /// <item><description>PRIVATE (default): Visible only to you and administrators in the workspace.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Accessibility { get; set; }
 
             /// <summary>
-            /// <para>The display name of the job.</para>
+            /// <para>The display name of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AEB-RECHARGE-TASK-14478-1778466397-main-4-</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The hardware specifications of the public resource group. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for a detailed list of specifications.&gt;Notice: Prices vary depending on the specifications..</para>
+            /// <para>The hardware specifications of the public resource group. To access a detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing overview</a>.&gt;Notice: Prices vary by specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g6.xlarge</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the job ended, in UTC.</para>
+            /// <para>The time when the job finished, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-27T09:17:11Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public int? MaxRuntimeMinutes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the created RayHistoryServer.</para>
+            /// <para>The ID of the created Ray History Server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rhsxxx</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ReasonMessage { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
+            /// <para>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quotazoqd53w0q75</para>
@@ -151,13 +151,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The RayHistoryServer status. Valid values:</para>
+            /// <para>The status of the Tensorboard. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Creating: being created.</description></item>
-            /// <item><description>Running: running.</description></item>
-            /// <item><description>Stopped: stopped.</description></item>
-            /// <item><description>Succeeded: succeeded.</description></item>
-            /// <item><description>Failed: failed.</description></item>
+            /// <item><description>Creating: The Tensorboard is being created.</description></item>
+            /// <item><description>Running: The Tensorboard is running.</description></item>
+            /// <item><description>Stopped: The Tensorboard is stopped.</description></item>
+            /// <item><description>Succeeded: The Tensorboard has succeeded.</description></item>
+            /// <item><description>Failed: The Tensorboard has failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage path of Ray logs.</para>
+            /// <para>The storage path for Ray logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Username { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</para>
+            /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>153466</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used for diagnostics and troubleshooting.</para>
+        /// <para>The request ID of this call, used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the filter conditions.</para>
+        /// <para>The total number of nodes that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

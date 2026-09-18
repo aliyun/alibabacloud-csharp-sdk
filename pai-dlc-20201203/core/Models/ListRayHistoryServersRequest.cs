@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListRayHistoryServersRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the job.</para>
+        /// <para>The display name of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query range. The job creation time is used for filtering.</para>
+        /// <para>The end time of the query range. The node creation time is used for filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The ID prefix.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>按ID前缀过滤</para>
+        /// <para>Filter by ID prefix</para>
         /// </summary>
         [NameInMap("IdPrefix")]
         [Validation(Required=false)]
         public string IdPrefix { get; set; }
 
         /// <summary>
-        /// <para>Filters results by the time after which they were modified.</para>
+        /// <para>Filters results by the time after which the resource was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-09T16:00:00Z</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc: descending order.</description></item>
-        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc: descending order</description></item>
+        /// <item><description>asc: ascending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return in a paged query. Paging starts from page 1.</para>
+        /// <para>The page number for a paging query. Paging starts from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of RayHistoryServer entries to return on each page in a paged query. Paging is used to return results in batches.</para>
+        /// <para>The number of RayHistoryServers to return per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The payment method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PrePaid</description></item>
-        /// <item><description>PostPaid.</description></item>
+        /// <item><description>PostPaid</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. For information about how to query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
+        /// <para>The resource group ID. To query the ID of a dedicated resource group, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quotaxxx</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only the RayHistoryServer entries created by the current user.</para>
+        /// <para>Specifies whether to return only the RayHistoryServers created by the current user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? ShowOwn { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the returned results. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>DisplayName</description></item>
         /// <item><description>GmtCreateTime</description></item>
         /// <item><description>UserId</description></item>
         /// <item><description>ResourceId</description></item>
         /// <item><description>Status</description></item>
-        /// <item><description>GmtModifyTime.</description></item>
+        /// <item><description>GmtModifyTime</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,13 +146,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The RayHistoryServer status. Valid values:</para>
+        /// <para>The status of the RayHistoryServer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating: being created.</description></item>
-        /// <item><description>Queuing: waiting in queue.</description></item>
-        /// <item><description>Running: running.</description></item>
-        /// <item><description>Stopped: stopped.</description></item>
-        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Creating: The RayHistoryServer is being created.</description></item>
+        /// <item><description>Queuing: The RayHistoryServer is queuing.</description></item>
+        /// <item><description>Running: The RayHistoryServer is running.</description></item>
+        /// <item><description>Stopped: The RayHistoryServer is stopped.</description></item>
+        /// <item><description>Failed: The RayHistoryServer has failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage path of Ray logs.</para>
+        /// <para>The storage path for Ray logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Username { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>268</para>
