@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the instance is managed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Managed.</description></item>
+        /// <item><description>0: Not managed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("AutoReissueFlag")]
+        [Validation(Required=false)]
+        public int? AutoReissueFlag { get; set; }
+
+        /// <summary>
         /// <para>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +72,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BUY: official certificate.</description></item>
+        /// <item><description>BUY: formal certificate.</description></item>
         /// <item><description>TEST: test certificate.</description></item>
         /// </list>
         /// 
@@ -90,6 +104,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return only instances that meet server deployment conditions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ServerDeployFlag")]
+        [Validation(Required=false)]
+        public int? ServerDeployFlag { get; set; }
+
+        /// <summary>
         /// <para>The number of instances to display per page in a paged query. Default value: <b>10</b>. Maximum value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -104,11 +132,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <list type="bullet">
         /// <item><description><b>inactive</b>: Pending use.</description></item>
         /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
-        /// <item><description><b>willExpire</b>: About to expire.</description></item>
-        /// <item><description><b>expired</b>: Expired.</description></item>
+        /// <item><description><b>willExpire</b>: The instance is about to expire.</description></item>
+        /// <item><description><b>expired</b>: The instance has expired.</description></item>
         /// <item><description><b>refund</b>: Refunded.</description></item>
         /// <item><description><b>normal</b>: Normal.</description></item>
-        /// <item><description><b>closed</b>: Closed and unavailable.</description></item>
+        /// <item><description><b>closed</b>: Closed. The instance is unavailable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

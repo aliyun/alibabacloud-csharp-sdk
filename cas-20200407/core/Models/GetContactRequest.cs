@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
     public class GetContactRequest : TeaModel {
         /// <summary>
         /// <para>The contact ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1397591</para>

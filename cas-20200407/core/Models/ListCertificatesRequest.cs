@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertificatesRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the certificate.</para>
+        /// <para>The source of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BUY: A purchased certificate.</para>
-        /// </description></item>
-        /// <item><description><para>TEST: A test certificate.</para>
-        /// </description></item>
-        /// <item><description><para>UPLOAD: An uploaded certificate.</para>
-        /// </description></item>
+        /// <item><description>BUY: a formal certificate.</description></item>
+        /// <item><description>TEST: a test certificate.</description></item>
+        /// <item><description>UPLOAD: an uploaded certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,16 +25,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateSource { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate.</para>
+        /// <para>The status of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>issued</b>: The certificate is issued.</para>
-        /// </description></item>
-        /// <item><description><para><b>revoked</b>: The certificate is revoked.</para>
-        /// </description></item>
-        /// <item><description><para><b>willExpire</b>: The certificate is about to expire.</para>
-        /// </description></item>
-        /// <item><description><para><b>expired</b>: The certificate has expired.</para>
-        /// </description></item>
+        /// <item><description><b>issued</b>: Issued.</description></item>
+        /// <item><description><b>revoked</b>: Revoked.</description></item>
+        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +41,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateStatus { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +61,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>A keyword for a fuzzy query. The keyword can be a domain name, a certificate name, or a resource ID.</para>
+        /// <para>The keyword for fuzzy match. The keyword is matched against domain names, names, and corresponding resource IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -88,7 +81,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

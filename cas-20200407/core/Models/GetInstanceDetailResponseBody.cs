@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetInstanceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether automatic managed renewal is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic hosting is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enable: Enabled.</description></item>
-        /// <item><description>disable: Disabled.</description></item>
+        /// <item><description>disable: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -22,6 +22,20 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [NameInMap("AutoReissue")]
         [Validation(Required=false)]
         public string AutoReissue { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether the current version includes automatic hosting. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Included.</description></item>
+        /// <item><description>0: Not included.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("AutoReissueFlag")]
+        [Validation(Required=false)]
+        public int? AutoReissueFlag { get; set; }
 
         /// <summary>
         /// <para>The average waiting time for issuing a certificate of this specification. Unit: seconds.</para>
@@ -44,10 +58,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Brand { get; set; }
 
         /// <summary>
-        /// <para>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.
-        ///   --For the China site, the format is certificate ID + &quot;-cn-hangzhou&quot;.
-        /// For the China site, the format is certificate ID + &quot;-ap-southeast-1&quot;.
-        /// For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</para>
+        /// <para>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
+        /// <list type="bullet">
+        /// <item><description>China site: certificate ID + &quot;-cn-hangzhou&quot;</description></item>
+        /// <item><description>International site: certificate ID + &quot;-ap-southeast-1&quot;</description></item>
+        /// </list>
+        /// <para>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22783111-cn-hangzhou</para>
@@ -67,7 +83,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CertificateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. When a certificate is issued, this name is used as the default certificate name.</para>
+        /// <para>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -109,10 +125,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The status of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>issued</b>: issued.</description></item>
-        /// <item><description><b>revoked</b>: revoked.</description></item>
-        /// <item><description><b>willExpire</b>: about to expire.</description></item>
-        /// <item><description><b>expired</b>: expired.</description></item>
+        /// <item><description><b>issued</b>: Issued.</description></item>
+        /// <item><description><b>revoked</b>: Revoked.</description></item>
+        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,6 +196,26 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
+        /// <para>The number of cloud resources to which the certificate has been deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("DeploymentResourceCount")]
+        [Validation(Required=false)]
+        public int? DeploymentResourceCount { get; set; }
+
+        /// <summary>
+        /// <para>The used quota for cloud server deployment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
+        [NameInMap("DeploymentUseCount")]
+        [Validation(Required=false)]
+        public int? DeploymentUseCount { get; set; }
+
+        /// <summary>
         /// <para>The list of associated expert service DingTalk groups.</para>
         /// </summary>
         [NameInMap("DingGroupList")]
@@ -209,8 +245,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The type of the expert service DingTalk group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>expedite: application assistance.</description></item>
-            /// <item><description>remote: offline deployment.</description></item>
+            /// <item><description>expedite: application assistance</description></item>
+            /// <item><description>remote: offline deployment</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +279,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The list of domain validations.</para>
+        /// <para>The list of domain names to be validated.</para>
         /// </summary>
         [NameInMap("DomainValidationList")]
         [Validation(Required=false)]
@@ -310,7 +346,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ValidationType { get; set; }
 
             /// <summary>
-            /// <para>The validation host record value.</para>
+            /// <para>The host record value for validation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -332,10 +368,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? FullDomainCount { get; set; }
 
         /// <summary>
-        /// <para>The CSR generation method. Valid values:</para>
+        /// <para>The method used to generate the certificate signing request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: system-generated. The Csr field is ignored.</description></item>
-        /// <item><description>upload: user-uploaded. The Csr field is required.</description></item>
+        /// <item><description>online: System-generated. The Csr field is ignored.</description></item>
+        /// <item><description>upload: User-uploaded. The Csr field is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -378,8 +414,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b>: formal certificate.</description></item>
-        /// <item><description><b>TEST</b>: test certificate.</description></item>
+        /// <item><description>BUY: official certificate</description></item>
+        /// <item><description>TEST: test certificate</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -407,7 +443,31 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</para>
+        /// <para>Indicates whether the domain name monitoring quota can be expanded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: Yes.</description></item>
+        /// <item><description>0: No.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("MonitorExpandFlag")]
+        [Validation(Required=false)]
+        public int? MonitorExpandFlag { get; set; }
+
+        /// <summary>
+        /// <para>The used quota for domain name monitoring.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("MonitorUseCount")]
+        [Validation(Required=false)]
+        public int? MonitorUseCount { get; set; }
+
+        /// <summary>
+        /// <para>The end time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -417,7 +477,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</para>
+        /// <para>The start time of the instance at the time of purchase, in UNIX timestamp format. This value is used to determine the refund time limit. The value is accurate to the second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -427,7 +487,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderStartTime { get; set; }
 
         /// <summary>
-        /// <para>The result returned by the certification authority (CA) during the last certificate operation.</para>
+        /// <para>The result returned by the CA during the last certificate operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>
@@ -447,7 +507,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2CE1D02-6D5E-56E5-A9BD-EE288255C7F9</para>
@@ -479,13 +539,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>inactive</b>: pending use.</description></item>
-        /// <item><description><b>pending</b>: under review. The latest certificate is being reviewed.</description></item>
-        /// <item><description><b>willExpire</b>: the instance is about to expire.</description></item>
-        /// <item><description><b>expired</b>: the instance has expired.</description></item>
-        /// <item><description><b>refund</b>: refunded.</description></item>
-        /// <item><description><b>normal</b>: normal.</description></item>
-        /// <item><description><b>closed</b>: closed and unavailable.</description></item>
+        /// <item><description><b>inactive</b>: Pending use.</description></item>
+        /// <item><description><b>pending</b>: Under review. The latest certificate is being reviewed.</description></item>
+        /// <item><description><b>willExpire</b>: The instance is about to expire.</description></item>
+        /// <item><description><b>expired</b>: The instance has expired.</description></item>
+        /// <item><description><b>refund</b>: Refunded.</description></item>
+        /// <item><description><b>normal</b>: Normal.</description></item>
+        /// <item><description><b>closed</b>: Closed. The instance cannot be used.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -525,13 +585,33 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
+        /// <para>The total quota for cloud server deployment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("TotalDeploymentCount")]
+        [Validation(Required=false)]
+        public int? TotalDeploymentCount { get; set; }
+
+        /// <summary>
+        /// <para>The total quota for domain name monitoring.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>80</para>
+        /// </summary>
+        [NameInMap("TotalMonitorCount")]
+        [Validation(Required=false)]
+        public int? TotalMonitorCount { get; set; }
+
+        /// <summary>
         /// <para>The upgrade status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>none: the instance has not been upgraded.</para>
+        /// <item><description><para>none: The instance has not been upgraded.</para>
         /// </description></item>
-        /// <item><description><para>payed: the instance upgrade has been paid.</para>
+        /// <item><description><para>payed: The instance upgrade has been paid.</para>
         /// </description></item>
-        /// <item><description><para>issued: the latest certificate has been issued after the instance upgrade.</para>
+        /// <item><description><para>issued: The latest certificate has been issued for the instance upgrade.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -543,10 +623,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string UpgradeStatus { get; set; }
 
         /// <summary>
-        /// <para>The certificate validation method. Valid values:</para>
+        /// <para>The validation method for the certificate application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DNS: DNS validation, using TXT or CNAME.</description></item>
-        /// <item><description>HTTP: file-based validation.</description></item>
+        /// <item><description>DNS: DNS validation, using TXT or CNAME records.</description></item>
+        /// <item><description>HTTP: File-based validation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -555,6 +635,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [NameInMap("ValidationMethod")]
         [Validation(Required=false)]
         public string ValidationMethod { get; set; }
+
+        /// <summary>
+        /// <para>The version type. Valid values: FOTA: system upgrade. APP: application upgrade.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("VersionType")]
+        [Validation(Required=false)]
+        public string VersionType { get; set; }
 
         /// <summary>
         /// <para>The number of wildcard domain names.</para>

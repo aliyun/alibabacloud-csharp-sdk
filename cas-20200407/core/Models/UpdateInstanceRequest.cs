@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable automatic management.</para>
+        /// <para>Specifies whether to enable automatic hosting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>enable: enabled</para>
-        /// </description></item>
-        /// <item><description><para>disable: disabled</para>
-        /// </description></item>
+        /// <item><description>enable: Enabled.</description></item>
+        /// <item><description>disable: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string AutoReissue { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. When issuing a certificate, this value serves as the default certificate name.</para>
+        /// <para>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The city where the company or organization of the certificate requester is located. Required when generating a CSR for a DV certificate. Default value: Beijing.</para>
+        /// <para>The city where the company or organization of the certificate purchaser is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Beijing</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The company information ID. Required for OV and EV certificates. Otherwise, you cannot call ApplyCertificate to request a certificate.</para>
+        /// <para>The company information ID. This parameter is required for OV and EV certificates. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44211</para>
@@ -56,14 +54,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CompanyId { get; set; }
 
         /// <summary>
-        /// <para>The list of contact IDs. You must specify at least one contact. Otherwise, you cannot call ApplyCertificate to request a certificate.</para>
+        /// <para>The list of contact IDs. If a contact already exists, you do not need to specify this parameter. If no contact has been configured, specify at least one contact ID. Otherwise, you cannot call the ApplyCertificate operation to apply for a certificate.</para>
         /// </summary>
         [NameInMap("ContactIdList")]
         [Validation(Required=false)]
         public List<long?> ContactIdList { get; set; }
 
         /// <summary>
-        /// <para>The country or region code of the certificate organization. For example, CN represents China, and US represents the United States. Required when generating a CSR for a DV certificate. Default value: CN.</para>
+        /// <para>The country or region code of the certificate organization. For example, CN indicates China and US indicates the United States. This field is required when generating a CSR for a DV certificate. Default value: CN.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// <para>The CSR content. You can generate a CSR using OpenSSL or Keytool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.</para>
+        /// <para>The CSR content. You can use OpenSSL or Keytool to generate a CSR. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</para>
@@ -83,17 +81,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The domain name to bind to the certificate. Requirements are as follows:</para>
+        /// <para>The domain name to which the certificate is bound. Requirements:</para>
         /// <list type="bullet">
-        /// <item><description><para>Supports single domain names or wildcard domain names (for example, <c>*.aliyundoc.com</c>).</para>
-        /// </description></item>
-        /// <item><description><para>Supports multiple domain names. Separate multiple domain names with commas (,). The first domain determines whether a free domain is included.</para>
-        /// </description></item>
+        /// <item><description>You can specify a single domain name or a wildcard domain name (for example, <c>*.aliyundoc.com</c>).</description></item>
+        /// <item><description>You can specify multiple domain names. Separate multiple domain names with commas (,). Whether a free domain name is included is determined based on the first domain name.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice:  </para>
         /// </remarks>
-        /// <para>If you bind multiple domain names to the certificate, this parameter is required. This parameter and the <b>Csr</b> parameter cannot both be empty. If you set both parameters, the system uses the <b>CN</b> field value from the <b>Csr</b> as the domain name for the certificate.</para>
+        /// <para>When the certificate is bound to multiple domain names, this parameter is required. This parameter and the <b>Csr</b> parameter cannot both be empty. If you specify both this parameter and the <b>Csr</b> parameter, the <b>CN</b> field value in the <b>Csr</b> parameter is used as the domain name to which the certificate is bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.com</para>
@@ -103,12 +99,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The CSR generation method. Default value: online.</para>
+        /// <para>The method used to generate the certificate signing request (CSR). Default value: online. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>online: The system generates the CSR. The Csr field is ignored.</para>
-        /// </description></item>
-        /// <item><description><para>upload: You upload the CSR. The Csr field is required.</para>
-        /// </description></item>
+        /// <item><description>online: The system generates the CSR. The Csr parameter is ignored.</description></item>
+        /// <item><description>upload: You upload the CSR. The Csr parameter is required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,18 +124,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The certificate algorithm. Default value: RSA_2048.</para>
+        /// <para>The certificate algorithm. Default value: RSA_2048. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RSA_2048</b></para>
-        /// </description></item>
-        /// <item><description><para><b>RSA_3072</b></para>
-        /// </description></item>
-        /// <item><description><para><b>RSA_4096</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ECC_256</b></para>
-        /// </description></item>
-        /// <item><description><para><b>SM2</b></para>
-        /// </description></item>
+        /// <item><description><b>RSA_2048</b></description></item>
+        /// <item><description><b>RSA_3072</b></description></item>
+        /// <item><description><b>RSA_4096</b></description></item>
+        /// <item><description><b>ECC_256</b></description></item>
+        /// <item><description><b>SM2</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,7 +141,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The province or region where the company is located. Required when generating a CSR for a DV certificate. Default value: Beijing.</para>
+        /// <para>The province or region where the company is located. This field is required when generating a CSR for a DV certificate. Default value: Beijing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Beijing</para>
@@ -162,7 +151,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae******4wia</para>
@@ -172,15 +161,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestTags> Tags { get; set; }
         public class UpdateInstanceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance. Valid values for N: <b>1</b> to <b>20</b>. If you specify this value, it cannot be an empty string.</para>
-            /// <para>It can contain up to 64 characters. It cannot start with <c>aliyun</c> or <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -190,8 +179,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the instance. Valid values for N: <b>1</b> to <b>20</b>. If you specify this value, it can be an empty string.</para>
-            /// <para>It can contain up to 128 characters. It cannot start with <c>aliyun</c> or <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the instance. Valid values of N: <b>1</b> to <b>20</b>. If you specify this parameter, the value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -203,12 +192,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The certificate validation method.</para>
+        /// <para>The validation method for the certificate application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DNS: DNS validation using TXT or CNAME records.</para>
-        /// </description></item>
-        /// <item><description><para>HTTP: File-based validation.</para>
-        /// </description></item>
+        /// <item><description>DNS: DNS validation, which uses TXT or CNAME records.</description></item>
+        /// <item><description>HTTP: File validation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

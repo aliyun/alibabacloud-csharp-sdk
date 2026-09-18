@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetCertificateDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificate algorithm. Valid values:</para>
+        /// <para>The certificate algorithm.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>RSA</b>: The RSA algorithm.</para>
-        /// </description></item>
-        /// <item><description><para><b>ECC</b>: The ECC algorithm.</para>
-        /// </description></item>
-        /// <item><description><para><b>SM2</b>: The SM2 algorithm.</para>
-        /// </description></item>
+        /// <item><description><b>RSA</b>: RSA algorithm.</description></item>
+        /// <item><description><b>ECC</b>: ECC algorithm.</description></item>
+        /// <item><description><b>SM2</b>: SM2 algorithm.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The global ID of the certificate, which is used in various Alibaba Cloud services. The format of the ID is <c>&lt;Certificate ID&gt;-&lt;Region ID&gt;</c>. The region ID is <c>cn-hangzhou</c> for the China site and <c>ap-southeast-1</c> for the International site. For example, if a certificate ID is <c>123</c>, its <c>CertIdentifier</c> is <c>123-cn-hangzhou</c> for the China site and <c>123-ap-southeast-1</c> for the International site.</para>
+        /// <para>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.
+        ///   --For the China site, the value is certificate ID + &quot;-cn-hangzhou&quot;.
+        /// For the International site, the value is certificate ID + &quot;-ap-southeast-1&quot;.
+        /// For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21912069-cn-hangzhou</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The information about the certificate chain.</para>
+        /// <para>The certificate chain information list.</para>
         /// </summary>
         [NameInMap("CertificateChainList")]
         [Validation(Required=false)]
         public List<GetCertificateDetailResponseBodyCertificateChainList> CertificateChainList { get; set; }
         public class GetCertificateDetailResponseBodyCertificateChainList : TeaModel {
             /// <summary>
-            /// <para>The issuer of the certificate chain.</para>
+            /// <para>The issuer name of the certificate chain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Digicert</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>The end of the validity period.</para>
+            /// <para>The end time of the certificate validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17326613180000</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the validity period.</para>
+            /// <para>The start time of the certificate validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17321613180000</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? NotBefore { get; set; }
 
             /// <summary>
-            /// <para>The remaining validity period of the certificate chain.</para>
+            /// <para>The remaining days of the certificate chain validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,14 +117,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The source of the certificate. Valid values:</para>
+        /// <para>The certificate source.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>BUY</b>: a purchased certificate.</para>
-        /// </description></item>
-        /// <item><description><para><b>TEST</b>: a test certificate.</para>
-        /// </description></item>
-        /// <item><description><para>Upload the certificate.</para>
-        /// </description></item>
+        /// <item><description>BUY: Purchased certificate.</description></item>
+        /// <item><description>TEST: Test certificate.</description></item>
+        /// <item><description>UPLOAD: Uploaded certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,16 +132,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateSource { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate. Valid values:</para>
+        /// <para>The certificate status.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>issued</b>: The certificate is issued.</para>
-        /// </description></item>
-        /// <item><description><para><b>revoked</b>: The certificate is revoked.</para>
-        /// </description></item>
-        /// <item><description><para><b>willExpire</b>: The certificate is about to expire.</para>
-        /// </description></item>
-        /// <item><description><para><b>expired</b>: The certificate has expired.</para>
-        /// </description></item>
+        /// <item><description><b>issued</b>: Issued.</description></item>
+        /// <item><description><b>revoked</b>: Revoked.</description></item>
+        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +148,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateStatus { get; set; }
 
         /// <summary>
-        /// <para>The common name.</para>
+        /// <para>The common domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -165,7 +158,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CommonName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the company profile that is associated with the certificate application. This parameter is empty for DV certificates.</para>
+        /// <para>The company information ID associated with the certificate application. This value is empty for DV certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44211</para>
@@ -175,7 +168,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CompanyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the contact.</para>
+        /// <para>The contact ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>304066</para>
@@ -185,6 +178,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ContactId { get; set; }
 
         /// <summary>
+        /// <para>The certificate signing request (CSR) used to issue the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</para>
         /// </summary>
@@ -193,7 +188,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The domain names that are bound to the certificate. Multiple domain names are separated by commas (,).</para>
+        /// <para>The deployment information in JSON format:</para>
+        /// <para>--Scope: Valid values are all/server. The value is all if the certificate has a private key, or server if it does not.</para>
+        /// <para>--ServerName: The name of the server associated with the certificate instance.</para>
+        /// <para>--ResourceInstanceId: The resource identifier of the server associated with the certificate instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///       &quot;Scope&quot;: &quot;all&quot;,
+        ///        &quot;ServerName&quot;: &quot;acmeServerName&quot;,
+        ///        &quot;ResourceInstanceId&quot;: &quot;cas_dv-cn-XXX&quot;
+        /// }</para>
+        /// </summary>
+        [NameInMap("DeploymentDesc")]
+        [Validation(Required=false)]
+        public string DeploymentDesc { get; set; }
+
+        /// <summary>
+        /// <para>All domain names included in the certificate. Multiple domain names are separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyundoc.com,example.aliyundoc.com</para>
@@ -203,12 +215,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a private key is available. Valid values:</para>
+        /// <para>Indicates whether a private key exists on the backend for the current certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -219,7 +229,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? ExistPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint of the public key.</para>
+        /// <para>The public key fingerprint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -229,7 +239,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string FingerPrint { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas_dv-cn-123</para>
@@ -239,7 +249,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The issuer of the certificate.</para>
+        /// <para>The certificate issue authority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Digicert</para>
@@ -249,12 +259,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The key size.</para>
+        /// <para>The key algorithm length.</para>
         /// <list type="bullet">
-        /// <item><description><para>For RSA algorithms, the key size is typically 2,048, 3,072, or 4,096 bits.</para>
-        /// </description></item>
-        /// <item><description><para>For ECC and SM2 algorithms, the key size is typically 256 bits.</para>
-        /// </description></item>
+        /// <item><description>The RSA algorithm length is typically 2048, 3072, or 4096.</description></item>
+        /// <item><description>The ECC and SM2 algorithm length is typically 256.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,7 +273,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? KeySize { get; set; }
 
         /// <summary>
-        /// <para>The end of the validity period of the certificate.</para>
+        /// <para>The end time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17326613180000</para>
@@ -275,7 +283,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the validity period of the certificate.</para>
+        /// <para>The start time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17321613180000</para>
@@ -285,7 +293,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? NotBefore { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5979d897-d69f-4fc9-87dd-f3bb73c40b80</para>
@@ -295,7 +303,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The certificate serial number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -305,22 +313,22 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Serial { get; set; }
 
         /// <summary>
-        /// <para>The subject alternative names (SANs) of the certificate.</para>
+        /// <para>The list of Subject Alternative Names (SANs) of the certificate, returned in array format. This corresponds to the <c>Subject Alternative Name</c> field of the certificate.</para>
         /// </summary>
         [NameInMap("SubjectAlternativeNames")]
         [Validation(Required=false)]
         public List<string> SubjectAlternativeNames { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetCertificateDetailResponseBodyTags> Tags { get; set; }
         public class GetCertificateDetailResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance. You can specify 1 to 20 tag keys. The value cannot be an empty string.</para>
-            /// <para>The value can be up to 64 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -342,7 +350,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The list of cloud services in which the certificate is deployed.</para>
+        /// <para>The list of Alibaba Cloud services to which the certificate is currently deployed.</para>
         /// </summary>
         [NameInMap("UsingProductList")]
         [Validation(Required=false)]

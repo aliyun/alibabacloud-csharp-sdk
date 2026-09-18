@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertWarehouseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificate application repositories.</para>
+        /// <para>The list of certificate repositories.</para>
         /// </summary>
         [NameInMap("CertWarehouseList")]
         [Validation(Required=false)]
         public List<ListCertWarehouseResponseBodyCertWarehouseList> CertWarehouseList { get; set; }
         public class ListCertWarehouseResponseBodyCertWarehouseList : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the certificate application repository expires. Unit: milliseconds.</para>
+            /// <para>The expiration time, in timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665819958000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the certificate application repository.</para>
+            /// <para>The sales instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14dcc8afc7578e1f</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the certificate application repository has expired. Valid values:</para>
+            /// <para>Indicates whether the repository has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
-            /// </description></item>
-            /// <item><description><para><b>false</b></para>
-            /// </description></item>
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public bool? IsExpired { get; set; }
 
             /// <summary>
-            /// <para>The name of the certificate application repository.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the private CA.</para>
+            /// <para>The PCA instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14dcc8afc7578e1f</para>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string PcaInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The queries per second (QPS).</para>
+            /// <para>Qps。</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -83,18 +81,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? Qps { get; set; }
 
             /// <summary>
-            /// <para>The type of the certificate application repository. Valid values:</para>
+            /// <para>The repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ssl</b>: certificate application repository of SSL certificates</para>
-            /// </description></item>
-            /// <item><description><para><b>uploadPCA</b>: certificate application repository of uploaded private certificates</para>
-            /// </description></item>
-            /// <item><description><para><b>free</b>: certificate application repository of free certificates, available only on the China site (aliyun.com)</para>
-            /// </description></item>
-            /// <item><description><para><b>aliyunPCA</b>: certificate application repository of private certificates purchased from Alibaba Cloud PCA, available only on the China site (aliyun.com)</para>
-            /// </description></item>
-            /// <item><description><para><b>disable</b>: disabled certificate application repository</para>
-            /// </description></item>
+            /// <item><description><b>uploadCA</b>: an uploaded CA certificate that contains a complete certificate chain.</description></item>
+            /// <item><description><b>uploadPCA</b>: an uploaded certificate, including a self-signed certificate, a certificate issued by a third party, or a certificate issued by Alibaba Cloud.</description></item>
+            /// <item><description><b>aliyunPCA</b>: an Alibaba Cloud PCA certificate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +96,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The ID of the certificate application repository.</para>
+            /// <para>The repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +108,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -127,7 +118,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -137,7 +128,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 50.</para>
+        /// <para>The number of entries per page. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -147,7 +138,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateWorkerResourceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data returned by the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789ABC</para>

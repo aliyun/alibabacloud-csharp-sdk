@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the certificate warehouse.</para>
+        /// <para>The instance ID of the certificate application repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-wh-typ-serial</para>

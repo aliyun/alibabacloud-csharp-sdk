@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the certificate application repository.</para>
+        /// <para>The repository instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14dcc8afc7578e1f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the certificate application repository. Fuzzy match is supported.</para>
+        /// <para>The repository name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 50.</para>
+        /// <para>The number of entries per page. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -50,18 +50,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the certificate application repository. Valid values:</para>
+        /// <para>The repository type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ssl</b>: certificate application repository of SSL certificates</para>
-        /// </description></item>
-        /// <item><description><para><b>uploadPCA</b>: certificate application repository of uploaded private certificates</para>
-        /// </description></item>
-        /// <item><description><para><b>free</b>: certificate application repository of free certificates, available only on the China site (aliyun.com)</para>
-        /// </description></item>
-        /// <item><description><para><b>aliyunPCA</b>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</para>
-        /// </description></item>
-        /// <item><description><para><b>disable</b>: disabled certificate application repository</para>
-        /// </description></item>
+        /// <item><description><b>uploadCA</b>: an uploaded CA certificate that contains a complete certificate chain.</description></item>
+        /// <item><description><b>uploadPCA</b>: an uploaded certificate, including a self-signed certificate, a certificate issued by a third party, or a certificate issued by Alibaba Cloud.</description></item>
+        /// <item><description><b>aliyunPCA</b>: an Alibaba Cloud PCA certificate.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

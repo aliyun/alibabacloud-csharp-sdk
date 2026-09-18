@@ -8,27 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class RevokeCertificateRequest : TeaModel {
+    public class ShareCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate to revoke.</para>
+        /// <para>The certificate ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>51001</para>
+        /// <para>23279004</para>
         /// </summary>
         [NameInMap("CertificateId")]
         [Validation(Required=false)]
         public long? CertificateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. This parameter accepts only V2.0 subscription certificate instances (certificates purchased from a CA such as DigiCert or GeoTrust, with an InstanceId in the format of cas-cn-<em>). Uploaded certificates (cas-upload-</em>) are not supported.</para>
+        /// <para>The UID of the user with whom the certificate is shared.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cas-cn-68n1mm16****</para>
+        /// <para>1622883344556677</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("TargetUserId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public long? TargetUserId { get; set; }
 
     }
 

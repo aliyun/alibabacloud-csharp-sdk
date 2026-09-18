@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadUserCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CertId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BDB81BA2-E1F5-4D08-A2DD-4BE2BF44C90E</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate instance.</para>
+        /// <para>The instance ID of the certificate to operate on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-upload-xki1d0</para>

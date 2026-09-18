@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The webhook URLs of DingTalk, WeCom, or Lark chatbots. The value is a string in list format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/dc1aa9b9-47cd-4b34-91ef-73c1034208e5\\&quot;]</a></para>
+        /// <para>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\\&quot;]</a></para>
         /// </summary>
         [NameInMap("Webhooks")]
         [Validation(Required=false)]

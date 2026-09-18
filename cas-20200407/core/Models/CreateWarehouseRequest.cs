@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CreateWarehouseRequest : TeaModel {
         /// <summary>
-        /// <para>The use case of the certificate warehouse.</para>
+        /// <para>The scenarios of the repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>contract</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Biz { get; set; }
 
         /// <summary>
-        /// <para>The name of the certificate warehouse.</para>
+        /// <para>The name of the certificate repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCertificateWarehouse</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The type of the certificate warehouse. Valid values:</para>
+        /// <para>The type of the certificate repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcaCertificate</para>

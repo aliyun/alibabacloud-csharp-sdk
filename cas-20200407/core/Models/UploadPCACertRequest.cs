@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadPCACertRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the certificate and its chain, in PEM format.</para>
+        /// <para>The certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Cert { get; set; }
 
         /// <summary>
-        /// <para>A custom name for the certificate.</para>
+        /// <para>The certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert_name</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The private key of the certificate, in PEM format.</para>
+        /// <para>The private key of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEA5SIfpNCBoiDrZhX1H39CHwQMVD0kBNeBTWfP9xkeesvfzbOz ******* POVNFfDf9h7pJtQ5fRZNTYTDs/d+cH62Z3+nS74mNnEfff0nkvne -----END RSA PRIVATE KEY-----</para>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate warehouse.</para>
+        /// <para>The repository ID.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

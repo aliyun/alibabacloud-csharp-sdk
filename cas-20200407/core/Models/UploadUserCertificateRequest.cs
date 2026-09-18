@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadUserCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The content of a non-SM certificate in PEM format.</para>
+        /// <para>The content of the non-SM certificate in PEM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</para>
@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Cert { get; set; }
 
         /// <summary>
-        /// <para>The content of the SM encryption certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</para>
+        /// <para>The client token used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XXX</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The content of the SM encryption certificate in PEM format. This field is ignored if Cert and Key are not empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -32,7 +42,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptCert { get; set; }
 
         /// <summary>
-        /// <para>The content of the private key of the SM encryption certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</para>
+        /// <para>The private key of the SM encryption certificate in PEM format. This field is ignored if Cert and Key are not empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -44,11 +54,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The private key of a non-SM certificate in PEM format.</para>
+        /// <para>The private key of the non-SM certificate in PEM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
-        /// MIICDzCCAbagAw****
+        /// MIICDzCCAbagAw
         /// -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("Key")]
@@ -56,9 +66,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The custom name of the certificate. The name can be up to 63 characters long and can contain letters, digits, and underscores (_).</para>
+        /// <para>The custom name of the certificate. Maximum length: 63 characters. Supports all character types, including letters, digits, and underscores.</para>
         /// <remarks>
-        /// <para>Certificate names must be unique for each user.</para>
+        /// <para>Certificate names must be unique within the same account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +80,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae****vty</para>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The content of the SM signing certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</para>
+        /// <para>The content of the SM signing certificate in PEM format. This field is ignored if Cert and Key are not empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -92,7 +102,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignCert { get; set; }
 
         /// <summary>
-        /// <para>The content of the private key of the SM signing certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</para>
+        /// <para>The private key of the SM signing certificate in PEM format. This field is ignored if Cert and Key are not empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
