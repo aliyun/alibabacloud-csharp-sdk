@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
 {
     public class CreateScanRequest : TeaModel {
         /// <summary>
+        /// <para>The code package ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? CodeBundleId { get; set; }
 
         /// <summary>
+        /// <para>The type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>full: full data</description></item>
+        /// <item><description>incremental: incremental</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string Kind { get; set; }
 
         /// <summary>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

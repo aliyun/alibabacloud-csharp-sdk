@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
 {
     public class CompleteCodeBundleRequest : TeaModel {
         /// <summary>
-        /// <para>Declared uploaded object size; should match OSS <b><c>Content-Length</c></b>.</para>
+        /// <para>The declared size of the uploaded object. This value must match the OSS Content-Length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? ByteSize { get; set; }
 
         /// <summary>
-        /// <para>MIME type stored on the bundle (often <b><c>application/octet-stream</c></b> for presigned PUT).</para>
+        /// <para>The MIME type of the stored code bundle. This is typically application/octet-stream for pre-signed PUT operations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

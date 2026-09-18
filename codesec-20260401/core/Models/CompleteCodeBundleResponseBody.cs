@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
 {
     public class CompleteCodeBundleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The code bundle version identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string BundleVersion { get; set; }
 
         /// <summary>
+        /// <para>The object size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>111</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? ByteSize { get; set; }
 
         /// <summary>
+        /// <para>The code bundle ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>111</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? CodeBundleId { get; set; }
 
         /// <summary>
+        /// <para>The MIME type of the stored code bundle. This is typically application/octet-stream for pre-signed PUT operations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>application/octet-stream</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>代码包创建时间（RFC3339）</para>
+        /// <para>The time when the record was created, in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-27T00:53:46.774Z</para>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The file name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-cases.zip</para>
         /// </summary>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string Filename { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>76851f2b5bf0187fbc29e8bca4</para>
         /// </summary>
@@ -68,6 +80,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9A1F403F-0A85-5578-8B7C-55E3E9408659</para>
         /// </summary>
@@ -76,6 +90,8 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The code bundle status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ready</para>
         /// </summary>
@@ -84,7 +100,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>代码包更新时间（RFC3339）</para>
+        /// <para>The time when the record was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-08-27T00:53:46.774Z</para>

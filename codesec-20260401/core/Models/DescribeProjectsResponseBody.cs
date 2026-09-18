@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public long? ConfigRevision { get; set; }
 
             /// <summary>
-            /// <para>The time when the project was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</para>
+            /// <para>The engine switches in the project or scan snapshot. Only SAST and SCA are supported.</para>
             /// </summary>
             [NameInMap("engines")]
             [Validation(Required=false)]
             public DescribeProjectsResponseBodyItemsEngines Engines { get; set; }
             public class DescribeProjectsResponseBodyItemsEngines : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether SAST is enabled.</para>
+                /// <para>Indicates whether SAST is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,7 +74,23 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 public bool? Sast { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether SCA is enabled.</para>
+                /// <para>The engine-level configuration.</para>
+                /// </summary>
+                [NameInMap("sastConfig")]
+                [Validation(Required=false)]
+                public DescribeProjectsResponseBodyItemsEnginesSastConfig SastConfig { get; set; }
+                public class DescribeProjectsResponseBodyItemsEnginesSastConfig : TeaModel {
+                    /// <summary>
+                    /// <para>Specifies whether to generate remediation suggestions.</para>
+                    /// </summary>
+                    [NameInMap("remediation")]
+                    [Validation(Required=false)]
+                    public bool? Remediation { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>Indicates whether SCA is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -82,6 +98,22 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 [NameInMap("sca")]
                 [Validation(Required=false)]
                 public bool? Sca { get; set; }
+
+                /// <summary>
+                /// <para>The engine-level configuration.</para>
+                /// </summary>
+                [NameInMap("scaConfig")]
+                [Validation(Required=false)]
+                public DescribeProjectsResponseBodyItemsEnginesScaConfig ScaConfig { get; set; }
+                public class DescribeProjectsResponseBodyItemsEnginesScaConfig : TeaModel {
+                    /// <summary>
+                    /// <para>Specifies whether to generate remediation suggestions.</para>
+                    /// </summary>
+                    [NameInMap("remediation")]
+                    [Validation(Required=false)]
+                    public bool? Remediation { get; set; }
+
+                }
 
             }
 
@@ -96,7 +128,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-risk vulnerabilities.</para>
+            /// <para>The natural language prompt provided by the user that describes scanning or result processing preferences, such as ignoring low-severity vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -145,7 +177,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             }
 
             /// <summary>
-            /// <para>The time when the project was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -180,7 +212,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9A1F403F-0A85-5578-8B7C-55E3E9408659</para>

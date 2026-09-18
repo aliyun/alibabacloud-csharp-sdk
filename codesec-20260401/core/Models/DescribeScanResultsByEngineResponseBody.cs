@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public List<DescribeScanResultsByEngineResponseBodyItems> Items { get; set; }
         public class DescribeScanResultsByEngineResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Filters results by incremental scan baseline status. Valid values: new, unchanged, absent, updated.</para>
+            /// <para>Filters results by the baseline state of incremental scans. Valid values: new, unchanged, absent, and updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>new</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string BaselineState { get; set; }
 
             /// <summary>
-            /// <para>The category. The system classifies files based on file name extensions and MIME types. Common categories include doc, image, audio, and video.</para>
+            /// <para>The category. PDS classifies files based on their file name extensions and MIME types. Main categories include doc, image, audio, and video.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL Injection</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string CodeSnippet { get; set; }
 
             /// <summary>
-            /// <para>The rule confidence level, ranging from 0 to 1. This field is common in SAST results and is omitted if not applicable.</para>
+            /// <para>The rule confidence level, ranging from 0 to 1. This is common in SAST results and is omitted if not available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public double? Confidence { get; set; }
 
             /// <summary>
-            /// <para>The time when the finding record was created (RFC 3339 format).</para>
+            /// <para>The time when the finding record was created, in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The brief summary of the finding. Unlike description, this field is more of a conclusion statement.</para>
+            /// <para>The brief summary of the finding. Unlike description, this is more of a conclusion statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User input is used to construct SQL queries without sanitization</para>
@@ -191,12 +191,22 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The SCA component information. This field is returned only when engine is set to sca.</para>
+            /// <para>The SCA component information. This is returned only when engine is set to sca.</para>
             /// </summary>
             [NameInMap("scaComponent")]
             [Validation(Required=false)]
             public DescribeScanResultsByEngineResponseBodyItemsScaComponent ScaComponent { get; set; }
             public class DescribeScanResultsByEngineResponseBodyItemsScaComponent : TeaModel {
+                /// <summary>
+                /// <para>The component type, such as library, application, or framework.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>library</para>
+                /// </summary>
+                [NameInMap("componentType")]
+                [Validation(Required=false)]
+                public string ComponentType { get; set; }
+
                 /// <summary>
                 /// <para>The number of CVEs.</para>
                 /// 
@@ -245,6 +255,16 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                     public string CvssVersion { get; set; }
 
                     /// <summary>
+                    /// <para>The associated CWE ID. This value can be absent or an empty string.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CWE-79</para>
+                    /// </summary>
+                    [NameInMap("cweId")]
+                    [Validation(Required=false)]
+                    public string CweId { get; set; }
+
+                    /// <summary>
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
@@ -253,6 +273,16 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                     [NameInMap("description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
+
+                    /// <summary>
+                    /// <para>The target version for the fix. This value can be absent or an empty string.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("fixedVersion")]
+                    [Validation(Required=false)]
+                    public string FixedVersion { get; set; }
 
                     /// <summary>
                     /// <para>The reference information.</para>
@@ -280,14 +310,34 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 }
 
                 /// <summary>
-                /// <para>The list of dependency introduction paths in the SCA component information. This field is returned only when engine is set to sca.</para>
+                /// <para>The manifest file in which the dependency is declared.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>node_modules/semver</para>
+                /// </summary>
+                [NameInMap("declaredIn")]
+                [Validation(Required=false)]
+                public string DeclaredIn { get; set; }
+
+                /// <summary>
+                /// <para>The component ecosystem, such as npm, maven, pypi, or go.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>maven</para>
+                /// </summary>
+                [NameInMap("ecosystem")]
+                [Validation(Required=false)]
+                public string Ecosystem { get; set; }
+
+                /// <summary>
+                /// <para>The list of dependency introduction paths in the SCA component information. This is returned only when engine is set to sca.</para>
                 /// </summary>
                 [NameInMap("introPaths")]
                 [Validation(Required=false)]
                 public List<string> IntroPaths { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the component is a direct dependency.</para>
+                /// <para>Indicates whether the dependency is a direct dependency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -295,6 +345,74 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 [NameInMap("isDirect")]
                 [Validation(Required=false)]
                 public bool? IsDirect { get; set; }
+
+                /// <summary>
+                /// <para>The license determination result.</para>
+                /// </summary>
+                [NameInMap("license")]
+                [Validation(Required=false)]
+                public DescribeScanResultsByEngineResponseBodyItemsScaComponentLicense License { get; set; }
+                public class DescribeScanResultsByEngineResponseBodyItemsScaComponentLicense : TeaModel {
+                    /// <summary>
+                    /// <para>The concluded license expression (SPDX expression, which may contain OR or AND). This is an identifier string only, without full names or OSI/FSF annotations.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>AFL-2.1 OR BSD-3-Clause</para>
+                    /// </summary>
+                    [NameInMap("concluded")]
+                    [Validation(Required=false)]
+                    public string Concluded { get; set; }
+
+                    /// <summary>
+                    /// <para>The list of detected licenses.</para>
+                    /// </summary>
+                    [NameInMap("detected")]
+                    [Validation(Required=false)]
+                    public List<DescribeScanResultsByEngineResponseBodyItemsScaComponentLicenseDetected> Detected { get; set; }
+                    public class DescribeScanResultsByEngineResponseBodyItemsScaComponentLicenseDetected : TeaModel {
+                        /// <summary>
+                        /// <para>Indicates whether the license is listed as a free license by the FSF. If this key is absent, it means the license is not annotated, which differs from an explicit false value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
+                        [NameInMap("isFsfLibre")]
+                        [Validation(Required=false)]
+                        public bool? IsFsfLibre { get; set; }
+
+                        /// <summary>
+                        /// <para>Indicates whether the license is OSI-approved.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>true</para>
+                        /// </summary>
+                        [NameInMap("isOsiApproved")]
+                        [Validation(Required=false)]
+                        public bool? IsOsiApproved { get; set; }
+
+                        /// <summary>
+                        /// <para>The full name of the license.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>ISC License</para>
+                        /// </summary>
+                        [NameInMap("name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        /// <summary>
+                        /// <para>The SPDX license identifier. If the license cannot be determined, the value is NOASSERTION. The value may be in a non-standard format, such as Apache 2.0.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>AFL-2.1</para>
+                        /// </summary>
+                        [NameInMap("spdxId")]
+                        [Validation(Required=false)]
+                        public string SpdxId { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>The component coordinate.</para>
@@ -307,6 +425,16 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 public string PackageName { get; set; }
 
                 /// <summary>
+                /// <para>The Package URL, which serves as the unique coordinate of the component within the scan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pkg:npm/<a href="mailto:glob-parent@3.1.0">glob-parent@3.1.0</a></para>
+                /// </summary>
+                [NameInMap("purl")]
+                [Validation(Required=false)]
+                public string Purl { get; set; }
+
+                /// <summary>
                 /// <para>The component-level remediation suggestion.</para>
                 /// 
                 /// <b>Example:</b>
@@ -315,6 +443,16 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 [NameInMap("remediation")]
                 [Validation(Required=false)]
                 public string Remediation { get; set; }
+
+                /// <summary>
+                /// <para>The dependency scope, such as runtime, required, optional, or dev.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>runtime</para>
+                /// </summary>
+                [NameInMap("scope")]
+                [Validation(Required=false)]
+                public string Scope { get; set; }
 
                 /// <summary>
                 /// <para>The component version.</para>
@@ -390,7 +528,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The SAST taint analysis call chain that describes the complete propagation path of sensitive data from the taint source to the dangerous sink. This field is returned only when engine is set to sast.</para>
+            /// <para>The SAST taint analysis call chain, which describes the complete propagation path of sensitive data from the taint source to the dangerous sink. This is returned only when engine is set to sast.</para>
             /// </summary>
             [NameInMap("taintFlow")]
             [Validation(Required=false)]
@@ -419,10 +557,10 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 /// <summary>
                 /// <para>The role type in the taint propagation chain. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>source: taint source.</description></item>
-                /// <item><description>propagator: propagation node.	</description></item>
-                /// <item><description>validation: validation or scrubbing center.	</description></item>
-                /// <item><description>sink: dangerous sink.</description></item>
+                /// <item><description>source: taint source</description></item>
+                /// <item><description>propagator: propagation node	</description></item>
+                /// <item><description>validation: validation or scrubbing center	</description></item>
+                /// <item><description>sink: dangerous sink</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -453,7 +591,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 public string Note { get; set; }
 
                 /// <summary>
-                /// <para>The step number, starting from 0 and incrementing.</para>
+                /// <para>The step sequence number, starting from 0 and incrementing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -465,7 +603,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             }
 
             /// <summary>
-            /// <para>The text summary of the taint call chain. This field is returned only when engine is set to sast.</para>
+            /// <para>The text summary of the taint call chain. This is returned only when engine is set to sast.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User input flows from HTTP parameter into SQL query executio</para>
@@ -497,7 +635,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not pass nextToken or pass an empty string for the first page. To retrieve the next page, pass the nextToken value from the previous response without any modification. When the nextToken in the response is empty, you have reached the last page.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first page or set it to an empty string. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</para>

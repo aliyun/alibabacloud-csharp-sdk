@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finalize code bundle after client PUT to OSS</para>
+        /// <para>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finalize code bundle after client PUT to OSS</para>
+        /// <para>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finalize code bundle after client PUT to OSS</para>
+        /// <para>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Finalize code bundle after client PUT to OSS</para>
+        /// <para>Finalizes a code bundle after the client completes an OSS PUT operation. This operation validates the uploaded object and sets the code bundle status to ready. If CI metadata that triggers an automatic scan was provided during creation, a scanId is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</para>
+        /// <para>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</para>
+        /// <para>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</para>
+        /// <para>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pending code bundle with CI metadata and issue direct-to-OSS PUT credentials</para>
+        /// <para>Creates a function code package in pending status and returns a pre-signed OSS PUT upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create project</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create project</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -459,7 +459,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create project</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -478,7 +478,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create project</para>
+        /// <para>Creates a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create scan</para>
+        /// <para>Creates a scan task based on a code package that is ready.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create scan</para>
+        /// <para>Creates a scan task based on a code package that is ready.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -605,7 +605,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create scan</para>
+        /// <para>Creates a scan task based on a code package that is ready.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -624,7 +624,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create scan</para>
+        /// <para>Creates a scan task based on a code package that is ready.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -643,7 +643,145 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</para>
+        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScanSbomExportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScanSbomExportResponse
+        /// </returns>
+        public CreateScanSbomExportResponse CreateScanSbomExportWithOptions(string projectId, string scanId, CreateScanSbomExportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                query["format"] = request.Format;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScanSbomExport",
+                Version = "2026-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId) + "/scans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scanId) + "/reports/sbomExports",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScanSbomExportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScanSbomExportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScanSbomExportResponse
+        /// </returns>
+        public async Task<CreateScanSbomExportResponse> CreateScanSbomExportWithOptionsAsync(string projectId, string scanId, CreateScanSbomExportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Format))
+            {
+                query["format"] = request.Format;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateScanSbomExport",
+                Version = "2026-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/v1/projects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(projectId) + "/scans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(scanId) + "/reports/sbomExports",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateScanSbomExportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScanSbomExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScanSbomExportResponse
+        /// </returns>
+        public CreateScanSbomExportResponse CreateScanSbomExport(string projectId, string scanId, CreateScanSbomExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateScanSbomExportWithOptions(projectId, scanId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>生成 SBOM / 许可证清单的短时下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateScanSbomExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateScanSbomExportResponse
+        /// </returns>
+        public async Task<CreateScanSbomExportResponse> CreateScanSbomExportAsync(string projectId, string scanId, CreateScanSbomExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateScanSbomExportWithOptionsAsync(projectId, scanId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -705,7 +843,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -767,7 +905,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -786,7 +924,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the current tenant with pagination. Supports fuzzy match by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -805,7 +943,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get scan</para>
+        /// <para>Queries the details of a scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -845,7 +983,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get scan</para>
+        /// <para>Queries the details of a scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -885,7 +1023,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get scan</para>
+        /// <para>Queries the details of a scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -904,7 +1042,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get scan</para>
+        /// <para>Queries the details of a scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -923,7 +1061,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</para>
+        /// <para>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -985,7 +1123,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</para>
+        /// <para>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1047,7 +1185,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</para>
+        /// <para>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1066,7 +1204,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the task result list to retrieve detailed SAST or SCA results for a specific scan.</para>
+        /// <para>Queries the task result list to retrieve detailed SAST or SCA results of a specific scan.</para>
         /// </summary>
         /// 
         /// <param name="request">

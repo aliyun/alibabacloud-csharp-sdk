@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
 {
     public class DescribeScanResultsByEngineRequest : TeaModel {
         /// <summary>
-        /// <para>Filters results by incremental scan baseline status. Valid values: new, unchanged, absent, updated.</para>
+        /// <para>Filters results by the baseline state of incremental scans. Valid values: new, unchanged, absent, and updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unchanged</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not pass nextToken or pass an empty string for the first page. To retrieve the next page, pass the nextToken value from the previous response without any modification. When the nextToken in the response is empty, you have reached the last page.</para>
+        /// <para>The pagination token. Do not specify this parameter for the first page or set it to an empty string. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Performs a fuzzy match by component name. This parameter takes effect only when engine is set to sca.</para>
+        /// <para>The component name for fuzzy match. This parameter takes effect only when engine is set to sca.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app10000006824_fulljoin_61b2c_global_ad_budget_ctrl_v1.5.jar</para>
