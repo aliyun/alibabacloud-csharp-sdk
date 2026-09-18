@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         }
 
         /// <summary>
-        /// <para>The upload source. If left empty, the default value is user_upload. Use sec_ops_agent for the security operations agent.</para>
+        /// <para>The upload source. If left empty, user_upload is used by default. Security operations agents use sec_ops_agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sec_ops_agent</para>

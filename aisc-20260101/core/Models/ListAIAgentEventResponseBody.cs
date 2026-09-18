@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The check time.</para>
+            /// <para>The check time, in UNIX timestamp format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763949968</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string CheckTime { get; set; }
 
             /// <summary>
-            /// <para>The event handling time.</para>
+            /// <para>The event handling time, in UNIX timestamp format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1763949968</para>
@@ -191,6 +191,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             [Validation(Required=false)]
             public string RiskName { get; set; }
 
+            /// <summary>
+            /// <para>The associated skill ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("SkillId")]
             [Validation(Required=false)]
             public long? SkillId { get; set; }
@@ -232,12 +238,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             /// <summary>
             /// <para>The cloud asset vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DIFY</b>: DIFY.</description></item>
-            /// <item><description><b>BAILIAN</b>: BAILIAN.</description></item>
-            /// <item><description><b>VOLCAI</b>: VOLCAI.</description></item>
-            /// <item><description><b>AGENTRUN</b>: AGENTRUN.</description></item>
-            /// <item><description><b>PAI</b>: PAI.</description></item>
-            /// <item><description><b>OpenClaw</b>: OpenClaw.</description></item>
+            /// <item><description>** DIFY**: DIFY</description></item>
+            /// <item><description>** BAILIAN**: BAILIAN</description></item>
+            /// <item><description>** VOLCAI**: VOLCAI</description></item>
+            /// <item><description>** AGENTRUN**: AGENTRUN</description></item>
+            /// <item><description>** PAI**: PAI</description></item>
+            /// <item><description>** OpenClaw**: OpenClaw</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

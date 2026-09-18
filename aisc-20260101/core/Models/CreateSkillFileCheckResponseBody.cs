@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public List<CreateSkillFileCheckResponseBodyDataUploadResults> UploadResults { get; set; }
             public class CreateSkillFileCheckResponseBodyDataUploadResults : TeaModel {
                 /// <summary>
-                /// <para>The error message returned when the file upload fails.</para>
+                /// <para>The error message returned when the file fails to be uploaded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Network error.</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
                 public string ErrorMsg { get; set; }
 
                 /// <summary>
-                /// <para>The SHA256 value of the uploaded file.</para>
+                /// <para>The SHA256 hash of the uploaded file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>514f44ebed1d0c1df5e16a116080b64b</para>

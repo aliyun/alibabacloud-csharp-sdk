@@ -114,14 +114,20 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Sort direction</para>
+        /// <para>The sort order. Valid values: asc indicates ascending order. desc indicates descending order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>Sort field, currently supports CheckTime</para>
+        /// <para>The field by which to sort results. Currently, only sorting by check time is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CheckTime</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
@@ -136,6 +142,10 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
         /// <para>The risk level of the check item to query. Valid values:</para>
@@ -206,12 +216,12 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         /// <summary>
         /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DIFY</b>: DIFY.</description></item>
-        /// <item><description><b>BAILIAN</b>: BAILIAN.</description></item>
-        /// <item><description><b>VOLCAI</b>: VOLCAI.</description></item>
-        /// <item><description><b>AGENTRUN</b>: AGENTRUN.</description></item>
-        /// <item><description><b>PAI</b>: PAI.</description></item>
-        /// <item><description><b>OpenClaw</b>: OpenClaw.</description></item>
+        /// <item><description>** DIFY**: DIFY</description></item>
+        /// <item><description>** BAILIAN**: BAILIAN</description></item>
+        /// <item><description>** VOLCAI**: VOLCAI</description></item>
+        /// <item><description>** AGENTRUN**: AGENTRUN</description></item>
+        /// <item><description>** PAI**: PAI</description></item>
+        /// <item><description>** OpenClaw**: OpenClaw</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
