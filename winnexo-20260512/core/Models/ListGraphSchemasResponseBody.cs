@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListGraphSchemasResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>租户下 active 图谱摘要列表</para>
+        /// <para>The location clustering.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListGraphSchemasResponseBodyItems> Items { get; set; }
         public class ListGraphSchemasResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>active Schema 版本</para>
+            /// <para>The currently active schema version number. The value is 0.0.0 for a quick-created placeholder graph.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.0</para>
@@ -37,27 +37,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ActiveVersion { get; set; }
 
             /// <summary>
-            /// <para>业务说明，未设置时为空字符串</para>
+            /// <para>The business description of the graph. An empty string is returned if this parameter is not configured.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户域语义图谱</para>
+            /// <para>Customer domain semantic graph</para>
             /// </summary>
             [NameInMap("businessProfile")]
             [Validation(Required=false)]
             public string BusinessProfile { get; set; }
 
             /// <summary>
-            /// <para>图谱展示名，空值时兜底 graphName</para>
+            /// <para>The display name of the tool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CRM 图谱</para>
+            /// <para>CRM Graph</para>
             /// </summary>
             [NameInMap("displayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>图谱名称</para>
+            /// <para>The graph name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>图谱状态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/ PUBLISHING（当前用户发布中）</para>
+            /// <para>The status of the semantic graph.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphStatus { get; set; }
 
             /// <summary>
-            /// <para>当前调用者视角是否存在个人活动草稿；部署/系统级 Token 恒 false</para>
+            /// <para>Indicates whether the graph contains a draft.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? HasDraft { get; set; }
 
             /// <summary>
-            /// <para>是否为租户默认图谱</para>
+            /// <para>Indicates whether this is the default group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>object_type 数量，解析失败兜底 0</para>
+            /// <para>The number of object types. The value falls back to 0 if parsing fails.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? ObjectTypeCount { get; set; }
 
             /// <summary>
-            /// <para>relation 数量，解析失败兜底 0</para>
+            /// <para>The number of relations. The value falls back to 0 if parsing fails.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? RelationCount { get; set; }
 
             /// <summary>
-            /// <para>语义标签列表，未配置时为空数组</para>
+            /// <para>The list of semantic tags. An empty array [] is returned if this parameter is not configured.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("semanticTags")]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

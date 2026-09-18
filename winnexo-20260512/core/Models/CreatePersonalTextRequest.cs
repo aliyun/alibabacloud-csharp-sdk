@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>资源标签 JSON 字符串列表</para>
+        /// <para>The list of resource tag JSON strings.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;重点&quot;,&quot;文本&quot;]</para>
+        /// <para>[&quot;Key&quot;,&quot;Text&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]

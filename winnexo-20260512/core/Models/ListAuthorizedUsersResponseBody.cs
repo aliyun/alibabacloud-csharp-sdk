@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListAuthorizedUsersResponseBodyItems> Items { get; set; }
         public class ListAuthorizedUsersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The authorization expiration timestamp in milliseconds. If not specified, the authorization never expires.</para>
+            /// <para>The authorization expiration timestamp in milliseconds. If this parameter is not specified, the authorization never expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last update time.</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the person who granted the authorization.</para>
+            /// <para>The user ID of the grantor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GrantedBy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the authorized object.</para>
+            /// <para>The ID of the grantee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleGranteeId</para>
@@ -87,7 +87,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeId { get; set; }
 
             /// <summary>
-            /// <para>The authorization object type. Valid values: USER, USER_GROUP.</para>
+            /// <para>The object type of the authorization target. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>USER</description></item>
+            /// <item><description>USER_GROUP</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -119,15 +123,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <summary>
             /// <para>The permission member type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ORG</b>: Enterprise.</para>
+            /// <item><description><para><b>ORG</b>: enterprise.</para>
             /// </description></item>
-            /// <item><description><para><b>DEPT</b>: Department.</para>
+            /// <item><description><para><b>DEPT</b>: department.</para>
             /// </description></item>
-            /// <item><description><para><b>TAG</b>: Custom tag.</para>
+            /// <item><description><para><b>TAG</b>: custom tag.</para>
             /// </description></item>
-            /// <item><description><para><b>CONVERSATION</b>: Conversation.</para>
+            /// <item><description><para><b>CONVERSATION</b>: conversation.</para>
             /// </description></item>
-            /// <item><description><para><b>USER</b>: User.</para>
+            /// <item><description><para><b>USER</b>: user.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -149,7 +153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string UserGroupId { get; set; }
 
             /// <summary>
-            /// <para>The user group name.</para>
+            /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

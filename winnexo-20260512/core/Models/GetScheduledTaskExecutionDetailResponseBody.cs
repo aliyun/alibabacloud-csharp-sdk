@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public GetScheduledTaskExecutionDetailResponseBodyTriggerInfo TriggerInfo { get; set; }
         public class GetScheduledTaskExecutionDetailResponseBodyTriggerInfo : TeaModel {
             /// <summary>
-            /// <para>The user identifier that triggered the execution.</para>
+            /// <para>The identifier of the user who triggered the execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_10001</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TriggerType { get; set; }
 
         /// <summary>
-        /// <para>The visibility scope of the execution record, which is always equal to the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This field is empty for personal task executions.</para>
+        /// <para>The visibility scope of the execution record, which is always the same as the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This value is empty for personal task executions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>COLLABORATIVE</para>

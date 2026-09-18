@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListScheduledTasksResponseBodyItems> Items { get; set; }
         public class ListScheduledTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The reason for the exception. This field has a value only when status is abnormal.</para>
+            /// <para>The reason for the exception. This parameter has a value only when status is abnormal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AbnormalReason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can delete the task (only the task creator and group owner can do so). Always returns true for personal tasks.</para>
+            /// <para>Indicates whether the current caller can delete the task. Only the task creator and group owner can delete the task. For personal tasks, this value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanDelete { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task can be edited or deleted.</para>
+            /// <para>Indicates whether the course can be edited or deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanEdit { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can immediately execute the task (anyone with visibility can operate. Returns false for abnormal tasks). Always returns true for personal tasks.</para>
+            /// <para>Indicates whether the current caller can immediately execute the task. A task is executable if it is visible to the caller, except for abnormal tasks which return false. For personal tasks, this value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? CanExecute { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the current caller can start or stop the task (only the task creator and group owner can do so. Returns false for abnormal tasks). Always returns true for personal tasks.</para>
+            /// <para>Indicates whether the current caller can start or stop the task. Only the task creator and group owner can toggle the task. Abnormal tasks return false. For personal tasks, this value is always true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SampleDescription</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> DigitalEmployeeName { get; set; }
 
             /// <summary>
-            /// <para>The total number of executions.</para>
+            /// <para>The cumulative number of executions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The trigger type.</para>
+            /// <para>The type of the trigger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             /// <item><description>COLLABORATIVE: visible to specified collaborators.</description></item>
             /// <item><description>PUBLIC: visible to all group members.</description></item>
             /// </list>
-            /// <para>For group tasks, the default value is PRIVATE if not specified. This field is ignored for personal tasks.</para>
+            /// <para>If not specified for a group task, the default value is PRIVATE. This parameter is ignored for personal tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Visibility { get; set; }
 
             /// <summary>
-            /// <para>The list of collaborators (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</para>
+            /// <para>The list of collaborator members, excluding the task creator and group creator whose access is governed by the authentication layer. This parameter is returned only for group tasks. An empty list is returned for PRIVATE and PUBLIC visibility.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>

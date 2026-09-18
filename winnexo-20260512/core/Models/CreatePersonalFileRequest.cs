@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The directory ID.</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The file extension (optional, such as pdf or docx).</para>
+        /// <para>The file name extension (optional, such as pdf or docx).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The publicly accessible URL of the Alibaba DingTalk online document.</para>
+        /// <para>The publicly accessible URL of the DingTalk online document.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>资源标签 JSON 字符串列表</para>
+        /// <para>The list of resource tag JSON strings.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;重点&quot;,&quot;文件&quot;]</para>
+        /// <para>[&quot;Important&quot;,&quot;File&quot;]</para>
         /// </summary>
         [NameInMap("sourceTags")]
         [Validation(Required=false)]

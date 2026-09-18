@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>The external IM group name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Project collaboration group</para>
+                /// <para>Project Collaboration Group</para>
                 /// </summary>
                 [NameInMap("imGroupName")]
                 [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string DisabledReason { get; set; }
 
                 /// <summary>
-                /// <para>The feature switch. This parameter is optional when type is set to web_search.</para>
+                /// <para>Specifies whether the feature is enabled. This parameter is optional when type is set to web_search.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Group chatbot</para>
+                /// <para>Group Chatbot</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -150,17 +150,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The prompt displayed when no third-party accounts are bound.</para>
+        /// <para>The hint displayed when no third-party accounts are bound.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>No push channels available</para>
+        /// <para>No push channels are available</para>
         /// </summary>
         [NameInMap("emptyHint")]
         [Validation(Required=false)]
         public string EmptyHint { get; set; }
 
         /// <summary>
-        /// <para>The prompt message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

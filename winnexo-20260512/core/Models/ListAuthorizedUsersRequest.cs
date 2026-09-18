@@ -10,7 +10,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAuthorizedUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The filter type. Valid values: USER, USER_GROUP. If not specified, all types are returned.</para>
+        /// <para>The filter type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER</description></item>
+        /// <item><description>USER_GROUP</description></item>
+        /// </list>
+        /// <para>If this parameter is not specified, all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -51,7 +56,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

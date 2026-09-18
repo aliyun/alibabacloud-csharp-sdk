@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The folder ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The travel scale of the integration partner.</para>
+        /// <para>The travel scale of the partner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>read:user,read:repo,write:repo,read:org,read:group</para>
@@ -92,13 +92,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The filter status.</para>
         /// <list type="bullet">
-        /// <item><description><para>0: All</para>
+        /// <item><description><para>0: All.</para>
         /// </description></item>
-        /// <item><description><para>1: Unconfirmed</para>
+        /// <item><description><para>1: Unconfirmed.</para>
         /// </description></item>
-        /// <item><description><para>3: Ignored</para>
+        /// <item><description><para>3: Ignored.</para>
         /// </description></item>
-        /// <item><description><para>4: Rejected</para>
+        /// <item><description><para>4: Rejected.</para>
         /// </description></item>
         /// </list>
         /// 

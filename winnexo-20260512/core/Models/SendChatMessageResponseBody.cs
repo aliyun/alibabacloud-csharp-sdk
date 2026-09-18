@@ -78,6 +78,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        /// <summary>
+        /// <para>The session work mode that takes effect for the current turn. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ask: Quick Q&amp;A.</description></item>
+        /// <item><description>work: Deep work.</description></item>
+        /// <item><description>direct: Direct connection (request-level).</description></item>
+        /// </list>
+        /// <para>In multi-digital-employee or task execution scenarios, if ask is provided, work takes effect instead.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>work</para>
+        /// </summary>
+        [NameInMap("workMode")]
+        [Validation(Required=false)]
+        public string WorkMode { get; set; }
+
     }
 
 }

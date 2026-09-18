@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListGraphSchemasShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>关键词，匹配 graphName / displayName（可选，忽略大小写）</para>
+        /// <para>The keyword for fuzzy match of component data in the form.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>语义标签过滤（可选，命中任一标签即保留）</para>
+        /// <para>The semantic tags used for filtering. A graph is retained if any tag matches.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;销售&quot;]</para>
+        /// <para>[&quot;Sales&quot;]</para>
         /// </summary>
         [NameInMap("semanticTags")]
         [Validation(Required=false)]
         public string SemanticTagsShrink { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</para>
+        /// <para>The list of digital employee names. A single string is also accepted for backward compatibility with the legacy format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable direct chat mode. If set to true, the regular scenario routing is skipped and the direct chat scenario is entered.</para>
+        /// <para>Specifies whether to enable direct connection mode. If set to true, the regular scenario routing is skipped and the direct conversation scenario is entered.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? DirectChat { get; set; }
 
         /// <summary>
-        /// <para>是否启用联网搜索，默认 False；任务执行场景（传 taskExecution）下以任务配置为准</para>
+        /// <para>Specifies whether to enable web search. Default value: False. In task execution scenarios where taskExecution is specified, the task configuration takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use streaming generation. This operation always generates backend content in streaming mode and writes it to the message stream. The value does not change the response structure.</para>
+        /// <para>Specifies whether to use streaming generation. This operation always generates backend content in streaming mode and writes it to the message stream. The value of this parameter does not change the response structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// <para>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</para>
+        /// <para>The task execution metadata returned by executeScheduledTask. If specified, the request is processed through the task execution pipeline.</para>
         /// </summary>
         [NameInMap("taskExecution")]
         [Validation(Required=false)]
@@ -250,6 +250,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("tenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
+
+        /// <summary>
+        /// <para>The session work mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ask: Quick Q&amp;A. Tools, skills, and connectors are trimmed, and a single-turn direct answer is returned.</description></item>
+        /// <item><description>work: Deep work. This is the default value.</description></item>
+        /// <item><description>direct: Direct connection mode at the request level. No sandbox is started and no context pollution occurs. This is equivalent to setting directChat to true.</description></item>
+        /// </list>
+        /// <para>The ask and work modes are session-level settings. The mode is fixed when a session is created. By default, follow-up messages in the same session inherit the session mode. If an explicit value conflicts with the session mode, a parameter error is returned. To switch modes, create a new session or fork the existing one. In multi-digital-employee or task execution scenarios, specifying ask causes the work mode to take effect. If directChat is set to true, this parameter is ignored.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>work</para>
+        /// </summary>
+        [NameInMap("workMode")]
+        [Validation(Required=false)]
+        public string WorkMode { get; set; }
 
     }
 

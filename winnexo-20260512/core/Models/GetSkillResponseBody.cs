@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The simplified parameter schema that describes what needs to be passed in runSkill.arguments. This is automatically extracted from inputConfigFormatted.</para>
+        /// <para>The simplified parameter schema that describes what to pass in runSkill.arguments. Automatically extracted from inputConfigFormatted.</para>
         /// </summary>
         [NameInMap("arguments")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of valid values, which is available when the options are limited.</para>
+            /// <para>The list of valid values when options are limited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Enum { get; set; }
 
             /// <summary>
-            /// <para>The parameter name, which corresponds to the key in runSkill.arguments.</para>
+            /// <para>The parameter name, corresponding to the key in runSkill.arguments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SampleName.pdf</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The skill description, which has been resolved through internationalization (i18n).</para>
+        /// <para>The skill description. The value is resolved through i18n.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sample description</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The skill name, which has been resolved through internationalization (i18n).</para>
+        /// <para>The skill name. The value is resolved through i18n.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SampleName.pdf</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillCode { get; set; }
 
         /// <summary>
-        /// <para>The nested tree of skill files. This is returned only when includeSkillFiles is set to True.</para>
+        /// <para>The nested skill file tree. This parameter is returned only when includeSkillFiles is set to True.</para>
         /// </summary>
         [NameInMap("skillFiles")]
         [Validation(Required=false)]
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag list, which has been resolved through internationalization (i18n).</para>
+        /// <para>The label list. The values are resolved through i18n.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The modification time in ISO 8601 format.</para>
+        /// <para>The update time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>

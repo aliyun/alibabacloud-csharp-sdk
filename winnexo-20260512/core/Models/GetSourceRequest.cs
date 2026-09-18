@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID to which the task belongs.</para>
+        /// <para>The ID of the tenant to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

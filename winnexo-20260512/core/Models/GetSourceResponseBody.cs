@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasNotes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether settings configuration exists.</para>
+        /// <para>Indicates whether settings configurations exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<GetSourceResponseBodyObjectBindings> ObjectBindings { get; set; }
         public class GetSourceResponseBodyObjectBindings : TeaModel {
             /// <summary>
-            /// <para>The semantic graph name to which the object belongs.</para>
+            /// <para>The name of the semantic graph to which the object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a micro-application ID.</para>
+            /// <para>The ID of the recommended item. The value can be a <b>feedId</b> or a mini-app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>The associated variable ID.</para>
+        /// <para>The ID of the associated variable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleObjectId</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The digital employee name (operating object name, optional).</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -219,14 +219,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The user profile settings.</para>
+        /// <para>The user card information settings.</para>
         /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
         public Dictionary<string, object> Settings { get; set; }
 
         /// <summary>
-        /// <para>The skill output ID (carried when the output is saved as a resource).</para>
+        /// <para>The skill output ID. This ID is included when the output is saved as a resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSkillOutputId</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <para>The knowledge base (KB) ownership type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>aliding_kb_doc: DingTalk knowledge base document.</description></item>
-        /// <item><description>normal: common knowledge.</description></item>
+        /// <item><description>normal: standard knowledge.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceKind { get; set; }
 
         /// <summary>
-        /// <para>The resource tags (optional, a JSON string list such as [&quot;tagA&quot;,&quot;tagB&quot;]).</para>
+        /// <para>The resource tags (optional). The value is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The final status of the message.</para>
+        /// <para>The final message status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
+            /// <para>The file record ID (optional). This value corresponds to settings.file_record_id.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleFileRecordId</para>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>The session analysis result in OSS URL format. The URL expires in one hour.</para>
+            /// <para>The session analysis result in OSS URL format. The URL expires after one hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>

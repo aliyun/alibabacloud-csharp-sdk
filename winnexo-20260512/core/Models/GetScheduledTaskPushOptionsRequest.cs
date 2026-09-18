@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskPushOptionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the collaboration group (such as cg_101). If specified, a group workspace task is created (the caller must be a valid group member). If left empty, a personal task is created.</para>
+        /// <para>The ID of the collaboration group, such as cg_101. If specified, a group workspace task is created and the caller must be a valid group member. If left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg_401</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

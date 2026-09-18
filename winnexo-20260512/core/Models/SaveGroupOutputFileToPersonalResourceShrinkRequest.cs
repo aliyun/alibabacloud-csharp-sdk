@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         /// <summary>
         /// <para>The save mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>link: creates a link (1:1 idempotent, editing the output synchronizes the resource).</description></item>
-        /// <item><description>copy: creates a copy (unlimited times, snapshot).</description></item>
+        /// <item><description>link: Links the output. This mode is idempotent on a 1:1 basis. Editing the output synchronizes the resource.</description></item>
+        /// <item><description>copy: Copies the output. This mode allows unlimited copies and creates a snapshot.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

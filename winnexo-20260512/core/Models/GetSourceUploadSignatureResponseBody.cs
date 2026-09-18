@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The content type. Valid values: Text and Markdown.</para>
+        /// <para>The content type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Text</description></item>
+        /// <item><description>Markdown</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</para>
+        /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>

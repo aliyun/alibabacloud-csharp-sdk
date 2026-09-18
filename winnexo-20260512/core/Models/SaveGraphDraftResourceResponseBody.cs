@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SaveGraphDraftResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>草稿变更 ID；内容与在线完全一致被跳过时为 null</para>
+        /// <para>The draft change ID (the draftChangeId returned by listGraphDraftResources).</para>
         /// 
         /// <b>Example:</b>
         /// <para>401001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? DraftChangeId { get; set; }
 
         /// <summary>
-        /// <para>草稿内容哈希；被跳过时为 null</para>
+        /// <para>The online content hash on which the draft save is based (draft starting point), a 64-character SHA-256 hexadecimal string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha256:abc123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DraftContentHash { get; set; }
 
         /// <summary>
-        /// <para>资源小类：resourceType=object 时固定 object_type；resourceType=element 时为 indicator / logic / process / rule / analysis 之一</para>
+        /// <para>The element type. Currently, only text is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>object_type</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ElementType { get; set; }
 
         /// <summary>
-        /// <para>最后修改时间（ISO8601）；被跳过时为 null</para>
+        /// <para>The last modified time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-09-08T10:30:00+00:00</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>图谱名称</para>
+        /// <para>The graph name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm_graph</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>操作类型：CREATE / UPDATE（由底层判定）；被跳过时为 null</para>
+        /// <para>The operation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UPDATE</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperationType { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资源名</para>
+        /// <para>The resource name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customer</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>资源大类：object（对象）/ element（业务元素）</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>object</para>

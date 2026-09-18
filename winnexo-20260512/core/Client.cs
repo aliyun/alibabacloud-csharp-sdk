@@ -2120,6 +2120,208 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Collects an Alibaba DingTalk online document to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An authorized member collects a document to a physical folder in the collaborative share. Uses the fixed ALI_DING/Vacuum channel and processes the request asynchronously. Query the resource status after submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingDocResponse
+        /// </returns>
+        public CreateGroupAliDingDocResponse CreateGroupAliDingDocWithOptions(CreateGroupAliDingDocRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePublicUrl))
+            {
+                body["filePublicUrl"] = request.FilePublicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAliDingDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupAliDingDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAliDingDocResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects an Alibaba DingTalk online document to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An authorized member collects a document to a physical folder in the collaborative share. Uses the fixed ALI_DING/Vacuum channel and processes the request asynchronously. Query the resource status after submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingDocResponse
+        /// </returns>
+        public async Task<CreateGroupAliDingDocResponse> CreateGroupAliDingDocWithOptionsAsync(CreateGroupAliDingDocRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePublicUrl))
+            {
+                body["filePublicUrl"] = request.FilePublicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAliDingDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupAliDingDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAliDingDocResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects an Alibaba DingTalk online document to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An authorized member collects a document to a physical folder in the collaborative share. Uses the fixed ALI_DING/Vacuum channel and processes the request asynchronously. Query the resource status after submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingDocResponse
+        /// </returns>
+        public CreateGroupAliDingDocResponse CreateGroupAliDingDoc(CreateGroupAliDingDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupAliDingDocWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects an Alibaba DingTalk online document to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An authorized member collects a document to a physical folder in the collaborative share. Uses the fixed ALI_DING/Vacuum channel and processes the request asynchronously. Query the resource status after submission.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingDocResponse
+        /// </returns>
+        public async Task<CreateGroupAliDingDocResponse> CreateGroupAliDingDocAsync(CreateGroupAliDingDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupAliDingDocWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates knowledge from a standard DingTalk group chat for a group.</para>
         /// </summary>
         /// 
@@ -2394,6 +2596,430 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDirectoryResponse
+        /// </returns>
+        public CreateGroupDirectoryResponse CreateGroupDirectoryWithOptions(CreateGroupDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDirectoryId))
+            {
+                body["parentDirectoryId"] = request.ParentDirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDirectoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDirectoryResponse
+        /// </returns>
+        public async Task<CreateGroupDirectoryResponse> CreateGroupDirectoryWithOptionsAsync(CreateGroupDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentDirectoryId))
+            {
+                body["parentDirectoryId"] = request.ParentDirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDirectoryResponse
+        /// </returns>
+        public CreateGroupDirectoryResponse CreateGroupDirectory(CreateGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupDirectoryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a folder in the collaborative share resource directory.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active space members can create physical subdirectories. If the parent folder is omitted or set to root, the internal root is used and lazily created on first access. The parent folder must belong to the current space.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDirectoryResponse
+        /// </returns>
+        public async Task<CreateGroupDirectoryResponse> CreateGroupDirectoryAsync(CreateGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupDirectoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>采集飞书群聊到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupFeishuChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuChatResponse
+        /// </returns>
+        public CreateGroupFeishuChatResponse CreateGroupFeishuChatWithOptions(CreateGroupFeishuChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupFeishuChatShrinkRequest request = new CreateGroupFeishuChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFeishuChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFeishuChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFeishuChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>采集飞书群聊到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupFeishuChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuChatResponse
+        /// </returns>
+        public async Task<CreateGroupFeishuChatResponse> CreateGroupFeishuChatWithOptionsAsync(CreateGroupFeishuChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupFeishuChatShrinkRequest request = new CreateGroupFeishuChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFeishuChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFeishuChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFeishuChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>采集飞书群聊到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFeishuChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuChatResponse
+        /// </returns>
+        public CreateGroupFeishuChatResponse CreateGroupFeishuChat(CreateGroupFeishuChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupFeishuChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>采集飞书群聊到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可信平台用户作为飞书连接器用户；空间鉴权通过后异步采集，前端通过详情查询实际状态。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFeishuChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuChatResponse
+        /// </returns>
+        public async Task<CreateGroupFeishuChatResponse> CreateGroupFeishuChatAsync(CreateGroupFeishuChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupFeishuChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
@@ -2644,6 +3270,628 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateGroupFeishuDocWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传本地文件到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFileResponse
+        /// </returns>
+        public CreateGroupFileResponse CreateGroupFileWithOptions(CreateGroupFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileRecordId))
+            {
+                body["fileRecordId"] = request.FileRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传本地文件到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFileResponse
+        /// </returns>
+        public async Task<CreateGroupFileResponse> CreateGroupFileWithOptionsAsync(CreateGroupFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileRecordId))
+            {
+                body["fileRecordId"] = request.FileRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传本地文件到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFileResponse
+        /// </returns>
+        public CreateGroupFileResponse CreateGroupFile(CreateGroupFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupFileWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传本地文件到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>先使用getSourceUploadSignature完成本地文件PUT，再提交当前租户本人SOURCE/OSS的fileRecordId。文件路径和名称由服务端读取，固定FILE/LOCAL/GROUP。有效成员可写空间物理目录，省略directoryId或root时使用空间根。返回创建结果，后续解析状态需查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFileResponse
+        /// </returns>
+        public async Task<CreateGroupFileResponse> CreateGroupFileAsync(CreateGroupFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects public web pages to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupPublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupPublicUrlResponse
+        /// </returns>
+        public CreateGroupPublicUrlResponse CreateGroupPublicUrlWithOptions(CreateGroupPublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupPublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupPublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupPublicUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects public web pages to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupPublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupPublicUrlResponse
+        /// </returns>
+        public async Task<CreateGroupPublicUrlResponse> CreateGroupPublicUrlWithOptionsAsync(CreateGroupPublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupPublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupPublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupPublicUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects public web pages to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupPublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupPublicUrlResponse
+        /// </returns>
+        public CreateGroupPublicUrlResponse CreateGroupPublicUrl(CreateGroupPublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupPublicUrlWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects public web pages to a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An active member collects web pages to a physical directory in the collaborative share. The type is fixed to PUBLIC_URL/GROUP. Use getGroupSource to query the background status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupPublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupPublicUrlResponse
+        /// </returns>
+        public async Task<CreateGroupPublicUrlResponse> CreateGroupPublicUrlAsync(CreateGroupPublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupPublicUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传纯文本到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupTextResponse
+        /// </returns>
+        public CreateGroupTextResponse CreateGroupTextWithOptions(CreateGroupTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupText",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupText",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupTextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传纯文本到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupTextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupTextResponse
+        /// </returns>
+        public async Task<CreateGroupTextResponse> CreateGroupTextWithOptionsAsync(CreateGroupTextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextContent))
+            {
+                body["textContent"] = request.TextContent;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupText",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupText",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupTextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传纯文本到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupTextResponse
+        /// </returns>
+        public CreateGroupTextResponse CreateGroupText(CreateGroupTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupTextWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传纯文本到协作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效空间成员上传纯文本到物理目录。固定TEXT/GROUP，省略directoryId或root时解析空间根。正文与最终名称沿用Provider处理规则，返回实际状态和真实目录，不代表解析完成。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupTextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupTextResponse
+        /// </returns>
+        public async Task<CreateGroupTextResponse> CreateGroupTextAsync(CreateGroupTextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupTextWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3620,6 +4868,216 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateKnowledgeBaseFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the enterprise knowledge base of the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBasePublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBasePublicUrlResponse
+        /// </returns>
+        public CreateKnowledgeBasePublicUrlResponse CreateKnowledgeBasePublicUrlWithOptions(CreateKnowledgeBasePublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBasePublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBasePublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBasePublicUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the enterprise knowledge base of the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBasePublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBasePublicUrlResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBasePublicUrlResponse> CreateKnowledgeBasePublicUrlWithOptionsAsync(CreateKnowledgeBasePublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBasePublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBasePublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBasePublicUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the enterprise knowledge base of the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBasePublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBasePublicUrlResponse
+        /// </returns>
+        public CreateKnowledgeBasePublicUrlResponse CreateKnowledgeBasePublicUrl(CreateKnowledgeBasePublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateKnowledgeBasePublicUrlWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the enterprise knowledge base of the current user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\n\nFixed to <c>PUBLIC_URL + TENANT</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Invoke getKnowledgeBaseSource to query the background collection status. <c>directoryId</c> is required. The caller must have knowledge base management permissions on the destination knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBasePublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBasePublicUrlResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBasePublicUrlResponse> CreateKnowledgeBasePublicUrlAsync(CreateKnowledgeBasePublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateKnowledgeBasePublicUrlWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6642,10 +8100,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
-        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6744,10 +8201,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
-        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6846,10 +8302,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
-        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6879,10 +8334,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
         /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
-        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
-        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically bound to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, and APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6902,6 +8356,216 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Collects a single public web page into the current user\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed to <c>PUBLIC_URL + PERSONAL</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Use getSource to query the background collection status. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalPublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalPublicUrlResponse
+        /// </returns>
+        public CreatePersonalPublicUrlResponse CreatePersonalPublicUrlWithOptions(CreatePersonalPublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalPublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalPublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalPublicUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the current user\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed to <c>PUBLIC_URL + PERSONAL</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Use getSource to query the background collection status. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalPublicUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalPublicUrlResponse
+        /// </returns>
+        public async Task<CreatePersonalPublicUrlResponse> CreatePersonalPublicUrlWithOptionsAsync(CreatePersonalPublicUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalUrl))
+            {
+                body["originalUrl"] = request.OriginalUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalPublicUrl",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalPublicUrl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalPublicUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the current user\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed to <c>PUBLIC_URL + PERSONAL</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Use getSource to query the background collection status. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalPublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalPublicUrlResponse
+        /// </returns>
+        public CreatePersonalPublicUrlResponse CreatePersonalPublicUrl(CreatePersonalPublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalPublicUrlWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Collects a single public web page into the current user\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed to <c>PUBLIC_URL + PERSONAL</c>. The user is determined by the trusted OpenAPI identity. Creation only indicates acceptance. Use getSource to query the background collection status. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalPublicUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalPublicUrlResponse
+        /// </returns>
+        public async Task<CreatePersonalPublicUrlResponse> CreatePersonalPublicUrlAsync(CreatePersonalPublicUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalPublicUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Uploads plain text content to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
@@ -6912,8 +8576,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
-        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed through the request body.</description></item>
+        /// <item><description>A metering process is initiated during the call, and a corresponding <c>billing_id</c> is generated.</description></item>
         /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
         /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
@@ -6998,8 +8662,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
-        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed through the request body.</description></item>
+        /// <item><description>A metering process is initiated during the call, and a corresponding <c>billing_id</c> is generated.</description></item>
         /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
         /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
@@ -7084,8 +8748,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
-        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed through the request body.</description></item>
+        /// <item><description>A metering process is initiated during the call, and a corresponding <c>billing_id</c> is generated.</description></item>
         /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
         /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
@@ -7117,8 +8781,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
         /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
-        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
-        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed through the request body.</description></item>
+        /// <item><description>A metering process is initiated during the call, and a corresponding <c>billing_id</c> is generated.</description></item>
         /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
         /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
@@ -10474,6 +12138,176 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取协作空间资料详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGroupSourceResponse
+        /// </returns>
+        public GetGroupSourceResponse GetGroupSourceWithOptions(GetGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGroupSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协作空间资料详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGroupSourceResponse
+        /// </returns>
+        public async Task<GetGroupSourceResponse> GetGroupSourceWithOptionsAsync(GetGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGroupSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协作空间资料详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGroupSourceResponse
+        /// </returns>
+        public GetGroupSourceResponse GetGroupSource(GetGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGroupSourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取协作空间资料详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>只读查询指定空间可见资料；未授权和无效引用拒绝读取，不初始化空间目录。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGroupSourceResponse
+        /// </returns>
+        public async Task<GetGroupSourceResponse> GetGroupSourceAsync(GetGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGroupSourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the expiration time of the most recently created standard package instance for a tenant.</para>
         /// </summary>
         /// 
@@ -10855,15 +12689,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10919,15 +12753,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10983,15 +12817,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11016,15 +12850,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
         /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
         /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
-        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
-        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
-        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name of the file to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11710,18 +13544,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves skill details.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
         /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
-        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Set to <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
         /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
@@ -11787,18 +13621,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves skill details.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
         /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
-        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Set to <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
         /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
@@ -11864,18 +13698,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves skill details.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
         /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
-        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Set to <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
         /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
@@ -11896,18 +13730,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves skill details.</para>
+        /// <para>Retrieves the details of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
         /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
         /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
         /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
-        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Set to <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
         /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
@@ -12133,9 +13967,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
-        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
-        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the request body is ignored.</description></item>
+        /// <item><description>Response elements do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details, including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12199,9 +14033,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
-        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
-        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the request body is ignored.</description></item>
+        /// <item><description>Response elements do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details, including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12265,9 +14099,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
-        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
-        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the request body is ignored.</description></item>
+        /// <item><description>Response elements do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details, including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12294,9 +14128,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
-        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
-        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the request body is ignored.</description></item>
+        /// <item><description>Response elements do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details, including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12327,7 +14161,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
         /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
         /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
-        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. By default, this parameter may not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12364,6 +14198,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
             {
                 body["filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
             {
@@ -12407,7 +14245,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
         /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
         /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
-        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. By default, this parameter may not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12444,6 +14282,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
             {
                 body["filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
             {
@@ -12487,7 +14329,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
         /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
         /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
-        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. By default, this parameter may not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12518,7 +14360,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
         /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
         /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
-        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. By default, this parameter may not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12926,7 +14768,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <para>Queries user details through OpenAPI.
         ///     Business orchestration:
         ///     1. Locate the user by wnUserId or accountId.
-        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
         ///     3. Query the role list of the user in the current tenant.
         ///     4. Query the user group list of the user in the current tenant.
         ///     5. Assemble the response.
@@ -12994,7 +14836,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <para>Queries user details through OpenAPI.
         ///     Business orchestration:
         ///     1. Locate the user by wnUserId or accountId.
-        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
         ///     3. Query the role list of the user in the current tenant.
         ///     4. Query the user group list of the user in the current tenant.
         ///     5. Assemble the response.
@@ -13062,7 +14904,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <para>Queries user details through OpenAPI.
         ///     Business orchestration:
         ///     1. Locate the user by wnUserId or accountId.
-        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
         ///     3. Query the role list of the user in the current tenant.
         ///     4. Query the user group list of the user in the current tenant.
         ///     5. Assemble the response.
@@ -13095,7 +14937,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <para>Queries user details through OpenAPI.
         ///     Business orchestration:
         ///     1. Locate the user by wnUserId or accountId.
-        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     2. Query the mapping information of the user in the current tenant, including status, join time, and last logon time.
         ///     3. Query the role list of the user in the current tenant.
         ///     4. Query the user group list of the user in the current tenant.
         ///     5. Assemble the response.
@@ -13302,11 +15144,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
-        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter and must be provided in the request body.</description></item>
         /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
         /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
         /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
-        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// <item><description>Make sure you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13367,11 +15209,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
-        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter and must be provided in the request body.</description></item>
         /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
         /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
         /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
-        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// <item><description>Make sure you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13432,11 +15274,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
-        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter and must be provided in the request body.</description></item>
         /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
         /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
         /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
-        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// <item><description>Make sure you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13464,11 +15306,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <h2>Operation description</h2>
         /// <list type="bullet">
         /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
-        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter and must be provided in the request body.</description></item>
         /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
         /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
         /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
-        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// <item><description>Make sure you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13922,7 +15764,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user who has the announcement viewing permission in the system O&amp;M tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13984,7 +15826,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user who has the announcement viewing permission in the system O&amp;M tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14046,7 +15888,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user who has the announcement viewing permission in the system O&amp;M tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14071,7 +15913,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user in the system O&amp;M tenant who has the permission to view announcements.</para>
+        /// <para>Performs a paging query for published platform announcements that are effective within the current database time window. The caller must be a real user who has the announcement viewing permission in the system O&amp;M tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14930,16 +16772,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
+        /// <para>Queries the list of digital human names for which the caller has the specified permission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has the specified permission (USE/MANAGE).
         ///     Business logic:
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
-        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     3. When skip_permission=True, returns all active agents of the tenant.
         ///     4. Regular users are filtered based on authorization records and auth_mode.
         ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
@@ -14997,16 +16839,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
+        /// <para>Queries the list of digital human names for which the caller has the specified permission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has the specified permission (USE/MANAGE).
         ///     Business logic:
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
-        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     3. When skip_permission=True, returns all active agents of the tenant.
         ///     4. Regular users are filtered based on authorization records and auth_mode.
         ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
@@ -15064,16 +16906,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
+        /// <para>Queries the list of digital human names for which the caller has the specified permission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has the specified permission (USE/MANAGE).
         ///     Business logic:
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
-        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     3. When skip_permission=True, returns all active agents of the tenant.
         ///     4. Regular users are filtered based on authorization records and auth_mode.
         ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
@@ -15094,16 +16936,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
+        /// <para>Queries the list of digital human names for which the caller has the specified permission.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has the specified permission (USE/MANAGE).
         ///     Business logic:
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
-        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     3. When skip_permission=True, returns all active agents of the tenant.
         ///     4. Regular users are filtered based on authorization records and auth_mode.
         ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
@@ -15134,7 +16976,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
         ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
-        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
+        ///     4. When auth_mode is set to ALL_USERS, only records with the MANAGE permission are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15208,7 +17050,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
         ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
-        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
+        ///     4. When auth_mode is set to ALL_USERS, only records with the MANAGE permission are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15282,7 +17124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
         ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
-        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
+        ///     4. When auth_mode is set to ALL_USERS, only records with the MANAGE permission are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15311,7 +17153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         ///     1. Constructs an AuthContext from the identity.
         ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
         ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
-        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
+        ///     4. When auth_mode is set to ALL_USERS, only records with the MANAGE permission are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15773,9 +17615,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
         /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
-        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API operation returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15845,9 +17687,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
         /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
-        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API operation returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15917,9 +17759,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
         /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
-        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API operation returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15946,9 +17788,9 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>This API operation supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
         /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
-        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API operation returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16166,15 +18008,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理视角图谱列表</para>
+        /// <para>Queries the list of semantic graphs from the management perspective.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
-        ///     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
-        ///     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
-        ///     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</para>
+        /// <para>Queries the list of semantic graphs from the management perspective through OpenAPI, including graphs in draft or publishing status.
+        ///     Returns tenant-level active graphs. graphStatus has three states: PUBLISHED, DEVELOPING (the current user has an active draft), and
+        ///     PUBLISHING (the current user is publishing). Deploy-level or system-level tokens have no personal identity, so hasDraft is always false.
+        ///     keyword matches graphName or displayName (case-insensitive). semanticTags retains a graph if any tag matches.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16236,15 +18078,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理视角图谱列表</para>
+        /// <para>Queries the list of semantic graphs from the management perspective.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
-        ///     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
-        ///     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
-        ///     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</para>
+        /// <para>Queries the list of semantic graphs from the management perspective through OpenAPI, including graphs in draft or publishing status.
+        ///     Returns tenant-level active graphs. graphStatus has three states: PUBLISHED, DEVELOPING (the current user has an active draft), and
+        ///     PUBLISHING (the current user is publishing). Deploy-level or system-level tokens have no personal identity, so hasDraft is always false.
+        ///     keyword matches graphName or displayName (case-insensitive). semanticTags retains a graph if any tag matches.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16306,15 +18148,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理视角图谱列表</para>
+        /// <para>Queries the list of semantic graphs from the management perspective.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
-        ///     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
-        ///     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
-        ///     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</para>
+        /// <para>Queries the list of semantic graphs from the management perspective through OpenAPI, including graphs in draft or publishing status.
+        ///     Returns tenant-level active graphs. graphStatus has three states: PUBLISHED, DEVELOPING (the current user has an active draft), and
+        ///     PUBLISHING (the current user is publishing). Deploy-level or system-level tokens have no personal identity, so hasDraft is always false.
+        ///     keyword matches graphName or displayName (case-insensitive). semanticTags retains a graph if any tag matches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16333,15 +18175,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理视角图谱列表</para>
+        /// <para>Queries the list of semantic graphs from the management perspective.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 管理视角图谱列表（含草稿/发布中状态）。
-        ///     返回租户级 active 图谱；graphStatus 三态：PUBLISHED / DEVELOPING（当前用户有活动草稿）/
-        ///     PUBLISHING（当前用户发布中）；部署/系统级 Token 无个人身份，hasDraft 恒 false。
-        ///     keyword 匹配 graphName / displayName（忽略大小写）；semanticTags 命中任一标签即保留。</para>
+        /// <para>Queries the list of semantic graphs from the management perspective through OpenAPI, including graphs in draft or publishing status.
+        ///     Returns tenant-level active graphs. graphStatus has three states: PUBLISHED, DEVELOPING (the current user has an active draft), and
+        ///     PUBLISHING (the current user is publishing). Deploy-level or system-level tokens have no personal identity, so hasDraft is always false.
+        ///     keyword matches graphName or displayName (case-insensitive). semanticTags retains a graph if any tag matches.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16522,17 +18364,433 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
+        /// <para>Lists the resource directories of a collaborative share.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <para>Valid members can list the query root itself and all its descendant directories, including visible referenced directories marked as readOnly. The results are not paginated and do not return resources. The first query reuses the existing service-initialized internal root.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoriesResponse
+        /// </returns>
+        public ListGroupDirectoriesResponse ListGroupDirectoriesWithOptions(ListGroupDirectoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["sortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["sortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDirectories",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listGroupDirectories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDirectoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the resource directories of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Valid members can list the query root itself and all its descendant directories, including visible referenced directories marked as readOnly. The results are not paginated and do not return resources. The first query reuses the existing service-initialized internal root.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoriesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoriesResponse
+        /// </returns>
+        public async Task<ListGroupDirectoriesResponse> ListGroupDirectoriesWithOptionsAsync(ListGroupDirectoriesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["sortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["sortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDirectories",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listGroupDirectories",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the resource directories of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Valid members can list the query root itself and all its descendant directories, including visible referenced directories marked as readOnly. The results are not paginated and do not return resources. The first query reuses the existing service-initialized internal root.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoriesResponse
+        /// </returns>
+        public ListGroupDirectoriesResponse ListGroupDirectories(ListGroupDirectoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGroupDirectoriesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the resource directories of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Valid members can list the query root itself and all its descendant directories, including visible referenced directories marked as readOnly. The results are not paginated and do not return resources. The first query reuses the existing service-initialized internal root.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoriesResponse
+        /// </returns>
+        public async Task<ListGroupDirectoriesResponse> ListGroupDirectoriesAsync(ListGroupDirectoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGroupDirectoriesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the contents of a collaboration space folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Corresponds to the space list-resources operation. Active members can query immediate subdirectories and resources based on directory visibility scope. Results are paginated with directories listed first and include read-only references. If the directory is omitted or set to root, the existing root initialization is used. If sourceTypes has values, only resources are returned. sourceStatus follows the existing behavior where physical directories are retained and immediate reference directories are not returned.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoryResponse
+        /// </returns>
+        public ListGroupDirectoryResponse ListGroupDirectoryWithOptions(ListGroupDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGroupDirectoryShrinkRequest request = new ListGroupDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTypes))
+            {
+                request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["sortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["sortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceStatus))
+            {
+                body["sourceStatus"] = request.SourceStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypesShrink))
+            {
+                body["sourceTypes"] = request.SourceTypesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDirectoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the contents of a collaboration space folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Corresponds to the space list-resources operation. Active members can query immediate subdirectories and resources based on directory visibility scope. Results are paginated with directories listed first and include read-only references. If the directory is omitted or set to root, the existing root initialization is used. If sourceTypes has values, only resources are returned. sourceStatus follows the existing behavior where physical directories are retained and immediate reference directories are not returned.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ListGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoryResponse
+        /// </returns>
+        public async Task<ListGroupDirectoryResponse> ListGroupDirectoryWithOptionsAsync(ListGroupDirectoryRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGroupDirectoryShrinkRequest request = new ListGroupDirectoryShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceTypes))
+            {
+                request.SourceTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTypes, "sourceTypes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                body["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["sortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                body["sortOrder"] = request.SortOrder;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceStatus))
+            {
+                body["sourceStatus"] = request.SourceStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTypesShrink))
+            {
+                body["sourceTypes"] = request.SourceTypesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGroupDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the contents of a collaboration space folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Corresponds to the space list-resources operation. Active members can query immediate subdirectories and resources based on directory visibility scope. Results are paginated with directories listed first and include read-only references. If the directory is omitted or set to root, the existing root initialization is used. If sourceTypes has values, only resources are returned. sourceStatus follows the existing behavior where physical directories are retained and immediate reference directories are not returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoryResponse
+        /// </returns>
+        public ListGroupDirectoryResponse ListGroupDirectory(ListGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGroupDirectoryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query on the contents of a collaboration space folder.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Corresponds to the space list-resources operation. Active members can query immediate subdirectories and resources based on directory visibility scope. Results are paginated with directories listed first and include read-only references. If the directory is omitted or set to root, the existing root initialization is used. If sourceTypes has values, only resources are returned. sourceStatus follows the existing behavior where physical directories are retained and immediate reference directories are not returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGroupDirectoryResponse
+        /// </returns>
+        public async Task<ListGroupDirectoryResponse> ListGroupDirectoryAsync(ListGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGroupDirectoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
-        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
+        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16593,17 +18851,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
-        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
+        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16664,17 +18922,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
-        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
+        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16694,17 +18952,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base. Sorting by a specified field is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
-        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
-        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
-        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>This API operation retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not specified, all category trees under the root directory of the enterprise knowledge base are returned. If <c>directoryId</c> is specified, the subdirectory tree rooted at the specified directory is returned.</description></item>
+        /// <item><description>You can use the <c>sortField</c> and <c>sortOrder</c> parameters to sort the results. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16918,7 +19176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16927,11 +19185,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <list type="bullet">
         /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
         /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
         /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17004,7 +19262,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17013,11 +19271,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <list type="bullet">
         /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
         /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
         /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17090,7 +19348,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17099,11 +19357,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <list type="bullet">
         /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
         /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
         /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17123,7 +19381,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output list of the current user, with support for conditional filtering and pagination.</para>
+        /// <para>Queries the output list of the current user. Filtering by conditions and pagination are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17132,11 +19390,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <list type="bullet">
         /// <item><description>This API operation queries the output list of the current logged-in user.</description></item>
         /// <item><description><c>tenantId</c> is a common parameter. If not specified, the default tenant of the caller is used.</description></item>
-        /// <item><description>Supports filtering by parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Filtering is supported through parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
         /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only outputs with sharing enabled.</description></item>
-        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, results start from page 1 with 20 records per page.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of items per page). By default, the first page is returned with 20 records per page.</description></item>
         /// <item><description>Results are sorted by update time in descending order by default.</description></item>
-        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> passed in the request body by the caller is ignored. This information is derived only from the authenticated identity.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body by the caller are ignored. This information is derived only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17417,8 +19675,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Queries the list of system built-in roles.
         ///     Business logic:
-        ///     1. Constructs AuthContext from identity.
-        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles to perform permission verification (PLATFORM_USER_VIEW).
         ///     3. Renders role names and descriptions based on the request Accept-Language header.
         ///     4. Returns a fixed set of 7 system built-in roles.
         ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
@@ -17474,8 +19732,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Queries the list of system built-in roles.
         ///     Business logic:
-        ///     1. Constructs AuthContext from identity.
-        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles to perform permission verification (PLATFORM_USER_VIEW).
         ///     3. Renders role names and descriptions based on the request Accept-Language header.
         ///     4. Returns a fixed set of 7 system built-in roles.
         ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
@@ -17531,8 +19789,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Queries the list of system built-in roles.
         ///     Business logic:
-        ///     1. Constructs AuthContext from identity.
-        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles to perform permission verification (PLATFORM_USER_VIEW).
         ///     3. Renders role names and descriptions based on the request Accept-Language header.
         ///     4. Returns a fixed set of 7 system built-in roles.
         ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
@@ -17561,8 +19819,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <para>Queries the list of system built-in roles.
         ///     Business logic:
-        ///     1. Constructs AuthContext from identity.
-        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles to perform permission verification (PLATFORM_USER_VIEW).
         ///     3. Renders role names and descriptions based on the request Accept-Language header.
         ///     4. Returns a fixed set of 7 system built-in roles.
         ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
@@ -17591,12 +19849,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>Provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -17689,12 +19947,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>Provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -17787,12 +20045,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>Provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -17820,12 +20078,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
-        /// <item><description>The DEVELOPMENT_KB_MANAGE permission is required to call this operation.</description></item>
-        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this operation.</description></item>
+        /// <item><description>Provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
         /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
         /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
-        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add tags to resources for subsequent management and retrieval.</description></item>
         /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
@@ -18129,12 +20387,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
-        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>This API is used for paging query of folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and more.</description></item>
         /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
-        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified or is set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
         /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
@@ -18213,12 +20471,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
-        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>This API is used for paging query of folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and more.</description></item>
         /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
-        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified or is set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
         /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
@@ -18297,12 +20555,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
-        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>This API is used for paging query of folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and more.</description></item>
         /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
-        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified or is set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
         /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
@@ -18328,12 +20586,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
-        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>This API is used for paging query of folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and more.</description></item>
         /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
-        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified or is set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
         /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
@@ -19632,6 +21890,192 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>移动协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveGroupResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveGroupResourceResponse
+        /// </returns>
+        public MoveGroupResourceResponse MoveGroupResourceWithOptions(MoveGroupResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDirectoryId))
+            {
+                body["sourceDirectoryId"] = request.SourceDirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDirectoryId))
+            {
+                body["targetDirectoryId"] = request.TargetDirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveGroupResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/moveGroupResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveGroupResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveGroupResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveGroupResourceResponse
+        /// </returns>
+        public async Task<MoveGroupResourceResponse> MoveGroupResourceWithOptionsAsync(MoveGroupResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceDirectoryId))
+            {
+                body["sourceDirectoryId"] = request.SourceDirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDirectoryId))
+            {
+                body["targetDirectoryId"] = request.TargetDirectoryId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveGroupResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/moveGroupResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveGroupResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveGroupResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveGroupResourceResponse
+        /// </returns>
+        public MoveGroupResourceResponse MoveGroupResource(MoveGroupResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return MoveGroupResourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为资料创建者或空间管理员才能在同一空间物理目录树内移动资料。源目标必须是真实且不同的目录ID，资料必须在源目录。引用资料只读。保持sourceId，不重新解析；本地绑定成功不保证下游路径已同步。重复请求可能报资料不在源目录，请先查询位置。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveGroupResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveGroupResourceResponse
+        /// </returns>
+        public async Task<MoveGroupResourceResponse> MoveGroupResourceAsync(MoveGroupResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await MoveGroupResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Moves a specified resource between enterprise knowledge base directories. Management permissions are required.</para>
         /// </summary>
         /// 
@@ -20274,6 +22718,176 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await OfflineAnnouncementWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a resource in a collaborative workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active members can preview physical or referenced resources in a specified workspace. Requests to read resources that are cross-workspace, de-referenced, or invisible are rejected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewGroupSourceResponse
+        /// </returns>
+        public PreviewGroupSourceResponse PreviewGroupSourceWithOptions(PreviewGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/previewGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewGroupSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a resource in a collaborative workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active members can preview physical or referenced resources in a specified workspace. Requests to read resources that are cross-workspace, de-referenced, or invisible are rejected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewGroupSourceResponse
+        /// </returns>
+        public async Task<PreviewGroupSourceResponse> PreviewGroupSourceWithOptionsAsync(PreviewGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/previewGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewGroupSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a resource in a collaborative workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active members can preview physical or referenced resources in a specified workspace. Requests to read resources that are cross-workspace, de-referenced, or invisible are rejected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewGroupSourceResponse
+        /// </returns>
+        public PreviewGroupSourceResponse PreviewGroupSource(PreviewGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PreviewGroupSourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a resource in a collaborative workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Active members can preview physical or referenced resources in a specified workspace. Requests to read resources that are cross-workspace, de-referenced, or invisible are rejected.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewGroupSourceResponse
+        /// </returns>
+        public async Task<PreviewGroupSourceResponse> PreviewGroupSourceAsync(PreviewGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PreviewGroupSourceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22288,6 +24902,184 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>重新解析协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReparseGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReparseGroupSourceResponse
+        /// </returns>
+        public ReparseGroupSourceResponse ReparseGroupSourceWithOptions(ReparseGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReparseGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/reparseGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReparseGroupSourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新解析协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReparseGroupSourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReparseGroupSourceResponse
+        /// </returns>
+        public async Task<ReparseGroupSourceResponse> ReparseGroupSourceWithOptionsAsync(ReparseGroupSourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReparseGroupSource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/reparseGroupSource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReparseGroupSourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新解析协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReparseGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReparseGroupSourceResponse
+        /// </returns>
+        public ReparseGroupSourceResponse ReparseGroupSource(ReparseGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReparseGroupSourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重新解析协作空间资料</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可重新解析物理资料；引用只读。默认异步；forceSync仅等待不等于强制重抓，在线文档未变化可能直接返回。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReparseGroupSourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReparseGroupSourceResponse
+        /// </returns>
+        public async Task<ReparseGroupSourceResponse> ReparseGroupSourceAsync(ReparseGroupSourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReparseGroupSourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Re-parses a resource.</para>
         /// </summary>
         /// 
@@ -22474,6 +25266,216 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ReparseSourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换协作空间资料文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceGroupSourceFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceGroupSourceFileResponse
+        /// </returns>
+        public ReplaceGroupSourceFileResponse ReplaceGroupSourceFileWithOptions(ReplaceGroupSourceFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePublicUrl))
+            {
+                body["filePublicUrl"] = request.FilePublicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileRecordId))
+            {
+                body["fileRecordId"] = request.FileRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceGroupSourceFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceGroupSourceFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceGroupSourceFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换协作空间资料文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceGroupSourceFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceGroupSourceFileResponse
+        /// </returns>
+        public async Task<ReplaceGroupSourceFileResponse> ReplaceGroupSourceFileWithOptionsAsync(ReplaceGroupSourceFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["fileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["filePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePublicUrl))
+            {
+                body["filePublicUrl"] = request.FilePublicUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileRecordId))
+            {
+                body["fileRecordId"] = request.FileRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ReplaceGroupSourceFile",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/replaceGroupSourceFile",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ReplaceGroupSourceFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换协作空间资料文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceGroupSourceFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceGroupSourceFileResponse
+        /// </returns>
+        public ReplaceGroupSourceFileResponse ReplaceGroupSourceFile(ReplaceGroupSourceFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ReplaceGroupSourceFileWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>替换协作空间资料文件</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可替换物理GROUP资料；引用只读。先上传新文件再提交上传结果，仅FILE。保留SourceID并触发解析，默认异步。空操作结果可能发生在写入之后，返回执行错误而非不存在。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ReplaceGroupSourceFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ReplaceGroupSourceFileResponse
+        /// </returns>
+        public async Task<ReplaceGroupSourceFileResponse> ReplaceGroupSourceFileAsync(ReplaceGroupSourceFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ReplaceGroupSourceFileWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24622,22 +27624,272 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个语义资源草稿</para>
+        /// <para>Batch saves personal semantic drafts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
-        ///     业务编排：
-        ///     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
-        ///        与语义管理权限校验
-        ///     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
-        ///        内容与在线完全一致时跳过落库，摘要字段返回 null
-        ///     错误码：
-        ///     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
-        ///     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
-        ///     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
-        ///     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</para>
+        /// <para>Batch saves personal semantic drafts through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. saveMode dispatch: FULL_YAML (default) performs full-graph YAML differential save,
+        ///        including invalidated draft discard and order collection write permission verification.
+        ///        PARTIAL_YAML performs partial YAML save scoped by draftChangeIds.
+        ///     3. The diff baseline is always read from the online active version by the backend (the base input parameter is not trusted).
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: Invalid saveMode / draftChangeIds not provided for PARTIAL_YAML.
+        ///     - ERR.GraphSchema.<em>: Graph does not exist / YAML structure validation failed / Custom physical table contract is invalid.
+        ///     - ERR.Robject.Global.BusinessStateConflict: Related resources are being published.
+        ///     - ERR.Robject.Permission.</em>: Order collection write permission verification failed.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGraphDraftBatchDefineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGraphDraftBatchDefineResponse
+        /// </returns>
+        public SaveGraphDraftBatchDefineResponse SaveGraphDraftBatchDefineWithOptions(SaveGraphDraftBatchDefineRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGraphDraftBatchDefineShrinkRequest request = new SaveGraphDraftBatchDefineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DraftChangeIds))
+            {
+                request.DraftChangeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DraftChangeIds, "draftChangeIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftChangeIdsShrink))
+            {
+                body["draftChangeIds"] = request.DraftChangeIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveMode))
+            {
+                body["saveMode"] = request.SaveMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YamlEdit))
+            {
+                body["yamlEdit"] = request.YamlEdit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGraphDraftBatchDefine",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGraphDraftBatchDefine",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGraphDraftBatchDefineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves personal semantic drafts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch saves personal semantic drafts through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. saveMode dispatch: FULL_YAML (default) performs full-graph YAML differential save,
+        ///        including invalidated draft discard and order collection write permission verification.
+        ///        PARTIAL_YAML performs partial YAML save scoped by draftChangeIds.
+        ///     3. The diff baseline is always read from the online active version by the backend (the base input parameter is not trusted).
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: Invalid saveMode / draftChangeIds not provided for PARTIAL_YAML.
+        ///     - ERR.GraphSchema.<em>: Graph does not exist / YAML structure validation failed / Custom physical table contract is invalid.
+        ///     - ERR.Robject.Global.BusinessStateConflict: Related resources are being published.
+        ///     - ERR.Robject.Permission.</em>: Order collection write permission verification failed.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGraphDraftBatchDefineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGraphDraftBatchDefineResponse
+        /// </returns>
+        public async Task<SaveGraphDraftBatchDefineResponse> SaveGraphDraftBatchDefineWithOptionsAsync(SaveGraphDraftBatchDefineRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGraphDraftBatchDefineShrinkRequest request = new SaveGraphDraftBatchDefineShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DraftChangeIds))
+            {
+                request.DraftChangeIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DraftChangeIds, "draftChangeIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DraftChangeIdsShrink))
+            {
+                body["draftChangeIds"] = request.DraftChangeIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GraphName))
+            {
+                body["graphName"] = request.GraphName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveMode))
+            {
+                body["saveMode"] = request.SaveMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YamlEdit))
+            {
+                body["yamlEdit"] = request.YamlEdit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGraphDraftBatchDefine",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGraphDraftBatchDefine",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGraphDraftBatchDefineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves personal semantic drafts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch saves personal semantic drafts through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. saveMode dispatch: FULL_YAML (default) performs full-graph YAML differential save,
+        ///        including invalidated draft discard and order collection write permission verification.
+        ///        PARTIAL_YAML performs partial YAML save scoped by draftChangeIds.
+        ///     3. The diff baseline is always read from the online active version by the backend (the base input parameter is not trusted).
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: Invalid saveMode / draftChangeIds not provided for PARTIAL_YAML.
+        ///     - ERR.GraphSchema.<em>: Graph does not exist / YAML structure validation failed / Custom physical table contract is invalid.
+        ///     - ERR.Robject.Global.BusinessStateConflict: Related resources are being published.
+        ///     - ERR.Robject.Permission.</em>: Order collection write permission verification failed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGraphDraftBatchDefineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGraphDraftBatchDefineResponse
+        /// </returns>
+        public SaveGraphDraftBatchDefineResponse SaveGraphDraftBatchDefine(SaveGraphDraftBatchDefineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SaveGraphDraftBatchDefineWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves personal semantic drafts.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Batch saves personal semantic drafts through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. saveMode dispatch: FULL_YAML (default) performs full-graph YAML differential save,
+        ///        including invalidated draft discard and order collection write permission verification.
+        ///        PARTIAL_YAML performs partial YAML save scoped by draftChangeIds.
+        ///     3. The diff baseline is always read from the online active version by the backend (the base input parameter is not trusted).
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: Invalid saveMode / draftChangeIds not provided for PARTIAL_YAML.
+        ///     - ERR.GraphSchema.<em>: Graph does not exist / YAML structure validation failed / Custom physical table contract is invalid.
+        ///     - ERR.Robject.Global.BusinessStateConflict: Related resources are being published.
+        ///     - ERR.Robject.Permission.</em>: Order collection write permission verification failed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGraphDraftBatchDefineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGraphDraftBatchDefineResponse
+        /// </returns>
+        public async Task<SaveGraphDraftBatchDefineResponse> SaveGraphDraftBatchDefineAsync(SaveGraphDraftBatchDefineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SaveGraphDraftBatchDefineWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves a single semantic resource draft.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves a single semantic resource draft through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. Delegates to the personal draft service for saving (source is fixed YAML). The underlying layer includes resource-level write permission verification.
+        ///        If the content is identical to the online version, the database write is skipped and the summary field returns null.
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: The resourceType/elementType combination is invalid.
+        ///     - ERR.GraphSchema.*: The graph does not exist, or resource naming and ownership verification failed.
+        ///     - ERR.Robject.Global.ResourceNotFound: The resource does not exist or other underlying verification failed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24705,22 +27957,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个语义资源草稿</para>
+        /// <para>Saves a single semantic resource draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
-        ///     业务编排：
-        ///     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
-        ///        与语义管理权限校验
-        ///     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
-        ///        内容与在线完全一致时跳过落库，摘要字段返回 null
-        ///     错误码：
-        ///     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
-        ///     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
-        ///     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
-        ///     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</para>
+        /// <para>Saves a single semantic resource draft through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. Delegates to the personal draft service for saving (source is fixed YAML). The underlying layer includes resource-level write permission verification.
+        ///        If the content is identical to the online version, the database write is skipped and the summary field returns null.
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: The resourceType/elementType combination is invalid.
+        ///     - ERR.GraphSchema.*: The graph does not exist, or resource naming and ownership verification failed.
+        ///     - ERR.Robject.Global.ResourceNotFound: The resource does not exist or other underlying verification failed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24788,22 +28040,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个语义资源草稿</para>
+        /// <para>Saves a single semantic resource draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
-        ///     业务编排：
-        ///     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
-        ///        与语义管理权限校验
-        ///     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
-        ///        内容与在线完全一致时跳过落库，摘要字段返回 null
-        ///     错误码：
-        ///     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
-        ///     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
-        ///     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
-        ///     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</para>
+        /// <para>Saves a single semantic resource draft through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. Delegates to the personal draft service for saving (source is fixed YAML). The underlying layer includes resource-level write permission verification.
+        ///        If the content is identical to the online version, the database write is skipped and the summary field returns null.
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: The resourceType/elementType combination is invalid.
+        ///     - ERR.GraphSchema.*: The graph does not exist, or resource naming and ownership verification failed.
+        ///     - ERR.Robject.Global.ResourceNotFound: The resource does not exist or other underlying verification failed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24822,22 +28074,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存单个语义资源草稿</para>
+        /// <para>Saves a single semantic resource draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 保存单个语义资源草稿（仅个人 Token）。
-        ///     业务编排：
-        ///     1. 草稿域身份校验（仅个人 Token；部署/系统级 Token 被拒绝）
-        ///        与语义管理权限校验
-        ///     2. 委托个人草稿服务保存（来源固定 YAML），底层含资源级写权限校验；
-        ///        内容与在线完全一致时跳过落库，摘要字段返回 null
-        ///     错误码：
-        ///     - ERR.User.TokenUserOnly: 个人草稿仅支持用户 Token
-        ///     - ERR.Robject.Global.InvalidParameter: resourceType/elementType 组合不合法
-        ///     - ERR.GraphSchema.*: 图谱不存在 / 资源命名与归属校验失败
-        ///     - ERR.Robject.Global.ResourceNotFound: 资源不存在等底层校验失败</para>
+        /// <para>Saves a single semantic resource draft through OpenAPI (personal token only).
+        ///     Business orchestration:
+        ///     1. Draft domain identity verification (personal token only; deployment/system-level tokens are rejected)
+        ///        and semantic management permission verification.
+        ///     2. Delegates to the personal draft service for saving (source is fixed YAML). The underlying layer includes resource-level write permission verification.
+        ///        If the content is identical to the online version, the database write is skipped and the summary field returns null.
+        ///     Error codes:
+        ///     - ERR.User.TokenUserOnly: Personal drafts support only user tokens.
+        ///     - ERR.Robject.Global.InvalidParameter: The resourceType/elementType combination is invalid.
+        ///     - ERR.GraphSchema.*: The graph does not exist, or resource naming and ownership verification failed.
+        ///     - ERR.Robject.Global.ResourceNotFound: The resource does not exist or other underlying verification failed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25086,18 +28338,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// <para>Batch saves group outputs to the personal knowledge base of the current operator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
-        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
-        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
-        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
-        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>Saves specified group outputs to the personal knowledge base of the current operator.</description></item>
+        /// <item><description>Two modes are supported: <c>link</c> (maintains the association with the output) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can archive only outputs they created. Group administrators can archive visible outputs of other members. The personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default personal directory of the current operator is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
         /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
         /// </list>
         /// </description>
@@ -25169,18 +28421,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// <para>Batch saves group outputs to the personal knowledge base of the current operator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
-        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
-        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
-        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
-        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>Saves specified group outputs to the personal knowledge base of the current operator.</description></item>
+        /// <item><description>Two modes are supported: <c>link</c> (maintains the association with the output) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can archive only outputs they created. Group administrators can archive visible outputs of other members. The personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default personal directory of the current operator is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
         /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
         /// </list>
         /// </description>
@@ -25252,18 +28504,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// <para>Batch saves group outputs to the personal knowledge base of the current operator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
-        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
-        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
-        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
-        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>Saves specified group outputs to the personal knowledge base of the current operator.</description></item>
+        /// <item><description>Two modes are supported: <c>link</c> (maintains the association with the output) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can archive only outputs they created. Group administrators can archive visible outputs of other members. The personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default personal directory of the current operator is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
         /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
         /// </list>
         /// </description>
@@ -25284,18 +28536,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// <para>Batch saves group outputs to the personal knowledge base of the current operator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
-        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
-        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
-        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
-        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>Saves specified group outputs to the personal knowledge base of the current operator.</description></item>
+        /// <item><description>Two modes are supported: <c>link</c> (maintains the association with the output) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can archive only outputs they created. Group administrators can archive visible outputs of other members. The personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default personal directory of the current operator is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
         /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
         /// </list>
         /// </description>
@@ -25316,17 +28568,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
+        /// <para>Saves output details in batches as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for a user.</description></item>
         /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
         /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
-        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>If the <c>operating_object</c> values within the batch are inconsistent and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
         /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
         /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
         /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
@@ -25396,17 +28648,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
+        /// <para>Saves output details in batches as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for a user.</description></item>
         /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
         /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
-        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>If the <c>operating_object</c> values within the batch are inconsistent and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
         /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
         /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
         /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
@@ -25476,17 +28728,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
+        /// <para>Saves output details in batches as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for a user.</description></item>
         /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
         /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
-        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>If the <c>operating_object</c> values within the batch are inconsistent and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
         /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
         /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
         /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
@@ -25509,17 +28761,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
+        /// <para>Saves output details in batches as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for a user.</description></item>
         /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
         /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
-        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>If the <c>operating_object</c> values within the batch are inconsistent and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
         /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
         /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
         /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
@@ -25748,12 +29000,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25836,6 +29088,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                body["workMode"] = request.WorkMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -25859,12 +29115,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25947,6 +29203,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                body["workMode"] = request.WorkMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -25970,12 +29230,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25994,12 +29254,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Asynchronously sends a session message.</para>
+        /// <para>Sends a session message asynchronously.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26025,12 +29285,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// <item><description>You must provide an OSS persistent address (<c>filePath</c>) for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (<c>directoryId</c>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26114,6 +29374,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                body["workMode"] = request.WorkMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -26144,12 +29408,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// <item><description>You must provide an OSS persistent address (<c>filePath</c>) for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (<c>directoryId</c>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26233,6 +29497,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["taskExecution"] = request.TaskExecutionShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkMode))
+            {
+                body["workMode"] = request.WorkMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -26263,12 +29531,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// <item><description>You must provide an OSS persistent address (<c>filePath</c>) for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (<c>directoryId</c>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26295,12 +29563,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <description>
         /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API operation is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
         /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
-        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
-        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the invoker.</description></item>
-        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported for security authentication.</description></item>
-        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// <item><description>You must provide an OSS persistent address (<c>filePath</c>) for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If you do not specify a target folder ID (<c>directoryId</c>), the file is automatically attached to the default root folder of the current digital employee. If you specify a folder ID, make sure the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, and APP) are supported for security authentication.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -28176,18 +31444,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快更图谱元信息</para>
+        /// <para>Updates the basic information of a knowledge graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
-        ///     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
-        ///     错误码：
-        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</para>
+        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
+        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        ///     Error codes:
+        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
+        ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
+        ///     - ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.
+        ///     - ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28247,18 +31515,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快更图谱元信息</para>
+        /// <para>Updates the basic information of a knowledge graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
-        ///     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
-        ///     错误码：
-        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</para>
+        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
+        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        ///     Error codes:
+        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
+        ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
+        ///     - ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.
+        ///     - ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28318,18 +31586,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快更图谱元信息</para>
+        /// <para>Updates the basic information of a knowledge graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
-        ///     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
-        ///     错误码：
-        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</para>
+        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
+        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        ///     Error codes:
+        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
+        ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
+        ///     - ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.
+        ///     - ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28348,18 +31616,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>快更图谱元信息</para>
+        /// <para>Updates the basic information of a knowledge graph.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 快更图谱元信息（displayName / businessProfile），同步更新 active 记录。
-        ///     displayName 与 businessProfile 至少传其一，否则返回 ERR.GraphSchema.QuickUpdateNoFieldsToUpdate。
-        ///     错误码：
-        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: 未传任何可更新字段
-        ///     - ERR.GraphSchema.GraphNameInvalid: 图谱名称不合法
-        ///     - ERR.GraphSchema.GraphSchemaNotFound: 图谱不存在
-        ///     - ERR.GraphSchema.DisplayNameInvalid: 展示名不合法或重复</para>
+        /// <para>Updates the metadata of a knowledge graph (displayName / businessProfile) through OpenAPI and synchronously updates the active record.
+        ///     At least one of displayName and businessProfile must be specified. Otherwise, ERR.GraphSchema.QuickUpdateNoFieldsToUpdate is returned.
+        ///     Error codes:
+        ///     - ERR.GraphSchema.QuickUpdateNoFieldsToUpdate: No updatable fields are specified.
+        ///     - ERR.GraphSchema.GraphNameInvalid: The graph name is invalid.
+        ///     - ERR.GraphSchema.GraphSchemaNotFound: The graph does not exist.
+        ///     - ERR.GraphSchema.DisplayNameInvalid: The display name is invalid or duplicate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28374,6 +31642,378 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateGraphInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupDirectoryResponse
+        /// </returns>
+        public UpdateGroupDirectoryResponse UpdateGroupDirectoryWithOptions(UpdateGroupDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDirectoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupDirectoryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupDirectoryResponse
+        /// </returns>
+        public async Task<UpdateGroupDirectoryResponse> UpdateGroupDirectoryWithOptionsAsync(UpdateGroupDirectoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupDirectory",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateGroupDirectory",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupDirectoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupDirectoryResponse
+        /// </returns>
+        public UpdateGroupDirectoryResponse UpdateGroupDirectory(UpdateGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGroupDirectoryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a folder in the materials section of a collaborative share.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The folder creator or a storage management administrator who is an active member can modify the folder. Modifying the internal root folder or reference folders is prohibited. If description is set to an empty character string, the description is cleared. If description is set to null or omitted, the description remains unchanged. At least one of name or description must be non-null.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupDirectoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupDirectoryResponse
+        /// </returns>
+        public async Task<UpdateGroupDirectoryResponse> UpdateGroupDirectoryAsync(UpdateGroupDirectoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGroupDirectoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改协作空间资料正文</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupSourceContentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupSourceContentResponse
+        /// </returns>
+        public UpdateGroupSourceContentResponse UpdateGroupSourceContentWithOptions(UpdateGroupSourceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupSourceContent",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateGroupSourceContent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupSourceContentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改协作空间资料正文</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupSourceContentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupSourceContentResponse
+        /// </returns>
+        public async Task<UpdateGroupSourceContentResponse> UpdateGroupSourceContentWithOptionsAsync(UpdateGroupSourceContentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceSync))
+            {
+                body["forceSync"] = request.ForceSync;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGroupSourceContent",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateGroupSourceContent",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGroupSourceContentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改协作空间资料正文</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupSourceContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupSourceContentResponse
+        /// </returns>
+        public UpdateGroupSourceContentResponse UpdateGroupSourceContent(UpdateGroupSourceContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGroupSourceContentWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改协作空间资料正文</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>有效成员且为创建者或空间管理员可编辑物理资料；引用只读。通常支持TEXT及本地txt/md；TEXT去首尾空白，已有skip_parse资料沿用免解析和本地文件扩展名规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGroupSourceContentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGroupSourceContentResponse
+        /// </returns>
+        public async Task<UpdateGroupSourceContentResponse> UpdateGroupSourceContentAsync(UpdateGroupSourceContentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGroupSourceContentWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

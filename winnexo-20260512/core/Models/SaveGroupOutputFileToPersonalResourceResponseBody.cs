@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result list.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<SaveGroupOutputFileToPersonalResourceResponseBodyResults> Results { get; set; }
         public class SaveGroupOutputFileToPersonalResourceResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The business error code (i18n key), returned on failure.</para>
+            /// <para>The business error code (i18n key) returned upon failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ERR.Robject.UserOutput.ItemNotFound</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error description (internationalized based on the request locale), returned on failure.</para>
+            /// <para>The error description returned upon failure. The description is internationalized based on the request locale.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Group output does not exist</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The sourceId of the newly created resource, returned on success.</para>
+            /// <para>The sourceId of the newly created resource, returned upon success.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSourceId</para>

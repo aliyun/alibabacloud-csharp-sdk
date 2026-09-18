@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ListOutputFilesResponseBodyItems> Items { get; set; }
         public class ListOutputFilesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The conversation ID.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleConversationId</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The email information. This field is present when the output type is email.</para>
+                /// <para>The email information. This field is present only when the output type is email.</para>
                 /// </summary>
                 [NameInMap("emailInfo")]
                 [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string Body { get; set; }
 
                     /// <summary>
-                    /// <para>The content type, such as MARKDOWN/JSONML/HTML.</para>
+                    /// <para>The content type, such as MARKDOWN, JSONML, or HTML.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>The file information. This field is present when the output type is file.</para>
+                /// <para>The file information. This field is present only when the output type is file.</para>
                 /// </summary>
                 [NameInMap("fileInfo")]
                 [Validation(Required=false)]
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</para>
+                /// <para>The share token. This field is present only when sharing is enabled. You can use this token to access the public share preview endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_share_token</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string SkillOutputId { get; set; }
 
                 /// <summary>
-                /// <para>The slides information. This field is present when the output type is slides.</para>
+                /// <para>The slides information. This field is present only when the output type is slides.</para>
                 /// </summary>
                 [NameInMap("slidesInfo")]
                 [Validation(Required=false)]
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>The output type: <c>conversation/skill/task</c>.</para>
+            /// <para>The output type. Valid values: <c>conversation/skill/task</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversation</para>
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillOutputId { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_example_value</para>
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of outputs that match the specified conditions.</para>
+        /// <para>The total number of outputs that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

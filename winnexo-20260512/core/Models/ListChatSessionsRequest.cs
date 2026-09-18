@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID to which the task belongs.</para>
+        /// <para>The ID of the tenant to which the node belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

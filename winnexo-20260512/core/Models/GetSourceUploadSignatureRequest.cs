@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSourceUploadSignatureRequest : TeaModel {
         /// <summary>
-        /// <para>The content type. Valid values: Text and Markdown.</para>
+        /// <para>The content type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Text</description></item>
+        /// <item><description>Markdown</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -41,7 +45,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// <para>The name of the digital employee (operating object name). This parameter is optional.</para>
+        /// <para>The collaboration space ID passed from the frontend. This parameter is required when scope is set to group. The value must be a space accessible to the current user and is used in the OSS path for locating. The value must be 1 to 64 characters in length and can contain letters, digits, underscores (_), and hyphens (-). This parameter is not used for other scope values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>group_example</para>
+        /// </summary>
+        [NameInMap("groupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateGraphInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>更新后的业务说明，未设置时为空</para>
+        /// <para>The business description of the knowledge graph. If not configured, the value is an empty string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>客户域语义图谱</para>
+        /// <para>Customer domain knowledge graph</para>
         /// </summary>
         [NameInMap("businessProfile")]
         [Validation(Required=false)]
         public string BusinessProfile { get; set; }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>SUCCESS indicates success. In failure cases, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>更新后的图谱展示名，未设置时为空</para>
+        /// <para>The display name of the knowledge graph.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CRM 图谱</para>
+        /// <para>CRM Graph</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>图谱名称</para>
+        /// <para>The name of the knowledge graph.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crm_graph</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否更新成功</para>
+        /// <para>The updated items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

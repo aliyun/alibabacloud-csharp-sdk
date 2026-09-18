@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The MCP card list.</para>
+        /// <para>The list of MCP cards.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the enable/disable operation is allowed. Super administrators and application users cannot be switched.</para>
+            /// <para>Indicates whether the enable/disable operation is allowed. Super administrators and application users cannot be toggled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

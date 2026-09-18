@@ -1,0 +1,114 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.WinNexo20260512.Models
+{
+    public class CreateGroupAliDingDocResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("code")]
+        [Validation(Required=false)]
+        public string Code { get; set; }
+
+        /// <summary>
+        /// <para>The folder ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exampleDirectoryId</para>
+        /// </summary>
+        [NameInMap("directoryId")]
+        [Validation(Required=false)]
+        public string DirectoryId { get; set; }
+
+        /// <summary>
+        /// <para>The creation time.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2025-11-14T02:18:27Z</para>
+        /// </summary>
+        [NameInMap("gmtCreate")]
+        [Validation(Required=false)]
+        public string GmtCreate { get; set; }
+
+        /// <summary>
+        /// <para>The project group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>exampleGroupId</para>
+        /// </summary>
+        [NameInMap("groupId")]
+        [Validation(Required=false)]
+        public string GroupId { get; set; }
+
+        /// <summary>
+        /// <para>The operation message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
+        /// </summary>
+        [NameInMap("message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <para>The image name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleName.pdf</para>
+        /// </summary>
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// </summary>
+        [NameInMap("requestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The permission scope.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TENANT</para>
+        /// </summary>
+        [NameInMap("scope")]
+        [Validation(Required=false)]
+        public string Scope { get; set; }
+
+        /// <summary>
+        /// <para>The original project ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>src_feishu_doc_1</para>
+        /// </summary>
+        [NameInMap("sourceId")]
+        [Validation(Required=false)]
+        public string SourceId { get; set; }
+
+        /// <summary>
+        /// <para>The task running status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</para>
+        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+    }
+
+}

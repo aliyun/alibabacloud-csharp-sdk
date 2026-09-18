@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SaveOutputFileToResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</para>
+        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error description. This value is empty on success.</para>
+        /// <para>The error description. This value is empty when the operation succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The current zone list is illegal.</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The per-record results in the same order as the input itemIds. A single record failure does not affect other records.</para>
+        /// <para>The per-record results, in the same order as the input itemIds. A failure of a single record does not affect other records.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<SaveOutputFileToResourceResponseBodyResults> Results { get; set; }
         public class SaveOutputFileToResourceResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>The business error code (i18n key). Returned on failure.</para>
+            /// <para>The business error code (i18n key) returned on failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error description, localized based on the request Accept-Language header. Returned on failure.</para>
+            /// <para>The error description returned on failure, localized based on the request locale.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>The sourceId of the newly created resource. Returned on success.</para>
+            /// <para>The sourceId of the newly created resource, returned on success.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSourceId</para>

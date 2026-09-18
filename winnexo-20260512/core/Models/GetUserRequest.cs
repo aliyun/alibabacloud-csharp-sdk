@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The WINNEXO logon account. This is a unique identifier and cannot be empty.</para>
+        /// <para>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleAccountId</para>
