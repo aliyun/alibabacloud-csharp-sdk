@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateMmsDataSourceResponseBodyData Data { get; set; }
         public class CreateMmsDataSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the data source.</para>
+            /// <para>The data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>

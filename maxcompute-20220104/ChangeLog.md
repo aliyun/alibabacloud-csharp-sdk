@@ -1,3 +1,8 @@
+2026-09-18 Version: 5.1.2
+- Update API UpdateMmsTimer: add request parameters body.tableBlackList.
+- Update API UpdateMmsTimer: add request parameters body.tableWhiteList.
+
+
 2026-09-09 Version: 5.1.1
 - Update API GetProject: add response parameters Body.data.properties.enableDataMasking.
 - Update API ListJobInfos: add response parameters Body.data.jobInfoList.$.roleSessionName.

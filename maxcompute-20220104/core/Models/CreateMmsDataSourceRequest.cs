@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of the data source.</para>
+        /// <para>The data source configurations. Call ListMmsDataSourceConfigItems first to retrieve the valid and required configuration items for the target data source type, and then construct this object accordingly.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]

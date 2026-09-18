@@ -20,12 +20,15 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? AscOrder { get; set; }
 
         /// <summary>
-        /// <para>The list of upstream node IDs.</para>
+        /// <para>The upstream node IDs.</para>
         /// </summary>
         [NameInMap("extNodeIdList")]
         [Validation(Required=false)]
         public List<string> ExtNodeIdList { get; set; }
 
+        /// <summary>
+        /// <para>The upstream node names.</para>
+        /// </summary>
         [NameInMap("extNodeNameList")]
         [Validation(Required=false)]
         public List<string> ExtNodeNameList { get; set; }
@@ -42,28 +45,28 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The list of job instance IDs.</para>
+        /// <para>The job instance IDs.</para>
         /// </summary>
         [NameInMap("instanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The list of job owners.</para>
+        /// <para>The job owners.</para>
         /// </summary>
         [NameInMap("jobOwnerList")]
         [Validation(Required=false)]
         public List<string> JobOwnerList { get; set; }
 
         /// <summary>
-        /// <para>The list of job priorities.</para>
+        /// <para>The job priorities.</para>
         /// </summary>
         [NameInMap("priorityList")]
         [Validation(Required=false)]
         public List<long?> PriorityList { get; set; }
 
         /// <summary>
-        /// <para>The list of project names.</para>
+        /// <para>The project names.</para>
         /// </summary>
         [NameInMap("projectList")]
         [Validation(Required=false)]
@@ -80,40 +83,43 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string QuotaNickname { get; set; }
 
         /// <summary>
-        /// <para>The list of intelligent diagnostics tags.</para>
+        /// <para>The intelligent diagnosis labels.</para>
         /// </summary>
         [NameInMap("sceneTagList")]
         [Validation(Required=false)]
         public List<string> SceneTagList { get; set; }
 
         /// <summary>
-        /// <para>The list of job signatures.</para>
+        /// <para>The job signatures.</para>
         /// </summary>
         [NameInMap("signatureList")]
         [Validation(Required=false)]
         public List<string> SignatureList { get; set; }
 
         /// <summary>
-        /// <para>The list of columns for multi-column sorting.</para>
+        /// <para>The fields used for multi-column sorting.</para>
         /// </summary>
         [NameInMap("sortByList")]
         [Validation(Required=false)]
         public List<string> SortByList { get; set; }
 
         /// <summary>
-        /// <para>The list of sort orders for multi-column sorting.</para>
+        /// <para>The sort orders for multi-column sorting.</para>
         /// </summary>
         [NameInMap("sortOrderList")]
         [Validation(Required=false)]
         public List<string> SortOrderList { get; set; }
 
         /// <summary>
-        /// <para>The list of job statuses.</para>
+        /// <para>The job statuses.</para>
         /// </summary>
         [NameInMap("statusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
+        /// <summary>
+        /// <para>The job names.</para>
+        /// </summary>
         [NameInMap("taskNameList")]
         [Validation(Required=false)]
         public List<string> TaskNameList { get; set; }
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? To { get; set; }
 
         /// <summary>
-        /// <para>The list of job types.</para>
+        /// <para>The job types.</para>
         /// </summary>
         [NameInMap("typeList")]
         [Validation(Required=false)]

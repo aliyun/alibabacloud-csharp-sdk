@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public GetMmsJobResponseBodyDataConfig Config { get; set; }
             public class GetMmsJobResponseBodyDataConfig : TeaModel {
                 /// <summary>
-                /// <para>{Source column name: Destination column name}</para>
+                /// <para>The column name mapping in the format of {source column name: destination column name}.</para>
                 /// </summary>
                 [NameInMap("columnMapping")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> ColumnMapping { get; set; }
 
                 /// <summary>
-                /// <para>Enables data verification. The current verification method is to execute a SELECT COUNT statement on the source and destination to compare the row counts.</para>
+                /// <para>Specifies whether to enable verification. The current verification method executes SELECT COUNT on both the source and destination to compare row counts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? EnableVerification { get; set; }
 
                 /// <summary>
-                /// <para>Incremental migration. Only new or modified partitions are migrated. Note: Modified partitions are re-migrated.</para>
+                /// <para>Specifies whether to enable incremental migration. Only new partitions or modified partitions are migrated. Modified partitions are re-migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? Increment { get; set; }
 
                 /// <summary>
-                /// <para>Other configuration information.</para>
+                /// <para>The additional configuration information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;spark.executor.mem&quot;: &quot;2g&quot;}</para>
@@ -61,21 +61,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public Dictionary<string, object> Others { get; set; }
 
                 /// <summary>
-                /// <para>The partition filter expression. This parameter specifies the partition filter expression for a specific table.</para>
+                /// <para>The partition filter expressions. Specifies the partition filter expression for a given table.</para>
                 /// </summary>
                 [NameInMap("partitionFilters")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> PartitionFilters { get; set; }
 
                 /// <summary>
-                /// <para>If type is set to Partitions, this parameter specifies the list of partition IDs of the table to migrate.</para>
+                /// <para>The list of partition IDs of the tables to migrate. This parameter takes effect when type is set to Partitions.</para>
                 /// </summary>
                 [NameInMap("partitions")]
                 [Validation(Required=false)]
                 public List<long?> Partitions { get; set; }
 
                 /// <summary>
-                /// <para>Deprecated</para>
+                /// <para>Depcreated</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? SchemaOnly { get; set; }
 
                 /// <summary>
-                /// <para>If type is set to Database, this parameter specifies the tables to exclude from the migration.</para>
+                /// <para>The list of tables to exclude from migration. This parameter takes effect when type is set to Database.</para>
                 /// </summary>
                 [NameInMap("tableBlackList")]
                 [Validation(Required=false)]
@@ -99,21 +99,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public Dictionary<string, string> TableMapping { get; set; }
 
                 /// <summary>
-                /// <para>If type is set to Database, this parameter specifies the list of tables to migrate. If you do not specify this parameter, all tables in the database are migrated.</para>
+                /// <para>The list of tables to migrate. This parameter takes effect when type is set to Database. If tableWhiteList is not specified, all tables in the corresponding database are migrated.</para>
                 /// </summary>
                 [NameInMap("tableWhiteList")]
                 [Validation(Required=false)]
                 public List<string> TableWhiteList { get; set; }
 
                 /// <summary>
-                /// <para>If type is set to Tables, this parameter specifies the list of names of the tables to migrate.</para>
+                /// <para>The list of table names to migrate. This parameter takes effect when type is set to Tables.</para>
                 /// </summary>
                 [NameInMap("tables")]
                 [Validation(Required=false)]
                 public List<string> Tables { get; set; }
 
                 /// <summary>
-                /// <para>Deprecated. Valid values: MOCK, HIVE (a Hive user-defined table-valued function (UDTF) task), HIVE_DATAX (a Hive DataX task), COPY_TASK (an ODPS Copy Task), ODPS_INSERT_OVERWRITE (an ODPS simple insert overwrite task), MC2MC_VERIFY, OSS, HIVE_OSS, HIVE_SPARK, and BIGQUERY.</para>
+                /// <para><b>[Deprecated]</b> Valid values: MOCK, HIVE (hive udtf task), HIVE_DATAX (hive datax task), COPY_TASK (ODPS Copy Task), ODPS_INSERT_OVERWRITE (ODPS simple insert overwrite task), MC2MC_VERIFY, OSS, HIVE_OSS, HIVE_SPARK, BIGQUERY.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BIGQUERY</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TaskType { get; set; }
 
                 /// <summary>
-                /// <para>Deprecated</para>
+                /// <para>Depcreated</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Depcreated</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The time when the job was created.</para>
+            /// <para>The creation time in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:17</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string DstSchemaName { get; set; }
 
             /// <summary>
-            /// <para>The expected completion time of the migration. Note: A smaller eta value indicates a higher priority for the migration task.</para>
+            /// <para>The expected migration completion time. A smaller eta value indicates a higher priority for the migration task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-06</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the migration job.</para>
+            /// <para>The migration job name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>migrate_db_1</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? SourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source.</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string SourceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the source database.</para>
+            /// <para>The source database name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mms_test</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string SrcDbName { get; set; }
 
             /// <summary>
-            /// <para>The name of the source schema. This parameter specifies the schema in a Layer 3 namespace.</para>
+            /// <para>The source schema name in a three-level namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string SrcSchemaName { get; set; }
 
             /// <summary>
-            /// <para>The status of the migration task.</para>
+            /// <para>The migration task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOING</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Stopped.</para>
+            /// <para>Indicates whether the job is stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? TaskDone { get; set; }
 
             /// <summary>
-            /// <para>The number of migration tasks included in the job.</para>
+            /// <para>The number of migration tasks included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? TaskNum { get; set; }
 
             /// <summary>
-            /// <para>The migration scope. Valid values: Database, Tables, and Partitions.</para>
+            /// <para>The migration scope. Valid values: Database, Tables, Partitions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tables</para>

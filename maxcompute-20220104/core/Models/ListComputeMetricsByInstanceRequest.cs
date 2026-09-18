@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListComputeMetricsByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the query time range, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end date. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1718590596556</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20240730****ddlr</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The names of the projects.</para>
+        /// <para>The project name.</para>
         /// </summary>
         [NameInMap("projectNames")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<string> SpecCodes { get; set; }
 
         /// <summary>
-        /// <para>The start of the query time range, specified as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start date. This value is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1715393576201</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public GetStorageAmountSummaryResponseBodyData Data { get; set; }
         public class GetStorageAmountSummaryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The date of the statistics.</para>
+            /// <para>The date for statistics collection, in the YYYYMMdd format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20241205</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Date { get; set; }
 
             /// <summary>
-            /// <para>The timestamp. This API does not return this parameter.</para>
+            /// <para>The timestamp. This API operation does not return this field.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The unit of the storage metrics. This API does not return this parameter.</para>
+            /// <para>The unit of the storage metric. This API operation does not return this field.</para>
             /// </summary>
             [NameInMap("unit")]
             [Validation(Required=false)]
             public Dictionary<string, string> Unit { get; set; }
 
             /// <summary>
-            /// <para>The storage metrics. The metrics include the following:</para>
+            /// <para>The storage metrics. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>projectAmount</description></item>
             /// <item><description>schemaAmount</description></item>
@@ -61,10 +61,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The business error code or an empty value.</para>
+        /// <para>The business error code, or an empty value.</para>
         /// <list type="bullet">
-        /// <item><description>If success is false, a business error code is returned.</description></item>
-        /// <item><description>If success is true, an empty value is returned.</description></item>
+        /// <item><description><para>If success is false, a business error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the business is successful. If this parameter is not empty and the value is not 200, the business processing failed.</para>
+        /// <para>The HTTP status code that indicates whether the business request was successful. A non-empty value other than 200 indicates a business processing failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

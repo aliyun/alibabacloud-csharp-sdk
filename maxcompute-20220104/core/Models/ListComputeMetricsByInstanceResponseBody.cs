@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListComputeMetricsByInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListComputeMetricsByInstanceResponseBodyData Data { get; set; }
         public class ListComputeMetricsByInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Usage metrics for pay-as-you-go jobs.</para>
+            /// <para>The list of pay-as-you-go job compute usage.</para>
             /// </summary>
             [NameInMap("instanceComputeMetrics")]
             [Validation(Required=false)]
             public List<ListComputeMetricsByInstanceResponseBodyDataInstanceComputeMetrics> InstanceComputeMetrics { get; set; }
             public class ListComputeMetricsByInstanceResponseBodyDataInstanceComputeMetrics : TeaModel {
                 /// <summary>
-                /// <para>The job completion time, as a UNIX timestamp in milliseconds.</para>
+                /// <para>The job end time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1710432000000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The job ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20240730****ddlr</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the job.</para>
+                /// <para>The job owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN$7632***@aliyun.com</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string JobOwner { get; set; }
 
                 /// <summary>
-                /// <para>The name of the project.</para>
+                /// <para>The project name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps_porject</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The signature of the SQL job.</para>
+                /// <para>The SQL job signature.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pqrs12345tuv</para>
@@ -74,12 +74,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Signature { get; set; }
 
                 /// <summary>
-                /// <para>The specification type.</para>
+                /// <para>The specification type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>OdpsStandard</c>: Standard pay-as-you-go specification.</para>
-                /// </description></item>
-                /// <item><description><para><c>OdpsSpot</c>: Spot pay-as-you-go specification.</para>
-                /// </description></item>
+                /// <item><description>OdpsStandard: the pay-as-you-go billing method Standard Edition.</description></item>
+                /// <item><description>OdpsSpot: the pay-as-you-go billing method Off-peak Edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SpecCode { get; set; }
 
                 /// <summary>
-                /// <para>The job submission time, as a UNIX timestamp in milliseconds.</para>
+                /// <para>The job submit time. This value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1610432000000</para>
@@ -100,19 +98,19 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? SubmitTime { get; set; }
 
                 /// <summary>
-                /// <para>The metering type.</para>
+                /// <para>The metering type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>ComputationSql</c>: Metrics for SQL jobs on internal tables.</para>
+                /// <item><description><para>ComputationSql: metering data of SQL jobs that operate on internal tables.</para>
                 /// </description></item>
-                /// <item><description><para><c>ComputationSqlOTS</c>: Metrics for SQL jobs on Tablestore external tables.</para>
+                /// <item><description><para>ComputationSqlOTS: metering data of SQL jobs that operate on OTS external tables.</para>
                 /// </description></item>
-                /// <item><description><para><c>ComputationSqlOSS</c>: Metrics for SQL jobs on OSS external tables.</para>
+                /// <item><description><para>ComputationSqlOSS: metering data of SQL jobs that operate on OSS external tables.</para>
                 /// </description></item>
-                /// <item><description><para><c>MapReduce</c>: Metrics for MapReduce jobs.</para>
+                /// <item><description><para>MapReduce: metering data of MapReduce jobs.</para>
                 /// </description></item>
-                /// <item><description><para><c>spark</c>: Metrics for Spark jobs.</para>
+                /// <item><description><para>spark: metering data of Spark jobs.</para>
                 /// </description></item>
-                /// <item><description><para><c>mars</c>: Metrics for Mars jobs.</para>
+                /// <item><description><para>mars: metering data of Mars jobs.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -136,9 +134,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 /// <summary>
                 /// <para>The compute usage.</para>
                 /// <list type="bullet">
-                /// <item><description><para>For jobs billed by the amount of data scanned, such as <c>ComputationSql</c>, <c>ComputationSqlOTS</c>, and <c>ComputationSqlOSS</c> jobs, the unit is GB. The usage is calculated as: Amount of scanned data × Complexity. The complexity factor for <c>ComputationSqlOTS</c> and <c>ComputationSqlOSS</c> jobs is 1.</para>
+                /// <item><description><para>For scan-based billing types, the unit is GB. This includes the ComputationSql, ComputationSqlOTS, and ComputationSqlOSS billing types, which are billed based on the amount of data scanned. The compute usage is calculated as the scan volume × complexity for each job. The complexity for ComputationSqlOTS and ComputationSqlOSS types is fixed at 1.</para>
                 /// </description></item>
-                /// <item><description><para>For jobs billed by CU-hours (such as <c>MapReduce</c>, <c>spark</c>, and <c>mars</c> jobs), the unit is CU-hour.</para>
+                /// <item><description><para>For CU-hour-based billing types, the unit is CU-hours. This includes the MapReduce, spark, and mars billing types, which are billed based on CU-hours.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -152,7 +150,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The returned page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -184,18 +182,13 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1xx: Informational - The request has been received and is being processed.</para>
-        /// </description></item>
-        /// <item><description><para>2xx: Success - The request was successfully received, understood, and accepted.</para>
-        /// </description></item>
-        /// <item><description><para>3xx: Redirection - Further action is required to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para>4xx: Client Error - The request contains invalid syntax or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para>5xx: Server Error - The server failed to fulfill a valid request.</para>
-        /// </description></item>
+        /// <item><description>1xx: Informational response. The request has been received and is being processed.</description></item>
+        /// <item><description>2xx: Success. The request has been successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: Redirection. The request is redirected, and further action is required to complete the request.</description></item>
+        /// <item><description>4xx: Client error. The request contains invalid parameters, bad syntax, or specific request conditions cannot be fulfilled.</description></item>
+        /// <item><description>5xx: Server error. The server cannot fulfill the request due to other reasons.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

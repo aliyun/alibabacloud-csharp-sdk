@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateMmsTimerRequest : TeaModel {
         /// <summary>
-        /// <para>The scheduling type of the task. Valid values: <c>Daily</c> and <c>Hourly</c>.</para>
+        /// <para>The scheduling type of the scheduled task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -20,14 +20,28 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string ScheduleType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the scheduled task is stopped.</para>
+        /// <para>Indicates whether the scheduled task is stopped.</para>
         /// </summary>
         [NameInMap("stopped")]
         [Validation(Required=false)]
         public bool? Stopped { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the scheduled task. If <c>scheduleType</c> is set to <c>Daily</c>, specify the time in the HH:mm format. If <c>scheduleType</c> is set to <c>Hourly</c>, specify the minute in the mm format.</para>
+        /// <para>The tables to exclude when type is set to Database.</para>
+        /// </summary>
+        [NameInMap("tableBlackList")]
+        [Validation(Required=false)]
+        public List<string> TableBlackList { get; set; }
+
+        /// <summary>
+        /// <para>The tables to migrate when type is set to Database.</para>
+        /// </summary>
+        [NameInMap("tableWhiteList")]
+        [Validation(Required=false)]
+        public List<string> TableWhiteList { get; set; }
+
+        /// <summary>
+        /// <para>The scheduling time of the scheduled task. If scheduleType is set to Daily, the value is in the HH:MM format. If scheduleType is set to Hourly, the value is in the MM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-09-20</para>

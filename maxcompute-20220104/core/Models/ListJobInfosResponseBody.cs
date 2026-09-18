@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListJobInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -73,12 +73,18 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string ExtNodeId { get; set; }
 
+                /// <summary>
+                /// <para>The name of the external scheduling platform that submitted the job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ods_wfq_company_industry_di</para>
+                /// </summary>
                 [NameInMap("extNodeName")]
                 [Validation(Required=false)]
                 public string ExtNodeName { get; set; }
 
                 /// <summary>
-                /// <para>The person responsible for execution.</para>
+                /// <para>The person responsible for the execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>duty_2</para>
@@ -97,6 +103,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string ExtPlantFrom { get; set; }
 
+                /// <summary>
+                /// <para>The identifier of the external scheduling platform that submitted the job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>dataworks</para>
+                /// </summary>
                 [NameInMap("extPlatformId")]
                 [Validation(Required=false)]
                 public string ExtPlatformId { get; set; }
@@ -132,7 +144,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string JobOwner { get; set; }
 
                 /// <summary>
-                /// <para>The list of job types.</para>
+                /// <para>The job types.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SQL</para>
@@ -182,7 +194,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>The quota nickname used by the job.</para>
+                /// <para>The nickname of the quota used by the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>my_quota</para>
@@ -211,6 +223,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
+                /// <summary>
+                /// <para>The role session name of the entity that submitted the job through role assumption.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>aliyunservicerole</para>
+                /// </summary>
                 [NameInMap("roleSessionName")]
                 [Validation(Required=false)]
                 public string RoleSessionName { get; set; }
@@ -226,7 +244,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? RunningAtTime { get; set; }
 
                 /// <summary>
-                /// <para>The running duration.</para>
+                /// <para>The running time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>800</para>
@@ -351,6 +369,12 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 [Validation(Required=false)]
                 public string Tags { get; set; }
 
+                /// <summary>
+                /// <para>The task name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>console_query_task_1788796813532</para>
+                /// </summary>
                 [NameInMap("taskName")]
                 [Validation(Required=false)]
                 public string TaskName { get; set; }
@@ -420,7 +444,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. If this parameter is not empty and is not 200, the business processing failed.</para>
+        /// <para>The HTTP status code. If the value is not empty and is not 200, the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
