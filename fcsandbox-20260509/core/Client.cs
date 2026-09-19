@@ -399,6 +399,126 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTemplateCacheResponse
+        /// </returns>
+        public CreateTemplateCacheResponse CreateTemplateCacheWithOptions(CreateTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTemplateCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTemplateCacheResponse
+        /// </returns>
+        public async Task<CreateTemplateCacheResponse> CreateTemplateCacheWithOptionsAsync(CreateTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTemplateCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTemplateCacheResponse
+        /// </returns>
+        public CreateTemplateCacheResponse CreateTemplateCache(CreateTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTemplateCacheWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTemplateCacheResponse
+        /// </returns>
+        public async Task<CreateTemplateCacheResponse> CreateTemplateCacheAsync(CreateTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTemplateCacheWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a volume.</para>
         /// </summary>
         /// 
@@ -1015,6 +1135,136 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTemplateCacheResponse
+        /// </returns>
+        public DeleteTemplateCacheResponse DeleteTemplateCacheWithOptions(string templateID, DeleteTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTemplateCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTemplateCacheResponse
+        /// </returns>
+        public async Task<DeleteTemplateCacheResponse> DeleteTemplateCacheWithOptionsAsync(string templateID, DeleteTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTemplateCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTemplateCacheResponse
+        /// </returns>
+        public DeleteTemplateCacheResponse DeleteTemplateCache(string templateID, DeleteTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteTemplateCacheWithOptions(templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除模板缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTemplateCacheResponse
+        /// </returns>
+        public async Task<DeleteTemplateCacheResponse> DeleteTemplateCacheAsync(string templateID, DeleteTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteTemplateCacheWithOptionsAsync(templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a Volume.</para>
         /// </summary>
         /// 
@@ -1389,6 +1639,136 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeQuotaWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the template cache.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateCacheResponse
+        /// </returns>
+        public DescribeTemplateCacheResponse DescribeTemplateCacheWithOptions(string templateID, DescribeTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTemplateCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the template cache.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateCacheResponse
+        /// </returns>
+        public async Task<DescribeTemplateCacheResponse> DescribeTemplateCacheWithOptionsAsync(string templateID, DescribeTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(templateID),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTemplateCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the template cache.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateCacheResponse
+        /// </returns>
+        public DescribeTemplateCacheResponse DescribeTemplateCache(string templateID, DescribeTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeTemplateCacheWithOptions(templateID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the template cache.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTemplateCacheResponse
+        /// </returns>
+        public async Task<DescribeTemplateCacheResponse> DescribeTemplateCacheAsync(string templateID, DescribeTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeTemplateCacheWithOptionsAsync(templateID, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2245,6 +2625,168 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListTeamsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries template caches by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateCacheResponse
+        /// </returns>
+        public ListTemplateCacheResponse ListTemplateCacheWithOptions(ListTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTemplateCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries template caches by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateCacheRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateCacheResponse
+        /// </returns>
+        public async Task<ListTemplateCacheResponse> ListTemplateCacheWithOptionsAsync(ListTemplateCacheRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TeamID))
+            {
+                query["teamID"] = request.TeamID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateID))
+            {
+                query["templateID"] = request.TemplateID;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTemplateCache",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/template-caches",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTemplateCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries template caches by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateCacheResponse
+        /// </returns>
+        public ListTemplateCacheResponse ListTemplateCache(ListTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListTemplateCacheWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries template caches by using paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTemplateCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTemplateCacheResponse
+        /// </returns>
+        public async Task<ListTemplateCacheResponse> ListTemplateCacheAsync(ListTemplateCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListTemplateCacheWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
