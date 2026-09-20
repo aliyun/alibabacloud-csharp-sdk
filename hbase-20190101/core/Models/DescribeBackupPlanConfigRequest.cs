@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupPlanConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster for which the backup plan is executed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

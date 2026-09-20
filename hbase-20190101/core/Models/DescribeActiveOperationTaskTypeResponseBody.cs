@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeActiveOperationTaskTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EC7E27FC-58F8-4722-89CF-D1B6B0971956</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The task list.</para>
+        /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTaskTypeResponseBodyTypeList> TypeList { get; set; }
         public class DescribeActiveOperationTaskTypeResponseBodyTypeList : TeaModel {
             /// <summary>
+            /// <para>The number of pending tasks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The task type. The return value <b>rds_apsaradb_upgrade</b> indicates a minor engine version update.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rds_apsaradb_upgrade</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string TaskType { get; set; }
 
             /// <summary>
+            /// <para>The task type in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rds_apsaradb_upgrade</para>
             /// </summary>
@@ -45,6 +56,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public string TaskTypeInfoEn { get; set; }
 
+            /// <summary>
+            /// <para>The task type in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>小版本升级</para>
+            /// </summary>
             [NameInMap("TaskTypeInfoZh")]
             [Validation(Required=false)]
             public string TaskTypeInfoZh { get; set; }

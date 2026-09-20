@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The token used to start the next query. If the amount of data exceeds the limit, this parameter is returned for you to query the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NextToken</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of resource N. In this context, the resource ID is the cluster ID. You can query multiple resources at a time by specifying ResourceId.2, ResourceId.3, and so on. N is a positive integer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bds-bp15e022622f****</para>
         /// </summary>
@@ -35,11 +40,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag to query. You can specify multiple keys. N is a positive integer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key1</para>
             /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag to query. You can specify multiple values. N is a positive integer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value1</para>
             /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ListHBaseInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

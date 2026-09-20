@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The O&amp;M task IDs. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> to obtain O&amp;M task IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to immediately execute the O&amp;M task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: immediately executes the task.</description></item>
+        /// <item><description><b>0</b>: executes the task at the specified time.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +58,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The scheduled switchover time to set. Specify the time in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format (UTC).</para>
+        /// <remarks>
+        /// <para>The time cannot be later than the deadline. You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> and check the value of the <b>Deadline</b> response parameter to obtain the deadline.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

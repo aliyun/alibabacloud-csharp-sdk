@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class MoveResourceGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8CD9BFBC-D575-5FCC-BA7E-956BF0D0****</para>
         /// </summary>

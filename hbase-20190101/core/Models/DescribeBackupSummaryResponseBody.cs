@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupSummaryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the full backup.</para>
+        /// </summary>
         [NameInMap("Full")]
         [Validation(Required=false)]
         public DescribeBackupSummaryResponseBodyFull Full { get; set; }
         public class DescribeBackupSummaryResponseBodyFull : TeaModel {
             /// <summary>
+            /// <para>Indicates whether there is a next page. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: There is a next page.</description></item>
+            /// <item><description>false: There is no next page.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -22,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string HasMore { get; set; }
 
             /// <summary>
+            /// <para>The time of the next full backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-11-09T18:00:00Z</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string NextFullBackupDate { get; set; }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -53,58 +68,30 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
                 [Validation(Required=false)]
                 public List<DescribeBackupSummaryResponseBodyFullRecordsRecord> Record { get; set; }
                 public class DescribeBackupSummaryResponseBodyFullRecordsRecord : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2020-11-02T18:00:00Z</para>
-                    /// </summary>
                     [NameInMap("CreateTime")]
                     [Validation(Required=false)]
                     public string CreateTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1.2 kB</para>
-                    /// </summary>
                     [NameInMap("DataSize")]
                     [Validation(Required=false)]
                     public string DataSize { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2020-11-02T18:02:04Z</para>
-                    /// </summary>
                     [NameInMap("FinishTime")]
                     [Validation(Required=false)]
                     public string FinishTime { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1/1</para>
-                    /// </summary>
                     [NameInMap("Process")]
                     [Validation(Required=false)]
                     public string Process { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>20201103020000</para>
-                    /// </summary>
                     [NameInMap("RecordId")]
                     [Validation(Required=false)]
                     public string RecordId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0.00 MB/s</para>
-                    /// </summary>
                     [NameInMap("Speed")]
                     [Validation(Required=false)]
                     public string Speed { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>SUCCESS</para>
-                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public string Status { get; set; }
@@ -114,6 +101,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -123,11 +112,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 
         }
 
+        /// <summary>
+        /// <para>The details of the incremental backup.</para>
+        /// </summary>
         [NameInMap("Incr")]
         [Validation(Required=false)]
         public DescribeBackupSummaryResponseBodyIncr Incr { get; set; }
         public class DescribeBackupSummaryResponseBodyIncr : TeaModel {
             /// <summary>
+            /// <para>The data size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>266 B</para>
             /// </summary>
@@ -136,6 +130,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string BackupLogSize { get; set; }
 
             /// <summary>
+            /// <para>The synchronization point.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-11-05T01:20:31Z</para>
             /// </summary>
@@ -144,6 +140,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string Pos { get; set; }
 
             /// <summary>
+            /// <para>The number of logs in the queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -152,6 +150,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string QueueLogNum { get; set; }
 
             /// <summary>
+            /// <para>The number of logs being backed up.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -160,6 +160,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string RunningLogNum { get; set; }
 
             /// <summary>
+            /// <para>The current write speed of the incremental backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.00 MB/s</para>
             /// </summary>
@@ -168,6 +170,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             public string Speed { get; set; }
 
             /// <summary>
+            /// <para>The status of the incremental backup.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -178,6 +182,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>168793CB-7B31-43E7-ADAB-FE3E8D584D6E</para>
         /// </summary>

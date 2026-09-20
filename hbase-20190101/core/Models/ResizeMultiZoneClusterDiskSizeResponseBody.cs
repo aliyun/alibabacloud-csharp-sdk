@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ResizeMultiZoneClusterDiskSizeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123412341****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>568339C4-9F71-43D0-994E-E039CD826E56</para>
         /// </summary>

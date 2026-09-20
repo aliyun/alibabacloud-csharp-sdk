@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyMultiZoneClusterNodeTypeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12341234123****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>06CF7A6F-A81C-431D-BACD-793F24A67C54</para>
         /// </summary>

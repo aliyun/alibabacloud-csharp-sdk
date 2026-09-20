@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRecoverableTimeRangeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A1A51D18-96DC-465C-9F1B-47180CA22524</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the recoverable time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-10-26T18:02:03Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string TimeBegin { get; set; }
 
         /// <summary>
+        /// <para>The end time of the recoverable time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-11-05T01:20:31Z</para>
         /// </summary>

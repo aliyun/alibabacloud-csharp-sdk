@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeDiskWarningLineRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

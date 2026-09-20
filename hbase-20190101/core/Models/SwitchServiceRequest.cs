@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class SwitchServiceRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <list type="bullet">
+        /// <item><description>open: Enable  </description></item>
+        /// <item><description>close: Shutdown</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +35,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string Operate { get; set; }
 
         /// <summary>
+        /// <para>Service name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

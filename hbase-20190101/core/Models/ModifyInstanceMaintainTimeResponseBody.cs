@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyInstanceMaintainTimeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C9085433-A56A-4089-B49A-DF5A4E2B7B06</para>
         /// </summary>

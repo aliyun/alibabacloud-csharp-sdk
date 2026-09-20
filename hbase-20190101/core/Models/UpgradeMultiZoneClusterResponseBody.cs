@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class UpgradeMultiZoneClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C532A4D4-9451-4460-BB3E-300FEC852D3F</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The components that triggered the upgrade among the multiple components to be upgraded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LINDORM</para>
         /// </summary>

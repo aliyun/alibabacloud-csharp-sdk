@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class GrantRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The permission list. Separate multiple permissions with commas (,). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>READ: read permission.</description></item>
+        /// <item><description>WRITE: write permission.</description></item>
+        /// <item><description>ADMIN: admin permission.</description></item>
+        /// <item><description>TRASH: purge permission.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string AclActions { get; set; }
 
         /// <summary>
+        /// <para>The ID of target instance. You can call the DescribeInstances operation to obtain target instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +49,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The namespace. An asterisk (*) indicates global, which means all namespaces.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>The table name. An asterisk (*) indicates global, which means all tables.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRecoverableTimeRangeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the HBaseue cluster for which you want to query the recoverable time range.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

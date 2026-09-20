@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class RenewInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>211235614240728</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public long? OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>729CB2A7-3065-53A9-B27C-7033CA4881D9</para>
         /// </summary>

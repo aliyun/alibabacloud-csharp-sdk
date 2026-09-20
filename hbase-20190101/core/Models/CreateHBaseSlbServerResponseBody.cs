@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateHBaseSlbServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>61FC5B21-87B0-41BC-9686-9DA395EB40B6</para>
         /// </summary>

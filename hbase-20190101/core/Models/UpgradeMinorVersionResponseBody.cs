@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class UpgradeMinorVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B8EC240-BB13-4DBC-B955-F90170E82609</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The components that were successfully upgraded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HADOOP</para>
         /// </summary>

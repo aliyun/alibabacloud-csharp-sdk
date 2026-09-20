@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateHBaseSlbServerRequest : TeaModel {
         /// <summary>
+        /// <para>The client token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxxx-xxxxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,11 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The load balancing service to create. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>thrift</b>: the Thrift cross-language and cross-platform remote procedure call (RPC) protocol service.</description></item>
+        /// <item><description><b>rest</b>: the HTTP protocol service.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

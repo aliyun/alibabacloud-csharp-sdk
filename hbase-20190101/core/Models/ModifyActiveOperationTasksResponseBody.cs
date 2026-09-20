@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The O&amp;M task IDs. Multiple IDs are separated with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1111,2222</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8C9CC46A-9532-4752-B59F-580112C5A45B</para>
         /// </summary>

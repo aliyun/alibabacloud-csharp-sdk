@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRestoreIncrDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster for backup and recovery.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the restoration record. You can call the DescribeRestoreSummary operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class UpgradeMinorVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The names of the components to upgrade. Separate multiple component names with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>HADOOP</para>
         /// </summary>

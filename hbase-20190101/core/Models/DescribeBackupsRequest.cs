@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the backup to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-xxxx</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the backup query. Format: yyyy-MM-dd HH:mm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-12-23 23:59:59</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The end time of the backup query in UTC. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mmZ.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-12-23T15:59:59Z</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string EndTimeUTC { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time of the backup query. Format: yyyy-MM-dd HH:mm.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-12-13 00:00:00</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the backup query in UTC. Format: yyyy-MM-ddTHH:mmZ.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-12-12T16:00:00Z</para>
         /// </summary>

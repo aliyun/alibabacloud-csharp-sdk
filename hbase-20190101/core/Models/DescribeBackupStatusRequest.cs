@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeBackupStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the HBaseue cluster for which data backup is performed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

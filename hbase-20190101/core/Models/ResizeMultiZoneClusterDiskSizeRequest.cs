@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ResizeMultiZoneClusterDiskSizeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the multi-zone instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The disk size of core nodes. The value must be greater than the current disk size and must be a multiple of 40. Unit: GB. Maximum value: 64000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>480</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? CoreDiskSize { get; set; }
 
         /// <summary>
+        /// <para>The disk size of log nodes. The value must be greater than the current disk size of log nodes and must be a multiple of 40. Unit: GB. Maximum value: 8000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>440</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateServerlessClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the HBase Serverless instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sh-bp1a969y7681****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23232453233*****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The password used to access the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PassWord { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3E19E345-101D-4014-946C-************</para>
         /// </summary>

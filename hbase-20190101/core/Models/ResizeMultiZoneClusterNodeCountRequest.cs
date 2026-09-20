@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ResizeMultiZoneClusterNodeCountRequest : TeaModel {
         /// <summary>
+        /// <para>The vSwitch ID of the arbitration node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-hangxzhouxb*****</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ArbiterVSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the multi-zone cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of core nodes. The minimum value is 4, and the increment must be a multiple of 2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? CoreNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The number of log nodes. The minimum value is 4, and the value must be a multiple of 4.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? LogNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The number of core nodes in the primary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? PrimaryCoreNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID of the instance in the primary zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-hangxzhouxe*****</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PrimaryVSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The number of core nodes in the secondary zone instance. The minimum value is 4, and the increment must be a multiple of 2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? StandbyCoreNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID of the instance in the secondary zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-hangxzhouxf****</para>
         /// </summary>

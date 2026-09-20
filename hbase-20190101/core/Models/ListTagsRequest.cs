@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ListTagsRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID. You can call DescribeRegions to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

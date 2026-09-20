@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class RelateDbForHBaseHaRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the BDS cluster. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the primary instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActive { get; set; }
 
         /// <summary>
+        /// <para>The ZooKeeper address of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hb-t4naqsay5gn******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveClusterKey { get; set; }
 
         /// <summary>
+        /// <para>The cluster type of the primary instance. Valid values: <b>HBase</b> and <b>HBaseue</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveDBType { get; set; }
 
         /// <summary>
+        /// <para>The HDFS directory of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/hbase</para>
         /// </summary>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveHbaseFsDir { get; set; }
 
         /// <summary>
+        /// <para>The HDFS URI of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hdfs://hb-t4naqsay5gn******-master1-001.hbase.rds.aliyuncs.com:8020,hb-t4naqsay5gn******-master2-001.hbase.rds.aliyuncs.com:8020</para>
         /// </summary>
@@ -64,6 +73,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveHdfsUri { get; set; }
 
         /// <summary>
+        /// <para>The password that corresponds to the username of the primary instance. This parameter is required when the primary instance is <b>HBaseue</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>root</para>
         /// </summary>
@@ -72,6 +83,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActivePassword { get; set; }
 
         /// <summary>
+        /// <para>The username of the primary instance. This parameter is required when the primary instance is <b>HBaseue</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>root</para>
         /// </summary>
@@ -80,6 +93,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveUser { get; set; }
 
         /// <summary>
+        /// <para>The database engine version of the primary instance. This parameter is required when the primary instance is a non-standard instance (IsActiveStandard is set to false). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HBase1x</b>: HBase 1.x.</description></item>
+        /// <item><description><b>HBase2x</b>: HBase 2.x.</description></item>
+        /// <item><description><b>HBaseUE</b>: HBaseue.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>HBase2x</para>
         /// </summary>
@@ -88,6 +108,12 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaActiveVersion { get; set; }
 
         /// <summary>
+        /// <para>The synchronization type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>CLUSTER</b>: instance-level synchronization.</description></item>
+        /// <item><description><b>TABLE</b>: table-level synchronization.</description></item>
+        /// <item><description><b>SKIP</b>: no synchronization required.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +124,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaMigrateType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the secondary instance cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +135,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandby { get; set; }
 
         /// <summary>
+        /// <para>The ZooKeeper address of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hb-bp1w6krp539******-master1-001.hbase.singapore.rds.aliyuncs.com,hb-bp1w6krp539******-master3-001.hbase.singapore.rds.aliyuncs.com,hb-t4naqsay5gn******-master2-001.hbase.singapore.rds.aliyuncs.com:2181:/hbase</para>
         /// </summary>
@@ -116,6 +145,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyClusterKey { get; set; }
 
         /// <summary>
+        /// <para>The cluster type of the secondary instance. Valid values: <b>HBase</b> and <b>HBaseue</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,6 +156,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyDBType { get; set; }
 
         /// <summary>
+        /// <para>The HDFS directory of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/hbase</para>
         /// </summary>
@@ -134,6 +166,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyHbaseFsDir { get; set; }
 
         /// <summary>
+        /// <para>The HDFS URI of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hdfs://hb-bp1w6krp539******-master1-001.hbase.rds.aliyuncs.com:8020,hb-bp1w6krp539******-master2-001.hbase.rds.aliyuncs.com:8020</para>
         /// </summary>
@@ -142,6 +176,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyHdfsUri { get; set; }
 
         /// <summary>
+        /// <para>The password that corresponds to the username of the secondary instance. This parameter is required when the secondary instance is <b>hbaseue</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>root</para>
         /// </summary>
@@ -150,6 +186,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyPassword { get; set; }
 
         /// <summary>
+        /// <para>The username of the secondary instance. This parameter is required when the secondary instance is <b>hbaseue</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>root</para>
         /// </summary>
@@ -158,6 +196,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyUser { get; set; }
 
         /// <summary>
+        /// <para>The database engine version of the secondary instance. This parameter is required when the secondary instance is a non-standard instance (IsStandbyStandard is set to false). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>HBase1x</b>: HBase 1.x.</description></item>
+        /// <item><description><b>HBase2x</b>: HBase 2.x.</description></item>
+        /// <item><description><b>HBaseUE</b>: HBaseue.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>HBase2x</para>
         /// </summary>
@@ -166,6 +211,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaStandbyVersion { get; set; }
 
         /// <summary>
+        /// <para>The tables to synchronize. This parameter is required when HaMigrateType is set to TABLE. Separate multiple tables with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test,test1</para>
         /// </summary>
@@ -174,6 +221,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaTables { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the primary instance is a standard instance. Set this parameter to <b>true</b> for a standard instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -184,6 +232,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public bool? IsActiveStandard { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the secondary instance is a standard instance. Set this parameter to <b>true</b> for a standard instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

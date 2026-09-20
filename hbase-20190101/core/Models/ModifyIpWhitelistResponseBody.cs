@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyIpWhitelistResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>101CFA8A-FB88-5014-A10C-3A0DA9AD8B0B</para>
         /// </summary>

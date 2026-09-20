@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ResizeNodeCountRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of core nodes in the cluster.</para>
+        /// <para>You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +33,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-bp191otqj1ssyl****</para>
         /// </summary>
@@ -38,6 +43,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CreateMultiZoneClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the ApsaraDB for HBase multi-zone database instance that is active.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ld-t4nn71xa0yn56****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23232453****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7F68E8F5-0377-4CF8-8B1D-FFFD6F5804D5</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteHbaseHaSlbRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the BDS cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string BdsId { get; set; }
 
         /// <summary>
+        /// <para>The high availability ID in BDS high availability management.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,11 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HaId { get; set; }
 
         /// <summary>
+        /// <para>The high availability type. Valid values:</para>
+        /// <ol>
+        /// <item><description>thrift</description></item>
+        /// <item><description>phoenix.</description></item>
+        /// </ol>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

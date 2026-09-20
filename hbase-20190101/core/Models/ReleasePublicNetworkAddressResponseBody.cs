@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ReleasePublicNetworkAddressResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B18D4390-A968-4444-B323-4360B8E5DA3E</para>
         /// </summary>

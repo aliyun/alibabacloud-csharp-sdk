@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeRestoreSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether there is a next page. This parameter is currently not used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? HasMoreRestoreRecord { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AE639ED7-F0F3-4A71-911E-CF8EC088816E</para>
         /// </summary>
@@ -49,66 +57,34 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
             [Validation(Required=false)]
             public List<DescribeRestoreSummaryResponseBodyRescordsRescord> Rescord { get; set; }
             public class DescribeRestoreSummaryResponseBodyRescordsRescord : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1/1</para>
-                /// </summary>
                 [NameInMap("BulkLoadProcess")]
                 [Validation(Required=false)]
                 public string BulkLoadProcess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-11-05T06:45:14Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-11-05T06:45:51Z</para>
-                /// </summary>
                 [NameInMap("FinishTime")]
                 [Validation(Required=false)]
                 public string FinishTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1/1</para>
-                /// </summary>
                 [NameInMap("HfileRestoreProcess")]
                 [Validation(Required=false)]
                 public string HfileRestoreProcess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0/0</para>
-                /// </summary>
                 [NameInMap("LogProcess")]
                 [Validation(Required=false)]
                 public string LogProcess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>20201105144514</para>
-                /// </summary>
                 [NameInMap("RecordId")]
                 [Validation(Required=false)]
                 public string RecordId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1/1</para>
-                /// </summary>
                 [NameInMap("SchemaProcess")]
                 [Validation(Required=false)]
                 public string SchemaProcess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SUCCEEDED</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -118,6 +94,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

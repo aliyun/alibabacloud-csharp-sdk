@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class EnableHBaseueModuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the extension cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ld-bp150tns0sjxs****-m1-ps</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21474915573****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>407075EA-47F5-5A2D-888F-C1F90B8F3FCA</para>
         /// </summary>

@@ -74,6 +74,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a self-managed HDFS address to Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUserHdfsInfoRequest
         /// </param>
@@ -119,6 +124,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<AddUserHdfsInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a self-managed HDFS address to Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUserHdfsInfoRequest
         /// </param>
@@ -164,6 +174,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<AddUserHdfsInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a self-managed HDFS address to Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUserHdfsInfoRequest
         /// </param>
@@ -177,6 +192,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return AddUserHdfsInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a self-managed HDFS address to Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddUserHdfsInfoRequest
         /// </param>
@@ -190,6 +210,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await AddUserHdfsInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for a public endpoint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocatePublicNetworkAddressRequest
         /// </param>
@@ -231,6 +256,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<AllocatePublicNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for a public endpoint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocatePublicNetworkAddressRequest
         /// </param>
@@ -272,6 +302,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<AllocatePublicNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for a public endpoint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocatePublicNetworkAddressRequest
         /// </param>
@@ -285,6 +320,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return AllocatePublicNetworkAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for a public endpoint.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocatePublicNetworkAddressRequest
         /// </param>
@@ -298,6 +338,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await AllocatePublicNetworkAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelActiveOperationTasksRequest
         /// </param>
@@ -355,6 +400,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CancelActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelActiveOperationTasksRequest
         /// </param>
@@ -412,6 +462,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CancelActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelActiveOperationTasksRequest
         /// </param>
@@ -425,6 +480,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CancelActiveOperationTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelActiveOperationTasksRequest
         /// </param>
@@ -438,6 +498,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CancelActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckComponentsVersionRequest
         /// </param>
@@ -479,6 +544,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CheckComponentsVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckComponentsVersionRequest
         /// </param>
@@ -520,6 +590,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CheckComponentsVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckComponentsVersionRequest
         /// </param>
@@ -533,6 +608,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CheckComponentsVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether the versions of components are the latest versions by calling CheckComponentsVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckComponentsVersionRequest
         /// </param>
@@ -546,6 +626,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CheckComponentsVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseBackupRequest
         /// </param>
@@ -583,6 +668,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CloseBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseBackupRequest
         /// </param>
@@ -620,6 +710,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CloseBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseBackupRequest
         /// </param>
@@ -633,6 +728,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CloseBackupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the backup and recovery feature for an HBase cluster by calling CloseBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CloseBackupRequest
         /// </param>
@@ -646,6 +746,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CloseBackupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an instance from pay-as-you-go to subscription billing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: This operation can be called only when payType is set to Postpaid.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConvertInstanceRequest
         /// </param>
@@ -695,6 +805,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ConvertInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an instance from pay-as-you-go to subscription billing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: This operation can be called only when payType is set to Postpaid.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConvertInstanceRequest
         /// </param>
@@ -744,6 +864,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ConvertInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an instance from pay-as-you-go to subscription billing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: This operation can be called only when payType is set to Postpaid.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConvertInstanceRequest
         /// </param>
@@ -757,6 +887,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ConvertInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts an instance from pay-as-you-go to subscription billing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: This operation can be called only when payType is set to Postpaid.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ConvertInstanceRequest
         /// </param>
@@ -772,8 +912,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建账户</para>
+        /// <para>Creates a wide table account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAccountRequest
@@ -822,8 +967,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建账户</para>
+        /// <para>Creates a wide table account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAccountRequest
@@ -872,8 +1022,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建账户</para>
+        /// <para>Creates a wide table account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAccountRequest
@@ -890,8 +1045,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建账户</para>
+        /// <para>Creates a wide table account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only ApsaraDB for HBase Performance-enhanced Edition is supported.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAccountRequest
@@ -906,6 +1066,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup plan. Currently, only HBaseue is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateBackupPlanRequest
         /// </param>
@@ -943,6 +1113,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateBackupPlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup plan. Currently, only HBaseue is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateBackupPlanRequest
         /// </param>
@@ -980,6 +1160,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateBackupPlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup plan. Currently, only HBaseue is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateBackupPlanRequest
         /// </param>
@@ -993,6 +1183,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateBackupPlanWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a backup plan. Currently, only HBaseue is supported.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, this operation supports only HBaseue clusters. The EnableHBaseueBackup operation is compatible with this operation and performs automatic creation of a backup plan after a BDS cluster is created.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateBackupPlanRequest
         /// </param>
@@ -1006,6 +1206,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateBackupPlanWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateClusterRequest
         /// </param>
@@ -1123,6 +1328,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateClusterRequest
         /// </param>
@@ -1240,6 +1450,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateClusterRequest
         /// </param>
@@ -1253,6 +1468,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ApsaraDB for HBase cluster by calling CreateCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateClusterRequest
         /// </param>
@@ -1266,6 +1486,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global resource in a cluster by calling CreateGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalResourceRequest
         /// </param>
@@ -1319,6 +1544,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateGlobalResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global resource in a cluster by calling CreateGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalResourceRequest
         /// </param>
@@ -1372,6 +1602,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateGlobalResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global resource in a cluster by calling CreateGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalResourceRequest
         /// </param>
@@ -1385,6 +1620,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateGlobalResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global resource in a cluster by calling CreateGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalResourceRequest
         /// </param>
@@ -1398,6 +1638,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateGlobalResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a load balancing service by calling CreateHBaseSlbServer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHBaseSlbServerRequest
         /// </param>
@@ -1443,6 +1688,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateHBaseSlbServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a load balancing service by calling CreateHBaseSlbServer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHBaseSlbServerRequest
         /// </param>
@@ -1488,6 +1738,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateHBaseSlbServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a load balancing service by calling CreateHBaseSlbServer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHBaseSlbServerRequest
         /// </param>
@@ -1501,6 +1756,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateHBaseSlbServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a load balancing service by calling CreateHBaseSlbServer.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHBaseSlbServerRequest
         /// </param>
@@ -1514,6 +1774,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateHBaseSlbServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHbaseHaSlbRequest
         /// </param>
@@ -1567,6 +1832,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateHbaseHaSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHbaseHaSlbRequest
         /// </param>
@@ -1620,6 +1890,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateHbaseHaSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHbaseHaSlbRequest
         /// </param>
@@ -1633,6 +1908,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateHbaseHaSlbWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a high-availability Thrift or Phoenix service for a BDS cluster that already has a high-availability HBase setup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateHbaseHaSlbRequest
         /// </param>
@@ -1646,6 +1926,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateHbaseHaSlbWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only version 2.0 of the HBaseue engine is supported.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMultiZoneClusterRequest
         /// </param>
@@ -1795,6 +2085,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateMultiZoneClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only version 2.0 of the HBaseue engine is supported.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMultiZoneClusterRequest
         /// </param>
@@ -1944,6 +2244,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateMultiZoneClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only version 2.0 of the HBaseue engine is supported.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMultiZoneClusterRequest
         /// </param>
@@ -1957,6 +2267,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateMultiZoneClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a multi-zone cluster by calling CreateMultiZoneCluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Currently, only version 2.0 of the HBaseue engine is supported.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateMultiZoneClusterRequest
         /// </param>
@@ -1970,6 +2290,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateMultiZoneClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateRestorePlanRequest
         /// </param>
@@ -2027,6 +2357,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateRestorePlanResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateRestorePlanRequest
         /// </param>
@@ -2084,6 +2424,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateRestorePlanResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateRestorePlanRequest
         /// </param>
@@ -2097,6 +2447,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateRestorePlanWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restores backed-up data from a cluster with the backup and restore feature enabled to another ApsaraDB for HBase Performance-enhanced Edition cluster in the same region.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and restore feature is enabled for the ApsaraDB for HBase Performance-enhanced Edition cluster and that the target ApsaraDB for HBase Performance-enhanced Edition cluster is associated with the corresponding BDS.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateRestorePlanRequest
         /// </param>
@@ -2110,6 +2470,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await CreateRestorePlanWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateServerlessClusterRequest
         /// </param>
@@ -2215,6 +2580,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateServerlessClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateServerlessClusterRequest
         /// </param>
@@ -2320,6 +2690,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<CreateServerlessClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateServerlessClusterRequest
         /// </param>
@@ -2333,6 +2708,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return CreateServerlessClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateServerlessClusterRequest
         /// </param>
@@ -2348,8 +2728,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账户</para>
+        /// <para>Delete Wide Table Database Account</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supported for HBase Enhanced Edition (HBaseue).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAccountRequest
@@ -2394,8 +2779,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账户</para>
+        /// <para>Delete Wide Table Database Account</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supported for HBase Enhanced Edition (HBaseue).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAccountRequest
@@ -2440,8 +2830,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账户</para>
+        /// <para>Delete Wide Table Database Account</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supported for HBase Enhanced Edition (HBaseue).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAccountRequest
@@ -2458,8 +2853,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账户</para>
+        /// <para>Delete Wide Table Database Account</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only supported for HBase Enhanced Edition (HBaseue).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAccountRequest
@@ -2474,6 +2874,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global resource from a cluster by calling DeleteGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalResourceRequest
         /// </param>
@@ -2523,6 +2928,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteGlobalResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global resource from a cluster by calling DeleteGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalResourceRequest
         /// </param>
@@ -2572,6 +2982,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteGlobalResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global resource from a cluster by calling DeleteGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalResourceRequest
         /// </param>
@@ -2585,6 +3000,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteGlobalResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global resource from a cluster by calling DeleteGlobalResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalResourceRequest
         /// </param>
@@ -2598,6 +3018,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteGlobalResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created HA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseHaDBRequest
         /// </param>
@@ -2639,6 +3064,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHBaseHaDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created HA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseHaDBRequest
         /// </param>
@@ -2680,6 +3110,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHBaseHaDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created HA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseHaDBRequest
         /// </param>
@@ -2693,6 +3128,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteHBaseHaDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created HA instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseHaDBRequest
         /// </param>
@@ -2706,6 +3146,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteHBaseHaDBWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseSlbServerRequest
         /// </param>
@@ -2747,6 +3192,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHBaseSlbServerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseSlbServerRequest
         /// </param>
@@ -2788,6 +3238,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHBaseSlbServerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseSlbServerRequest
         /// </param>
@@ -2801,6 +3256,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteHBaseSlbServerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteHBaseSlbServer to delete an activated load balancing service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHBaseSlbServerRequest
         /// </param>
@@ -2814,6 +3274,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteHBaseSlbServerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHbaseHaSlbRequest
         /// </param>
@@ -2859,6 +3324,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHbaseHaSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHbaseHaSlbRequest
         /// </param>
@@ -2904,6 +3374,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteHbaseHaSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHbaseHaSlbRequest
         /// </param>
@@ -2917,6 +3392,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteHbaseHaSlbWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the corresponding high-availability Thrift or high-availability Phoenix configuration. This operation is the counterpart of the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteHbaseHaSlbRequest
         /// </param>
@@ -2930,6 +3410,23 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteHbaseHaSlbWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteInstance to release an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance status is <b>Running</b>.</description></item>
+        /// <item><description>The billing method of the instance is <b>pay-as-you-go</b>.<remarks>
+        /// <para>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -2971,6 +3468,23 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteInstance to release an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance status is <b>Running</b>.</description></item>
+        /// <item><description>The billing method of the instance is <b>pay-as-you-go</b>.<remarks>
+        /// <para>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3012,6 +3526,23 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteInstance to release an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance status is <b>Running</b>.</description></item>
+        /// <item><description>The billing method of the instance is <b>pay-as-you-go</b>.<remarks>
+        /// <para>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3025,6 +3556,23 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteInstance to release an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this operation, the instance must meet the following conditions:</para>
+        /// <list type="bullet">
+        /// <item><description>The instance status is <b>Running</b>.</description></item>
+        /// <item><description>The billing method of the instance is <b>pay-as-you-go</b>.<remarks>
+        /// <para>Subscription instances cannot be deleted by calling this operation. They are automatically released upon expiration. To release a subscription instance in advance, submit a ticket.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -3038,6 +3586,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteMultiZoneClusterRequest
         /// </param>
@@ -3079,6 +3632,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteMultiZoneClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteMultiZoneClusterRequest
         /// </param>
@@ -3120,6 +3678,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteMultiZoneClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteMultiZoneClusterRequest
         /// </param>
@@ -3133,6 +3696,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteMultiZoneClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a multi-zone instance by calling the DeleteMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteMultiZoneClusterRequest
         /// </param>
@@ -3146,6 +3714,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteMultiZoneClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteServerlessClusterRequest
         /// </param>
@@ -3191,6 +3764,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteServerlessClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteServerlessClusterRequest
         /// </param>
@@ -3236,6 +3814,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteServerlessClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteServerlessClusterRequest
         /// </param>
@@ -3249,6 +3832,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteServerlessClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an HBase Serverless cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteServerlessClusterRequest
         /// </param>
@@ -3262,6 +3850,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DeleteServerlessClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteUserHdfsInfoRequest
         /// </param>
@@ -3303,6 +3896,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteUserHdfsInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteUserHdfsInfoRequest
         /// </param>
@@ -3344,6 +3942,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DeleteUserHdfsInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteUserHdfsInfoRequest
         /// </param>
@@ -3357,6 +3960,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DeleteUserHdfsInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DeleteUserHdfsInfo to delete user-created HDFS information in Xpack.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteUserHdfsInfoRequest
         /// </param>
@@ -3372,7 +3980,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户列表</para>
+        /// <para>Queries the list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3414,7 +4022,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户列表</para>
+        /// <para>Queries the list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3456,7 +4064,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户列表</para>
+        /// <para>Queries the list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3474,7 +4082,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账户列表</para>
+        /// <para>Queries the list of database accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3490,6 +4098,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeAccountsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskTypeRequest
         /// </param>
@@ -3547,6 +4160,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeActiveOperationTaskTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskTypeRequest
         /// </param>
@@ -3604,6 +4222,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeActiveOperationTaskTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskTypeRequest
         /// </param>
@@ -3617,6 +4240,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeActiveOperationTaskTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTaskType operation to query the O&amp;M task types, the number of tasks of each type, and the details of an HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskTypeRequest
         /// </param>
@@ -3630,6 +4258,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeActiveOperationTaskTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTasksRequest
         /// </param>
@@ -3727,6 +4360,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTasksRequest
         /// </param>
@@ -3824,6 +4462,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTasksRequest
         /// </param>
@@ -3837,6 +4480,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeActiveOperationTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeActiveOperationTasks operation to query details of O&amp;M tasks for HBase instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTasksRequest
         /// </param>
@@ -3850,6 +4498,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available resources by calling DescribeAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAvailableResourceRequest
         /// </param>
@@ -3911,6 +4564,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available resources by calling DescribeAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAvailableResourceRequest
         /// </param>
@@ -3972,6 +4630,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available resources by calling DescribeAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAvailableResourceRequest
         /// </param>
@@ -3985,6 +4648,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeAvailableResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available resources by calling DescribeAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAvailableResourceRequest
         /// </param>
@@ -3998,6 +4666,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeAvailableResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupPlanConfigRequest
         /// </param>
@@ -4035,6 +4713,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupPlanConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupPlanConfigRequest
         /// </param>
@@ -4072,6 +4760,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupPlanConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupPlanConfigRequest
         /// </param>
@@ -4085,6 +4783,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupPlanConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the configuration of a backup plan by calling the DescribeBackupPlanConfig operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation currently supports only HBaseue. Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue instance.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupPlanConfigRequest
         /// </param>
@@ -4098,6 +4806,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupPlanConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -4135,6 +4848,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -4172,6 +4890,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -4185,6 +4908,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup policy of an HBase cluster by calling DescribeBackupPolicy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupPolicyRequest
         /// </param>
@@ -4198,6 +4926,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the status of a backup task by calling the DescribeBackupStatus operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupStatusRequest
         /// </param>
@@ -4235,6 +4968,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the status of a backup task by calling the DescribeBackupStatus operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupStatusRequest
         /// </param>
@@ -4272,6 +5010,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the status of a backup task by calling the DescribeBackupStatus operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupStatusRequest
         /// </param>
@@ -4285,6 +5028,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the status of a backup task by calling the DescribeBackupStatus operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupStatusRequest
         /// </param>
@@ -4298,6 +5046,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupSummaryRequest
         /// </param>
@@ -4343,6 +5101,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupSummaryRequest
         /// </param>
@@ -4388,6 +5156,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupSummaryRequest
         /// </param>
@@ -4401,6 +5179,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>After HBase Enhanced Edition backup is enabled, you can call the DescribeBackupSummary operation to query backup details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The backup and restore feature of the HBase Enhanced Edition instance is enabled. For more information, see <a href="https://help.aliyun.com/document_detail/145767.html">Enable backup and restore</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupSummaryRequest
         /// </param>
@@ -4414,6 +5202,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupTablesRequest
         /// </param>
@@ -4463,6 +5261,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupTablesRequest
         /// </param>
@@ -4512,6 +5320,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupTablesRequest
         /// </param>
@@ -4525,6 +5343,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupTablesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the backup table information of a specific backup record by calling the DescribeBackupTables operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that backup records exist. You can call the DescribeBackupSummary operation to obtain backup records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBackupTablesRequest
         /// </param>
@@ -4538,6 +5366,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupTablesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupsRequest
         /// </param>
@@ -4603,6 +5436,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupsRequest
         /// </param>
@@ -4668,6 +5506,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeBackupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupsRequest
         /// </param>
@@ -4681,6 +5524,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeBackupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves backup records of an ApsaraDB for HBase cluster by calling DescribeBackups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupsRequest
         /// </param>
@@ -4694,6 +5542,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeBackupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection list of a cluster by calling DescribeClusterConnection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeClusterConnectionRequest
         /// </param>
@@ -4735,6 +5588,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeClusterConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection list of a cluster by calling DescribeClusterConnection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeClusterConnectionRequest
         /// </param>
@@ -4776,6 +5634,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeClusterConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection list of a cluster by calling DescribeClusterConnection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeClusterConnectionRequest
         /// </param>
@@ -4789,6 +5652,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeClusterConnectionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the connection list of a cluster by calling DescribeClusterConnection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeClusterConnectionRequest
         /// </param>
@@ -4802,6 +5670,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeClusterConnectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeColdStorageRequest
         /// </param>
@@ -4839,6 +5712,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeColdStorageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeColdStorageRequest
         /// </param>
@@ -4876,6 +5754,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeColdStorageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeColdStorageRequest
         /// </param>
@@ -4889,6 +5772,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeColdStorageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeColdStorage to retrieve the cold storage information of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeColdStorageRequest
         /// </param>
@@ -4902,6 +5790,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeColdStorageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceUsageRequest
         /// </param>
@@ -4939,6 +5832,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDBInstanceUsageResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceUsageRequest
         /// </param>
@@ -4976,6 +5874,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDBInstanceUsageResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceUsageRequest
         /// </param>
@@ -4989,6 +5892,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeDBInstanceUsageWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeDBInstanceUsage to retrieve the running watermark status of an HBase cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceUsageRequest
         /// </param>
@@ -5002,6 +5910,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeDBInstanceUsageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of clusters that have been deleted but not fully released.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeletedInstancesRequest
         /// </param>
@@ -5047,6 +5965,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDeletedInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of clusters that have been deleted but not fully released.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeletedInstancesRequest
         /// </param>
@@ -5092,6 +6020,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDeletedInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of clusters that have been deleted but not fully released.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeletedInstancesRequest
         /// </param>
@@ -5105,6 +6043,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeDeletedInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of clusters that have been deleted but not fully released.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>By default, cluster resources are fully cleaned up 7 days after deletion. If you have called the PurgeInstance operation or set ImmediateDeleteFlag to true when calling the delete operation, the resources have already been fully cleaned up.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDeletedInstancesRequest
         /// </param>
@@ -5118,6 +6066,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeDeletedInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Currently, only HBase and HBaseue are supported.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiskWarningLineRequest
         /// </param>
@@ -5155,6 +6108,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDiskWarningLineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Currently, only HBase and HBaseue are supported.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiskWarningLineRequest
         /// </param>
@@ -5192,6 +6150,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeDiskWarningLineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Currently, only HBase and HBaseue are supported.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiskWarningLineRequest
         /// </param>
@@ -5205,6 +6168,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeDiskWarningLineWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Currently, only HBase and HBaseue are supported.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDiskWarningLineRequest
         /// </param>
@@ -5218,6 +6186,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeDiskWarningLineWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEndpointsRequest
         /// </param>
@@ -5255,6 +6228,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeEndpointsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEndpointsRequest
         /// </param>
@@ -5292,6 +6270,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeEndpointsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEndpointsRequest
         /// </param>
@@ -5305,6 +6288,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeEndpointsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the database connection information of an ApsaraDB for HBase instance by calling DescribeEndpoints.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeEndpointsRequest
         /// </param>
@@ -5318,6 +6306,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeEndpointsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -5355,6 +6348,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -5392,6 +6390,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -5405,6 +6408,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an ApsaraDB for HBase instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -5418,6 +6426,17 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The complete specification mapping table is based on the list returned by this operation.
+        /// If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceTypeRequest
         /// </param>
@@ -5455,6 +6474,17 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstanceTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The complete specification mapping table is based on the list returned by this operation.
+        /// If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceTypeRequest
         /// </param>
@@ -5492,6 +6522,17 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstanceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The complete specification mapping table is based on the list returned by this operation.
+        /// If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceTypeRequest
         /// </param>
@@ -5505,6 +6546,17 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeInstanceTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries instance specifications (CPU and memory) by calling DescribeInstanceType.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The complete specification mapping table is based on the list returned by this operation.
+        /// If the response returns an &quot;instanceType is not found&quot; error, the specification has been deprecated. If you have a strong dependency on this specification, contact the Alibaba Cloud HBase management team.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeInstanceTypeRequest
         /// </param>
@@ -5518,6 +6570,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeInstanceTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -5583,6 +6640,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -5648,6 +6710,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -5661,6 +6728,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of ApsaraDB for HBase instances in a specified region by calling DescribeInstances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -5674,6 +6746,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the IP whitelist information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpWhitelistRequest
         /// </param>
@@ -5711,6 +6788,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeIpWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the IP whitelist information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpWhitelistRequest
         /// </param>
@@ -5748,6 +6830,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeIpWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the IP whitelist information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpWhitelistRequest
         /// </param>
@@ -5761,6 +6848,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeIpWhitelistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the IP whitelist information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIpWhitelistRequest
         /// </param>
@@ -5774,6 +6866,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeIpWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableRegionsRequest
         /// </param>
@@ -5811,6 +6908,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneAvailableRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableRegionsRequest
         /// </param>
@@ -5848,6 +6950,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneAvailableRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableRegionsRequest
         /// </param>
@@ -5861,6 +6968,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeMultiZoneAvailableRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available region and zone combinations for multi-zone deployment by calling DescribeMultiZoneAvailableRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableRegionsRequest
         /// </param>
@@ -5874,6 +6986,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeMultiZoneAvailableRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableResourceRequest
         /// </param>
@@ -5919,6 +7036,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneAvailableResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableResourceRequest
         /// </param>
@@ -5964,6 +7086,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneAvailableResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableResourceRequest
         /// </param>
@@ -5977,6 +7104,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeMultiZoneAvailableResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries purchasable resources in multiple zones by calling DescribeMultiZoneAvailableResource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneAvailableResourceRequest
         /// </param>
@@ -5990,6 +7122,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeMultiZoneAvailableResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneClusterRequest
         /// </param>
@@ -6027,6 +7164,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneClusterRequest
         /// </param>
@@ -6064,6 +7206,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeMultiZoneClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneClusterRequest
         /// </param>
@@ -6077,6 +7224,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeMultiZoneClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMultiZoneClusterRequest
         /// </param>
@@ -6090,6 +7242,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeMultiZoneClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecoverableTimeRangeRequest
         /// </param>
@@ -6127,6 +7289,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRecoverableTimeRangeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecoverableTimeRangeRequest
         /// </param>
@@ -6164,6 +7336,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRecoverableTimeRangeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecoverableTimeRangeRequest
         /// </param>
@@ -6177,6 +7359,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRecoverableTimeRangeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the recoverable time range after backup is enabled for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecoverableTimeRangeRequest
         /// </param>
@@ -6190,6 +7382,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRecoverableTimeRangeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions by calling DescribeRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -6231,6 +7428,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions by calling DescribeRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -6272,6 +7474,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions by calling DescribeRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -6285,6 +7492,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries available regions by calling DescribeRegions.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -6298,6 +7510,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRegionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreFullDetailsRequest
         /// </param>
@@ -6347,6 +7569,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreFullDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreFullDetailsRequest
         /// </param>
@@ -6396,6 +7628,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreFullDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreFullDetailsRequest
         /// </param>
@@ -6409,6 +7651,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRestoreFullDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specific full restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call DescribeRestoreSummary to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreFullDetailsRequest
         /// </param>
@@ -6422,6 +7674,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRestoreFullDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreIncrDetailRequest
         /// </param>
@@ -6463,6 +7725,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreIncrDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreIncrDetailRequest
         /// </param>
@@ -6504,6 +7776,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreIncrDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreIncrDetailRequest
         /// </param>
@@ -6517,6 +7799,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRestoreIncrDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an incremental restoration by calling the DescribeRestoreIncrDetail operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist. You can call the DescribeRestoreSummary operation to obtain restoration records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreIncrDetailRequest
         /// </param>
@@ -6530,6 +7822,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRestoreIncrDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSchemaDetailsRequest
         /// </param>
@@ -6579,6 +7881,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreSchemaDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSchemaDetailsRequest
         /// </param>
@@ -6628,6 +7940,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreSchemaDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSchemaDetailsRequest
         /// </param>
@@ -6641,6 +7963,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRestoreSchemaDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of schema restoration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restoration records exist.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSchemaDetailsRequest
         /// </param>
@@ -6654,6 +7986,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRestoreSchemaDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSummaryRequest
         /// </param>
@@ -6699,6 +8041,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSummaryRequest
         /// </param>
@@ -6744,6 +8096,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSummaryRequest
         /// </param>
@@ -6757,6 +8119,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRestoreSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the data recovery summary for an HBaseue cluster that has backup and recovery enabled by calling the DescribeRestoreSummary operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that backup and recovery is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreSummaryRequest
         /// </param>
@@ -6770,6 +8142,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRestoreSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a restore record for a cluster that has been restored from a backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreTablesRequest
         /// </param>
@@ -6811,6 +8193,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreTablesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a restore record for a cluster that has been restored from a backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreTablesRequest
         /// </param>
@@ -6852,6 +8244,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeRestoreTablesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a restore record for a cluster that has been restored from a backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreTablesRequest
         /// </param>
@@ -6865,6 +8267,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeRestoreTablesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a restore record for a cluster that has been restored from a backup.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster and that restore records exist. You can call DescribeRestoreSummary to obtain restore records.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRestoreTablesRequest
         /// </param>
@@ -6878,6 +8290,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeRestoreTablesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityGroupsRequest
         /// </param>
@@ -6915,6 +8332,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeSecurityGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityGroupsRequest
         /// </param>
@@ -6952,6 +8374,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeSecurityGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityGroupsRequest
         /// </param>
@@ -6965,6 +8392,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeSecurityGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSecurityGroups to retrieve the security group information of a cluster by cluster ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityGroupsRequest
         /// </param>
@@ -6978,6 +8410,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeSecurityGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeServerlessClusterRequest
         /// </param>
@@ -7019,6 +8456,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeServerlessClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeServerlessClusterRequest
         /// </param>
@@ -7060,6 +8502,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeServerlessClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeServerlessClusterRequest
         /// </param>
@@ -7073,6 +8520,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeServerlessClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a serverless cluster by calling DescribeServerlessCluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeServerlessClusterRequest
         /// </param>
@@ -7086,6 +8538,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeServerlessClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSubDomain to retrieve an available subdomain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubDomainRequest
         /// </param>
@@ -7127,6 +8584,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeSubDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSubDomain to retrieve an available subdomain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubDomainRequest
         /// </param>
@@ -7168,6 +8630,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<DescribeSubDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSubDomain to retrieve an available subdomain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubDomainRequest
         /// </param>
@@ -7181,6 +8648,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return DescribeSubDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls DescribeSubDomain to retrieve an available subdomain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSubDomainRequest
         /// </param>
@@ -7194,6 +8666,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await DescribeSubDomainWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables backup and recovery for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueBackupRequest
         /// </param>
@@ -7243,6 +8720,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EnableHBaseueBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables backup and recovery for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueBackupRequest
         /// </param>
@@ -7292,6 +8774,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EnableHBaseueBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables backup and recovery for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueBackupRequest
         /// </param>
@@ -7305,6 +8792,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return EnableHBaseueBackupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables backup and recovery for an HBaseue cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueBackupRequest
         /// </param>
@@ -7318,6 +8810,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await EnableHBaseueBackupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EnableHBaseueModule operation to enable an extension service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueModuleRequest
         /// </param>
@@ -7423,6 +8920,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EnableHBaseueModuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EnableHBaseueModule operation to enable an extension service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueModuleRequest
         /// </param>
@@ -7528,6 +9030,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EnableHBaseueModuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EnableHBaseueModule operation to enable an extension service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueModuleRequest
         /// </param>
@@ -7541,6 +9048,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return EnableHBaseueModuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EnableHBaseueModule operation to enable an extension service.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EnableHBaseueModuleRequest
         /// </param>
@@ -7554,6 +9066,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await EnableHBaseueModuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EvaluateMultiZoneResourceRequest
         /// </param>
@@ -7699,6 +9216,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EvaluateMultiZoneResourceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EvaluateMultiZoneResourceRequest
         /// </param>
@@ -7844,6 +9366,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<EvaluateMultiZoneResourceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EvaluateMultiZoneResourceRequest
         /// </param>
@@ -7857,6 +9384,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return EvaluateMultiZoneResourceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the EvaluateMultiZoneResource operation to evaluate whether available resources exist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EvaluateMultiZoneResourceRequest
         /// </param>
@@ -7870,6 +9402,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await EvaluateMultiZoneResourceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the monitoring URL based on the cluster ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMultimodeCmsUrlRequest
         /// </param>
@@ -7911,6 +9453,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<GetMultimodeCmsUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the monitoring URL based on the cluster ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMultimodeCmsUrlRequest
         /// </param>
@@ -7952,6 +9504,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<GetMultimodeCmsUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the monitoring URL based on the cluster ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMultimodeCmsUrlRequest
         /// </param>
@@ -7965,6 +9527,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return GetMultimodeCmsUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the monitoring URL based on the cluster ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>CloudMonitor has been migrated. This operation is no longer in use. Access monitoring from the Monitoring and Alerts page in cluster management.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetMultimodeCmsUrlRequest
         /// </param>
@@ -7980,7 +9552,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权账户权限</para>
+        /// <para>Grants permissions to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8038,7 +9610,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权账户权限</para>
+        /// <para>Grants permissions to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8096,7 +9668,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权账户权限</para>
+        /// <para>Grants permissions to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8114,7 +9686,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权账户权限</para>
+        /// <para>Grants permissions to an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8130,6 +9702,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await GrantWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHBaseInstancesRequest
         /// </param>
@@ -8167,6 +9744,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListHBaseInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHBaseInstancesRequest
         /// </param>
@@ -8204,6 +9786,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListHBaseInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHBaseInstancesRequest
         /// </param>
@@ -8217,6 +9804,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ListHBaseInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ListHBaseInstances to retrieve ApsaraDB for HBase instances within the same VPC.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHBaseInstancesRequest
         /// </param>
@@ -8230,6 +9822,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ListHBaseInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigHistoriesRequest
         /// </param>
@@ -8275,6 +9872,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListInstanceServiceConfigHistoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigHistoriesRequest
         /// </param>
@@ -8320,6 +9922,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListInstanceServiceConfigHistoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigHistoriesRequest
         /// </param>
@@ -8333,6 +9940,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ListInstanceServiceConfigHistoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the modification history of cluster parameters by calling ListInstanceServiceConfigHistories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigHistoriesRequest
         /// </param>
@@ -8346,6 +9958,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ListInstanceServiceConfigHistoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigurationsRequest
         /// </param>
@@ -8391,6 +10008,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListInstanceServiceConfigurationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigurationsRequest
         /// </param>
@@ -8436,6 +10058,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListInstanceServiceConfigurationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigurationsRequest
         /// </param>
@@ -8449,6 +10076,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ListInstanceServiceConfigurationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration items of a cluster by calling ListInstanceServiceConfigurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstanceServiceConfigurationsRequest
         /// </param>
@@ -8462,6 +10094,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ListInstanceServiceConfigurationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -8511,6 +10153,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -8560,6 +10212,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -8573,6 +10235,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of tags by ResourceId or Tag (query by Key only, or by both Key and Value).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You must specify at least one of the ResourceId and Tag parameters. Otherwise, an error is returned.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -8586,6 +10258,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves all labels in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -8623,6 +10300,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves all labels in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -8660,6 +10342,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ListTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves all labels in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -8673,6 +10360,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ListTagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves all labels in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -8688,7 +10380,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改账户密码</para>
+        /// <para>Changes the password of a database access account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8738,7 +10430,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改账户密码</para>
+        /// <para>Changes the password of a database access account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8788,7 +10480,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改账户密码</para>
+        /// <para>Changes the password of a database access account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8806,7 +10498,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更改账户密码</para>
+        /// <para>Changes the password of a database access account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8822,6 +10514,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationTasksRequest
         /// </param>
@@ -8887,6 +10589,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationTasksRequest
         /// </param>
@@ -8952,6 +10664,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyActiveOperationTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationTasksRequest
         /// </param>
@@ -8965,6 +10687,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyActiveOperationTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the scheduled switchover time of O&amp;M tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In addition to notifications sent by text message, phone call, email, or internal message, O&amp;M events of ApsaraDB for HBase (such as minor engine version updates) are also displayed in the console. In addition to calling this operation to modify the scheduled switchover time, you can also modify it in the console. For more information, see <a href="https://help.aliyun.com/document_detail/405057.html">Query or manage pending events</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationTasksRequest
         /// </param>
@@ -8978,6 +10710,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyActiveOperationTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupPlanConfigRequest
         /// </param>
@@ -9031,6 +10773,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyBackupPlanConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupPlanConfigRequest
         /// </param>
@@ -9084,6 +10836,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyBackupPlanConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupPlanConfigRequest
         /// </param>
@@ -9097,6 +10859,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyBackupPlanConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the backup configuration for an HBaseue cluster that has backup and recovery enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the backup and recovery feature is enabled for the HBaseue cluster.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyBackupPlanConfigRequest
         /// </param>
@@ -9110,6 +10882,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyBackupPlanConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
         /// </param>
@@ -9163,6 +10940,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
         /// </param>
@@ -9216,6 +10998,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyBackupPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
         /// </param>
@@ -9229,6 +11016,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyBackupPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyBackupPolicy to modify the backup plan of an HBase cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
         /// </param>
@@ -9242,6 +11034,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyClusterDeletionProtectionRequest
         /// </param>
@@ -9283,6 +11080,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyClusterDeletionProtectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyClusterDeletionProtectionRequest
         /// </param>
@@ -9324,6 +11126,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyClusterDeletionProtectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyClusterDeletionProtectionRequest
         /// </param>
@@ -9337,6 +11144,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyClusterDeletionProtectionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the deletion protection attribute of an instance by calling ModifyClusterDeletionProtection.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyClusterDeletionProtectionRequest
         /// </param>
@@ -9350,6 +11162,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyClusterDeletionProtectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDiskWarningLineRequest
         /// </param>
@@ -9391,6 +11208,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyDiskWarningLineResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDiskWarningLineRequest
         /// </param>
@@ -9432,6 +11254,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyDiskWarningLineResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDiskWarningLineRequest
         /// </param>
@@ -9445,6 +11272,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyDiskWarningLineWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the disk capacity alert threshold for HBase Cluster Edition and HBaseue clusters. The default alert threshold is 80%.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDiskWarningLineRequest
         /// </param>
@@ -9458,6 +11290,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyDiskWarningLineWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceMaintainTimeRequest
         /// </param>
@@ -9503,6 +11340,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceMaintainTimeRequest
         /// </param>
@@ -9548,6 +11390,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceMaintainTimeRequest
         /// </param>
@@ -9561,6 +11408,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyInstanceMaintainTimeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyInstanceMaintainTime operation to modify the O&amp;M window start time of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceMaintainTimeRequest
         /// </param>
@@ -9574,6 +11426,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyInstanceMaintainTimeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an instance by calling ModifyInstanceName.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceNameRequest
         /// </param>
@@ -9627,6 +11484,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceNameResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an instance by calling ModifyInstanceName.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceNameRequest
         /// </param>
@@ -9680,6 +11542,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceNameResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an instance by calling ModifyInstanceName.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceNameRequest
         /// </param>
@@ -9693,6 +11560,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyInstanceNameWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the name of an instance by calling ModifyInstanceName.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceNameRequest
         /// </param>
@@ -9706,6 +11578,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyInstanceNameWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceServiceConfigRequest
         /// </param>
@@ -9759,6 +11636,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceServiceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceServiceConfigRequest
         /// </param>
@@ -9812,6 +11694,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceServiceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceServiceConfigRequest
         /// </param>
@@ -9825,6 +11712,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyInstanceServiceConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceServiceConfig to modify cluster configurations. You can call the ListInstanceServiceConfigurations operation to query the configuration items that can be modified.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceServiceConfigRequest
         /// </param>
@@ -9838,6 +11730,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyInstanceServiceConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceType to change the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceTypeRequest
         /// </param>
@@ -9883,6 +11780,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceType to change the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceTypeRequest
         /// </param>
@@ -9928,6 +11830,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyInstanceTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceType to change the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceTypeRequest
         /// </param>
@@ -9941,6 +11848,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyInstanceTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifyInstanceType to change the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceTypeRequest
         /// </param>
@@ -9954,6 +11866,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyInstanceTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIpWhitelistRequest
         /// </param>
@@ -10003,6 +11920,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyIpWhitelistResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIpWhitelistRequest
         /// </param>
@@ -10052,6 +11974,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyIpWhitelistResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIpWhitelistRequest
         /// </param>
@@ -10065,6 +11992,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyIpWhitelistWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP whitelist group of an instance by calling ModifyIpWhitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIpWhitelistRequest
         /// </param>
@@ -10078,6 +12010,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyIpWhitelistWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMultiZoneClusterNodeTypeRequest
         /// </param>
@@ -10127,6 +12064,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyMultiZoneClusterNodeTypeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMultiZoneClusterNodeTypeRequest
         /// </param>
@@ -10176,6 +12118,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyMultiZoneClusterNodeTypeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMultiZoneClusterNodeTypeRequest
         /// </param>
@@ -10189,6 +12136,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyMultiZoneClusterNodeTypeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the node specifications of a multi-zone instance by calling ModifyMultiZoneClusterNodeType.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyMultiZoneClusterNodeTypeRequest
         /// </param>
@@ -10202,6 +12154,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyMultiZoneClusterNodeTypeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityGroupsRequest
         /// </param>
@@ -10243,6 +12200,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifySecurityGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityGroupsRequest
         /// </param>
@@ -10284,6 +12246,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifySecurityGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityGroupsRequest
         /// </param>
@@ -10297,6 +12264,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifySecurityGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ModifySecurityGroups to modify the security groups associated with a cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityGroupsRequest
         /// </param>
@@ -10310,6 +12282,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifySecurityGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUIAccountPasswordRequest
         /// </param>
@@ -10355,6 +12332,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyUIAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUIAccountPasswordRequest
         /// </param>
@@ -10400,6 +12382,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ModifyUIAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUIAccountPasswordRequest
         /// </param>
@@ -10413,6 +12400,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ModifyUIAccountPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password for accessing the cluster management UI by calling ModifyUIProxyAccountPassword.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyUIAccountPasswordRequest
         /// </param>
@@ -10426,6 +12418,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ModifyUIAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a target instance to a target resource group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MoveResourceGroupRequest
         /// </param>
@@ -10467,6 +12464,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<MoveResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a target instance to a target resource group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MoveResourceGroupRequest
         /// </param>
@@ -10508,6 +12510,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<MoveResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a target instance to a target resource group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MoveResourceGroupRequest
         /// </param>
@@ -10521,6 +12528,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return MoveResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves a target instance to a target resource group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MoveResourceGroupRequest
         /// </param>
@@ -10534,6 +12546,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await MoveResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenBackupRequest
         /// </param>
@@ -10571,6 +12588,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<OpenBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenBackupRequest
         /// </param>
@@ -10608,6 +12630,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<OpenBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenBackupRequest
         /// </param>
@@ -10621,6 +12648,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return OpenBackupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the backup and recovery feature for an ApsaraDB for HBase cluster by calling OpenBackup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// OpenBackupRequest
         /// </param>
@@ -10634,6 +12666,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await OpenBackupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PurgeInstanceRequest
         /// </param>
@@ -10671,6 +12708,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<PurgeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PurgeInstanceRequest
         /// </param>
@@ -10708,6 +12750,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<PurgeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PurgeInstanceRequest
         /// </param>
@@ -10721,6 +12768,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return PurgeInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Completely cleans up an instance that has been deleted (within the last 7 days) but not fully cleaned up.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PurgeInstanceRequest
         /// </param>
@@ -10734,6 +12786,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await PurgeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHBaseHaDBRequest
         /// </param>
@@ -10771,6 +12828,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<QueryHBaseHaDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHBaseHaDBRequest
         /// </param>
@@ -10808,6 +12870,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<QueryHBaseHaDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHBaseHaDBRequest
         /// </param>
@@ -10821,6 +12888,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return QueryHBaseHaDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the high-availability HBase list for a BDS cluster. This operation corresponds to CreateHaCluster and CreateHbaseHaSlb. It returns the corresponding high-availability list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHBaseHaDBRequest
         /// </param>
@@ -10834,6 +12906,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await QueryHBaseHaDBWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryXpackRelateDBRequest
         /// </param>
@@ -10879,6 +12956,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<QueryXpackRelateDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryXpackRelateDBRequest
         /// </param>
@@ -10924,6 +13006,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<QueryXpackRelateDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryXpackRelateDBRequest
         /// </param>
@@ -10937,6 +13024,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return QueryXpackRelateDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases that can be associated with the current instance by calling QueryXpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryXpackRelateDBRequest
         /// </param>
@@ -10950,6 +13042,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await QueryXpackRelateDBWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an active-active instance pair to a BDS cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RelateDbForHBaseHaRequest
         /// </param>
@@ -11067,6 +13164,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RelateDbForHBaseHaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an active-active instance pair to a BDS cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RelateDbForHBaseHaRequest
         /// </param>
@@ -11184,6 +13286,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RelateDbForHBaseHaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an active-active instance pair to a BDS cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RelateDbForHBaseHaRequest
         /// </param>
@@ -11197,6 +13304,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return RelateDbForHBaseHaWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds an active-active instance pair to a BDS cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RelateDbForHBaseHaRequest
         /// </param>
@@ -11210,6 +13322,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await RelateDbForHBaseHaWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleasePublicNetworkAddressRequest
         /// </param>
@@ -11247,6 +13364,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ReleasePublicNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleasePublicNetworkAddressRequest
         /// </param>
@@ -11284,6 +13406,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ReleasePublicNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleasePublicNetworkAddressRequest
         /// </param>
@@ -11297,6 +13424,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ReleasePublicNetworkAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public endpoint of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleasePublicNetworkAddressRequest
         /// </param>
@@ -11310,6 +13442,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ReleasePublicNetworkAddressWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a subscription for an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation applies only to subscription HBase instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -11355,6 +13497,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a subscription for an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation applies only to subscription HBase instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -11400,6 +13552,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a subscription for an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation applies only to subscription HBase instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -11413,6 +13575,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return RenewInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Renews a subscription for an HBase instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation applies only to subscription HBase instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RenewInstanceRequest
         /// </param>
@@ -11426,6 +13598,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await RenewInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cold storage size.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeColdStorageSizeRequest
         /// </param>
@@ -11467,6 +13644,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeColdStorageSizeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cold storage size.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeColdStorageSizeRequest
         /// </param>
@@ -11508,6 +13690,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeColdStorageSizeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cold storage size.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeColdStorageSizeRequest
         /// </param>
@@ -11521,6 +13708,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ResizeColdStorageSizeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the cold storage size.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeColdStorageSizeRequest
         /// </param>
@@ -11534,6 +13726,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ResizeColdStorageSizeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeDiskSize to resize a disk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeDiskSizeRequest
         /// </param>
@@ -11575,6 +13772,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeDiskSizeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeDiskSize to resize a disk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeDiskSizeRequest
         /// </param>
@@ -11616,6 +13818,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeDiskSizeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeDiskSize to resize a disk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeDiskSizeRequest
         /// </param>
@@ -11629,6 +13836,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ResizeDiskSizeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeDiskSize to resize a disk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeDiskSizeRequest
         /// </param>
@@ -11642,6 +13854,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ResizeDiskSizeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterDiskSizeRequest
         /// </param>
@@ -11687,6 +13904,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeMultiZoneClusterDiskSizeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterDiskSizeRequest
         /// </param>
@@ -11732,6 +13954,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeMultiZoneClusterDiskSizeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterDiskSizeRequest
         /// </param>
@@ -11745,6 +13972,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ResizeMultiZoneClusterDiskSizeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ResizeMultiZoneClusterDiskSize operation to modify the disk size of a multi-zone instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterDiskSizeRequest
         /// </param>
@@ -11758,6 +13990,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ResizeMultiZoneClusterDiskSizeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterNodeCountRequest
         /// </param>
@@ -11823,6 +14060,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeMultiZoneClusterNodeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterNodeCountRequest
         /// </param>
@@ -11888,6 +14130,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeMultiZoneClusterNodeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterNodeCountRequest
         /// </param>
@@ -11901,6 +14148,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ResizeMultiZoneClusterNodeCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Scales out nodes for a multi-zone instance by calling the ResizeMultiZoneClusterNodeCount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResizeMultiZoneClusterNodeCountRequest
         /// </param>
@@ -11914,6 +14166,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ResizeMultiZoneClusterNodeCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeNodeCount to adjust the number of nodes for an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResizeNodeCountRequest
         /// </param>
@@ -11963,6 +14225,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeNodeCountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeNodeCount to adjust the number of nodes for an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResizeNodeCountRequest
         /// </param>
@@ -12012,6 +14284,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<ResizeNodeCountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeNodeCount to adjust the number of nodes for an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResizeNodeCountRequest
         /// </param>
@@ -12025,6 +14307,16 @@ namespace AlibabaCloud.SDK.HBase20190101
             return ResizeNodeCountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls ResizeNodeCount to adjust the number of nodes for an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Scales up the number of core nodes in a cluster. You can add up to 50 nodes at a time, and the total number of nodes can be scaled up to 250. If you have additional requirements, submit a ticket.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ResizeNodeCountRequest
         /// </param>
@@ -12038,6 +14330,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await ResizeNodeCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an HBase cluster by calling RestartInstance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartInstanceRequest
         /// </param>
@@ -12079,6 +14376,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RestartInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an HBase cluster by calling RestartInstance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartInstanceRequest
         /// </param>
@@ -12120,6 +14422,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<RestartInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an HBase cluster by calling RestartInstance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartInstanceRequest
         /// </param>
@@ -12133,6 +14440,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return RestartInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an HBase cluster by calling RestartInstance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartInstanceRequest
         /// </param>
@@ -12148,7 +14460,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收账户权限</para>
+        /// <para>Revokes permissions from a wide table account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12206,7 +14518,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收账户权限</para>
+        /// <para>Revokes permissions from a wide table account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12264,7 +14576,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收账户权限</para>
+        /// <para>Revokes permissions from a wide table account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12282,7 +14594,7 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回收账户权限</para>
+        /// <para>Revokes permissions from a wide table account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12298,6 +14610,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await RevokeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchHbaseHaSlbRequest
         /// </param>
@@ -12347,6 +14664,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<SwitchHbaseHaSlbResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchHbaseHaSlbRequest
         /// </param>
@@ -12396,6 +14718,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<SwitchHbaseHaSlbResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchHbaseHaSlbRequest
         /// </param>
@@ -12409,6 +14736,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return SwitchHbaseHaSlbWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a primary/secondary switchover for high-availability Thrift or high-availability Phoenix. This operation corresponds to the CreateHbaseHaSlb operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SwitchHbaseHaSlbRequest
         /// </param>
@@ -12424,8 +14756,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通/关闭 扩展服务</para>
+        /// <para>Enable or disable an extension service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchServiceRequest
@@ -12474,8 +14811,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通/关闭 扩展服务</para>
+        /// <para>Enable or disable an extension service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchServiceRequest
@@ -12524,8 +14866,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通/关闭 扩展服务</para>
+        /// <para>Enable or disable an extension service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchServiceRequest
@@ -12542,8 +14889,13 @@ namespace AlibabaCloud.SDK.HBase20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通/关闭 扩展服务</para>
+        /// <para>Enable or disable an extension service</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Extension service<br>For example: the Lindorm service compatible with the HBaseProxy protocol.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SwitchServiceRequest
@@ -12558,6 +14910,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await SwitchServiceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -12603,6 +14960,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -12648,6 +15010,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -12661,6 +15028,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TagResourcesRequest
         /// </param>
@@ -12674,6 +15046,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await TagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Untags resources. This operation is the counterpart of TagResources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -12723,6 +15100,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UnTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Untags resources. This operation is the counterpart of TagResources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -12772,6 +15154,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UnTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Untags resources. This operation is the counterpart of TagResources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -12785,6 +15172,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return UnTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Untags resources. This operation is the counterpart of TagResources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnTagResourcesRequest
         /// </param>
@@ -12798,6 +15190,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await UnTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMinorVersionRequest
         /// </param>
@@ -12839,6 +15236,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UpgradeMinorVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMinorVersionRequest
         /// </param>
@@ -12880,6 +15282,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UpgradeMinorVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMinorVersionRequest
         /// </param>
@@ -12893,6 +15300,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return UpgradeMinorVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of a cluster by calling UpgradeMinorVersion.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMinorVersionRequest
         /// </param>
@@ -12906,6 +15318,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await UpgradeMinorVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMultiZoneClusterRequest
         /// </param>
@@ -12963,6 +15380,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UpgradeMultiZoneClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMultiZoneClusterRequest
         /// </param>
@@ -13020,6 +15442,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<UpgradeMultiZoneClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMultiZoneClusterRequest
         /// </param>
@@ -13033,6 +15460,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return UpgradeMultiZoneClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upgrades the minor version of components for a multi-zone instance by calling the UpgradeMultiZoneCluster operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeMultiZoneClusterRequest
         /// </param>
@@ -13046,6 +15478,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return await UpgradeMultiZoneClusterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a database by calling XpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// XpackRelateDBRequest
         /// </param>
@@ -13091,6 +15528,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<XpackRelateDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a database by calling XpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// XpackRelateDBRequest
         /// </param>
@@ -13136,6 +15578,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return TeaModel.ToObject<XpackRelateDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a database by calling XpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// XpackRelateDBRequest
         /// </param>
@@ -13149,6 +15596,11 @@ namespace AlibabaCloud.SDK.HBase20190101
             return XpackRelateDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates a database by calling XpackRelateDB.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// XpackRelateDBRequest
         /// </param>

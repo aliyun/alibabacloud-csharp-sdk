@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The UTC time when the backup ends.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18:00Z</para>
         /// </summary>
@@ -28,6 +31,16 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PreferredBackupEndTimeUTC { get; set; }
 
         /// <summary>
+        /// <para>The backup cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Monday: performs backup every Monday.</description></item>
+        /// <item><description>Tuesday: performs backup every Tuesday.</description></item>
+        /// <item><description>Wednesday: performs backup every Wednesday.</description></item>
+        /// <item><description>Thursday: performs backup every Thursday.</description></item>
+        /// <item><description>Friday: performs backup every Friday.</description></item>
+        /// <item><description>Saturday: performs backup every Saturday.</description></item>
+        /// <item><description>Sunday: performs backup every Sunday.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
+        /// <para>The UTC time when the backup starts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17:00Z</para>
         /// </summary>
@@ -46,6 +61,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string PreferredBackupStartTimeUTC { get; set; }
 
         /// <summary>
+        /// <para>The backup time range in the current time zone. The interval is 1 hour.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

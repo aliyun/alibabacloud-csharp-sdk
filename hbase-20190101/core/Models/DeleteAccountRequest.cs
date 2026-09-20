@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the existing account to be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test01</para>
+        /// <para>test01****</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

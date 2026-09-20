@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteMultiZoneClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>169A3910-A39E-4BC2-AA9F-E7AD8D473527</para>
         /// </summary>

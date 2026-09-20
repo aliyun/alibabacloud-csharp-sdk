@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class EnableHBaseueBackupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID of the activated BDS backup service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bds-m5e54q06ceyhxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1449xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15272D5D-46E8-4400-9CC8-A7E7B589F575</para>
         /// </summary>

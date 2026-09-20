@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class AddUserHdfsInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FB0B7918-198C-46A8-AB9B-FE15403B1F0A</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteHBaseHaDBRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the BDS cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string BdsId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the HA instance. You can call the QueryHBaseHaDB operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

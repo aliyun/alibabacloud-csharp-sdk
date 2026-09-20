@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The O&amp;M task IDs. Separate multiple IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/414458.html">DescribeActiveOperationTasks</a> to obtain O&amp;M task IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyInstanceMaintainTimeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance for which you want to modify the O&amp;M window. You can call the <a href="https://help.aliyun.com/document_detail/144595.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the instance O&amp;M window. Specify the time in the HH:mmZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the instance O&amp;M window. Specify the time in the HH:mmZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

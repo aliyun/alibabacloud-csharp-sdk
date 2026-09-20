@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeActiveOperationTaskTypeRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to return historical O&amp;M tasks. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: Returns only the current pending O&amp;M tasks.</description></item>
+        /// <item><description><b>1</b>: Returns historical O&amp;M tasks.</description></item>
+        /// </list>
+        /// <para>Default value: <b>0</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

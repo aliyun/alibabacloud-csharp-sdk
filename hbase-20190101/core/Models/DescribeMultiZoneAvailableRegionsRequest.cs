@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DescribeMultiZoneAvailableRegionsRequest : TeaModel {
         /// <summary>
+        /// <para>The supported language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>zh-CN: Chinese (default)</description></item>
+        /// <item><description>en-US: English</description></item>
+        /// <item><description>ja: Japanese.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>

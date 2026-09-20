@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteHBaseSlbServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7242130A-82CF-49BF-AB32-30DCB819EBA6</para>
         /// </summary>

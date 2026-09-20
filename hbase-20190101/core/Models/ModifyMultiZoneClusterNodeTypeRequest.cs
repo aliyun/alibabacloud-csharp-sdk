@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyMultiZoneClusterNodeTypeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the multi-zone instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The node specifications of the core node. For valid values, refer to DescribeInstanceType.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hbase.sn1.large</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string CoreInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The node specifications of the log node. For valid values, refer to DescribeInstanceType.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hbase.sn1.2xlarge</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string LogInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The node specifications of the master node. For valid values, refer to DescribeInstanceType.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hbase.sn1.8xlarge</para>
         /// </summary>

@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyAccountPasswordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>AFAA617B-3268-5883-982B-DB8EC8CC1F1B</para>
+        /// <para>AFAA617B-3268-5883-982B-DB8EC8C*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

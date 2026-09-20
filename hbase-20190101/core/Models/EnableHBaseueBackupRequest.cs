@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class EnableHBaseueBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cold storage size for the backup service. The minimum value is 800 GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>800</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? ColdStorageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the HBaseue cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string HbaseueClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of backup nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

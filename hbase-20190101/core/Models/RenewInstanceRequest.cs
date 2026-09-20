@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class RenewInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the target instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The renewal epoch for the target instance.</para>
+        /// <list type="bullet">
+        /// <item><description>If PricingCycle is set to <b>year</b>, valid values are 1 to 3.</description></item>
+        /// <item><description>If PricingCycle is set to <b>month</b>, valid values are 1 to 9.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,11 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>The unit of the renewal epoch for the target instance.</para>
+        /// <list type="bullet">
+        /// <item><description><b>year</b>: year.</description></item>
+        /// <item><description><b>month</b>: month.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

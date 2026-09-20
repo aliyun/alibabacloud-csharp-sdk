@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class DeleteUserHdfsInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The value of dfs.nameservices in addUserHdfsInfo. This value is returned when you call the <a href="https://help.aliyun.com/document_detail/144509.html">QueryXpackRelateDB</a> operation with relateDB set to hdfs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

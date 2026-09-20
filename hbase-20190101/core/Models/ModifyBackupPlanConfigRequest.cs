@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
 {
     public class ModifyBackupPlanConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The full backup cycle, in days. Valid values: 3 to 9.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string FullBackupCycle { get; set; }
 
         /// <summary>
+        /// <para>The number of full backups to retain. Valid values: 3 to 8.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string MinHFileBackupCount { get; set; }
 
         /// <summary>
+        /// <para>The time of the next full backup. The specified time must be at least 6 minutes later than the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.HBase20190101.Models
         public string NextFullBackupDate { get; set; }
 
         /// <summary>
+        /// <para>The tables to back up. Specify one table name per line. Wildcards are supported. An asterisk (*) indicates all tables.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
