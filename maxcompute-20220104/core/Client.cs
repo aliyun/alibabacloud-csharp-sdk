@@ -4470,7 +4470,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a MaxCompute project.</para>
+        /// <para>Queries the basic information about a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4524,7 +4524,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a MaxCompute project.</para>
+        /// <para>Queries the basic information about a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4578,7 +4578,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a MaxCompute project.</para>
+        /// <para>Queries the basic information about a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4597,7 +4597,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of a MaxCompute project.</para>
+        /// <para>Queries the basic information about a MaxCompute project.</para>
         /// </summary>
         /// 
         /// <param name="request">
