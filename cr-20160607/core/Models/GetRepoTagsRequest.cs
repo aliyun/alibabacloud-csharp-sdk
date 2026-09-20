@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class GetRepoTagsRequest : TeaModel {
+    public class GetRepoTagsRequest : BaseModel {
         [NameInMap("Page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
