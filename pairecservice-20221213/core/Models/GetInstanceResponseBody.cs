@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. The value is fixed as Subscription.</para>
+        /// <para>The billing type of the instance. Currently, only Subscription (prepayment) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Subscription</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The instance configurations.</para>
+        /// <para>The instance configuration.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
-            /// <para>The list of monitoring components.</para>
+            /// <para>The list of supporting features.</para>
             /// </summary>
             [NameInMap("Monitors")]
             [Validation(Required=false)]
@@ -156,6 +156,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string ExpiredTime { get; set; }
 
+        [NameInMap("FeatureStoreInfo")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyFeatureStoreInfo FeatureStoreInfo { get; set; }
+        public class GetInstanceResponseBodyFeatureStoreInfo : TeaModel {
+            [NameInMap("FeatureDBStatus")]
+            [Validation(Required=false)]
+            public string FeatureDBStatus { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The time when the instance was created.</para>
         /// 
@@ -187,19 +201,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The operating tool configurations.</para>
+        /// <para>The configuration of the operations tool.</para>
         /// </summary>
         [NameInMap("OperatingTool")]
         [Validation(Required=false)]
         public GetInstanceResponseBodyOperatingTool OperatingTool { get; set; }
         public class GetInstanceResponseBodyOperatingTool : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the operating tool is enabled for the instance. Valid values:</para>
+            /// <para>Indicates whether the operations tool is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>True: Enabled</para>
-            /// </description></item>
-            /// <item><description><para>False: Disabled</para>
-            /// </description></item>
+            /// <item><description>True: Enabled.</description></item>
+            /// <item><description>False: Not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,8 +223,24 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         }
 
+        [NameInMap("RecommendCustomization")]
+        [Validation(Required=false)]
+        public GetInstanceResponseBodyRecommendCustomization RecommendCustomization { get; set; }
+        public class GetInstanceResponseBodyRecommendCustomization : TeaModel {
+            [NameInMap("IsEnable")]
+            [Validation(Required=false)]
+            public bool? IsEnable { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The region ID. Valid values:<br>● cn-shenzhen: Shenzhen<br>● cn-hangzhou: Hangzhou<br>● cn-beijing: Beijing<br>● cn-shanghai: Shanghai<br><br><br><br></para>
+        /// <para>The region ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cn-shenzhen: China (Shenzhen).</description></item>
+        /// <item><description>cn-hangzhou: China (Hangzhou).</description></item>
+        /// <item><description>cn-beijing: China (Beijing).</description></item>
+        /// <item><description>cn-shanghai: China (Shanghai).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -232,7 +260,12 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance status. Valid values:<br>● Initializing<br>● Stopped<br>● Running<br><br><br></para>
+        /// <para>The instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Initializing: The instance is being initialized.</description></item>
+        /// <item><description>Stopped: The instance is stopped.</description></item>
+        /// <item><description>Running: The instance is running.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Initializing</para>
@@ -242,7 +275,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values:<br>● basic: Basic<br>● highlevel: High-level<br>● advanced: Advanced<br>● standard: Standard<br><br><br><br></para>
+        /// <para>The instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>basic: Basic Edition.</description></item>
+        /// <item><description>highleve: Upgraded Edition.</description></item>
+        /// <item><description>advance: Advanced Edition.</description></item>
+        /// <item><description>standard: Standard Edition.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>
