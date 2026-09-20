@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter instances.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

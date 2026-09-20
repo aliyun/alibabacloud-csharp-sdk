@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The reason for the modification.</para>
+        /// <para>The reason for the update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The custom user configuration.</para>
+        /// <para>The user-defined configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dataCoord:\n  segment:\n    maxSize: 1024</para>

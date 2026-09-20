@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details for an access denial error.</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;SubUser&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;milvus:xxxx&quot; }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>An array of instance objects.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public bool? AutoBackup { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the instance.</para>
+            /// <para>The start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1718608505000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public ListInstancesResponseBodyDataClusterInfo ClusterInfo { get; set; }
             public class ListInstancesResponseBodyDataClusterInfo : TeaModel {
                 /// <summary>
-                /// <para>The Attu port.</para>
+                /// <para>The port of the Attu component.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public string IntranetUrl { get; set; }
 
                 /// <summary>
-                /// <para>A list of resource details for the instance\&quot;s components.</para>
+                /// <para>The resource details.</para>
                 /// </summary>
                 [NameInMap("MilvusResourceInfoList")]
                 [Validation(Required=false)]
@@ -93,18 +93,12 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                     /// <summary>
                     /// <para>The component type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>standalone</c></para>
-                    /// </description></item>
-                    /// <item><description><para><c>proxy</c></para>
-                    /// </description></item>
-                    /// <item><description><para><c>mix_coordinator</c></para>
-                    /// </description></item>
-                    /// <item><description><para><c>query</c></para>
-                    /// </description></item>
-                    /// <item><description><para><c>index</c></para>
-                    /// </description></item>
-                    /// <item><description><para><c>data</c></para>
-                    /// </description></item>
+                    /// <item><description>standalone</description></item>
+                    /// <item><description>proxy</description></item>
+                    /// <item><description>mix_coordinator</description></item>
+                    /// <item><description>query</description></item>
+                    /// <item><description>index</description></item>
+                    /// <item><description>data</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -125,7 +119,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                     public int? CuNum { get; set; }
 
                     /// <summary>
-                    /// <para>The disk size in GB.</para>
+                    /// <para>The disk size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -167,7 +161,17 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? ProxyPort { get; set; }
 
                 /// <summary>
-                /// <para>The total number of CUs.</para>
+                /// <para>The ID of the resource owner account.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1234567890123456</para>
+                /// </summary>
+                [NameInMap("ResourceOwnerId")]
+                [Validation(Required=false)]
+                public string ResourceOwnerId { get; set; }
+
+                /// <summary>
+                /// <para>The number of CUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
@@ -177,7 +181,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public int? TotalCuNum { get; set; }
 
                 /// <summary>
-                /// <para>The total disk size in GB.</para>
+                /// <para>The total disk size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -199,7 +203,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the instance.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721232000000</para>
@@ -221,18 +225,12 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             /// <summary>
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>creating</c>: The instance is being created.</para>
-            /// </description></item>
-            /// <item><description><para><c>running</c>: The instance is running.</para>
-            /// </description></item>
-            /// <item><description><para><c>updating</c>: The instance is being updated. This includes scaling the instance, changing configurations, or modifying public network access.</para>
-            /// </description></item>
-            /// <item><description><para><c>disable</c>: The instance is unavailable because it has expired and requires renewal.</para>
-            /// </description></item>
-            /// <item><description><para><c>deleting</c>: The instance is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><c>deleted</c>: The instance has been deleted.</para>
-            /// </description></item>
+            /// <item><description>creating: Being created.</description></item>
+            /// <item><description>running: Running.</description></item>
+            /// <item><description>updating: Being upgraded. This includes specification changes, configuration changes, and enabling or disabling public network access.</description></item>
+            /// <item><description>disable: Unavailable. The cluster has expired and requires renewal to reactivate.</description></item>
+            /// <item><description>deleting: Being deleted.</description></item>
+            /// <item><description>deleted: Deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,12 +261,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public bool? OpenPublicNet { get; set; }
 
             /// <summary>
-            /// <para>The instance edition. Valid values:</para>
+            /// <para>The edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>trial</c>: Trial Edition.</para>
-            /// </description></item>
-            /// <item><description><para><c>standard</c>: Standard Edition.</para>
-            /// </description></item>
+            /// <item><description>trial: Trial Edition.</description></item>
+            /// <item><description>standard: Standard Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,12 +275,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>0</c>: pay-as-you-go.</para>
-            /// </description></item>
-            /// <item><description><para><c>1</c>: subscription.</para>
-            /// </description></item>
+            /// <item><description>0: Pay-as-you-go.</description></item>
+            /// <item><description>1: Subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -295,7 +289,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public int? PayType { get; set; }
 
             /// <summary>
-            /// <para>The product code.</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>milvus_milvuspre_public_cn</para>
@@ -325,7 +319,17 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The duration the instance has been running.</para>
+            /// <para>The ID of the resource owner account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1234567890123456</para>
+            /// </summary>
+            [NameInMap("ResourceOwnerId")]
+            [Validation(Required=false)]
+            public string ResourceOwnerId { get; set; }
+
+            /// <summary>
+            /// <para>The running time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>536611</para>
@@ -345,14 +349,14 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string SgId { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the instance.</para>
+            /// <para>The tag information.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataTags> Tags { get; set; }
             public class ListInstancesResponseBodyDataTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The key of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
@@ -362,7 +366,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -373,16 +377,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
             }
 
-            /// <summary>
-            /// <para>The template version.</para>
-            /// </summary>
             [NameInMap("TemplateVersion")]
             [Validation(Required=false)]
             public string TemplateVersion { get; set; }
 
-            /// <summary>
-            /// <para>The instance version.</para>
-            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
@@ -408,7 +406,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             public string VswId { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-g</para>
@@ -470,7 +468,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances found.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

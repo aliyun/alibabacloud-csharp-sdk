@@ -1611,7 +1611,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Milvus instances in the current account.</para>
+        /// <para>Retrieves the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1687,7 +1687,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Milvus instances in the current account.</para>
+        /// <para>Retrieves the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1763,7 +1763,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Milvus instances in the current account.</para>
+        /// <para>Retrieves the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1782,7 +1782,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of Milvus instances in the current account.</para>
+        /// <para>Retrieves the list of Milvus instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,7 +2007,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters for Milvus components.</para>
+        /// <para>Updates the configuration parameters of various Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2061,7 +2061,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters for Milvus components.</para>
+        /// <para>Updates the configuration parameters of various Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2115,7 +2115,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters for Milvus components.</para>
+        /// <para>Updates the configuration parameters of various Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2134,7 +2134,7 @@ namespace AlibabaCloud.SDK.Milvus20231012
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration parameters for Milvus components.</para>
+        /// <para>Updates the configuration parameters of various Milvus components.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags used to filter instances.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
