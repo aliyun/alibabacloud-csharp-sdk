@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 {
     public class CreateTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The AppKey of the project that you created in the console.</para>
+        /// <para>The AppKey of the project created in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JV1sRTisRMi****</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>The basic input parameters for creating a task. The required parameters vary based on the task type.</para>
+        /// <para>The basic parameters set when creating a task. The required parameters vary depending on the task type.</para>
         /// <list type="bullet">
-        /// <item><description><para>For an offline task (<c>type=&quot;offline&quot;</c>), you must specify the <c>SourceLanguage</c> and <c>FileUrl</c> parameters.</para>
+        /// <item><description><para>When type=offline (offline task), you must set the SourceLanguage and FileUrl parameters.</para>
         /// </description></item>
-        /// <item><description><para>For a real-time task (<c>type=&quot;realtime&quot;</c>), you must also specify the <c>SourceLanguage</c>, <c>Format</c>, and <c>SampleRate</c> parameters.</para>
+        /// <item><description><para>When type=realtime (real-time meeting task), you must additionally set the SourceLanguage, Format, and SampleRate parameters.</para>
         /// </description></item>
         /// </list>
         /// </summary>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public CreateTaskRequestInput Input { get; set; }
         public class CreateTaskRequestInput : TeaModel {
             /// <summary>
-            /// <para>Multi-channel audio or video processing mode.</para>
+            /// <para>The multi-channel audio and video processing mode.</para>
             /// </summary>
             [NameInMap("AudioChannelMode")]
             [Validation(Required=false)]
             public string AudioChannelMode { get; set; }
 
             /// <summary>
-            /// <para>The HTTP or HTTPS URL of the source audio or video file. This parameter is required when you create an offline transcription task.</para>
+            /// <para>The HTTP or HTTPS URL of the original audio or video file. This parameter is required when you create an offline transcription task.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></para>
@@ -50,18 +50,13 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>The encoding format of the audio stream data. This parameter is required when you create a real-time recording task. The following values are supported:</para>
+            /// <para>The encoding format of the audio stream data when you create a real-time meeting, such as pcm. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>pcm</b></para>
-            /// </description></item>
-            /// <item><description><para><b>opus</b></para>
-            /// </description></item>
-            /// <item><description><para><b>aac</b></para>
-            /// </description></item>
-            /// <item><description><para><b>speex</b></para>
-            /// </description></item>
-            /// <item><description><para><b>mp3</b></para>
-            /// </description></item>
+            /// <item><description><b>pcm</b></description></item>
+            /// <item><description><b>opus</b></description></item>
+            /// <item><description><b>aac</b></description></item>
+            /// <item><description><b>speex</b></description></item>
+            /// <item><description><b>mp3</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,14 +67,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>Preferred languages. This applies only when SourceLanguage is multilingual. It restricts the output language of the model.</para>
+            /// <para>The preferred languages. This parameter takes effect only when SourceLanguage is set to &quot;multilingual&quot;. It restricts the output languages of the model.</para>
             /// </summary>
             [NameInMap("LanguageHints")]
             [Validation(Required=false)]
             public List<string> LanguageHints { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable multi-channel audio stream recognition. This parameter applies only to real-time recording scenarios. The default value is <c>false</c>.</para>
+            /// <para>Specifies whether to enable multi-channel audio stream recognition. This parameter needs to be set only in real-time recording scenarios. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -89,14 +84,15 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? MultipleStreamsEnabled { get; set; }
 
             /// <summary>
-            /// <para>After you configure OSS settings in the console, specify an OSS path to save results directly to your OSS bucket.</para>
+            /// <para>After configuring OSS information in the console, you can specify an OSS write path to save results directly to your custom OSS bucket.</para>
             /// </summary>
             [NameInMap("OutputPath")]
             [Validation(Required=false)]
             public string OutputPath { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable callbacks. To receive callbacks, you must configure the callback type and URL in the console and set this parameter to <c>true</c>.</para>
+            /// <para>Specifies whether to enable the callback feature.
+            /// To enable the callback feature, configure the callback type and address in the console, and set this parameter to true when creating a task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -106,12 +102,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? ProgressiveCallbacksEnabled { get; set; }
 
             /// <summary>
-            /// <para>The sample rate of the audio stream data. This parameter is required when you create a real-time recording task. The supported values are 8000 and 16000.</para>
+            /// <para>The sample rate of the audio stream data when you create a real-time meeting. Valid values: 8000 and 16000.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>8000</b>: Suitable for telephony and customer service scenarios.</para>
-            /// </description></item>
-            /// <item><description><para><b>16000</b>: Suitable for real-time meeting audio capture scenarios.</para>
-            /// </description></item>
+            /// <item><description><b>8000</b>: telephone customer service scenarios.</description></item>
+            /// <item><description><b>16000</b>: real-time meeting audio capture scenarios.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,18 +116,13 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public int? SampleRate { get; set; }
 
             /// <summary>
-            /// <para>The language model for speech transcription. The following values are supported:</para>
+            /// <para>The language model used for audio transcription. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>cn</b>: Chinese</para>
-            /// </description></item>
-            /// <item><description><para><b>en</b>: English</para>
-            /// </description></item>
-            /// <item><description><para><b>fspk</b>: Chinese-English code-switching</para>
-            /// </description></item>
-            /// <item><description><para><b>ja</b>: Japanese</para>
-            /// </description></item>
-            /// <item><description><para><b>yue</b>: Cantonese</para>
-            /// </description></item>
+            /// <item><description><b>cn</b>: Chinese</description></item>
+            /// <item><description><b>en</b>: English</description></item>
+            /// <item><description><b>fspk</b>: Chinese-English free speaking</description></item>
+            /// <item><description><b>ja</b>: Japanese</description></item>
+            /// <item><description><b>yue</b>: Cantonese</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -145,7 +134,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string SourceLanguage { get; set; }
 
             /// <summary>
-            /// <para>The task ID that is returned when you create a real-time recording. This ID is required to stop the recording. Specify this parameter only when stopping a real-time recording.</para>
+            /// <para>The TaskId returned when you create a real-time recording. You can use this ID to end the real-time recording. Set this parameter only when ending a real-time recording. Do not set it at other times.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9922c84c087044eda18659c128b56c84</para>
@@ -155,7 +144,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>A custom identifier that you can set for the task.</para>
+            /// <para>The custom identifier set by the user to associate with this task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task_tingwu_123</para>
@@ -167,7 +156,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
-        /// <para>Algorithm-related parameters for customizing task processing.</para>
+        /// <para>The algorithm-related parameters set when creating a task. You can set these as needed.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -184,7 +173,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to generate a chapter summary, which includes chapter titles and summaries for each chapter.</para>
+            /// <para>Specifies whether to enable the chapter overview feature. When enabled, chapter titles and chapter summaries are generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -194,21 +183,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? AutoChaptersEnabled { get; set; }
 
             /// <summary>
-            /// <para>Conversation content extraction parameters.</para>
+            /// <para>The conversation content extraction parameter object.</para>
             /// </summary>
             [NameInMap("ContentExtraction")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersContentExtraction ContentExtraction { get; set; }
             public class CreateTaskRequestParametersContentExtraction : TeaModel {
                 /// <summary>
-                /// <para>List of content extraction dimensions. Each dimension includes a name and definition.</para>
+                /// <para>The list of extraction dimensions for conversation content extraction, including the name and definition of each extraction item.</para>
                 /// </summary>
                 [NameInMap("ExtractionContents")]
                 [Validation(Required=false)]
                 public List<CreateTaskRequestParametersContentExtractionExtractionContents> ExtractionContents { get; set; }
                 public class CreateTaskRequestParametersContentExtractionExtractionContents : TeaModel {
                     /// <summary>
-                    /// <para>Definition of the content extraction dimension.</para>
+                    /// <para>The extraction dimension definition for conversation content extraction.</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
@@ -219,7 +208,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                     public string Identity { get; set; }
 
                     /// <summary>
-                    /// <para>Name of the content extraction dimension.</para>
+                    /// <para>The extraction dimension name for conversation content extraction.</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -228,7 +217,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 }
 
                 /// <summary>
-                /// <para>Description of the conversation scenario for content extraction.</para>
+                /// <para>The scene description for conversation content extraction.</para>
                 /// </summary>
                 [NameInMap("SceneIntroduction")]
                 [Validation(Required=false)]
@@ -240,26 +229,29 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
 
             }
 
+            /// <summary>
+            /// <para>The business user ID.</para>
+            /// </summary>
             [NameInMap("ContentExtractionEnabled")]
             [Validation(Required=false)]
             public bool? ContentExtractionEnabled { get; set; }
 
             /// <summary>
-            /// <para>Parameters to control the custom prompt feature.</para>
+            /// <para>The custom prompt control parameter object.</para>
             /// </summary>
             [NameInMap("CustomPrompt")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersCustomPrompt CustomPrompt { get; set; }
             public class CreateTaskRequestParametersCustomPrompt : TeaModel {
                 /// <summary>
-                /// <para>A list of custom prompt parameters.</para>
+                /// <para>The list of custom prompt parameters.</para>
                 /// </summary>
                 [NameInMap("Contents")]
                 [Validation(Required=false)]
                 public List<CreateTaskRequestParametersCustomPromptContents> Contents { get; set; }
                 public class CreateTaskRequestParametersCustomPromptContents : TeaModel {
                     /// <summary>
-                    /// <para>The model to use for the prompt.</para>
+                    /// <para>The model specified for the prompt.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>tingwu-turbo</para>
@@ -269,7 +261,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                     public string Model { get; set; }
 
                     /// <summary>
-                    /// <para>A custom name for the prompt, used to identify the corresponding output.</para>
+                    /// <para>The custom name of the prompt, used to match output results.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -280,18 +272,18 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The content of the custom prompt.</para>
+                    /// <para>The custom content of the prompt.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>总结一下下面的对话内容:{Transcription}</para>
+                    /// <para>Summarize the following conversation:{Transcription}</para>
                     /// </summary>
                     [NameInMap("Prompt")]
                     [Validation(Required=false)]
                     public string Prompt { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies the format for the <c>{Transcription}</c> tag.</para>
+                    /// <para>The format of the {Transcription} tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>default</para>
@@ -305,7 +297,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the custom prompt feature.</para>
+            /// <para>Specifies whether to enable the custom prompt feature. When enabled, you can enter a personalized custom prompt.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -315,7 +307,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? CustomPromptEnabled { get; set; }
 
             /// <summary>
-            /// <para>Extended parameters for advanced use cases. You do not typically need to configure these parameters.</para>
+            /// <para>The extra parameters. In most cases, you do not need to set this parameter.</para>
             /// </summary>
             [NameInMap("ExtraParams")]
             [Validation(Required=false)]
@@ -326,21 +318,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public bool? DomainEducationEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Full-text summary format.</para>
+                /// <para>The return format of the full-text summary.</para>
                 /// </summary>
                 [NameInMap("FullTextSummaryFormat")]
                 [Validation(Required=false)]
                 public string FullTextSummaryFormat { get; set; }
 
                 /// <summary>
-                /// <para>Maximum number of keywords.</para>
+                /// <para>The number of keywords to extract.</para>
                 /// </summary>
                 [NameInMap("MaxKeywords")]
                 [Validation(Required=false)]
                 public int? MaxKeywords { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable nfix. You do not typically need to configure this parameter.</para>
+                /// <para>Specifies whether to enable Nfix. In most cases, you do not need to set this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -357,10 +349,16 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? TranslateLlmSceneEnabled { get; set; }
 
+                /// <summary>
+                /// <para>The translation hotword configuration.</para>
+                /// </summary>
                 [NameInMap("TranslationHotwordMap")]
                 [Validation(Required=false)]
                 public CreateTaskRequestParametersExtraParamsTranslationHotwordMap TranslationHotwordMap { get; set; }
                 public class CreateTaskRequestParametersExtraParamsTranslationHotwordMap : TeaModel {
+                    /// <summary>
+                    /// <para>The business scenario type.</para>
+                    /// </summary>
                     [NameInMap("bizType")]
                     [Validation(Required=false)]
                     public string BizType { get; set; }
@@ -374,28 +372,28 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Identity recognition parameters.</para>
+            /// <para>The identity recognition parameter object.</para>
             /// </summary>
             [NameInMap("IdentityRecognition")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersIdentityRecognition IdentityRecognition { get; set; }
             public class CreateTaskRequestParametersIdentityRecognition : TeaModel {
                 /// <summary>
-                /// <para>List of identities, including identity name and description.</para>
+                /// <para>The list of identity contents for identity recognition, including the identity name and description.</para>
                 /// </summary>
                 [NameInMap("IdentityContents")]
                 [Validation(Required=false)]
                 public List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> IdentityContents { get; set; }
                 public class CreateTaskRequestParametersIdentityRecognitionIdentityContents : TeaModel {
                     /// <summary>
-                    /// <para>Identity description.</para>
+                    /// <para>The identity description.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Identity name.</para>
+                    /// <para>The identity name.</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -404,7 +402,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 }
 
                 /// <summary>
-                /// <para>Description of the scenario for identity recognition.</para>
+                /// <para>The scene description for identity recognition.</para>
                 /// </summary>
                 [NameInMap("SceneIntroduction")]
                 [Validation(Required=false)]
@@ -413,7 +411,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Enable identity recognition.</para>
+            /// <para>Specifies whether to enable the identity recognition feature.</para>
             /// </summary>
             [NameInMap("IdentityRecognitionEnabled")]
             [Validation(Required=false)]
@@ -424,14 +422,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string LlmOutputLanguage { get; set; }
 
             /// <summary>
-            /// <para>Parameters for the intelligent minutes feature, which supports processing for action items, keywords, and key points. If <c>MeetingAssistanceEnabled</c> is set to <c>true</c> but you do not specify this object, all analysis types are enabled by default.</para>
+            /// <para>The control parameters for the intelligent meeting notes feature, which supports algorithm processing for action items, keywords, and key content. If you enable MeetingAssistanceEnabled but do not specify algorithm types through MeetingAssistance, all types are called and returned by default.</para>
             /// </summary>
             [NameInMap("MeetingAssistance")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersMeetingAssistance MeetingAssistance { get; set; }
             public class CreateTaskRequestParametersMeetingAssistance : TeaModel {
                 /// <summary>
-                /// <para>The types of analysis to perform when the intelligent minutes feature is enabled. Supported values: <c>Actions</c> (action items) and <c>KeyInformation</c> (key information, including keywords and key points).</para>
+                /// <para>When the intelligent meeting notes feature is enabled, pass in the expected feature parameter types. Supported types: action items (Actions) and key information (KeyInformation). Key information includes keywords and key content (key sentences).</para>
                 /// </summary>
                 [NameInMap("Types")]
                 [Validation(Required=false)]
@@ -440,7 +438,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to generate intelligent minutes, which include keywords, key points, and action items.</para>
+            /// <para>Specifies whether to enable the intelligent meeting notes feature. When enabled, results such as keywords, key content, and action items are generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -454,7 +452,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable PPT extraction. If enabled, the service extracts slides from the video file and generates corresponding summaries. This feature applies only to offline transcription tasks with a video source file and has no effect on other task types.</para>
+            /// <para>Specifies whether to enable PPT extraction and PPT summarization. When enabled, PPT frames are extracted from the video file and corresponding summaries are generated. Enable this parameter only for offline transcription when the source file is a video file. Results cannot be generated in real-time recording scenarios or offline transcription scenarios where the source file is audio only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -464,28 +462,28 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? PptExtractionEnabled { get; set; }
 
             /// <summary>
-            /// <para>Service quality inspection parameters.</para>
+            /// <para>The service inspection parameter object.</para>
             /// </summary>
             [NameInMap("ServiceInspection")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersServiceInspection ServiceInspection { get; set; }
             public class CreateTaskRequestParametersServiceInspection : TeaModel {
                 /// <summary>
-                /// <para>List of inspection dimensions for service quality inspection. Each dimension includes a name and definition, which tells the Large Language Model how to evaluate whether the dimension is met.</para>
+                /// <para>The list of inspection dimensions for service inspection, including the dimension name and definition. The definition specifies the criteria that the large language model uses to determine whether a dimension is matched.</para>
                 /// </summary>
                 [NameInMap("InspectionContents")]
                 [Validation(Required=false)]
                 public List<CreateTaskRequestParametersServiceInspectionInspectionContents> InspectionContents { get; set; }
                 public class CreateTaskRequestParametersServiceInspectionInspectionContents : TeaModel {
                     /// <summary>
-                    /// <para>Definition of the inspection dimension.</para>
+                    /// <para>The inspection dimension definition for service inspection.</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>Name of the inspection dimension.</para>
+                    /// <para>The inspection dimension name for service inspection.</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -494,14 +492,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 }
 
                 /// <summary>
-                /// <para>Description of the inspection goals and focus areas for service quality inspection.</para>
+                /// <para>The description of the inspection target and focus for service inspection.</para>
                 /// </summary>
                 [NameInMap("InspectionIntroduction")]
                 [Validation(Required=false)]
                 public string InspectionIntroduction { get; set; }
 
                 /// <summary>
-                /// <para>Description of the conversation scenario for service quality inspection.</para>
+                /// <para>The conversation scene description for service inspection.</para>
                 /// </summary>
                 [NameInMap("SceneIntroduction")]
                 [Validation(Required=false)]
@@ -514,21 +512,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Enable service quality inspection. Default is false.</para>
+            /// <para>Specifies whether to enable the service inspection feature. Default value: false.</para>
             /// </summary>
             [NameInMap("ServiceInspectionEnabled")]
             [Validation(Required=false)]
             public bool? ServiceInspectionEnabled { get; set; }
 
             /// <summary>
-            /// <para>Parameters for the summarization feature.</para>
+            /// <para>The summarization control parameters.</para>
             /// </summary>
             [NameInMap("Summarization")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersSummarization Summarization { get; set; }
             public class CreateTaskRequestParametersSummarization : TeaModel {
                 /// <summary>
-                /// <para>The types of summaries to generate. This parameter is required when summarization is enabled. Supported types include <c>Paragraph</c> (full-text summary), <c>Conversational</c> (speaker summary), and <c>QuestionsAnswering</c> (Q\&amp;A summary).</para>
+                /// <para>When the summarization feature is enabled, pass in the expected summarization types. Supported types: full-text summary (Paragraph), speaker summary (Conversational), and Q&amp;A review summary (QuestionsAnswering).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Paragraph</para>
@@ -540,7 +538,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the summarization feature, which can generate results such as a full-text summary and a speaker summary.</para>
+            /// <para>Specifies whether to enable the summarization feature. When enabled, results such as full-text summaries and speaker summaries can be generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -550,7 +548,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? SummarizationEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the spoken-to-written conversion feature.</para>
+            /// <para>Specifies whether to enable the spoken-to-written text conversion feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -560,14 +558,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public bool? TextPolishEnabled { get; set; }
 
             /// <summary>
-            /// <para>Parameters for transcoding source audio/video files or audio streams.</para>
+            /// <para>The audio/video or audio stream transcoding module.</para>
             /// </summary>
             [NameInMap("Transcoding")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranscoding Transcoding { get; set; }
             public class CreateTaskRequestParametersTranscoding : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to generate and save an audio waveform from the source audio/video file or audio stream. This parameter is optional for offline transcription and real-time recording tasks.</para>
+                /// <para>Specifies whether to generate an audio waveform from the original audio/video file or audio stream and save it. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -577,7 +575,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public bool? SpectrumEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the target format for the transcoded audio. Set to <c>mp3</c> to transcode the source audio into MP3 format for storage. This parameter is optional for offline transcription and real-time recording tasks.</para>
+                /// <para>Specifies whether to convert the original audio/video file or audio stream to MP3 format for storage. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mp3</para>
@@ -587,7 +585,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string TargetAudioFormat { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the target format for the transcoded video. Set to <c>mp4</c> to transcode the source video into MP4 format for storage. This parameter applies only to offline transcription tasks with a video source file.</para>
+                /// <para>Specifies whether to convert the original video file to MP4 format for storage. Currently, only MP4 format is supported. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mp4</para>
@@ -597,7 +595,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string TargetVideoFormat { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to extract and save video thumbnails from the source video file. This parameter applies only to offline transcription tasks with a video source file.</para>
+                /// <para>Specifies whether to extract video thumbnails from the original video file and save them. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -609,21 +607,21 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Parameters to control the speech transcription process.</para>
+            /// <para>The speech transcription control parameters.</para>
             /// </summary>
             [NameInMap("Transcription")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranscription Transcription { get; set; }
             public class CreateTaskRequestParametersTranscription : TeaModel {
                 /// <summary>
-                /// <para>Specifies the level of detail for speech transcription results for the active speaker in a real-time recording scenario.</para>
+                /// <para>Sets the output level for speech recognition results of the active speaker in real-time recording scenarios.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Returns results only when a complete sentence is recognized.</para>
+                /// <item><description><para><b>1</b>: Returns results when a complete sentence is recognized.</para>
                 /// </description></item>
-                /// <item><description><para><b>2</b>: Returns both intermediate and final results as they are recognized.</para>
+                /// <item><description><para><b>2</b>: Returns results for both intermediate results and complete sentences.</para>
                 /// </description></item>
                 /// </list>
-                /// <para>This parameter applies only to real-time recordings when <c>MultipleStreamsEnabled</c> is set to <c>true</c>.</para>
+                /// <para>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -633,7 +631,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public int? AdditionalStreamOutputLevel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable sound event detection, which identifies non-speech events in the audio, such as music.</para>
+                /// <para>Specifies whether to enable audio event detection during speech transcription to determine whether events such as music exist in the audio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -643,17 +641,17 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public bool? AudioEventDetectionEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Parameters for the speaker diarization feature.</para>
+                /// <para>The speaker diarization parameters.</para>
                 /// </summary>
                 [NameInMap("Diarization")]
                 [Validation(Required=false)]
                 public CreateTaskRequestParametersTranscriptionDiarization Diarization { get; set; }
                 public class CreateTaskRequestParametersTranscriptionDiarization : TeaModel {
                     /// <summary>
-                    /// <para>Specifies the number of speakers to identify.</para>
-                    /// <para>If this parameter is not set, speakers are not differentiated in the transcript.</para>
-                    /// <para>Set the value to <c>0</c> to identify an unknown number of speakers.</para>
-                    /// <para>Set the value to <c>2</c> to identify two speakers.</para>
+                    /// <para>Sets the speaker diarization parameter.</para>
+                    /// <para>If not set: speaker role differentiation is not used. </para>
+                    /// <para>0: the number of speakers is undetermined.</para>
+                    /// <para>2: the number of speakers is 2.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -674,23 +672,26 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public bool? DiarizationEnabled { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to enable disfluency removal during speech transcription. Enabled by default.</para>
+                /// </summary>
                 [NameInMap("DisfluencyEnabled")]
                 [Validation(Required=false)]
                 public bool? DisfluencyEnabled { get; set; }
 
                 /// <summary>
-                /// <para>Set the speech transcription model to improve accuracy for specific domains.</para>
+                /// <para>Sets the speech transcription model to improve transcription accuracy in specific domains.</para>
                 /// </summary>
                 [NameInMap("Model")]
                 [Validation(Required=false)]
                 public string Model { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the level of detail for the speech transcription results. Default value: <c>1</c>.</para>
+                /// <para>Sets the output level for speech recognition results. Default value: 1.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Returns results only when a complete sentence is recognized.</para>
+                /// <item><description><para><b>1</b>: Returns results when a complete sentence is recognized.</para>
                 /// </description></item>
-                /// <item><description><para><b>2</b>: Returns both intermediate and final results as they are recognized.</para>
+                /// <item><description><para><b>2</b>: Returns results for both intermediate results and complete sentences.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -701,8 +702,12 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 [Validation(Required=false)]
                 public int? OutputLevel { get; set; }
 
+                [NameInMap("Phrase")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Phrase { get; set; }
+
                 /// <summary>
-                /// <para>The ID of the hotword list.</para>
+                /// <para>The vocabulary ID of the hot words.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ce9c2a34b6d847bf92a77d0a196f****</para>
@@ -712,7 +717,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public string PhraseId { get; set; }
 
                 /// <summary>
-                /// <para>Enable sensitive word filtering during speech transcription. Enabled by default.</para>
+                /// <para>Specifies whether to enable profanity filtering during speech transcription. Enabled by default.</para>
                 /// </summary>
                 [NameInMap("ProfanityFilterEnabled")]
                 [Validation(Required=false)]
@@ -725,21 +730,19 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             }
 
             /// <summary>
-            /// <para>Parameters to control the translation feature.</para>
+            /// <para>The translation control parameters.</para>
             /// </summary>
             [NameInMap("Translation")]
             [Validation(Required=false)]
             public CreateTaskRequestParametersTranslation Translation { get; set; }
             public class CreateTaskRequestParametersTranslation : TeaModel {
                 /// <summary>
-                /// <para>Specifies the level of detail for real-time translation results for the active speaker.</para>
+                /// <para>Sets the output level for translation results of the active speaker in real-time recording scenarios.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Returns results only for complete sentences.</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: Returns both intermediate and final results.</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: Returns results when a complete sentence is recognized.</description></item>
+                /// <item><description><b>2</b>: Returns results for both intermediate results and complete sentences.</description></item>
                 /// </list>
-                /// <para>This parameter applies only to real-time recordings when <c>MultipleStreamsEnabled</c> is set to <c>true</c>.</para>
+                /// <para>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -749,14 +752,12 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public int? AdditionalStreamOutputLevel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies the level of detail for real-time translation results. Default value: <c>1</c>.</para>
+                /// <para>Sets the output level for real-time translation results. Default value: 1.</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Returns results only for complete sentences.</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: Returns both intermediate and final results.</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: Returns results when a complete sentence is recognized.</description></item>
+                /// <item><description><b>2</b>: Returns results for both intermediate results and complete sentences.</description></item>
                 /// </list>
-                /// <para>This parameter applies only to real-time recordings.</para>
+                /// <para>Set this parameter as needed only in real-time recording scenarios. This parameter does not need to be set for offline transcription scenarios.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -766,12 +767,15 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
                 public int? OutputLevel { get; set; }
 
                 /// <summary>
-                /// <para>The target languages for translation. This parameter is required if translation is enabled. Supported languages include Chinese, English, and Japanese.</para>
+                /// <para>The target languages to set when the translation feature is enabled. Chinese, English, and Japanese are supported.</para>
                 /// </summary>
                 [NameInMap("TargetLanguages")]
                 [Validation(Required=false)]
                 public List<string> TargetLanguages { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to use large language model-based translation. Default value: false.</para>
+                /// </summary>
                 [NameInMap("TranslateLlmSceneEnabled")]
                 [Validation(Required=false)]
                 public bool? TranslateLlmSceneEnabled { get; set; }
@@ -791,13 +795,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
-        /// <para>The operation to perform. Valid values:</para>
+        /// <para>The operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>start</b>: Creates a task. This is the default value and does not typically need to be set.</para>
-        /// </description></item>
-        /// <item><description><para><b>stop</b>: Stops a real-time recording task. This value is used only for real-time tasks. To end the recording, set this parameter to <c>stop</c>.</para>
-        /// </description></item>
+        /// <item><description>start: creates a task. This is the default value. In most cases, you do not need to explicitly set this parameter.</description></item>
+        /// <item><description>stop: stops a real-time meeting task. This value is used in real-time meeting scenarios. After a meeting ends, set this parameter to stop and trigger the call.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Note: When ending a real-time recording, you must set this parameter to stop.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>stop</para>
@@ -807,12 +812,10 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>offline</b>: An offline task, such as an offline transcription.</para>
-        /// </description></item>
-        /// <item><description><para><b>realtime</b>: A real-time task, such as a real-time recording.</para>
-        /// </description></item>
+        /// <item><description><b>offline</b>: offline task, such as offline transcription.</description></item>
+        /// <item><description><b>realtime</b>: real-time task, such as creating a real-time recording.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -19,10 +19,6 @@ namespace AlibabaCloud.SDK.Tingwu20230930
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-beijing", "tingwu.cn-beijing.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("tingwu", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
+        /// <para>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107,7 +103,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
+        /// <para>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
+        /// <para>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -190,7 +186,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create offline transcription and real-time meeting tasks in Tingwu.</para>
+        /// <para>Creates a Tingwu task, including offline transcription tasks and real-time meeting tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">

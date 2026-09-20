@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateTaskResponseBodyData Data { get; set; }
         public class CreateTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The stream ingestion URL. Push audio streams to this URL for real-time transcription.</para>
+            /// <para>The audio stream push URL generated in the real-time recording scenario. You can use this URL for subsequent real-time audio stream recognition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wss://tingwu-realtime-cn-beijing.aliyuncs.com/api/ws/v1?mc=****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The custom identifier specified during task creation.</para>
+            /// <para>The custom identifier set by the user when creating the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task_tingwu_123</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         }
 
         /// <summary>
-        /// <para>The status message.</para>
+        /// <para>The status description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Tingwu20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used for troubleshooting only.</para>
+        /// <para>The request ID, used only for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35124E1C-AE99-5D6C-A52E-BD689D8D****</para>
