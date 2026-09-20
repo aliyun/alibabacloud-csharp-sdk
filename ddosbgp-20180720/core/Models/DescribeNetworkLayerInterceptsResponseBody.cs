@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? InterceptCount { get; set; }
 
             /// <summary>
-            /// <para>The end time of the interception.</para>
+            /// <para>The interception end time.</para>
             /// <remarks>
             /// <para>The value is a Unix/POSIX timestamp. Unit: seconds.</para>
             /// </remarks>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string InterceptModule { get; set; }
 
             /// <summary>
-            /// <para>The start time of the interception.</para>
+            /// <para>The interception start time.</para>
             /// <remarks>
             /// <para>The value is a Unix/POSIX timestamp. Unit: seconds.</para>
             /// </remarks>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of interception logs that match the current filter conditions.</para>
+        /// <para>The total number of interception log entries that match the current filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17</para>

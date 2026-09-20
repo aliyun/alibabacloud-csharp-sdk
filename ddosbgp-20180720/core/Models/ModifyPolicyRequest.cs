@@ -12,28 +12,28 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The action type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>10</b>: Modifies the name (Name is required).</description></item>
-        /// <item><description><b>11</b>: Modifies the blacklist timeout period (BlackIpListExpireAt is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>12</b>: Modifies the switch for whitelisting back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (WhitenGfbrNets is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>13</b>: Modifies the switch for ICMP Blocking (EnableDropIcmp is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>20</b>: Adds blacklist and whitelist entries (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>21</b>: Deletes blacklist and whitelist entries (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>22</b>: Clears the whitelist. Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>23</b>: Clears the blacklist. Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>30</b>: Modifies the AI-based intelligent protection switch and level (EnableIntelligence and IntelligenceLevel are required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>31</b>: Modifies the Location Blacklist configuration (RegionBlockCountryList and RegionBlockProvinceList are optional). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>32</b>: Modifies the Source Rate Limiting configuration (SourceLimit and SourceBlockList are required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>33</b>: Modifies the Reflection Attack Filtering (ReflectBlockUdpPortList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>40</b>: Creates a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>41</b>: Modifies a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>42</b>: Deletes a Port Blocking rule (PortRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>50</b>: Creates a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>51</b>: Modifies a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>52</b>: Deletes a Byte-Match Filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>60</b>: Modifies the port-specific mitigation switch (EnableL4Defense is required). Only port-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>61</b>: Creates a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>62</b>: Modifies a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</description></item>
-        /// <item><description><b>63</b>: Deletes a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policies are supported.</description></item>
+        /// <item><description><b>10</b>: modifies the name (Name is required).</description></item>
+        /// <item><description><b>11</b>: modifies the blacklist timeout period (BlackIpListExpireAt is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>12</b>: modifies the switch for whitelisting back-to-origin IP addresses of Anti-DDoS Pro and Anti-DDoS Premium (WhitenGfbrNets is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>13</b>: modifies the switch for ICMP Blocking (EnableDropIcmp is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>20</b>: adds entries to blacklists and whitelists (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>21</b>: deletes entries from blacklists and whitelists (WhiteIpList and BlackIpList are optional). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>22</b>: clears the whitelist. Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>23</b>: clears the blacklist. Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>30</b>: modifies the AI-based intelligent protection switch and level (EnableIntelligence and IntelligenceLevel are required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>31</b>: modifies the Location Blacklist configuration (RegionBlockCountryList and RegionBlockProvinceList are optional). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>32</b>: modifies the source rate limiting configuration (SourceLimit and SourceBlockList are required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>33</b>: modifies the reflection attack port filtering (ReflectBlockUdpPortList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>40</b>: creates a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>41</b>: modifies a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>42</b>: deletes a port blocking rule (PortRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>50</b>: creates a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>51</b>: modifies a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>52</b>: deletes a byte-match filter rule (FingerPrintRuleList is required). Only IP-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>60</b>: modifies the port-specific mitigation switch (EnableL4Defense is required). Only port-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>61</b>: creates a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>62</b>: modifies a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</description></item>
+        /// <item><description><b>63</b>: deletes a port-specific mitigation rule (L4RuleList is required). Only port-specific mitigation policy is supported.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public bool? EnableL4Defense { get; set; }
 
             /// <summary>
-            /// <para>The list of byte-match filter rules.</para>
+            /// <para>The list of Byte-Match Filter rules.</para>
             /// </summary>
             [NameInMap("FingerPrintRuleList")]
             [Validation(Required=false)]
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <list type="bullet">
                 /// <item><description><b>accept</b>: Allows traffic that matches the fingerprint.</description></item>
                 /// <item><description><b>drop</b>: Drops traffic that matches the fingerprint.</description></item>
-                /// <item><description><b>ip_rate</b>: Rate-limits the source IP address of traffic that matches the fingerprint. Set the rate limit value by using the <b>RateValue</b> parameter.</description></item>
-                /// <item><description><b>session_rate</b>: Rate-limits the source session of traffic that matches the fingerprint. Set the rate limit value by using the <b>RateValue</b> parameter.</description></item>
+                /// <item><description><b>ip_rate</b>: Rate-limits the source IP address of traffic that matches the fingerprint. The rate limit value is specified by the <b>RateValue</b> parameter.</description></item>
+                /// <item><description><b>session_rate</b>: Rate-limits the source session of traffic that matches the fingerprint. The rate limit value is specified by the <b>RateValue</b> parameter.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Offset { get; set; }
 
                 /// <summary>
-                /// <para>The detection payload. Expressed in hexadecimal string format.</para>
+                /// <para>The detection payload. The value is in hexadecimal string format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abcd</para>
@@ -250,9 +250,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The priority number, expressed as an integer.</para>
+                /// <para>The priority, expressed as an integer.</para>
                 /// <remarks>
-                /// <para>A smaller number indicates a higher priority.</para>
+                /// <para>A smaller value indicates a higher priority.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public string IntelligenceLevel { get; set; }
 
             /// <summary>
-            /// <para>The list of port forwarding rules.</para>
+            /// <para>The list of port-specific mitigation rules.</para>
             /// </summary>
             [NameInMap("L4RuleList")]
             [Validation(Required=false)]
@@ -350,23 +350,23 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     /// <summary>
                     /// <para>The matching content.</para>
                     /// <ol>
-                    /// <item><description>When <b>Encode</b> is set to <b>str</b>, the following requirements must be met:</description></item>
+                    /// <item><description>When <b>Encode</b> is set to <b>str</b>, the value must meet the following requirements:</description></item>
                     /// </ol>
                     /// <list type="bullet">
-                    /// <item><description><para>The length of <b>Content</b> must not exceed 1500.</para>
+                    /// <item><description><para>The length of <b>Content</b> does not exceed 1500.</para>
                     /// </description></item>
                     /// <item><description><para><b>End</b> - <b>Start</b> &gt;= the length of <b>Content</b>.</para>
                     /// </description></item>
                     /// </list>
                     /// <ol start="2">
-                    /// <item><description>When <b>Encode</b> is set to <b>hex</b>, the following requirements must be met:</description></item>
+                    /// <item><description>When <b>Encode</b> is set to <b>hex</b>, the value must meet the following requirements:</description></item>
                     /// </ol>
                     /// <list type="bullet">
                     /// <item><description><para><b>Content</b> must be hexadecimal characters.</para>
                     /// </description></item>
                     /// <item><description><para>The length of <b>Content</b> must be an even number.</para>
                     /// </description></item>
-                    /// <item><description><para>The length of <b>Content</b> must not exceed 3000.</para>
+                    /// <item><description><para>The length of <b>Content</b> does not exceed 3000.</para>
                     /// </description></item>
                     /// <item><description><para><b>End</b> - <b>Start</b> + 1 &gt;= the length of <b>Content</b> / 2.</para>
                     /// </description></item>
@@ -392,9 +392,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     /// <summary>
                     /// <para>The character type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>str</b>: string.</para>
+                    /// <item><description><para><b>str</b>: String.</para>
                     /// </description></item>
-                    /// <item><description><para><b>hex</b>: hexadecimal.</para>
+                    /// <item><description><para><b>hex</b>: Hexadecimal.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -438,21 +438,21 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     }
 
                     /// <summary>
-                    /// <para>The matching pattern. Valid values vary depending on the value of the <b>Encode</b> field:</para>
-                    /// <para>(1) When <b>Encode</b> is set to <b>str</b>, valid values:</para>
+                    /// <para>The matching pattern. Valid values depend on the <b>Encode</b> field:</para>
+                    /// <para>(1) When <b>Encode</b> is set to <b>str</b>:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>contain</b>: contains.</para>
+                    /// <item><description><para><b>contain</b>: Contains.</para>
                     /// </description></item>
-                    /// <item><description><para><b>not_contain</b>: does not contain.</para>
+                    /// <item><description><para><b>not_contain</b>: Does not contain.</para>
                     /// </description></item>
-                    /// <item><description><para><b>regex</b>: regular expression.</para>
+                    /// <item><description><para><b>regex</b>: Regular expression.</para>
                     /// </description></item>
                     /// </list>
-                    /// <para>(2) When <b>Encode</b> is set to <b>hex</b>, valid values:</para>
+                    /// <para>(2) When <b>Encode</b> is set to <b>hex</b>:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>contain</b>: contains.</para>
+                    /// <item><description><para><b>contain</b>: Contains.</para>
                     /// </description></item>
-                    /// <item><description><para><b>not_contain</b>: does not contain.</para>
+                    /// <item><description><para><b>not_contain</b>: Does not contain.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 }
 
                 /// <summary>
-                /// <para>The minimum number of bytes in a session flow that triggers rule matching. Valid values: <b>0</b> to <b>2048</b>.</para>
+                /// <para>The minimum number of bytes in a session flow to trigger rule matching. Valid values: <b>0</b> to <b>2048</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -488,9 +488,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <summary>
                 /// <para>The logical operator. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: The action is executed when the condition is met.</para>
+                /// <item><description><para><b>0</b>: Executes the action when the rule is hit.</para>
                 /// </description></item>
-                /// <item><description><para><b>1</b>: The action is executed when the condition is not met.</para>
+                /// <item><description><para><b>1</b>: Executes the action when the rule is not hit.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -504,9 +504,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <summary>
                 /// <para>The rule type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>hex</b>: hexadecimal match.</para>
+                /// <item><description><para><b>hex</b>: Hexadecimal matching.</para>
                 /// </description></item>
-                /// <item><description><para><b>char</b>: string match.</para>
+                /// <item><description><para><b>char</b>: String matching.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -585,7 +585,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <summary>
                 /// <para>The match action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>drop</b>: Drops the traffic.</description></item>
+                /// <item><description><b>drop</b>: Drop.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -612,9 +612,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The priority number, expressed as an integer.</para>
+                /// <para>The priority, expressed as an integer.</para>
                 /// <remarks>
-                /// <para>A smaller number indicates a higher priority.</para>
+                /// <para>A smaller value indicates a higher priority.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             }
 
             /// <summary>
-            /// <para>The list of ports filtered by Reflection Attack Filtering.</para>
+            /// <para>The list of ports filtered by reflection attack prevention.</para>
             /// </summary>
             [NameInMap("ReflectBlockUdpPortList")]
             [Validation(Required=false)]
@@ -671,14 +671,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public List<int?> RegionBlockProvinceList { get; set; }
 
             /// <summary>
-            /// <para>The SIP protection settings.</para>
+            /// <para>The SIP Protection Settings.</para>
             /// </summary>
             [NameInMap("SipDefense")]
             [Validation(Required=false)]
             public ModifyPolicyRequestContentSipDefense SipDefense { get; set; }
             public class ModifyPolicyRequestContentSipDefense : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether SIP protection is enabled. Valid values:</para>
+                /// <para>Specifies whether to enable SIP protection. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>true</b>: Enabled.</description></item>
                 /// <item><description><b>false</b>: Disabled.</description></item>
@@ -733,7 +733,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string SipPort { get; set; }
 
                 /// <summary>
-                /// <para>The SIP source rate limit value in PPS.</para>
+                /// <para>The SIP source rate limit value (PPS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -743,7 +743,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public long? SipRate { get; set; }
 
                 /// <summary>
-                /// <para>The SIP activation threshold in Mbit/s.</para>
+                /// <para>The SIP activation threshold (Mbit/s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -753,7 +753,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public long? SipStartMbps { get; set; }
 
                 /// <summary>
-                /// <para>The SIP activation threshold in PPS.</para>
+                /// <para>The SIP activation threshold (PPS).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -835,7 +835,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public ModifyPolicyRequestContentSourceLimit SourceLimit { get; set; }
             public class ModifyPolicyRequestContentSourceLimit : TeaModel {
                 /// <summary>
-                /// <para>The source bandwidth throttling value. Unit: bytes per second.</para>
+                /// <para>The source bandwidth throttling rate limit, in bytes per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -845,7 +845,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Bps { get; set; }
 
                 /// <summary>
-                /// <para>The source PPS rate limit. Unit: packets per second.</para>
+                /// <para>The source PPS rate limit, in packets per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -855,7 +855,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Pps { get; set; }
 
                 /// <summary>
-                /// <para>The source SYN bandwidth throttling value. Unit: bytes per second.</para>
+                /// <para>The source SYN bandwidth throttling rate limit, in bytes per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -865,7 +865,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? SynBps { get; set; }
 
                 /// <summary>
-                /// <para>The source SYN PPS rate limit. Unit: packets per second.</para>
+                /// <para>The source SYN PPS rate limit, in packets per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -917,10 +917,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port-specific mitigation policy version. Valid values:</para>
+        /// <para>The version of the port-specific mitigation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Empty</b>: Modifies the default surf DPI engine policy.</description></item>
-        /// <item><description><b>2</b>: Modifies the new stream DPI engine policy.<remarks>
+        /// <item><description><b>Not specified</b>: Modifies the default surf mitigation engine policy.</description></item>
+        /// <item><description><b>2</b>: Modifies the new stream mitigation engine policy.<remarks>
         /// <para>Only port-specific mitigation policies are supported.</para>
         /// </remarks>
         /// </description></item>

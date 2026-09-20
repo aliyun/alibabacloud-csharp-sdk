@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paging query. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The version of the port-specific mitigation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Not specified</b>: queries the policy associations that attach to the default surf DPI engine.</description></item>
-        /// <item><description><b>2</b>: queries the policy associations that attach to the new stream DPI engine.</description></item>
+        /// <item><description><b>Not specified</b>: queries the policy associations of the default surf DPI engine.</description></item>
+        /// <item><description><b>2</b>: queries the policy associations of the new stream DPI engine.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

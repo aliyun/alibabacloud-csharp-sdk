@@ -52,6 +52,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The interception module.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>src</para>
+        /// </summary>
+        [NameInMap("InterceptModule")]
+        [Validation(Required=false)]
+        public string InterceptModule { get; set; }
+
+        /// <summary>
         /// <para>The network protocol.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +82,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>Settings for the number of interception logs to return on each page when you perform a paged query. Paging is used to return results.</para>
+        /// <para>The number of interception log entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
