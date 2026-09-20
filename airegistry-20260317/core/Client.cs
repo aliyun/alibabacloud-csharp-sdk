@@ -1855,7 +1855,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
+        /// <para>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +1901,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
+        /// <para>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1947,7 +1947,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
+        /// <para>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +1965,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a URL for uploading a Skill to OSS. The client uses the returned URL to upload the Skill by performing a PUT request.</para>
+        /// <para>Retrieves a pre-signed URL for uploading a Skill to OSS. The client uses the returned URL to perform a PUT request to upload the Skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +2887,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings online a Skill or a specific version of a Skill.</para>
+        /// <para>Publishes a skill or a specific version of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2941,7 +2941,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings online a Skill or a specific version of a Skill.</para>
+        /// <para>Publishes a skill or a specific version of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2995,7 +2995,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings online a Skill or a specific version of a Skill.</para>
+        /// <para>Publishes a skill or a specific version of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3013,7 +3013,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Brings online a Skill or a specific version of a Skill.</para>
+        /// <para>Publishes a skill or a specific version of a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3923,7 +3923,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates business labels.</para>
+        /// <para>Updates business tags for a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3973,7 +3973,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates business labels.</para>
+        /// <para>Updates business tags for a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4023,7 +4023,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates business labels.</para>
+        /// <para>Updates business tags for a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4041,7 +4041,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates business labels.</para>
+        /// <para>Updates business tags for a skill.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4475,7 +4475,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
+        /// <para>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4533,7 +4533,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
+        /// <para>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4591,7 +4591,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
+        /// <para>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4609,7 +4609,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads a skill (ZIP) from OSS. Retrieves file content from OSS and uploads it to Nacos.</para>
+        /// <para>Uploads a skill (ZIP) from OSS by pulling the file content from OSS and uploading it to Nacos.</para>
         /// </summary>
         /// 
         /// <param name="request">

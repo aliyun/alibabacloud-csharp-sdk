@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource type: template, data, script, etc.</para>
+        /// <para>The resource type, such as template, data, or script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>script</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <para>The resource content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a sample file.</para>
+        /// <para>This is a sample file</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

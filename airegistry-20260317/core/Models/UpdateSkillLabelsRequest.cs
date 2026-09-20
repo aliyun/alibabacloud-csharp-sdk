@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdateSkillLabelsRequest : TeaModel {
         /// <summary>
-        /// <para>The version label mapping JSON string.</para>
+        /// <para>The JSON string of the version label mapping.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

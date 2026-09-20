@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the skill.</para>
+        /// <para>The skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The version number of the skill.</para>
+        /// <para>The version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

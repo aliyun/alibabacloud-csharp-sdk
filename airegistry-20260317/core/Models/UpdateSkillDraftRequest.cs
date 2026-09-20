@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <para>The commit message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>更新说明</para>
+        /// <para>Update description</para>
         /// </summary>
         [NameInMap("CommitMsg")]
         [Validation(Required=false)]

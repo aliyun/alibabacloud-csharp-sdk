@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UpdateSkillBizTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The business label JSON array string.</para>
+        /// <para>The business tags as a JSON array string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The Skill name.</para>
+        /// <para>The skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

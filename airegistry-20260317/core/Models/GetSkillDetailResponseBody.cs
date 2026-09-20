@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class GetSkillDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the skill.</para>
+        /// <para>The detailed information of the skill.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSkillDetailResponseBodyData Data { get; set; }
         public class GetSkillDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The business tags as a JSON array string.</para>
+            /// <para>The business tag JSON array string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -45,6 +45,20 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
             [NameInMap("DownloadCount")]
             [Validation(Required=false)]
             public long? DownloadCount { get; set; }
+
+            /// <summary>
+            /// <para>The draft mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>VERSIONED: Numbered mode. Each draft corresponds to a specific version number.</description></item>
+            /// <item><description>HEAD: Workspace mode. A permanent draft workspace overwrites in place and publishes version snapshots.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HEAD</para>
+            /// </summary>
+            [NameInMap("DraftMode")]
+            [Validation(Required=false)]
+            public string DraftMode { get; set; }
 
             /// <summary>
             /// <para>The version that is being edited.</para>
@@ -174,7 +188,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
                 /// <para>The version commit message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>版本1说明。</para>
+                /// <para>Description of version 1</para>
                 /// </summary>
                 [NameInMap("CommitMsg")]
                 [Validation(Required=false)]
@@ -191,7 +205,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The description.</para>
+                /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataphin_300067022_pre</para>

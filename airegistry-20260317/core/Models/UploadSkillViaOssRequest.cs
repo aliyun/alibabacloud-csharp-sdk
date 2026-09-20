@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AIRegistry20260317.Models
 {
     public class UploadSkillViaOssRequest : TeaModel {
+        /// <summary>
+        /// <para>The commit message. This parameter is optional.</para>
+        /// </summary>
         [NameInMap("CommitMsg")]
         [Validation(Required=false)]
         public string CommitMsg { get; set; }
@@ -43,6 +46,8 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public bool? Overwrite { get; set; }
 
         /// <summary>
+        /// <para>The target upload version number. This parameter is optional and used as a fallback when the ZIP file contains no version information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
         /// </summary>

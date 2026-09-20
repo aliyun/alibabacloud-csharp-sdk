@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of the file that can be uploaded, in MB.</para>
+            /// <para>The maximum allowed file size for upload, in MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
             /// <summary>
             /// <para>The file name in the authorized OSS bucket.</para>
             /// <remarks>
-            /// <para>You can use one of the following methods to pass in images: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one of these methods.</para>
+            /// <para>Among the four image input methods (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select one to use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

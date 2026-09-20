@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The field by which to sort the results. Set the value to download_count to sort by download count. Default value: gmt_modified.</para>
+        /// <para>The field by which to sort the results. Set the value to download_count. Default value: gmt_modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download_count</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>Filters results by owner.</para>
+        /// <para>The owner by which to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user123</para>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters results by visibility. Valid values:</para>
+        /// <para>The visibility by which to filter the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: public</description></item>
-        /// <item><description>PRIVATE: private.</description></item>
+        /// <item><description>PUBLIC</description></item>
+        /// <item><description>PRIVATE</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <summary>
         /// <para>The search mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>accurate: exact match</description></item>
+        /// <item><description>accurate: exact match.</description></item>
         /// <item><description>blur: fuzzy match.</description></item>
         /// </list>
         /// 

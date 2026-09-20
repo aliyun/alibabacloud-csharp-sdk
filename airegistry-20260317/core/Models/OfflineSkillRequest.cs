@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <para>The operation scope. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>skill: the entire Skill.</description></item>
-        /// <item><description>version: a specific version.</description></item>
+        /// <item><description>version: a specified version.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <summary>
         /// <para>The operation scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>skill: the entire Skill.</description></item>
+        /// <item><description>skill: the entire skill.</description></item>
         /// <item><description>version: a specified version.</description></item>
         /// </list>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The Skill name.</para>
+        /// <para>The name of the skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

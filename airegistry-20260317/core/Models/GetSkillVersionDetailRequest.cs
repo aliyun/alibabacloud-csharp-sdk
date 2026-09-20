@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The skill name.</para>
+        /// <para>The Skill name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

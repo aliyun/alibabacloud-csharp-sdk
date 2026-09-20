@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
             public List<ListSkillsResponseBodyDataPageItems> PageItems { get; set; }
             public class ListSkillsResponseBodyDataPageItems : TeaModel {
                 /// <summary>
-                /// <para>The business tags as a JSON array string.</para>
+                /// <para>The business label JSON array string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -57,7 +57,21 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
                 public long? DownloadCount { get; set; }
 
                 /// <summary>
-                /// <para>The version being edited.</para>
+                /// <para>The draft mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>VERSIONED: numbered mode. Each draft corresponds to a specific version number.</description></item>
+                /// <item><description>HEAD: workspace mode. A permanent draft workspace that overwrites in place and publishes version snapshots.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>HEAD</para>
+                /// </summary>
+                [NameInMap("DraftMode")]
+                [Validation(Required=false)]
+                public string DraftMode { get; set; }
+
+                /// <summary>
+                /// <para>The version that is being edited.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.3</para>
@@ -97,7 +111,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
                 /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>OCR品牌</para>
+                /// <para>OCR Brand</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -134,7 +148,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The version under review.</para>
+                /// <para>The version that is under review.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.2</para>

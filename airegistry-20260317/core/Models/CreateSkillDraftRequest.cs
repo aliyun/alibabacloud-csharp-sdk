@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         /// <para>The commit message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Initial version.</para>
+        /// <para>Initial version</para>
         /// </summary>
         [NameInMap("CommitMsg")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.AIRegistry20260317.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>The specified draft version number. If not specified, the version number is automatically incremented.</para>
+        /// <para>The specified draft version number. If not specified, the version number auto-increments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.2</para>
